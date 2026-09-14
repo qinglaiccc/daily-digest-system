@@ -84,9 +84,11 @@ class RepoItem:
     created_at: Optional[datetime] = None
     pushed_at: Optional[datetime] = None
     is_new: bool = False
+    readme: str = ""          # README 摘录，作为喂给模型的额外上下文
+    homepage: str = ""
 
     def to_prompt_dict(self) -> Dict[str, Any]:
-        return {
+        payload: Dict[str, Any] = {
             "repo": self.full_name,
             "url": self.url,
             "description": self.description,
@@ -97,6 +99,12 @@ class RepoItem:
             "last_push": self.pushed_at.strftime("%Y-%m-%d %H:%M UTC") if self.pushed_at else "未知",
             "is_new_in_24h": self.is_new,
         }
+        if self.homepage:
+            payload["homepage"] = self.homepage
+        # README 可能很长，塞进 payload 前再兜一次长度，避免单条挤爆预算
+        if self.readme:
+            payload["readme_excerpt"] = self.readme
+        return payload
 
 
 @dataclass
@@ -480,7 +488,141 @@ def _to_repo_item(raw: Dict[str, Any], is_new: bool) -> RepoItem:
         created_at=_parse_iso(raw.get("created_at")),
         pushed_at=_parse_iso(raw.get("pushed_at")),
         is_new=is_new,
+        homepage=raw.get("homepage") or "",
     )
+
+
+# --------------------------------------------------------------------------
+# README 抓取（GitHub 板块的深度解析依赖它）
+# --------------------------------------------------------------------------
+_MD_IMAGE_RE = re.compile(r"!\[[^\]]*\]\([^)]*\)")
+_MD_BADGE_LINE_RE = re.compile(r"^\s*\[!\[.*$")
+_MD_LINK_KEEP_TEXT_RE = re.compile(r"\[([^\]]*)\]\([^)]*\)")
+_MD_CODE_FENCE_RE = re.compile(r"^\s*```.*$", re.MULTILINE)
+_MD_HEADING_RE = re.compile(r"^\s{0,3}#{1,6}\s*", re.MULTILINE)
+_MD_HR_RE = re.compile(r"^\s*([-*_])\s*(\1\s*){2,}$", re.MULTILINE)
+
+
+def strip_markdown(text: str) -> str:
+    """
+    把 README 压成适合喂模型的纯文本。
+
+    README 里通常有大段徽章图片、居中 HTML 块、目录链接，这些对理解项目毫无帮助，
+    还会白占 token 预算。这里把它们清掉，只留下真正描述项目的文字与命令。
+    """
+    if not text:
+        return ""
+
+    # 徽章行：典型形态是 [![CI](...)](...)，整行删掉
+    lines = [ln for ln in text.splitlines() if not _MD_BADGE_LINE_RE.match(ln)]
+    text = "\n".join(lines)
+
+    text = _MD_IMAGE_RE.sub("", text)                 # 图片（含徽章）
+    text = re.sub(r"<[^>]+>", " ", text)              # 内联 HTML
+    text = _MD_LINK_KEEP_TEXT_RE.sub(r"\1", text)     # 链接只保留文字
+    text = _MD_CODE_FENCE_RE.sub("", text)            # 代码围栏标记
+    text = _MD_HEADING_RE.sub("", text)               # 标题井号
+    text = _MD_HR_RE.sub("", text)                    # 分隔线
+    text = text.replace("\u3000", " ").replace("\xa0", " ")
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+
+    return text.strip()
+
+
+def fetch_repo_readme(
+    session: requests.Session,
+    full_name: str,
+    limit: int = 0,
+) -> str:
+    """
+    抓取单个仓库的 README 摘录。
+
+    GitHub 的 /readme 接口支持 Accept: application/vnd.github.raw 直接返回原文，
+    省掉一次 base64 解码。取不到（无 README、限流、网络抖动）一律返回空字符串，
+    让模型退回依赖自身的项目知识，绝不因为一个 README 失败而中断采集。
+    """
+    limit = limit or config.README_CHAR_LIMIT
+
+    try:
+        response = session.get(
+            f"https://api.github.com/repos/{full_name}/readme",
+            headers={**_github_headers(), "Accept": "application/vnd.github.raw"},
+            timeout=config.HTTP_TIMEOUT,
+        )
+    except requests.RequestException as exc:
+        logger.debug("README 请求异常 [%s]：%s", full_name, exc)
+        return ""
+    except GitHubAuthError:
+        raise
+
+    if response.status_code == 404:
+        # 没有 README 是完全正常的情况，不值得记警告
+        logger.debug("仓库无 README：%s", full_name)
+        return ""
+
+    if response.status_code == 403:
+        logger.warning("README 抓取被限流 [%s]，本条将不带 README 上下文", full_name)
+        return ""
+
+    if response.status_code != 200:
+        logger.debug("README 返回 HTTP %d [%s]", response.status_code, full_name)
+        return ""
+
+    cleaned = strip_markdown(response.text)
+    if not cleaned:
+        return ""
+
+    if len(cleaned) > limit:
+        # 在 limit 附近找一个换行，避免把句子从中间切断
+        cut = cleaned.rfind("\n", 0, limit)
+        cleaned = cleaned[: cut if cut > limit * 0.6 else limit].rstrip() + " …"
+
+    return cleaned
+
+
+def enrich_repos_with_readme(
+    repos: List[RepoItem],
+    session: Optional[requests.Session] = None,
+    report: Optional[FetchReport] = None,
+) -> int:
+    """
+    并发为仓库补充 README 摘录。返回成功取到 README 的仓库数。
+
+    额外开销：每个仓库一次 core API 请求（配额 5000/小时，30 个仓库绰绰有余），
+    与 Search API 的 30 次/分钟限额是两套独立配额，不会互相挤占。
+    """
+    if not repos:
+        return 0
+
+    session = session or build_session()
+    targets = repos[: config.README_MAX_REPOS]
+    got = 0
+
+    logger.info("开始抓取 %d 个仓库的 README（每个上限 %d 字符）", len(targets), config.README_CHAR_LIMIT)
+
+    with ThreadPoolExecutor(max_workers=6) as executor:
+        future_map = {
+            executor.submit(fetch_repo_readme, session, repo.full_name): repo for repo in targets
+        }
+        for future in as_completed(future_map):
+            repo = future_map[future]
+            try:
+                text = future.result()
+            except GitHubAuthError:
+                raise
+            except Exception as exc:  # noqa: BLE001
+                logger.debug("README 抓取失败 [%s]：%s", repo.full_name, exc)
+                if report is not None:
+                    report.add_error(f"README [{repo.full_name}]: {type(exc).__name__}")
+                continue
+
+            if text:
+                repo.readme = text
+                got += 1
+
+    logger.info("README 抓取完成：%d/%d 个仓库拿到有效内容", got, len(targets))
+    return got
 
 
 def _is_relevant_repo(repo: RepoItem) -> bool:
@@ -578,6 +720,10 @@ def fetch_github_trending(session: Optional[requests.Session] = None) -> tuple[L
         )
 
     logger.info("GitHub 采集完成：%s", report.summary)
+
+    # 补充 README 上下文：GitHub 板块的深度解析依赖它
+    enrich_repos_with_readme(repos, session, report)
+
     return repos, report
 
 
@@ -589,6 +735,9 @@ __all__ = [
     "GitHubRateLimitError",
     "build_session",
     "clean_text",
+    "strip_markdown",
     "fetch_all_news",
     "fetch_github_trending",
+    "fetch_repo_readme",
+    "enrich_repos_with_readme",
 ]

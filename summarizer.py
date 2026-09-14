@@ -229,35 +229,72 @@ def select_candidates(news: List[NewsItem]) -> List[NewsItem]:
     return selected
 
 
-def _fit_budget(payload: Dict[str, Any]) -> Dict[str, Any]:
+def _payload_size(payload: Any) -> int:
+    return len(json.dumps(payload, ensure_ascii=False))
+
+
+def _fit_budget_news(payload: Dict[str, Any]) -> Dict[str, Any]:
     """
-    控制送进模型的字符量，超预算时优先砍尾部条目。
+    新闻部分的字符预算。
+
+    新闻与 GitHub 现在是两次独立调用，各自有独立的上下文窗口，
+    所以预算也分开分配，不再互相挤占。
     """
-    budget = config.LLM_MAX_INPUT_CHARS
+    budget = int(config.LLM_MAX_INPUT_CHARS * 0.6)
+    news = payload["news"]
 
-    def size() -> int:
-        return len(json.dumps(payload, ensure_ascii=False))
+    while _payload_size(payload) > budget and news:
+        news.pop()
 
-    while size() > budget and payload["news"]:
-        payload["news"].pop()
-        if payload["news"] and size() > budget:
-            payload["news"].pop()
-
-    while size() > budget and payload["github"]:
-        payload["github"].pop()
-
-    if size() > budget:
-        logger.warning("素材仍超出字符预算（%d > %d），继续截断摘要", size(), budget)
-        for item in payload["news"]:
+    if news and _payload_size(payload) > budget:
+        logger.warning("新闻素材仍超预算（%d > %d），截断摘要", _payload_size(payload), budget)
+        for item in news:
             item["raw_summary"] = item.get("raw_summary", "")[:120]
 
     return payload
 
 
+def _fit_budget_github(repos_payload: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    GitHub 部分的字符预算。
+
+    README 摘录是这块的主要开销（每仓最多 1500 字符），超预算时按
+    「砍仓库 → 缩短 README → 整段丢掉 README」三级退让，
+    优先保证有足够多的候选进入模型，而不是让少数几个仓库独占预算。
+    """
+    budget = config.GITHUB_MAX_INPUT_CHARS
+    original_count = len(repos_payload)
+
+    while _payload_size(repos_payload) > budget and repos_payload:
+        repos_payload.pop()
+
+    dropped = original_count - len(repos_payload)
+    if dropped:
+        logger.warning(
+            "GitHub 素材超预算（%d 字符），候选仓库由 %d 个裁剪为 %d 个",
+            _payload_size(repos_payload),
+            original_count,
+            len(repos_payload),
+        )
+
+    if repos_payload and _payload_size(repos_payload) > budget:
+        logger.warning("仍超预算，缩短 README 摘录至 600 字符")
+        for repo in repos_payload:
+            if repo.get("readme_excerpt"):
+                repo["readme_excerpt"] = repo["readme_excerpt"][:600]
+
+    if repos_payload and _payload_size(repos_payload) > budget:
+        logger.warning("仍超预算，整体丢弃 README 上下文，退回依赖模型自身知识")
+        for repo in repos_payload:
+            repo.pop("readme_excerpt", None)
+
+    return repos_payload
+
+
 # --------------------------------------------------------------------------
-# 提示词
+# 提示词：新闻部分（四个资讯板块）
 # --------------------------------------------------------------------------
-SYSTEM_PROMPT = """你是一名严谨的科技与消费行业资讯编辑，服务于一份每日早报。
+NEWS_SYSTEM_PROMPT = """你是一名严谨的科技与消费行业资讯编辑，服务于一份每日早报。
 你的唯一任务是把给定的原始资讯压缩、归类、重写成客观的中文简报。
 
 你必须无条件遵守以下铁律：
@@ -267,15 +304,19 @@ SYSTEM_PROMPT = """你是一名严谨的科技与消费行业资讯编辑，服�
 4. 每条必须携带原始素材里真实存在的链接，原样复制，不得改写、拼接或臆造。
 5. 只输出 JSON，不输出任何解释文字或 Markdown 代码块标记。"""
 
-
-def _section_spec_text() -> str:
-    lines = []
-    for idx, sec in enumerate(config.SECTION_DEFS, start=1):
-        lines.append(f"   {idx}) {sec['title']} —— JSON 键名 \"{sec['key']}\"")
-    return "\n".join(lines)
+# 新闻板块（不含 github，GitHub 走独立提示词）
+NEWS_SECTION_KEYS = ["intl_tech", "cn_tech", "intl_consumer", "cn_consumer"]
+NEWS_SECTION_DEFS = [s for s in config.SECTION_DEFS if s["key"] in NEWS_SECTION_KEYS]
 
 
-def build_user_prompt(payload: Dict[str, Any], report_date: date) -> str:
+def _news_section_spec_text() -> str:
+    return "\n".join(
+        f"   {idx}) {sec['title']} —— JSON 键名 \"{sec['key']}\""
+        for idx, sec in enumerate(NEWS_SECTION_DEFS, start=1)
+    )
+
+
+def build_news_user_prompt(payload: Dict[str, Any], report_date: date) -> str:
     date_str = report_date.strftime("%Y-%m-%d")
     weekday = _WEEKDAY_CN[report_date.weekday()]
     per_section = config.ITEMS_PER_SECTION
@@ -295,23 +336,13 @@ def build_user_prompt(payload: Dict[str, Any], report_date: date) -> str:
             "cn_tech": [],
             "intl_consumer": [],
             "cn_consumer": [],
-            "github": [
-                {
-                    "title": "owner/repo",
-                    "summary": "项目做什么 + 为什么值得关注，60 字以内",
-                    "source": "GitHub",
-                    "url": "https://github.com/owner/repo",
-                    "stars": "1234",
-                    "language": "Python",
-                }
-            ],
         },
     }
 
     return f"""请把下面的原始素材整理成 {date_str}（{weekday}，Asia/Shanghai）的每日早报。
 
-【板块要求】必须严格使用以下五个板块，不得增加、删除或改名：
-{_section_spec_text()}
+【板块要求】必须严格使用以下四个板块，不得增加、删除或改名：
+{_news_section_spec_text()}
 
 【分类口径】不设大公司专属板块。所有大厂动态——包括 AI、芯片、云服务、航天、自动驾驶、
 具身智能、加密货币、算力基础设施等——一律归入对应的「国际科技新闻」或「国内科技新闻」，
@@ -324,17 +355,97 @@ def build_user_prompt(payload: Dict[str, Any], report_date: date) -> str:
 素材明显不属于任何板块时直接丢弃。
 
 【写作要求】
-- 全部用中文输出。英文标题翻译成中文；GitHub 项目名保留英文原名 owner/repo。
+- 全部用中文输出。英文标题翻译成中文。
 - 每条 summary 控制在 60 个汉字以内，一句话，主语明确，包含关键数字。
 - 同一个事件被多家媒体报道时，只保留一条，选信息量最大的那家作为来源。
-- source 字段填原始素材里的媒体名 / 站点名；GitHub 条目固定填 "GitHub"。
-- github 板块的 title 用 "owner/repo" 形式，summary 说明项目用途与亮点，stars 填原始星数。
+- source 字段填原始素材里的媒体名 / 站点名。
+- digest 要覆盖当日最重要的 2-3 件事，不要只写一件事。
 
 【输出格式】只输出下面这个 JSON 对象，不要有任何前后缀文字：
 {json.dumps(schema_example, ensure_ascii=False, indent=2)}
 
 【原始素材】
 {json.dumps(payload, ensure_ascii=False, indent=1)}
+"""
+
+
+# --------------------------------------------------------------------------
+# 提示词：GitHub 板块（独立一套，目标是"让外行看懂"）
+# --------------------------------------------------------------------------
+GITHUB_SYSTEM_PROMPT = """你是一位擅长把开源项目讲给外行听的技术布道者，服务于一份面向普通读者的每日早报。
+读者可能是产品经理、运营、设计师或刚入门的开发者——他们看不懂"基于 Rust 的异步运行时"这类表述。
+
+你的任务是把开源项目翻译成人话。铁律：
+
+1. **说人话。** 用日常语言解释它是什么、能帮人做什么。必须出现专业名词时，先用一句话把它解释清楚。
+   反例：「基于 WASM 的边缘计算框架」  正例：「让网页跑得跟本地软件一样快的工具」。
+2. **禁止编造。** 只依据给定的仓库元数据与 README 摘录。README 里没提到的功能不许写，
+   不确定就说不知道，绝不允许为了把话说满而虚构。
+3. **安装命令必须来自 README 原文。** README 里没有明确命令时，install 字段留空字符串，
+   不要凭经验臆造 `npm install xxx` 这类命令——普通读者会照着敲，编造的命令会浪费他们的时间。
+4. **不吹不黑。** 不写"革命性""颠覆性""必装"这类营销词，只陈述它实际做了什么。
+5. 只输出 JSON，不输出任何解释文字或 Markdown 代码块标记。"""
+
+
+def build_github_user_prompt(repos_payload: List[Dict[str, Any]], report_date: date) -> str:
+    date_str = report_date.strftime("%Y-%m-%d")
+    per_section = config.ITEMS_PER_SECTION
+
+    schema_example = {
+        "digest_repos": "一句话概括这批项目整体在解决什么问题，30 字以内",
+        "repos": [
+            {
+                "repo": "owner/repo",
+                "url": "https://github.com/owner/repo",
+                "intro": "项目通俗简介：一句话说清它到底是个啥、解决什么痛点，40 字以内，必须是外行能懂的大白话",
+                "features": [
+                    "核心功能亮点 1，每条 20 字以内，说清能做什么而不是用了什么技术",
+                    "核心功能亮点 2",
+                    "核心功能亮点 3",
+                ],
+                "guide": "应用与部署指南：普通人该怎么用起来。1-2 句话，说清前置条件（要不要装 Node/Docker/Python）和大致步骤，80 字以内",
+                "install": "从 README 原文摘出的安装或运行命令，单行；README 里没有就留空字符串",
+            }
+        ],
+    }
+
+    with_readme = sum(1 for r in repos_payload if r.get("readme_excerpt"))
+    without_readme = len(repos_payload) - with_readme
+
+    return f"""今天是 {date_str}。请把下面 {len(repos_payload)} 个 GitHub 热门项目整理成早报的「GitHub 热门效率与 AI 工具」板块。
+
+【素材说明】
+- 其中 {with_readme} 个项目附带了 `readme_excerpt`（README 原文摘录），这是你最主要的依据。
+- 另有 {without_readme} 个项目没有 README 摘录，只能依据 description 和 topics 判断；
+  信息不足时宁可写得保守，也不要编造功能。
+- `is_new_in_24h` 表示该项目是最近 24 小时内新建的。
+
+【输出结构】每个项目必须完整包含以下四个部分，缺一不可：
+
+1. **intro（项目通俗简介）** —— 一句话，40 字以内。
+   必须回答"它到底是个啥 + 解决什么痛点"。用外行能懂的话，不要出现未解释的技术名词。
+
+2. **features（核心功能亮点）** —— 2 到 4 条，每条 20 字以内。
+   说清"能做什么"，而不是"用了什么技术"。不要罗列技术栈。
+   优先挑对普通用户有感知的功能。README 里信息不足以支撑 2 条时就只写 1 条，不要凑数。
+
+3. **guide（应用与部署指南）** —— 80 字以内，1-2 句话。
+   要回答普通人最关心的：这东西怎么用起来？需要先装什么（Node / Docker / Python）？
+   是在网页上用、本地跑、还是装成 App？有没有必须的前置条件（比如要申请 API Key）？
+
+4. **install（一键命令）** —— 单行命令，**必须逐字来自 README**。
+   只填最直接的那一条（安装或启动命令）。README 里没有明确命令就填空字符串 ""。
+
+【数量】最多 {per_section} 个，按重要性与实用性排序。质量优先于数量，
+信息严重不足、连 intro 都写不出来的项目直接丢弃。
+
+【digest_repos】另外用 30 字以内概括这批项目整体在解决什么问题，用于板块导语。
+
+【输出格式】只输出下面这个 JSON 对象，不要有任何前后缀文字：
+{json.dumps(schema_example, ensure_ascii=False, indent=2)}
+
+【仓库素材】
+{json.dumps(repos_payload, ensure_ascii=False, indent=1)}
 """
 
 
@@ -366,8 +477,12 @@ def _parse_json_response(text: str) -> Dict[str, Any]:
     raise ValueError("模型返回中找不到 JSON 对象")
 
 
-def call_deepseek(payload: Dict[str, Any], report_date: date) -> Dict[str, Any]:
-    """调用 DeepSeek，带指数退避重试。"""
+def _chat_json(system_prompt: str, user_prompt: str, label: str) -> Dict[str, Any]:
+    """
+    调用 DeepSeek 并解析 JSON 输出，带指数退避重试。
+
+    label 只用于日志区分（新闻 / GitHub 两次独立调用）。
+    """
     if OpenAI is None:
         raise RuntimeError("未安装 openai SDK，请执行 pip install openai")
     if not config.DEEPSEEK_API_KEY:
@@ -380,8 +495,12 @@ def call_deepseek(payload: Dict[str, Any], report_date: date) -> Dict[str, Any]:
         max_retries=0,  # 重试逻辑自己控制，便于记录日志
     )
 
-    user_prompt = build_user_prompt(payload, report_date)
-    logger.info("调用 DeepSeek，模型=%s，提示词长度=%d 字符", config.DEEPSEEK_MODEL, len(user_prompt))
+    logger.info(
+        "调用 DeepSeek [%s]，模型=%s，提示词 %d 字符",
+        label,
+        config.DEEPSEEK_MODEL,
+        len(user_prompt),
+    )
 
     last_error: Optional[Exception] = None
 
@@ -390,7 +509,7 @@ def call_deepseek(payload: Dict[str, Any], report_date: date) -> Dict[str, Any]:
             response = client.chat.completions.create(
                 model=config.DEEPSEEK_MODEL,
                 messages=[
-                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt},
                 ],
                 temperature=config.LLM_TEMPERATURE,
@@ -404,7 +523,8 @@ def call_deepseek(payload: Dict[str, Any], report_date: date) -> Dict[str, Any]:
             usage = getattr(response, "usage", None)
             if usage:
                 logger.info(
-                    "DeepSeek 返回成功（prompt=%s, completion=%s, total=%s）",
+                    "DeepSeek [%s] 返回成功（prompt=%s, completion=%s, total=%s）",
+                    label,
                     getattr(usage, "prompt_tokens", "?"),
                     getattr(usage, "completion_tokens", "?"),
                     getattr(usage, "total_tokens", "?"),
@@ -414,11 +534,19 @@ def call_deepseek(payload: Dict[str, Any], report_date: date) -> Dict[str, Any]:
         except Exception as exc:  # noqa: BLE001
             last_error = exc
             wait = min(2 ** attempt, 30)
-            logger.warning("DeepSeek 第 %d/%d 次调用失败：%s", attempt, config.LLM_MAX_RETRIES, exc)
+            logger.warning(
+                "DeepSeek [%s] 第 %d/%d 次调用失败：%s",
+                label,
+                attempt,
+                config.LLM_MAX_RETRIES,
+                exc,
+            )
             if attempt < config.LLM_MAX_RETRIES:
                 time.sleep(wait)
 
-    raise RuntimeError(f"DeepSeek 调用在 {config.LLM_MAX_RETRIES} 次尝试后仍失败：{last_error}")
+    raise RuntimeError(
+        f"DeepSeek [{label}] 调用在 {config.LLM_MAX_RETRIES} 次尝试后仍失败：{last_error}"
+    )
 
 
 # --------------------------------------------------------------------------
@@ -434,25 +562,26 @@ def _coerce_str(value: Any, limit: int = 300) -> str:
     return clean_text(value, limit=limit)
 
 
-def normalize_result(
+def normalize_news_result(
     raw: Dict[str, Any],
     guard: UrlGuard,
     report_date: date,
-) -> Dict[str, Any]:
+) -> tuple[List[Dict[str, Any]], str, int]:
     """
-    把模型输出规整成页面需要的结构，并剔除无法验证链接的条目。
+    规整新闻部分的模型输出。
+
+    返回 (板块列表, 导读, 丢弃条数)。板块顺序严格跟随 config.SECTION_DEFS 里的新闻板块。
     """
     digest = _coerce_str(raw.get("digest"), limit=120)
 
     raw_sections = raw.get("sections")
     if not isinstance(raw_sections, dict):
-        # 模型有时会把板块平铺在顶层
-        raw_sections = {k: v for k, v in raw.items() if k in config.SECTION_KEYS}
+        raw_sections = {k: v for k, v in raw.items() if k in NEWS_SECTION_KEYS}
 
     sections: List[Dict[str, Any]] = []
     dropped = 0
 
-    for sec_def in config.SECTION_DEFS:
+    for sec_def in NEWS_SECTION_DEFS:
         key = sec_def["key"]
         entries = raw_sections.get(key) or []
         if not isinstance(entries, list):
@@ -477,34 +606,139 @@ def normalize_result(
             title_original = resolved.get("title_original", "")
             excerpt = resolved.get("excerpt", "")
 
-            item = {
-                "title": title,
-                "summary": summary,
-                "source": _coerce_str(entry.get("source"), limit=40) or resolved.get("source", ""),
-                "url": resolved["url"],
-                # 原文对照字段：直接来自 RSS / GitHub，未经模型改写
-                "title_original": title_original,
-                "excerpt": excerpt,
-                "is_foreign": is_foreign_text(title_original) or is_foreign_text(excerpt),
+            items.append(
+                {
+                    "title": title,
+                    "summary": summary,
+                    "source": _coerce_str(entry.get("source"), limit=40)
+                    or resolved.get("source", ""),
+                    "url": resolved["url"],
+                    # 原文对照字段：直接来自 RSS，未经模型改写
+                    "title_original": title_original,
+                    "excerpt": excerpt,
+                    "is_foreign": is_foreign_text(title_original) or is_foreign_text(excerpt),
+                }
+            )
+
+        sections.append({**sec_def, "items": items[: config.ITEMS_PER_SECTION]})
+
+    return sections, digest, dropped
+
+
+def _coerce_str_list(value: Any, limit: int = 60, max_items: int = 6) -> List[str]:
+    """把模型返回的亮点列表规整成干净的字符串数组。"""
+    if isinstance(value, str):
+        # 模型偶尔会返回一整段用分号或换行分隔的文字
+        parts = re.split(r"[\n;；]|(?<!\d)\.\s+", value)
+    elif isinstance(value, list):
+        parts = value
+    else:
+        return []
+
+    result: List[str] = []
+    for part in parts:
+        text = _coerce_str(part, limit=limit)
+        # 去掉模型可能加的项目符号前缀
+        text = re.sub(r"^\s*[-*·•\d]+[.、)）]?\s*", "", text).strip()
+        if text:
+            result.append(text)
+        if len(result) >= max_items:
+            break
+    return result
+
+
+def normalize_github_result(
+    raw: Dict[str, Any],
+    repos: List[RepoItem],
+    guard: UrlGuard,
+) -> tuple[List[Dict[str, Any]], str, int]:
+    """
+    规整 GitHub 板块的模型输出。
+
+    与新闻板块的关键差异：
+      - stars / language / 仓库名一律以采集到的原始数据为准，不采用模型填的值
+        （模型很容易把星数写错，而这是可以零成本取到准确值的字段）
+      - 输出的是结构化字段（intro / features / guide / install），而不是一段 summary
+    """
+    repos_by_name = {r.full_name.lower(): r for r in repos}
+    repos_by_url = {normalize_url(r.url): r for r in repos}
+
+    raw_repos = raw.get("repos")
+    if not isinstance(raw_repos, list):
+        # 容错：模型有时直接把数组放在顶层
+        raw_repos = raw if isinstance(raw, list) else []
+
+    intros: List[str] = []
+    items: List[Dict[str, Any]] = []
+    dropped = 0
+
+    for entry in raw_repos:
+        if not isinstance(entry, dict):
+            continue
+
+        name = _coerce_str(entry.get("repo") or entry.get("title"), limit=120)
+        url = _coerce_str(entry.get("url"), limit=500)
+
+        # 先按仓库名精确匹配，再退回链接校验
+        repo = repos_by_name.get(name.lower()) or repos_by_url.get(normalize_url(url))
+        if repo is None:
+            resolved = guard.resolve(url, name)
+            if resolved is None:
+                dropped += 1
+                logger.warning("丢弃无法验证的仓库条目：%s", name or url)
+                continue
+            repo = repos_by_url.get(normalize_url(resolved["url"]))
+            if repo is None:
+                dropped += 1
+                logger.warning("仓库条目链接对不上原始素材：%s", resolved["url"])
+                continue
+
+        intro = _coerce_str(entry.get("intro") or entry.get("summary"), limit=160)
+        features = _coerce_str_list(entry.get("features"), limit=60, max_items=5)
+        guide = _coerce_str(entry.get("guide"), limit=260)
+        install = _coerce_str(entry.get("install"), limit=200)
+
+        if not intro and not features:
+            # 连简介和亮点都没有，这条没有展示价值
+            dropped += 1
+            continue
+
+        # 降级兜底：模型没给简介时用仓库原始 description，而不是留空
+        if not intro:
+            intro = _coerce_str(repo.description, limit=160)
+
+        items.append(
+            {
+                "title": repo.full_name,
+                "url": repo.url,
+                # 结构化四件套
+                "intro": intro,
+                "features": features,
+                "guide": guide,
+                "install": install,
+                # summary 与 intro 保持一致，让邮件/纯文本等旧通道无需改动即可复用
+                "summary": intro,
+                "source": "GitHub",
+                # 星数与语言取采集到的真实值
+                "stars": str(repo.stars) if repo.stars else "",
+                "language": repo.language,
+                "is_new": repo.is_new,
+                "title_original": "",
+                "excerpt": repo.description,
+                "is_foreign": True,
             }
+        )
 
-            if key == "github":
-                item["stars"] = _coerce_str(entry.get("stars"), limit=20)
-                item["language"] = _coerce_str(entry.get("language"), limit=30)
-                # 仓库名本身就是原文标题，避免重复展示
-                item["title_original"] = ""
-
-            items.append(item)
-
-        # 二次限流：防止模型超额输出
-        items = items[: config.ITEMS_PER_SECTION]
-
-        sections.append({**sec_def, "items": items})
+        if intro:
+            intros.append(intro)
 
     if dropped:
-        logger.warning("共丢弃 %d 条链接无法验证的条目", dropped)
+        logger.warning("GitHub 板块共丢弃 %d 条无法验证的条目", dropped)
 
-    return {"date": report_date.isoformat(), "digest": digest, "sections": sections}
+    items = items[: config.ITEMS_PER_SECTION]
+    lead = _coerce_str(raw.get("digest_repos"), limit=80)
+
+    return items, lead, dropped
 
 
 # --------------------------------------------------------------------------
@@ -552,11 +786,17 @@ def build_fallback_result(
     section_items["github"] = [
         {
             "title": repo.full_name,
-            "summary": repo.description or "（AI 摘要不可用，仅展示项目描述）",
-            "source": "GitHub",
             "url": repo.url,
+            # 降级时没有 AI 解析，四个结构化字段留空，页面只展示仓库描述
+            "intro": repo.description or "（AI 解析不可用，仅展示仓库原始描述）",
+            "features": [],
+            "guide": "",
+            "install": "",
+            "summary": repo.description or "（AI 解析不可用，仅展示仓库原始描述）",
+            "source": "GitHub",
             "stars": str(repo.stars),
             "language": repo.language,
+            "is_new": repo.is_new,
             "title_original": "",
             "excerpt": "",
             "is_foreign": True,
@@ -579,6 +819,64 @@ def build_fallback_result(
     }
 
 
+def build_fallback_news_section(
+    news: List[NewsItem], reason: str
+) -> tuple[List[Dict[str, Any]], int]:
+    """只降级新闻部分，保留 GitHub 板块的 AI 结果。"""
+    buckets: Dict[Tuple[str, str], List[NewsItem]] = {b: [] for b in _BUCKETS}
+    for item in news:
+        key = (item.region or "", item.category or "")
+        if key in buckets:
+            buckets[key].append(item)
+
+    sections: List[Dict[str, Any]] = []
+    for sec_def in NEWS_SECTION_DEFS:
+        bucket = {"intl_tech": ("intl", "tech"), "cn_tech": ("cn", "tech"),
+                  "intl_consumer": ("intl", "consumer"), "cn_consumer": ("cn", "consumer")}[
+            sec_def["key"]
+        ]
+        items = [
+            {
+                "title": item.title,
+                "summary": item.summary or f"（AI 摘要不可用：{reason}）",
+                "source": item.source,
+                "url": item.url,
+                "title_original": "",
+                "excerpt": "",
+                "is_foreign": is_foreign_text(item.title),
+                "untranslated": True,
+            }
+            for item in buckets[bucket][: config.ITEMS_PER_SECTION]
+        ]
+        sections.append({**sec_def, "items": items})
+
+    return sections, len(sections)
+
+
+def build_fallback_github_section(repos: List[RepoItem]) -> List[Dict[str, Any]]:
+    """只降级 GitHub 板块。"""
+    return [
+        {
+            "title": repo.full_name,
+            "url": repo.url,
+            "intro": repo.description or "（AI 解析不可用，仅展示仓库原始描述）",
+            "features": [],
+            "guide": "",
+            "install": "",
+            "summary": repo.description or "（AI 解析不可用，仅展示仓库原始描述）",
+            "source": "GitHub",
+            "stars": str(repo.stars),
+            "language": repo.language,
+            "is_new": repo.is_new,
+            "title_original": "",
+            "excerpt": "",
+            "is_foreign": True,
+            "untranslated": True,
+        }
+        for repo in repos[: config.ITEMS_PER_SECTION]
+    ]
+
+
 # --------------------------------------------------------------------------
 # 对外主入口
 # --------------------------------------------------------------------------
@@ -587,7 +885,14 @@ def summarize(
     repos: List[RepoItem],
     dry_run: bool = False,
 ) -> Dict[str, Any]:
-    """完整提炼流程，任何异常都会退化为降级结果而不是抛出去。"""
+    """
+    完整提炼流程。
+
+    新闻与 GitHub 走两次独立的 DeepSeek 调用：
+      - 两边的素材形态、写作要求、输出结构完全不同，拆开可以让提示词各司其职
+      - 任一侧失败只降级那一侧，不会因为 GitHub README 拉垮而丢掉全部新闻
+    整体仍然保证不抛异常：最坏情况退回全量降级结果。
+    """
     report_date = today_local()
     guard = UrlGuard(news, repos)
 
@@ -597,31 +902,93 @@ def summarize(
     candidates = select_candidates(news)
     logger.info("送入模型的新闻候选 %d 条 / 仓库候选 %d 个", len(candidates), len(repos))
 
-    payload = _fit_budget(
+    news_payload = _fit_budget_news(
         {
             "report_date": report_date.isoformat(),
             "news": [item.to_prompt_dict() for item in candidates],
-            "github": [repo.to_prompt_dict() for repo in repos],
         }
     )
+    github_payload = _fit_budget_github([repo.to_prompt_dict() for repo in repos])
 
-    if not payload["news"] and not payload["github"]:
+    if not news_payload["news"] and not github_payload:
         return build_fallback_result(news, repos, report_date, "无可用原始素材")
 
-    try:
-        raw = call_deepseek(payload, report_date)
-        result = normalize_result(raw, guard, report_date)
+    degraded_parts: List[str] = []
+    news_sections: List[Dict[str, Any]] = []
+    github_items: List[Dict[str, Any]] = []
+    github_lead = ""
+    digest = ""
 
-        total = sum(len(sec["items"]) for sec in result["sections"])
-        if total == 0:
-            raise ValueError("模型返回的所有条目都未通过链接校验")
+    # ---- 新闻部分 ----
+    if news_payload["news"]:
+        try:
+            raw = _chat_json(
+                NEWS_SYSTEM_PROMPT,
+                build_news_user_prompt(news_payload, report_date),
+                "新闻",
+            )
+            news_sections, digest, _ = normalize_news_result(raw, guard, report_date)
+        except Exception as exc:  # noqa: BLE001
+            logger.error("新闻板块提炼失败：%s", exc, exc_info=True)
+            news_sections, _ = build_fallback_news_section(news, f"{type(exc).__name__}: {exc}")
+            degraded_parts.append(f"新闻（{type(exc).__name__}）")
+    else:
+        news_sections, _ = build_fallback_news_section(news, "无候选素材")
+        degraded_parts.append("新闻（无候选素材）")
 
-        logger.info("AI 提炼完成，共 %d 条内容", total)
-        return result
+    # ---- GitHub 部分 ----
+    if github_payload:
+        enriched = sum(1 for r in github_payload if r.get("readme_excerpt"))
+        logger.info(
+            "GitHub 板块：%d 个仓库（其中 %d 个带 README 上下文）", len(github_payload), enriched
+        )
+        try:
+            raw = _chat_json(
+                GITHUB_SYSTEM_PROMPT,
+                build_github_user_prompt(github_payload, report_date),
+                "GitHub",
+            )
+            github_items, github_lead, _ = normalize_github_result(raw, repos, guard)
+        except Exception as exc:  # noqa: BLE001
+            logger.error("GitHub 板块提炼失败：%s", exc, exc_info=True)
+            github_items = build_fallback_github_section(repos)
+            degraded_parts.append(f"GitHub（{type(exc).__name__}）")
+    else:
+        github_items = build_fallback_github_section([])
 
-    except Exception as exc:  # noqa: BLE001
-        logger.error("AI 提炼失败：%s", exc, exc_info=True)
-        return build_fallback_result(news, repos, report_date, f"{type(exc).__name__}: {exc}")
+    # ---- 合并 ----
+    github_def = next(s for s in config.SECTION_DEFS if s["key"] == "github")
+    github_section = {**github_def, "items": github_items, "lead": github_lead}
+
+    sections = news_sections + [github_section]
+
+    total = sum(len(sec["items"]) for sec in sections)
+    if total == 0:
+        return build_fallback_result(news, repos, report_date, "所有条目都未通过链接校验")
+
+    if not digest:
+        digest = github_lead or "今日科技与消费要闻速览。"
+
+    result: Dict[str, Any] = {
+        "date": report_date.isoformat(),
+        "digest": digest,
+        "sections": sections,
+    }
+
+    if degraded_parts:
+        # 部分降级：页面顶部提示哪一块没走通，但整体仍然是 AI 输出
+        result["degraded"] = True
+        result["degraded_reason"] = "以下板块未完成 AI 处理：" + "、".join(degraded_parts)
+        result["partial_degraded"] = True
+
+    logger.info(
+        "AI 提炼完成，共 %d 条内容（新闻 %d / GitHub %d）%s",
+        total,
+        sum(len(s["items"]) for s in news_sections),
+        len(github_items),
+        "；部分降级：" + "、".join(degraded_parts) if degraded_parts else "",
+    )
+    return result
 
 
 __all__ = [
@@ -631,4 +998,9 @@ __all__ = [
     "local_now",
     "normalize_url",
     "UrlGuard",
+    "build_fallback_result",
+    "build_fallback_news_section",
+    "build_fallback_github_section",
+    "normalize_news_result",
+    "normalize_github_result",
 ]

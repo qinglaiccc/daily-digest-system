@@ -10,7 +10,7 @@
 1. 文本清洗、URL 归一化
 2. 防幻觉链接校验（UrlGuard）—— 模型编造的链接必须被丢弃
 3. 模型 JSON 的宽松解析（含 ```json 围栏、前后废话）
-4. normalize_result 的字段收敛与条数限制
+4. 新闻/GitHub 两条归一化链路的字段收敛与条数限制
 5. 降级方案 build_fallback_result
 6. 邮件推送（SMTP）的主题、纯文本与 HTML 组装
 7. 页面渲染完整性（无 Jinja 残留、板块齐全、链接可用）
@@ -221,10 +221,10 @@ def test_normalize_result() -> None:
         },
     }
 
-    result = summarizer.normalize_result(raw, guard, today)
-    by_key = {s["key"]: s["items"] for s in result["sections"]}
+    sections, digest, dropped = summarizer.normalize_news_result(raw, guard, today)
+    by_key = {s["key"]: s["items"] for s in sections}
 
-    check("五个板块齐全", len(result["sections"]) == 5, str(len(result["sections"])))
+    check("新闻部分为四个板块", len(sections) == 4, str(len(sections)))
     check(
         f"条数被限制在 {config.ITEMS_PER_SECTION} 条内",
         len(by_key["intl_tech"]) == config.ITEMS_PER_SECTION,
@@ -234,13 +234,95 @@ def test_normalize_result() -> None:
         "幻觉链接被剔除",
         all("fake-news-site" not in i["url"] for i in by_key["intl_tech"]),
     )
+    check("被剔除的条目计入 dropped", dropped == 1, str(dropped))
     check("类型错误的板块被容错为空列表", by_key["cn_tech"] == [])
-    check("GitHub 板块保留 stars 字段", by_key["github"][0].get("stars") == "1234")
-    check("导读被保留", result["digest"] == "今日导读")
+    check("导读被保留", digest == "今日导读")
+    check("github 不再由新闻提示词产出", "github" not in by_key)
+
+
+def test_github_structure() -> None:
+    """GitHub 板块的结构化解析：四件套字段、星数取真实值、命令不得编造。"""
+    print("\n[5] GitHub 板块深度解析结构")
+
+    repos = make_repos()
+    guard = summarizer.UrlGuard([], repos)
+
+    raw = {
+        "digest_repos": "这批项目都在给 AI 助手做记忆和工具调用",
+        "repos": [
+            {
+                "repo": "example/cool-agent",
+                "url": "https://github.com/example/cool-agent",
+                "intro": "一句话就能搭起一个会自己干活的 AI 助手。",
+                "features": ["自动拆解任务", "支持多种大模型", "本地运行不上传数据"],
+                "guide": "需要先装 Node 18，然后一条命令就能跑起来。",
+                "install": "npx cool-agent init",
+                # 故意填一个错误的星数，验证程序会以采集到的真实值覆盖它
+                "stars": "999999",
+                "language": "Rust",
+            },
+            # 伪造的仓库，必须被丢弃
+            {
+                "repo": "evil/fake-repo",
+                "url": "https://github.com/evil/fake-repo",
+                "intro": "这是编造的项目",
+                "features": ["假的"],
+            },
+        ],
+    }
+
+    items, lead, dropped = summarizer.normalize_github_result(raw, repos, guard)
+
+    check("只保留能验证的仓库", len(items) == 1, f"{len(items)} 条")
+    check("编造仓库被丢弃", dropped == 1, str(dropped))
+    check("板块导语被保留", lead.startswith("这批项目"), lead)
+
+    item = items[0]
+    check("含项目通俗简介 intro", bool(item.get("intro")), item.get("intro", ""))
+    check("含核心功能亮点 features", len(item["features"]) == 3, str(len(item["features"])))
+    check("含应用与部署指南 guide", bool(item.get("guide")), item.get("guide", ""))
+    check("含一键命令 install", item.get("install") == "npx cool-agent init")
+    check("星数取采集真实值而非模型值", item["stars"] == "1234", item["stars"])
+    check("语言取采集真实值而非模型值", item["language"] == "Python", item["language"])
+    check("summary 与 intro 对齐（兼容邮件通道）", item["summary"] == item["intro"])
+    check("仓库名保留英文原名", item["title"] == "example/cool-agent")
+
+    # 亮点字段的容错：字符串、带项目符号、超量
+    messy = {
+        "repos": [
+            {
+                "repo": "example/cool-agent",
+                "url": "https://github.com/example/cool-agent",
+                "intro": "简介",
+                "features": "- 带符号的亮点\n- 第二条\n- 第三条\n- 第四条\n- 第五条\n- 第六条",
+                "guide": "",
+                "install": "",
+            }
+        ]
+    }
+    items2, _, _ = summarizer.normalize_github_result(messy, repos, guard)
+    feats = items2[0]["features"]
+    check("字符串形式的亮点被拆分", len(feats) >= 3, str(feats))
+    check("亮点前缀符号被清理", all(not f.startswith("-") for f in feats), str(feats))
+    check("亮点数量被限制在 5 条内", len(feats) <= 5, str(len(feats)))
+
+    # 完全没有结构的仓库应退回原始 description，而不是留空
+    bare = {
+        "repos": [
+            {
+                "repo": "example/cool-agent",
+                "url": "https://github.com/example/cool-agent",
+                "intro": "",
+                "features": [],
+            }
+        ]
+    }
+    items3, _, dropped3 = summarizer.normalize_github_result(bare, repos, guard)
+    check("无简介无亮点时整条丢弃", len(items3) == 0 and dropped3 == 1)
 
 
 def test_fallback() -> None:
-    print("\n[5] 降级方案")
+    print("\n[6] 降级方案")
 
     result = summarizer.build_fallback_result(
         make_news(), make_repos(), summarizer.today_local(), "测试原因"
@@ -253,10 +335,17 @@ def test_fallback() -> None:
     check("国内消费板块有内容", len(by_key["cn_consumer"]) == 1)
     check("GitHub 板块有内容", by_key["github"][0]["title"] == "example/cool-agent")
     check("每条都有链接", all(i["url"] for i in by_key["cn_tech"] + by_key["github"]))
+    check("降级的 GitHub 条目含结构化字段", "intro" in by_key["github"][0])
+
+    # 部分降级：只降新闻，GitHub 结果保留
+    news_sections, n = summarizer.build_fallback_news_section(make_news(), "测试")
+    gh_items = summarizer.build_fallback_github_section(make_repos())
+    check("可单独降级新闻部分", n == 4 and len(news_sections) == 4)
+    check("可单独降级 GitHub 部分", len(gh_items) == 1 and gh_items[0]["intro"])
 
 
 def test_notifier() -> None:
-    print("\n[6] 邮件推送（SMTP）")
+    print("\n[7] 邮件推送（SMTP）")
 
     report = summarizer.build_fallback_result(
         make_news(), make_repos(), summarizer.today_local(), "自检"
@@ -326,7 +415,7 @@ def config_hex_accent(html: str) -> bool:
 
 
 def test_render() -> None:
-    print("\n[7] 页面渲染（Swiss 风格 token）")
+    print("\n[8] 页面渲染（Dashboard 复古纸质风格）")
 
     import shutil
     import tempfile
@@ -342,6 +431,29 @@ def test_render() -> None:
         report = summarizer.build_fallback_result(
             make_news(), make_repos(), summarizer.today_local(), "自检"
         )
+        # 注入一条带完整结构化字段的 GitHub 条目，验证四件套能真正落到页面上
+        for sec in report["sections"]:
+            if sec["key"] == "github":
+                sec["lead"] = "这批项目都在让 AI 助手更好用"
+                sec["items"] = [
+                    {
+                        "title": "example/cool-agent",
+                        "url": "https://github.com/example/cool-agent",
+                        "intro": "一句话就能搭起一个会自己干活的 AI 助手。",
+                        "features": ["自动拆解任务", "支持多种大模型", "本地运行不上传数据"],
+                        "guide": "需要先装 Node 18，然后一条命令就能跑起来。",
+                        "install": "npx cool-agent init",
+                        "summary": "一句话就能搭起一个会自己干活的 AI 助手。",
+                        "source": "GitHub",
+                        "stars": "1234",
+                        "language": "Python",
+                        "is_new": True,
+                        "title_original": "",
+                        "excerpt": "An AI agent framework",
+                        "is_foreign": True,
+                    }
+                ]
+
         out = renderer.render_issue(report, STATS, [], config.OUTPUT_HTML, root="")
         html = out.read_text(encoding="utf-8")
 
@@ -349,7 +461,7 @@ def test_render() -> None:
         check("无未渲染的 Jinja 变量", "{{" not in html and "{%" not in html)
         check("声明了 UTF-8", 'charset="UTF-8"' in html)
         check("包含 viewport 元信息（移动端适配）", "viewport" in html)
-        check("包含五大板块锚点", all(f'id="{k}"' in html for k in config.SECTION_KEYS))
+        check("包含五个板块面板", all(f'id="panel-{k}"' in html for k in config.SECTION_KEYS))
         check("统计口径正确（24 个 RSS 源）", "24 个 RSS 源" in html)
 
         # 所有外链都必须是 http(s)
@@ -366,38 +478,66 @@ def test_render() -> None:
         check("内部链接均为相对路径", 'href="archive/' in html)
         check("原文链接带 noopener", 'rel="noopener noreferrer nofollow"' in html)
 
-        # ---- Swiss 风格 token 合规（见 ui-style-swiss-minimal）----
+        # ---- 视觉规范合规：复古纸质 + 硬核边框 Dashboard ----
         css = html.split("</style>")[0].lower()
 
-        allowed = {"#e4002b", "#ffffff", "#f7f7f8", "#111111", "#444444", "#6b6b6b", "#e0e0e0"}
+        allowed = {
+            "#f4f1ea", "#ebe6da", "#e3ddd0",   # 纸质米色三档底板
+            "#111111", "#3d3a34", "#5e5849",   # 纯黑主色 + 两档暖灰
+            "#8c2f1f", "#2f5d3a",              # 暗红主点缀 + 深绿次点缀
+            "#b9b2a2",                          # 次级分隔线
+            "#ffffff",                          # 仅允许出现在颜色的对比/说明性文本里（见下方纯白检查）
+        }
         found = {"#" + h for h in re.findall(r"#([0-9a-f]{6})\b", css)}
         stray = found - allowed
 
-        check("只用白/灰阶 + 瑞士红", not stray, f"越界色值 {sorted(stray)}")
-        check("点缀色确为 Swiss Red", "#e4002b" in css)
-        check("无圆角", "border-radius" not in css)
-        check("无阴影", "box-shadow" not in css)
-        check("无渐变", "gradient" not in css)
-        check("有 1px 发丝线栅格", "grid-lines" in css and "width: 1px" in css)
-        check("使用单一无衬线字族", '"helvetica neue", helvetica, arial' in css)
-        # 注意排除 "sans-serif" 本身：只有真正引入衬线字族才算破功
-        # 这里必须是后顾断言 (?<!sans-)，否则会把 sans-serif 里的 serif 也匹配上
-        check(
-            "无衬线标题（未引入衬线字体）",
-            not re.search(r"georgia|times new roman|(?<!sans-)serif|songti|source han serif", css),
-        )
-        check("数字等宽对齐", "tabular-nums" in css)
+        check("色板仅含纸质米色/黑/暖灰/暗红/深绿", not stray, f"越界色值 {sorted(stray)}")
+        check("底板为纸质米色 #F4F1EA", "--paper: #f4f1ea" in css)
+        check("主点缀色为暗红 #8C2F1F", "#8c2f1f" in css)
+        check("次点缀色为深绿 #2F5D3A", "#2f5d3a" in css)
+
+        # 严禁刺眼纯白：背景声明里不能出现 #FFFFFF
+        bg_white = re.findall(r"background[^;{}]*#ffffff", css)
+        check("背景未使用纯白", not bg_white, str(bg_white[:3]))
+
+        check("零圆角", "border-radius: 0 !important" in css)
+        check("零阴影", "box-shadow" not in css)
+        check("边框使用纯黑实线", re.search(r"border[^;:]*:\s*[12]px solid var\(--line\)", css) is not None)
+        check("全站变量化边框色", "--line: #111111" in css)
+
+        # 布局：双栏 Dashboard
+        check("双栏 Grid 布局", "grid-template-columns: var(--sidebar-w) minmax(0, 1fr)" in css)
+        check("侧栏固定宽度并吸顶", "--sidebar-w: 268px" in css and "position: sticky" in css)
+        check("侧栏当前期反黑高亮", ".archive-nav a.is-current" in css)
+        check("KPI 看板区存在", 'class="kpis"' in html and "kpi-value" in css)
+
+        # Tab 交互 + 渐进增强
+        check("Tab 使用 tablist 语义", 'role="tablist"' in html and 'role="tab"' in html)
+        check("面板使用 tabpanel 语义", 'role="tabpanel"' in html)
+        check("默认选中第一个板块", 'aria-selected="true"' in html)
+        check("Tab 联动 aria-controls", 'aria-controls="panel-' in html)
+        check("无 JS 时全部板块顺序展开",
+              ".js-on .panel { display: none; }" in css and "js-on" in html)
+        check("支持方向键切换 Tab", "ArrowRight" in html and "ArrowLeft" in html)
+        check("支持 #锚点直达板块", "hashchange" in html)
+
+        check("数字使用等宽体", "--mono:" in css and "tabular-nums" in css)
         check("无 emoji 装饰", not re.search(r"[\U0001F300-\U0001FAFF\u2600-\u27BF]", html))
         check("未用 Unicode 符号当图标", not any(g in html for g in ("▣", "◊", "↗", "★")))
-        check("差异化动作：悬停显影栅格", "body:has(.item:hover) .grid-lines" in css)
         check("阅读全文为 CSS 绘制标记", 'class="ext"' in html and "阅读全文" in html)
+
+        # GitHub 深度解析结构必须落到页面上
+        check("渲染项目通俗简介字段", "项目通俗简介" in html)
+        check("渲染核心功能亮点字段", "核心功能亮点" in html)
+        check("渲染应用与部署指南字段", "应用与部署指南" in html)
+        check("渲染一键安装命令块", 'class="install"' in html or "一键安装" in html)
     finally:
         config.DIST_DIR, config.OUTPUT_HTML = original
         shutil.rmtree(tmp, ignore_errors=True)
 
 
 def test_language_modes() -> None:
-    print("\n[8] 中英对照（语言切换）")
+    print("\n[9] 中英对照（语言切换）")
 
     report = summarizer.build_fallback_result(
         make_news(), make_repos(), summarizer.today_local(), "自检"
@@ -448,8 +588,8 @@ def test_language_modes() -> None:
             ]
         },
     }
-    result = summarizer.normalize_result(raw, guard, summarizer.today_local())
-    item = next(s for s in result["sections"] if s["key"] == "intl_tech")["items"][0]
+    sections, _, _ = summarizer.normalize_news_result(raw, guard, summarizer.today_local())
+    item = next(s for s in sections if s["key"] == "intl_tech")["items"][0]
 
     check("携带原文标题", item["title_original"] == "OpenAI 发布新一代推理模型", item["title_original"])
     check("携带原文摘要", bool(item["excerpt"]), item["excerpt"][:30])
@@ -484,14 +624,14 @@ def test_language_modes() -> None:
             ]
         },
     }
-    res_en = summarizer.normalize_result(raw_en, guard_en, summarizer.today_local())
-    item_en = next(s for s in res_en["sections"] if s["key"] == "intl_tech")["items"][0]
+    secs_en, _, _ = summarizer.normalize_news_result(raw_en, guard_en, summarizer.today_local())
+    item_en = next(s for s in secs_en if s["key"] == "intl_tech")["items"][0]
     check("英文源判定为外文", item_en["is_foreign"] is True)
     check("英文原文标题被保留", item_en["title_original"].startswith("OpenAI ships"))
 
 
 def test_history() -> None:
-    print("\n[9] 往期存档")
+    print("\n[10] 往期存档")
 
     import json as _json
     import shutil
@@ -550,62 +690,75 @@ def test_deepseek_pipeline() -> None:
     验证的是真实调用链：OpenAI SDK 构造请求 → HTTP 交互 → JSON 解析 →
     链接校验 → 结果归一化。无需真实 API Key。
     """
-    print("\n[10] DeepSeek 调用链（本地 mock 接口）")
+    print("\n[11] DeepSeek 调用链（本地 mock 接口）")
 
     import threading
     from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-    captured: dict = {}
+    calls: list = []
 
-    # mock 返回：三个真实链接 + 一个编造链接（应被过滤）
-    model_sections = {
-        "intl_tech": [
-            {
-                "title": "OpenAI 发布新一代推理模型",
-                "summary": "OpenAI 发布新模型，推理能力提升。",
-                "source": "TechCrunch",
-                "url": "https://techcrunch.com/2026/09/13/openai-new-model/",
-            },
-            {
-                "title": "编造的新闻",
-                "summary": "这条不该出现。",
-                "source": "假媒体",
-                "url": "https://hallucinated.example.com/fake",
-            },
-        ],
-        "cn_tech": [
-            {
-                "title": "国内厂商发布新款芯片",
-                "summary": "采用 3nm 工艺。",
-                "source": "IT之家",
-                "url": "https://www.ithome.com/0/800/123.htm",
-            }
-        ],
-        "intl_consumer": [],
-        "cn_consumer": [
-            {
-                "title": "咖啡品牌门店数破万",
-                "summary": "门店数量突破一万家。",
-                "source": "刀法研究所",
-                "url": "https://www.digitaling.com/articles/1234567.html",
-            }
-        ],
-        "github": [
-            {
-                "title": "example/cool-agent",
-                "summary": "一个 AI Agent 框架。",
-                "source": "GitHub",
-                "url": "https://github.com/example/cool-agent",
-                "stars": "1234",
-                "language": "Python",
-            }
-        ],
-    }
-    canned = json.dumps(
+    # 新闻部分的 mock：两条真实链接 + 一条编造链接（应被过滤）
+    news_canned = json.dumps(
         {
             "date": summarizer.today_local().isoformat(),
             "digest": "OpenAI 发布新推理模型；国内厂商发布 3nm 芯片。",
-            "sections": model_sections,
+            "sections": {
+                "intl_tech": [
+                    {
+                        "title": "OpenAI 发布新一代推理模型",
+                        "summary": "OpenAI 发布新模型，推理能力提升。",
+                        "source": "TechCrunch",
+                        "url": "https://techcrunch.com/2026/09/13/openai-new-model/",
+                    },
+                    {
+                        "title": "编造的新闻",
+                        "summary": "这条不该出现。",
+                        "source": "假媒体",
+                        "url": "https://hallucinated.example.com/fake",
+                    },
+                ],
+                "cn_tech": [
+                    {
+                        "title": "国内厂商发布新款芯片",
+                        "summary": "采用 3nm 工艺。",
+                        "source": "IT之家",
+                        "url": "https://www.ithome.com/0/800/123.htm",
+                    }
+                ],
+                "intl_consumer": [],
+                "cn_consumer": [
+                    {
+                        "title": "咖啡品牌门店数破万",
+                        "summary": "门店数量突破一万家。",
+                        "source": "刀法研究所",
+                        "url": "https://www.digitaling.com/articles/1234567.html",
+                    }
+                ],
+            },
+        },
+        ensure_ascii=False,
+    )
+
+    # GitHub 部分的 mock：结构化四件套 + 一条编造仓库
+    github_canned = json.dumps(
+        {
+            "digest_repos": "这批项目都在让 AI 助手更好用",
+            "repos": [
+                {
+                    "repo": "example/cool-agent",
+                    "url": "https://github.com/example/cool-agent",
+                    "intro": "一句话就能搭起一个会自己干活的 AI 助手。",
+                    "features": ["自动拆解任务", "支持多种模型"],
+                    "guide": "需要先装 Node 18，然后一条命令跑起来。",
+                    "install": "npx cool-agent init",
+                },
+                {
+                    "repo": "evil/fake",
+                    "url": "https://github.com/evil/fake",
+                    "intro": "编造的",
+                    "features": ["假的"],
+                },
+            ],
         },
         ensure_ascii=False,
     )
@@ -614,9 +767,14 @@ def test_deepseek_pipeline() -> None:
         def do_POST(self):  # noqa: N802
             length = int(self.headers.get("Content-Length", 0))
             body = json.loads(self.rfile.read(length) or b"{}")
-            captured["path"] = self.path
-            captured["body"] = body
+            user_text = json.dumps(body, ensure_ascii=False)
 
+            # 靠 system 提示词区分是新闻调用还是 GitHub 调用
+            system = (body.get("messages") or [{}])[0].get("content") or ""
+            is_github = "开源项目" in system or "技术布道者" in system
+            calls.append({"is_github": is_github, "body": body, "user": user_text})
+
+            content = github_canned if is_github else news_canned
             payload = {
                 "id": "mock-1",
                 "object": "chat.completion",
@@ -625,7 +783,7 @@ def test_deepseek_pipeline() -> None:
                 "choices": [
                     {
                         "index": 0,
-                        "message": {"role": "assistant", "content": canned},
+                        "message": {"role": "assistant", "content": content},
                         "finish_reason": "stop",
                     }
                 ],
@@ -643,15 +801,13 @@ def test_deepseek_pipeline() -> None:
 
     server = ThreadingHTTPServer(("127.0.0.1", 0), Handler)
     port = server.server_address[1]
-    thread = threading.Thread(target=server.serve_forever, daemon=True)
-    thread.start()
+    threading.Thread(target=server.serve_forever, daemon=True).start()
 
     original_key = config.DEEPSEEK_API_KEY
     original_base = config.DEEPSEEK_BASE_URL
     try:
         config.DEEPSEEK_API_KEY = "sk-selftest-dummy"
         config.DEEPSEEK_BASE_URL = f"http://127.0.0.1:{port}"
-
         result = summarizer.summarize(make_news(), make_repos(), dry_run=False)
     finally:
         config.DEEPSEEK_API_KEY = original_key
@@ -659,23 +815,43 @@ def test_deepseek_pipeline() -> None:
         server.shutdown()
         server.server_close()
 
-    body = captured.get("body", {})
+    news_calls = [c for c in calls if not c["is_github"]]
+    gh_calls = [c for c in calls if c["is_github"]]
     by_key = {s["key"]: s["items"] for s in result["sections"]}
 
-    check("SDK 请求打到了 /chat/completions", captured.get("path") == "/chat/completions", str(captured.get("path")))
-    check("请求指定了 json_object 输出", body.get("response_format", {}).get("type") == "json_object")
-    check("请求包含 system 提示词", body.get("messages", [{}])[0].get("role") == "system")
-    check("system 提示词包含客观性约束", "禁止主观评论" in (body.get("messages", [{}])[0].get("content") or ""))
-    check("用户提示词包含五大板块要求", all(k in json.dumps(body, ensure_ascii=False) for k in config.SECTION_KEYS))
-    check("用户提示词含分类口径要求", "不设大公司专属板块" in json.dumps(body, ensure_ascii=False))
-    check("结果未经降级", not result.get("degraded", False), str(result.get("degraded_reason")))
+    check("新闻与 GitHub 各发起一次独立调用", len(news_calls) == 1 and len(gh_calls) == 1,
+          f"新闻 {len(news_calls)} 次 / GitHub {len(gh_calls)} 次")
+    check("两次调用都指定 json_object 输出",
+          all(c["body"].get("response_format", {}).get("type") == "json_object" for c in calls))
+    check("两次调用都带 system 提示词",
+          all((c["body"].get("messages") or [{}])[0].get("role") == "system" for c in calls))
+
+    news_user = news_calls[0]["user"] if news_calls else ""
+    gh_user = gh_calls[0]["user"] if gh_calls else ""
+    gh_system = (gh_calls[0]["body"]["messages"][0]["content"] if gh_calls else "")
+
+    check("新闻提示词含四大板块", all(k in news_user for k in summarizer.NEWS_SECTION_KEYS))
+    check("新闻提示词不再包含 github 板块", '"github"' not in news_user)
+    check("新闻提示词含分类口径", "不设大公司专属板块" in news_user)
+    check("GitHub 提示词含客观性约束", "禁止编造" in gh_system)
+    check("GitHub 提示词要求大白话", "说人话" in gh_system)
+    check("GitHub 提示词要求命令来自 README", "必须来自 README" in gh_system or "README 原文" in gh_system)
+    check("GitHub 用户提示词含结构化字段要求",
+          all(k in gh_user for k in ("intro", "features", "guide", "install")))
+    check("README 摘录被送进 GitHub 提示词", "readme_excerpt" in gh_user)
+
+    check("结果未经整体降级", not result.get("degraded", False), str(result.get("degraded_reason")))
     check("导读来自模型", result["digest"].startswith("OpenAI 发布新推理模型"))
-    check("国际科技板块保留 1 条且剔除幻觉", len(by_key["intl_tech"]) == 1, str(len(by_key["intl_tech"])))
-    check("国内科技板块 1 条", len(by_key["cn_tech"]) == 1)
-    check("国内消费板块 1 条", len(by_key["cn_consumer"]) == 1)
-    check("GitHub 板块 1 条", len(by_key["github"]) == 1)
-    check("GitHub 条目保留星数", by_key["github"][0].get("stars") == "1234")
-    # 注意：模型的 title 被改写成中文时，应通过标题回查补全来源名
+    check("国际科技保留 1 条且剔除幻觉", len(by_key["intl_tech"]) == 1, str(len(by_key["intl_tech"])))
+    check("国内科技 1 条", len(by_key["cn_tech"]) == 1)
+    check("国内消费 1 条", len(by_key["cn_consumer"]) == 1)
+    check("GitHub 保留 1 条且剔除编造仓库", len(by_key["github"]) == 1, str(len(by_key["github"])))
+    check("GitHub 条目含 intro", bool(by_key["github"][0].get("intro")))
+    check("GitHub 条目含 features", len(by_key["github"][0].get("features", [])) == 2)
+    check("GitHub 条目含 install 命令", by_key["github"][0].get("install") == "npx cool-agent init")
+    check("GitHub 星数取真实值 1234", by_key["github"][0].get("stars") == "1234")
+    check("GitHub 板块带导语", bool(
+        next(s for s in result["sections"] if s["key"] == "github").get("lead")))
     check("板块顺序与配置一致", [s["key"] for s in result["sections"]] == config.SECTION_KEYS)
 
 
@@ -702,7 +878,7 @@ def contrast_ratio(fg_hex: str, bg_hex: str) -> float:
 
 def test_contrast() -> None:
     """从模板里读出 CSS 变量，逐对校验对比度（防止改配色时改出不可读的小字）。"""
-    print("\n[11] 配色对比度（WCAG AA）")
+    print("\n[12] 配色对比度（WCAG AA）")
 
     import re
 
@@ -713,20 +889,24 @@ def test_contrast() -> None:
         m = re.search(rf"--{name}:\s*(#[0-9a-fA-F]{{6}})", block)
         return m.group(1) if m else ""
 
-    paper = pick("paper")
-    paper_alt = pick("paper-alt")
+    # 纸质米色三档底板 —— 正文可能落在其中任意一档上
+    backdrops = [("主底板", pick("paper")), ("次级底", pick("paper-alt")), ("悬停底", pick("paper-deep"))]
 
     for label, var in (
         ("正文 --ink", "ink"),
         ("次级 --ink-soft", "ink-soft"),
         ("辅助 --muted", "muted"),
-        ("点缀 --accent", "accent"),
+        ("点缀 --accent（暗红）", "accent"),
+        ("点缀 --accent-2（深绿）", "accent-2"),
     ):
         fg = pick(var)
-        if not (fg and paper and paper_alt):
-            check(f"{label} 变量可解析", False, f"fg={fg} paper={paper}")
+        if not fg:
+            check(f"{label} 变量可解析", False, f"fg={fg}")
             continue
-        for bg_name, bg in (("页面底色", paper), ("浅灰底", paper_alt)):
+        for bg_name, bg in backdrops:
+            if not bg:
+                check(f"{bg_name} 变量可解析", False, bg_name)
+                continue
             ratio = contrast_ratio(fg, bg)
             check(
                 f"{label} on {bg_name} ≥ 4.5:1（实测 {ratio:.2f}:1）",
@@ -734,9 +914,21 @@ def test_contrast() -> None:
                 f"{fg} on {bg} = {ratio:.2f}:1",
             )
 
-    # Swiss 风格只允许一个点缀色
-    accents = re.findall(r"--accent:\s*(#[0-9a-fA-F]{6})", css)
-    check("只定义了一个点缀色", len(accents) == 1, str(accents))
+    # 反黑高亮（侧栏选中项 / Tab 选中态）上的文字也必须可读
+    ink, paper = pick("ink"), pick("paper")
+    if ink and paper:
+        ratio = contrast_ratio(paper, ink)
+        check(f"反黑块上的文字 ≥ 4.5:1（实测 {ratio:.2f}:1）", ratio >= 4.5)
+
+    paper_accent = pick("accent")
+    if paper_accent and paper:
+        check(
+            f"反白按钮底色上的纸色文字 ≥ 4.5:1（实测 {contrast_ratio(paper, paper_accent):.2f}:1）",
+            contrast_ratio(paper, paper_accent) >= 4.5,
+        )
+
+    # 底板必须是纸质米色，不能是纯白
+    check("主底板不是纯白", pick("paper").lower() != "#ffffff", pick("paper"))
 
 
 def main() -> int:
@@ -748,6 +940,7 @@ def main() -> int:
     test_url_guard()
     test_json_parsing()
     test_normalize_result()
+    test_github_structure()
     test_fallback()
     test_notifier()
     test_render()

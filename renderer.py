@@ -87,6 +87,18 @@ def _repo_count(report: Dict[str, Any]) -> int:
     return 0
 
 
+def _category_counts(report: Dict[str, Any]) -> tuple[int, int]:
+    """按「科技 / 消费」两大类汇总条数，供 KPI 看板使用。"""
+    tech = consumer = 0
+    for section in report.get("sections", []):
+        n = len(section.get("items", []))
+        if section.get("key", "").endswith("_tech"):
+            tech += n
+        elif section.get("key", "").endswith("_consumer"):
+            consumer += n
+    return tech, consumer
+
+
 # --------------------------------------------------------------------------
 # 存档读写
 # --------------------------------------------------------------------------
@@ -165,6 +177,7 @@ def _base_context(
     report_date = date.fromisoformat(report["date"])
     total = _total_items(report)
     repos = _repo_count(report)
+    tech, consumer = _category_counts(report)
 
     # 往期列表里排除"当前正在看的这一天"
     past = [h for h in history if h["date"] != current_date][: config.HISTORY_MAX_DAYS]
@@ -180,6 +193,8 @@ def _base_context(
             "generated_at": local_now().strftime("%Y-%m-%d %H:%M"),
             "news_count": total - repos,
             "repo_count": repos,
+            "tech_count": tech,
+            "consumer_count": consumer,
             "total_count": total,
             "media_count": _count_media(report),
             "rss_sources": stats.get("rss_sources", 0),

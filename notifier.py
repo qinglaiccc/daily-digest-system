@@ -242,6 +242,33 @@ def build_html(report: Dict[str, Any], site_url: str) -> str:
                 else ""
             )
 
+            # GitHub 条目附带「功能亮点 + 一键命令」，与网页版保持同一套信息
+            extra_block = ""
+            if section.get("key") == "github" and (item.get("features") or item.get("install")):
+                bits = []
+                if item.get("features"):
+                    lis = "".join(
+                        f'<li style="margin:0 0 3px;">{_esc(f)}</li>' for f in item["features"]
+                    )
+                    bits.append(
+                        f'<div style="padding-top:5px;">'
+                        f'<span style="font:700 10px/1.4 -apple-system,\'Segoe UI\',\'Microsoft YaHei\',sans-serif;'
+                        f'letter-spacing:1px;color:{_MUTED};">核心功能亮点</span>'
+                        f'<ul style="margin:4px 0 0;padding-left:18px;font:400 13px/1.6 '
+                        f'-apple-system,\'Segoe UI\',\'Microsoft YaHei\',sans-serif;color:{_INK_SOFT};">{lis}</ul>'
+                        f"</div>"
+                    )
+                if item.get("install"):
+                    bits.append(
+                        f'<div style="padding-top:8px;">'
+                        f'<span style="font:700 10px/1.4 -apple-system,\'Segoe UI\',\'Microsoft YaHei\',sans-serif;'
+                        f'letter-spacing:1px;color:{_MUTED};">一键安装</span>'
+                        f'<div style="margin-top:4px;padding:8px 10px;background:{_INK};color:{_PAPER};'
+                        f'font:400 12px/1.5 Consolas,Menlo,monospace;word-break:break-all;">'
+                        f'$ {_esc(item["install"])}</div></div>'
+                    )
+                extra_block = "".join(bits)
+
             # 原文标题：与中文标题不同的外文来源才展示，避免中文源重复
             original_line = ""
             if item.get("is_foreign") and item.get("title_original"):
@@ -260,6 +287,7 @@ def build_html(report: Dict[str, Any], site_url: str) -> str:
                   </div>
                   {original_line}
                   {summary_line}
+                  {extra_block}
                   <div style="padding-top:8px;">
                     <a href="{_esc(item['url'])}"
                        style="font:700 11px/1.4 -apple-system,'Segoe UI','Microsoft YaHei',sans-serif;

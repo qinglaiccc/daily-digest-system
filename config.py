@@ -414,6 +414,16 @@ GITHUB_MIN_STARS = int(os.getenv("GITHUB_MIN_STARS", "50"))
 GITHUB_PER_TOPIC_LIMIT = int(os.getenv("GITHUB_PER_TOPIC_LIMIT", "15"))
 GITHUB_TOTAL_LIMIT = int(os.getenv("GITHUB_TOTAL_LIMIT", "30"))
 
+# README 深度解析：抓取每个仓库 README 的字符上限，以及最多抓多少个仓库
+# 注意 /readme 走的是 core 配额（5000/小时），与 Search 的 30 次/分钟是两套独立配额
+README_CHAR_LIMIT = int(os.getenv("README_CHAR_LIMIT", "1500"))
+README_MAX_REPOS = int(os.getenv("README_MAX_REPOS", "30"))
+
+# GitHub 板块是独立的一次 DeepSeek 调用，上下文预算单独给。
+# README 摘录很占空间（1500 字符/个），预算给足才能让更多仓库带着上下文进模型。
+# 45000 字符约合 15k tokens，deepseek-chat 的上下文完全放得下。
+GITHUB_MAX_INPUT_CHARS = int(os.getenv("GITHUB_MAX_INPUT_CHARS", "45000"))
+
 # 明显偏离"效率与 AI 工具"主题的仓库会被关键词过滤掉
 GITHUB_EXCLUDE_KEYWORDS = [
     "awesome-list-of-awesome-lists",
