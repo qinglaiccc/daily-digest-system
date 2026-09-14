@@ -1,0 +1,8 @@
+# 每日早报流水线依赖
+# 说明：Python 3.10+ 均可运行，GitHub Actions 里使用 3.12。
+
+requests>=2.31.0          # HTTP 请求（RSS 拉取、企业微信推送）
+feedparser>=6.0.11        # RSS / Atom 解析
+openai>=1.30.0            # DeepSeek 兼容 OpenAI SDK，用于调用 chat.completions
+Jinja2>=3.1.4             # HTML 模板渲染
+tzdata>=2024.1            # IANA 时区数据（Asia/Shanghai；Windows 上必需）

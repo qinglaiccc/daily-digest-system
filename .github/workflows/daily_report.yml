@@ -1,0 +1,200 @@
+name: 每日早报
+
+# ---------------------------------------------------------------------------
+# 触发方式
+#   schedule         : 每天 UTC 00:00（= Asia/Shanghai 08:00）自动执行
+#   workflow_dispatch: 手动触发，可勾选 dry-run 只验证链路不调用 AI / 不推送
+# ---------------------------------------------------------------------------
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "dry-run：跳过 DeepSeek 与邮件推送，仅验证采集与渲染"
+        type: boolean
+        default: false
+
+# 部署到 gh-pages 分支需要写权限；同时为 GitHub Pages 与 OIDC 预留权限
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# 避免定时任务与手动任务并发写同一个分支
+concurrency:
+  group: daily-report
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    name: 采集 → 提炼 → 渲染 → 推送 → 部署
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    env:
+      TZ: Asia/Shanghai
+      PYTHONUNBUFFERED: "1"
+      PYTHONIOENCODING: "utf-8"
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 配置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 生成早报
+        id: generate
+        env:
+          # ---- 密钥（在 Settings → Secrets and variables → Actions 中配置）----
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+
+          # ---- 邮件推送（QQ 邮箱 SMTP）----
+          SMTP_HOST: ${{ vars.SMTP_HOST || 'smtp.qq.com' }}
+          SMTP_PORT: ${{ vars.SMTP_PORT || '465' }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+
+          # ---- GitHub ----
+          # 必须显式传入，fetcher 依赖它突破 Search API 匿名限流（10/分钟 → 30/分钟）
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+          # ---- 可选 ----
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            echo "::notice::dry-run 模式运行"
+            python main.py --dry-run
+          else
+            python main.py
+          fi
+
+      - name: 写入 Actions 摘要
+        if: always()
+        run: |
+          {
+            echo "## 每日早报生成结果"
+            echo ""
+            echo "- 运行模式：\`${{ github.event.inputs.dry_run == 'true' && 'dry-run' || 'production' }}\`"
+            echo "- 产物文件：\`dist/index.html\`"
+            echo "- 站点地址：${{ vars.SITE_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: 上传产物（便于排查）
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-report-${{ github.run_number }}
+          path: dist/
+          retention-days: 7
+          if-no-files-found: warn
+
+      - name: 保存往期存档到仓库
+        if: success() && github.event.inputs.dry_run != 'true'
+        run: |
+          set -euo pipefail
+
+          # Actions 每次运行都是全新的干净检出，往期存档必须提交回仓库才能累积。
+          # 否则第二天运行时 archive/ 是空的，历史记录每天都会归零。
+          if [ ! -d archive ]; then
+            echo "::warning::没有生成 archive 目录，跳过"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add archive
+
+          if git diff --staged --quiet; then
+            echo "往期存档无变化，跳过提交"
+            exit 0
+          fi
+
+          # [skip ci] 防止这次提交再次触发本工作流形成死循环
+          git commit -m "chore: 保存往期存档 $(TZ=Asia/Shanghai date +%F) [skip ci]"
+
+          # checkout 可能处于 detached HEAD，显式推回目标分支
+          git push origin "HEAD:${{ github.ref_name }}"
+          echo "::notice::往期存档已提交到 ${{ github.ref_name }}"
+
+      - name: 部署到 gh-pages 分支
+        if: success() && github.event.inputs.dry_run != 'true'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist
+          # 每次全量覆盖；往期页面已在渲染阶段由 archive/*.json 全部重新生成
+          keep_files: false
+          force_orphan: true
+          # _raw.json 是调试快照，只进 Actions 产物用于排查，不发布到公开站点
+          exclude_assets: "_raw.json"
+          commit_message: "chore: 更新每日早报 ${{ github.run_number }}"
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+
+      - name: 失败时告警
+        if: failure()
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          RUN_NUMBER: ${{ github.run_number }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SMTP_USER:-}" ] || [ -z "${SMTP_PASS:-}" ]; then
+            echo "::warning::未配置 SMTP_USER / SMTP_PASS，跳过失败告警邮件"
+            exit 0
+          fi
+          python - <<'PY'
+          import os
+          import smtplib
+          from email.header import Header
+          from email.mime.text import MIMEText
+          from email.utils import formataddr
+
+          user = os.environ["SMTP_USER"]
+          passwd = os.environ["SMTP_PASS"]
+          to = os.environ.get("RECEIVER_EMAIL") or user
+          run_url = os.environ.get("RUN_URL", "")
+          run_number = os.environ.get("RUN_NUMBER", "?")
+
+          body = "\n".join([
+              "每日早报生成失败。",
+              "",
+              f"运行编号：{run_number}",
+              f"日志详情：{run_url}",
+              "",
+              "常见原因：",
+              "  1. DEEPSEEK_API_KEY 额度耗尽或失效",
+              "  2. GITHUB_TOKEN 过期（重新生成并更新 Secret）",
+              "  3. SMTP_PASS 填成了登录密码而非授权码",
+              "  4. 上游信息源大面积不可达（日志里搜「RSS 源失败」）",
+          ])
+
+          msg = MIMEText(body, "plain", "utf-8")
+          msg["Subject"] = Header(f"[失败] 每日早报 · 运行 {run_number}", "utf-8")
+          msg["From"] = formataddr(("每日早报", user))
+          msg["To"] = to
+
+          try:
+              with smtplib.SMTP_SSL("smtp.qq.com", 465, timeout=30) as server:
+                  server.login(user, passwd)
+                  server.sendmail(user, [to], msg.as_string())
+              print("告警邮件已发送")
+          except Exception as exc:
+              print(f"告警邮件发送失败: {exc}")
+          PY

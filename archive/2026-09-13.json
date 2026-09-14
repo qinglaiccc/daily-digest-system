@@ -1,0 +1,380 @@
+{
+  "date": "2026-09-13",
+  "generated_at": "2026-09-13T15:20:38.848997+00:00",
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 0,
+    "raw_news": 191,
+    "github_queries": 7
+  },
+  "report": {
+    "date": "2026-09-13",
+    "digest": "长飞空芯光纤创全球最低损耗纪录，英伟达预计明年营收增70%，服贸会闭幕达成1200余项成果。",
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "emoji": "🌍",
+        "items": [
+          {
+            "title": "英伟达预计2027年营收增70%",
+            "summary": "黄仁勋称明年营收有望同比增长70%至约6800亿美元，一款36 Grace CPU加72 Blackwell GPU产品月销售额增长27%。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1851373.html",
+            "title_original": "英伟达：预计2027年营收同比增长70%，达约6800亿美元",
+            "excerpt": "据TechCrunch报道，英伟达CEO黄仁勋在高盛科技大会上重申，公司明年营收有望实现70%的同比增长，分析师预计本财年营收约4000亿美元，明年将达约6800亿美元。他同时透露，一款集成36个Grace CPU和72个Blackwell GPU的产品月销售额增长27%，并强调英伟达是AI生态系统的基础平台。",
+            "is_foreign": false
+          },
+          {
+            "title": "优步Q2营收141.9亿美元",
+            "summary": "优步2026年Q2营收141.9亿美元同比增长12%，总预订额突破580亿美元，净利润23.9亿美元，此前宣布裁员约3300人。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1851371.html",
+            "title_original": "优步：2026年Q2营收141.9亿美元同比增长12%",
+            "excerpt": "优步2026年第二季度财报显示，营收141.9亿美元同比增长12%，总预订额同比增长22%突破580亿美元，净利润23.9亿美元，非GAAP每股收益同比增长35%。本月早些时候，优步宣布裁员约3300人占全球员工10%，并退出尼日利亚和乌干达市场。CEO科斯罗萨西表示，裁员及保险成本节省的资金将用于降低车费、丰富选择并推动增长，同时要求远程办公比例压缩至1%以下。",
+            "is_foreign": false
+          },
+          {
+            "title": "特斯拉美国前八月销量降16%",
+            "summary": "Motor Intelligence数据显示，特斯拉美国前八个月销量325351辆同比下降16%，但份额回升至52%。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1851565.html",
+            "title_original": "Motor Intelligence：2026年前八月特斯拉美国电动车销量32.5万辆，同比下降16%",
+            "excerpt": "Motor Intelligence数据显示，2026年前八个月特斯拉美国销量325351辆，同比下降16%，但份额回升至52%。同期美国电动车整体销量同比下降约30%，现代、福特、通用等对手战略收缩，车企累计减记超700亿美元，特斯拉被动收复份额。特斯拉2025年销量58.9万辆，份额曾跌至约41%。",
+            "is_foreign": false
+          },
+          {
+            "title": "折叠屏面板出货量降13%",
+            "summary": "Counterpoint报告显示，2026上半年全球折叠屏面板出货量同比下降13%，大折叠同比增长35%，三星显示份额51%居首。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1851376.html",
+            "title_original": "Counterpoint：2026上半年全球折叠屏面板出货量同比下降13%，大折叠同比增长35%",
+            "excerpt": "Counterpoint Research报告显示，2026年上半年全球折叠屏面板出货量同比下降13%，其中翻盖式面板同比下降62%，大折叠面板同比增长35%。三星显示份额达51%居首，京东方占30%。预计全年出货量同比增长23%，苹果将贡献27%且集中在下半年，大折叠面板全年预计同比增长107%。",
+            "is_foreign": false
+          },
+          {
+            "title": "Waymo报警逮捕持枪乘客",
+            "summary": "旧金山一辆Waymo自动驾驶出租车靠边停车并报警，车上两名未成年乘客携带已上膛AR式幽灵枪，随后被逮捕。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/transportation/994405/waymo-pulls-over-calls-cops-on-riders-with-a-ghost-gun",
+            "title_original": "Waymo pulls over, calls cops on riders with a ghost gun",
+            "excerpt": "Two people were arrested in San Fransico while riding around in a Waymo robotaxi after the cab pulled over and called the cops on them. The riders were juveniles in possession of a loaded AR-style ghost gun and were taken to a juvenile hall. While the police report did not specify who was operating the […]",
+            "is_foreign": true
+          },
+          {
+            "title": "聚变初创企业转向国防合作",
+            "summary": "TechCrunch报道，多家聚变能源初创企业正与国防领域签署合作协议，重启聚变与国家安全之间的联系。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/13/fusion-power-startups-find-new-partners-in-the-defense-world/",
+            "title_original": "Fusion power startups find new partners in the defense world",
+            "excerpt": "Fusion startups are inking defense-related deals, reigniting the relationship between fusion and national security that might have gone dormant, but never completely disappeared.",
+            "is_foreign": true
+          },
+          {
+            "title": "胡塞武装被指用Claude Code",
+            "summary": "Anthropic称胡塞武装使用Claude Code开发导弹制导软件。",
+            "source": "Hacker News",
+            "url": "https://clashreport.com/world/articles/houthis-used-claude-code-to-develop-missile-guidance-software-anthropic-s52mnx4pwpo",
+            "title_original": "Houthis Used Claude Code to Develop Missile Guidance Software: Anthropic",
+            "excerpt": "Article URL: https://clashreport.com/world/articles/houthis-used-claude-code-to-develop-missile-guidance-software-anthropic-s52mnx4pwpo \n Comments URL: https://news.ycombinator.com/item?id=49684266 \n Points: 10 \n # Comments: 11",
+            "is_foreign": true
+          },
+          {
+            "title": "苹果新机与AirPods 5发布",
+            "summary": "The Verge Installer栏目汇总本周苹果iPhone 18 Pro、AirPods 5及Meta、索尼等新品动态。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/994218/apple-iphone-18-pro-airpods-5-meta-muse-ai-sony-headphones",
+            "title_original": "Apple’s new phones are here",
+            "excerpt": "Hi, friends! Welcome to Installer No. 143, your guide to the best and Verge-iest stuff in the world. (If you're new here, welcome, new tech season is here, and also you can read all the old editions at the Installer homepage.) This week, I've been devouring every iPhone Duo video I can find, clicking on […]",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "emoji": "🇨🇳",
+        "items": [
+          {
+            "title": "长飞空芯光纤创全球最低损耗",
+            "summary": "长飞发布反谐振空芯光纤衰减突破至0.032dB/km，创全球最低传输损耗纪录，累计交付超10000芯公里。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/001/867.htm",
+            "title_original": "创全球最低传输损耗新纪录，长飞反谐振空芯光纤衰减突破至 0.032dB / km",
+            "excerpt": "IT之家 9 月 13 日消息，2026 中国算力大会于 9 月 11 日至 13 日在河北省廊坊市举行，在大会“2026 算力首创首发”环节，长飞公司正式发布， 反谐振空芯光纤衰减突破至 0.032dB/ km，创下全球最低传输损耗新纪录 。 据介绍，长飞空芯光纤算力互联技术已在国内外完成超过 13 个商用及试点项目，公司联合国内三大运营商完成城域网、智算互联及海洋传输等多场景应用。 截至目前，长飞空芯光纤累计交付超 10000 芯公里，创下最长商用线路 100 公里等多项纪录， 成为全球商用部署最广的空芯光纤供应商 。 IT之家附 长飞光纤 2026 年半年度（2026 年 1 月～2026 年 6 月）报告 ： 营业总收入…",
+            "is_foreign": false
+          },
+          {
+            "title": "富士通2027年海外销售2nm芯片",
+            "summary": "日经亚洲报道，富士通最早2027年向亚洲、美洲出口2nm工艺Arm处理器FUJITSU-MONAKA，正与40多家公司洽谈AI服务器合同。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/001/866.htm",
+            "title_original": "消息称富士通最早 2027 年开始向海外销售 FUJITSU-MONAKA 处理器",
+            "excerpt": "IT之家 9 月 13 日消息，《日经亚洲》当地时间今日报道称，富士通 (Fujitsu) 将最早从 2027 年开始向日本以外的亚洲、美洲市场出口其 2nm 工艺 Arm 指令集处理器 FUJITSU-MONAKA。 IT之家注意到，富士通早在 2024 年就为 FUJITSU-MONAKA 平台的开发与推广同 Supermicro（超微）达成合作。这意味着 富士通将 FUJITSU-MONAKA 视为一种可对外销售的商业化产品 ，而不是“富岳”超算上的 A64FX 那样的纯粹内部芯片。 富士通正在与 40 多家公司洽谈基于 FUJITSU-MONAKA 的 AI 服务器合同，已有 24 家金融 / 电信行业公司试用。富士通还计…",
+            "is_foreign": false
+          },
+          {
+            "title": "苹果自研iPhone游戏手柄",
+            "summary": "古尔曼证实苹果正为iPhone自研游戏手柄，代码显示两款型号T6502和T1057，或以Beats品牌推出。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/001/865.htm",
+            "title_original": "古尔曼：苹果正为 iPhone 自研游戏手柄，有望以 Beats 品牌推出",
+            "excerpt": "IT之家 9 月 13 日消息，彭博社记者马克 · 古尔曼证实，macOS 测试版代码中发现的线索属实：苹果正在为 iPhone 自研游戏手柄。 IT之家注意到，苹果商店目前已经在售多款手柄，例如 Backbone One（上图）与赛睿 Nimbus+，而现在苹果打算亲自入局，分一杯 iPhone 游戏手柄市场的蛋糕。 代码线索显示苹果正在开发两款手柄，型号标识符分别为 T6502 和 T1057。代码中能找到十字方向键、摇杆、震动马达的相关信息，还可能内置加速度计与陀螺仪，用于体感操控。不过苹果自研手柄的外观设计目前仍然未知。 古尔曼认为，这款苹果研发的外设最终或将以 Beats 品牌推出，项目由 Beats 的管理团队负责。B…",
+            "is_foreign": false
+          },
+          {
+            "title": "蚂蚁灵波开源三款世界模型",
+            "summary": "蚂蚁灵波开源LingBot-World 2.0三款模型，其中Small参数1.3B面向消费级单卡GPU设计，支持小时级连续生成。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/001/863.htm",
+            "title_original": "蚂蚁灵波开源三款 LingBot-World 2.0 世界模型：Small 参数 1.3B 面向消费级单卡 GPU 设计",
+            "excerpt": "IT之家 9 月 13 日消息，继今年 7 月开源 LingBot-World 2.0 14B 模型后，蚂蚁灵波科技本周进一步开源三款模型：LingBot-World 2.0 Small（1.3B）、LingBot-World 2.0 Bidirectional 和 LingBot-World 2.0 Causal Pretrain。 据介绍，LingBot-World 2.0 是一个实时交互世界模型。模型支持小时级连续生成，并可以响应攻击、射箭、施法、射击等角色动作，以及下雪、下雨等环境事件。在更高算力与相应推理配置下，LingBot-World 2.0 可进一步达到 720P / 60FPS 的高清实时体验。 而本次开源的 L…",
+            "is_foreign": false
+          },
+          {
+            "title": "Win11移除WMIC工具",
+            "summary": "微软本周推送的Windows 11强制更新移除遭勒索软件滥用的WMIC工具，并提醒用户勿自行恢复。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/001/862.htm",
+            "title_original": "微软：Win11 已移除勒索软件滥用的 WMIC 工具，请勿自行恢复",
+            "excerpt": "IT之家 9 月 13 日消息，本周推送的 Windows 11 强制更新，终于移除了遭勒索软件大量滥用的 WMIC 工具。如果没有接触过企业运维环境，你大概率从未听说过 WMIC。但它带来的风险并非只存在于企业：只要个人电脑安装了该组件，普通用户同样会受到威胁。 WMIC 全称 Windows Management Instrumentation Command-line（Windows 管理规范命令行工具），在 Windows 系统中已存在数十年，它本身并不是恶意软件。这是一款合法的命令行工具，主要供企业用户通过 Windows 管理规范（WMI）查询、管理 Windows 电脑。IT 部门以外的人员也会使用它来管理系统、实现…",
+            "is_foreign": false
+          },
+          {
+            "title": "vivo OriginOS 7预热",
+            "summary": "vivo宣布OriginOS 7将于9月16日开发者大会发布，全新蓝心小V支持一句话办事，可调用600余项系统能力。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/001/857.htm",
+            "title_original": "vivo OriginOS 7 预热：全新蓝心小 V 一句话办事，搭载液态动效",
+            "excerpt": "IT之家 9 月 13 日消息，2026 vivo 开发者大会将于 9 月 16 日举行，届时将带来 OriginOS 7，即将发布的 vivo X500 系列和 iQOO 16 也将首批搭载。 据 vivo OS 产品副总裁 @vivo周围 介绍，今年 vivo 将推出全新蓝心小 V，带来更强大的 Pro 模式。它是真正懂你、能帮你办事的专属助理，你说一句话，复杂的事就能替你办妥，它自己拆解任务、跨端操作，一步步执行，直到把事情办成。 据其例子，以前做旅行攻略要到处查资料、做筛选、排行程，现在一句话“帮我出份攻略”，它就能把你收藏的攻略、相册截图、之前写的笔记全串起来，生成一份专属路书。 小 V 还深入到原系统，可以调用 600…",
+            "is_foreign": false
+          },
+          {
+            "title": "智谱完成50亿美元融资",
+            "summary": "钛媒体快讯，智谱完成50亿美元融资。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8138516.html",
+            "title_original": "50亿美元融资背后，智谱在赌一个怎样的未来？丨钛快讯",
+            "excerpt": "50亿美元不是一场庆功宴的香槟，而更像是下一阶段长跑的补给站。",
+            "is_foreign": false
+          },
+          {
+            "title": "国产AI芯片上半年业绩分化",
+            "summary": "钛媒体报道，国产AI芯片公司上半年业绩出炉，行业进入看利润表阶段。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8138350.html",
+            "title_original": "国产AI芯片大卖，上半年谁真正赚到了钱？",
+            "excerpt": "国产AI芯片公司终于到了要看利润表的时刻。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "emoji": "🛍️",
+        "items": [
+          {
+            "title": "Boll & Branch划定AI广告边界",
+            "summary": "Modern Retail播客中，Boll & Branch首席创意官介绍品牌在广告图像与文案中使用生成式AI的框架与边界。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/where-boll-branch-draws-the-line-on-ai-generated-advertising/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Where Boll & Branch draws the line on AI-generated advertising",
+            "excerpt": "As companies take a stance on AI use, Boll & Branch is one of many brands integrating generative AI into their ad imagery and copy. On this week's episode of the Modern Retail Podcast, Boll & Branch Chief Creative Officer Kristen Deyco spoke about the brand's playbook and frameworks around the use of AI.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "emoji": "🧋",
+        "items": [
+          {
+            "title": "服贸会闭幕达成1200余项成果",
+            "summary": "2026年服贸会13日闭幕，吸引90个国家和地区设展办会，达成7类共1200余项成果，核心活动区入场近42万人次。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-13/10695724.shtml",
+            "title_original": "2026年服贸会在北京闭幕 达成1200余项成果",
+            "excerpt": "中新社北京9月13日电 (记者 徐婧)2026年中国国际服务贸易交易会13日在北京闭幕。本届服贸会吸引90个国家和地区、国际组织设展办会，达成7类共1200余项成果，国际影响力不断提高。",
+            "is_foreign": false
+          },
+          {
+            "title": "贵州酒博会年轻消费渐成主角",
+            "summary": "第十五届贵州酒博会现场，酒类融入音乐、表演等场景，年轻消费群体渐成主角，酒商加速向年轻化转型。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-13/10695752.shtml",
+            "title_original": "探访贵州酒博会：从“卖酒”到“卖生活方式” 年轻消费渐成主角",
+            "excerpt": "中新社贵阳9月13日电 (记者 周燕玲)正在贵州贵阳举行的第十五届中国(贵州)国际酒类博览会现场，有的年轻人排队品尝参展商带来的各种酒类，有的端着小杯坐在椅子上听音乐会，还有的人喝着酱酒拿铁看喜剧表演。酒没有完全占据现场的“C位”，而是融入音乐、表演以及各种场景之间。",
+            "is_foreign": false
+          },
+          {
+            "title": "中国超级稻三十年大会在沈阳举办",
+            "summary": "中国超级稻三十年暨种业高质量发展大会12日至14日在沈阳举行，主题为锚定国家粮食安全、聚智种业创新。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-13/10695822.shtml",
+            "title_original": "中国超级稻三十年暨种业高质量发展大会在沈阳举办",
+            "excerpt": "中新网沈阳9月13日电 (王翕瞳)中国超级稻三十年暨种业高质量发展大会12日至14日在沈阳举行，大会主题为“锚定国家粮食安全，聚智种业创新发展”。",
+            "is_foreign": false
+          },
+          {
+            "title": "宁夏启动农业社会化服务行动",
+            "summary": "宁夏供销合作社印发通知，启动农业社会化服务提质增效行动，建强服务载体、完善数字支撑，打通为农服务最后一公里。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-13/10695797.shtml",
+            "title_original": "宁夏供销系统启动农业社会化服务提质增效行动",
+            "excerpt": "中新网银川9月13日电 (记者 于晶)13日，记者从宁夏供销合作社获悉，该单位印发《关于组织开展农业社会化服务提质增效行动的通知》，以建强服务载体、创新服务模式、完善数字支撑、强化要素保障为抓手，全面启动农业社会化服务提质增效行动，打通为农服务“最后一公里”，助力特色农业高质量发展。",
+            "is_foreign": false
+          },
+          {
+            "title": "甬舟铁路全线桥梁主塔封顶",
+            "summary": "9月13日富翅门公铁两用大桥宁波侧主塔封顶，甬舟铁路全线桥梁主塔全部完成封顶。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-13/10695729.shtml",
+            "title_original": "甬舟铁路全线桥梁主塔完成封顶",
+            "excerpt": "中新网宁波9月13日电(记者 王逸飞)9月13日，甬舟铁路最后一座桥梁主塔——富翅门公铁两用大桥宁波侧主塔顺利封顶，标志着甬舟铁路全线桥梁主塔全部封顶，项目建设取得阶段性进展。",
+            "is_foreign": false
+          },
+          {
+            "title": "西安至沈阳银发旅游专列开行",
+            "summary": "9月13日西安开往沈阳的银发旅游专列驶出西安站，西安铁路局提供全链条配套保障老年旅客出行。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-13/10695694.shtml",
+            "title_original": "金秋首趟西安至沈阳旅游专列开行",
+            "excerpt": "中新网西安9月13日电 (记者 党田野 张远)13日9时10分，西安开往沈阳的银发旅游专列准点驶出西安站，老年旅客搭乘列车开启东北观光行程。西安铁路局提供全链条配套保障，以精细化服务保障老年旅客平安出行。",
+            "is_foreign": false
+          },
+          {
+            "title": "云南凤庆核桃丰收",
+            "summary": "中国核桃之乡云南凤庆核桃进入丰收季，当地全链条护航核桃产业发展。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-13/10695684.shtml",
+            "title_original": "“中国核桃之乡”云南凤庆核桃丰收 全链条护航产业发展",
+            "excerpt": "中新网云南临沧9月13日电题：“中国核桃之乡”云南凤庆核桃丰收 全链条护航产业发展",
+            "is_foreign": false
+          },
+          {
+            "title": "北京国际精品陶瓷展将举办",
+            "summary": "2026中国（北京）国际精品陶瓷展览会新闻发布会举办，展会由中国陶瓷工业协会主办。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-13/10695743.shtml",
+            "title_original": "2026中国（北京）国际精品陶瓷展览会新闻发布会举办",
+            "excerpt": "中新网北京9月13日电 (记者 高凯)由中国轻工业联合会指导，中国陶瓷工业协会主办的2026中国(北京)国际精品陶瓷展览会日前在北京举办新闻发布会。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "emoji": "🚀",
+        "items": [
+          {
+            "title": "openclaw/openclaw",
+            "summary": "跨平台个人AI助手，强调数据自主，支持任意操作系统与平台。",
+            "source": "GitHub",
+            "url": "https://github.com/openclaw/openclaw",
+            "title_original": "",
+            "excerpt": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
+            "is_foreign": true,
+            "stars": "389584",
+            "language": "TypeScript"
+          },
+          {
+            "title": "NousResearch/hermes-agent",
+            "summary": "可随用户成长的AI智能体框架，支持Claude、ChatGPT、Codex等多种模型。",
+            "source": "GitHub",
+            "url": "https://github.com/NousResearch/hermes-agent",
+            "title_original": "",
+            "excerpt": "The agent that grows with you",
+            "is_foreign": true,
+            "stars": "245074",
+            "language": "Python"
+          },
+          {
+            "title": "n8n-io/n8n",
+            "summary": "原生AI能力的工作流自动化平台，可视化搭建结合自定义代码，支持400余项集成。",
+            "source": "GitHub",
+            "url": "https://github.com/n8n-io/n8n",
+            "title_original": "",
+            "excerpt": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+            "is_foreign": true,
+            "stars": "204161",
+            "language": "TypeScript"
+          },
+          {
+            "title": "firecrawl/firecrawl",
+            "summary": "面向AI的网页搜索、抓取与交互上下文API，支持大规模数据提取与HTML转Markdown。",
+            "source": "GitHub",
+            "url": "https://github.com/firecrawl/firecrawl",
+            "title_original": "",
+            "excerpt": "The context API to search, scrape, and interact with the web at scale. 🔥",
+            "is_foreign": true,
+            "stars": "179782",
+            "language": "TypeScript"
+          },
+          {
+            "title": "langgenius/dify",
+            "summary": "构建Agentic工作流与RAG管线的协作平台，支持云端、VPC或自托管部署。",
+            "source": "GitHub",
+            "url": "https://github.com/langgenius/dify",
+            "title_original": "",
+            "excerpt": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+            "is_foreign": true,
+            "stars": "155591",
+            "language": "TypeScript"
+          },
+          {
+            "title": "open-webui/open-webui",
+            "summary": "用户友好的AI交互界面，支持Ollama、OpenAI API等多种后端。",
+            "source": "GitHub",
+            "url": "https://github.com/open-webui/open-webui",
+            "title_original": "",
+            "excerpt": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+            "is_foreign": true,
+            "stars": "151854",
+            "language": "Python"
+          },
+          {
+            "title": "google-gemini/gemini-cli",
+            "summary": "开源AI智能体，将Gemini能力直接带入终端，支持MCP客户端与服务端。",
+            "source": "GitHub",
+            "url": "https://github.com/google-gemini/gemini-cli",
+            "title_original": "",
+            "excerpt": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+            "is_foreign": true,
+            "stars": "106955",
+            "language": "TypeScript"
+          },
+          {
+            "title": "thedotmack/claude-mem",
+            "summary": "为智能体提供跨会话持久上下文，捕获会话内容并用AI压缩后注入后续会话。",
+            "source": "GitHub",
+            "url": "https://github.com/thedotmack/claude-mem",
+            "title_original": "",
+            "excerpt": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw,…",
+            "is_foreign": true,
+            "stars": "93786",
+            "language": "TypeScript"
+          }
+        ]
+      }
+    ]
+  }
+}

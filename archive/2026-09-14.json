@@ -1,0 +1,402 @@
+{
+  "date": "2026-09-14",
+  "generated_at": "2026-09-14T10:34:33.408855+00:00",
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 0,
+    "raw_news": 227,
+    "github_queries": 8
+  },
+  "report": {
+    "date": "2026-09-14",
+    "digest": "八部门发文促智能家居消费，京东建十万卡算力，追觅裁员约万人。",
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "CERN 弃 RHEL 转用 Debian",
+            "summary": "欧洲核子研究组织放弃红帽 RHEL，改用 Debian 支撑其加速器控制基础设施。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/KJRoBoUcE4L6bOPKOHco?utm_source=rss&utm_medium=article",
+            "title_original": "欧洲核子研究组织（CERN）放弃RHEL，转而采用 Debian 作为其加速器控制基础设施",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "GitLab 警告 AI 代理沙箱风险",
+            "summary": "GitLab 称 AI 代理沙箱安全性取决于其网络访问安全性，提示隔离与网络管控需同步。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/XLzpR2brCNW2VgYuuYJk?utm_source=rss&utm_medium=article",
+            "title_original": "GitLab 警告称，AI 代理的沙箱安全性取决于其网络访问的安全性",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "布罗克曼：仅前沿大模型需放缓",
+            "summary": "OpenAI 联合创始人布罗克曼称研发节奏管控只针对需数千亿美元投入的前沿巨型超算项目。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/002/229.htm",
+            "title_original": "OpenAI 联合创始人布罗克曼：仅前沿 AI 大模型研发需放缓",
+            "excerpt": "IT之家 9 月 14 日消息，OpenAI 总裁兼联合创始人格雷格 · 布罗克曼（Greg Brockman）提出，人工智能研发的放缓举措，应当仅限于像他们这样开发顶尖大模型的企业。 布罗克曼在彭博社《Odd Lots》播客节目中表示：“很多人会有这样的疑问：‘我还能继续开发开源模型吗？我还能继续做我的业余项目吗？’答案毫无疑问是肯定的。我们所说的研发节奏管控，针对的其实是前沿领域，指的是那些需要数千亿美元资本投入的巨型超级计算机项目。” IT之家注意到，这次采访录制时间早于 Anthropic PBC 首席执行官达里奥 · 阿莫代伊（Dario Amodei）当地时间上周六发布的博客文章。阿莫代伊在文中阐述 AI 风险不断加剧…",
+            "is_foreign": false
+          },
+          {
+            "title": "三星电机与高通合作 2.1D 封装",
+            "summary": "三星电机与高通合作开发基于嵌入式有机桥片的 2.1D 先进封装，已研发认证超一年。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/002/233.htm",
+            "title_original": "消息称三星电机与高通合作开发基于有机桥片的 2.1D 先进封装",
+            "excerpt": "IT之家 9 月 14 日消息，韩媒 THE ELEC 当地时间本月 14 日报道称，三星电机 (SEM) 正与高通合作开发面向 AI 半导体芯片的 2.1D 先进封装，双方在该异构集成技术平台上已进行了超一年的研发与认证。 据悉两家企业的 2.1D 封装 采用了嵌入式有机桥片 。其设计思路类似英特尔的 EMIB，但以更平价的有机材料取代 EMIB 中的硅桥片。此举一方面可降低制造成本，也可规避英特尔持有的 EMIB 专利。 三星电机尝试的有机桥片 可视为以 RDL（重布线层）工艺形成 5~7 层微电路的小型衬底 ，目标实现 1.5~2μm 的线宽 / 间距、4~5μm 的通孔尺寸、500~1000/mm 的 图案密度。 与传统…",
+            "is_foreign": false
+          },
+          {
+            "title": "Nike 跌出标普 100 指数",
+            "summary": "Nike 在成分股中 18 年后退出标普 100 指数，市值累计蒸发约 2000 亿美元。",
+            "source": "Hacker News",
+            "url": "https://fortune.com/2026/09/08/nike-stock-plummets-sp500-market-cap-index/",
+            "title_original": "Nike exits the S&P 100 after 18 years and a $200B market-cap wipeout",
+            "excerpt": "https://archive.ph/8NmSg \n \n Comments URL: https://news.ycombinator.com/item?id=49691343 \n Points: 138 \n # Comments: 182",
+            "is_foreign": true
+          },
+          {
+            "title": "安卓提权漏洞影响多品牌",
+            "summary": "研究披露 OEMpocalypse：非特权安卓应用可在三星、小米等设备上获取 root 权限。",
+            "source": "Hacker News",
+            "url": "https://calif.io/research/oempocalypse",
+            "title_original": "OEMpocalypse: Unprivileged Android app to root on Samsung, Xiaomi, others",
+            "excerpt": "Article URL: https://calif.io/research/oempocalypse \n Comments URL: https://news.ycombinator.com/item?id=49691152 \n Points: 67 \n # Comments: 28",
+            "is_foreign": true
+          },
+          {
+            "title": "GPT-6 Astra 开始推送",
+            "summary": "OpenAI 新模型 GPT-6 Astra 已开始向用户推送，Engadget 发布使用与注意事项指南。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2252859/how-to-use-gpt-6-astra-rollout-schedule/",
+            "title_original": "How to use GPT-6 Astra when it rolls out to you",
+            "excerpt": "OpenAI's new model, GPT-6 Astra, has begun rolling out to users. Here's how you can get it and pitfalls to avoid.",
+            "is_foreign": true
+          },
+          {
+            "title": "XCancel 再次被下线",
+            "summary": "Hacker News 讨论显示，第三方推特前端 XCancel 再次被下线，引发 42 点热度讨论。",
+            "source": "Hacker News",
+            "url": "https://xcancel.com/#",
+            "title_original": "XCancel Taken Down Again",
+            "excerpt": "Article URL: https://xcancel.com/# \n Comments URL: https://news.ycombinator.com/item?id=49694296 \n Points: 42 \n # Comments: 16",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "京东建十万卡、字节借 296 亿",
+            "summary": "钛媒体报道京东建设十万卡算力，字节跳动借款 296 亿元，中国大厂加码 AI 算力投入。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8139073.html",
+            "title_original": "京东建十万卡，字节“借”296亿，AI 算力进入「豪赌时刻」",
+            "excerpt": "AI军备赛进入买单周期，这一次，中国大厂也下了重注。",
+            "is_foreign": false
+          },
+          {
+            "title": "追觅 6 至 8 月离职约万人",
+            "summary": "知危称追觅 6 月至 8 月底离职与被裁员工约 1 万人，汽车、手机团队所剩无几。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/002/234.htm",
+            "title_original": "从 6 月至 8 月底，消息称追觅离职与被裁员工在 1 万人左右",
+            "excerpt": "IT之家 9 月 14 日消息，据知危从多位包括 HR 在内的追觅离职员工获悉， 从 6 月至 8 月底，离职与被裁员工在 1 万人左右 ，赔偿标准为 0.5N（试用期员工）至 N+1 不等，外界较为关心的汽车、手机团队目前“ 已不剩什么人了 ”。 据悉，AI 智能门锁整个 BU 被裁掉，而大家电 BU 的研发团队基本裁撤，仅保留销售、供应链等核心业务职能及中台岗位。 自今年四五月份起，追觅出现供应商前往苏州总部催讨款项的情况。有供应商反映，对接的研发和采购人员均已离职，欠款追讨无门；也有供应商反馈，近期追觅正在陆续支付货款。 据IT之家此前报道，8 月 25 日， 追觅科技发布关于公司战略聚焦及业务发展的说明 ，称基于公司整体战…",
+            "is_foreign": false
+          },
+          {
+            "title": "Azure 虚拟桌面混合版可用",
+            "summary": "Azure 虚拟桌面混合版正式可用，但许可细则尚未公布。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/MMD3SrhB1HuUh5Rv9Fmw?utm_source=rss&utm_medium=article",
+            "title_original": "Azure 虚拟桌面混合版正式可用，许可细则尚未公布",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "ICANN 取消三级 .name 注册",
+            "summary": "ICANN 取消第三级 .name 域名注册，InfoQ 讨论此举是否给身份盗用留下空间。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/DlKsq4vFFkUV9Xl7Fxls?utm_source=rss&utm_medium=article",
+            "title_original": "ICANN 取消第三级 .name 域名注册，是否为身份盗用敞开了大门？",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "openJiuwen 发布双维度 RSI 框架",
+            "summary": "openJiuwen 首发双维度 RSI 框架，支持 AI 自修改并落地办公智能体，强调算力亲和。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/JghIFNXBNVSAfbgbR4S9?utm_source=rss&utm_medium=article",
+            "title_original": "openJiuwen 首发双维度 RSI 框架，AI 自修改，落地办公智能体，算力亲和助力又快又省",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "惠普设备卡 Win11 更新",
+            "summary": "部分惠普用户无法安装 8 月累积更新 KB5121003，重启后长期卡在 HP 标志界面。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/002/239.htm",
+            "title_original": "部分惠普用户反馈无法安装微软 8 月 Win11 累积更新，开机卡 HP 标志界面",
+            "excerpt": "IT之家 9 月 14 日消息，科技媒体 NeoWin 今天（9 月 14 日）发布博文，报道称部分 惠普设备无法正常安装 8 月累积更新 KB5121003 ， 导致设备重启后长期停在 HP 标志界面。 网友 Grady 于 8 月 25 日在微软社区发帖，反馈其近期购买了一台全新的惠普笔记本（原帖并未列出具体型号），无法安装 8 月累积更新 KB5121003。 IT之家附上帖子事件顺序如下： 成功下载 KB5121003 更新，并提示用户重启电脑。 重启后出现故障，就一直卡在启动画面，用户只能盯着惠普的标志发呆。 用户长按电源键，系统关机后再次尝试开机。 用户开机后先是“诊断”，然后是“修复”，最终撤销了更新，回滚到此前版本…",
+            "is_foreign": false
+          },
+          {
+            "title": "vivo 公布 OriginOS 7 光效",
+            "summary": "vivo 公布 OriginOS 7 小 V 光效，开发者大会 9 月 16 日举行，X500 系列将首批搭载。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/002/230.htm",
+            "title_original": "vivo 公布 OriginOS 7 全新小 V 光效，开发者大会 9 月 16 日举办",
+            "excerpt": "IT之家 9 月 14 日消息，vivo OriginOS 7 今日公布全新小 V 光效，号称“让 AI 的状态更清晰，人与 AI 的交互也更自然舒适。” 据介绍，唤醒小 V，光效会瞬间铺开；长按说话，光效会在对话框流动，告诉你它正在听；执行任务时，光又会沿着屏幕边缘快速传递，再自然把视线带向结果。在听、在处理，还是已经完成，智慧的发生，一眼就能感知。 IT之家注意到， 2026 vivo 开发者大会将于 9 月 16 日举行 ，届时将带来 OriginOS 7，即将发布的 vivo X500 系列和 iQOO 16 也将首批搭载。 据 vivo OS 产品副总裁 @vivo周围 此前介绍， 今年 vivo 将推出全新蓝心小 V…",
+            "is_foreign": false
+          },
+          {
+            "title": "大模型价格三个月腰斩",
+            "summary": "钛媒体报道大模型价格三个月内腰斩，行业竞争加剧，模型“聪明”的定价正在贬值。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8139062.html",
+            "title_original": "三个月价格腰斩，大模型的“聪明”正在贬值？",
+            "excerpt": "大模型肉搏战的另一面",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Meta Lab 零售门店近翻倍",
+            "summary": "以 AI 眼镜知名的 Meta Lab 计划今秋新开六家门店，零售门店规模接近翻倍。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/meta-lab-known-for-ai-glasses-is-nearly-doubling-its-retail-store-footprint/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Meta Lab, known for AI glasses, is nearly doubling its retail store footprint",
+            "excerpt": "Meta Lab plans to open six new locations this fall as it continues its push into wearables. The company took Modern Retail through its retail plans and addressed ongoing privacy concerns.",
+            "is_foreign": true
+          },
+          {
+            "title": "零售客流不等于销售",
+            "summary": "Retail Dive 指出客流数据只显示消费者去向，交易数据才能揭示实际购买结果。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/spons/retail-foot-traffic-doesnt-equal-sales/829880/",
+            "title_original": "Retail foot traffic doesn’t equal sales",
+            "excerpt": "Foot traffic shows where shoppers go. Transaction data reveals what happens next.",
+            "is_foreign": true
+          },
+          {
+            "title": "自助服务领先者与落后者差异",
+            "summary": "Retail Dive 分析领先零售商持续改善自助服务表现的做法与落后者之间的差距。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/spons/what-separates-top-self-service-performers-from-laggards/829607/",
+            "title_original": "What separates top self-service performers from laggards?",
+            "excerpt": "Discover the practices helping leading retailers improve self-service performance over time.",
+            "is_foreign": true
+          },
+          {
+            "title": "辣味食品热潮下 CPG 创新",
+            "summary": "Food Dive 分析辣味食品热潮升温，CPG 品牌应如何据此进行产品创新。",
+            "source": "Food Dive",
+            "url": "https://www.fooddive.com/spons/how-cpg-brands-can-innovate-products-amid-the-spicy-food-boom/829751/",
+            "title_original": "How CPG brands can innovate products amid the spicy food boom",
+            "excerpt": "The spicy food boom is heating up. Here’s what CPG brands need to know.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "八部门发文促智能家居消费",
+            "summary": "商务部等八部门印发《促进智能家居消费行动方案》，9 月 14 日对外发布。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696253.shtml",
+            "title_original": "中国八部门发文促进智能家居消费",
+            "excerpt": "中新社北京9月14日电 (记者 尹倩芸)中国商务部等8部门近日印发的《促进智能家居消费行动方案》于14日对外发布。",
+            "is_foreign": false
+          },
+          {
+            "title": "波司登 50 周年纪录片首映",
+            "summary": "波司登创立 50 周年纪录片《50 岁，正青春》在北京新华社国家金融信息大厦首映。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696268.shtml",
+            "title_original": "波司登创立50周年纪录片《50岁，正青春》在京首映，向下一个五十年再出发",
+            "excerpt": "9月12日，由新华社品牌工作办公室、新华网联合出品的波司登创立50周年纪录片《50岁，正青春》首映礼于北京新华社国家金融信息大厦举办。以光影回望半世纪深耕之路，这场首映不仅是波司登对五十年成长的回望与致敬，更是品牌面向未来、持续向上的全新启程。",
+            "is_foreign": false
+          },
+          {
+            "title": "工信部：车企平均账期改善",
+            "summary": "工信部称重点汽车企业平均账期有所改善，应付账款电子凭证支付比例明显缩减。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696195.shtml",
+            "title_original": "工信部：重点汽车企业的平均账期有所改善",
+            "excerpt": "中新网9月14日电 9月14日，国新办举行国务院政策例行吹风会，介绍加强中小企业回款难问题治理有关工作情况。工业和信息化部副部长柯吉欣表示，从行业机构调研的情况来看，重点汽车企业平均账期到目前为止是有所改善的，应付账款电子凭证，支付比例明显缩减，整体的账期情况逐步好转；但是也要看到，当前国内车企平均账期与广大中小企业的期盼仍有差距。比如说不同企业账期的起算节点不同、验收条件不明确，这些问题都需要我们持之以恒，久久为功，以钉子的精神推进治理工作。",
+            "is_foreign": false
+          },
+          {
+            "title": "工信部：最长付款期压至 60 日",
+            "summary": "工信部表示积极引导大型企业将对中小企业最长付款期限压减至 60 日内。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696168.shtml",
+            "title_original": "工信部：积极引导大型企业将对中小企业的最长付款期限压减至60日内",
+            "excerpt": "中新网9月14日电 9月14日，国新办举行国务院政策例行吹风会，介绍加强中小企业回款难问题治理有关工作情况。工业和信息化部副部长柯吉欣表示，推动行业内企业及时支付账款、保障企业资金链畅通，是提升产业链供应链韧性和安全水平、提升行业治理体系和治理能力现代化水平的应有之义、也是必然要求。",
+            "is_foreign": false
+          },
+          {
+            "title": "大型企业欠款将列经营异常",
+            "summary": "市场监管总局称，未公示待付款年报信息的大型企业将被列入经营异常名录。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696222.shtml",
+            "title_original": "市场监管总局：将对没有公示待付款年报信息的大型企业列入经营异常名录",
+            "excerpt": "中新网9月14日电 9月14日，国新办举行国务院政策例行吹风会，介绍加强中小企业回款难问题治理有关工作情况。市场监管总局信用监管司司长周卫军表示，《保障中小企业款项支付条例》于2020年7月公布、2020年9月1日起施行，自2021年1月1日起，大型企业即按照条例的要求，将逾期尚未支付中小企业款项的合同数量、金额等信息纳入企业的年度报告并通过国家企业信用信息公示系统进行公示。",
+            "is_foreign": false
+          },
+          {
+            "title": "碳足迹标识认证试点见成效",
+            "summary": "市场监管总局发布产品碳足迹标识认证试点成效，推进统一规范的认证制度体系。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696180.shtml",
+            "title_original": "我国产品碳足迹标识认证试点取得积极成效",
+            "excerpt": "中新网9月14日电 据国家市场监管总局网站消息，构建产品碳标识认证制度是党的二十届三中全会、国家“十五五”规划纲要部署的重大改革任务，也是推动我国产业绿色低碳发展、实现“双碳”目标的关键支撑。市场监管总局深入贯彻落实党中央、国务院改革部署，稳步推进全国产品碳足迹标识认证试点工作，加速搭建统一规范、协同高效的产品碳足迹标识认证制度体系。适逢2026年中国碳市场大会召开之际，市场监管总局总结试点实践经验，发布试点工作成效。",
+            "is_foreign": false
+          },
+          {
+            "title": "新西兰企业赴渝经贸对接",
+            "summary": "新西兰托蒂卡健康等企业赴重庆对接，希望扩大护肤品和蜂蜜对华出口。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696239.shtml",
+            "title_original": "新西兰企业赴渝开展经贸对接 冀拓展多领域合作",
+            "excerpt": "中新社重庆9月14日电 (张旭)“我们希望与中国的护肤品和食品经销商、投资者建立联系。”新西兰托蒂卡健康有限公司肌肤护理事业部董事莎拉·萨马瓦蒂14日在重庆表示，希望与当地企业建立持久的合作伙伴关系，扩大公司护肤品和蜂蜜的出口市场。",
+            "is_foreign": false
+          },
+          {
+            "title": "甘肃康县核桃全链条升级",
+            "summary": "甘肃康县核桃形成收购、种养、电商、加工、品牌全链条，从卖原料转向卖品牌。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696244.shtml",
+            "title_original": "甘肃康县：一山青果一山秋 一颗核桃一条链",
+            "excerpt": "中新网兰州9月14日电 (高文 豆盼盼)初秋的甘肃陇南市康县，层林尽染，漫山核桃树挂满青翠。林间采摘、村口收购、车间加工、云端销售，一颗小核桃沿着“收购—种养—电商—加工—品牌”的全链条，完成从“卖原料”到“卖产品、卖品牌”的价值跃迁。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "openclaw/openclaw",
+            "summary": "跨平台个人 AI 助手，强调数据自有，支持任意操作系统与平台，TypeScript 实现。",
+            "source": "GitHub",
+            "url": "https://github.com/openclaw/openclaw",
+            "title_original": "",
+            "excerpt": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
+            "is_foreign": true,
+            "stars": "389649",
+            "language": "TypeScript"
+          },
+          {
+            "title": "affaan-m/ECC",
+            "summary": "面向 Claude Code、Codex、Cursor 等的代理性能优化系统，涵盖技能、记忆与安全。",
+            "source": "GitHub",
+            "url": "https://github.com/affaan-m/ECC",
+            "title_original": "",
+            "excerpt": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "is_foreign": true,
+            "stars": "258015",
+            "language": "JavaScript"
+          },
+          {
+            "title": "NousResearch/hermes-agent",
+            "summary": "可随用户成长的 AI 代理项目，支持 Anthropic、ChatGPT、Claude 等多种模型。",
+            "source": "GitHub",
+            "url": "https://github.com/NousResearch/hermes-agent",
+            "title_original": "",
+            "excerpt": "The agent that grows with you",
+            "is_foreign": true,
+            "stars": "245313",
+            "language": "Python"
+          },
+          {
+            "title": "n8n-io/n8n",
+            "summary": "原生 AI 能力的工作流自动化平台，可视化搭建结合自定义代码，支持 400+ 集成。",
+            "source": "GitHub",
+            "url": "https://github.com/n8n-io/n8n",
+            "title_original": "",
+            "excerpt": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+            "is_foreign": true,
+            "stars": "204236",
+            "language": "TypeScript"
+          },
+          {
+            "title": "tensorflow/tensorflow",
+            "summary": "谷歌开源机器学习框架，覆盖深度学习、分布式训练与神经网络，C++ 与 Python 生态。",
+            "source": "GitHub",
+            "url": "https://github.com/tensorflow/tensorflow",
+            "title_original": "",
+            "excerpt": "An Open Source Machine Learning Framework for Everyone",
+            "is_foreign": true,
+            "stars": "200069",
+            "language": "C++"
+          },
+          {
+            "title": "ohmyzsh/ohmyzsh",
+            "summary": "社区驱动的 zsh 配置管理框架，含 300+ 插件与 140+ 主题，2500 余名贡献者。",
+            "source": "GitHub",
+            "url": "https://github.com/ohmyzsh/ohmyzsh",
+            "title_original": "",
+            "excerpt": "🙃 A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to…",
+            "is_foreign": true,
+            "stars": "189706",
+            "language": "Shell"
+          },
+          {
+            "title": "Significant-Gravitas/AutoGPT",
+            "summary": "面向所有人的自主 AI 代理项目，提供构建与使用工具，支持 GPT、Claude 等模型。",
+            "source": "GitHub",
+            "url": "https://github.com/Significant-Gravitas/AutoGPT",
+            "title_original": "",
+            "excerpt": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+            "is_foreign": true,
+            "stars": "187318",
+            "language": "Python"
+          },
+          {
+            "title": "firecrawl/firecrawl",
+            "summary": "面向 AI 的网页上下文 API，支持大规模搜索、抓取与交互，可转 Markdown。",
+            "source": "GitHub",
+            "url": "https://github.com/firecrawl/firecrawl",
+            "title_original": "",
+            "excerpt": "The context API to search, scrape, and interact with the web at scale. 🔥",
+            "is_foreign": true,
+            "stars": "180185",
+            "language": "TypeScript"
+          }
+        ]
+      }
+    ]
+  }
+}

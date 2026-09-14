@@ -1,0 +1,25 @@
+# 生成产物（gh-pages 只发布 dist/ 的内容）
+dist/
+_raw.json
+
+# 注意：archive/ 必须提交进仓库 —— 它是往期存档的唯一数据源。
+# 不要把它加进忽略列表。
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# 本地环境变量（切勿提交真实密钥）
+.env
+.env.local
+*.local.json
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
