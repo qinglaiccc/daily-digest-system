@@ -1,16 +1,16 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T10:34:33.408855+00:00",
+  "generated_at": "2026-09-14T11:40:24.341708+00:00",
   "stats": {
     "rss_sources": 24,
-    "rss_ok": 24,
-    "rss_failed": 0,
-    "raw_news": 227,
+    "rss_ok": 23,
+    "rss_failed": 1,
+    "raw_news": 214,
     "github_queries": 8
   },
   "report": {
     "date": "2026-09-14",
-    "digest": "八部门发文促智能家居消费，京东建十万卡算力，追觅裁员约万人。",
+    "digest": "文远知行半年亏损7.9亿，京东字节加码AI算力，八部门发文促智能家居消费。",
     "sections": [
       {
         "key": "intl_tech",
@@ -20,75 +20,75 @@
         "desc": "全球科技产业动态",
         "items": [
           {
-            "title": "CERN 弃 RHEL 转用 Debian",
-            "summary": "欧洲核子研究组织放弃红帽 RHEL，改用 Debian 支撑其加速器控制基础设施。",
-            "source": "InfoQ 中文",
-            "url": "https://www.infoq.cn/article/KJRoBoUcE4L6bOPKOHco?utm_source=rss&utm_medium=article",
-            "title_original": "欧洲核子研究组织（CERN）放弃RHEL，转而采用 Debian 作为其加速器控制基础设施",
-            "excerpt": "点击查看原文>",
-            "is_foreign": false
-          },
-          {
-            "title": "GitLab 警告 AI 代理沙箱风险",
-            "summary": "GitLab 称 AI 代理沙箱安全性取决于其网络访问安全性，提示隔离与网络管控需同步。",
-            "source": "InfoQ 中文",
-            "url": "https://www.infoq.cn/article/XLzpR2brCNW2VgYuuYJk?utm_source=rss&utm_medium=article",
-            "title_original": "GitLab 警告称，AI 代理的沙箱安全性取决于其网络访问的安全性",
-            "excerpt": "点击查看原文>",
-            "is_foreign": false
-          },
-          {
-            "title": "布罗克曼：仅前沿大模型需放缓",
-            "summary": "OpenAI 联合创始人布罗克曼称研发节奏管控只针对需数千亿美元投入的前沿巨型超算项目。",
-            "source": "IT之家",
-            "url": "https://www.ithome.com/1/002/229.htm",
-            "title_original": "OpenAI 联合创始人布罗克曼：仅前沿 AI 大模型研发需放缓",
-            "excerpt": "IT之家 9 月 14 日消息，OpenAI 总裁兼联合创始人格雷格 · 布罗克曼（Greg Brockman）提出，人工智能研发的放缓举措，应当仅限于像他们这样开发顶尖大模型的企业。 布罗克曼在彭博社《Odd Lots》播客节目中表示：“很多人会有这样的疑问：‘我还能继续开发开源模型吗？我还能继续做我的业余项目吗？’答案毫无疑问是肯定的。我们所说的研发节奏管控，针对的其实是前沿领域，指的是那些需要数千亿美元资本投入的巨型超级计算机项目。” IT之家注意到，这次采访录制时间早于 Anthropic PBC 首席执行官达里奥 · 阿莫代伊（Dario Amodei）当地时间上周六发布的博客文章。阿莫代伊在文中阐述 AI 风险不断加剧…",
-            "is_foreign": false
-          },
-          {
-            "title": "三星电机与高通合作 2.1D 封装",
-            "summary": "三星电机与高通合作开发基于嵌入式有机桥片的 2.1D 先进封装，已研发认证超一年。",
-            "source": "IT之家",
-            "url": "https://www.ithome.com/1/002/233.htm",
-            "title_original": "消息称三星电机与高通合作开发基于有机桥片的 2.1D 先进封装",
-            "excerpt": "IT之家 9 月 14 日消息，韩媒 THE ELEC 当地时间本月 14 日报道称，三星电机 (SEM) 正与高通合作开发面向 AI 半导体芯片的 2.1D 先进封装，双方在该异构集成技术平台上已进行了超一年的研发与认证。 据悉两家企业的 2.1D 封装 采用了嵌入式有机桥片 。其设计思路类似英特尔的 EMIB，但以更平价的有机材料取代 EMIB 中的硅桥片。此举一方面可降低制造成本，也可规避英特尔持有的 EMIB 专利。 三星电机尝试的有机桥片 可视为以 RDL（重布线层）工艺形成 5~7 层微电路的小型衬底 ，目标实现 1.5~2μm 的线宽 / 间距、4~5μm 的通孔尺寸、500~1000/mm 的 图案密度。 与传统…",
-            "is_foreign": false
-          },
-          {
-            "title": "Nike 跌出标普 100 指数",
-            "summary": "Nike 在成分股中 18 年后退出标普 100 指数，市值累计蒸发约 2000 亿美元。",
+            "title": "HP ZGX Fury 开放订购",
+            "summary": "惠普 ZGX Fury 工作站开放订购，搭载 GB300 超级芯片与 748GB 统一内存，面向边缘 AI 工厂。",
             "source": "Hacker News",
-            "url": "https://fortune.com/2026/09/08/nike-stock-plummets-sp500-market-cap-index/",
-            "title_original": "Nike exits the S&P 100 after 18 years and a $200B market-cap wipeout",
-            "excerpt": "https://archive.ph/8NmSg \n \n Comments URL: https://news.ycombinator.com/item?id=49691343 \n Points: 138 \n # Comments: 182",
+            "url": "https://www.storagereview.com/news/hp-zgx-fury-is-now-orderable-gb300-superchip-748gb-unified-memory-and-a-red-hat-ai-factory-plan-for-the-edge",
+            "title_original": "HP ZGX Fury Is Now Orderable: GB300 Superchip, 748GB Unified Memory",
+            "excerpt": "Article URL: https://www.storagereview.com/news/hp-zgx-fury-is-now-orderable-gb300-superchip-748gb-unified-memory-and-a-red-hat-ai-factory-plan-for-the-edge \n Comments URL: https://news.ycombinator.com/item?id=49694905 \n Points: 10 \n # Comments: 8",
             "is_foreign": true
           },
           {
-            "title": "安卓提权漏洞影响多品牌",
-            "summary": "研究披露 OEMpocalypse：非特权安卓应用可在三星、小米等设备上获取 root 权限。",
-            "source": "Hacker News",
-            "url": "https://calif.io/research/oempocalypse",
-            "title_original": "OEMpocalypse: Unprivileged Android app to root on Samsung, Xiaomi, others",
-            "excerpt": "Article URL: https://calif.io/research/oempocalypse \n Comments URL: https://news.ycombinator.com/item?id=49691152 \n Points: 67 \n # Comments: 28",
+            "title": "美国多城取消 Flock 合同",
+            "summary": "因公众反对，美国多地从佛罗里达至华盛顿州取消与 AI 车牌识别公司 Flock 的合同。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/policy/994414/cities-ditching-flock-cameras-controversy",
+            "title_original": "What happens after a town de-Flocks",
+            "excerpt": "From Florida to Washington state, local governments across the country are canceling their contracts with Flock, the company behind the controversial AI-enabled license plate readers, in response to public outcry. But ending the contracts doesn't necessarily mean the cameras will come down immediately - or that the in…",
             "is_foreign": true
           },
           {
-            "title": "GPT-6 Astra 开始推送",
-            "summary": "OpenAI 新模型 GPT-6 Astra 已开始向用户推送，Engadget 发布使用与注意事项指南。",
-            "source": "Engadget",
-            "url": "https://www.engadget.com/2252859/how-to-use-gpt-6-astra-rollout-schedule/",
-            "title_original": "How to use GPT-6 Astra when it rolls out to you",
-            "excerpt": "OpenAI's new model, GPT-6 Astra, has begun rolling out to users. Here's how you can get it and pitfalls to avoid.",
+            "title": "AI 领袖呼吁放缓开发",
+            "summary": "奥特曼与马斯克支持放缓 AI 开发的呼吁，特朗普团队称责任在企业，希望美国保持领先。",
+            "source": "Wired",
+            "url": "https://www.wired.com/story/ai-leaders-are-calling-for-a-slowdown-trumps-team-says-its-on-them/",
+            "title_original": "AI Leaders Are Calling for a Slowdown. Trump’s Team Says It’s on Them",
+            "excerpt": "Sam Altman and Elon Musk this weekend backed a call for restraint, after Dario Amodei called on Washington to slow AI development. Donald Trump, meanwhile, wants the US to maintain its lead over China.",
             "is_foreign": true
           },
           {
-            "title": "XCancel 再次被下线",
-            "summary": "Hacker News 讨论显示，第三方推特前端 XCancel 再次被下线，引发 42 点热度讨论。",
+            "title": "欧洲逾百政客遭深度伪造",
+            "summary": "对 160 个深度伪造网站的分析显示，22 国政客被色情伪造内容 targeting，几乎全为女性。",
+            "source": "Wired",
+            "url": "https://www.wired.com/story/sexually-explicit-deepfake-sites-target-100-plus-politicians-in-europe/",
+            "title_original": "Sexually Explicit Deepfake Sites Target 100-Plus Politicians in Europe",
+            "excerpt": "An analysis of 160 deepfake websites reveals politicians in 22 countries appear on them. Nearly all of them are women.",
+            "is_foreign": true
+          },
+          {
+            "title": "特朗普加密收益 14 亿美元",
+            "summary": "据 2025 年联邦披露文件，特朗普从加密货币相关业务中获得约 14 亿美元收益。",
             "source": "Hacker News",
-            "url": "https://xcancel.com/#",
-            "title_original": "XCancel Taken Down Again",
-            "excerpt": "Article URL: https://xcancel.com/# \n Comments URL: https://news.ycombinator.com/item?id=49694296 \n Points: 42 \n # Comments: 16",
+            "url": "https://www.thepricer.org/how-much-has-trump-made-from-crypto/",
+            "title_original": "How Much Has Trump Made from Crypto? ($1.4B from 2025 Federal Disclosure)",
+            "excerpt": "Article URL: https://www.thepricer.org/how-much-has-trump-made-from-crypto/ \n Comments URL: https://news.ycombinator.com/item?id=49694840 \n Points: 9 \n # Comments: 0",
+            "is_foreign": true
+          },
+          {
+            "title": "反对 JPEG XL 的论据",
+            "summary": "一篇技术文章列举反对 JPEG XL 格式的理由，引发社区讨论。",
+            "source": "Hacker News",
+            "url": "https://giannirosato.com/blog/post/case-against-jxl/",
+            "title_original": "The case against JPEG XL",
+            "excerpt": "Article URL: https://giannirosato.com/blog/post/case-against-jxl/ \n Comments URL: https://news.ycombinator.com/item?id=49690554 \n Points: 185 \n # Comments: 244",
+            "is_foreign": true
+          },
+          {
+            "title": "开源 AI 阅读清单",
+            "summary": "Interconnects 发布开源 AI 与开放模型阅读清单，汇总相关研究与文章。",
+            "source": "Hacker News",
+            "url": "https://www.interconnects.ai/p/open-source-ai-reading-list",
+            "title_original": "Open-source AI and open models reading list",
+            "excerpt": "Article URL: https://www.interconnects.ai/p/open-source-ai-reading-list \n Comments URL: https://news.ycombinator.com/item?id=49690260 \n Points: 118 \n # Comments: 24",
+            "is_foreign": true
+          },
+          {
+            "title": "AI 恶意使用报告",
+            "summary": "arXiv 论文《The Malicious Use of Artificial Intelligence》讨论 AI 被恶意利用的风险与应对。",
+            "source": "Hacker News",
+            "url": "https://arxiv.org/abs/1802.07228",
+            "title_original": "The Malicious Use of Artificial Intelligence",
+            "excerpt": "Article URL: https://arxiv.org/abs/1802.07228 \n Comments URL: https://news.ycombinator.com/item?id=49690678 \n Points: 72 \n # Comments: 17",
             "is_foreign": true
           }
         ]
@@ -101,8 +101,17 @@
         "desc": "中国科技产业动态",
         "items": [
           {
+            "title": "文远知行半年亏损 7.9 亿元",
+            "summary": "文远知行 2026 上半年营收 3.46 亿元同比增 73.3%，归母净亏损 7.9 亿元，毛利率 36.6%。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/002/255.htm",
+            "title_original": "文远知行 2026 财年半年报归母亏损 7.9 亿元",
+            "excerpt": "IT之家 9 月 14 日消息，文远知行今日发布 2026 财年（2026 年 1 月～2026 年 12 月）半年报（2026 年 1 月～2026 年 6 月）报告： 营业总收入 ：3.46 亿元，同比增长 73.3% 毛利润 ：1.26 亿元，同比增长 107% 毛利率 ：36.6% 归母净利润 ：-7.9 亿元 经营现金流 ：-7.16 亿元，同比亏损扩大 7.88% 基本每股收益 ：-0.79 元，同比亏损收窄 9.2% 资产负债率 ：18%，同比增长 6 个百分点 AI 解读 本次业绩符合市场预期，收入增速超预期，亏损持续收窄。 公司主营业务说明 文远知行是全球领先的自动驾驶科技公司，提供自动驾驶出租车、小巴、货运等多…",
+            "is_foreign": false
+          },
+          {
             "title": "京东建十万卡、字节借 296 亿",
-            "summary": "钛媒体报道京东建设十万卡算力，字节跳动借款 296 亿元，中国大厂加码 AI 算力投入。",
+            "summary": "京东规划十万卡算力，字节跳动借款 296 亿元，中国大厂加码 AI 算力投入。",
             "source": "钛媒体",
             "url": "https://www.tmtpost.com/8139073.html",
             "title_original": "京东建十万卡，字节“借”296亿，AI 算力进入「豪赌时刻」",
@@ -110,26 +119,44 @@
             "is_foreign": false
           },
           {
-            "title": "追觅 6 至 8 月离职约万人",
-            "summary": "知危称追觅 6 月至 8 月底离职与被裁员工约 1 万人，汽车、手机团队所剩无几。",
+            "title": "苹果折叠屏 iPhone Duo 适配",
+            "summary": "多家国内大厂派开发人员赴苹果总部，为 iPhone Duo 折叠屏手机做适配，窗口期仅六周。",
             "source": "IT之家",
-            "url": "https://www.ithome.com/1/002/234.htm",
-            "title_original": "从 6 月至 8 月底，消息称追觅离职与被裁员工在 1 万人左右",
-            "excerpt": "IT之家 9 月 14 日消息，据知危从多位包括 HR 在内的追觅离职员工获悉， 从 6 月至 8 月底，离职与被裁员工在 1 万人左右 ，赔偿标准为 0.5N（试用期员工）至 N+1 不等，外界较为关心的汽车、手机团队目前“ 已不剩什么人了 ”。 据悉，AI 智能门锁整个 BU 被裁掉，而大家电 BU 的研发团队基本裁撤，仅保留销售、供应链等核心业务职能及中台岗位。 自今年四五月份起，追觅出现供应商前往苏州总部催讨款项的情况。有供应商反映，对接的研发和采购人员均已离职，欠款追讨无门；也有供应商反馈，近期追觅正在陆续支付货款。 据IT之家此前报道，8 月 25 日， 追觅科技发布关于公司战略聚焦及业务发展的说明 ，称基于公司整体战…",
+            "url": "https://www.ithome.com/1/002/243.htm",
+            "title_original": "消息称多家大厂派开发人员赴苹果总部，适配 iPhone Duo 折叠手机",
+            "excerpt": "IT之家 9 月 14 日消息，苹果在今年秋季发布会发布了首款折叠屏手机 iPhone Duo，定价 15999 元起。 据大厂青年公众号消息，在发布会之前，国内多家大厂已经安排开发人员赴美前往苹果公司总部，提前适配新款折叠屏 iPhone。 这次留给开发者的窗口期非常短，从发布会到新机正式发售，中间就只有六周时间… 目前有几家厂的适配工作已经进入封闭开发阶段 。 综合IT之家之前报道，iPhone Duo 锁定屏幕上的控制项、主屏幕上的程序坞，以及 App 的导航栏和控制项现在都显示在屏幕一侧，以便为内容留出尽可能多的纵向空间。 iPhone Duo 的灵动岛同样迎来全新设计，能够垂直贴合在外屏与内屏一侧，并在展开时显示实时活动…",
             "is_foreign": false
           },
           {
-            "title": "Azure 虚拟桌面混合版可用",
-            "summary": "Azure 虚拟桌面混合版正式可用，但许可细则尚未公布。",
+            "title": "哈勃韦布发现 27 颗海外天体",
+            "summary": "哈勃与韦布望远镜联手发现 27 颗新海外天体，直径均不足 40 千米，最小仅 10 千米。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/002/273.htm",
+            "title_original": "哈勃韦布望远镜联手观测发现，太阳系小型天体仍保留原始样貌",
+            "excerpt": "IT之家 9 月 14 日消息，哈勃空间望远镜与詹姆斯 · 韦布空间望远镜联手，对太阳系中一些体积最小、距离最远的天体开展了观测。研究发现，这些微小天体的演化历史远比我们此前预想的更加扑朔迷离。 两台在轨天文台一共发现了 27 颗新的海外天体（TNO），全部天体直径都不足 25 英里（40 千米），其中最小的一颗直径仅 6 英里（10 千米）。顾名思义，海外天体在远于海王星的轨道上环绕太阳运行。一部分海外天体诞生于这片遥远区域，是太阳系形成初期的微小星子，没能进一步发育成为行星。 以往关于海外天体形成的模型推测，这些天体长期遭受大量撞击，撞击会搅混表层物质，使得它们的成分，也就是外观颜色，会和体积更大的海外天体存在差异。然而，由两…",
+            "is_foreign": false
+          },
+          {
+            "title": "CERN 放弃 RHEL 转用 Debian",
+            "summary": "欧洲核子研究组织放弃红帽 RHEL，将加速器控制基础设施迁移至 Debian。",
             "source": "InfoQ 中文",
-            "url": "https://www.infoq.cn/article/MMD3SrhB1HuUh5Rv9Fmw?utm_source=rss&utm_medium=article",
-            "title_original": "Azure 虚拟桌面混合版正式可用，许可细则尚未公布",
+            "url": "https://www.infoq.cn/article/KJRoBoUcE4L6bOPKOHco?utm_source=rss&utm_medium=article",
+            "title_original": "欧洲核子研究组织（CERN）放弃RHEL，转而采用 Debian 作为其加速器控制基础设施",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "GitLab 警告 AI 代理沙箱风险",
+            "summary": "GitLab 警告称，AI 代理沙箱的安全性取决于其网络访问的安全性。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/XLzpR2brCNW2VgYuuYJk?utm_source=rss&utm_medium=article",
+            "title_original": "GitLab 警告称，AI 代理的沙箱安全性取决于其网络访问的安全性",
             "excerpt": "点击查看原文>",
             "is_foreign": false
           },
           {
             "title": "ICANN 取消三级 .name 注册",
-            "summary": "ICANN 取消第三级 .name 域名注册，InfoQ 讨论此举是否给身份盗用留下空间。",
+            "summary": "ICANN 取消第三级 .name 域名注册，引发是否助长身份盗用的讨论。",
             "source": "InfoQ 中文",
             "url": "https://www.infoq.cn/article/DlKsq4vFFkUV9Xl7Fxls?utm_source=rss&utm_medium=article",
             "title_original": "ICANN 取消第三级 .name 域名注册，是否为身份盗用敞开了大门？",
@@ -137,39 +164,12 @@
             "is_foreign": false
           },
           {
-            "title": "openJiuwen 发布双维度 RSI 框架",
-            "summary": "openJiuwen 首发双维度 RSI 框架，支持 AI 自修改并落地办公智能体，强调算力亲和。",
+            "title": "openJiuwen 发布 RSI 框架",
+            "summary": "openJiuwen 首发双维度 RSI 框架，支持 AI 自修改，落地办公智能体并优化算力亲和。",
             "source": "InfoQ 中文",
             "url": "https://www.infoq.cn/article/JghIFNXBNVSAfbgbR4S9?utm_source=rss&utm_medium=article",
             "title_original": "openJiuwen 首发双维度 RSI 框架，AI 自修改，落地办公智能体，算力亲和助力又快又省",
             "excerpt": "点击查看原文>",
-            "is_foreign": false
-          },
-          {
-            "title": "惠普设备卡 Win11 更新",
-            "summary": "部分惠普用户无法安装 8 月累积更新 KB5121003，重启后长期卡在 HP 标志界面。",
-            "source": "IT之家",
-            "url": "https://www.ithome.com/1/002/239.htm",
-            "title_original": "部分惠普用户反馈无法安装微软 8 月 Win11 累积更新，开机卡 HP 标志界面",
-            "excerpt": "IT之家 9 月 14 日消息，科技媒体 NeoWin 今天（9 月 14 日）发布博文，报道称部分 惠普设备无法正常安装 8 月累积更新 KB5121003 ， 导致设备重启后长期停在 HP 标志界面。 网友 Grady 于 8 月 25 日在微软社区发帖，反馈其近期购买了一台全新的惠普笔记本（原帖并未列出具体型号），无法安装 8 月累积更新 KB5121003。 IT之家附上帖子事件顺序如下： 成功下载 KB5121003 更新，并提示用户重启电脑。 重启后出现故障，就一直卡在启动画面，用户只能盯着惠普的标志发呆。 用户长按电源键，系统关机后再次尝试开机。 用户开机后先是“诊断”，然后是“修复”，最终撤销了更新，回滚到此前版本…",
-            "is_foreign": false
-          },
-          {
-            "title": "vivo 公布 OriginOS 7 光效",
-            "summary": "vivo 公布 OriginOS 7 小 V 光效，开发者大会 9 月 16 日举行，X500 系列将首批搭载。",
-            "source": "IT之家",
-            "url": "https://www.ithome.com/1/002/230.htm",
-            "title_original": "vivo 公布 OriginOS 7 全新小 V 光效，开发者大会 9 月 16 日举办",
-            "excerpt": "IT之家 9 月 14 日消息，vivo OriginOS 7 今日公布全新小 V 光效，号称“让 AI 的状态更清晰，人与 AI 的交互也更自然舒适。” 据介绍，唤醒小 V，光效会瞬间铺开；长按说话，光效会在对话框流动，告诉你它正在听；执行任务时，光又会沿着屏幕边缘快速传递，再自然把视线带向结果。在听、在处理，还是已经完成，智慧的发生，一眼就能感知。 IT之家注意到， 2026 vivo 开发者大会将于 9 月 16 日举行 ，届时将带来 OriginOS 7，即将发布的 vivo X500 系列和 iQOO 16 也将首批搭载。 据 vivo OS 产品副总裁 @vivo周围 此前介绍， 今年 vivo 将推出全新蓝心小 V…",
-            "is_foreign": false
-          },
-          {
-            "title": "大模型价格三个月腰斩",
-            "summary": "钛媒体报道大模型价格三个月内腰斩，行业竞争加剧，模型“聪明”的定价正在贬值。",
-            "source": "钛媒体",
-            "url": "https://www.tmtpost.com/8139062.html",
-            "title_original": "三个月价格腰斩，大模型的“聪明”正在贬值？",
-            "excerpt": "大模型肉搏战的另一面",
             "is_foreign": false
           }
         ]
@@ -183,7 +183,7 @@
         "items": [
           {
             "title": "Meta Lab 零售门店近翻倍",
-            "summary": "以 AI 眼镜知名的 Meta Lab 计划今秋新开六家门店，零售门店规模接近翻倍。",
+            "summary": "以 AI 眼镜闻名的 Meta Lab 计划今秋新开六家门店，零售版图接近翻倍。",
             "source": "Modern Retail",
             "url": "https://www.modernretail.co/operations/meta-lab-known-for-ai-glasses-is-nearly-doubling-its-retail-store-footprint/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
             "title_original": "Meta Lab, known for AI glasses, is nearly doubling its retail store footprint",
@@ -191,17 +191,17 @@
             "is_foreign": true
           },
           {
-            "title": "零售客流不等于销售",
-            "summary": "Retail Dive 指出客流数据只显示消费者去向，交易数据才能揭示实际购买结果。",
-            "source": "Retail Dive",
-            "url": "https://www.retaildive.com/spons/retail-foot-traffic-doesnt-equal-sales/829880/",
-            "title_original": "Retail foot traffic doesn’t equal sales",
-            "excerpt": "Foot traffic shows where shoppers go. Transaction data reveals what happens next.",
+            "title": "耐克退出标普 100 指数",
+            "summary": "耐克在经历 2000 亿美元市值蒸发后，18 年来首次退出标普 100 指数。",
+            "source": "Hacker News",
+            "url": "https://fortune.com/2026/09/08/nike-stock-plummets-sp500-market-cap-index/",
+            "title_original": "Nike exits the S&P 100 after 18 years and a $200B market-cap wipeout",
+            "excerpt": "https://archive.ph/8NmSg \n \n Comments URL: https://news.ycombinator.com/item?id=49691343 \n Points: 168 \n # Comments: 225",
             "is_foreign": true
           },
           {
             "title": "自助服务领先者与落后者差异",
-            "summary": "Retail Dive 分析领先零售商持续改善自助服务表现的做法与落后者之间的差距。",
+            "summary": "Retail Dive 赞助内容探讨领先零售商提升自助服务绩效的实践。",
             "source": "Retail Dive",
             "url": "https://www.retaildive.com/spons/what-separates-top-self-service-performers-from-laggards/829607/",
             "title_original": "What separates top self-service performers from laggards?",
@@ -209,8 +209,17 @@
             "is_foreign": true
           },
           {
+            "title": "零售客流不等于销售",
+            "summary": "Retail Dive 赞助内容指出，客流显示去向，交易数据才揭示实际购买。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/spons/retail-foot-traffic-doesnt-equal-sales/829880/",
+            "title_original": "Retail foot traffic doesn’t equal sales",
+            "excerpt": "Foot traffic shows where shoppers go. Transaction data reveals what happens next.",
+            "is_foreign": true
+          },
+          {
             "title": "辣味食品热潮下 CPG 创新",
-            "summary": "Food Dive 分析辣味食品热潮升温，CPG 品牌应如何据此进行产品创新。",
+            "summary": "Food Dive 赞助内容分析辣味食品热潮下 CPG 品牌的产品创新方向。",
             "source": "Food Dive",
             "url": "https://www.fooddive.com/spons/how-cpg-brands-can-innovate-products-amid-the-spicy-food-boom/829751/",
             "title_original": "How CPG brands can innovate products amid the spicy food boom",
@@ -228,11 +237,38 @@
         "items": [
           {
             "title": "八部门发文促智能家居消费",
-            "summary": "商务部等八部门印发《促进智能家居消费行动方案》，9 月 14 日对外发布。",
+            "summary": "商务部等八部门印发《促进智能家居消费行动方案》，于 9 月 14 日对外发布。",
             "source": "中新网财经",
             "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696253.shtml",
             "title_original": "中国八部门发文促进智能家居消费",
             "excerpt": "中新社北京9月14日电 (记者 尹倩芸)中国商务部等8部门近日印发的《促进智能家居消费行动方案》于14日对外发布。",
+            "is_foreign": false
+          },
+          {
+            "title": "豆包手机助手消费者版发布",
+            "summary": "豆包手机助手消费者版本 9 月 14 日发布，首款新机将于 9 月 16 日正式开售。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696280.shtml",
+            "title_original": "豆包手机助手发布消费者版本 首款新机将于9月16日正式开售",
+            "excerpt": "9月14日，豆包手机助手消费者版本正式发布。",
+            "is_foreign": false
+          },
+          {
+            "title": "IDC 预测 AI 主机市场 770 亿",
+            "summary": "IDC 与联想发布《AI 主机》白皮书，预测 2030 年中国 AI 主机市场规模达 770 亿元。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696277.shtml",
+            "title_original": "白皮书预测到2030年中国AI主机市场规模将达770亿元",
+            "excerpt": "中新网北京9月14日电 (记者 刘亮)国际数据公司(IDC)日前携手联想集团在北京发布《AI主机》白皮书(下称“《白皮书》”)。《白皮书》预测，到2030年中国AI主机市场规模将达770亿元。",
+            "is_foreign": false
+          },
+          {
+            "title": "双汇参展国际肉类工业展",
+            "summary": "双汇携四大品类 300 余种产品参展中国国际肉类工业展，展示向多品类食品服务商转型。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696299.shtml",
+            "title_original": "双汇参展中国国际肉类工业展 场景化产品创新回应消费新需求",
+            "excerpt": "9月12日至14日，第二十四届中国国际肉类工业展览会在青岛国际会展中心(红岛馆)举办。本届展会由世界肉类组织主办、中国肉类协会指导，双汇携生鲜品、肉制品、禽产品、调味品四大品类共300余种产品参展，以场景化产品创新为主线，系统展示了从传统肉制品服务商向多品类食品服务商转型的阶段性成果。",
             "is_foreign": false
           },
           {
@@ -245,39 +281,12 @@
             "is_foreign": false
           },
           {
-            "title": "工信部：车企平均账期改善",
-            "summary": "工信部称重点汽车企业平均账期有所改善，应付账款电子凭证支付比例明显缩减。",
+            "title": "广州 TTG 夺 KPL 夏季赛冠军",
+            "summary": "广州 TTG 以 4:3 战胜对手，夺得 2026 年王者荣耀职业联赛夏季赛冠军。",
             "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696195.shtml",
-            "title_original": "工信部：重点汽车企业的平均账期有所改善",
-            "excerpt": "中新网9月14日电 9月14日，国新办举行国务院政策例行吹风会，介绍加强中小企业回款难问题治理有关工作情况。工业和信息化部副部长柯吉欣表示，从行业机构调研的情况来看，重点汽车企业平均账期到目前为止是有所改善的，应付账款电子凭证，支付比例明显缩减，整体的账期情况逐步好转；但是也要看到，当前国内车企平均账期与广大中小企业的期盼仍有差距。比如说不同企业账期的起算节点不同、验收条件不明确，这些问题都需要我们持之以恒，久久为功，以钉子的精神推进治理工作。",
-            "is_foreign": false
-          },
-          {
-            "title": "工信部：最长付款期压至 60 日",
-            "summary": "工信部表示积极引导大型企业将对中小企业最长付款期限压减至 60 日内。",
-            "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696168.shtml",
-            "title_original": "工信部：积极引导大型企业将对中小企业的最长付款期限压减至60日内",
-            "excerpt": "中新网9月14日电 9月14日，国新办举行国务院政策例行吹风会，介绍加强中小企业回款难问题治理有关工作情况。工业和信息化部副部长柯吉欣表示，推动行业内企业及时支付账款、保障企业资金链畅通，是提升产业链供应链韧性和安全水平、提升行业治理体系和治理能力现代化水平的应有之义、也是必然要求。",
-            "is_foreign": false
-          },
-          {
-            "title": "大型企业欠款将列经营异常",
-            "summary": "市场监管总局称，未公示待付款年报信息的大型企业将被列入经营异常名录。",
-            "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696222.shtml",
-            "title_original": "市场监管总局：将对没有公示待付款年报信息的大型企业列入经营异常名录",
-            "excerpt": "中新网9月14日电 9月14日，国新办举行国务院政策例行吹风会，介绍加强中小企业回款难问题治理有关工作情况。市场监管总局信用监管司司长周卫军表示，《保障中小企业款项支付条例》于2020年7月公布、2020年9月1日起施行，自2021年1月1日起，大型企业即按照条例的要求，将逾期尚未支付中小企业款项的合同数量、金额等信息纳入企业的年度报告并通过国家企业信用信息公示系统进行公示。",
-            "is_foreign": false
-          },
-          {
-            "title": "碳足迹标识认证试点见成效",
-            "summary": "市场监管总局发布产品碳足迹标识认证试点成效，推进统一规范的认证制度体系。",
-            "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696180.shtml",
-            "title_original": "我国产品碳足迹标识认证试点取得积极成效",
-            "excerpt": "中新网9月14日电 据国家市场监管总局网站消息，构建产品碳标识认证制度是党的二十届三中全会、国家“十五五”规划纲要部署的重大改革任务，也是推动我国产业绿色低碳发展、实现“双碳”目标的关键支撑。市场监管总局深入贯彻落实党中央、国务院改革部署，稳步推进全国产品碳足迹标识认证试点工作，加速搭建统一规范、协同高效的产品碳足迹标识认证制度体系。适逢2026年中国碳市场大会召开之际，市场监管总局总结试点实践经验，发布试点工作成效。",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696270.shtml",
+            "title_original": "十年竞逐风华，鹭岛见证巅峰，广州TTG获得2026年KPL夏季赛冠军！",
+            "excerpt": "9月12日晚，2026年王者荣耀职业联赛(KPL)夏季赛决赛在厦门奥林匹克体育中心凤凰体育馆正式落下帷幕。经过七局鏖战，战至巅峰对决，广州TTG以4:3的最终比分战胜对手，捧起象征KPL最高荣誉的银龙杯。选手广州TTG.小胖(李达亨)荣膺本届夏季赛决赛iQOO MVP。",
             "is_foreign": false
           },
           {
@@ -290,7 +299,7 @@
             "is_foreign": false
           },
           {
-            "title": "甘肃康县核桃全链条升级",
+            "title": "康县核桃全链条增值",
             "summary": "甘肃康县核桃形成收购、种养、电商、加工、品牌全链条，从卖原料转向卖品牌。",
             "source": "中新网财经",
             "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696244.shtml",
@@ -309,62 +318,62 @@
         "items": [
           {
             "title": "openclaw/openclaw",
-            "summary": "跨平台个人 AI 助手，强调数据自有，支持任意操作系统与平台，TypeScript 实现。",
+            "summary": "跨平台 AI 助手，强调用户拥有数据，支持任意操作系统与平台。",
             "source": "GitHub",
             "url": "https://github.com/openclaw/openclaw",
             "title_original": "",
             "excerpt": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
             "is_foreign": true,
-            "stars": "389649",
+            "stars": "389651",
             "language": "TypeScript"
           },
           {
             "title": "affaan-m/ECC",
-            "summary": "面向 Claude Code、Codex、Cursor 等的代理性能优化系统，涵盖技能、记忆与安全。",
+            "summary": "面向 Claude Code、Codex 等代理的性能优化系统，涵盖技能、记忆与安全。",
             "source": "GitHub",
             "url": "https://github.com/affaan-m/ECC",
             "title_original": "",
             "excerpt": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
             "is_foreign": true,
-            "stars": "258015",
+            "stars": "258044",
             "language": "JavaScript"
           },
           {
             "title": "NousResearch/hermes-agent",
-            "summary": "可随用户成长的 AI 代理项目，支持 Anthropic、ChatGPT、Claude 等多种模型。",
+            "summary": "可随用户成长的 AI 代理，支持多种主流模型与代理框架。",
             "source": "GitHub",
             "url": "https://github.com/NousResearch/hermes-agent",
             "title_original": "",
             "excerpt": "The agent that grows with you",
             "is_foreign": true,
-            "stars": "245313",
+            "stars": "245321",
             "language": "Python"
           },
           {
             "title": "n8n-io/n8n",
-            "summary": "原生 AI 能力的工作流自动化平台，可视化搭建结合自定义代码，支持 400+ 集成。",
+            "summary": "原生 AI 能力的公平代码工作流自动化平台，支持可视化与自定义代码，400+ 集成。",
             "source": "GitHub",
             "url": "https://github.com/n8n-io/n8n",
             "title_original": "",
             "excerpt": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
             "is_foreign": true,
-            "stars": "204236",
+            "stars": "204243",
             "language": "TypeScript"
           },
           {
             "title": "tensorflow/tensorflow",
-            "summary": "谷歌开源机器学习框架，覆盖深度学习、分布式训练与神经网络，C++ 与 Python 生态。",
+            "summary": "面向所有人的开源机器学习框架，支持深度学习与分布式训练。",
             "source": "GitHub",
             "url": "https://github.com/tensorflow/tensorflow",
             "title_original": "",
             "excerpt": "An Open Source Machine Learning Framework for Everyone",
             "is_foreign": true,
-            "stars": "200069",
+            "stars": "200067",
             "language": "C++"
           },
           {
             "title": "ohmyzsh/ohmyzsh",
-            "summary": "社区驱动的 zsh 配置管理框架，含 300+ 插件与 140+ 主题，2500 余名贡献者。",
+            "summary": "社区驱动的 zsh 配置管理框架，含 300+ 插件与 140+ 主题。",
             "source": "GitHub",
             "url": "https://github.com/ohmyzsh/ohmyzsh",
             "title_original": "",
@@ -375,24 +384,24 @@
           },
           {
             "title": "Significant-Gravitas/AutoGPT",
-            "summary": "面向所有人的自主 AI 代理项目，提供构建与使用工具，支持 GPT、Claude 等模型。",
+            "summary": "让所有人可用的自主 AI 代理平台，提供构建与使用工具。",
             "source": "GitHub",
             "url": "https://github.com/Significant-Gravitas/AutoGPT",
             "title_original": "",
             "excerpt": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
             "is_foreign": true,
-            "stars": "187318",
+            "stars": "187320",
             "language": "Python"
           },
           {
             "title": "firecrawl/firecrawl",
-            "summary": "面向 AI 的网页上下文 API，支持大规模搜索、抓取与交互，可转 Markdown。",
+            "summary": "面向 AI 的上下文 API，支持大规模搜索、抓取并与网页交互。",
             "source": "GitHub",
             "url": "https://github.com/firecrawl/firecrawl",
             "title_original": "",
             "excerpt": "The context API to search, scrape, and interact with the web at scale. 🔥",
             "is_foreign": true,
-            "stars": "180185",
+            "stars": "180205",
             "language": "TypeScript"
           }
         ]
