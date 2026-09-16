@@ -1,0 +1,446 @@
+{
+  "date": "2026-09-16",
+  "generated_at": "2026-09-16T04:14:42.780134+00:00",
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 0,
+    "raw_news": 303,
+    "github_queries": 8
+  },
+  "report": {
+    "date": "2026-09-16",
+    "digest": "中国天眼FAST发现最轻双中子星系统；英伟达黄仁勋称AI无需监管；荣耀发布自研影像芯片。",
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "英伟达黄仁勋称AI无需监管",
+            "summary": "黄仁勋表示AI只是软硬件，安全可由各产品厂商自行工程化，无需专门监管。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/15/we-dont-need-ai-regulation-leave-safety-to-us-nvidias-jensen-huang-says/",
+            "title_original": "We don’t need AI regulation — leave safety to us, Nvidia’s Jensen Huang says",
+            "excerpt": "AI isn't some new form of \"alien mind,\" according to Jensen Huang. It's just hardware and software, so safety can be engineered by each AI product maker.",
+            "is_foreign": true
+          },
+          {
+            "title": "民调显示AI与数据中心极不受欢迎",
+            "summary": "纽约时报与锡耶纳大学民调显示，61%受访选民反对为AI建设数据中心。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/995917/data-center-nyt-midterm-poll-september",
+            "title_original": "AI and data centers are incredibly unpopular in every poll",
+            "excerpt": "Poll data released Tuesday by the New York Times and Siena University confirms what we've already been seeing, and what politicians are responding to - AI and data centers are incredibly unpopular. Asked if they support or oppose the construction of data centers to power AI tech, 61 percent of the 1,503 likely voters…",
+            "is_foreign": true
+          },
+          {
+            "title": "微软10月7日举办Windows与Surface活动",
+            "summary": "微软将于10月7日在旧金山举办活动，聚焦Windows、英伟达RTX Spark与Surface。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2259695/microsoft-will-hold-a-windows-event-on-october-7/",
+            "title_original": "Microsoft will hold a Windows and Surface event on October 7",
+            "excerpt": "The event is focused on \"Windows, NVIDIA RTX Spark, Surface, and the broader PC ecosystem,\" with Satya Nadella and Jensen Huang among the speakers.",
+            "is_foreign": true
+          },
+          {
+            "title": "罗马望远镜燃料足够运行22年",
+            "summary": "NASA南希·格雷斯·罗马太空望远镜燃料可支撑22年，是预期两倍，为首个设计在轨加注的观测台。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/space/2026/09/the-roman-telescope-has-enough-gas-for-22-years-double-nasas-expectations/",
+            "title_original": "The Roman telescope has enough gas for 22 years, double NASA's expectations",
+            "excerpt": "The Nancy Grace Roman Space Telescope is the first NASA observatory designed for in-space refueling.",
+            "is_foreign": true
+          },
+          {
+            "title": "佳能发布EOS R8 Mark II相机",
+            "summary": "佳能推出EOS R8 Mark II，采用复古设计并首次加入机身防抖，为最轻全画幅防抖机型。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/995430/canon-eos-r8-mark-11-full-frame-digital-camera-pricing-availability",
+            "title_original": "The EOS R8 Mark II is Canon’s lightest full-frame camera with stabilization",
+            "excerpt": "Canon announced the second-generation of its EOS R8 with a new retro-inspired redesign and the addition of in-body stabilization. That feature was one of the most notable omissions from the original R8 that launched in 2023 as a smaller, cheaper, and more accessible alternative to the Canon R6 Mark II for photographer…",
+            "is_foreign": true
+          },
+          {
+            "title": "苹果发布参考图像验证摄影方案",
+            "summary": "苹果安全博客介绍Apple Reference Image，用于验证照片真实性。",
+            "source": "Hacker News",
+            "url": "https://security.apple.com/blog/apple-reference-image/",
+            "title_original": "Apple Reference Image: A New Approach for Verified Photography",
+            "excerpt": "Article URL: https://security.apple.com/blog/apple-reference-image/ \n Comments URL: https://news.ycombinator.com/item?id=49721322 \n Points: 44 \n # Comments: 28",
+            "is_foreign": true
+          },
+          {
+            "title": "Cloudflare推出可问责AI爬虫方案",
+            "summary": "Cloudflare发布可问责混合用途AI爬虫机制，允许站点在禁止AI训练同时保持搜索可见。",
+            "source": "Hacker News",
+            "url": "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/",
+            "title_original": "Stay discoverable in search while disallowing AI training",
+            "excerpt": "Article URL: https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/ \n Comments URL: https://news.ycombinator.com/item?id=49721435 \n Points: 35 \n # Comments: 15",
+            "is_foreign": true
+          },
+          {
+            "title": "文石发布Palma 3电子阅读器",
+            "summary": "文石推出Palma 3，新增手写笔支持并重新设计外观，运行Android 16。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/995826/boox-palma-3-e-ink-reader-pocket-smartphone-android-16",
+            "title_original": "The Boox Palma 3 gets stylus support and a sleek redesign",
+            "excerpt": "Nearly two years after the last update to Boox's smartphone-sized black-and-white e-reader, the company announced the Palma 3 with a sleek redesign, new functionality, and a handful of other small updates that may justify its significant price bump depending on how you plan to use it. While the Palma 2 launched in 202…",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "中国天眼FAST发现最轻双中子星系统",
+            "summary": "FAST捕获双中子星系统PSRJ1856-0039，为已知总质量最轻，成果发表于PRL。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/011.htm",
+            "title_original": "中国天眼 FAST 重要新发现，捕获目前已知总质量最轻的双中子星系统",
+            "excerpt": "IT之家 9 月 16 日消息，据央视新闻今日报道，依托中国天眼 FAST 超高探测灵敏度，国家天文台韩金林研究员领衔的 FAST 银道面脉冲星巡天团队取得重要发现， 捕获一颗处于紧致轨道的双中子星系统 PSRJ1856-0039 。 该系统是轨道周期极短、 目前已知总质量最轻的双中子星系统 ，多项观测结果精准验证了广义相对论，为探索极端天体物理、引力本质与宇宙元素起源提供了关键的新目标，相关研究成果 2026 年 9 月 15 日发表于《物理评论快报》（PRL），并被期刊编辑遴选为重点推介成果。 中子星是大质量恒星死亡坍缩后形成的极致密天体残骸，运转规律精准稳定，被誉为“宇宙精密时钟”。 双中子星系统由两颗中子星相互绕转构成，是…",
+            "is_foreign": false
+          },
+          {
+            "title": "荣耀Magic9系列搭载自研影像芯片",
+            "summary": "荣耀宣布Magic9系列搭载6nm自研影像芯片驭光H1，信噪比提升8dB，9月28日发布。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/002/986.htm",
+            "title_original": "荣耀 Magic9 系列手机官宣搭载自研影像芯片荣耀驭光 H1：RAW 域视频无损降噪、信噪比提升 8dB，6nm 工艺",
+            "excerpt": "IT之家 9 月 16 日消息，荣耀 Magic 盛典暨荣耀 Magic9 系列新品发布会定档 9 月 28 日在北京举行。 荣耀官方今日宣布，荣耀 Magic9 系列手机搭载 自研影像芯片荣耀驭光 H1 ，采用 6nm 工艺，支持 RAW 域视频无损降噪，信噪比提升 8dB。 据介绍，荣耀 Magic9 系列手机由阿莱联合研发，采用大导之眼设计，后置“电影三摄镜头系统”，搭载阿莱双两亿超清影像，首发 500mm 荣耀巨炮增距镜。新机还同时支持全新阿莱电影模式，号称“掌中电影机”。 荣耀 Magic9 系列手机将支持阿莱色彩科学 ，包括：AWG3 广色域、阿莱官方全套 Look、APV 无损编码、阿莱 LogC3 视频管线等。 ▲…",
+            "is_foreign": false
+          },
+          {
+            "title": "vivo应用商店开放个人开发者通道",
+            "summary": "vivo开发者大会宣布应用商店开放个人开发者通道，仅需实名认证，有序开放AI等应用。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/002/984.htm",
+            "title_original": "AI 让人人都能开发 App，vivo 应用商店开放个人开发者通道",
+            "excerpt": "IT之家 9 月 16 日消息，在今日的 2026 vivo 开发者大会上，vivo 宣布应用商店开放 个人开发者通道 。 IT之家从大会获悉，个人开发者通道只需要 个人实名认证 ，官方将有序开放 AI 应用、蓝河应用、IoT 应用。 vivo 官方表示，AI 让应用开发门槛大幅降低，开放个人开发者通道， 可以让更多创新被看见 。",
+            "is_foreign": false
+          },
+          {
+            "title": "华为智慧屏Mate TV 2开启预售",
+            "summary": "华为智慧屏Mate TV 2将于9月23日预售，搭载鸿蒙系统，支持隔空手势与双控投屏。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/002/985.htm",
+            "title_original": "华为智慧屏 Mate TV 2 将于 9 月 23 日开启预售，支持隔空艺语双控投屏等功能",
+            "excerpt": "IT之家 9 月 16 日消息，华为商城显示，华为智慧屏 Mate TV 2 将于 9 月 23 日 10:08 开启预售。 官方预热信息确认，这款新品延续灵犀悬浮触控、灵犀指向遥控和灵犀手写笔配件。 官方海报显示，华为智慧屏 Mate TV 2 搭载鸿蒙系统（IT之家注：上一代 MateTV 搭载 HarmonyOS 6.1），支持鸿蒙应用多路径下载。此外，新品还支持隔空手势抓取、艺语画面即投、立体视界等功能。 结合此前爆料，MateTV 2 系列在画质、音质和智慧体验上均有迭代。98 英寸和 110 英寸版本支持原生 3D 及 2D 转 3D，预计采用 Super Mini LED 背光与双芯片驱动方案。 音频方面，华为智慧屏…",
+            "is_foreign": false
+          },
+          {
+            "title": "通用汽车部分燃油车继续支持CarPlay",
+            "summary": "通用汽车让步，在部分燃油车型中继续保留苹果CarPlay车联方案。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/004.htm",
+            "title_original": "通用汽车让步，部分燃油车继续支持苹果 CarPlay 车联方案",
+            "excerpt": "IT之家 9 月 16 日消息，彭博社昨日（9 月 15 日）发布博文，报道称通用汽车（GM）宣布让步， 在部分燃油车型中会继续保留支持苹果 CarPlay 车联方案。 通用汽车在 2023 年宣布，在未来推出的电动汽车中，将会放弃支持 CarPlay 车联方案，对于 iPhone 用户而言，无法直接把导航、音乐、通信等界面投射到原厂车机屏幕上。 IT之家今年 9 月报道，通用汽车旗下凯迪拉克于 8 月上线 2027 款车型的在线配置器，2027 款 Lyriq 页面显示依然标配支持苹果 CarPlay 和谷歌 Android Auto 车联方案，是通用电动车取消 CarPlay 策略后出现的首个例外。 最新消息称通用汽车在 Ca…",
+            "is_foreign": false
+          },
+          {
+            "title": "雅马哈发布最紧凑杜比全景声回音壁",
+            "summary": "雅马哈推出B200A回音壁，长度60cm，定价1580元人民币，内置20W扬声器与低音炮。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/002/992.htm",
+            "title_original": "雅马哈发布旗下最紧凑杜比全景声回音壁 B200A，长度 60cm",
+            "excerpt": "IT之家 9 月 16 日消息，Yamaha（雅马哈）本月 15 日宣布推出该企业旗下最紧凑的杜比全景声认证条形音箱（回音壁）产品 B200A。 这一型号 长度仅有 60cm ，定价 1,580 元人民币 / 249.95 美元 （IT之家注：现汇率约合 1,681 元人民币) 。 雅马哈消费音频总监 Alex Sadeghian 表示： B200A 的设计初衷是为那些既想获得更佳音质又不想占用太多空间的用户打造。 无论是在卧室、公寓、家庭办公室还是游戏环境中，B200A 都能以紧凑的设计提供清晰、沉浸式的音效，让您轻松融入日常生活。 雅马哈 B200A 内置 2 个 4.6cm 全频扬声器 (20W)、1 个 7.5cm 低音炮…",
+            "is_foreign": false
+          },
+          {
+            "title": "别克世纪黑金限量版售罄",
+            "summary": "别克世纪CENTURY黑金限量版售罄，限量50台，售价54.99万元起。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/009.htm",
+            "title_original": "别克世纪 CENTURY 黑金限量版售罄：限量 50 台，54.99 万元起",
+            "excerpt": "IT之家 9 月 16 日消息，别克汽车今日宣布，别克世纪 CENTURY 黑金限量版售罄，更多典藏级限量之作敬请期待。 据IT之家此前报道，别克世纪 CENTURY 黑金限量版于 9 月 11 日发售， 售价 54.99 万元起 ： 四座黑金限量版：70.99 万元，限量 10 台 七座黑金限量版：54.99 万元，限量 40 台 该车尺寸与普通版相同，长宽高为 5230×1980×1867mm，轴距 3130mm；采用黑金限量双拼色，灵感取自“日照金山”；采用 12 层顶尖涂装工艺，由 112 台专属机器人自动喷涂。 四座版内饰为“琥珀瓷白”，搭载 136,092 针纯手工“江山如画”主题刺绣，绣线总长超 2,000 米，并配…",
+            "is_foreign": false
+          },
+          {
+            "title": "Cloudflare将JS CDN迁移至开发者平台",
+            "summary": "Cloudflare将每天90亿次请求的JavaScript CDN迁移到其开发者平台。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/J5iJdjq6bIeRZHZF8fXO?utm_source=rss&utm_medium=article",
+            "title_original": "Cloudflare将每天90亿次请求的JavaScript CDN迁移到其开发者平台",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "石排成为“中国潮玩之都”核心区",
+            "summary": "中新网报道，东莞石排镇成为“中国潮玩之都”核心区，为单项冠军县。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697375.shtml",
+            "title_original": "石排如何成为“中国潮玩之都”核心区",
+            "excerpt": "单项冠军县，何以扛打｜石排如何成为“中国潮玩之都”核心区",
+            "is_foreign": false
+          },
+          {
+            "title": "1至8月全国铁路投资5118亿元",
+            "summary": "国铁集团数据，1至8月全国铁路完成固定资产投资5118亿元，同比增长1.5%。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697322.shtml",
+            "title_original": "1至8月全国铁路完成固定资产投资5118亿元",
+            "excerpt": "中新网9月16日电 据中国铁路微信公众号消息，今年以来，铁路建设稳步推进，1至8月全国铁路完成固定资产投资5118亿元，同比增长1.5%，现代化铁路基础设施体系加快构建，有效带动相关产业发展和增收就业，为扩内需、稳增长注入了新动能。",
+            "is_foreign": false
+          },
+          {
+            "title": "1至8月乡村建设落实资金超1300亿元",
+            "summary": "央视新闻称，1至8月我国乡村建设已落实项目资金超1300亿元，农村生产生活条件持续改善。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697352.shtml",
+            "title_original": "1至8月我国乡村建设已落实项目资金超1300亿元",
+            "excerpt": "央视新闻客户端消息(新闻联播)：今年以来，我国扎实推进乡村建设行动，农村生产生活条件得到持续改善。",
+            "is_foreign": false
+          },
+          {
+            "title": "德事称高端灵活办公迎中企出海机遇",
+            "summary": "德事TEC进驻中国内地25年，大中华区董事总经理称内地平均入驻率保持85%以上。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697351.shtml",
+            "title_original": "（投资中国）德事：高端灵活办公市场迎中企出海新机遇",
+            "excerpt": "中新社上海9月16日电 (高志苗)高端灵活办公空间服务商德事(The Executive Centre，简称TEC)日前迎来进驻中国内地25周年。德事大中华区集团董事总经理丁杰近日接受中新社采访时表示，25年来公司经历多轮外部环境变化，仍始终坚定看好中国市场发展前景。目前，TEC在中国内地的整体平均入驻率保持在85%以上。",
+            "is_foreign": false
+          },
+          {
+            "title": "茶饮联名转向实用赠品",
+            "summary": "Manner买咖啡送洗发水、CoCo都可奶茶套餐送粉饼乳霜，茶饮品牌以实用小样引流。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1582104.html",
+            "title_original": "文章频道 - 买咖啡奶茶送面膜！茶饮联名开始走向实用",
+            "excerpt": "花一份钱得到两种商品。 作者：梦婕 来源： 咖门 原标题：《买咖啡奶茶送面膜！Manner、CoCo都在用这招抢流量》 茶饮店的引流方式变了，这次“盯”上新消费品牌。 Manner买咖啡送面膜、洗发水；CoCo都可把粉饼、乳霜装进奶茶套餐；LINLEE林里甚至开始送猫粮、狗粮体验装。一个月内，类似玩法接连出现。 这些“真能用、真能试”的赠品，正在成为新的下单理由。“买饮品送小样”，成茶饮新的流量入口？ 01 买奶茶“顺便逛美妆店”？ 茶饮店开始批量送小样 饮品品牌赠送的周边， 越来越实用了 。 9月1日，Manner携手洗护品牌Off&Relax推出秋日联名，15元单杯美式套餐赠送75ml桂花香氛 洗发水 。隔天，30元双杯套餐再…",
+            "is_foreign": false
+          },
+          {
+            "title": "第二届淘宝丑东西线下展开幕",
+            "summary": "第二届淘宝丑东西艺术展“献丑了”回归，展品从100多件增至500件，规模约为上届两倍。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1582349.html",
+            "title_original": "文章频道 - 第二届淘宝丑东西线下展，精神状态也太超前了！",
+            "excerpt": "​警告：本文含丑量极高。 恭喜我信任的 交心的 交流的 心与心的 我爱的 ——第二届淘宝丑东西艺术展开幕！ 世界上有两种展： 一种让你提高审美，一种让你放下审美。 淘宝丑东西艺术展，在这里献丑了~~~ 去年，首届淘宝丑东西艺术展 「丑时已到」 ，把五届线上大赛沉淀下来的百余件丑界顶流请进杭州天目里的丑术馆，每天有几千人排队去看“丑”。 今年，淘宝第二届 「献丑了」 强势回归！ 展厅已经从去年的一层楼变成了两层楼， 展品也从100多个增加到了500个， 规模约为上届的两倍。 点击图片查看大图 更惊喜的是，今年不再是简单的展品罗列，而是 打造了一条完整的动线。 展览从一个丑鱼构成的巨大龙门开始，带领观众乘船渡海、搭坐巨人列车，开始一个…",
+            "is_foreign": false
+          },
+          {
+            "title": "雷鸟iO AI眼镜发布新广告",
+            "summary": "雷鸟发布iO AI眼镜，联合代言人蒋奇明及李诞、柯洁等品牌大使推广。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/377278.html",
+            "title_original": "项目频道 - 雷鸟：戴个眼镜，变身人类Ultra",
+            "excerpt": "原标题：LxU × 雷鸟 | 戴个眼镜，就能变身高智魅魔？ 如果人类和AI合为一体，会变成什么？ 雷鸟给出了答案： 人类Ultra。 8月21日，发布会上首次亮相的新品 雷鸟iO AI眼镜 ，外观无限接近普通眼镜，但内置的AI却能让人类拥有更强大的记忆、更广博的知识、更无障碍的跨语言沟通、更快速的反应。 戴上它，外表还是普通人，没有人会发现你已经偷偷赛博飞升，给自己加了外挂。 为了让更多消费者明白，这款没那么普及的科技产品带来了什么，品牌找到了 代言人蒋奇明，和李诞、柯洁、神奇阿宇三位新晋品牌大使 ，一起定义AI时代的人类新物种。 接到Brief的时候，我们也从他们身上，慢慢拼凑出了 雷鸟TA理想自我的画像。 情商、智商双高的李诞…",
+            "is_foreign": false
+          },
+          {
+            "title": "美团全民运动季推9.9元健身",
+            "summary": "美团全民运动季以“运动健身9.9元起”为利益点，降低新手尝试运动门槛。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/376130.html",
+            "title_original": "项目频道 - 美团全民运动季：练过藏不住",
+            "excerpt": "这是个什么片子？ 不知道啊……ta们的身材/力量/核心很曼妙。 先看↓ Brief 9.9元是好开始，那开始之前呢？ 这次全民运动季，美团的利益点一如既往直接：【运动健身9.9元起】。 以足够低的价格，降低新手尝试运动的门槛，让更多人愿意先试一次。 但9.9元解决的是“开始不贵”，我们的传播还需要回答更前置的问题： 为什么大家会想开始运动？什么情况下会种草一项运动？ 洞察 运动人的心机，我们的人形种草机 亲眼看见他人已获得的好成果，就是最直观的种草，运动这件事更是如此。 比起抽象的坚持与热爱，更吸引人的，是运动者身上藏不住的训练痕迹——六块腹肌、挺拔体态、灵敏反应……一眼就知道“练过”的身材、身手与状态。 于是， 他们是真的爱秀—…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "openclaw/openclaw",
+            "url": "https://github.com/openclaw/openclaw",
+            "intro": "装在自己电脑上的 AI 助手，能在微信、Slack 等你常用的聊天软件里直接对话。",
+            "features": [
+              "支持 Discord、Slack、Telegram 等 20 多个聊天平台",
+              "数据、记忆和账号都留在自己设备上",
+              "可自由更换 Claude、本地模型等 AI 大脑",
+              "有 macOS、iOS、安卓、Windows 客户端"
+            ],
+            "guide": "在 macOS、Linux 或 Windows 上运行安装脚本即可，脚本会自动装好所需的 Node 环境，之后在聊天软件里就能找到它。",
+            "install": "curl -fsSL https://openclaw.ai/install.sh | bash",
+            "summary": "装在自己电脑上的 AI 助手，能在微信、Slack 等你常用的聊天软件里直接对话。",
+            "source": "GitHub",
+            "stars": "389805",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
+            "is_foreign": true
+          },
+          {
+            "title": "n8n-io/n8n",
+            "url": "https://github.com/n8n-io/n8n",
+            "intro": "拖拽连线就能把各种软件串起来自动干活，还能接入 AI 模型。",
+            "features": [
+              "可视化画布搭建自动化流程",
+              "连接 1500 多个常用软件和服务",
+              "可接入 OpenAI、Anthropic 等 AI 模型",
+              "支持自己部署，数据不出内网"
+            ],
+            "guide": "需要先装好 Docker，然后运行安装脚本或 Docker 命令，浏览器打开 localhost:5678 就能用。",
+            "install": "curl -fsSL https://get.n8n.io | sh",
+            "summary": "拖拽连线就能把各种软件串起来自动干活，还能接入 AI 模型。",
+            "source": "GitHub",
+            "stars": "204467",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+            "is_foreign": true
+          },
+          {
+            "title": "langgenius/dify",
+            "url": "https://github.com/langgenius/dify",
+            "intro": "不用写代码就能搭出 AI 应用和智能问答系统的工作台。",
+            "features": [
+              "可视化画布搭建 AI 工作流",
+              "支持多种 AI 模型自由切换",
+              "内置知识库问答能力",
+              "可自己部署，数据可控"
+            ],
+            "guide": "需要 Docker 和 Docker Compose，进入 docker 目录复制配置文件后启动，浏览器打开 localhost/install 初始化。",
+            "install": "docker compose up -d",
+            "summary": "不用写代码就能搭出 AI 应用和智能问答系统的工作台。",
+            "source": "GitHub",
+            "stars": "155884",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+            "is_foreign": true
+          },
+          {
+            "title": "open-webui/open-webui",
+            "url": "https://github.com/open-webui/open-webui",
+            "intro": "给自己电脑上的 AI 模型配一个像 ChatGPT 一样的网页聊天界面。",
+            "features": [
+              "支持本地模型和 OpenAI 接口",
+              "完全离线也能用",
+              "可给不同成员分配不同权限",
+              "支持插件扩展功能"
+            ],
+            "guide": "可用 pip、Docker 或 Kubernetes 安装，装好后浏览器打开网页即可使用，适合想自己掌控 AI 对话的人。",
+            "install": "",
+            "summary": "给自己电脑上的 AI 模型配一个像 ChatGPT 一样的网页聊天界面。",
+            "source": "GitHub",
+            "stars": "152224",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+            "is_foreign": true
+          },
+          {
+            "title": "google-gemini/gemini-cli",
+            "url": "https://github.com/google-gemini/gemini-cli",
+            "intro": "把谷歌 Gemini 装进命令行，在终端里直接问它、让它干活。",
+            "features": [
+              "个人谷歌账号每天可免费问 1000 次",
+              "能读文件、执行命令、联网搜索",
+              "支持接入自定义工具",
+              "开源免费"
+            ],
+            "guide": "需要先装 Node，然后一条命令全局安装，首次使用登录谷歌账号即可，适合习惯用命令行的开发者。",
+            "install": "npm install -g @google/gemini-cli",
+            "summary": "把谷歌 Gemini 装进命令行，在终端里直接问它、让它干活。",
+            "source": "GitHub",
+            "stars": "107011",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+            "is_foreign": true
+          },
+          {
+            "title": "firecrawl/firecrawl",
+            "url": "https://github.com/firecrawl/firecrawl",
+            "intro": "把网页内容抓下来变成干净文字，方便喂给 AI 使用。",
+            "features": [
+              "把任意网页转成 Markdown 或结构化数据",
+              "能处理需要滚动、点击的动态网页",
+              "可解析网页里的 PDF、Word 文件",
+              "提供搜索接口，直接返回网页内容"
+            ],
+            "guide": "开源版可自己部署，也提供在线服务；自己部署需要一定的服务器和开发环境配置经验。",
+            "install": "",
+            "summary": "把网页内容抓下来变成干净文字，方便喂给 AI 使用。",
+            "source": "GitHub",
+            "stars": "180948",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The context API to search, scrape, and interact with the web at scale. 🔥",
+            "is_foreign": true
+          },
+          {
+            "title": "github/spec-kit",
+            "url": "https://github.com/github/spec-kit",
+            "intro": "让 AI 写代码前先写清楚需求文档，减少它乱猜乱改。",
+            "features": [
+              "把需求整理成规范文档再交给 AI",
+              "提供修 bug 和评估想法的流程",
+              "支持 GitHub Copilot 等编程助手",
+              "模板可复用、可自定义"
+            ],
+            "guide": "需要 Python 3.11 以上和 uv 工具，以及一个支持的 AI 编程助手，用命令初始化项目后即可开始。",
+            "install": "uv tool install specify-cli",
+            "summary": "让 AI 写代码前先写清楚需求文档，减少它乱猜乱改。",
+            "source": "GitHub",
+            "stars": "137098",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "💫 Toolkit to help you get started with Spec-Driven Development",
+            "is_foreign": true
+          },
+          {
+            "title": "JuliusBrussee/caveman",
+            "url": "https://github.com/JuliusBrussee/caveman",
+            "intro": "让 AI 编程助手说话像原始人一样简短，省下大量费用。",
+            "features": [
+              "把 AI 回复压缩成极简短句",
+              "据称可省约 65% 的用量",
+              "一条命令安装，不用账号和密钥",
+              "不改变代码质量"
+            ],
+            "guide": "需要先装 Node，运行一条命令即可安装，之后 AI 编程助手会自动用简短方式回复。",
+            "install": "npx skills add JuliusBrussee/caveman -g",
+            "summary": "让 AI 编程助手说话像原始人一样简短，省下大量费用。",
+            "source": "GitHub",
+            "stars": "105818",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 助手、自动化流程和开发工具更好上手、更省成本。"
+      }
+    ]
+  }
+}
