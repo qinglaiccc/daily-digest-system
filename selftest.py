@@ -931,6 +931,157 @@ def test_contrast() -> None:
     check("主底板不是纯白", pick("paper").lower() != "#ffffff", pick("paper"))
 
 
+def test_github_daily_selection() -> None:
+    """3+2 混合推荐：过滤规则、状态持久化、轮播游标推进。全程离线。"""
+    print("\n[13] GitHub 3+2 每日选品")
+
+    import shutil
+    import tempfile
+
+    # ---- 1. 名称过滤规则 ----
+    def make(name: str, stars: int = 9999, desc: str = "a tool") -> fetcher.RepoItem:
+        return fetcher.RepoItem(
+            full_name=name, url=f"https://github.com/{name}", description=desc, stars=stars
+        )
+
+    for bad in (
+        "sindresorhus/awesome",
+        "vinta/awesome-python",
+        "EbookFoundation/free-programming-books",
+        "public-apis/public-apis",
+        "nilbuild/developer-roadmap",
+        "microsoft/ML-For-Beginners",
+        "rasbt/LLMs-from-scratch",
+        "Developer-Y/cs-video-courses",
+    ):
+        check(f"排除清单/教程类：{bad.split('/')[-1]}", not fetcher._is_relevant_repo(make(bad)))
+
+    for good in ("n8n-io/n8n", "excalidraw/excalidraw", "ShareX/ShareX", "httpie/cli"):
+        check(f"保留真工具：{good.split('/')[-1]}", fetcher._is_relevant_repo(make(good)))
+
+    check("星数过低被排除", not fetcher._is_relevant_repo(make("a/b", stars=1)))
+
+    # ---- 2. 状态文件读写与容错 ----
+    original_state = config.GITHUB_STATE_FILE
+    tmp = pathlib.Path(tempfile.mkdtemp(prefix="gh-selftest-"))
+    try:
+        config.GITHUB_STATE_FILE = tmp / "github_offset.json"
+
+        fresh = fetcher.load_github_state()
+        check("无状态文件时返回初始状态", fresh["classic_offset"] == 0 and fresh["classic_pool"] == [])
+
+        fresh["classic_offset"] = 4
+        fresh["recent_trending"] = ["a/b", "c/d"]
+        fetcher.save_github_state(fresh)
+        check("状态文件已写入", config.GITHUB_STATE_FILE.exists())
+
+        reloaded = fetcher.load_github_state()
+        check("游标被正确读回", reloaded["classic_offset"] == 4, str(reloaded["classic_offset"]))
+        check("记忆列表被正确读回", reloaded["recent_trending"] == ["a/b", "c/d"])
+
+        config.GITHUB_STATE_FILE.write_text("{ 这不是 JSON", encoding="utf-8")
+        broken = fetcher.load_github_state()
+        check("状态文件损坏时安全重置", broken["classic_offset"] == 0 and broken["classic_pool"] == [])
+
+        config.GITHUB_STATE_FILE.write_text('{"classic_offset": "坏值", "recent_trending": 123}',
+                                            encoding="utf-8")
+        dirty = fetcher.load_github_state()
+        check("字段类型异常时退回默认值",
+              dirty["classic_offset"] == 0 and dirty["recent_trending"] == [])
+
+        # ---- 3. 轮播游标推进（打桩，不走网络）----
+        fake_pool = [f"owner{i}/repo{i}" for i in range(1, 11)]  # 10 个，每天取 2 → 5 天一轮
+
+        def fake_build(session):  # noqa: ANN001
+            return list(fake_pool)
+
+        def fake_fetch(session, names):  # noqa: ANN001
+            return [
+                fetcher.RepoItem(full_name=n, url=f"https://github.com/{n}", stars=1000)
+                for n in names
+            ]
+
+        original_build = fetcher._build_classic_pool
+        original_fetch = fetcher._fetch_repos_by_name
+        fetcher._build_classic_pool = fake_build
+        fetcher._fetch_repos_by_name = fake_fetch
+        try:
+            config.GITHUB_STATE_FILE = tmp / "rotation.json"
+            state = fetcher.load_github_state()
+
+            seen_round: list = []
+            for day in range(1, 7):
+                picked = fetcher.select_classic_repos(None, state)
+                seen_round.append([r.full_name for r in picked])
+                fetcher.save_github_state(state)
+
+            check("第 1 天取池首两个", seen_round[0] == ["owner1/repo1", "owner2/repo2"], str(seen_round[0]))
+            check("第 2 天推进到 3-4", seen_round[1] == ["owner3/repo3", "owner4/repo4"], str(seen_round[1]))
+            check("第 3 天推进到 5-6", seen_round[2] == ["owner5/repo5", "owner6/repo6"], str(seen_round[2]))
+
+            first_cycle = [n for day in seen_round[:5] for n in day]
+            check("一轮 5 天恰好覆盖池中 10 个且不重复",
+                  len(first_cycle) == 10 and len(set(first_cycle)) == 10, str(len(set(first_cycle))))
+
+            check("第 6 天绕回池首", seen_round[5] == ["owner1/repo1", "owner2/repo2"], str(seen_round[5]))
+            check("记录了完成的轮次", state.get("classic_cycle", 0) >= 1, str(state.get("classic_cycle")))
+            check("池子被持久化进状态文件",
+                  state.get("classic_pool") == fake_pool, str(len(state.get("classic_pool", []))))
+        finally:
+            fetcher._build_classic_pool = original_build
+            fetcher._fetch_repos_by_name = original_fetch
+    finally:
+        config.GITHUB_STATE_FILE = original_state
+        shutil.rmtree(tmp, ignore_errors=True)
+
+    # ---- 4. 配置一致性 ----
+    check(
+        "板块条数 = 趋势数 + 经典数",
+        config.GITHUB_DISPLAY_COUNT == config.GITHUB_TREND_COUNT + config.GITHUB_CLASSIC_COUNT,
+        f"{config.GITHUB_DISPLAY_COUNT} = {config.GITHUB_TREND_COUNT} + {config.GITHUB_CLASSIC_COUNT}",
+    )
+    check("经典池推进步长等于经典条数", config.GITHUB_CLASSIC_COUNT == 2)
+
+
+def test_archive_scanner() -> None:
+    """存档扫描必须能忽略 github_offset.json 这类状态文件（否则会反复告警）。"""
+    print("\n[14] 存档扫描与状态文件共存")
+
+    import shutil
+    import tempfile
+
+    original = (config.ARCHIVE_DIR, config.DIST_DIR, config.OUTPUT_HTML, config.HISTORY_MANIFEST)
+    tmp = pathlib.Path(tempfile.mkdtemp(prefix="digest-scan-"))
+    try:
+        config.ARCHIVE_DIR = tmp / "archive"
+        config.DIST_DIR = tmp / "dist"
+        config.OUTPUT_HTML = config.DIST_DIR / "index.html"
+        config.HISTORY_MANIFEST = config.DIST_DIR / "history.json"
+        config.ARCHIVE_DIR.mkdir(parents=True)
+
+        rep = summarizer.build_fallback_result(make_news(), make_repos(), summarizer.today_local(), "自检")
+        renderer.save_archive(rep, STATS)
+
+        # 混入状态文件与其它非存档 JSON
+        (config.ARCHIVE_DIR / "github_offset.json").write_text(
+            json.dumps({"classic_offset": 2, "classic_pool": ["a/b"]}), encoding="utf-8"
+        )
+        (config.ARCHIVE_DIR / "something_else.json").write_text("{}", encoding="utf-8")
+
+        entries = renderer.load_archive()
+        check("只识别日期命名的存档", len(entries) == 1, f"{len(entries)} 条")
+        check("状态文件未被当成存档", all(e["date"] != "github_offset" for e in entries))
+
+        result = renderer.render_site(rep, STATS)
+        check("渲染不受状态文件影响", result["archives_rendered"] == 1, str(result["archives_rendered"]))
+
+        page = (config.DIST_DIR / "archive" / f"{rep['date']}.html").read_text(encoding="utf-8")
+        check("往期页正常生成", "classic_pool" not in page and "每日早报" in page)
+    finally:
+        config.ARCHIVE_DIR, config.DIST_DIR, config.OUTPUT_HTML, config.HISTORY_MANIFEST = original
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
 def main() -> int:
     print("=" * 62)
     print("每日早报 · 离线自检")
@@ -948,6 +1099,8 @@ def main() -> int:
     test_history()
     test_contrast()
     test_deepseek_pipeline()
+    test_github_daily_selection()
+    test_archive_scanner()
 
     print("\n" + "=" * 62)
     print(f"结果：{PASSED} 项通过，{FAILED} 项失败")

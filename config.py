@@ -403,16 +403,66 @@ RSS_SOURCES = [
 # --------------------------------------------------------------------------
 # GitHub 热门项目采集
 # --------------------------------------------------------------------------
+# GitHub 热门项目的筛选标签。
+# ⚠️ 注意：不是所有想当然的 topic 名都真的存在。
+# 实测 `tools-for-developers` 在 GitHub 上**零仓库使用**（查询稳定返回 0 条），
+# 它此前一直在静默缩小候选池。已换成确实有内容的 `developer-tools`。
+# 新增 topic 后建议先验证：topic:<名字> stars:>=8000 能不能查出东西。
 GITHUB_TOPICS = [
     "ai",
     "machine-learning",
     "productivity",
-    "tools-for-developers",
+    "developer-tools",
 ]
+
+# 「老将新动作」用的主题。这个主题本身要有足够体量，否则叠加其他条件后容易查空。
+GITHUB_REVIVED_TOPIC = os.getenv("GITHUB_REVIVED_TOPIC", "productivity")
 
 GITHUB_MIN_STARS = int(os.getenv("GITHUB_MIN_STARS", "50"))
 GITHUB_PER_TOPIC_LIMIT = int(os.getenv("GITHUB_PER_TOPIC_LIMIT", "15"))
 GITHUB_TOTAL_LIMIT = int(os.getenv("GITHUB_TOTAL_LIMIT", "30"))
+
+# --------------------------------------------------------------------------
+# GitHub 板块：3 + 2 混合推荐
+#
+#   3 个「近期趋势」  —— 过去 N 天内新建或重新活跃的项目，保证每天有新鲜血液
+#   2 个「历史经典」  —— 按总星数排名分页轮播，用游标状态文件推进
+#
+# 条数固定为 5，不再让模型从几十个候选里挑。
+# --------------------------------------------------------------------------
+GITHUB_TREND_COUNT = int(os.getenv("GITHUB_TREND_COUNT", "3"))
+GITHUB_CLASSIC_COUNT = int(os.getenv("GITHUB_CLASSIC_COUNT", "2"))
+GITHUB_DISPLAY_COUNT = GITHUB_TREND_COUNT + GITHUB_CLASSIC_COUNT
+
+# 「趋势」的时间窗。注意 GitHub Search API 没有"星标增长速度"这个指标，
+# 只能用「创建时间 + 星数排序」来近似"近期冒头"。
+GITHUB_TREND_DAYS = int(os.getenv("GITHUB_TREND_DAYS", "7"))
+GITHUB_TREND_STAR_FLOOR = int(os.getenv("GITHUB_TREND_STAR_FLOOR", "30"))
+# 「月度新秀」：创建 7–30 天，已经是这个月冒出来的，仍算新鲜
+GITHUB_TREND_WIDER_DAYS = int(os.getenv("GITHUB_TREND_WIDER_DAYS", "30"))
+GITHUB_TREND_WIDER_STAR_FLOOR = int(os.getenv("GITHUB_TREND_WIDER_STAR_FLOOR", "800"))
+
+# 「近期翻红」的星数上限。
+# 实测教训：不加这个上限时，pushed:>=7d 会稳定返回 freeCodeCamp(455k)、public-apis(480k)
+# 这类每天都在推送的巨型仓库 —— 它们不是"趋势"，而是永久霸榜的常驻民。
+# 加上限后，这个查询才真正对应"中等规模、最近突然活跃起来"的项目。
+GITHUB_REVIVED_STAR_FLOOR = int(os.getenv("GITHUB_REVIVED_STAR_FLOOR", "2000"))
+GITHUB_REVIVED_STAR_CEILING = int(os.getenv("GITHUB_REVIVED_STAR_CEILING", "40000"))
+GITHUB_REVIVED_MIN_AGE_DAYS = int(os.getenv("GITHUB_REVIVED_MIN_AGE_DAYS", "30"))
+
+# 「经典」池：按星数排序后，每个 topic 各取前 N 个再合并排序
+# 池子越大，轮播周期越长。4 个 topic × 40 ≈ 去重后 100 个左右，够轮 50 天。
+GITHUB_CLASSIC_STAR_FLOOR = int(os.getenv("GITHUB_CLASSIC_STAR_FLOOR", "8000"))
+GITHUB_CLASSIC_POOL_PER_TOPIC = int(os.getenv("GITHUB_CLASSIC_POOL_PER_TOPIC", "40"))
+# 池子最长复用天数。到期后重建，让新晋高星项目有机会进入轮播。
+GITHUB_CLASSIC_POOL_MAX_AGE_DAYS = int(os.getenv("GITHUB_CLASSIC_POOL_MAX_AGE_DAYS", "14"))
+
+# 记住最近推荐过多少个「趋势」项目，下次优先避开，保证每日不重样
+GITHUB_RECENT_MEMORY = int(os.getenv("GITHUB_RECENT_MEMORY", "40"))
+
+# 轮播游标状态文件。放在 archive/ 下，会被 Actions 的存档回写步骤一起提交进仓库，
+# 于是状态自然持久化，不依赖任何外部存储。
+GITHUB_STATE_FILE = ARCHIVE_DIR / "github_offset.json"
 
 # README 深度解析：抓取每个仓库 README 的字符上限，以及最多抓多少个仓库
 # 注意 /readme 走的是 core 配额（5000/小时），与 Search 的 30 次/分钟是两套独立配额
@@ -424,7 +474,9 @@ README_MAX_REPOS = int(os.getenv("README_MAX_REPOS", "30"))
 # 45000 字符约合 15k tokens，deepseek-chat 的上下文完全放得下。
 GITHUB_MAX_INPUT_CHARS = int(os.getenv("GITHUB_MAX_INPUT_CHARS", "45000"))
 
-# 明显偏离"效率与 AI 工具"主题的仓库会被关键词过滤掉
+# 明显偏离"效率与 AI 工具"主题的仓库会被关键词过滤掉。
+# 这里主要拦两类：① 精选清单/导航类（awesome-*）② 教程/学习资料/面试题库。
+# 它们星数极高、topics 也常打 ai/productivity，如果不拦会霸占整个板块。
 GITHUB_EXCLUDE_KEYWORDS = [
     "awesome-list-of-awesome-lists",
     "interview-questions",
@@ -432,6 +484,55 @@ GITHUB_EXCLUDE_KEYWORDS = [
     "dotfiles",
     "wallpaper",
     "cheatsheet-collection",
+    "free-programming-books",
+    "freecodecamp",
+    "public-apis",
+    "system-design-primer",
+    "developer-roadmap",
+    "coding-interview",
+    "build-your-own-x",
+    "project-based-learning",
+    "the-book-of-secret-knowledge",
+    "programming-books",
+    "computer-science",
+    "learning-resources",
+    "curated-list",
+    "collection-of",
+]
+
+# 仓库名本身的排除规则（正则，小写匹配）。
+# 名字里带这些词的几乎必然是清单或教程，比 topics/description 更可靠。
+GITHUB_EXCLUDE_NAME_PATTERNS = [
+    r"^awesome-",
+    r"-awesome$",
+    r"^awesome$",
+    r"^free-",
+    r"-books?$",
+    r"^books?-",
+    r"roadmap",
+    r"cheat-?sheet",
+    r"^tutorial",
+    r"-tutorial",
+    r"^learn-",
+    r"-guide$",
+    r"-handbook$",
+    r"^papers-",
+    r"-papers$",
+    r"^interview",
+    r"interview-",
+    r"^100-",
+    r"^50-",
+    r"^30-",
+    # 教程 / 课程 / 学习资料类：星数虚高，但属于"读物"而不是"工具"
+    r"for-beginners",
+    r"from-scratch",
+    r"made-with-",
+    r"-examples?$",
+    r"-course",
+    r"-notes$",
+    r"video-courses",
+    r"^d2l",
+    r"-curriculum",
 ]
 
 # --------------------------------------------------------------------------

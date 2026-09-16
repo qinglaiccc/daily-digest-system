@@ -2,12 +2,21 @@ name: 每日早报
 
 # ---------------------------------------------------------------------------
 # 触发方式
-#   schedule         : 每天 UTC 00:00（= Asia/Shanghai 08:00）自动执行
+#   schedule         : 每天 UTC 23:37（= Asia/Shanghai 次日 07:37）自动执行
 #   workflow_dispatch: 手动触发，可勾选 dry-run 只验证链路不调用 AI / 不推送
+#
+# 【为什么不是 0 0 * * *】
+# GitHub 的 schedule 是 best-effort 调度，"整点"（尤其 UTC 00:00）是全网最拥堵的时段。
+# 实测本仓库在 0 0 * * * 下被推迟了约 4 小时 11–15 分才触发（12:11 / 12:15 北京时间）。
+# GitHub 官方文档对延迟的建议原话就是「换一个不是整点的分钟」。
+# 这里改成 23:37 —— 既避开整点，也避开 UTC 午夜这个最拥挤的时间窗。
+#
+# 注意：这只能降低被推迟的概率，无法保证准点。真要严格准点，需要外部定时器
+# 调 workflow_dispatch 接口，见 README「定时触发不准时怎么办」。
 # ---------------------------------------------------------------------------
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "37 23 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -52,6 +61,33 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: 记录实际触发时间
+        run: |
+          # 用于跟踪 GitHub 调度延迟：把「期望时间」与「实际触发时间」的差值打出来，
+          # 连续几次就能判断延迟是否稳定、以及调整 cron 是否有效。
+          python - <<'PY'
+          import os
+          from datetime import datetime, timedelta, timezone
+
+          CST = timezone(timedelta(hours=8))
+          now_utc = datetime.now(timezone.utc)
+          now_cst = now_utc.astimezone(CST)
+
+          expected_utc = now_utc.replace(hour=23, minute=37, second=0, microsecond=0)
+          if expected_utc > now_utc:
+              expected_utc -= timedelta(days=1)
+          delay = (now_utc - expected_utc).total_seconds() / 60
+
+          print(f"事件类型    : {os.environ.get('GITHUB_EVENT_NAME', '?')}")
+          print(f"实际触发 UTC: {now_utc:%Y-%m-%d %H:%M:%S}")
+          print(f"实际触发北京: {now_cst:%Y-%m-%d %H:%M:%S}")
+          print(f"cron 期望 UTC: 23:37（北京次日 07:37）")
+          print(f"调度延迟    : {delay:.0f} 分钟")
+
+          if delay > 180:
+              print(f"::warning::调度延迟 {delay:.0f} 分钟，GitHub 调度器明显推迟了本次任务")
+          PY
 
       - name: 生成早报
         id: generate

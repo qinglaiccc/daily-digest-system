@@ -14,6 +14,7 @@
 from __future__ import annotations
 
 import html
+import json
 import logging
 import re
 import time
@@ -379,9 +380,12 @@ def _search_repositories(
     query: str,
     sort: str = "stars",
     max_attempts: int = 3,
+    per_page: int = 0,
 ) -> List[Dict[str, Any]]:
     """
     调用一次 GitHub Search API。
+
+    per_page 留空则用 config.GITHUB_PER_TOPIC_LIMIT。
 
     异常分级处理：
       - 401/403 且提示 token 无效 → GitHubAuthError，立即失败（重试无意义）
@@ -390,6 +394,7 @@ def _search_repositories(
       - 422 查询语法问题           → 直接抛错，不重试
     """
     headers = _github_headers()
+    page_size = min(per_page or config.GITHUB_PER_TOPIC_LIMIT, 100)
     last_error: Optional[Exception] = None
 
     for attempt in range(1, max_attempts + 1):
@@ -401,7 +406,7 @@ def _search_repositories(
                     "q": query,
                     "sort": sort,
                     "order": "desc",
-                    "per_page": min(config.GITHUB_PER_TOPIC_LIMIT, 50),
+                    "per_page": page_size,
                 },
                 headers=headers,
                 timeout=config.HTTP_TIMEOUT,
@@ -626,105 +631,504 @@ def enrich_repos_with_readme(
 
 
 def _is_relevant_repo(repo: RepoItem) -> bool:
-    """过滤掉明显与"效率 / AI 工具"主题无关的仓库。"""
+    """
+    过滤掉明显与"效率 / AI 工具"主题无关的仓库。
+
+    实测教训：只按 description 关键词过滤是不够的。`awesome-python`、
+    `free-programming-books`、`public-apis` 这类精选清单星数极高、topics 又常打
+    ai / productivity，会把整个板块占满。所以这里按两层拦：
+
+      1. 仓库名正则 —— 名字里带 awesome- / -books / roadmap / tutorial 的，
+         几乎必然是清单或教程，这是最可靠的信号
+      2. 描述关键词 —— 兜住名字看不出、但描述暴露了的内容
+    """
     if not repo.full_name or not repo.url:
         return False
     if repo.stars < config.GITHUB_MIN_STARS:
         return False
 
+    name = repo.full_name.split("/")[-1].lower()
+    for pattern in config.GITHUB_EXCLUDE_NAME_PATTERNS:
+        if re.search(pattern, name):
+            logger.debug("按名称规则排除：%s（命中 %s）", repo.full_name, pattern)
+            return False
+
     blob = f"{repo.full_name} {repo.description}".lower()
     for bad in config.GITHUB_EXCLUDE_KEYWORDS:
         if bad in blob:
+            logger.debug("按关键词排除：%s（命中 %s）", repo.full_name, bad)
             return False
     return True
 
 
-def fetch_github_trending(session: Optional[requests.Session] = None) -> tuple[List[RepoItem], FetchReport]:
-    """
-    抓取过去 24 小时内"新建"或"有更新"的高星项目。
+# --------------------------------------------------------------------------
+# 轮播状态：记录「经典」项目推到第几名，以及最近推过哪些「趋势」项目
+# --------------------------------------------------------------------------
+def _empty_github_state() -> Dict[str, Any]:
+    return {
+        "classic_offset": 0,       # 经典池的下标游标，每次运行后 +GITHUB_CLASSIC_COUNT
+        "classic_cycle": 0,        # 已完成的轮次，用于观测绕了几圈
+        "classic_pool": [],        # 持久化的经典池（仓库名有序列表），保证排名稳定
+        "classic_pool_built": "",  # 池子构建时间
+        "recent_trending": [],     # 最近推过的趋势项目全名，用于次日去重
+        "last_run_date": "",
+        "last_classic": [],
+        "updated_at": "",
+    }
 
-    对每个 topic 发两次检索：
-      - created:>=<iso>  —— 24 小时内新建的项目
-      - pushed:>=<iso>   —— 24 小时内有推送的项目（覆盖"更新"）
-    结果按仓库去重，新建项目优先。
+
+def load_github_state() -> Dict[str, Any]:
+    """
+    读取轮播状态。
+
+    单文件损坏不应让整条流水线失败：解析不了就当作全新状态，从第 1 名重新开始。
+    """
+    path = config.GITHUB_STATE_FILE
+    state = _empty_github_state()
+
+    if not path.exists():
+        logger.info("轮播状态文件不存在，本次从第 1 名开始：%s", path.name)
+        return state
+
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        logger.warning("轮播状态文件损坏（%s），本次重置为初始状态：%s", path.name, exc)
+        return state
+
+    if not isinstance(data, dict):
+        logger.warning("轮播状态文件结构异常，本次重置为初始状态")
+        return state
+
+    for key, default in state.items():
+        value = data.get(key, default)
+        # 类型不对就用默认值，避免脏数据把逻辑带偏
+        if isinstance(default, list):
+            state[key] = value if isinstance(value, list) else default
+        elif isinstance(default, int):
+            state[key] = value if isinstance(value, int) and value >= 0 else default
+        else:
+            state[key] = value if isinstance(value, str) else default
+
+    logger.info(
+        "轮播状态：经典池游标 = %d，已轮 %d 圈，记忆了 %d 个近期趋势项目",
+        state["classic_offset"],
+        state["classic_cycle"],
+        len(state["recent_trending"]),
+    )
+    return state
+
+
+def save_github_state(state: Dict[str, Any]) -> None:
+    """
+    写入轮播状态。
+
+    这个文件放在 archive/ 下，会被工作流的「保存往期存档到仓库」步骤一起提交，
+    所以不需要任何外部存储 —— git 就是我们的持久层。
+    """
+    path = config.GITHUB_STATE_FILE
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        state["updated_at"] = datetime.now(timezone.utc).isoformat()
+        path.write_text(
+            json.dumps(state, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        logger.info(
+            "已保存轮播状态：下次经典池从第 %d 名开始（%s）",
+            state["classic_offset"] + 1,
+            path.name,
+        )
+    except OSError as exc:
+        # 状态写不进去只会导致明天重复推荐，不该让整期早报失败
+        logger.error("轮播状态写入失败（%s）：%s", path, exc)
+
+
+# --------------------------------------------------------------------------
+# 3 + 2 每日选品
+# --------------------------------------------------------------------------
+def _dedupe_repos(repos: List[RepoItem]) -> List[RepoItem]:
+    """按仓库全名去重，保留星数更高的那条（同一仓库可能命中多个查询）。"""
+    merged: Dict[str, RepoItem] = {}
+    for repo in repos:
+        key = repo.full_name.lower()
+        if not key:
+            continue
+        existing = merged.get(key)
+        if existing is None:
+            merged[key] = repo
+        else:
+            existing.is_new = existing.is_new or repo.is_new
+            if repo.stars > existing.stars:
+                existing.stars = repo.stars
+            if len(repo.description) > len(existing.description):
+                existing.description = repo.description
+    return list(merged.values())
+
+
+def select_trending_repos(
+    session: requests.Session,
+    state: Dict[str, Any],
+) -> List[RepoItem]:
+    """
+    选 3 个「近期趋势」项目。
+
+    重要限制：GitHub Search API **没有星标增长速度指标**，无法直接查"涨星最快"。
+    这里用三个互补的查询来近似，共同点是都要求"项目本身是新的"：
+
+      A. 创建于 7 天内            —— 本周刚冒头的新项目（最可靠的新鲜度信号）
+      B. 创建于 7–30 天、星数达标  —— 本月内的新秀，补足候选量
+      C. 30 天前创建、7 天内有推送、星数在区间内
+                                  —— "近期翻红"，但有星数上限
+
+    关于 C 的星数上限（这是踩过坑才加的）：
+    最初用 `pushed:>=7d stars:>=3000`，结果每天都返回 freeCodeCamp(455k)、
+    public-apis(480k) 这类仓库 —— 它们每天都在推送，所以"近期有推送"对它们永远成立。
+    它们不是趋势，是永久霸榜的常驻民。加上星数上限后，C 才真正对应
+    "中等规模、最近突然活跃起来"的项目。
+    """
+    now = datetime.now(timezone.utc)
+    since_week = (now - timedelta(days=config.GITHUB_TREND_DAYS)).strftime("%Y-%m-%d")
+    since_month = (now - timedelta(days=config.GITHUB_TREND_WIDER_DAYS)).strftime("%Y-%m-%d")
+    old_cutoff = (
+        now - timedelta(days=config.GITHUB_REVIVED_MIN_AGE_DAYS)
+    ).strftime("%Y-%m-%d")
+
+    seen_recent = {n.lower() for n in state.get("recent_trending", [])}
+
+    # ⚠️ 关于 created 区间写法的坑（实测踩过，务必不要改回去）：
+    #   created:>=A created:<B   → GitHub 会**静默忽略这两个限定符**，
+    #                              返回一批 2013–2018 年的老仓库，且不报错
+    #   created:A..B             → 正确生效
+    #   created:A .. B（带空格）  → 返回 0 条
+    # 所以这里一律用无空格的区间语法。
+    queries = [
+        (
+            "本周新建",
+            f"created:>={since_week} stars:>={config.GITHUB_TREND_STAR_FLOOR} "
+            f"fork:false archived:false",
+            True,
+        ),
+        (
+            "本月新秀",
+            f"created:{since_month}..{since_week} "
+            f"stars:>={config.GITHUB_TREND_WIDER_STAR_FLOOR} fork:false archived:false",
+            True,
+        ),
+        (
+            "老将新动作",
+            f"pushed:>={since_week} created:<{old_cutoff} "
+            f"topic:{config.GITHUB_REVIVED_TOPIC} "
+            f"stars:{config.GITHUB_REVIVED_STAR_FLOOR}..{config.GITHUB_REVIVED_STAR_CEILING} "
+            f"fork:false archived:false",
+            False,
+        ),
+    ]
+
+    # 分桶收集：每个来源单独一个列表，后面按配额取，避免高星的「本月新秀」
+    # 把真正最新鲜的「本周新建」全部挤掉（这是实测发现的问题）
+    buckets: Dict[str, List[RepoItem]] = {}
+
+    for label, query, is_new in queries:
+        buckets[label] = []
+        try:
+            items = _search_repositories(session, query, per_page=40)
+        except GitHubAuthError:
+            raise
+        except Exception as exc:  # noqa: BLE001 —— 单个查询失败不该让整个板块空掉
+            logger.warning("趋势查询失败 [%s]：%s", label, exc)
+            continue
+
+        for raw in items:
+            try:
+                repo = _to_repo_item(raw, is_new=is_new)
+            except (TypeError, ValueError, AttributeError):
+                continue
+            if _is_relevant_repo(repo):
+                buckets[label].append(repo)
+
+        logger.info(
+            "趋势查询 [%s] 命中 %d 个可用仓库（原始 %d 条）",
+            label,
+            len(buckets[label]),
+            len(items),
+        )
+
+    # 去掉近期已推荐过的，并按星数排序（星数作为热度代理）
+    for label in buckets:
+        buckets[label] = sorted(
+            (r for r in buckets[label] if r.full_name.lower() not in seen_recent),
+            key=lambda r: r.stars,
+            reverse=True,
+        )
+
+    # 配额轮转：三个来源各取一个，保证每天既有"刚出生的"也有"这个月的"和"老牌的"
+    picked: List[RepoItem] = []
+    taken: set = set()
+
+    def take_one(label: str) -> bool:
+        for repo in buckets.get(label, []):
+            if repo.full_name in taken:
+                continue
+            taken.add(repo.full_name)
+            picked.append(repo)
+            return True
+        return False
+
+    labels = [label for label, _, _ in queries]
+    for label in labels:
+        if len(picked) >= config.GITHUB_TREND_COUNT:
+            break
+        take_one(label)
+
+    # 某个来源今天没货（查询失败或窗口内确实没有）时，用其余来源补齐
+    if len(picked) < config.GITHUB_TREND_COUNT:
+        leftovers = sorted(
+            (r for lst in buckets.values() for r in lst if r.full_name not in taken),
+            key=lambda r: r.stars,
+            reverse=True,
+        )
+        for repo in leftovers:
+            if len(picked) >= config.GITHUB_TREND_COUNT:
+                break
+            taken.add(repo.full_name)
+            picked.append(repo)
+
+    # 仍然不够就回退用近期已推荐过的，保证板块不开天窗（会记警告便于排查）
+    if len(picked) < config.GITHUB_TREND_COUNT:
+        repeated = sorted(
+            (
+                r
+                for lst in buckets.values()
+                for r in lst
+                if r.full_name.lower() in seen_recent and r.full_name not in taken
+            ),
+            key=lambda r: r.stars,
+            reverse=True,
+        )
+        shortfall = config.GITHUB_TREND_COUNT - len(picked)
+        picked.extend(repeated[:shortfall])
+        if repeated:
+            logger.warning(
+                "趋势池新鲜项目不足，回退使用 %d 个近期已推荐过的仓库", min(shortfall, len(repeated))
+            )
+
+    logger.info(
+        "趋势选品：%s → 选中 %s",
+        {k: len(v) for k, v in buckets.items()},
+        [f"{r.full_name}(★{r.stars})" for r in picked],
+    )
+    return picked
+
+
+def _build_classic_pool(session: requests.Session) -> List[str]:
+    """重建经典池：每个 topic 取星数最高的若干个，合并去重后按星数排序，只保留仓库名。"""
+    pool: List[RepoItem] = []
+    for topic in config.GITHUB_TOPICS:
+        query = (
+            f"topic:{topic} stars:>={config.GITHUB_CLASSIC_STAR_FLOOR} "
+            f"fork:false archived:false"
+        )
+        try:
+            items = _search_repositories(
+                session, query, per_page=config.GITHUB_CLASSIC_POOL_PER_TOPIC
+            )
+        except GitHubAuthError:
+            raise
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("经典池查询失败 [%s]：%s", topic, exc)
+            continue
+
+        kept = 0
+        for raw in items:
+            try:
+                repo = _to_repo_item(raw, is_new=False)
+            except (TypeError, ValueError, AttributeError):
+                continue
+            if _is_relevant_repo(repo):
+                pool.append(repo)
+                kept += 1
+
+        # topic 查空是个隐蔽的坑：曾经 tools-for-developers 这个 topic
+        # 在 GitHub 上零仓库使用，导致池子凭空少了一大块却毫无提示
+        if not items:
+            logger.warning(
+                "topic:%s 查询结果为空 —— 该 topic 可能不存在或已被弃用，"
+                "建议换一个（验证方法：topic:<名字> stars:>=8000 能否查出东西）",
+                topic,
+            )
+        else:
+            logger.info("经典池 [%s] 收录 %d 个（原始 %d 条）", topic, kept, len(items))
+
+    pool = _dedupe_repos(pool)
+    pool.sort(key=lambda r: r.stars, reverse=True)
+    return [r.full_name for r in pool]
+
+
+def _fetch_repos_by_name(
+    session: requests.Session, names: List[str]
+) -> List[RepoItem]:
+    """
+    按仓库名逐个取最新元数据。
+
+    经典池里只存了名字（保证排序稳定），星数/描述这些会变的信息在推送当天现取，
+    避免把过期数据写进早报。
+    """
+    repos: List[RepoItem] = []
+    for name in names:
+        try:
+            response = session.get(
+                f"https://api.github.com/repos/{name}",
+                headers=_github_headers(),
+                timeout=config.HTTP_TIMEOUT,
+            )
+        except requests.RequestException as exc:
+            logger.warning("取仓库详情失败 [%s]：%s", name, exc)
+            continue
+
+        if response.status_code != 200:
+            logger.warning("取仓库详情返回 HTTP %d [%s]", response.status_code, name)
+            continue
+
+        try:
+            repos.append(_to_repo_item(response.json(), is_new=False))
+        except (TypeError, ValueError, AttributeError) as exc:
+            logger.warning("解析仓库详情失败 [%s]：%s", name, exc)
+
+    return repos
+
+
+def select_classic_repos(
+    session: requests.Session,
+    state: Dict[str, Any],
+) -> List[RepoItem]:
+    """
+    选 2 个「历史经典」项目，按游标轮播推进。
+
+    ⚠️ 池子必须**持久化排序**，不能每次运行重新按星数排。
+    星数每天都在变，重排会让排名漂移 —— 今天排第 3 的明天可能变第 5，
+    游标指向的仓库前后对不上，就会出现重复推荐（实测踩过这个坑）。
+    所以：池子在首次构建或耗尽后重建，中间所有运行都复用同一份顺序，
+    在推送当天再按名字取一次最新元数据。
+    """
+    need = config.GITHUB_CLASSIC_COUNT
+    pool: List[str] = state.get("classic_pool") or []
+
+    # ---- 首次运行、池子过期、或已轮完一圈：重建池子 ----
+    stale = True
+    built_at = state.get("classic_pool_built", "")
+    if pool and built_at:
+        try:
+            age = (
+                datetime.now(timezone.utc) - datetime.fromisoformat(built_at)
+            ).days
+            stale = age >= config.GITHUB_CLASSIC_POOL_MAX_AGE_DAYS
+        except ValueError:
+            stale = True
+
+    if not pool or stale:
+        reason = "首次构建" if not pool else f"池子已用满 {config.GITHUB_CLASSIC_POOL_MAX_AGE_DAYS} 天"
+        logger.info("重建经典池（%s）", reason)
+        rebuilt = _build_classic_pool(session)
+        if rebuilt:
+            pool = rebuilt
+            state["classic_pool"] = pool
+            state["classic_pool_built"] = datetime.now(timezone.utc).isoformat()
+            state["classic_offset"] = 0
+        elif not pool:
+            logger.error("经典池构建失败且无历史池可用，本次不产出经典条目")
+            return []
+
+    if not pool:
+        return []
+
+    # ---- 按游标取，走到池尾就绕回开头 ----
+    offset = state.get("classic_offset", 0)
+    if offset >= len(pool):
+        # 防御性兜底：正常情况下下面会在推完一圈时就把游标归零，走不到这里
+        logger.warning("经典池游标 %d 越界（池大小 %d），归零重来", offset, len(pool))
+        offset = 0
+
+    picked_names = pool[offset : offset + need]
+    next_offset = offset + need
+
+    if next_offset >= len(pool):
+        # 这一圈推完了，下一圈从头开始。
+        # 关键：要在"推完的当下"就记圈并归零，不能等下次运行才发现越界 ——
+        # 否则最后一组推完的那天不计数，轮次统计会永远少一圈（自检抓到过这个 off-by-one）。
+        next_offset = 0
+        state["classic_cycle"] = state.get("classic_cycle", 0) + 1
+        logger.info(
+            "经典池已推完一圈（共 %d 个），游标归零，累计完成 %d 圈",
+            len(pool),
+            state["classic_cycle"],
+        )
+
+    state["classic_offset"] = next_offset
+
+    logger.info(
+        "经典选品：池 %d 个，游标 %d → %d，选中 %s",
+        len(pool),
+        offset,
+        next_offset,
+        picked_names,
+    )
+
+    repos = _fetch_repos_by_name(session, picked_names)
+    state["last_classic"] = [r.full_name for r in repos]
+    return repos
+
+
+def fetch_github_daily(
+    session: Optional[requests.Session] = None,
+) -> tuple[List[RepoItem], FetchReport]:
+    """
+    GitHub 板块的每日选品：3 个趋势 + 2 个经典 = 5 个。
+
+    与旧逻辑的区别：不再一次抓 30 个候选让模型挑，而是**先按策略定好 5 个**，
+    模型只负责把这 5 个讲清楚。好处是每天的推荐是确定性的、可复现的，
+    而且提示词体积从 4.6 万字符降到几千，更快也更省。
     """
     session = session or build_session()
     report = FetchReport(label="检索")
 
-    # 提前校验 Token：与其让 8 次检索各自失败一次，不如一开始就说清楚问题
     if not config.GITHUB_TOKEN:
         raise GitHubAuthError(
             "缺少 GITHUB_TOKEN，无法调用 GitHub Search API。"
-            "匿名配额（10 次/分钟）不足以稳定完成 8 次检索。"
+            "匿名配额（10 次/分钟）不足以稳定完成多次检索。"
         )
 
-    now = datetime.now(timezone.utc)
-    since = now - timedelta(hours=config.LOOKBACK_HOURS)
-    iso = since.strftime("%Y-%m-%dT%H:%M:%SZ")
+    state = load_github_state()
 
-    logger.info(
-        "开始抓取 GitHub 热门项目（%s 之后），topics=%s，已携带 Token 认证",
-        iso,
-        config.GITHUB_TOPICS,
-    )
+    trending = select_trending_repos(session, state)
+    classic = select_classic_repos(session, state)
 
-    merged: Dict[str, RepoItem] = {}
-
-    for topic in config.GITHUB_TOPICS:
-        for mode in ("created", "pushed"):
-            # 有推送的项目池子很大，用更高的星标门槛保证质量
-            star_floor = max(config.GITHUB_MIN_STARS, 200) if mode == "pushed" else config.GITHUB_MIN_STARS
-            query = f"topic:{topic} {mode}:>={iso} stars:>={star_floor} fork:false archived:false"
-            try:
-                items = _search_repositories(session, query)
-                report.ok += 1
-            except GitHubAuthError:
-                # 认证类错误是全局性问题，继续跑剩下的查询只会重复失败
-                raise
-            except Exception as exc:  # noqa: BLE001 —— 单个检索失败不应中断整体
-                report.failed += 1
-                message = f"GitHub 检索失败 [{topic}/{mode}]: {type(exc).__name__}: {exc}"
-                report.add_error(message)
-                logger.warning(message)
-                continue
-
-            for raw in items:
-                try:
-                    repo = _to_repo_item(raw, is_new=(mode == "created"))
-                except (TypeError, ValueError, AttributeError) as exc:
-                    # 单条脏数据不该拖垮整次采集
-                    logger.debug("跳过格式异常的仓库条目：%s", exc)
-                    continue
-
-                if not _is_relevant_repo(repo):
-                    continue
-
-                existing = merged.get(repo.full_name)
-                if existing is None:
-                    merged[repo.full_name] = repo
-                else:
-                    # 同一仓库命中多次时：保留"新建"标记，并取更大的星数
-                    existing.is_new = existing.is_new or repo.is_new
-                    existing.stars = max(existing.stars, repo.stars)
-                    if len(repo.description) > len(existing.description):
-                        existing.description = repo.description
-
-    repos = sorted(merged.values(), key=lambda r: (r.is_new, r.stars), reverse=True)
-    repos = repos[: config.GITHUB_TOTAL_LIMIT]
+    repos = trending + classic
+    report.ok = 1
     report.items = len(repos)
 
-    if report.ok == 0:
-        # 全部检索都失败：把失败原因显式抛出，让上层记成整体失败而不是"命中 0 条"
-        raise RuntimeError(
-            "GitHub 全部检索均失败：" + ("；".join(report.errors[:3]) or "原因未知")
-        )
+    # ---- 更新状态：游标已由 select_classic_repos 推进，这里补上趋势记忆 ----
+    memory: List[str] = list(state.get("recent_trending", []))
+    for repo in trending:
+        name = repo.full_name
+        if name in memory:
+            memory.remove(name)
+        memory.append(name)
+    state["recent_trending"] = memory[-config.GITHUB_RECENT_MEMORY :]
+    state["last_run_date"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    save_github_state(state)
 
-    logger.info("GitHub 采集完成：%s", report.summary)
-
-    # 补充 README 上下文：GitHub 板块的深度解析依赖它
+    # 补充 README 上下文：深度解析依赖它
     enrich_repos_with_readme(repos, session, report)
 
+    logger.info(
+        "GitHub 每日选品完成：趋势 %d + 经典 %d = %d 个项目",
+        len(trending),
+        len(classic),
+        len(repos),
+    )
     return repos, report
+
 
 
 __all__ = [
@@ -737,7 +1141,11 @@ __all__ = [
     "clean_text",
     "strip_markdown",
     "fetch_all_news",
-    "fetch_github_trending",
+    "fetch_github_daily",
     "fetch_repo_readme",
     "enrich_repos_with_readme",
+    "load_github_state",
+    "save_github_state",
+    "select_trending_repos",
+    "select_classic_repos",
 ]

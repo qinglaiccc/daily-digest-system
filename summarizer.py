@@ -389,7 +389,6 @@ GITHUB_SYSTEM_PROMPT = """你是一位擅长把开源项目讲给外行听的技
 
 def build_github_user_prompt(repos_payload: List[Dict[str, Any]], report_date: date) -> str:
     date_str = report_date.strftime("%Y-%m-%d")
-    per_section = config.ITEMS_PER_SECTION
 
     schema_example = {
         "digest_repos": "一句话概括这批项目整体在解决什么问题，30 字以内",
@@ -412,13 +411,22 @@ def build_github_user_prompt(repos_payload: List[Dict[str, Any]], report_date: d
     with_readme = sum(1 for r in repos_payload if r.get("readme_excerpt"))
     without_readme = len(repos_payload) - with_readme
 
-    return f"""今天是 {date_str}。请把下面 {len(repos_payload)} 个 GitHub 热门项目整理成早报的「GitHub 热门效率与 AI 工具」板块。
+    # 让模型知道这 5 个是怎么选出来的，写导语时能呼应
+    trending_names = [r["repo"] for r in repos_payload if r.get("is_new_in_24h")]
+
+    return f"""今天是 {date_str}。下面是今天已经**预先选好**的 {len(repos_payload)} 个 GitHub 项目，
+请把它们整理成早报的「GitHub 热门效率与 AI 工具」板块。
+
+【选品说明】这 {len(repos_payload)} 个项目的挑选已经完成，**你不需要增删或替换**，只需逐个写成通俗解析。
+它们由两部分组成：
+- 其中 {len(trending_names)} 个是「近期趋势」新锐项目（近 7 天内新建或重新活跃）{("：" + "、".join(trending_names)) if trending_names else ""}
+- 其余是「历史经典」项目（总星数排名靠前，按日轮播推荐）
+写 digest_repos 导语时可以呼应这个结构，但不要生硬地贴标签。
 
 【素材说明】
 - 其中 {with_readme} 个项目附带了 `readme_excerpt`（README 原文摘录），这是你最主要的依据。
 - 另有 {without_readme} 个项目没有 README 摘录，只能依据 description 和 topics 判断；
   信息不足时宁可写得保守，也不要编造功能。
-- `is_new_in_24h` 表示该项目是最近 24 小时内新建的。
 
 【输出结构】每个项目必须完整包含以下四个部分，缺一不可：
 
@@ -436,8 +444,9 @@ def build_github_user_prompt(repos_payload: List[Dict[str, Any]], report_date: d
 4. **install（一键命令）** —— 单行命令，**必须逐字来自 README**。
    只填最直接的那一条（安装或启动命令）。README 里没有明确命令就填空字符串 ""。
 
-【数量】最多 {per_section} 个，按重要性与实用性排序。质量优先于数量，
-信息严重不足、连 intro 都写不出来的项目直接丢弃。
+【覆盖要求】{len(repos_payload)} 个项目就要输出 {len(repos_payload)} 条，顺序与下面的素材保持一致。
+只有在完全无法判断某个项目是做什么的（连 intro 都写不出来）时才允许省略，
+并把省略的 repo 名字写进返回 JSON 的 "skipped" 数组里说明原因。
 
 【digest_repos】另外用 30 字以内概括这批项目整体在解决什么问题，用于板块导语。
 
@@ -735,7 +744,7 @@ def normalize_github_result(
     if dropped:
         logger.warning("GitHub 板块共丢弃 %d 条无法验证的条目", dropped)
 
-    items = items[: config.ITEMS_PER_SECTION]
+    items = items[: config.GITHUB_DISPLAY_COUNT]
     lead = _coerce_str(raw.get("digest_repos"), limit=80)
 
     return items, lead, dropped
@@ -802,7 +811,7 @@ def build_fallback_result(
             "is_foreign": True,
             "untranslated": True,
         }
-        for repo in repos[: config.ITEMS_PER_SECTION]
+        for repo in repos[: config.GITHUB_DISPLAY_COUNT]
     ]
 
     sections = [
@@ -873,7 +882,7 @@ def build_fallback_github_section(repos: List[RepoItem]) -> List[Dict[str, Any]]
             "is_foreign": True,
             "untranslated": True,
         }
-        for repo in repos[: config.ITEMS_PER_SECTION]
+        for repo in repos[: config.GITHUB_DISPLAY_COUNT]
     ]
 
 

@@ -87,7 +87,7 @@ def stage_fetch() -> tuple[
         stats["rss_failed"] = stats["rss_sources"]
 
     try:
-        repos, repo_report = fetcher.fetch_github_trending(session)
+        repos, repo_report = fetcher.fetch_github_daily(session)
         diagnostics["github"] = repo_report.summary
         stats["github_queries"] = repo_report.ok
     except fetcher.GitHubAuthError as exc:

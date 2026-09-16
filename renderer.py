@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 import shutil
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -27,6 +28,9 @@ import config
 from summarizer import format_date_cn, local_now
 
 logger = logging.getLogger(__name__)
+
+# 只有这种命名的文件才是"某一期的存档"（archive/ 下还有 github_offset.json 等状态文件）
+ARCHIVE_NAME_RE = re.compile(r"\d{4}-\d{2}-\d{2}\.json")
 
 
 # --------------------------------------------------------------------------
@@ -129,13 +133,19 @@ def load_archive() -> List[Dict[str, Any]]:
     """
     读取全部往期存档，按日期倒序返回。
 
-    单份存档损坏不应影响整站生成，因此逐个容错跳过。
+    只认文件名符合 YYYY-MM-DD.json 的存档：archive/ 目录下还放着
+    github_offset.json 这类状态文件，它们不是某一期的内容，
+    如果不加过滤会被当成"结构异常的存档"反复告警。
     """
     if not config.ARCHIVE_DIR.exists():
         return []
 
     entries: List[Dict[str, Any]] = []
     for path in sorted(config.ARCHIVE_DIR.glob("*.json"), reverse=True):
+        if not ARCHIVE_NAME_RE.fullmatch(path.name):
+            logger.debug("跳过非存档文件：%s", path.name)
+            continue
+
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
         except (json.JSONDecodeError, OSError) as exc:
