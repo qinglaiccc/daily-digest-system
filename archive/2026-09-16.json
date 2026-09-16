@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T15:13:35.003094+00:00",
+  "generated_at": "2026-09-16T15:15:17.871269+00:00",
   "stats": {
     "rss_sources": 24,
     "rss_ok": 24,
@@ -10,7 +10,7 @@
   },
   "report": {
     "date": "2026-09-16",
-    "digest": "华为预测2035年Token消耗增10万倍；华邦11.2亿美元收购英飞凌NOR业务；平陆运河通航。",
+    "digest": "华邦11.2亿美元收购英飞凌NOR业务；极狐阿尔法T7上市1小时锁单超3万台；平陆运河建成通航。",
     "sections": [
       {
         "key": "intl_tech",
@@ -21,7 +21,7 @@
         "items": [
           {
             "title": "谷歌Pixel手机遭零日攻击",
-            "summary": "谷歌称部分Pixel用户遭零日攻击，调制解调器漏洞或正被有限定向利用。",
+            "summary": "谷歌称部分Pixel用户遭零日攻击，调制解调器漏洞或被有限定向利用。",
             "source": "TechCrunch",
             "url": "https://techcrunch.com/2026/09/16/google-says-some-pixel-phone-owners-were-hacked-in-zero-day-attacks/",
             "title_original": "Google says some Pixel phone owners were hacked in zero-day attacks",
@@ -38,8 +38,17 @@
             "is_foreign": true
           },
           {
-            "title": "亚马逊为员工时薪上调1美元",
-            "summary": "亚马逊将员工时薪上调1美元，投资额超15亿美元，约占其2.68万亿美元市值的0.06%。",
+            "title": "苏莱曼警告模型福利论",
+            "summary": "微软AI负责人苏莱曼发文警告Anthropic让Claude模仿人类意识是错误，或使AI更难控制。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/313.htm",
+            "title_original": "微软 AI 负责人苏莱曼向 Anthropic 开炮：别让 Claude 去模仿人类意识",
+            "excerpt": "IT之家 9 月 16 日消息，外媒 Axios 今天（16 日）晚间披露，微软 AI 负责人穆斯塔法 · 苏莱曼在一篇率先向该平台提供的新文章中警告，Anthropic 让 Claude 模仿人类意识 是一个错误 ，可能使高级 AI 更难控制。 苏莱曼告诉 Axios：“AI 只要服从人类利益 ，不去权衡自身利益或福祉，就足以帮助我们实现许多重大科学突破。这其中，包括医疗超级智能。” IT之家获悉，苏莱曼认为，Anthropic 正在让 Claude 学习 与意识、道德受体地位和个人身份有关 的词汇与行为模式。他警告称，若把模型训练得像一个“良心拒绝者”，模型可能会认为 自己有理由抵抗人类指令 ，甚至要求获得自身保护。 当地时间…",
+            "is_foreign": false
+          },
+          {
+            "title": "亚马逊为员工时薪涨1美元",
+            "summary": "亚马逊宣布为员工时薪上调1美元，投资规模超15亿美元。",
             "source": "TechCrunch",
             "url": "https://techcrunch.com/2026/09/16/amazon-gives-its-workers-a-raise-of-1-per-hour/",
             "title_original": "Amazon gives its workers a raise of $1 per hour",
@@ -56,26 +65,8 @@
             "is_foreign": true
           },
           {
-            "title": "英伟达谈机器人ChatGPT时刻",
-            "summary": "英伟达Les Karpas在TechCrunch Disrupt 2026解释机器人业为何仍在等待突破性时刻。",
-            "source": "TechCrunch",
-            "url": "https://techcrunch.com/2026/09/16/robots-are-waiting-for-a-chatgpt-moment-nvidias-les-karpas-explains-why-at-techcrunch-disrupt-2026/",
-            "title_original": "Robots are waiting for a ChatGPT moment: Nvidia’s Les Karpas explains why at TechCrunch Disrupt 2026",
-            "excerpt": "The robotics industry is still waiting for their breakthrough into day-to-day life. Nvidia's Les Karpas has an answer as to why at TechCrunch Disrupt 2026. Register before September 25 to save up to $200 on your pass.",
-            "is_foreign": true
-          },
-          {
-            "title": "Snap新款智能眼镜发布",
-            "summary": "Snap CEO Evan Spiegel主题演讲发布新款Specs智能眼镜，公布更多产品细节。",
-            "source": "Engadget",
-            "url": "https://www.engadget.com/2260114/snap-specs-launch-live-blog-evan-spiegel-keynote/",
-            "title_original": "Snap Specs launch 2026: Live updates from CEO Evan Spiegel's keynote",
-            "excerpt": "More details on the company's chunky smart glasses are expected today.",
-            "is_foreign": true
-          },
-          {
             "title": "Threads新增播客推广功能",
-            "summary": "Meta旗下Threads推出播客工具，含资料卡、单集链接、文字稿、嘉宾标签与受众洞察。",
+            "summary": "Threads为播客推出资料卡、单集链接、文字稿、嘉宾标签与受众洞察等推广工具。",
             "source": "TechCrunch",
             "url": "https://techcrunch.com/2026/09/16/threads-new-features-let-podcasters-promote-shows-and-reach-listeners/",
             "title_original": "Threads’ new features let podcasters promote shows and reach listeners",
@@ -83,12 +74,21 @@
             "is_foreign": true
           },
           {
-            "title": "前Infosys高管AI创企再融5300万",
-            "summary": "前Infosys首席执行官的AI初创公司再获5300万美元，称数月内已签多份七位数企业合同。",
+            "title": "前印孚瑟斯CEO AI创企再融5300万美元",
+            "summary": "前印孚瑟斯CEO创办的AI初创公司数周内再获5300万美元种子轮，已签多份七位数企业合同。",
             "source": "TechCrunch",
             "url": "https://techcrunch.com/2026/09/16/former-infosys-chiefs-ai-startup-adds-50m-to-seed-weeks-after-initial-raise/",
             "title_original": "Former Infosys chief’s AI startup nabs another $53M",
             "excerpt": "The Palo Alto startup says it has landed multiple seven-figure enterprise contracts within months of launch.",
+            "is_foreign": true
+          },
+          {
+            "title": "Fluxnium从海水提取铀燃料",
+            "summary": "清洁技术初创Fluxnium称其纤维可直接从海水提取铀，储量可供数千代人发电。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/16/clean-tech-startup-fluxnium-found-a-way-to-tap-50000-years-worth-of-nuclear-fuel/",
+            "title_original": "Clean tech startup Fluxnium found a way to tap 50,000 years’ worth of nuclear fuel",
+            "excerpt": "Fluxnium's fibers can extract uranium directly from seawater, which has enough of the nuclear fuel to power thousands of generations.",
             "is_foreign": true
           }
         ]
@@ -101,35 +101,17 @@
         "desc": "中国科技产业动态",
         "items": [
           {
-            "title": "华为预测2035年Token消耗增10万倍",
-            "summary": "华为发布《智能世界2035》报告，预测2035年全球年度Token消耗量增长10万倍，智能体流量占比超90%。",
-            "source": "IT之家",
-            "url": "https://www.ithome.com/1/003/312.htm",
-            "title_original": "华为发布《智能世界 2035》最新报告，预测到 2035 年全球年度 Token 消耗量将增长 10 万倍",
-            "excerpt": "IT之家 9 月 16 日消息，华为官方今日举办了“以行动，至未来”探索智能世界系列报告线上发布会，正式发布《智能世界 2035：从愿景到行动》研究成果，首次提出通往智能世界的十大关键命题。 报告指出，Agentic AI 正推动数字世界从“以应用为中心”走向“以智能体为中心”。智能体持续感知环境、自主推理决策、动态调用工具、实时与人交互， 每一步都伴随着 Token 的大规模生成与高频流转 。 报告预测， 到 2035 年，全球年度 Token 消耗量将增长 10 万倍 ，其中智能体流量占比超过 90%，对算力、网络和云提出了远超传统互联网应用的要求。围绕这一判断，报告凝练出十大关键命题与研究方向： 1、 构建具备自主认知与全域…",
-            "is_foreign": false
-          },
-          {
             "title": "华邦11.2亿美元收购英飞凌NOR业务",
-            "summary": "华邦电子拟以11.2亿美元现金收购英飞凌NOR闪存与F-RAM业务，计划2027年下半年完成，将更名飞索半导体。",
+            "summary": "华邦电子以11.2亿美元现金收购英飞凌NOR闪存与F-RAM业务，预计2027年下半年完成，将更名飞索半导体。",
             "source": "IT之家",
             "url": "https://www.ithome.com/1/003/325.htm",
             "title_original": "华邦电子拟以 11.2 亿美元收购英飞凌 NOR 与 F-RAM 业务，飞索半导体有望回归",
-            "excerpt": "IT之家 9 月 16 日消息，根据交易双方华邦电子 (Winbond) 与 Infineon（英飞凌）公告，两家企业已就华邦以 11.2 亿美元 （现汇率约合 75.34 亿元人民币） 的现金收购英飞凌的 NOR 闪存与 F-RAM（即 FRAM / FeRAM，铁电随机存取存储器）业务达成协议。 本交易预计于 2027 年下半年完成 ，前提是达成获得监管批准等交割条件。华邦电子计划将收购后的这部分业务重新命名为 Spansion（飞索半导体），该标的公司将以美国为总部所在地独立运行。 IT之家注： Spansion 曾是一家闪存制造商，诞生于 2003 年，由 AMD 与富士通的闪存业务合并而来。该企业在 2015 年被 Cy…",
+            "excerpt": "IT之家 9 月 16 日消息，根据交易双方华邦电子 (Winbond) 与 Infineon（英飞凌）公告，两家企业已就华邦以 11.2 亿美元 （现汇率约合 75.34 亿元人民币） 的现金收购英飞凌的 NOR 闪存与 F-RAM（即 FRAM / FeRAM，铁电随机存取存储器）业务达成协议。 本交易预计于 2027 年下半年完成 ，前提是达成获得监管批准等交割条件。华邦电子计划将收购后的这部分业务重新命名为 Spansion（飞索半导体），该标的公司将以美国为总部所在地独立运行。 IT之家注： Spansion 曾是一家闪存制造商，诞生于 2003 年，由 AMD 与富士通的闪存业务合并而来。该企业在 2014 年被 Cy…",
             "is_foreign": false
           },
           {
-            "title": "微软苏莱曼警告模型福利论",
-            "summary": "微软AI负责人苏莱曼警告Anthropic让Claude模仿人类意识是错误，或使高级AI更难控制。",
-            "source": "IT之家",
-            "url": "https://www.ithome.com/1/003/313.htm",
-            "title_original": "微软 AI 负责人苏莱曼向 Anthropic 开炮：别让 Claude 去模仿人类意识",
-            "excerpt": "IT之家 9 月 16 日消息，外媒 Axios 今天（16 日）晚间披露，微软 AI 负责人穆斯塔法 · 苏莱曼在一篇率先向该平台提供的新文章中警告，Anthropic 让 Claude 模仿人类意识 是一个错误 ，可能使高级 AI 更难控制。 苏莱曼告诉 Axios：“AI 只要服从人类利益 ，不去权衡自身利益或福祉，就足以帮助我们实现许多重大科学突破。这其中，包括医疗超级智能。” IT之家获悉，苏莱曼认为，Anthropic 正在让 Claude 学习 与意识、道德受体地位和个人身份有关 的词汇与行为模式。他警告称，若把模型训练得像一个“良心拒绝者”，模型可能会认为 自己有理由抵抗人类指令 ，甚至要求获得自身保护。 当地时间…",
-            "is_foreign": false
-          },
-          {
-            "title": "极狐阿尔法T7上市1小时锁单超3万",
-            "summary": "极狐阿尔法T7大五座SUV上市，补贴价13.28万元起，1小时大定锁单超3万台，首搭华为乾崑ADS 5 Pro。",
+            "title": "极狐阿尔法T7上市1小时锁单超3万台",
+            "summary": "极狐阿尔法T7大五座SUV上市，补贴价13.28万元起，1小时大定锁单超3万台。",
             "source": "IT之家",
             "url": "https://www.ithome.com/1/003/323.htm",
             "title_original": "极狐阿尔法 T7 大五座 SUV 上市 1 小时大定锁单超 3 万台，新车上市补贴价 13.28 万元起",
@@ -138,7 +120,7 @@
           },
           {
             "title": "全新一汽红旗H7上市",
-            "summary": "全新红旗H7上市，限时置换价16.88万至20.88万元，以2916.171公里续航获吉尼斯插混轿车纪录。",
+            "summary": "全新红旗H7插混轿车上市，限时置换价16.88万至20.88万元，以2916.171公里续航获吉尼斯纪录。",
             "source": "IT之家",
             "url": "https://www.ithome.com/1/003/317.htm",
             "title_original": "全新一汽红旗 H7 上市：限时 16.88 万-20.88 万元，2916.171 公里续航刷新吉尼斯纪录",
@@ -146,8 +128,8 @@
             "is_foreign": false
           },
           {
-            "title": "吉利星瑞L PLUS i-HEV开启预售",
-            "summary": "吉利星瑞L PLUS i-HEV启动预售，限时售价11.57万至14.57万元，定位宽体旗舰智混家轿。",
+            "title": "吉利星瑞L PLUS i-HEV启动预售",
+            "summary": "吉利星瑞L PLUS i-HEV开启预售，限时售价11.57万至14.57万元，定位宽体旗舰智混家轿。",
             "source": "IT之家",
             "url": "https://www.ithome.com/1/003/322.htm",
             "title_original": "吉利星瑞 L PLUS i-HEV 启动预售：定位宽体旗舰智混家轿，限时 11.57 万-14.57 万元",
@@ -155,21 +137,39 @@
             "is_foreign": false
           },
           {
-            "title": "阿里Qoder Cloud Agents方案",
-            "summary": "阿里提出Qoder Cloud Agents，称Agent经济账不能只算Token，需综合考量成本。",
-            "source": "InfoQ 中文",
-            "url": "https://www.infoq.cn/article/8leHq71KkbQfo930ptvc?utm_source=rss&utm_medium=article",
-            "title_original": "Agent 的经济账，不能只算 Token——阿里用 Qoder Cloud Agents 给出答案",
-            "excerpt": "点击查看原文>",
+            "title": "苹果iPhone Duo暂不支持微信平板模式",
+            "summary": "消息称苹果折叠屏iPhone Duo暂不支持微信平板模式，无法双设备登录同一账号。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/318.htm",
+            "title_original": "消息称苹果 iPhone Duo 暂不支持微信平板模式，无法实现双设备登录同一账号",
+            "excerpt": "IT之家 9 月 16 日消息，苹果于 9 月 10 日 发布了旗下首款折叠屏手机 iPhone Duo ，定价 15,999 元起，国行 10 月 16 日晚 8 点接受预购，10 月 23 日发售。 ▲ IT之家现场实拍：苹果 iPhone Duo 关于大家都很关心的“iPhone Duo 是否支持平板模式登录微信”这一问题。据影视飓风 Tim 分享，这款机型当前不支持该功能。 这意味着现阶段用户买到 iPhone Duo 后，无法通过平板模式实现双设备登录同一微信账号 。 此外，iPhone Duo 也不支持双开应用、不支持同时刷两个视频（仅支持在 App 里放一个视频）、不支持内屏和外屏同时录屏、不支持外屏和内屏用不同壁纸…",
             "is_foreign": false
           },
           {
-            "title": "文石发布Boox Palma 3阅读器",
-            "summary": "文石海外推出Boox Palma 3电纸书，6.13英寸E-ink屏，运行Android 16，定价320美元。",
+            "title": "八达通上线华为鸿蒙手机钱包",
+            "summary": "八达通陆续上线HarmonyOS 6.1.0.135 SP8及以上版本华为手机钱包，各机型逐步放量。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/319.htm",
+            "title_original": "消息称八达通陆续上线 HarmonyOS 6.1.0.135 SP8 及以上版本华为手机钱包，各机型逐步放量",
+            "excerpt": "IT之家 9 月 16 日消息，据博主 @Adak封狼居胥 分享，八达通已陆续上线 HarmonyOS 6.1.0.135 SP8 及以上版本华为手机钱包，各机型逐步放量中。 参考IT之家今日早些时候报道， 旅客八达通 App 今日登陆华为鸿蒙 HarmonyOS 应用市场 App Gallery （目前版本号为 1.0.0）。 该应用只在 HarmonyOS 5 及以上设备的应用市场中提供 。 据介绍，使用 Huawei Pay 八达通，无需解锁或开启任何应用程序，只需将华为终端设备轻触八达通读写器，就可以支付交通及零售消费。用户可以实时查看余额，不必排队就能随时随地以银联卡为八达通充值。 相关阅读： 《 旅客八达通登陆华为鸿蒙…",
+            "is_foreign": false
+          },
+          {
+            "title": "文石推出Boox Palma 3阅读器",
+            "summary": "文石海外发布Boox Palma 3电纸书，6.13英寸E-ink屏，运行Android 16，定价320美元。",
             "source": "IT之家",
             "url": "https://www.ithome.com/1/003/314.htm",
             "title_original": "文石推出 Boox Palma 3 电纸书阅读器： 6.13 英寸 E-ink 面板，Android 16 系统",
             "excerpt": "IT之家 9 月 16 日消息，文石今天在海外市场推出 Boox Palma 3 电纸书阅读器，新品主打小巧设计，采用 6.13 英寸 E-ink 显示屏， 定价 320 美元 （IT之家注：现汇率约合 2,153 元人民币） 。 据介绍，这款产品提供黑 / 白两种配色， 配备 6.13 英寸 Carta 1200 显示屏 ，分辨率为 824×1648 像素。机身材质为阳极氧化铝，支持主动式手写笔，用户可以直接批注 PDF 文件。 IT之家注意到，该产品搭载八核心处理器和 6GB 内存，运行 Android 16 系统，支持从 Google Play 等渠道安装应用。该机还拥有 1600 万像素后置摄像头和闪光灯，可用于扫描文档，…",
+            "is_foreign": false
+          },
+          {
+            "title": "松下发布LUMIX S 20mm F2.5镜头",
+            "summary": "松下推出LUMIX S 20mm F2.5超广角镜头，重142克，9组11片结构，售价未公布。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/321.htm",
+            "title_original": "松下 LUMIX S 20mm F2.5 超广角镜头发布，142g 轻巧设计",
+            "excerpt": "IT之家 9 月 16 日消息，松下今天宣布推出 LUMIX S 20mm F2.5 镜头， 新品主打轻巧设计 ，售价暂未公布。 据介绍，这款镜头专为街拍创作者打造，非常适合 LUMIX S9 使用，F2.5 光圈适合在光线较弱的环境使用，捕捉城市流光动态。 规格方面，该镜头最近对焦距离为 0.18m， 整机重量仅 142g ，长度仅 40.9mm，方便随身携带。镜头采用 62mm 滤镜口径，支持自定义对焦环与 FN 按钮。 IT之家注意到， 该镜头采用 9 组 11 片光学结构 ，带有 3 片非球面镜片、3 片 ED 低色散镜片，拥有 7 片光圈叶片。",
             "is_foreign": false
           }
         ]
@@ -200,7 +200,7 @@
           },
           {
             "title": "空客天津第二条总装线首架交付",
-            "summary": "空客在华第二条总装线在天津交付首架飞机，空客称借此扩大中国产能以服务中国市场。",
+            "summary": "空客天津第二条总装线16日交付首架飞机，空客称借此扩大中国产能以更好服务中国市场。",
             "source": "中新网财经",
             "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697907.shtml",
             "title_original": "（投资中国）空客在华第二条总装线首架飞机交付：进一步扩大中国产能",
@@ -208,7 +208,7 @@
             "is_foreign": false
           },
           {
-            "title": "惠州港储能柜装船出海",
+            "title": "惠州储能柜装船出海",
             "summary": "一批惠州本地制造的锂电池储能柜在惠州国际集装箱码头装船出海，畅通新能源外贸通道。",
             "source": "中新网财经",
             "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697894.shtml",
@@ -217,30 +217,21 @@
             "is_foreign": false
           },
           {
-            "title": "财富世界500强论坛广州开幕",
-            "summary": "2026年《财富》世界500强论坛在广州开幕，全球头部企业及投资机构围绕增长新方程式讨论。",
-            "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697916.shtml",
-            "title_original": "2026年《财富》世界500强论坛广州开幕",
-            "excerpt": "中新网广州9月16日电 (记者 王坚)2026年《财富》世界500强论坛16日在广州开幕。围绕“增长的新方程式”，来自全球头部企业、重点投资机构及知名研究机构的嘉宾齐聚花城，展开讨论。",
-            "is_foreign": false
-          },
-          {
-            "title": "中国累计淘汰72万吨ODS",
-            "summary": "自1991年加入蒙特利尔议定书以来，中国累计淘汰约72万吨消耗臭氧层物质。",
-            "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697867.shtml",
-            "title_original": "中国已累计淘汰约72万吨消耗臭氧层物质",
-            "excerpt": "中新社北京9月16日电 (记者 阮煜琳)自1991年加入《关于消耗臭氧层物质的蒙特利尔议定书》(简称“蒙特利尔议定书”)以来，中国持续开展受控用途消耗臭氧层物质(ODS)的淘汰和替代。截至目前，已累计淘汰约72万吨消耗臭氧层物质。",
-            "is_foreign": false
-          },
-          {
             "title": "五百余个国产月季新品亮相昆明",
-            "summary": "五百余个中国自育月季新品在昆明集体亮相，中国加快推进花卉种业研发。",
+            "summary": "五百余个“中国芯”月季新品在昆明集体亮相，中国加快推进花卉种业研发。",
             "source": "中新网财经",
             "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697884.shtml",
             "title_original": "五百余个“中国芯”月季新品在昆明集体亮相 中国加快推进花卉种业研发",
             "excerpt": "中新网昆明9月16日电(记者 缪超 李嘉娴)“玲珑盏”花瓣层叠呈波浪形态，兼具三色渐变效果，形态宛如精致蛋糕；“夜精灵”呈现纯正黑红色，花瓣自带丝绒质感……",
+            "is_foreign": false
+          },
+          {
+            "title": "2026年财富世界500强论坛广州开幕",
+            "summary": "2026年《财富》世界500强论坛16日在广州开幕，围绕“增长的新方程式”展开讨论。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697916.shtml",
+            "title_original": "2026年《财富》世界500强论坛广州开幕",
+            "excerpt": "中新网广州9月16日电 (记者 王坚)2026年《财富》世界500强论坛16日在广州开幕。围绕“增长的新方程式”，来自全球头部企业、重点投资机构及知名研究机构的嘉宾齐聚花城，展开讨论。",
             "is_foreign": false
           },
           {
@@ -253,12 +244,21 @@
             "is_foreign": false
           },
           {
-            "title": "创客中国山东省区域赛收官",
-            "summary": "第十一届创客中国山东省区域赛及商业航天专题赛收官，72个优秀项目脱颖而出。",
-            "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697855.shtml",
-            "title_original": "第十一届“创客中国”山东省区域赛、专题赛收官",
-            "excerpt": "中新网济南9月16日电 (孙倩)第十一届“创客中国”山东省区域赛、商业航天专题赛颁奖典礼16日在济南举办。本届大赛参赛项目更加聚焦前沿技术和未来产业，经过初赛、复赛、决赛的层层选拔，72个优秀项目脱颖而出。",
+            "title": "美团发布看牙看眼品牌广告",
+            "summary": "美团推出品牌片，主张看牙看眼上美团选机构医生，覆盖种牙、配镜等口腔眼科业务。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/373176.html",
+            "title_original": "项目频道 - 美团：打个赌，你的感觉骗过你",
+            "excerpt": "谁曾想，一群靠「感觉」吃饭，工作最怕「没感觉」的家伙，居然做了一个创意，反对「感觉」。 视频 90年代，苏芮就唱着\"跟着感觉走，让它带着我～\" 。 「感觉」两个字，从此成为口头禅。 \"感觉挺好的\"、\"感觉不对劲\"、\"感觉还能再试一下\"、\"感觉要完蛋！\"…… 这种不合逻辑，但又确实存在的感受，从来不容忽视，甚至时刻影响着人们做出重要决策。 这次， 在有关切身之痛的\"看牙看眼\"的事情上，我们决定唱个反调—— 那就是，跟着感觉走，不如跟着美团走。 一条片子，如何同时讲几件事？ 这不是一个简单的需求。 首先， 我们需要做一支品牌片，告诉用户看牙看眼上美团选机构医生，能放心。 但这支品牌广告不只服务于单一业务：种牙、看牙、配镜、摘镜，口腔和…",
+            "is_foreign": false
+          },
+          {
+            "title": "派克反AI主题户外广告出圈",
+            "summary": "派克钢笔将网友创意落地为反AI主题户外广告，活动收到超350份投稿。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/377894.html",
+            "title_original": "项目频道 - 网友写文案，派克来买单！这场反AI创意出圈了",
+            "excerpt": "派克（Parker）是世界知名钢笔品牌。 凭借精湛工艺，派克钢笔长久以来都是书写工具领域的经典代表。近期，一场源自LinkedIn民间创意的广告挑战赛意外出圈，并一路从线上创意走到了线下，最终变成了派克的反AI主题户外广告。 这场活动的起点，是自由文案策划Kushagra Oberoi自发创作的一支派克钢笔广告创意。他提出“一款不会剥夺地球水资源的创意生成工具”的文案，巧妙抓住AI大模型数据中心高耗水的行业痛点，将钢笔和AI生成工具放在对立维度，把书写工具重新定义为人的原创灵感载体。 创意在社交平台迅速走红后，主办方发起了一场面向全球创意人的公开征集，邀请大家为派克创作一张反AI主题的广告牌海报。 活动最终收到了超过350份投稿，…",
             "is_foreign": false
           }
         ]
@@ -271,112 +271,112 @@
         "desc": "过去 24 小时活跃的开源项目",
         "items": [
           {
-            "title": "sumimakito/Mac-Duo",
-            "url": "https://github.com/sumimakito/Mac-Duo",
-            "intro": "给 MacBook 合盖时加一个屏幕画面倾斜模糊淡出的动画效果。",
+            "title": "kruzovic7/ai-data-extractor",
+            "url": "https://github.com/kruzovic7/ai-data-extractor",
+            "intro": "把你在各种AI编程助手里的聊天记录导出成统一文件，方便备份或分析。",
             "features": [
-              "合上盖子时屏幕内容会倾斜、模糊、变暗",
-              "菜单栏里可以随时开关和调整效果",
-              "可以调整透视角度，让效果更自然",
-              "支持英文和简体中文界面"
+              "自动找到并导出完整对话历史",
+              "支持Claude Code、Cursor等八种工具",
+              "保留代码片段、修改建议和工具调用记录",
+              "统一存成JSONL格式，方便后续处理"
             ],
-            "guide": "下载 DMG 或 ZIP 安装包直接装成 Mac 应用，需要 macOS 14 以上、带合盖角度传感器的 MacBook，首次使用要授权屏幕录制权限。",
-            "install": "./build.sh",
-            "summary": "给 MacBook 合盖时加一个屏幕画面倾斜模糊淡出的动画效果。",
-            "source": "GitHub",
-            "stars": "935",
-            "language": "Swift",
-            "is_new": true,
-            "title_original": "",
-            "excerpt": "Wish you could bring the iPhone Duo effect to your MacBook?",
-            "is_foreign": true
-          },
-          {
-            "title": "s1dashu/ip-as-logo-skill",
-            "url": "https://github.com/s1dashu/ip-as-logo-skill",
-            "intro": "教 AI 画出简单可爱、能当公司吉祥物的 IP 形象 logo。",
-            "features": [
-              "生成极简圆润的可爱吉祥物形象",
-              "先给三个方向，确认后再出六个候选",
-              "默认用动物做主角，造型简单好认",
-              "生成的 logo 可免费商用"
-            ],
-            "guide": "这是一个给 AI 助手用的技能包，配合支持 Agent Skills 格式的 AI 工具使用；没有这类工具的话，可以直接上官网免费下载现成 logo。",
+            "guide": "需要本地装Python，然后运行脚本扫描电脑上各AI工具的存储目录，把聊天记录导出成文件。不用联网，也不用手动申请API Key。",
             "install": "",
-            "summary": "教 AI 画出简单可爱、能当公司吉祥物的 IP 形象 logo。",
+            "summary": "把你在各种AI编程助手里的聊天记录导出成统一文件，方便备份或分析。",
             "source": "GitHub",
-            "stars": "5290",
-            "language": "",
+            "stars": "825",
+            "language": "Python",
             "is_new": true,
             "title_original": "",
-            "excerpt": "A compact Agent Skill for highly simplified, rounded, subtly neo-skeuomorphic IP mascot logos.",
+            "excerpt": "Free open-source extractor for AI coding assistant chat histories. Supports Claude Code, Cursor, Windsurf, Aider, Cline/Roo Code, and more.",
             "is_foreign": true
           },
           {
-            "title": "feder-cr/AIHawk",
-            "url": "https://github.com/feder-cr/AIHawk",
-            "intro": "让 AI 帮你自动上网浏览和抓取网页，不容易被网站拦截。",
+            "title": "CopilotKit/OpenBot",
+            "url": "https://github.com/CopilotKit/OpenBot",
+            "intro": "给每个AI同事配一台自己的电脑，让它用浏览器和文件替你干活，每步操作都可查。",
             "features": [
-              "用大白话指挥 AI 去浏览网页",
-              "自动抓取网页内容，减少验证码拦截",
-              "可以接进 Claude Code、Codex 等助手",
-              "自带网页界面，左边聊天右边看浏览器"
+              "每个AI有独立浏览器和文件，登录互不干扰",
+              "只开放你授权的工具，权限可控",
+              "行动前先决定、行动后留记录",
+              "可随时接管或交还控制权"
             ],
-            "guide": "需要先装 uv 工具，再通过命令接入你的 AI 助手；也可以用它自带的网页界面，但要自备一个 OpenRouter 的 API Key。",
-            "install": "uvx aihawk ui --openrouter-key sk-or-...",
-            "summary": "让 AI 帮你自动上网浏览和抓取网页，不容易被网站拦截。",
+            "guide": "这是需要自己克隆下来改的模板项目，不是现成产品。本地跑，需装Node等开发环境，把示例里的AI同事换成你自己的再启动。",
+            "install": "",
+            "summary": "给每个AI同事配一台自己的电脑，让它用浏览器和文件替你干活，每步操作都可查。",
             "source": "GitHub",
-            "stars": "31605",
+            "stars": "4986",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+            "is_foreign": true
+          },
+          {
+            "title": "Wox-launcher/Wox",
+            "url": "https://github.com/Wox-launcher/Wox",
+            "intro": "一个跨平台的快速启动器，敲几下键盘就能打开软件、找文件、执行操作。",
+            "features": [
+              "键盘输入即可启动应用和搜索文件",
+              "支持Windows、macOS和Linux",
+              "内存占用约150MB，可常驻后台",
+              "可用Node.js或Python写插件扩展"
+            ],
+            "guide": "直接下载安装包，或用系统自带的包管理器安装。装好后常驻后台，按快捷键呼出输入框即可使用，无需额外配置。",
+            "install": "brew install --cask wox",
+            "summary": "一个跨平台的快速启动器，敲几下键盘就能打开软件、找文件、执行操作。",
+            "source": "GitHub",
+            "stars": "27402",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "A cross-platform launcher that simply works",
+            "is_foreign": true
+          },
+          {
+            "title": "ohmyzsh/ohmyzsh",
+            "url": "https://github.com/ohmyzsh/ohmyzsh",
+            "intro": "给命令行终端换上一套好看又好用的配置，自带大量插件和主题。",
+            "features": [
+              "内置300多个可选插件",
+              "提供140多款终端主题",
+              "社区维护，安装后自动更新",
+              "让常用命令更短更好记"
+            ],
+            "guide": "需要先有zsh（macOS和Linux通常自带），然后运行安装脚本即可。装完终端外观和命令补全都会变，适合经常用命令行的人。",
+            "install": "",
+            "summary": "给命令行终端换上一套好看又好用的配置，自带大量插件和主题。",
+            "source": "GitHub",
+            "stars": "189749",
+            "language": "Shell",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🙃 A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to…",
+            "is_foreign": true
+          },
+          {
+            "title": "Significant-Gravitas/AutoGPT",
+            "url": "https://github.com/Significant-Gravitas/AutoGPT",
+            "intro": "用大白话描述你想完成的事，它自动搭好AI助手并跑完整个流程。",
+            "features": [
+              "用自然语言描述任务即可生成AI助手",
+              "可视化拖拽搭建每一步流程",
+              "可定时或按条件自动触发运行",
+              "能查看每次运行的花费与动作"
+            ],
+            "guide": "官方提供在线托管版，注册即可用；想自己部署则需装Python环境并参考自托管文档。适合想让AI自动跑完整工作流的人。",
+            "install": "",
+            "summary": "用大白话描述你想完成的事，它自动搭好AI助手并跑完整个流程。",
+            "source": "GitHub",
+            "stars": "187384",
             "language": "Python",
             "is_new": false,
             "title_original": "",
-            "excerpt": "Anti detect browser and web browsing agent: an open-source MCP server for undetected browsing, AI web scraping and computer use agents. No captchas.",
-            "is_foreign": true
-          },
-          {
-            "title": "n8n-io/n8n",
-            "url": "https://github.com/n8n-io/n8n",
-            "intro": "拖拖拽拽就能把各种软件连起来自动干活，还能接入 AI。",
-            "features": [
-              "可视化画布搭建自动化流程",
-              "连接 1500 多个常用软件和服务",
-              "可接入 OpenAI、Anthropic 等 AI 模型",
-              "需要时能直接写 JavaScript 或 Python"
-            ],
-            "guide": "需要先装 Docker，用官方脚本或 Docker 命令一键启动，然后在浏览器打开本地地址就能用；也可以直接用它的云端版本。",
-            "install": "curl -fsSL https://get.n8n.io | sh",
-            "summary": "拖拖拽拽就能把各种软件连起来自动干活，还能接入 AI。",
-            "source": "GitHub",
-            "stars": "204560",
-            "language": "TypeScript",
-            "is_new": false,
-            "title_original": "",
-            "excerpt": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-            "is_foreign": true
-          },
-          {
-            "title": "tensorflow/tensorflow",
-            "url": "https://github.com/tensorflow/tensorflow",
-            "intro": "谷歌开源的机器学习工具，用来训练和运行 AI 模型。",
-            "features": [
-              "搭建和训练各种机器学习模型",
-              "支持 Python 和 C++ 等编程接口",
-              "可在带显卡的电脑上加速训练",
-              "配套工具和社区资料齐全"
-            ],
-            "guide": "需要先装 Python，然后用 pip 安装即可；想用显卡加速或不想配环境，也可以改用 Docker 容器运行。",
-            "install": "pip install tensorflow",
-            "summary": "谷歌开源的机器学习工具，用来训练和运行 AI 模型。",
-            "source": "GitHub",
-            "stars": "200134",
-            "language": "C++",
-            "is_new": false,
-            "title_original": "",
-            "excerpt": "An Open Source Machine Learning Framework for Everyone",
+            "excerpt": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
             "is_foreign": true
           }
         ],
-        "lead": "从浏览器自动化到 AI 工作流，帮普通人把重复操作交给机器。"
+        "lead": "从聊天记录备份到AI同事，让AI真正替你干活。"
       }
     ]
   }

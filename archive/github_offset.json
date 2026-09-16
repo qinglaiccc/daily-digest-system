@@ -1,5 +1,5 @@
 {
-  "classic_offset": 6,
+  "classic_offset": 8,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -143,12 +143,15 @@
     "DayuanJiang/next-ai-draw-io",
     "sumimakito/Mac-Duo",
     "s1dashu/ip-as-logo-skill",
-    "feder-cr/AIHawk"
+    "feder-cr/AIHawk",
+    "kruzovic7/ai-data-extractor",
+    "CopilotKit/OpenBot",
+    "Wox-launcher/Wox"
   ],
   "last_run_date": "2026-09-16",
   "last_classic": [
-    "n8n-io/n8n",
-    "tensorflow/tensorflow"
+    "ohmyzsh/ohmyzsh",
+    "Significant-Gravitas/AutoGPT"
   ],
-  "updated_at": "2026-09-16T15:13:17.233412+00:00"
+  "updated_at": "2026-09-16T15:15:03.176188+00:00"
 }
