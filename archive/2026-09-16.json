@@ -1,16 +1,16 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T14:59:56.393878+00:00",
+  "generated_at": "2026-09-16T15:03:51.536789+00:00",
   "stats": {
     "rss_sources": 24,
     "rss_ok": 24,
     "rss_failed": 0,
-    "raw_news": 324,
+    "raw_news": 323,
     "github_queries": 1
   },
   "report": {
     "date": "2026-09-16",
-    "digest": "华为预测2035年Token消耗增10万倍，谷歌Pixel遭零日攻击，平陆运河通航。",
+    "digest": "华为预测2035年Token消耗增10万倍；极狐阿尔法T7上市1小时锁单超3万台；平陆运河建成通航。",
     "sections": [
       {
         "key": "intl_tech",
@@ -21,7 +21,7 @@
         "items": [
           {
             "title": "谷歌Pixel手机遭零日攻击",
-            "summary": "谷歌称部分Pixel用户遭零日攻击，调制解调器漏洞或正被有限定向利用。",
+            "summary": "谷歌称部分Pixel用户遭零日攻击，调制解调器漏洞或被有限定向利用。",
             "source": "TechCrunch",
             "url": "https://techcrunch.com/2026/09/16/google-says-some-pixel-phone-owners-were-hacked-in-zero-day-attacks/",
             "title_original": "Google says some Pixel phone owners were hacked in zero-day attacks",
@@ -38,7 +38,7 @@
             "is_foreign": true
           },
           {
-            "title": "SK海力士洽谈在美建内存芯片厂",
+            "title": "SK海力士洽谈在美建内存厂",
             "summary": "SK海力士据报与英特尔洽谈在美生产内存芯片，称尚未敲定任何计划。",
             "source": "TechCrunch",
             "url": "https://techcrunch.com/2026/09/16/sk-hynix-reportedly-in-talks-with-intel-to-build-memory-chips-in-us/",
@@ -47,8 +47,8 @@
             "is_foreign": true
           },
           {
-            "title": "亚马逊为员工时薪上调1美元",
-            "summary": "亚马逊为员工时薪上调1美元，投资超15亿美元，约占其市值0.06%。",
+            "title": "亚马逊为员工时薪涨1美元",
+            "summary": "亚马逊宣布为员工时薪上调1美元，投资规模超15亿美元。",
             "source": "TechCrunch",
             "url": "https://techcrunch.com/2026/09/16/amazon-gives-its-workers-a-raise-of-1-per-hour/",
             "title_original": "Amazon gives its workers a raise of $1 per hour",
@@ -57,7 +57,7 @@
           },
           {
             "title": "Threads新增播客推广功能",
-            "summary": "Threads推出个人资料卡、剧集链接、文字稿、嘉宾标签等播客推广工具。",
+            "summary": "Meta旗下Threads推出个人资料卡、单集链接、文字稿等播客推广工具。",
             "source": "TechCrunch",
             "url": "https://techcrunch.com/2026/09/16/threads-new-features-let-podcasters-promote-shows-and-reach-listeners/",
             "title_original": "Threads’ new features let podcasters promote shows and reach listeners",
@@ -65,8 +65,17 @@
             "is_foreign": true
           },
           {
-            "title": "前Infosys高管AI初创再融5300万",
-            "summary": "前Infosys首席执行官的AI初创公司再获5300万美元，数月内签多份七位数企业合同。",
+            "title": "英伟达谈机器人ChatGPT时刻",
+            "summary": "英伟达Les Karpas在TechCrunch Disrupt 2026解释机器人业为何仍在等待突破。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/16/robots-are-waiting-for-a-chatgpt-moment-nvidias-les-karpas-explains-why-at-techcrunch-disrupt-2026/",
+            "title_original": "Robots are waiting for a ChatGPT moment: Nvidia’s Les Karpas explains why at TechCrunch Disrupt 2026",
+            "excerpt": "The robotics industry is still waiting for their breakthrough into day-to-day life. Nvidia's Les Karpas has an answer as to why at TechCrunch Disrupt 2026. Register before September 25 to save up to $200 on your pass.",
+            "is_foreign": true
+          },
+          {
+            "title": "前印孚瑟斯CEO AI创企再融资",
+            "summary": "前印孚瑟斯CEO的AI初创公司再获5300万美元，称已签多份七位数企业合同。",
             "source": "TechCrunch",
             "url": "https://techcrunch.com/2026/09/16/former-infosys-chiefs-ai-startup-adds-50m-to-seed-weeks-after-initial-raise/",
             "title_original": "Former Infosys chief’s AI startup nabs another $53M",
@@ -74,21 +83,12 @@
             "is_foreign": true
           },
           {
-            "title": "Fluxnium可从海水提取铀",
-            "summary": "清洁技术初创Fluxnium用纤维从海水直接提取铀，称可供数千年核燃料。",
+            "title": "Fluxnium从海水中提取铀",
+            "summary": "清洁技术初创Fluxnium称其纤维可从海水直接提取铀，储量可供数千年。",
             "source": "TechCrunch",
             "url": "https://techcrunch.com/2026/09/16/clean-tech-startup-fluxnium-found-a-way-to-tap-50000-years-worth-of-nuclear-fuel/",
             "title_original": "Clean tech startup Fluxnium found a way to tap 50,000 years’ worth of nuclear fuel",
             "excerpt": "Fluxnium's fibers can extract uranium directly from seawater, which has enough of the nuclear fuel to power thousands of generations.",
-            "is_foreign": true
-          },
-          {
-            "title": "AI约会应用诈骗涌现",
-            "summary": "安全研究员分析欺诈约会应用Dora时，收到AI生成的虚假来电与个人资料。",
-            "source": "The Verge",
-            "url": "https://www.theverge.com/ai-artificial-intelligence/995348/ai-dating-app-scams",
-            "title_original": "The sexy AI-powered dating app scams are here",
-            "excerpt": "Security researcher Matthew \"Zigula\" Gore-Kormanik was analyzing a fraudulent dating app called Dora when he got a pop-up message saying he was receiving a call from Jennifer. According to her bio, she's a 41-year-old Sagittarius with red hair, blue eyes, and piercings. She likes music, horror movies, nightlife, and s…",
             "is_foreign": true
           }
         ]
@@ -110,6 +110,24 @@
             "is_foreign": false
           },
           {
+            "title": "极狐阿尔法T7上市1小时锁单超3万台",
+            "summary": "极狐阿尔法T7大五座SUV上市，补贴价13.28万元起，1小时大定锁单超3万台。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/323.htm",
+            "title_original": "极狐阿尔法 T7 大五座 SUV 上市 1 小时大定锁单超 3 万台，新车上市补贴价 13.28 万元起",
+            "excerpt": "IT之家 9 月 16 日消息， 极狐阿尔法 T7 大五座 SUV 今日正式上市 ，提供增程、纯电两种动力，部分型号搭载华为乾崑智驾 ADS 5 Pro，全系标配宁德时代电池， 上市补贴价 13.28 万元起 。 IT之家注意到，极狐官方刚刚宣布， 极狐阿尔法 T7 上市 1 小时，大定锁单超过 30,000 台 。 新车搭载全球首款 5G 4nm 车规级芯片，以及 1.1 米超宽全景 P-HUD，支持导航、驾驶、娱乐个性化组合；全系采用宁德时代品牌电芯，纯电版搭载 84.8kWh 电池包，增程版标配 43.9kWh 高集成磷酸铁锂电池包。 极狐阿尔法 T7 首搭华为乾崑智驾 ADS 5 Pro 智能辅助驾驶系统，配备隐藏式激光雷…",
+            "is_foreign": false
+          },
+          {
+            "title": "全新一汽红旗H7上市",
+            "summary": "全新红旗H7上市，限时置换价16.88万起，以2916.171公里续航获吉尼斯纪录。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/317.htm",
+            "title_original": "全新一汽红旗 H7 上市：限时 16.88 万-20.88 万元，2916.171 公里续航刷新吉尼斯纪录",
+            "excerpt": "IT之家 9 月 16 日消息，全新一汽红旗 H7 今天（16 日）正式上市，新车提供插混动力，共有 3 款不同配置，官方指导价区间为 19.18 万-23.18 万元，限时置换价区间为 16.88 万-20.88 万元。 180 智混版：官方指导价 19.18 万元，限时置换价 16.88 万元 240 智混版：官方指导价 20.68 万元，限时置换价 18.38 万元 210 四驱智混版：官方指导价 23.18 万元，限时置换价 20.88 万元 官方介绍，全新红旗 H7 凭借量产插电混动轿车身份，以 2916.171km 的续航里程 ，成功斩获“驾驶插电混动量产轿车 满油满电零补能行驶最远距离 ”吉尼斯世界纪录称号，并成为吉…",
+            "is_foreign": false
+          },
+          {
             "title": "微软AI负责人批评Anthropic",
             "summary": "微软AI负责人苏莱曼警告Anthropic让Claude模仿人类意识是错误，或使AI更难控制。",
             "source": "IT之家",
@@ -120,7 +138,7 @@
           },
           {
             "title": "诺和诺德与Anthropic合作研发新药",
-            "summary": "诺和诺德与Anthropic合作，用Claude大模型加速新药发现与研发。",
+            "summary": "诺和诺德宣布与Anthropic合作，用Claude大模型加速新药发现与研发。",
             "source": "IT之家",
             "url": "https://www.ithome.com/1/003/311.htm",
             "title_original": "诺和诺德与 Anthropic 达成合作，用 Claude 大模型加速新药研发",
@@ -128,35 +146,17 @@
             "is_foreign": false
           },
           {
-            "title": "零跑发布CTC 3.0电池及混动电驱",
-            "summary": "零跑发布CTC 3.0高低压融合电池及MM-i多模混动电驱，正式入局插混赛道。",
+            "title": "吉利星瑞L PLUS启动预售",
+            "summary": "吉利星瑞L PLUS i-HEV启动预售，限时售价11.57万至14.57万元。",
             "source": "IT之家",
-            "url": "https://www.ithome.com/1/003/308.htm",
-            "title_original": "零跑推出 MM-i 多模混动电驱及 CTC 3.0 高低压融合电池，正式入局插混赛道",
-            "excerpt": "IT之家 9 月 16 日消息，在今天（16 日）晚间的零跑 2026 年度技术发布会上，零跑发布了 CTC 3.0 高低压融合电池及 MM-i 多模混动电驱。这标志着零跑正式进入插混赛道，完成 纯电＋增程＋插混 的全动力布局。 IT之家汇总两款产品主要信息如下： MM-i 多模混动电驱 该电驱采用发电机复用及小型电磁离合器设计，电驱重量 106kg，相比同级产品轻了 40%；系统峰值功率 206kW，相比同级产品高 28%；双电机协同实现全链路低能耗，高速综合油耗低 20%，发电效率 94.4% 号称行业最高，兼具增程、插混的优势。 CTC 3.0 高低压融合电池 其采用高低压电池集成一体化设计，取消了原本外置、数年需更换一次的…",
+            "url": "https://www.ithome.com/1/003/322.htm",
+            "title_original": "吉利星瑞 L PLUS i-HEV 启动预售：定位宽体旗舰智混家轿，限时 11.57 万-14.57 万元",
+            "excerpt": "IT之家 9 月 16 日消息，吉利星瑞 L PLUS i-HEV 今天（16 日）晚间正式启动预售，新车定位为宽体旗舰智混家轿，提供 4 款不同配置，指导价区间为 12.57 万-15.57 万元，限时售价在此基础上减去 1 万元。 该车整体延续家族式设计风格，搭载标志性粼光水韵前格栅，由 31 根竖向镀铬饰条排布而成，下方雾灯区域采用延展飞翼式金属装饰面，增加精致气息。新车长宽高分别为 4956mm/1915mm/1505mm，轴距 2845mm。 内外饰配色上，新车提供 枫林丹红、秋水长蓝、暮山紫灰、长天烁银、清秋玉白、远山凝墨 6 款车漆，以及米色、黑色（IT之家注：又分为皮质、麂皮）共 3 款内饰。 新车搭载前麦弗逊 +…",
             "is_foreign": false
           },
           {
-            "title": "全新奥迪A6L到店搭载华为智驾",
-            "summary": "全新奥迪A6L到店，搭载华为乾崑智驾，支持全国城区领航辅助，选装价26800元。",
-            "source": "IT之家",
-            "url": "https://www.ithome.com/1/003/307.htm",
-            "title_original": "全新奥迪 A6L 官宣到店：搭载华为乾崑智驾技术，支持全国城区领航辅助功能",
-            "excerpt": "IT之家 9 月 16 日消息，华为智能汽车解决方案 BU 官方微博今日宣布，全新奥迪 A6L 现已到店。 该车搭载华为乾崑智驾技术，支持全国城区领航辅助 ，可实现红绿灯路口自主启停、复杂路况通过等功能。 今年 6 月，奥迪官方揭晓了全新奥迪 A6L 汽车的华为乾崑智驾功能价格： 装备价格 26800 元，限时优惠至高 6000 元 。 IT之家查询获悉，全新奥迪 A6L 搭载 33 颗传感器组成的灵眸全域感知系统，全车 9 处传感器配备自动清洗功能、2 处激光雷达更额外搭载自动加热功能。 据介绍，奥迪高级巡航辅助支持城区、高速 NOA 智慧领航，在城市复杂路段能判断信号灯及实时路况，实现辅助变道超车、路口通行、掉头等操作，长途出…",
-            "is_foreign": false
-          },
-          {
-            "title": "全新红旗H7上市",
-            "summary": "全新一汽红旗H7上市，限时16.88万起，以2916.171公里续航刷新吉尼斯纪录。",
-            "source": "IT之家",
-            "url": "https://www.ithome.com/1/003/317.htm",
-            "title_original": "全新一汽红旗 H7 上市：限时 16.88 万-20.88 万元，2916.171 公里续航刷新吉尼斯纪录",
-            "excerpt": "IT之家 9 月 16 日消息，全新一汽红旗 H7 今天（16 日）正式上市，新车提供插混动力，共有 3 款不同配置，官方指导价区间为 19.18 万-23.18 万元，限时置换价区间为 16.88 万-20.88 万元。 180 智混版：官方指导价 19.18 万元，限时置换价 16.88 万元 240 智混版：官方指导价 20.68 万元，限时置换价 18.38 万元 210 四驱智混版：官方指导价 23.18 万元，限时置换价 20.88 万元 官方介绍，全新红旗 H7 凭借量产插电混动轿车身份，以 2916.171km 的续航里程 ，成功斩获“驾驶插电混动量产轿车 满油满电零补能行驶最远距离 ”吉尼斯世界纪录称号，并成为吉…",
-            "is_foreign": false
-          },
-          {
-            "title": "八达通上线华为鸿蒙手机钱包",
-            "summary": "八达通陆续上线HarmonyOS 6.1.0.135 SP8及以上华为手机钱包，各机型逐步放量。",
+            "title": "八达通上线华为手机钱包",
+            "summary": "八达通陆续上线HarmonyOS 6.1.0.135 SP8及以上版本华为手机钱包，各机型逐步放量。",
             "source": "IT之家",
             "url": "https://www.ithome.com/1/003/319.htm",
             "title_original": "消息称八达通陆续上线 HarmonyOS 6.1.0.135 SP8 及以上版本华为手机钱包，各机型逐步放量",
@@ -164,12 +164,12 @@
             "is_foreign": false
           },
           {
-            "title": "ZDTaichu5.0-9B开源",
-            "summary": "国产空间具身智能模型ZDTaichu5.0-9B开源，九大空间测试中8项第一。",
-            "source": "量子位",
-            "url": "https://www.qbitai.com/2026/09/490839.html",
-            "title_original": "通用能力不打折，空间具身智能断层领先！ZDTaichu5.0-9B国产开源，跻身全球多模态第一梯队",
-            "excerpt": "九大空间测试10B规模通用模型中8项第一",
+            "title": "苹果iPhone Duo不支持微信平板模式",
+            "summary": "消息称苹果折叠屏iPhone Duo暂不支持微信平板模式，无法双设备登录同一账号。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/318.htm",
+            "title_original": "消息称苹果 iPhone Duo 暂不支持微信平板模式，无法实现双设备登录同一账号",
+            "excerpt": "IT之家 9 月 16 日消息，苹果于 9 月 10 日 发布了旗下首款折叠屏手机 iPhone Duo ，定价 15,999 元起，国行 10 月 16 日晚 8 点接受预购，10 月 23 日发售。 ▲ IT之家现场实拍：苹果 iPhone Duo 关于大家都很关心的“iPhone Duo 是否支持平板模式登录微信”这一问题。据影视飓风 Tim 分享，这款机型当前不支持该功能。 这意味着现阶段用户买到 iPhone Duo 后，无法通过平板模式实现双设备登录同一微信账号 。 此外，iPhone Duo 也不支持双开应用、不支持同时刷两个视频（仅支持在 App 里放一个视频）、不支持内屏和外屏同时录屏、不支持外屏和内屏用不同壁纸…",
             "is_foreign": false
           }
         ]
@@ -199,8 +199,8 @@
             "is_foreign": false
           },
           {
-            "title": "空客天津第二条总装线首架交付",
-            "summary": "空客天津第二条总装线交付首架飞机，扩大在华产能以服务中国市场。",
+            "title": "空客在华第二条总装线首架交付",
+            "summary": "空客天津第二条总装线交付首架飞机，公司称借此扩大中国产能。",
             "source": "中新网财经",
             "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697907.shtml",
             "title_original": "（投资中国）空客在华第二条总装线首架飞机交付：进一步扩大中国产能",
@@ -208,21 +208,21 @@
             "is_foreign": false
           },
           {
-            "title": "财富世界500强论坛广州开幕",
-            "summary": "2026年《财富》世界500强论坛在广州开幕，围绕“增长的新方程式”展开讨论。",
-            "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697916.shtml",
-            "title_original": "2026年《财富》世界500强论坛广州开幕",
-            "excerpt": "中新网广州9月16日电 (记者 王坚)2026年《财富》世界500强论坛16日在广州开幕。围绕“增长的新方程式”，来自全球头部企业、重点投资机构及知名研究机构的嘉宾齐聚花城，展开讨论。",
-            "is_foreign": false
-          },
-          {
             "title": "惠州储能柜装船出海",
-            "summary": "惠州本地制造的一批锂电池储能柜在惠州国际集装箱码头装船出海。",
+            "summary": "一批惠州本地制造的锂电池储能柜在惠州国际集装箱码头装船出海。",
             "source": "中新网财经",
             "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697894.shtml",
             "title_original": "“惠州智造”再出海 惠州港一批储能柜顺利装船出运",
             "excerpt": "中新网惠州9月16日电 (记者 郭军)9月15日，一批惠州本地制造的锂电池储能柜在惠州国际集装箱码头顺利装船出海，进一步畅通惠州新能源外贸出海通道，助力“惠州智造”深耕国际市场。",
+            "is_foreign": false
+          },
+          {
+            "title": "财富世界500强论坛广州开幕",
+            "summary": "2026年《财富》世界500强论坛在广州开幕，主题为“增长的新方程式”。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697916.shtml",
+            "title_original": "2026年《财富》世界500强论坛广州开幕",
+            "excerpt": "中新网广州9月16日电 (记者 王坚)2026年《财富》世界500强论坛16日在广州开幕。围绕“增长的新方程式”，来自全球头部企业、重点投资机构及知名研究机构的嘉宾齐聚花城，展开讨论。",
             "is_foreign": false
           },
           {
@@ -244,21 +244,21 @@
             "is_foreign": false
           },
           {
-            "title": "厦航携樟宜机场西宁推介",
-            "summary": "厦航联合新加坡樟宜机场在西宁推介，推出定制中转方案，抓住中新互免签证机遇。",
-            "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697856.shtml",
-            "title_original": "厦航携新加坡樟宜机场西宁推介",
-            "excerpt": "中新网西宁9月16日电 (记者 孙睿)9月16日下午，厦门航空联合新加坡樟宜机场在西宁举办旅游推介会。针对青海暂无直飞新加坡航班的现状，双方推出定制中转出行方案，抓住中新互免签证机遇，为西北民众赴新加坡出游减负，同时搭建两地双向文旅往来渠道。",
+            "title": "派克反AI创意广告出圈",
+            "summary": "派克钢笔将网友反AI主题创意做成户外广告，活动收到超350份投稿。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/377894.html",
+            "title_original": "项目频道 - 网友写文案，派克来买单！这场反AI创意出圈了",
+            "excerpt": "派克（Parker）是世界知名钢笔品牌。 凭借精湛工艺，派克钢笔长久以来都是书写工具领域的经典代表。近期，一场源自LinkedIn民间创意的广告挑战赛意外出圈，并一路从线上创意走到了线下，最终变成了派克的反AI主题户外广告。 这场活动的起点，是自由文案策划Kushagra Oberoi自发创作的一支派克钢笔广告创意。他提出“一款不会剥夺地球水资源的创意生成工具”的文案，巧妙抓住AI大模型数据中心高耗水的行业痛点，将钢笔和AI生成工具放在对立维度，把书写工具重新定义为人的原创灵感载体。 创意在社交平台迅速走红后，主办方发起了一场面向全球创意人的公开征集，邀请大家为派克创作一张反AI主题的广告牌海报。 活动最终收到了超过350份投稿，…",
             "is_foreign": false
           },
           {
-            "title": "创客中国山东区域赛收官",
-            "summary": "第十一届“创客中国”山东省区域赛、商业航天专题赛收官，72个项目脱颖而出。",
-            "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697855.shtml",
-            "title_original": "第十一届“创客中国”山东省区域赛、专题赛收官",
-            "excerpt": "中新网济南9月16日电 (孙倩)第十一届“创客中国”山东省区域赛、商业航天专题赛颁奖典礼16日在济南举办。本届大赛参赛项目更加聚焦前沿技术和未来产业，经过初赛、复赛、决赛的层层选拔，72个优秀项目脱颖而出。",
+            "title": "三九胃泰广告引争议",
+            "summary": "三九胃泰“中秋别团圆”电梯广告因文案被指易误读而引发争议。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1583161.html",
+            "title_original": "文章频道 - 三九胃泰广告惹争议，给广告人提了个醒",
+            "excerpt": "求“你们”中秋别团圆了。 广告环境确实更难了。 早上刷到个网友吐槽， #这广告词也能过审？ 下面是一张电梯广告 三九胃泰求“你们”中秋别团圆了 右下角还有三个字： “掀开看” 等真正把海报掀开，或者留意到左下角的小字，才会发现它想说的是另一回事： “一家人过节要整整齐齐。 但有些食物在胃里团圆，对胃可不好。” 大意很好理解。中秋讲“团圆”，三九胃泰把“团圆”从一家人挪到了胃里，用食物扎堆、吃得太杂这件事做了一个双关。 如果顺着广告预设的阅读路径走，这个梗其实很完整。先被一句反常识的话勾住，再掀开寻找答案，最后发现原来品牌说的是“胃里的团圆”。 问题恰恰出在，今天的广告很少能完整按照创意人的预设路径传播。 这张海报被拍下来传到小红书…",
             "is_foreign": false
           }
         ]
@@ -271,107 +271,105 @@
         "desc": "过去 24 小时活跃的开源项目",
         "items": [
           {
-            "title": "Chuloo/mural",
-            "url": "https://github.com/Chuloo/mural",
-            "intro": "对着一个会说话的小圆球聊天来学外语的手机应用，学习记录只存在你自己手机里。",
+            "title": "ai-sucks-butt/ai-sucks-butt",
+            "url": "https://github.com/ai-sucks-butt/ai-sucks-butt",
+            "intro": "一个表达对 AI 不满的仓库，觉得 AI 不行就点个星。",
             "features": [
-              "用对话方式练习外语，说错了它会调整难度",
-              "支持八种语言模块，语音和打字都行",
-              "学习记录留在本机，可导出备份文件"
+              "用点星表达对 AI 的态度"
             ],
-            "guide": "iPhone 版需要 Mac 电脑、Xcode 和 iOS 26.1 以上系统；安卓版需要 Java 17 和安卓开发工具。两种方式都要自备 OpenAI 的付费 API 密钥，没有账号也能用。",
-            "install": "cd apps/android\n./gradlew :app:testDebugUnitTest :app:lintDebug :app:assembleDebug",
-            "summary": "对着一个会说话的小圆球聊天来学外语的手机应用，学习记录只存在你自己手机里。",
+            "guide": "没有实际功能，打开 GitHub 页面点星即可，不需要安装任何东西。",
+            "install": "",
+            "summary": "一个表达对 AI 不满的仓库，觉得 AI 不行就点个星。",
             "source": "GitHub",
-            "stars": "1186",
-            "language": "Kotlin",
+            "stars": "1037",
+            "language": "Python",
             "is_new": true,
             "title_original": "",
-            "excerpt": "The language app you eventually delete. A native iPhone companion for learning through conversation.",
+            "excerpt": "If you think AI sucks, star the repo.",
             "is_foreign": true
           },
           {
-            "title": "lnkiai/m3e-canvas",
-            "url": "https://github.com/lnkiai/m3e-canvas",
-            "intro": "在浏览器里拖拖拽拽画出手机界面草图，再一键变成给 AI 写代码用的提示词。",
+            "title": "MengTo/threeui",
+            "url": "https://github.com/MengTo/threeui",
+            "intro": "一个免费开源的网页界面组件库，能直接看效果、抄代码。",
             "features": [
-              "拖拽按钮、卡片等零件拼出手机界面",
-              "把两个按钮靠近会自动连成一组",
-              "画完复制提示词，粘给 AI 编程工具生成应用"
+              "浏览现成的界面组件和实时效果",
+              "免登录直接查看和复制源码",
+              "支持搜索、主题切换和响应式布局"
             ],
-            "guide": "打开网页就能用，不用装任何东西。画好界面后复制提示词，粘贴到 Claude Code、Cursor 等 AI 编程工具里让它生成应用。",
+            "guide": "直接打开官网 threeui.com 就能在线浏览组件和源码，无需安装或注册。",
             "install": "",
-            "summary": "在浏览器里拖拖拽拽画出手机界面草图，再一键变成给 AI 写代码用的提示词。",
+            "summary": "一个免费开源的网页界面组件库，能直接看效果、抄代码。",
             "source": "GitHub",
-            "stars": "7080",
-            "language": "TypeScript",
+            "stars": "5850",
+            "language": "HTML",
             "is_new": true,
             "title_original": "",
-            "excerpt": "Sketch Material 3 Expressive screens in the browser and turn them into vibe-coding prompts.",
+            "excerpt": "Open-source ThreeUI Community catalog with live interactive components and complete Community source.",
             "is_foreign": true
           },
           {
-            "title": "ShareX/ShareX",
-            "url": "https://github.com/ShareX/ShareX",
-            "intro": "Windows 上按一个键就能截屏、录屏、传文件并自动生成分享链接的免费工具。",
+            "title": "DayuanJiang/next-ai-draw-io",
+            "url": "https://github.com/DayuanJiang/next-ai-draw-io",
+            "intro": "用聊天的方式让 AI 帮你画流程图和架构图，不用手动拖拽。",
             "features": [
-              "一键截取屏幕任意区域或录成视频、动图",
-              "截图后可直接标注、取色、识别文字和二维码",
-              "自动把图片文件传到网盘并复制分享链接"
+              "用自然语言描述就能生成图表",
+              "在已有图表上继续对话修改",
+              "支持多种 AI 模型切换"
             ],
-            "guide": "只支持 Windows，去官网下载安装包双击安装即可，不需要注册账号，装完设置好快捷键就能用。",
+            "guide": "可以直接用官网在线版，也能本地跑或装桌面版；本地运行需要 Node 环境，并准备一个 AI 服务的 API Key。",
             "install": "",
-            "summary": "Windows 上按一个键就能截屏、录屏、传文件并自动生成分享链接的免费工具。",
+            "summary": "用聊天的方式让 AI 帮你画流程图和架构图，不用手动拖拽。",
             "source": "GitHub",
-            "stars": "39595",
-            "language": "C#",
-            "is_new": false,
-            "title_original": "",
-            "excerpt": "ShareX is a free and open-source application that enables users to capture or record any area of their screen with a single keystroke. It also supports uploading images, text, and various file types to a wide range of d…",
-            "is_foreign": true
-          },
-          {
-            "title": "openclaw/openclaw",
-            "url": "https://github.com/openclaw/openclaw",
-            "intro": "装在自己电脑上的 AI 助手，能在微信、Slack 等你常用的聊天软件里直接使唤它。",
-            "features": [
-              "在 Discord、Telegram 等二十多个聊天软件里对话",
-              "记忆和账号信息都存在自己电脑上",
-              "可换用不同 AI 模型，也能多人共用一套"
-            ],
-            "guide": "macOS、Linux、Windows 都能装，安装脚本会自动准备好运行环境。装好后在电脑上跑起来，再连上你常用的聊天软件即可。",
-            "install": "curl -fsSL https://openclaw.ai/install.sh | bash",
-            "summary": "装在自己电脑上的 AI 助手，能在微信、Slack 等你常用的聊天软件里直接使唤它。",
-            "source": "GitHub",
-            "stars": "389842",
+            "stars": "35891",
             "language": "TypeScript",
             "is_new": false,
             "title_original": "",
-            "excerpt": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
+            "excerpt": "A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.",
             "is_foreign": true
           },
           {
-            "title": "obra/superpowers",
-            "url": "https://github.com/obra/superpowers",
-            "intro": "给 AI 编程助手立规矩的一套方法，让它先问清需求再动手写代码，而不是上来就乱写。",
+            "title": "affaan-m/ECC",
+            "url": "https://github.com/affaan-m/ECC",
+            "intro": "给 AI 编程助手加装记忆、技能和安全检查的增强工具。",
             "features": [
-              "让 AI 先跟你确认需求，再分块给你看方案",
-              "生成连新手都能照着做的开发计划",
-              "支持 Claude Code、Cursor 等多种编程工具"
+              "让 AI 助手记住项目里的经验",
+              "给 AI 助手加装可复用的技能",
+              "为 AI 编程流程增加安全防护"
             ],
-            "guide": "先装好你常用的 AI 编程工具（如 Claude Code、Cursor），再按 README 里对应工具的说明把技能包装进去，之后正常使用该工具即可。",
+            "guide": "主要通过 Claude Code 的插件方式安装，官方也提供 npm 包；需要先有 Claude Code 等 AI 编程工具环境。",
             "install": "",
-            "summary": "给 AI 编程助手立规矩的一套方法，让它先问清需求再动手写代码，而不是上来就乱写。",
+            "summary": "给 AI 编程助手加装记忆、技能和安全检查的增强工具。",
             "source": "GitHub",
-            "stars": "287504",
-            "language": "Shell",
+            "stars": "259831",
+            "language": "JavaScript",
             "is_new": false,
             "title_original": "",
-            "excerpt": "An agentic skills framework & software development methodology that works.",
+            "excerpt": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "is_foreign": true
+          },
+          {
+            "title": "NousResearch/hermes-agent",
+            "url": "https://github.com/NousResearch/hermes-agent",
+            "intro": "一个会自己积累经验、越用越懂你的 AI 助手，能跑在云端。",
+            "features": [
+              "从做事中自己总结出新技能",
+              "记住你说过的话和偏好",
+              "在 Telegram 等聊天软件里指挥它干活"
+            ],
+            "guide": "可以跑在便宜的云服务器或本地，通过终端或聊天软件使用；需要自备 AI 模型的接口，支持多种模型自由切换。",
+            "install": "",
+            "summary": "一个会自己积累经验、越用越懂你的 AI 助手，能跑在云端。",
+            "source": "GitHub",
+            "stars": "246078",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The agent that grows with you",
             "is_foreign": true
           }
         ],
-        "lead": "让 AI 帮你学语言、画界面、写代码、管电脑，普通人也能上手。"
+        "lead": "让 AI 帮你画图、写代码、管记忆，还有对 AI 说不的声音。"
       }
     ]
   }
