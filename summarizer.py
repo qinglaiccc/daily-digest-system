@@ -403,7 +403,7 @@ def build_github_user_prompt(repos_payload: List[Dict[str, Any]], report_date: d
                     "核心功能亮点 3",
                 ],
                 "guide": "应用与部署指南：普通人该怎么用起来。1-2 句话，说清前置条件（要不要装 Node/Docker/Python）和大致步骤，80 字以内",
-                "install": "从 README 原文摘出的安装或运行命令，单行；README 里没有就留空字符串",
+                "install": "从 README 原文摘出的安装或运行命令，单行；确实找不到任何命令才留空",
             }
         ],
     }
@@ -441,8 +441,10 @@ def build_github_user_prompt(repos_payload: List[Dict[str, Any]], report_date: d
    要回答普通人最关心的：这东西怎么用起来？需要先装什么（Node / Docker / Python）？
    是在网页上用、本地跑、还是装成 App？有没有必须的前置条件（比如要申请 API Key）？
 
-4. **install（一键命令）** —— 单行命令，**必须逐字来自 README**。
-   只填最直接的那一条（安装或启动命令）。README 里没有明确命令就填空字符串 ""。
+4. **install（一键命令）** —— 单行，**必须逐字来自 README**。
+   README 里通常有 Installation / Quick Start / Getting Started / 安装 / 快速开始 这类章节，
+   **请主动去定位并摘出其中最先出现的那条可执行命令**（安装或启动命令），不要因为没明说就跳过。
+   只有确实通篇找不到任何可执行命令时（例如纯在线服务、纯文档项目）才留空字符串 ""。
 
 【覆盖要求】{len(repos_payload)} 个项目就要输出 {len(repos_payload)} 条，顺序与下面的素材保持一致。
 只有在完全无法判断某个项目是做什么的（连 intro 都写不出来）时才允许省略，

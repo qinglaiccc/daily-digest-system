@@ -658,6 +658,12 @@ def _is_relevant_repo(repo: RepoItem) -> bool:
         if bad in blob:
             logger.debug("按关键词排除：%s（命中 %s）", repo.full_name, bad)
             return False
+
+    # 零 topic 的仓库多半是低投入或玩票项目（见 config 里的说明）
+    if config.GITHUB_REQUIRE_TOPICS and not repo.topics:
+        logger.debug("排除零 topic 仓库：%s", repo.full_name)
+        return False
+
     return True
 
 

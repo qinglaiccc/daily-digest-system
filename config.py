@@ -460,6 +460,16 @@ GITHUB_CLASSIC_POOL_MAX_AGE_DAYS = int(os.getenv("GITHUB_CLASSIC_POOL_MAX_AGE_DA
 # 记住最近推荐过多少个「趋势」项目，下次优先避开，保证每日不重样
 GITHUB_RECENT_MEMORY = int(os.getenv("GITHUB_RECENT_MEMORY", "40"))
 
+# 要求仓库至少打了一个 topic。
+# 依据：实测混进来过一个叫 ai-sucks-butt 的抗议型仓库（"觉得 AI 不行就点个星"），
+# 它有 Python 语言标记所以按语言过滤拦不住，但它是**零 topic**的；
+# 而同期 6 个真工具（threeui / next-ai-draw-io / ECC / hermes-agent / mural / m3e-canvas）
+# 全都有 topic。认真做的项目基本都会给自己打标签，零 topic 常是低投入或玩票项目。
+# 觉得误伤太多可以设成 false 关掉。
+GITHUB_REQUIRE_TOPICS = os.getenv("GITHUB_REQUIRE_TOPICS", "true").lower() not in (
+    "0", "false", "no",
+)
+
 # 轮播游标状态文件。放在 archive/ 下，会被 Actions 的存档回写步骤一起提交进仓库，
 # 于是状态自然持久化，不依赖任何外部存储。
 GITHUB_STATE_FILE = ARCHIVE_DIR / "github_offset.json"

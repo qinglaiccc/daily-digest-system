@@ -1,5 +1,5 @@
 {
-  "classic_offset": 4,
+  "classic_offset": 6,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -140,12 +140,15 @@
     "ShareX/ShareX",
     "ai-sucks-butt/ai-sucks-butt",
     "MengTo/threeui",
-    "DayuanJiang/next-ai-draw-io"
+    "DayuanJiang/next-ai-draw-io",
+    "sumimakito/Mac-Duo",
+    "s1dashu/ip-as-logo-skill",
+    "feder-cr/AIHawk"
   ],
   "last_run_date": "2026-09-16",
   "last_classic": [
-    "affaan-m/ECC",
-    "NousResearch/hermes-agent"
+    "n8n-io/n8n",
+    "tensorflow/tensorflow"
   ],
-  "updated_at": "2026-09-16T15:03:39.186049+00:00"
+  "updated_at": "2026-09-16T15:13:17.233412+00:00"
 }

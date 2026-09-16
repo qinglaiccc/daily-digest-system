@@ -82,6 +82,13 @@ created:2026-08-17 .. 2026-09-09           // ✗ 带空格返回 0 条
 已换成确实有内容的 `developer-tools`。**新增 topic 后务必先验证**：
 `topic:<名字> stars:>=8000` 能不能查出东西。
 
+**4. 玩票/抗议型仓库会挤进趋势桶。**
+实测混进来过一个 `ai-sucks-butt/ai-sucks-butt`（README 写"觉得 AI 不行就点个星"），
+它甚至有 Python 语言标记，按语言拦不住；但它是**零 topic** 的，
+而同期 6 个真工具（threeui / next-ai-draw-io / ECC / hermes-agent / mural / m3e-canvas）全都有 topic。
+所以加了「至少一个 topic」的要求 —— 认真做的项目基本都会给自己打标签。
+觉得误伤太多可以设 `GITHUB_REQUIRE_TOPICS=false` 关掉。
+
 另外，精选清单（`awesome-*`）、教程课程（`*for-beginners`、`*-course`）、
 面试题库这类仓库星数极高、topics 又常打 `ai`/`productivity`，
 不拦会把整个板块占满。`config.py` 里有 29 条按仓库名的正则排除规则。
@@ -201,7 +208,7 @@ openclaw/openclaw                     389.7k stars · TypeScript
 ├── notifier.py                  # 邮件推送（标准库 smtplib + email.mime）
 ├── template.html                # 早报正文模板（Swiss 风格，自包含 CSS）
 ├── template_index.html          # 往期索引页模板
-├── selftest.py                  # 离线自检（204 项，无需密钥/联网）
+├── selftest.py                  # 离线自检（207 项，无需密钥/联网）
 ├── requirements.txt
 ├── .env                         # 本地密钥（已 gitignore，不会提交）
 ├── archive/                     # 往期存档 JSON —— 必须提交进仓库，是历史记录的数据源
@@ -402,7 +409,7 @@ RECEIVER_EMAIL=你的QQ号@qq.com   ← 收件地址，与自己相同即可
 python selftest.py
 ```
 
-204 项断言，**不需要 API Key，也不需要联网**，覆盖：
+207 项断言，**不需要 API Key，也不需要联网**，覆盖：
 
 - 文本清洗、URL 归一化
 - 防幻觉链接校验（编造链接必须被拒绝、标题回查、GitHub 路径归一）

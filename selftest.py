@@ -939,9 +939,19 @@ def test_github_daily_selection() -> None:
     import tempfile
 
     # ---- 1. 名称过滤规则 ----
-    def make(name: str, stars: int = 9999, desc: str = "a tool") -> fetcher.RepoItem:
+    def make(
+        name: str,
+        stars: int = 9999,
+        desc: str = "a tool",
+        topics: list | None = None,
+    ) -> fetcher.RepoItem:
         return fetcher.RepoItem(
-            full_name=name, url=f"https://github.com/{name}", description=desc, stars=stars
+            full_name=name,
+            url=f"https://github.com/{name}",
+            description=desc,
+            stars=stars,
+            # 默认给个 topic：现在零 topic 会被过滤掉（见下一个断言组）
+            topics=["ai"] if topics is None else topics,
         )
 
     for bad in (
@@ -960,6 +970,30 @@ def test_github_daily_selection() -> None:
         check(f"保留真工具：{good.split('/')[-1]}", fetcher._is_relevant_repo(make(good)))
 
     check("星数过低被排除", not fetcher._is_relevant_repo(make("a/b", stars=1)))
+
+    # ---- 零 topic 过滤（拦玩票/抗议型仓库）----
+    # 实测依据：曾混进来 ai-sucks-butt/ai-sucks-butt（"觉得 AI 不行就点个星"），
+    # 它有语言标记（Python）所以按语言拦不住，但零 topic；
+    # 而同期 6 个真工具全都有 topic。
+    check(
+        "零 topic 仓库被排除",
+        not fetcher._is_relevant_repo(make("ai-sucks-butt/ai-sucks-butt", topics=[])),
+    )
+    check(
+        "有 topic 的同类仓库保留",
+        fetcher._is_relevant_repo(make("MengTo/threeui", topics=["react", "threejs"])),
+    )
+
+    # 该规则可关闭
+    original_require = config.GITHUB_REQUIRE_TOPICS
+    try:
+        config.GITHUB_REQUIRE_TOPICS = False
+        check(
+            "关闭后不再要求 topic",
+            fetcher._is_relevant_repo(make("some/repo", topics=[])),
+        )
+    finally:
+        config.GITHUB_REQUIRE_TOPICS = original_require
 
     # ---- 2. 状态文件读写与容错 ----
     original_state = config.GITHUB_STATE_FILE
