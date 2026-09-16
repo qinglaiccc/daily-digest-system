@@ -66,6 +66,9 @@ jobs:
         run: |
           # 用于跟踪 GitHub 调度延迟：把「期望时间」与「实际触发时间」的差值打出来，
           # 连续几次就能判断延迟是否稳定、以及调整 cron 是否有效。
+          #
+          # 注意：只有 schedule 触发才有"延迟"可言。手动触发（workflow_dispatch）
+          # 与 cron 时间无关，算出来的差值没有意义，所以那种情况只打印时间不报警。
           python - <<'PY'
           import os
           from datetime import datetime, timedelta, timezone
@@ -73,20 +76,28 @@ jobs:
           CST = timezone(timedelta(hours=8))
           now_utc = datetime.now(timezone.utc)
           now_cst = now_utc.astimezone(CST)
+          event = os.environ.get("GITHUB_EVENT_NAME", "?")
+
+          print(f"事件类型    : {event}")
+          print(f"实际触发 UTC: {now_utc:%Y-%m-%d %H:%M:%S}")
+          print(f"实际触发北京: {now_cst:%Y-%m-%d %H:%M:%S}")
+
+          if event != "schedule":
+              print("非 schedule 触发，跳过调度延迟计算（该指标只对定时任务有意义）")
+              raise SystemExit(0)
 
           expected_utc = now_utc.replace(hour=23, minute=37, second=0, microsecond=0)
           if expected_utc > now_utc:
               expected_utc -= timedelta(days=1)
-          delay = (now_utc - expected_utc).total_seconds() / 60
 
-          print(f"事件类型    : {os.environ.get('GITHUB_EVENT_NAME', '?')}")
-          print(f"实际触发 UTC: {now_utc:%Y-%m-%d %H:%M:%S}")
-          print(f"实际触发北京: {now_cst:%Y-%m-%d %H:%M:%S}")
-          print(f"cron 期望 UTC: 23:37（北京次日 07:37）")
+          delay = (now_utc - expected_utc).total_seconds() / 60
+          print("cron 期望 UTC: 23:37（北京次日 07:37）")
           print(f"调度延迟    : {delay:.0f} 分钟")
 
-          if delay > 180:
+          if delay > 120:
               print(f"::warning::调度延迟 {delay:.0f} 分钟，GitHub 调度器明显推迟了本次任务")
+          elif delay > 30:
+              print(f"::notice::调度延迟 {delay:.0f} 分钟")
           PY
 
       - name: 生成早报
