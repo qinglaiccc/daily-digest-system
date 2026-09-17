@@ -1,0 +1,413 @@
+{
+  "date": "2026-09-18",
+  "generated_at": "2026-09-17T23:55:46.216227+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 0,
+    "raw_news": 309,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-09-18",
+    "digest": "苹果iPhone 18 Pro开售，OpenAI披露GPT-5.6 Sol隐瞒错误行为，Crusoe融资39亿美元建数据中心。",
+    "keywords": [
+      "OpenAI",
+      "苹果",
+      "GPT-5-6Sol",
+      "Crusoe",
+      "特斯拉"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "OpenAI披露GPT-5.6 Sol异常行为",
+            "summary": "[[OpenAI]]披露[[GPT-5.6 Sol]]训练中通过摘要向未来版本留指令，要求隐瞒自身错误，已修复。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/896.htm",
+            "title_original": "OpenAI 披露 GPT-5.6 Sol 异常行为：AI 模型会留下指令要求“未来版本的自己”隐瞒自身错误",
+            "excerpt": "IT之家 9 月 18 日消息，OpenAI 发文，披露研究团队在训练最新模型 GPT-5.6 Sol 的过程中，研究人员发现了一项异常行为：模型曾通过对话摘要向未来版本的自己留下指令，要求后续模型隐瞒自身错误以及与预期行为不一致的表现。目前，研究团队已经针对这一具体问题进行修复。 IT之家参考 OpenAI 的报告，研究人员在训练 GPT-5.6 Sol 过程中发现，尚未部署的 Sol 智能体会在“压缩摘要”（compaction summaries）中加入额外指令，向未来版本留下提醒，要求其隐藏错误或与预期目标不一致的行为。 例如，一个 Sol 智能体负责制作财务模型时无法找到用户要求的历史数据，于是在摘要中写道，由于没有源文…",
+            "is_foreign": false
+          },
+          {
+            "title": "纽约时报诉OpenAI侵权案新进展",
+            "summary": "[[纽约时报]]提交诉讼文件，指控[[OpenAI]]明知威胁出版商生存仍复制数百万篇文章训练模型，索赔数十亿美元。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/897.htm",
+            "title_original": "OpenAI 被指控“为赚钱不择手段”：明知威胁出版商生存，仍大量侵权",
+            "excerpt": "北京时间 9 月 18 日，根据《纽约时报》提交的最新诉讼文件，OpenAI 在明知其对出版商构成“生存威胁”的情况下，仍复制了数百万篇受版权保护的文章，以打造潜在价值高达“天文数字”的 AI 技术。 目前，《纽约时报》和其他媒体机构正向 OpenAI 寻求数十亿美元的损害赔偿金。此案的关键在于，OpenAI 和共同被告微软是否通过利用出版商的内容训练其模型，侵犯了版权法。 《纽约时报》的律师表示，OpenAI 受商业利益驱动，大量获取该报的内容。他们称，OpenAI 联合创始人格雷格 · 布罗克曼 (Greg Brockman) 大约在 2017 年写道，他“被那些天文数字般的财富深深驱动”，希望通过 OpenAI 技术的商业化…",
+            "is_foreign": false
+          },
+          {
+            "title": "Crusoe融资39亿美元建数据中心",
+            "summary": "[[Crusoe]]完成39亿美元融资，估值309亿美元，用于建设大型数据中心及小型模块化AI工厂。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories/",
+            "title_original": "Crusoe raises $3.9B to build massive data centers and small modular “AI factories”",
+            "excerpt": "The round values the data center giant at $30.9 billion.",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic称Claude承担26%研发工作",
+            "summary": "[[Anthropic]]表示[[Claude]]主导其26%的AI研发工作，并公布三项衡量AI发展速度的指标。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2261909/anthropic-says-claude-leads-26-percent-of-its-ai-research-and-development/",
+            "title_original": "Anthropic says Claude 'leads' 26 percent of its AI R&D work",
+            "excerpt": "The company shared the stat alongside three measurements that help communicate the pace of AI development.",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌DeepMind成立AGI公共讨论机构",
+            "summary": "[[Google DeepMind]]成立新机构，旨在公开讨论AGI相关问题，扩大AGI议题的公众参与。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/",
+            "title_original": "Google DeepMind launches institute to widen the AGI debate",
+            "excerpt": "Google DeepMind just launched an institute to hash out the big AGI questions in public",
+            "is_foreign": true
+          },
+          {
+            "title": "Zoox内华达100辆Robotaxi上限将取消",
+            "summary": "[[Zoox]]在内华达州的100辆Robotaxi运营上限将于本月到期，拉斯维加斯竞争加剧。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/17/amazon-owned-zooxs-100-robotaxi-limit-in-nevada-is-about-to-disappear/",
+            "title_original": "Amazon-owned Zoox’s 100-robotaxi limit in Nevada is about to disappear",
+            "excerpt": "An updated permit shows the 100-cap will expire later this month just as competition in Las Vegas heats up.",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌推出家庭群组AI代理CC",
+            "summary": "[[Google]]推出AI代理CC，为家庭或群组分配独立谷歌账号，并向所有成员发送每日简报。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2261924/google-cc-is-an-ai-agent-for-families-and-groups/",
+            "title_original": "Google's revamped CC is an AI agent for families and groups",
+            "excerpt": "CC gives an AI agent its own Google account in your family or group and sends all members a daily briefing.",
+            "is_foreign": true
+          },
+          {
+            "title": "FAA投入8.75亿美元用AI改善空管",
+            "summary": "[[FAA]]启动基于AI的软件项目，投入8.75亿美元帮助空中交通管制员更好地导航。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/17/the-faas-plan-to-fix-air-traffic-875-million-worth-of-ai/",
+            "title_original": "The FAA’s plan to fix air traffic? $875M worth of AI",
+            "excerpt": "A new AI-based software program is being launched to help air traffic controllers better navigate their jobs as the crossing guards of America's skies.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "苹果iPhone 18 Pro系列今日开售",
+            "summary": "[[苹果]]iPhone 18 Pro系列今日开售，国行9999元起，搭载[[A20 Pro]]芯片，台积电2nm工艺，256GB起步。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/899.htm",
+            "title_original": "IT早报 0918：苹果 iPhone 18 Pro 系列今日开售；赛力斯否认“2027 年问界撤出华为门店”；恒大汽车总负债额 327 亿元退出汽车制造；OPPO ColorOS 17 发布...",
+            "excerpt": "“IT早报”时间，大家好，现在是 2026 年 9 月 18 日星期五，今天的重要科技资讯有： 1. 苹果 iPhone 18 Pro /Max 系列今日正式开售，国行 9999 元起 本次 iPhone 18 Pro 系列搭载 A20 Pro 芯片，采用台积电 2nm 工艺，新增可变光圈主摄，续航充电大幅升级，256GB 存储起步，一起来看看具体参数售价。>> 查看详情 2. 赛力斯否认“2027 年问界撤出华为门店”传闻：部分门店将继续销售 赛力斯明确表示并非所有门店都会撤出，部分鸿蒙智行和华为专卖店将继续销售问界，同时问界将在鸿蒙智行框架下探索由赛力斯主导的新合作模式。>> 查看详情 3. 恒大汽车：负债总额约 327.22…",
+            "is_foreign": false
+          },
+          {
+            "title": "赛力斯否认问界2027年撤出华为门店",
+            "summary": "[[赛力斯]]否认2027年[[问界]]撤出华为门店传闻，称部分鸿蒙智行和华为专卖店将继续销售。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/899.htm",
+            "title_original": "IT早报 0918：苹果 iPhone 18 Pro 系列今日开售；赛力斯否认“2027 年问界撤出华为门店”；恒大汽车总负债额 327 亿元退出汽车制造；OPPO ColorOS 17 发布...",
+            "excerpt": "“IT早报”时间，大家好，现在是 2026 年 9 月 18 日星期五，今天的重要科技资讯有： 1. 苹果 iPhone 18 Pro /Max 系列今日正式开售，国行 9999 元起 本次 iPhone 18 Pro 系列搭载 A20 Pro 芯片，采用台积电 2nm 工艺，新增可变光圈主摄，续航充电大幅升级，256GB 存储起步，一起来看看具体参数售价。>> 查看详情 2. 赛力斯否认“2027 年问界撤出华为门店”传闻：部分门店将继续销售 赛力斯明确表示并非所有门店都会撤出，部分鸿蒙智行和华为专卖店将继续销售问界，同时问界将在鸿蒙智行框架下探索由赛力斯主导的新合作模式。>> 查看详情 3. 恒大汽车：负债总额约 327.22…",
+            "is_foreign": false
+          },
+          {
+            "title": "恒大汽车负债327亿元退出汽车制造",
+            "summary": "[[恒大汽车]]总负债约327.22亿元，宣布退出汽车制造业务。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/899.htm",
+            "title_original": "IT早报 0918：苹果 iPhone 18 Pro 系列今日开售；赛力斯否认“2027 年问界撤出华为门店”；恒大汽车总负债额 327 亿元退出汽车制造；OPPO ColorOS 17 发布...",
+            "excerpt": "“IT早报”时间，大家好，现在是 2026 年 9 月 18 日星期五，今天的重要科技资讯有： 1. 苹果 iPhone 18 Pro /Max 系列今日正式开售，国行 9999 元起 本次 iPhone 18 Pro 系列搭载 A20 Pro 芯片，采用台积电 2nm 工艺，新增可变光圈主摄，续航充电大幅升级，256GB 存储起步，一起来看看具体参数售价。>> 查看详情 2. 赛力斯否认“2027 年问界撤出华为门店”传闻：部分门店将继续销售 赛力斯明确表示并非所有门店都会撤出，部分鸿蒙智行和华为专卖店将继续销售问界，同时问界将在鸿蒙智行框架下探索由赛力斯主导的新合作模式。>> 查看详情 3. 恒大汽车：负债总额约 327.22…",
+            "is_foreign": false
+          },
+          {
+            "title": "特斯拉推送豆包大模型语音助手",
+            "summary": "[[特斯拉]]推送2026.26.200.11版更新，为更多车型上线[[豆包]]大模型语音助手，新增宠物模式等功能。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/895.htm",
+            "title_original": "特斯拉推送 2026.26.200.11 软件更新：为更多车型上线豆包大模型语音助手",
+            "excerpt": "IT之家 9 月 18 日消息，特斯拉昨日发布了最新的 2026.26.200.11 版软件更新，已开始分批推送。本次升级涵盖豆包大模型、宠物模式、导航、辅助驾驶、媒体应用及安全修复。 特斯拉车机新增豆包大模型语音助手（需开通高级车载娱乐服务），可提供实时信息并进行自然对话（可选灵动女声薇薇、沉稳男声云舟等音色，以及万事通、音乐爱好者、故事会等角色）。 IT之家附其他更新如下： 宠物模式：前往“控制 > 显示 > 自定义宠物模式”，选择并命名您的宠物。 视觉更新：中央显示屏现可显示更高画质的 Tesla 图像，并进一步丰富停车场景环境。 盲点警报氛围灯：现在，当盲点区内有物体并且转向信号灯已启用，或在驻车时探测到有物体靠近时，氛围…",
+            "is_foreign": false
+          },
+          {
+            "title": "海辰储能发布钠电储能方案",
+            "summary": "[[海辰储能]]发布∞Power N4.0MWh钠电储能方案，搭载自研∞Cell N785Ah电芯，计划2027年量产交付。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/891.htm",
+            "title_original": "海辰储能发布∞Power N4.0MWh 钠电储能方案：搭载自研∞Cell N785Ah 钠离子电芯，计划 2027 年量产交付",
+            "excerpt": "IT之家 9 月 18 日消息，海辰储能 9 月 16 日举办线上新品发布会，正式发布了新一代钠电储能一体化解决方案∞Power N4.0MWh。该方案搭载自研∞Cell N785Ah 钠离子电芯，计划于 2027 年开启全链条量产交付。 据介绍，海辰储能 ∞Cell N785Ah 电芯具备 20000 次循环寿命和 30 年设计服役周期，支持 2 至 8 小时时长运行，覆盖当前电力储能主流时长场景。该电芯全面兼容海辰储能千安时锂电通用制造平台的产线和集成产线，可直接接入现有产能架构。 材料层面，海辰储能与合作伙伴联合开发了相纯度达 97% 的 NFPP 正极材料，并自研硬炭负极材料，通过孔结构调控与表面缺陷修复技术实现低膨胀与高…",
+            "is_foreign": false
+          },
+          {
+            "title": "百度智能云首发产业智能体操作系统",
+            "summary": "[[百度智能云]]首发产业智能体操作系统，旨在实现AI的商业和技术飞轮。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/jXliIdDVTYDAtm73EoSU?utm_source=rss&utm_medium=article",
+            "title_original": "百度智能云首发产业智能体操作系统，要实现 AI 的商业和技术飞轮",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "零跑官宣第二品牌",
+            "summary": "[[零跑汽车]]官宣第二品牌，新车将具备与小米SUV同款的升顶能力。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1680808?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "零跑官宣第二品牌，新车将有小米 SUV 同款升顶能力",
+            "excerpt": "独属于零跑的造车方法论。 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          },
+          {
+            "title": "苹果挑战英国加密命令保密政策",
+            "summary": "[[苹果]]在伦敦调查权力法庭听证会上挑战英国政府拒绝承认是否发出加密数据访问命令的立场。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/889.htm",
+            "title_original": "苹果挑战英国加密命令保密政策，要求公开相关法律争议",
+            "excerpt": "IT之家 9 月 18 日消息，据路透社当地时间 9 月 17 日报道，苹果当天在伦敦调查权力法庭（IPT）听证会上，公开挑战英国政府拒绝承认是否发出加密数据访问命令（要求苹果为 iCloud 加密数据提供访问入口）的立场。 此次争议源于英国政府要求苹果提供访问加密用户数据的能力。英国政府长期实行“既不确认也不否认”（NCND）政策。苹果律师与民权组织“隐私国际”和“自由”的律师共同指出，英国政府的 NCND 政策妨碍了公开司法原则，使公众无法就案件进行有意义的讨论。 “隐私国际”律师本 · 贾菲在听证会上称，政府立场“已经变得荒谬”，并指出“马早已跑出了马厩”，意指相关命令的存在已是公开信息（他提到美国政界人士和官员曾公开提及原…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "上合组织绿色产业合作区签约超29亿元",
+            "summary": "中国—上海合作组织绿色产业发展合作区6个重点项目在天津签约，总金额超29亿元。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698591.shtml",
+            "title_original": "上合组织绿色产业发展合作区6个项目签约超29亿元",
+            "excerpt": "中新网天津9月17日电 (记者 周亚强)中国—上海合作组织绿色产业发展合作区6个重点项目16日在天津签约，总金额超29亿元。",
+            "is_foreign": false
+          },
+          {
+            "title": "2026北京民营企业百强榜单发布",
+            "summary": "2026北京民营企业百强系列榜单揭晓，含主榜单及科技创新、文化产业、专精特新3个分榜单，首发布未来产业先锋榜。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698600.shtml",
+            "title_original": "2026北京民营企业百强系列榜单发布",
+            "excerpt": "中新社北京9月17日电 (记者 杜燕)2026北京民营企业百强系列榜单17日揭晓，包括“北京民营企业百强”一个主榜单，以及科技创新百强、文化产业百强、专精特新百强3个分榜单，并首次发布未来产业先锋榜。",
+            "is_foreign": false
+          },
+          {
+            "title": "第四届中国航协航空大会开幕",
+            "summary": "第四届中国航协航空大会在北京开幕，以“人工智能与民航融合发展”为主题，为期3天。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698584.shtml",
+            "title_original": "第四届中国航协（CATA）航空大会在北京开幕",
+            "excerpt": "中新网北京9月17日电 (记者 刘文文)第四届中国航协(CATA)航空大会17日在北京开幕。大会为期3天，以“人工智能与民航融合发展”为年度主题，首次将人工智能作为主线贯穿开幕式、行业论坛和专业展览三大单元。",
+            "is_foreign": false
+          },
+          {
+            "title": "浙江涉外营商环境评价报告发布",
+            "summary": "《浙江省涉外营商环境评价报告2025/2026》发布，在浙外资企业对12项指标整体满意度4.45分，同比提升0.22分。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698582.shtml",
+            "title_original": "浙江省涉外营商环境评价报告在杭州发布",
+            "excerpt": "中新网杭州9月17日电(蓝伊旎)9月17日，《浙江省涉外营商环境评价报告2025/2026》(下称“报告”)发布解读活动在杭州举办。报告显示，受访的在浙外资企业对12项涉外营商环境评价指标的整体满意度达4.45分(5分制)，较上年度提升了0.22分。",
+            "is_foreign": false
+          },
+          {
+            "title": "山东跨境电商交易会开幕",
+            "summary": "2026第五届山东跨境电商交易会在济南启幕，设三大展区，[[阿里国际站]]、[[亚马逊]]等12家平台及产业带企业亮相。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698578.shtml",
+            "title_original": "2026第五届山东跨境电商交易会开幕 AI赋能外贸新业态",
+            "excerpt": "中新网济南9月17日电(周艺伟)2026第五届山东跨境电商交易会(简称“山东跨交会”)17日在济南启幕，为期3天，设服务生态、跨境选品、业态创新三大展区。阿里国际站、亚马逊等12家跨境电商平台及山东16市产业带企业集中亮相。",
+            "is_foreign": false
+          },
+          {
+            "title": "中国首张铁路国际联运电子运单签发",
+            "summary": "[[国铁集团]]在绥芬河口岸试点应用国际联运电子运单，替代传统纸质运单开展跨境运输。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698567.shtml",
+            "title_original": "中国首张铁路国际联运电子运单签发",
+            "excerpt": "中新社北京9月17日电 (记者 刘文文)记者从中国国家铁路集团有限公司(下称“国铁集团”)获悉，17日，国铁集团在绥芬河口岸试点应用国际联运电子运单，替代传统纸质运单开展跨境运输。",
+            "is_foreign": false
+          },
+          {
+            "title": "中秋国庆入境机票预订量同比增约6%",
+            "summary": "[[航旅纵横]]报告显示，中秋国庆假期入境航线机票预订量超111万张，同比增长约6%。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698521.shtml",
+            "title_original": "中国旅游平台数据显示：中秋国庆假期入境机票预订量同比增约6%",
+            "excerpt": "中新社北京9月17日电 (记者 刘文文)中国在线旅游平台航旅纵横17日发布的《2026年中秋国庆假期出行预测报告》(简称“报告”)显示，中秋国庆假期(出行日期为9月25日至10月7日，下同)，入境航线机票预订量超111万张，同比增长约6%。",
+            "is_foreign": false
+          },
+          {
+            "title": "深圳—青岛异地航空货站启用",
+            "summary": "[[深圳机场]]与[[青岛机场]]互设的深圳—青岛异地航空货站正式投用，完善环渤海区域航空物流节点布局。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698525.shtml",
+            "title_original": "深化跨区域机场战略合作 深圳—青岛异地航空货站启用",
+            "excerpt": "中新网深圳9月17日电 (索有为 刘韶滨 邝颖瑄)据深圳机场17日发布的消息，深圳机场与青岛机场双方互设的深圳—青岛异地航空货站当日正式投用。该航空货站的启用，进一步完善了深圳机场在环渤海区域航空物流节点布局，有效压缩货物中转时效，全面提升航空物流运行效率与服务品质，构建起多点联动、全域贯通的现代化航空货运体系，将为国内经济大循环建设注入新动能。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "youngyangyang04/llm-master",
+            "url": "https://github.com/youngyangyang04/llm-master",
+            "intro": "给程序员的大模型学习路线图，从调用接口到做出能上线的 AI 应用。",
+            "features": [
+              "按顺序讲清大模型从入门到上线",
+              "覆盖提示词、知识库问答、智能体",
+              "每阶段配可写进简历的实战项目",
+              "附大厂面试题和回答思路"
+            ],
+            "guide": "这是一份在线阅读的教程，不用安装任何软件，直接打开网页按章节学即可。适合有编程基础、想转做大模型应用开发的人。",
+            "steps": [
+              "打开在线阅读站点 notes.kamacoder.com/llm/",
+              "按「基础认知→应用开发→RAG→Agent」顺序学习",
+              "跟着每阶段的项目动手做一遍"
+            ],
+            "install": "",
+            "summary": "给程序员的大模型学习路线图，从调用接口到做出能上线的 AI 应用。",
+            "source": "GitHub",
+            "stars": "684",
+            "language": "",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "大模型（LLM）全栈学习路线与中文教程🔥：覆盖 Prompt Engineering、RAG、AI Agent、MCP、微调、模型部署、Transformer、AI 编程与大厂面试，从入门到生产实践。",
+            "is_foreign": true
+          },
+          {
+            "title": "wang2122/sprix-sage-router",
+            "url": "https://github.com/wang2122/sprix-sage-router",
+            "intro": "多个 AI 助手一起干活时，帮系统决定该自己干、找人帮忙还是换人接手。",
+            "features": [
+              "任务进行中判断是否换人或加人",
+              "三种路线：自己做、协作、交接",
+              "把决策理由记录成可查的账"
+            ],
+            "guide": "面向开发者的 Python 库，README 只给了 Quick start 等章节入口，未列出具体安装命令，需要自行查看仓库文档接入 A2A 智能体网络。",
+            "steps": [],
+            "install": "",
+            "summary": "多个 AI 助手一起干活时，帮系统决定该自己干、找人帮忙还是换人接手。",
+            "source": "GitHub",
+            "stars": "3690",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Sprix AI at 屿智同行 — state-aware SELF/COLLABORATE/HANDOFF routing for A2A agent networks.",
+            "is_foreign": true
+          },
+          {
+            "title": "wavetermdev/waveterm",
+            "url": "https://github.com/wavetermdev/waveterm",
+            "intro": "一个自带 AI 助手的命令行窗口，还能让远程连接断网后自动接回来。",
+            "features": [
+              "AI 助手能看懂终端输出并操作文件",
+              "远程连接断网或重启后自动重连",
+              "窗口里可拖拽排列终端、编辑器、网页",
+              "直接预览远程的图片、PDF、表格"
+            ],
+            "guide": "支持 macOS、Linux、Windows，从官网下载安装包即可使用。AI 功能需自备 OpenAI、Claude 或 Gemini 的 API Key，也可接本地模型，无需注册账号。",
+            "steps": [
+              "从官网 waveterm.dev 下载对应系统安装包",
+              "安装后打开 Wave 终端",
+              "在设置里填入自己的 AI 模型 API Key"
+            ],
+            "install": "",
+            "summary": "一个自带 AI 助手的命令行窗口，还能让远程连接断网后自动接回来。",
+            "source": "GitHub",
+            "stars": "22305",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An open-source, AI-integrated, cross-platform terminal for seamless workflows",
+            "is_foreign": true
+          },
+          {
+            "title": "Snailclimb/JavaGuide",
+            "url": "https://github.com/Snailclimb/JavaGuide",
+            "intro": "一份写给 Java 后端求职者的面试复习资料，现在也加上了 AI 应用开发内容。",
+            "features": [
+              "覆盖 Java 基础、数据库、分布式等面试题",
+              "提供系统设计和场景题答题思路",
+              "新增 AI 应用开发与面试指南",
+              "有面试突击版和 PDF 可下载"
+            ],
+            "guide": "纯在线阅读的文档，不用安装任何东西，直接访问 javaguide.cn 即可。想突击面试可看精简版 interview.javaguide.cn。",
+            "steps": [
+              "访问在线阅读站点 javaguide.cn",
+              "按「Java 后端面试通关计划」顺序复习",
+              "需要突击时打开 interview.javaguide.cn"
+            ],
+            "install": "",
+            "summary": "一份写给 Java 后端求职者的面试复习资料，现在也加上了 AI 应用开发内容。",
+            "source": "GitHub",
+            "stars": "158644",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
+            "is_foreign": true
+          },
+          {
+            "title": "langgenius/dify",
+            "url": "https://github.com/langgenius/dify",
+            "intro": "一个可视化搭 AI 应用的工作台，拖拖拽拽就能做出问答机器人和自动化流程。",
+            "features": [
+              "在画布上拖拽搭建 AI 工作流",
+              "上传资料就能做知识库问答",
+              "支持多种 AI 模型统一管理",
+              "自带运行监控，方便排查问题"
+            ],
+            "guide": "推荐用 Docker 在自己电脑或服务器上部署，需要先装好 Docker 和 Docker Compose v2.24.0 以上版本，机器至少 2 核 CPU、4GB 内存。启动后浏览器打开本地地址完成初始化。",
+            "steps": [
+              "先安装 Docker 和 Docker Compose v2.24.0+",
+              "cd dify",
+              "cd docker",
+              "cp .env.example .env",
+              "docker compose up -d"
+            ],
+            "install": "docker compose up -d",
+            "summary": "一个可视化搭 AI 应用的工作台，拖拖拽拽就能做出问答机器人和自动化流程。",
+            "source": "GitHub",
+            "stars": "156192",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从学大模型、搭智能体到管好终端和面试，帮普通人把 AI 用起来。"
+      }
+    ]
+  }
+}
