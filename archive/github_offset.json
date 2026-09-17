@@ -1,5 +1,5 @@
 {
-  "classic_offset": 10,
+  "classic_offset": 12,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -149,12 +149,15 @@
     "Wox-launcher/Wox",
     "unstablebuild/rune",
     "XiaoDuoYa/codex-with-chatgpt",
-    "lissy93/dashy"
+    "lissy93/dashy",
+    "eternityspring/reelbench-skills",
+    "crmne/spotifast",
+    "plotly/dash"
   ],
   "last_run_date": "2026-09-17",
   "last_classic": [
-    "firecrawl/firecrawl",
-    "f/prompts.chat"
+    "huggingface/transformers",
+    "AUTOMATIC1111/stable-diffusion-webui"
   ],
-  "updated_at": "2026-09-17T01:39:43.029207+00:00"
+  "updated_at": "2026-09-17T10:06:12.455164+00:00"
 }

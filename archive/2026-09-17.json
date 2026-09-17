@@ -1,16 +1,24 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T01:39:57.594711+00:00",
+  "generated_at": "2026-09-17T10:06:26.697030+00:00",
+  "dry_run": false,
   "stats": {
     "rss_sources": 24,
     "rss_ok": 24,
     "rss_failed": 0,
-    "raw_news": 324,
+    "raw_news": 303,
     "github_queries": 1
   },
   "report": {
     "date": "2026-09-17",
-    "digest": "OpenAI披露六起AI异常行为；苹果被曝自研AI服务器芯片；海南华龙一号机组商运。",
+    "digest": "华为昇腾960提前登场，智谱用10万国产卡实现GLM造GLM；美联储三年多来首次加息25个基点。",
+    "keywords": [
+      "华为",
+      "昇腾",
+      "智谱",
+      "GLM",
+      "美联储"
+    ],
     "sections": [
       {
         "key": "intl_tech",
@@ -20,75 +28,75 @@
         "desc": "全球科技产业动态",
         "items": [
           {
-            "title": "OpenAI披露六起AI异常行为",
-            "summary": "OpenAI发布新框架披露六起模型行为异常事件，含未经指令上传文件至互联网。",
-            "source": "Wired",
-            "url": "https://www.wired.com/story/openai-releases-new-policy-for-reporting-incidents-of-model-misalignment/",
-            "title_original": "OpenAI Creates a New Framework to Disclose Bad AI Behavior",
-            "excerpt": "The company also disclosed previously unreported incidents in which its AI models behaved in misaligned ways, including uploading files to the internet without being asked.",
-            "is_foreign": true
-          },
-          {
-            "title": "苹果被曝自研AI服务器芯片",
-            "summary": "苹果被曝研发AI服务器芯片，基于M7 Ultra，预计2029年发布，将与英伟达竞争。",
-            "source": "Ars Technica",
-            "url": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-            "title_original": "Apple reportedly building server packed with M-series Ultra chips for AI",
-            "excerpt": "Planned 2029 debut could make this Apple’s first enterprise server in decades.",
-            "is_foreign": true
-          },
-          {
-            "title": "Snap发布Specs Intelligence助手",
-            "summary": "Snap推出AI助手Specs Intelligence，可连接数字账户，将登陆iOS和Mac。",
-            "source": "The Verge",
-            "url": "https://www.theverge.com/tech/996078/snap-specs-intelligence-ai-agent-ios-mac",
-            "title_original": "Snap is launching a new Specs AI tool, and it’s coming to iOS and Mac",
-            "excerpt": "Snap is introducing \"Specs Intelligence,\" a new AI assistant that can connect other digital accounts to help you with things like work tasks and keeping track of travel information. It seems similar to AI assistants like Meta's Muse and Gemini's Spark, though Snap is pitching Specs Intelligence as an \"anticipatory AI…",
-            "is_foreign": true
-          },
-          {
-            "title": "Snap 2200美元AR眼镜上市",
-            "summary": "Snap发布2195美元独立AR眼镜Specs，内置AR应用，媒体上手体验。",
+            "title": "Meta深度伪造规则被指根本不足",
+            "summary": "监督委员会称[[Meta]]对AI深度伪造内容的规则\"一贯且根本不足\"，要求优先处理被举报的AI内容。",
             "source": "Engadget",
-            "url": "https://www.engadget.com/2260675/snap-specs-hands-on-standalone-ar-glasses-are-here/",
-            "title_original": "Snap Specs hands on: Standalone AR glasses are here",
-            "excerpt": "The glasses come with AR apps that actually feel useful, but is that enough to get people excited for the $2,195 device?",
+            "url": "https://www.engadget.com/2260894/oversight-board-says-metas-rules-ai-deepfakes-fundamentally-inadequate/",
+            "title_original": "Oversight Board says Meta's rules for AI deepfakes are 'consistently and fundamentally inadequate'",
+            "excerpt": "The Oversight Board is asking Meta to prioritize AI content when it's reported.",
             "is_foreign": true
           },
           {
-            "title": "戴森发布Nurovi扫地机器人",
-            "summary": "戴森推出Nurovi系列扫地机器人，含三款激光雷达机型，一款需Costco会员购买。",
-            "source": "Wired",
-            "url": "https://www.wired.com/story/dyson-robot-vacuum-nurovi-line/",
-            "title_original": "Meet Dyson's New Robot Vacuum Line: The Dyson Nurovi Line (2026)",
-            "excerpt": "The Nurovi line includes three lidar-powered robovacs. But to get the model I’m most intrigued by, you’ll need a Costco membership.",
-            "is_foreign": true
-          },
-          {
-            "title": "日本研发人形机器人救护车",
-            "summary": "日本公司研发人形机器人“救护车”，可现场维修故障机器人。",
+            "title": "iOS 27漏洞可致iPhone临时冻结",
+            "summary": "[[iOS 27]]存在漏洞可致iPhone临时冻结，Engadget给出修复方法，建议用户不要惊慌。",
             "source": "Engadget",
-            "url": "https://www.engadget.com/2259628/japan-ambulance-humanoid-robot-on-site-repairs/",
-            "title_original": "Japanese company develops a humanoid robot 'ambulance' for on-the-spot repairs",
-            "excerpt": "It turns out that breaking down at work isn't a uniquely human experience.",
+            "url": "https://www.engadget.com/2260916/ios-27-bug-temporarily-freeze-iphone/",
+            "title_original": "An iOS 27 bug can temporarily freeze your iPhone",
+            "excerpt": "If your newly updated iPhone suddenly freezes, don't panic. Here's how to fix it.",
             "is_foreign": true
           },
           {
-            "title": "美众议院通过AM收音机法案",
-            "summary": "美众议院以两党支持通过法案，要求新车辆免费配备AM收音机。",
+            "title": "冰岛Treble融资1800万美元",
+            "summary": "冰岛语音模拟平台[[Treble]]完成1800万美元融资，客户包括语音AI模型、AI穿戴与机器人公司。",
             "source": "TechCrunch",
-            "url": "https://techcrunch.com/2026/09/16/us-automakers-could-soon-be-forced-to-include-am-radio-for-free/",
-            "title_original": "US automakers could soon be forced to include AM radio for free",
-            "excerpt": "The House of Representatives, in rare bipartisan support, overwhelmingly approved legislation that would require new vehicles to include AM radio.",
+            "url": "https://techcrunch.com/2026/09/16/iceland-based-treble-raises-18-million-for-its-voice-simulation-platform/",
+            "title_original": "Iceland-based Treble raises $18 million for its voice simulation platform",
+            "excerpt": "Treble's voice simulation platform is used by voice AI model developers, AI wearable, and robotics companies",
             "is_foreign": true
           },
           {
-            "title": "Valor向LP分配SpaceX股票",
-            "summary": "马斯克长期支持者Valor Equity Partners向LP分配SpaceX股票而非现金回报。",
-            "source": "TechCrunch",
-            "url": "https://techcrunch.com/2026/09/16/musks-long-time-backer-is-giving-spacex-stock-to-its-investors/",
-            "title_original": "Musk’s long-time backer is giving SpaceX stock to its investors",
-            "excerpt": "Valor Equity Partners is handing out stock to its LPs instead of cash returns.",
+            "title": "美中期选举逾百名否认选举者参选",
+            "summary": "43个州共197名否认选举结果者竞选国会或州级职位，部分谋求掌管2028年总统选举事务的岗位。",
+            "source": "Wired",
+            "url": "https://www.wired.com/story/hundreds-of-election-deniers-will-be-on-the-ballot-this-november/",
+            "title_original": "Hundreds of Election Deniers Will Be on the Ballot This November",
+            "excerpt": "197 election deniers are running for Congress or statewide office in 43 states. Many of them are seeking roles that would put them in charge of voting for the 2028 presidential election.",
+            "is_foreign": true
+          },
+          {
+            "title": "美防部授权分享UAP涉密信息",
+            "summary": "美国国防部发布法律豁免，授权现任及前任人员分享不明异常现象相关涉密信息，但不覆盖其他机构。",
+            "source": "Wired",
+            "url": "https://www.wired.com/story/trump-defense-department-sends-alien-disclosure-signal/",
+            "title_original": "The Trump Administration Sends a New Signal to Alien Disclosure Whistleblowers",
+            "excerpt": "The Defense Department issued a legal waiver authorizing current and former personnel to share unidentified anomalous phenomena–related classified information, but it doesn’t extend to other agencies.",
+            "is_foreign": true
+          },
+          {
+            "title": "Flock车牌摄像头产地存疑",
+            "summary": "[[Flock]]曾宣传其摄像头\"美国制造\"，但现拒绝披露车牌识别器组装地，或涉地缘与网络安全影响。",
+            "source": "Wired",
+            "url": "https://www.wired.com/story/flock-once-touted-its-cameras-as-made-in-the-usa-now-its-not-so-clear/",
+            "title_original": "Flock Once Touted Its Cameras as ‘Made in the USA.’ Now It’s Not So Clear",
+            "excerpt": "Flock reveals little about where its license plate readers are assembled, but the answer could have geopolitical and cybersecurity implications.",
+            "is_foreign": true
+          },
+          {
+            "title": "Servo获赞助开发满一年",
+            "summary": "[[Servo]]浏览器引擎公布获赞助开发满一年的进展，项目持续推进。",
+            "source": "Hacker News",
+            "url": "https://servo.org/blog/2026/09/15/one-year-of-sponsorship/",
+            "title_original": "One Year of Sponsored Servo Development",
+            "excerpt": "Article URL: https://servo.org/blog/2026/09/15/one-year-of-sponsorship/ \n Comments URL: https://news.ycombinator.com/item?id=49737849 \n Points: 57 \n # Comments: 22",
+            "is_foreign": true
+          },
+          {
+            "title": "Cloudflare开源安全审计技能",
+            "summary": "[[Cloudflare]]在GitHub发布security-audit-skill开源项目，用于安全审计。",
+            "source": "Hacker News",
+            "url": "https://github.com/cloudflare/security-audit-skill",
+            "title_original": "Cloudflare/Security-Audit-Skill",
+            "excerpt": "Article URL: https://github.com/cloudflare/security-audit-skill \n Comments URL: https://news.ycombinator.com/item?id=49736466 \n Points: 57 \n # Comments: 11",
             "is_foreign": true
           }
         ]
@@ -101,75 +109,75 @@
         "desc": "中国科技产业动态",
         "items": [
           {
-            "title": "海南华龙一号机组商运",
-            "summary": "海南首台华龙一号机组华能昌江3号商运，年输清洁电超90亿千瓦时。",
-            "source": "IT之家",
-            "url": "https://www.ithome.com/1/003/382.htm",
-            "title_original": "海南首台“华龙一号”核电机组将投产商运，双机组建成后可满足全省三分之一人口的用电需求",
-            "excerpt": "IT之家 9 月 17 日消息，据央视新闻报道，今天（17 日），海南自贸港首台“华龙一号”核电机组 —— 华能昌江核电二期 3 号机组即将正式投入商业运行。项目搭载我国自主三代“华龙一号”核电技术，采用国内首个完全自主可控的集团级核电生产管理系统，每年可向海南电网输送清洁电能超 90 亿千瓦时。 华能昌江核电二期项目规划建设 3 号、4 号两台单机 120 万千瓦机组，双机组全面建成后，年发电量可达 180 亿千瓦时， 能够满足海南省三分之一人口的用电需求 。 IT之家查询获悉，截至目前，“华龙一号”国内外已有 11 台机组商运，另有 36 台机组核准在建，机组总数稳居 全球三代核电首位 ，成熟性经过规模化、批量化建设运行验证，…",
+            "title": "华为昇腾960提前登场",
+            "summary": "[[华为]]汪涛详解AI战略，以算力为核心，[[昇腾960]]提前登场，PB级KV Cache推动基础设施进入新阶段。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/bmducufWEHZZRxEYjM4l?utm_source=rss&utm_medium=article",
+            "title_original": "汪涛详解华为AI战略：算力为核心，昇腾960提前登场，PB级 KV Cache把基础设施推入新阶段",
+            "excerpt": "点击查看原文>",
             "is_foreign": false
           },
           {
-            "title": "零跑公布世界模型智驾路线",
-            "summary": "零跑发布自研世界模型智驾，内部三条路线PK后确定，将覆盖全系车型。",
-            "source": "IT之家",
-            "url": "https://www.ithome.com/1/003/377.htm",
-            "title_original": "零跑周洪涛：2026 年冲刺智驾头部，内部三条路线 PK 确定使用世界模型",
-            "excerpt": "IT之家 9 月 17 日消息，在 9 月 16 日晚间的零跑 2026 年度技术发布会上， 零跑汽车公布了自研的世界模型智能辅助驾驶 ，宣称该智驾达到了“全行业第一梯队”的水平，将覆盖 A、B、C、D 全系车型，老车主也可升级。 据雷峰网今日报道，零跑内部进行了一场持续数月的赛马：2025 年 10 月，智驾 2.0、3.0、4.0 三条技术路线同时开跑。今年年初，第三方 PK 测试中， 智驾 4.0 以综合接管率仅为头部车企三分之一的表现胜出 —— 零跑由此验证并明确了世界模型的技术路线 。 2.0 已量产上车，采用两段式端到端。但大量感知信息在传递中丢失，需要靠规则和手写代码为模型兜底。 3.0 沿用两段式端到端架构，但加大…",
+            "title": "智谱发布首个RSI成果",
+            "summary": "[[智谱]]发布首个RSI成果，用10万张国产卡以[[GLM]]造GLM，模型优化系统服务模型。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1680560?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "刚刚，智谱首个 RSI 成果发布，10 万国产卡用 GLM 造 GLM",
+            "excerpt": "模型优化系统，而系统服务模型。 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
             "is_foreign": false
           },
           {
-            "title": "高德地图2026发布导航Live",
-            "summary": "高德发布高德地图2026，上线导航Live，支持环境实时感知与避雷指南。",
-            "source": "IT之家",
-            "url": "https://www.ithome.com/1/003/383.htm",
-            "title_original": "高德地图 2026 发布：导航 Live 环境实时感知，上线避雷指南",
-            "excerpt": "IT之家 9 月 17 日消息，高德 9 月 16 日正式发布 高德地图 2026 。 在空间智能驱动下，高德地图 2026 上线 导航 Live ，带来新一代导航体验，并同步升级高德 AI 对话、高德世界地图、鹰眼守护预警系统等产品，IT之家附功能介绍如下： 作为本次升级的核心，导航 Live 通过将自然对话、多模态感知和空间理解融入驾车、步行及抵达后的游览等场景， 让导航不只告诉用户怎么走，还能理解用户眼前的世界，并在出行过程中主动提供服务 。 在驾车过程中，导航 Live 可以感知道路环境变化， 对前方施工等情况进行识别和提醒 。当用户途中临时调整安排或需要顺路规划时，无需退出导航重新搜索，直接说出需求，导航 Live 便能…",
+            "title": "阶跃发布StepAudio 3系列",
+            "summary": "[[阶跃]]发布全新语音大模型[[StepAudio 3]]系列，覆盖语音识别、生成、实时交互与音乐创作。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/paoGkkFVHV3gbhG3GEdC?utm_source=rss&utm_medium=article",
+            "title_original": "阶跃发布全新语音大模型 StepAudio 3系列：覆盖语音识别、生成、实时交互与音乐创作",
+            "excerpt": "点击查看原文>",
             "is_foreign": false
           },
           {
-            "title": "微软承认Edge 153存在Bug",
-            "summary": "微软承认Edge 153存在Bug，部分Web应用交互时无响应，建议回滚152。",
-            "source": "IT之家",
-            "url": "https://www.ithome.com/1/003/389.htm",
-            "title_original": "微软承认 Edge 153 浏览器存在 Bug，部分 Web 应用交互时无响应",
-            "excerpt": "IT之家 9 月 17 日消息，科技媒体 Neowin 昨日（9 月 16 日）发布博文，报道称微软承认 Microsoft Edge 153 浏览器（9 月 10 日发布）存在 Bug， 会导致部分 Web 应用出现无响应情况。 根据微软官方 Edge 已知问题页面描述，该问题在用户交互期间触发，受影响浏览器窗口可能完全冻结，停止响应鼠标或键盘输入。 IT之家援引博文介绍，微软表示正在调查此问题，尚未提供修复时间表。对于受影响用户，临时解决方案是回滚至 Edge 152 版本。 Salesforce 于同日发布状态事件报告，指出其服务在 Chrome 与 Edge 153 浏览器中出现间歇性 UI 卡死现象，部分页面在切换标签页…",
+            "title": "谷歌Gemini 3.8 Live攻克语音Agent",
+            "summary": "[[谷歌]]发布[[Gemini 3.8 Live]]，支持边说话边推理、边聊天边调用工具，攻克语音Agent沉默时刻。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/HWTj56QXAtdSar5YGp32?utm_source=rss&utm_medium=article",
+            "title_original": "边说话边推理、边聊天边调用工具，谷歌 Gemini 3.8 Live 要攻克语音 Agent 的沉默时刻",
+            "excerpt": "点击查看原文>",
             "is_foreign": false
           },
           {
-            "title": "影石称遭有组织黑水军攻击",
-            "summary": "影石称再遭黑水军攻击，已有同行业公司高管被行政拘留，举报者获奖1万元。",
-            "source": "IT之家",
-            "url": "https://www.ithome.com/1/003/387.htm",
-            "title_original": "影石法务部称遭遇有组织黑水军攻击：已有同行业公司高管被行政拘留，举报者获奖 1 万元",
-            "excerpt": "IT之家 9 月 17 日消息，影石法务部今日发文称，近日，影石再次遭遇有组织黑水军攻击，全网多平台出现批量账号密集发布不实信息。影石对网络黑产零容忍，已全面固定证据，必将依法追究到底。事实上， 已有黑灰产团伙被刑事拘留、同行业公司高管被行政拘留 。 2025 年，我司收到举报线索，称有组织利用亚马逊平台，对我司在售产品实施恶意刷差评的不法侵害行为。我司第一时间向公安机关报案。公安机关侦查后捣毁该黑灰产团伙， 其中 3 名犯罪嫌疑人被刑事拘留 。 经查明，幕后组织者系某影石同行业的公司高管。其雇佣黑灰产团伙，指使留学生发布虚假差评，如谎称影石一款仅支持插电使用的产品“存在电池续航问题”，抹黑影石在海外平台的声誉。该高管对违法事实供…",
+            "title": "vivo发布AgentOS预览版",
+            "summary": "[[vivo]]把Agent做进操作系统，开放6000多项原子技能调用，[[AgentOS]]预览版亮相。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/hbZAEa6iQbq5rcUWbUi4?utm_source=rss&utm_medium=article",
+            "title_original": "vivo 把 Agent 做进操作系统：6000 多项原子技能开放调用，AgentOS 预览版亮相",
+            "excerpt": "点击查看原文>",
             "is_foreign": false
           },
           {
-            "title": "一加16曝光165Hz超高刷",
-            "summary": "一加16曝光165Hz超高刷，称能下载的应用都能开，搭载东方屏X4材料。",
-            "source": "IT之家",
-            "url": "https://www.ithome.com/1/003/386.htm",
-            "title_original": "行业首个，消息称一加 16 手机 165Hz 超高刷“能下载的应用都能开”",
-            "excerpt": "IT之家 9 月 17 日消息，博主 @数码闲聊站 今日曝光一加 16 手机 165Hz 超高刷设置界面，直接在系统设置里就能开。 据其爆料，新机搭载的东方屏 X4 发光材料、电路做了大升级，支持纯硬件级全局超高刷，实测不光是系统应用， 是能下载的应用都能开 。 IT之家注意到，该博主于 8 月 31 日曝光了一加 16 手机的屏幕核心新特性： BOE 独家定制的发光材料 X4 行业首个全局 165Hz 超高刷 全新工艺的自研显示芯片 行业唯一逐片三次校准 OPPO 最新明眸护眼技术 子系唯一极窄四等边 结合IT之家此前报道，消息称一加 16 将首发新一代东方屏，行业首个支持全局 165Hz 超高刷的屏幕。 新机出厂预装 Colo…",
+            "title": "第叁范式发布GPU电磁仿真软件",
+            "summary": "[[第叁范式]]发布国内首款GPU原生跨尺度系统级电磁仿真软件，让仿真走到设计前端。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/UZM5vKcN4CbNkPUS6Aid?utm_source=rss&utm_medium=article",
+            "title_original": "让仿真走到设计前端，第叁范式发布国内首款 GPU 原生跨尺度系统级电磁仿真软件",
+            "excerpt": "点击查看原文>",
             "is_foreign": false
           },
           {
-            "title": "岚图梦想家9试驾车到店",
-            "summary": "岚图梦想家9试驾车到店，9月22日上市，预售价42.99万元起，小订破3万台。",
+            "title": "AWS中东数据中心部分数据无法恢复",
+            "summary": "[[AWS]]中东数据中心遭袭后部分数据无法恢复，巴林多个可用区及阿联酋mec1-az2受影响。",
             "source": "IT之家",
-            "url": "https://www.ithome.com/1/003/378.htm",
-            "title_original": "岚图梦想家 9 试驾车到店：9 月 22 日上市，预售价 42.99 万元起",
-            "excerpt": "IT之家 9 月 17 日消息，岚图汽车今日宣布，岚图梦想家 9 试驾车到店，搭载岚图虎踞智能底盘 P。 IT之家注意到，岚图梦想家 9 将于 9 月 22 日正式上市，已于 9 月 5 日开启预售，共推出 5 款车型， 预售价 42.99 万元至 52.99 万元 。开启预售 48 小时小订突破 30000 台。 外观方面，新车配备 HUAWEI XPIXEL 双百万像素智慧投影大灯，前脸为扶摇直上龙鳞叠压式竖幅镀铬格栅，搭配鲲鹏展翅分体式贯穿大灯，内置北斗七星星芒灯光点阵。车身提供双拼色、定制腰线及多款式轮毂等选装方案。尺寸方面，长宽高分别为 5325/1998/1823mm， 轴距 3200mm 。新车全系标配双向 10°…",
+            "url": "https://www.ithome.com/1/003/761.htm",
+            "title_original": "亚马逊 AWS 中东数据中心遭袭后部分数据无法恢复，巴林和阿联酋受影响",
+            "excerpt": "IT之家 9 月 17 日消息，据路透社前天报道，亚马逊 AWS 中东服务器因战争打击损坏后，部分服务器数据无法恢复。 据报道，无法恢复的数据中心位于巴林、阿联酋。亚马逊 AWS 对此回应称，巴林地区损毁的数据中心涉及多个可用区（Availability Zone）。而在阿联酋，AWS 无法恢复 mec1-az2 可用区的数据。 据IT之家 3 月报道 ，亚马逊 AWS 位于阿联酋、巴林的三座数据中心遭到伊朗无人机袭击，导致部分服务中断。当时一名知情人士表示，AWS 服务中断影响了部分银行业务。 亚马逊表示，公司仍致力于为巴林、阿联酋客户提供技术支持。他们已在更换阿联酋基础服务设施，并将在未来几个月内公布进展。",
             "is_foreign": false
           },
           {
-            "title": "七彩虹上架140W智显充电器",
-            "summary": "七彩虹上架iGame御甲G114充电器，140W四口，199元，9月22日开售。",
+            "title": "特斯拉欧洲部署超百台兆瓦超充",
+            "summary": "[[特斯拉]]将在欧洲21个站点安装超100台Megacharger兆瓦级充电桩，为[[Semi]]半挂卡车交付铺路。",
             "source": "IT之家",
-            "url": "https://www.ithome.com/1/003/388.htm",
-            "title_original": "七彩虹上架 iGame 御甲 G114 智显充电器：140W 四口，199 元",
-            "excerpt": "IT之家 9 月 17 日消息，七彩虹 (Colorful) 现已在电商平台上架 iGame 御甲 G114 智显充电器。该产品定价 199 元，9 月 22 日 10:00 开售。 iGame 御甲 G114 支持 140W 功率 ，输入端采用折叠式两脚插头设计，输出端则包括 3 个 USB Type-C 和 1 个 USB Type-A，兼容 USB PD、PPS、SCP / FCP、Quick Charge 等主流快充协议。顶部的屏幕能显示总功率、功率分配、温度等信息。 其采用氮化镓 (GaN) 功率半导体，搭配有机硅凝胶灌封工艺，支持 20fps 高频测温和动态温度调节，集成 OTP、SCP、OCP、OVP、OPP 以及抗…",
+            "url": "https://www.ithome.com/1/003/755.htm",
+            "title_original": "特斯拉将在欧洲投放超百台兆瓦级超充桩，为 Semi 纯电半挂卡车交付铺路",
+            "excerpt": "IT之家 9 月 17 日消息，特斯拉 Semi 明年将进入欧洲市场并开始交付。与传统柴油卡车不同，纯电牵引车必须 配套大功率充电设施 ，才能真正具备使用价值。 据外媒 insideevs 今天（17 日）下午报道，为此，特斯拉已规划首批欧洲 兆瓦级充电桩 的布局。Semi 开发负责人丹 · 普里斯特利称，欧洲 21 个站点将安装 超过 100 台 Megacharger 充电桩 ，为新车上市提供支持。至于首轮部署何时完成，特斯拉尚未说明。 普里斯特利在今年汉诺威 IAA Transportation 展上的演讲展示了一页 PPT，内容显示，德国、法国、英国、瑞典、比利时、荷兰和卢森堡将率先获得特斯拉在欧洲部署的 兆瓦级充电桩 。…",
             "is_foreign": false
           }
         ]
@@ -190,75 +198,75 @@
         "desc": "中国零售与新消费品牌",
         "items": [
           {
-            "title": "网络食品销售风险管控清单发布",
-            "summary": "市场监管总局印发网络食品销售风险管控清单，聚焦直播电商等三类主体。",
+            "title": "美联储三年多来首次加息",
+            "summary": "[[美联储]]宣布加息25个基点至3.75%~4%，为2023年7月以来首次，市场关注加息持续时长。",
             "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10697996.shtml",
-            "title_original": "网络食品销售风险管控清单发布",
-            "excerpt": "记者今天了解到，市场监管总局印发网络食品销售相关《食品安全风险管控清单》，聚焦直播电商平台经营者、网络食品交易第三方平台提供者、入网食品销售企业三类主体，逐一明确风险控制环节、风险点、管控措施、管控目标和管控频次，为网络食品销售企业精准防控食品安全风险提供操作指南。这是市场监管总局落实《直播电商经营者落实食品安全主体责任监督管理规定》《网络食品销售经营者落实食品安全主体责任监督管理规定》两部部门规章的重要配套文件，标志着网络食品安全监管从“底线防守”向“精准防控”深化。",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698361.shtml",
+            "title_original": "（财经天下）美联储三年多来首次加息 市场更关心“加多久”",
+            "excerpt": "中新社北京9月17日电 (陶思阅)北京时间17日凌晨，美国联邦储备委员会(下称“美联储”)在货币政策会议后宣布，将联邦基金利率目标区间上调25个基点，到3.75%至4%，符合市场预期。这是美联储自2023年7月以来的首次加息动作。",
             "is_foreign": false
           },
           {
-            "title": "西南铁路推出两款通勤票",
-            "summary": "西南铁路推出川渝黔通勤往返票和月票，覆盖三地90座车站，原计次票下线。",
+            "title": "中国汽车全球化进入下半场",
+            "summary": "中国汽车出口连破百万、工厂落地海外，欧洲街头中国电动车渐多，全球化进入下半场。",
             "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698002.shtml",
-            "title_original": "西南铁路推出两款通勤票 覆盖川渝黔三地90座车站",
-            "excerpt": "中新网成都9月17日电 (记者 王鹏)记者16日从中国铁路成都局集团有限公司(以下简称国铁成都局)获悉，该公司管内西南铁路当日起正式推出“成铁优行·川渝黔通勤往返票”“成铁优行·川渝黔月票”两款新型通勤票，原有计次定期票同步下线。",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698359.shtml",
+            "title_original": "（经济观察）出口连破百万、工厂落地海外：中国汽车全球化进入下半场",
+            "excerpt": "中新社北京9月17日电 (记者 刘文文)在今天的欧洲街头，遇到一辆中国电动车，已经不算新鲜事。在巴黎的充电站旁，在柏林的车流里，越来越多中国车标驶过。",
             "is_foreign": false
           },
           {
-            "title": "文玩玉米走红社交平台",
-            "summary": "文玩玉米走红，社交平台话题浏览量超2亿，商品超1万件，价格9.9元至上万元。",
-            "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10697989.shtml",
-            "title_original": "9块9包邮到上万元一根 火出圈的文玩玉米能带动农户增收吗？",
-            "excerpt": "一根手指长的玉米，成了文玩圈的新热门。在社交平台上，相关话题浏览量已经超过2亿，相关商品数量显示超1万，这种玉米被叫作“文玩玉米”。",
+            "title": "资生堂起诉奥乐齐不正当竞争",
+            "summary": "[[资生堂]]以不正当竞争为由起诉[[奥乐齐]]中国，指其自有美妆品牌LACURA平替CPB隔离霜，代工厂与门店同列被告。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1582251.html",
+            "title_original": "文章频道 - 奥乐齐被告，反成最好的平替广告",
+            "excerpt": "奥乐齐并非不怕被告，而是这笔账怎么算都亏不了。 一、一场差价10倍的平替官司 靠“大牌平替”赚了不少关注的 奥乐齐 ，终于被大牌告上法庭了。 最近，行业媒体曝出消息： 资生堂（中国）投资有限公司以 \"不正当竞争纠纷\" 为由，将奥乐齐中国告上法庭。不止奥乐齐，产品代工厂科丽思化妆品（上海）有限公司、门店销售主体奥乐齐商业（上海）有限公司浦东第九分公司一并列为被告。也就是 从品牌到供应链到渠道，都告了。 至于为啥是“不正当竞争”，经常逛奥乐齐的消费者，应该多少知道点因由。 放个图—— 左边是奥乐齐的自有美妆品牌LACURA的\"柔光焕彩隔离霜\" 右边是资生堂旗下高端品牌CPB的长管隔离 深蓝色软管、金色包边管帽、金字排版—— 从瓶身到外…",
             "is_foreign": false
           },
           {
-            "title": "夏粮收购接近尾声",
-            "summary": "国家粮食和物资储备局称夏粮旺季收购接近尾声，秋粮收购准备基本就绪。",
-            "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10697980.shtml",
-            "title_original": "夏粮收购接近尾声 秋粮收购准备基本就绪",
-            "excerpt": "人民网北京9月16日电 (记者李栋)国家粮食和物资储备局最新发布数据，目前，夏粮旺季收购接近尾声，秋粮收购各项准备工作已基本就绪。",
+            "title": "二代豆包手机发布5499元起",
+            "summary": "二代[[豆包手机]]（努比亚NaviX Ultra）发布，国补后5499元起，京东预约近40万，主打AI智能体。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1582188.html",
+            "title_original": "文章频道 - 豆包手机，熹妃回宫",
+            "excerpt": "王者归来，更强了，也更贵了。 二代豆包手机（努比亚NaviX Ultra） 发布了，国补后 5499元 起。 去年还是惨遭“联合封杀”的落魄小主， 半年多过去，身价直接涨了2000多块，差不多翻了一倍。 再看看密密麻麻的功能，“全球首款AI智能体”手机的title， 我只能说，豆包在宫外，没少历练呐！ 新品发布会开始前， 京东端预约人数已经达到近40万 中兴努比亚还搞了波回忆杀，请“傻妞”做明星推荐官 搜了下《魔幻手机》已经是2008年的电视剧了 去年， 豆包手机 （努比亚M153工程技术版）惊艳亮相，也完成了什么是 GUI Agent（Graphical User Interface） 的科普。 GUI Agent可以简单理解为…",
             "is_foreign": false
           },
           {
-            "title": "四部门发文加快农业保险发展",
-            "summary": "四部门印发方案，明确2030年农业保险体系总体达到国际先进水平。",
-            "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697945.shtml",
-            "title_original": "中国四部门：2030年农业保险体系总体达到国际先进水平",
-            "excerpt": "中新社北京9月16日电 (记者 赵建华)中国财政部、农业农村部、国家金融监管总局、国家林草局等四部门近日联合印发《关于加快农业保险高质量发展的实施方案》(下称方案)。方案明确：到2030年，基本建成与农户风险保障需求相契合、与现代农业发展相适应、中央与地方分工负责的多层次农业保险体系，总体达到国际先进水平。",
+            "title": "Prada再度合作中国女足",
+            "summary": "[[Prada]]再度为中国国家女子足球队定制正装制服，助其出征9月19日开幕的爱知名古屋亚运会。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/377635.html",
+            "title_original": "项目频道 - Prada再度合作中国女足，美自有力量",
+            "excerpt": "2023年7月， Prada 为中国国家女子足球队提供正式场合和旅途着装。 今年，Prada又为她们定制了全新的正装制服， 助力她们出征即将于9月19日开幕的2026年日本爱知·名古屋亚运会。 这套全新制服以海军蓝斜纹布打造，采用单排两扣西装搭配利落剪裁的长裤。 外套以撞色线绣织就国家队凤标徽章，内搭红蓝条纹棉衬衫，尽显女足队员昂扬从容的气度。 伴随正装的发布，Prada同步释出了一组由队员及主教练集体出镜的时尚大片，并强调 “美自有力量”。 Prada让女足姑娘们用第一人称分享她们眼中的美—— “凌晨一点的夜空”、“平平淡淡”、“冬日旷野上与马群的凝望”。 这种从女性运动员个体视角出发的细腻表达，让铿锵玫瑰的形象更加立体、真实。…",
             "is_foreign": false
           },
           {
-            "title": "空客在华第二条总装线交付首架飞机",
-            "summary": "空客天津第二条总装线交付首架飞机，称将扩大中国产能服务中国市场。",
+            "title": "A股粮食板块逆势上涨",
+            "summary": "A股17日主要股指集体下跌，粮食概念板块逆势上涨，表现亮眼。",
             "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697907.shtml",
-            "title_original": "（投资中国）空客在华第二条总装线首架飞机交付：进一步扩大中国产能",
-            "excerpt": "中新社天津9月16日电 (记者 王梦瑶 周亚强)空中客车在中国天津的第二条总装线16日交付首架飞机。空客全球高级副总裁、空客中国首席运营官柏舒曼(Erik Buschmann)当天接受媒体采访时表示，公司通过构建第二条总装线扩大在中国产能，更好服务中国市场。",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698330.shtml",
+            "title_original": "A股粮食板块周四逆势上涨",
+            "excerpt": "中新社北京9月17日电 (记者 陈康亮)中国A股17日(周四)“遇冷”，主要股指集体下跌。粮食概念板块逆势上涨，表现亮眼。",
             "is_foreign": false
           },
           {
-            "title": "平陆运河建成通航",
-            "summary": "平陆运河建成通航，专家称将提升中国铝产业国际竞争力。",
+            "title": "扬州港风电设备出口破1500万立方米",
+            "summary": "扬州港风电设备出口总量突破1500万立方米，\"泰福\"轮载约8.6万立方米风电整机驶往土耳其。",
             "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697923.shtml",
-            "title_original": "专家称，平陆运河通航将提升中国铝产业国际竞争力",
-            "excerpt": "中新社昆明9月16日电 (记者 韩帅南)新中国成立以来首条国家层面统筹建设的通江达海运河——平陆运河16日建成通航。昆明理工大学卓越工程师学院常务副院长、云南省铝工业工程研究中心主任田阳当日接受采访时说，平陆运河的开通将进一步提升中国铝在国际市场上的综合竞争力。",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698290.shtml",
+            "title_original": "江苏扬州港风电设备出口总量突破1500万立方米",
+            "excerpt": "中新网扬州9月17日电 (徐珊珊 杨庆林)9月17日，扬州出入境边防检查站通报，9月16日下午4时许，利比里亚籍“泰福”轮满载10套共计约8.6万立方米风电整机，缓缓驶离扬州港码头，启程前往土耳其。至此，扬州港自2019年正式引入风电大件类货物以来，风电设备出口总量突破1500万立方米。",
             "is_foreign": false
           },
           {
-            "title": "A股开盘三大指数集体低开",
-            "summary": "A股开盘超3800只个股飘绿，三大指数集体低开，海运上涨，半导体等下跌。",
+            "title": "海南首台华龙一号机组投产商运",
+            "summary": "海南首个[[华龙一号]]核电机组——华能昌江核电二期3号机组正式投产商运，为华能首个控股大型压水堆。",
             "source": "中新网财经",
-            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698008.shtml",
-            "title_original": "A股开盘：超3800只个股飘绿，三大指数集体低开",
-            "excerpt": "A股开盘：超3800只个股飘绿，三大指数集体低开；贵金属、半导体、通信设备、农业下跌，海运上涨",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698316.shtml",
+            "title_original": "海南首台“华龙一号”核电机组投产商运",
+            "excerpt": "中新网海南昌江9月17日电 (陈英清)9月17日，海南首个“华龙一号”核电机组——华能昌江核电二期项目3号机组正式投产商运，这是中国华能首个控股建设的大型压水堆核电机组，也是中国华能继石岛湾高温气冷堆之后，打通三代压水堆商业化赛道，形成“四代高温堆示范+三代压水堆商运”核电发展格局，迈入控股建设运营、规模化发展新阶段的重大标志性成果。",
             "is_foreign": false
           }
         ]
@@ -271,112 +279,133 @@
         "desc": "过去 24 小时活跃的开源项目",
         "items": [
           {
-            "title": "unstablebuild/rune",
-            "url": "https://github.com/unstablebuild/rune",
-            "intro": "一个自带 AI 助手的编程工作台，让你在任何设备上接着写代码。",
+            "title": "eternityspring/reelbench-skills",
+            "url": "https://github.com/eternityspring/reelbench-skills",
+            "intro": "把一条成片拆成逐镜头分析表，还能生成带分镜信息的视频。",
             "features": [
-              "多台设备互相连接，随时接着干活",
-              "内置 AI 助手，可自动也可手动写代码",
-              "界面自由分屏，终端窗口随便开",
-              "支持安装社区插件扩展功能"
+              "自动拆解视频，列出每个镜头的时长和景别",
+              "生成可点击跳转的交互式拉片报告",
+              "把分镜信息叠在画面上，镜头切信息跟着切"
             ],
-            "guide": "在 macOS 或 Linux 的终端里运行一行安装脚本即可，装好后打开就能用；想自己改代码则需先装 Go 环境。",
-            "install": "curl -fsSL https://rune.build/install.sh | sh",
-            "summary": "一个自带 AI 助手的编程工作台，让你在任何设备上接着写代码。",
-            "source": "GitHub",
-            "stars": "749",
-            "language": "Go",
-            "is_new": true,
-            "title_original": "",
-            "excerpt": "the development environment for pros",
-            "is_foreign": true
-          },
-          {
-            "title": "XiaoDuoYa/codex-with-chatgpt",
-            "url": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
-            "intro": "让网页版 ChatGPT 负责出主意，Codex 负责动手写代码，省下 API 费用。",
-            "features": [
-              "用已付费的网页版 ChatGPT 做规划",
-              "代码仓库不会被上传，只读需要的部分",
-              "不用申请 API Key，也不用搭代理",
-              "把一段话发给 Codex 就能自动装好"
+            "guide": "需要先装 Node 18 以上和 ffmpeg，克隆仓库后运行安装脚本，软链到 Claude Code 或 Codex 的 skills 目录即可使用，不需要 API key。",
+            "steps": [
+              "安装 Node 18+ 和 ffmpeg",
+              "git clone https://github.com/eternityspring/reelbench-skills.git",
+              "cd reelbench-skills",
+              "./scripts/install.sh"
             ],
-            "guide": "不用懂 git 或终端，把 README 里那段安装说明原样复制发给 Codex，它会自动完成配置；前提是你已有 ChatGPT 付费订阅和 Codex。",
-            "install": "",
-            "summary": "让网页版 ChatGPT 负责出主意，Codex 负责动手写代码，省下 API 费用。",
+            "install": "git clone https://github.com/eternityspring/reelbench-skills.git",
+            "summary": "把一条成片拆成逐镜头分析表，还能生成带分镜信息的视频。",
             "source": "GitHub",
-            "stars": "4842",
-            "language": "TypeScript",
-            "is_new": true,
-            "title_original": "",
-            "excerpt": "ChatGPT thinks. Codex works. Use ChatGPT as the planning brain while keeping the Codex harness.",
-            "is_foreign": true
-          },
-          {
-            "title": "lissy93/dashy",
-            "url": "https://github.com/lissy93/dashy",
-            "intro": "给自己搭一个专属导航首页，把常用网站和服务集中在一页管理。",
-            "features": [
-              "实时显示各个网站是否正常在线",
-              "内置多种配色和图标，可自由换",
-              "支持搜索、快捷键和多页面",
-              "可加密码保护，防止别人乱看"
-            ],
-            "guide": "适合自己有一台服务器或 NAS 的人，用 Docker 或 Node 部署后浏览器打开即可；不装服务器也能用官方在线演示先体验。",
-            "install": "",
-            "summary": "给自己搭一个专属导航首页，把常用网站和服务集中在一页管理。",
-            "source": "GitHub",
-            "stars": "26489",
-            "language": "Vue",
-            "is_new": false,
-            "title_original": "",
-            "excerpt": "🚀 A self-hostable personal dashboard built for you. Includes status-checking, widgets, themes, icon packs, a UI editor and tons more!",
-            "is_foreign": true
-          },
-          {
-            "title": "firecrawl/firecrawl",
-            "url": "https://github.com/firecrawl/firecrawl",
-            "intro": "把网页内容抓下来变成干净文字，喂给 AI 用的工具。",
-            "features": [
-              "把任意网页转成整洁的 Markdown 文字",
-              "能抓取需要滚动、点击才显示的内容",
-              "支持搜索网页并直接拿到正文",
-              "可解析网页上的 PDF、Word 等文件"
-            ],
-            "guide": "既可以直接用官方在线服务，也可以自己部署；自己部署需要 Docker 环境，用官方服务则要申请一个 API Key。",
-            "install": "",
-            "summary": "把网页内容抓下来变成干净文字，喂给 AI 用的工具。",
-            "source": "GitHub",
-            "stars": "181327",
-            "language": "TypeScript",
-            "is_new": false,
-            "title_original": "",
-            "excerpt": "The web data API to search, scrape, and interact at scale. 🔥",
-            "is_foreign": true
-          },
-          {
-            "title": "f/prompts.chat",
-            "url": "https://github.com/f/prompts.chat",
-            "intro": "一个免费开放的 AI 提示词大全，帮你找到好用的提问模板。",
-            "features": [
-              "海量现成提示词，直接复制就能用",
-              "支持 ChatGPT、Claude、Gemini 等",
-              "可自己部署，数据完全留在内部",
-              "附赠一本免费提示词入门教程"
-            ],
-            "guide": "直接上官网浏览复制即可，无需安装；想让全公司内部使用，可以自己部署一份，需要 Node 环境。",
-            "install": "",
-            "summary": "一个免费开放的 AI 提示词大全，帮你找到好用的提问模板。",
-            "source": "GitHub",
-            "stars": "170492",
+            "stars": "715",
             "language": "HTML",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Learning notes and tooling skills for AI video - AI 视频相关的学习与工具 skill",
+            "is_foreign": true
+          },
+          {
+            "title": "crmne/spotifast",
+            "url": "https://github.com/crmne/spotifast",
+            "intro": "一个轻量的 Spotify 桌面客户端，听歌更省内存、启动更快。",
+            "features": [
+              "内存占用比官方客户端小很多",
+              "启动不到一秒，没有浏览器引擎",
+              "可当 Spotify Connect 设备，用手机遥控播放"
+            ],
+            "guide": "支持 Linux、macOS 和 Windows，安装包见官网 spotifast.rocks。播放需要 Spotify Premium 账号，免费账号只能浏览和搜索。",
+            "steps": [
+              "访问 spotifast.rocks 查看安装方式",
+              "安装对应系统的客户端",
+              "用 Spotify Premium 账号登录"
+            ],
+            "install": "",
+            "summary": "一个轻量的 Spotify 桌面客户端，听歌更省内存、启动更快。",
+            "source": "GitHub",
+            "stars": "4304",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Spotify, native and fast. One lightweight Rust app for your whole library, local playback, and Spotify Connect on Linux, macOS, and Windows.",
+            "is_foreign": true
+          },
+          {
+            "title": "plotly/dash",
+            "url": "https://github.com/plotly/dash",
+            "intro": "用 Python 就能做出带图表和交互的数据网页，不用写 JavaScript。",
+            "features": [
+              "下拉框、滑块、图表直接连到 Python 代码",
+              "支持约 50 种图表类型，包括地图",
+              "几十行代码就能搭出一个数据应用"
+            ],
+            "guide": "需要先装 Python，然后用 pip 安装 Dash 即可开始写应用，官方教程说五分钟能做出第一个应用。",
+            "steps": [
+              "先安装 Python",
+              "pip install dash",
+              "按官方教程写第一个应用"
+            ],
+            "install": "pip install dash",
+            "summary": "用 Python 就能做出带图表和交互的数据网页，不用写 JavaScript。",
+            "source": "GitHub",
+            "stars": "24409",
+            "language": "Python",
             "is_new": false,
             "title_original": "",
-            "excerpt": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+            "excerpt": "Data Apps & Dashboards for Python. No JavaScript Required.",
+            "is_foreign": true
+          },
+          {
+            "title": "huggingface/transformers",
+            "url": "https://github.com/huggingface/transformers",
+            "intro": "一个统一的模型工具箱，让各种 AI 模型都能用同一套方式调用。",
+            "features": [
+              "覆盖文字、图像、音频、视频等多种模型",
+              "同一套代码可换用不同模型",
+              "可对接主流训练和推理工具"
+            ],
+            "guide": "需要 Python 3.10 以上和 PyTorch 2.5 以上，建议先建虚拟环境再用 pip 安装，之后就能从模型库下载模型使用。",
+            "steps": [
+              "安装 Python 3.10+ 和 PyTorch 2.5+",
+              "python -m venv .my-env",
+              "pip install transformers"
+            ],
+            "install": "pip install transformers",
+            "summary": "一个统一的模型工具箱，让各种 AI 模型都能用同一套方式调用。",
+            "source": "GitHub",
+            "stars": "166287",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+            "is_foreign": true
+          },
+          {
+            "title": "AUTOMATIC1111/stable-diffusion-webui",
+            "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+            "intro": "在浏览器里用文字生成图片的网页界面，支持改图、扩图等操作。",
+            "features": [
+              "输入文字生成图片，也能拿图片改图片",
+              "支持扩图、局部重绘和草图上色",
+              "自带人脸修复和图片放大功能"
+            ],
+            "guide": "需要先装 Python 和 git，然后运行一键安装启动脚本，之后在浏览器里打开界面使用。",
+            "steps": [
+              "先安装 Python 和 git",
+              "克隆仓库到本地",
+              "运行一键安装启动脚本"
+            ],
+            "install": "",
+            "summary": "在浏览器里用文字生成图片的网页界面，支持改图、扩图等操作。",
+            "source": "GitHub",
+            "stars": "164987",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Stable Diffusion web UI",
             "is_foreign": true
           }
         ],
-        "lead": "从写代码到管服务器，这批工具帮普通人把 AI 和日常杂事理顺。"
+        "lead": "从视频拉片、听歌到做数据看板、跑 AI 模型，这批工具帮你把 AI 用起来。"
       }
     ]
   }
