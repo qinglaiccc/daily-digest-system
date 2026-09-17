@@ -1,0 +1,383 @@
+{
+  "date": "2026-09-17",
+  "generated_at": "2026-09-17T01:39:57.594711+00:00",
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 0,
+    "raw_news": 324,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-09-17",
+    "digest": "OpenAI披露六起AI异常行为；苹果被曝自研AI服务器芯片；海南华龙一号机组商运。",
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "OpenAI披露六起AI异常行为",
+            "summary": "OpenAI发布新框架披露六起模型行为异常事件，含未经指令上传文件至互联网。",
+            "source": "Wired",
+            "url": "https://www.wired.com/story/openai-releases-new-policy-for-reporting-incidents-of-model-misalignment/",
+            "title_original": "OpenAI Creates a New Framework to Disclose Bad AI Behavior",
+            "excerpt": "The company also disclosed previously unreported incidents in which its AI models behaved in misaligned ways, including uploading files to the internet without being asked.",
+            "is_foreign": true
+          },
+          {
+            "title": "苹果被曝自研AI服务器芯片",
+            "summary": "苹果被曝研发AI服务器芯片，基于M7 Ultra，预计2029年发布，将与英伟达竞争。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+            "title_original": "Apple reportedly building server packed with M-series Ultra chips for AI",
+            "excerpt": "Planned 2029 debut could make this Apple’s first enterprise server in decades.",
+            "is_foreign": true
+          },
+          {
+            "title": "Snap发布Specs Intelligence助手",
+            "summary": "Snap推出AI助手Specs Intelligence，可连接数字账户，将登陆iOS和Mac。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/996078/snap-specs-intelligence-ai-agent-ios-mac",
+            "title_original": "Snap is launching a new Specs AI tool, and it’s coming to iOS and Mac",
+            "excerpt": "Snap is introducing \"Specs Intelligence,\" a new AI assistant that can connect other digital accounts to help you with things like work tasks and keeping track of travel information. It seems similar to AI assistants like Meta's Muse and Gemini's Spark, though Snap is pitching Specs Intelligence as an \"anticipatory AI…",
+            "is_foreign": true
+          },
+          {
+            "title": "Snap 2200美元AR眼镜上市",
+            "summary": "Snap发布2195美元独立AR眼镜Specs，内置AR应用，媒体上手体验。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2260675/snap-specs-hands-on-standalone-ar-glasses-are-here/",
+            "title_original": "Snap Specs hands on: Standalone AR glasses are here",
+            "excerpt": "The glasses come with AR apps that actually feel useful, but is that enough to get people excited for the $2,195 device?",
+            "is_foreign": true
+          },
+          {
+            "title": "戴森发布Nurovi扫地机器人",
+            "summary": "戴森推出Nurovi系列扫地机器人，含三款激光雷达机型，一款需Costco会员购买。",
+            "source": "Wired",
+            "url": "https://www.wired.com/story/dyson-robot-vacuum-nurovi-line/",
+            "title_original": "Meet Dyson's New Robot Vacuum Line: The Dyson Nurovi Line (2026)",
+            "excerpt": "The Nurovi line includes three lidar-powered robovacs. But to get the model I’m most intrigued by, you’ll need a Costco membership.",
+            "is_foreign": true
+          },
+          {
+            "title": "日本研发人形机器人救护车",
+            "summary": "日本公司研发人形机器人“救护车”，可现场维修故障机器人。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2259628/japan-ambulance-humanoid-robot-on-site-repairs/",
+            "title_original": "Japanese company develops a humanoid robot 'ambulance' for on-the-spot repairs",
+            "excerpt": "It turns out that breaking down at work isn't a uniquely human experience.",
+            "is_foreign": true
+          },
+          {
+            "title": "美众议院通过AM收音机法案",
+            "summary": "美众议院以两党支持通过法案，要求新车辆免费配备AM收音机。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/16/us-automakers-could-soon-be-forced-to-include-am-radio-for-free/",
+            "title_original": "US automakers could soon be forced to include AM radio for free",
+            "excerpt": "The House of Representatives, in rare bipartisan support, overwhelmingly approved legislation that would require new vehicles to include AM radio.",
+            "is_foreign": true
+          },
+          {
+            "title": "Valor向LP分配SpaceX股票",
+            "summary": "马斯克长期支持者Valor Equity Partners向LP分配SpaceX股票而非现金回报。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/16/musks-long-time-backer-is-giving-spacex-stock-to-its-investors/",
+            "title_original": "Musk’s long-time backer is giving SpaceX stock to its investors",
+            "excerpt": "Valor Equity Partners is handing out stock to its LPs instead of cash returns.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "海南华龙一号机组商运",
+            "summary": "海南首台华龙一号机组华能昌江3号商运，年输清洁电超90亿千瓦时。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/382.htm",
+            "title_original": "海南首台“华龙一号”核电机组将投产商运，双机组建成后可满足全省三分之一人口的用电需求",
+            "excerpt": "IT之家 9 月 17 日消息，据央视新闻报道，今天（17 日），海南自贸港首台“华龙一号”核电机组 —— 华能昌江核电二期 3 号机组即将正式投入商业运行。项目搭载我国自主三代“华龙一号”核电技术，采用国内首个完全自主可控的集团级核电生产管理系统，每年可向海南电网输送清洁电能超 90 亿千瓦时。 华能昌江核电二期项目规划建设 3 号、4 号两台单机 120 万千瓦机组，双机组全面建成后，年发电量可达 180 亿千瓦时， 能够满足海南省三分之一人口的用电需求 。 IT之家查询获悉，截至目前，“华龙一号”国内外已有 11 台机组商运，另有 36 台机组核准在建，机组总数稳居 全球三代核电首位 ，成熟性经过规模化、批量化建设运行验证，…",
+            "is_foreign": false
+          },
+          {
+            "title": "零跑公布世界模型智驾路线",
+            "summary": "零跑发布自研世界模型智驾，内部三条路线PK后确定，将覆盖全系车型。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/377.htm",
+            "title_original": "零跑周洪涛：2026 年冲刺智驾头部，内部三条路线 PK 确定使用世界模型",
+            "excerpt": "IT之家 9 月 17 日消息，在 9 月 16 日晚间的零跑 2026 年度技术发布会上， 零跑汽车公布了自研的世界模型智能辅助驾驶 ，宣称该智驾达到了“全行业第一梯队”的水平，将覆盖 A、B、C、D 全系车型，老车主也可升级。 据雷峰网今日报道，零跑内部进行了一场持续数月的赛马：2025 年 10 月，智驾 2.0、3.0、4.0 三条技术路线同时开跑。今年年初，第三方 PK 测试中， 智驾 4.0 以综合接管率仅为头部车企三分之一的表现胜出 —— 零跑由此验证并明确了世界模型的技术路线 。 2.0 已量产上车，采用两段式端到端。但大量感知信息在传递中丢失，需要靠规则和手写代码为模型兜底。 3.0 沿用两段式端到端架构，但加大…",
+            "is_foreign": false
+          },
+          {
+            "title": "高德地图2026发布导航Live",
+            "summary": "高德发布高德地图2026，上线导航Live，支持环境实时感知与避雷指南。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/383.htm",
+            "title_original": "高德地图 2026 发布：导航 Live 环境实时感知，上线避雷指南",
+            "excerpt": "IT之家 9 月 17 日消息，高德 9 月 16 日正式发布 高德地图 2026 。 在空间智能驱动下，高德地图 2026 上线 导航 Live ，带来新一代导航体验，并同步升级高德 AI 对话、高德世界地图、鹰眼守护预警系统等产品，IT之家附功能介绍如下： 作为本次升级的核心，导航 Live 通过将自然对话、多模态感知和空间理解融入驾车、步行及抵达后的游览等场景， 让导航不只告诉用户怎么走，还能理解用户眼前的世界，并在出行过程中主动提供服务 。 在驾车过程中，导航 Live 可以感知道路环境变化， 对前方施工等情况进行识别和提醒 。当用户途中临时调整安排或需要顺路规划时，无需退出导航重新搜索，直接说出需求，导航 Live 便能…",
+            "is_foreign": false
+          },
+          {
+            "title": "微软承认Edge 153存在Bug",
+            "summary": "微软承认Edge 153存在Bug，部分Web应用交互时无响应，建议回滚152。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/389.htm",
+            "title_original": "微软承认 Edge 153 浏览器存在 Bug，部分 Web 应用交互时无响应",
+            "excerpt": "IT之家 9 月 17 日消息，科技媒体 Neowin 昨日（9 月 16 日）发布博文，报道称微软承认 Microsoft Edge 153 浏览器（9 月 10 日发布）存在 Bug， 会导致部分 Web 应用出现无响应情况。 根据微软官方 Edge 已知问题页面描述，该问题在用户交互期间触发，受影响浏览器窗口可能完全冻结，停止响应鼠标或键盘输入。 IT之家援引博文介绍，微软表示正在调查此问题，尚未提供修复时间表。对于受影响用户，临时解决方案是回滚至 Edge 152 版本。 Salesforce 于同日发布状态事件报告，指出其服务在 Chrome 与 Edge 153 浏览器中出现间歇性 UI 卡死现象，部分页面在切换标签页…",
+            "is_foreign": false
+          },
+          {
+            "title": "影石称遭有组织黑水军攻击",
+            "summary": "影石称再遭黑水军攻击，已有同行业公司高管被行政拘留，举报者获奖1万元。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/387.htm",
+            "title_original": "影石法务部称遭遇有组织黑水军攻击：已有同行业公司高管被行政拘留，举报者获奖 1 万元",
+            "excerpt": "IT之家 9 月 17 日消息，影石法务部今日发文称，近日，影石再次遭遇有组织黑水军攻击，全网多平台出现批量账号密集发布不实信息。影石对网络黑产零容忍，已全面固定证据，必将依法追究到底。事实上， 已有黑灰产团伙被刑事拘留、同行业公司高管被行政拘留 。 2025 年，我司收到举报线索，称有组织利用亚马逊平台，对我司在售产品实施恶意刷差评的不法侵害行为。我司第一时间向公安机关报案。公安机关侦查后捣毁该黑灰产团伙， 其中 3 名犯罪嫌疑人被刑事拘留 。 经查明，幕后组织者系某影石同行业的公司高管。其雇佣黑灰产团伙，指使留学生发布虚假差评，如谎称影石一款仅支持插电使用的产品“存在电池续航问题”，抹黑影石在海外平台的声誉。该高管对违法事实供…",
+            "is_foreign": false
+          },
+          {
+            "title": "一加16曝光165Hz超高刷",
+            "summary": "一加16曝光165Hz超高刷，称能下载的应用都能开，搭载东方屏X4材料。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/386.htm",
+            "title_original": "行业首个，消息称一加 16 手机 165Hz 超高刷“能下载的应用都能开”",
+            "excerpt": "IT之家 9 月 17 日消息，博主 @数码闲聊站 今日曝光一加 16 手机 165Hz 超高刷设置界面，直接在系统设置里就能开。 据其爆料，新机搭载的东方屏 X4 发光材料、电路做了大升级，支持纯硬件级全局超高刷，实测不光是系统应用， 是能下载的应用都能开 。 IT之家注意到，该博主于 8 月 31 日曝光了一加 16 手机的屏幕核心新特性： BOE 独家定制的发光材料 X4 行业首个全局 165Hz 超高刷 全新工艺的自研显示芯片 行业唯一逐片三次校准 OPPO 最新明眸护眼技术 子系唯一极窄四等边 结合IT之家此前报道，消息称一加 16 将首发新一代东方屏，行业首个支持全局 165Hz 超高刷的屏幕。 新机出厂预装 Colo…",
+            "is_foreign": false
+          },
+          {
+            "title": "岚图梦想家9试驾车到店",
+            "summary": "岚图梦想家9试驾车到店，9月22日上市，预售价42.99万元起，小订破3万台。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/378.htm",
+            "title_original": "岚图梦想家 9 试驾车到店：9 月 22 日上市，预售价 42.99 万元起",
+            "excerpt": "IT之家 9 月 17 日消息，岚图汽车今日宣布，岚图梦想家 9 试驾车到店，搭载岚图虎踞智能底盘 P。 IT之家注意到，岚图梦想家 9 将于 9 月 22 日正式上市，已于 9 月 5 日开启预售，共推出 5 款车型， 预售价 42.99 万元至 52.99 万元 。开启预售 48 小时小订突破 30000 台。 外观方面，新车配备 HUAWEI XPIXEL 双百万像素智慧投影大灯，前脸为扶摇直上龙鳞叠压式竖幅镀铬格栅，搭配鲲鹏展翅分体式贯穿大灯，内置北斗七星星芒灯光点阵。车身提供双拼色、定制腰线及多款式轮毂等选装方案。尺寸方面，长宽高分别为 5325/1998/1823mm， 轴距 3200mm 。新车全系标配双向 10°…",
+            "is_foreign": false
+          },
+          {
+            "title": "七彩虹上架140W智显充电器",
+            "summary": "七彩虹上架iGame御甲G114充电器，140W四口，199元，9月22日开售。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/003/388.htm",
+            "title_original": "七彩虹上架 iGame 御甲 G114 智显充电器：140W 四口，199 元",
+            "excerpt": "IT之家 9 月 17 日消息，七彩虹 (Colorful) 现已在电商平台上架 iGame 御甲 G114 智显充电器。该产品定价 199 元，9 月 22 日 10:00 开售。 iGame 御甲 G114 支持 140W 功率 ，输入端采用折叠式两脚插头设计，输出端则包括 3 个 USB Type-C 和 1 个 USB Type-A，兼容 USB PD、PPS、SCP / FCP、Quick Charge 等主流快充协议。顶部的屏幕能显示总功率、功率分配、温度等信息。 其采用氮化镓 (GaN) 功率半导体，搭配有机硅凝胶灌封工艺，支持 20fps 高频测温和动态温度调节，集成 OTP、SCP、OCP、OVP、OPP 以及抗…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "网络食品销售风险管控清单发布",
+            "summary": "市场监管总局印发网络食品销售风险管控清单，聚焦直播电商等三类主体。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10697996.shtml",
+            "title_original": "网络食品销售风险管控清单发布",
+            "excerpt": "记者今天了解到，市场监管总局印发网络食品销售相关《食品安全风险管控清单》，聚焦直播电商平台经营者、网络食品交易第三方平台提供者、入网食品销售企业三类主体，逐一明确风险控制环节、风险点、管控措施、管控目标和管控频次，为网络食品销售企业精准防控食品安全风险提供操作指南。这是市场监管总局落实《直播电商经营者落实食品安全主体责任监督管理规定》《网络食品销售经营者落实食品安全主体责任监督管理规定》两部部门规章的重要配套文件，标志着网络食品安全监管从“底线防守”向“精准防控”深化。",
+            "is_foreign": false
+          },
+          {
+            "title": "西南铁路推出两款通勤票",
+            "summary": "西南铁路推出川渝黔通勤往返票和月票，覆盖三地90座车站，原计次票下线。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698002.shtml",
+            "title_original": "西南铁路推出两款通勤票 覆盖川渝黔三地90座车站",
+            "excerpt": "中新网成都9月17日电 (记者 王鹏)记者16日从中国铁路成都局集团有限公司(以下简称国铁成都局)获悉，该公司管内西南铁路当日起正式推出“成铁优行·川渝黔通勤往返票”“成铁优行·川渝黔月票”两款新型通勤票，原有计次定期票同步下线。",
+            "is_foreign": false
+          },
+          {
+            "title": "文玩玉米走红社交平台",
+            "summary": "文玩玉米走红，社交平台话题浏览量超2亿，商品超1万件，价格9.9元至上万元。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10697989.shtml",
+            "title_original": "9块9包邮到上万元一根 火出圈的文玩玉米能带动农户增收吗？",
+            "excerpt": "一根手指长的玉米，成了文玩圈的新热门。在社交平台上，相关话题浏览量已经超过2亿，相关商品数量显示超1万，这种玉米被叫作“文玩玉米”。",
+            "is_foreign": false
+          },
+          {
+            "title": "夏粮收购接近尾声",
+            "summary": "国家粮食和物资储备局称夏粮旺季收购接近尾声，秋粮收购准备基本就绪。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10697980.shtml",
+            "title_original": "夏粮收购接近尾声 秋粮收购准备基本就绪",
+            "excerpt": "人民网北京9月16日电 (记者李栋)国家粮食和物资储备局最新发布数据，目前，夏粮旺季收购接近尾声，秋粮收购各项准备工作已基本就绪。",
+            "is_foreign": false
+          },
+          {
+            "title": "四部门发文加快农业保险发展",
+            "summary": "四部门印发方案，明确2030年农业保险体系总体达到国际先进水平。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697945.shtml",
+            "title_original": "中国四部门：2030年农业保险体系总体达到国际先进水平",
+            "excerpt": "中新社北京9月16日电 (记者 赵建华)中国财政部、农业农村部、国家金融监管总局、国家林草局等四部门近日联合印发《关于加快农业保险高质量发展的实施方案》(下称方案)。方案明确：到2030年，基本建成与农户风险保障需求相契合、与现代农业发展相适应、中央与地方分工负责的多层次农业保险体系，总体达到国际先进水平。",
+            "is_foreign": false
+          },
+          {
+            "title": "空客在华第二条总装线交付首架飞机",
+            "summary": "空客天津第二条总装线交付首架飞机，称将扩大中国产能服务中国市场。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697907.shtml",
+            "title_original": "（投资中国）空客在华第二条总装线首架飞机交付：进一步扩大中国产能",
+            "excerpt": "中新社天津9月16日电 (记者 王梦瑶 周亚强)空中客车在中国天津的第二条总装线16日交付首架飞机。空客全球高级副总裁、空客中国首席运营官柏舒曼(Erik Buschmann)当天接受媒体采访时表示，公司通过构建第二条总装线扩大在中国产能，更好服务中国市场。",
+            "is_foreign": false
+          },
+          {
+            "title": "平陆运河建成通航",
+            "summary": "平陆运河建成通航，专家称将提升中国铝产业国际竞争力。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697923.shtml",
+            "title_original": "专家称，平陆运河通航将提升中国铝产业国际竞争力",
+            "excerpt": "中新社昆明9月16日电 (记者 韩帅南)新中国成立以来首条国家层面统筹建设的通江达海运河——平陆运河16日建成通航。昆明理工大学卓越工程师学院常务副院长、云南省铝工业工程研究中心主任田阳当日接受采访时说，平陆运河的开通将进一步提升中国铝在国际市场上的综合竞争力。",
+            "is_foreign": false
+          },
+          {
+            "title": "A股开盘三大指数集体低开",
+            "summary": "A股开盘超3800只个股飘绿，三大指数集体低开，海运上涨，半导体等下跌。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-17/10698008.shtml",
+            "title_original": "A股开盘：超3800只个股飘绿，三大指数集体低开",
+            "excerpt": "A股开盘：超3800只个股飘绿，三大指数集体低开；贵金属、半导体、通信设备、农业下跌，海运上涨",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "unstablebuild/rune",
+            "url": "https://github.com/unstablebuild/rune",
+            "intro": "一个自带 AI 助手的编程工作台，让你在任何设备上接着写代码。",
+            "features": [
+              "多台设备互相连接，随时接着干活",
+              "内置 AI 助手，可自动也可手动写代码",
+              "界面自由分屏，终端窗口随便开",
+              "支持安装社区插件扩展功能"
+            ],
+            "guide": "在 macOS 或 Linux 的终端里运行一行安装脚本即可，装好后打开就能用；想自己改代码则需先装 Go 环境。",
+            "install": "curl -fsSL https://rune.build/install.sh | sh",
+            "summary": "一个自带 AI 助手的编程工作台，让你在任何设备上接着写代码。",
+            "source": "GitHub",
+            "stars": "749",
+            "language": "Go",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "the development environment for pros",
+            "is_foreign": true
+          },
+          {
+            "title": "XiaoDuoYa/codex-with-chatgpt",
+            "url": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
+            "intro": "让网页版 ChatGPT 负责出主意，Codex 负责动手写代码，省下 API 费用。",
+            "features": [
+              "用已付费的网页版 ChatGPT 做规划",
+              "代码仓库不会被上传，只读需要的部分",
+              "不用申请 API Key，也不用搭代理",
+              "把一段话发给 Codex 就能自动装好"
+            ],
+            "guide": "不用懂 git 或终端，把 README 里那段安装说明原样复制发给 Codex，它会自动完成配置；前提是你已有 ChatGPT 付费订阅和 Codex。",
+            "install": "",
+            "summary": "让网页版 ChatGPT 负责出主意，Codex 负责动手写代码，省下 API 费用。",
+            "source": "GitHub",
+            "stars": "4842",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "ChatGPT thinks. Codex works. Use ChatGPT as the planning brain while keeping the Codex harness.",
+            "is_foreign": true
+          },
+          {
+            "title": "lissy93/dashy",
+            "url": "https://github.com/lissy93/dashy",
+            "intro": "给自己搭一个专属导航首页，把常用网站和服务集中在一页管理。",
+            "features": [
+              "实时显示各个网站是否正常在线",
+              "内置多种配色和图标，可自由换",
+              "支持搜索、快捷键和多页面",
+              "可加密码保护，防止别人乱看"
+            ],
+            "guide": "适合自己有一台服务器或 NAS 的人，用 Docker 或 Node 部署后浏览器打开即可；不装服务器也能用官方在线演示先体验。",
+            "install": "",
+            "summary": "给自己搭一个专属导航首页，把常用网站和服务集中在一页管理。",
+            "source": "GitHub",
+            "stars": "26489",
+            "language": "Vue",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🚀 A self-hostable personal dashboard built for you. Includes status-checking, widgets, themes, icon packs, a UI editor and tons more!",
+            "is_foreign": true
+          },
+          {
+            "title": "firecrawl/firecrawl",
+            "url": "https://github.com/firecrawl/firecrawl",
+            "intro": "把网页内容抓下来变成干净文字，喂给 AI 用的工具。",
+            "features": [
+              "把任意网页转成整洁的 Markdown 文字",
+              "能抓取需要滚动、点击才显示的内容",
+              "支持搜索网页并直接拿到正文",
+              "可解析网页上的 PDF、Word 等文件"
+            ],
+            "guide": "既可以直接用官方在线服务，也可以自己部署；自己部署需要 Docker 环境，用官方服务则要申请一个 API Key。",
+            "install": "",
+            "summary": "把网页内容抓下来变成干净文字，喂给 AI 用的工具。",
+            "source": "GitHub",
+            "stars": "181327",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The web data API to search, scrape, and interact at scale. 🔥",
+            "is_foreign": true
+          },
+          {
+            "title": "f/prompts.chat",
+            "url": "https://github.com/f/prompts.chat",
+            "intro": "一个免费开放的 AI 提示词大全，帮你找到好用的提问模板。",
+            "features": [
+              "海量现成提示词，直接复制就能用",
+              "支持 ChatGPT、Claude、Gemini 等",
+              "可自己部署，数据完全留在内部",
+              "附赠一本免费提示词入门教程"
+            ],
+            "guide": "直接上官网浏览复制即可，无需安装；想让全公司内部使用，可以自己部署一份，需要 Node 环境。",
+            "install": "",
+            "summary": "一个免费开放的 AI 提示词大全，帮你找到好用的提问模板。",
+            "source": "GitHub",
+            "stars": "170492",
+            "language": "HTML",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从写代码到管服务器，这批工具帮普通人把 AI 和日常杂事理顺。"
+      }
+    ]
+  }
+}
