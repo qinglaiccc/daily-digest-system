@@ -27,6 +27,7 @@ from datetime import datetime, timedelta, timezone
 import config
 import fetcher
 import notifier
+import obsidian
 import renderer
 import summarizer
 
@@ -221,7 +222,7 @@ def test_normalize_result() -> None:
         },
     }
 
-    sections, digest, dropped = summarizer.normalize_news_result(raw, guard, today)
+    sections, digest, dropped, keywords = summarizer.normalize_news_result(raw, guard, today)
     by_key = {s["key"]: s["items"] for s in sections}
 
     check("新闻部分为四个板块", len(sections) == 4, str(len(sections)))
@@ -588,7 +589,7 @@ def test_language_modes() -> None:
             ]
         },
     }
-    sections, _, _ = summarizer.normalize_news_result(raw, guard, summarizer.today_local())
+    sections, _, _, _ = summarizer.normalize_news_result(raw, guard, summarizer.today_local())
     item = next(s for s in sections if s["key"] == "intl_tech")["items"][0]
 
     check("携带原文标题", item["title_original"] == "OpenAI 发布新一代推理模型", item["title_original"])
@@ -624,7 +625,7 @@ def test_language_modes() -> None:
             ]
         },
     }
-    secs_en, _, _ = summarizer.normalize_news_result(raw_en, guard_en, summarizer.today_local())
+    secs_en, _, _, _ = summarizer.normalize_news_result(raw_en, guard_en, summarizer.today_local())
     item_en = next(s for s in secs_en if s["key"] == "intl_tech")["items"][0]
     check("英文源判定为外文", item_en["is_foreign"] is True)
     check("英文原文标题被保留", item_en["title_original"].startswith("OpenAI ships"))
@@ -1142,6 +1143,7 @@ def test_idempotent_guard() -> None:
         config.OUTPUT_HTML,
         config.HISTORY_MANIFEST,
         config.RAW_DUMP_PATH,
+        config.OBSIDIAN_DIR,
     )
     tmp = pathlib.Path(tempfile.mkdtemp(prefix="digest-guard-"))
     try:
@@ -1150,6 +1152,9 @@ def test_idempotent_guard() -> None:
         config.OUTPUT_HTML = config.DIST_DIR / "index.html"
         config.HISTORY_MANIFEST = config.DIST_DIR / "history.json"
         config.RAW_DUMP_PATH = config.DIST_DIR / "_raw.json"
+        # main() 里含 Obsidian 导出阶段，这个目录必须一起重定向，
+        # 否则 main([]) 会把测试用的假数据写进真实的 obsidian/ 知识库目录。
+        config.OBSIDIAN_DIR = tmp / "obsidian"
         config.ARCHIVE_DIR.mkdir(parents=True)
 
         today = summarizer.today_local().isoformat()
@@ -1195,6 +1200,10 @@ def test_idempotent_guard() -> None:
         check("命中闸门时 main() 返回 0", code == 0, f"返回码 {code}")
         check("命中闸门时已生成 dist/index.html", config.OUTPUT_HTML.exists())
         check("命中闸门时未回写存档", before == archive_file.read_text(encoding="utf-8"))
+        check(
+            "命中闸门时仍导出了 Obsidian 笔记",
+            obsidian.markdown_path(today).exists(),
+        )
     finally:
         (
             config.ARCHIVE_DIR,
@@ -1202,14 +1211,304 @@ def test_idempotent_guard() -> None:
             config.OUTPUT_HTML,
             config.HISTORY_MANIFEST,
             config.RAW_DUMP_PATH,
+            config.OBSIDIAN_DIR,
         ) = original
         shutil.rmtree(tmp, ignore_errors=True)
+
+
+def _make_wikilink_report() -> dict:
+    """
+    造一份"模型真实返回"的 report：带双链、脏关键词、自带前缀的部署步骤。
+
+    故意不手写 report，而是走 normalize_news_result / normalize_github_result 这两条
+    真实链路，这样测的是端到端行为（含关键词消毒与 steps 前缀清洗），而不是渲染器的假设。
+    """
+    news = make_news()
+    repos = make_repos()
+    guard = summarizer.UrlGuard(news, repos)
+    today = summarizer.today_local()
+
+    raw_news = {
+        "date": today.isoformat(),
+        "digest": "[[OpenAI]] 发布新推理模型，国内厂商跟进 3nm 芯片。",
+        # 故意混入：空串 / None / 纯数字 / 重复项 / 带方括号 / 带空格 —— 全部要被消毒
+        "keywords": ["OpenAI", "大模型", "3nm 芯片", "", None, "12", "OpenAI", "[[Anthropic]]"],
+        "sections": {
+            "intl_tech": [
+                {
+                    "title": "OpenAI 发布新推理模型",
+                    "summary": "[[OpenAI]] 发布新一代推理模型，并宣布与 [[Microsoft]] 扩大合作，推理成本下降约 40%。",
+                    "source": "TechCrunch",
+                    "url": "https://techcrunch.com/2026/09/13/openai-new-model/",
+                }
+            ],
+            "cn_tech": [
+                {
+                    "title": "某国内厂商发布新款芯片",
+                    "summary": "该芯片采用 [[3nm]] 工艺，与 [[台积电]] 合作量产。",
+                    "source": "IT之家",
+                    "url": "https://www.ithome.com/0/800/123.htm",
+                }
+            ],
+        },
+    }
+    raw_gh = {
+        "digest_repos": "这批项目聚焦 [[AI Agent]] 与自动化。",
+        "repos": [
+            {
+                "repo": "example/cool-agent",
+                "url": "https://github.com/example/cool-agent",
+                "intro": "帮你把重复流程交给 AI 自动跑的框架。",
+                "features": ["拖拽式编排流程", "内置常用工具连接器"],
+                "guide": "需要先装 Node 18 与 Docker，然后克隆仓库本地启动。",
+                # 故意自带各种清单前缀，渲染时必须被清掉，否则会出现 "- [ ] - [ ] xxx"
+                "steps": [
+                    "- [ ] 先安装 Node 18 与 Docker Desktop",
+                    "npm install -g cool-agent",
+                    "[x] cool-agent init",
+                ],
+                "install": "npm install -g cool-agent",
+            }
+        ],
+    }
+
+    secs, digest, _, keywords = summarizer.normalize_news_result(raw_news, guard, today)
+    gh_items, gh_lead, _ = summarizer.normalize_github_result(raw_gh, repos, guard)
+    github_def = next(s for s in config.SECTION_DEFS if s["key"] == "github")
+
+    return {
+        "date": today.isoformat(),
+        "digest": digest,
+        "keywords": keywords,
+        "sections": secs + [{**github_def, "items": gh_items, "lead": gh_lead}],
+    }
+
+
+def test_obsidian_export() -> None:
+    """
+    Obsidian 导出：YAML 前置区 / 双链 / 待办清单，
+    以及最关键的一条 —— 双链绝不能泄漏到网页与邮件里。
+    """
+    print("\n[16] Obsidian 导出与双链隔离")
+
+    import shutil
+    import tempfile
+
+    # ---- 双链工具本身 ----
+    check("双链还原成纯文本", obsidian.strip_wikilinks("[[A]] 与 [[B|显示]]") == "A 与 显示")
+    check(
+        "截断残留的孤立双链被清掉",
+        obsidian.strip_wikilinks("[[Anthrop…") == "Anthrop…",
+        repr(obsidian.strip_wikilinks("[[Anthrop…")),
+    )
+    check("普通文本不受影响", obsidian.strip_wikilinks("今天天气不错") == "今天天气不错")
+    check("repair 保留合法双链", obsidian.repair_wikilinks("[[A]] 与 [[B") == "[[A]] 与 B")
+    # repair 用的是"找不到闭合才动手"的保守策略，所以不会误伤 Markdown 链接里的 ]]
+    check(
+        "repair 不误伤 markdown 链接",
+        obsidian.repair_wikilinks("[见 [1]](https://x.com)") == "[见 [1]](https://x.com)",
+    )
+
+    # ---- 关键词消毒 ----
+    check("双链关键词被拆成实体名", obsidian.sanitize_tag("[[Anthropic]]") == "Anthropic")
+    check("空格归一成连字符", obsidian.sanitize_tag("machine learning") == "machine-learning")
+    check("冒号被清掉（否则会毁掉 frontmatter）", ":" not in obsidian.sanitize_tag("a: b"))
+    check("换行被清掉", "\n" not in obsidian.sanitize_tag("foo\nbar"))
+    check("纯数字标签被拒绝", obsidian.sanitize_tag("2026") == "")
+    check("纯符号标签被拒绝", obsidian.sanitize_tag("---") == "")
+
+    report = _make_wikilink_report()
+    check(
+        "脏关键词被逐项消毒",
+        report["keywords"] == ["OpenAI", "大模型", "3nm-芯片", "Anthropic"],
+        str(report["keywords"]),
+    )
+
+    # ---- Markdown 结构 ----
+    md = obsidian.render_markdown(report, {})
+    check("以 YAML 前置区开头", md.startswith("---\n"))
+    check(
+        "五大板块都用 # 一级标题",
+        sum(1 for line in md.splitlines() if line.startswith("# ")) == 5,
+        str(sum(1 for line in md.splitlines() if line.startswith("# "))),
+    )
+    check("新闻使用加粗标题", "**OpenAI 发布新推理模型**" in md)
+    check("来源是超链接", "](https://techcrunch.com/" in md)
+    check("双链在 Markdown 里被保留", md.count("[[") >= 3, str(md.count("[[")))
+    check("部署步骤用待办清单语法", "- [ ] 先安装 Node 18 与 Docker Desktop" in md)
+    check(
+        "待办清单没有叠加前缀",
+        "- [ ] - [ ]" not in md and "- [ ] [ ]" not in md and "[x]" not in md,
+    )
+    check("install 已在清单里就不再重复贴代码块", "```bash" not in md)
+    check("星标与语言出现在项目元信息行", "★1.2k · Python" in md)
+
+    # ---- YAML 前置区：结构与注入防护 ----
+    frontmatter = md.split("---", 2)[1]
+    expected_tags = obsidian.normalize_tags(report["keywords"])
+    check("固定标签排在前面", expected_tags[:2] == ["早报", "AI"], str(expected_tags[:2]))
+    check(
+        "tags 用块序列书写",
+        len([l for l in frontmatter.splitlines() if l.startswith("  - ")]) == len(expected_tags),
+    )
+    check("title 是「每日早报-日期」", f"title: 每日早报-{report['date']}" in frontmatter)
+    check("date 字段存在", f"date: {report['date']}" in frontmatter)
+
+    # 恶意关键词：把能破坏 YAML 的字符全塞进去
+    evil = dict(report)
+    evil["keywords"] = [
+        "foo\nbar: baz", "---", "a: b", "12", "x" * 100,
+        'quo"te', "semi;colon", "[bracket]", "back`tick",
+    ]
+    evil_tags = obsidian.normalize_tags(evil["keywords"])
+    forbidden = set(':#[]{}&*!|>%@`"\' \n\t,')
+    check(
+        "恶意关键词被消毒到不含任何 YAML 危险字符",
+        all(not (forbidden & set(tag)) for tag in evil_tags) and len(evil_tags) == 7,
+        str(evil_tags),
+    )
+    evil_md = obsidian.render_markdown(evil, {})
+    evil_fm = evil_md.split("---", 2)[1]
+    check(
+        "前置区的每一行都是结构化的（没有被换行注入撑破）",
+        all(
+            line.startswith("  - ") or ":" in line
+            for line in evil_fm.splitlines()
+            if line.strip()
+        ),
+        repr(evil_fm[:120]),
+    )
+
+    # PyYAML 可用时再做一次真实往返解析（它不在 requirements 里，所以做可选加强）
+    try:
+        import yaml  # type: ignore
+    except ImportError:
+        print("  [SKIP] 未安装 PyYAML，跳过真实解析往返（不影响前置区结构断言）")
+    else:
+        parsed = yaml.safe_load(evil_fm)
+        check("PyYAML 能解析恶意前置区", isinstance(parsed, dict), str(type(parsed)))
+        check(
+            "解析回来的 tags 是干净的字符串列表",
+            isinstance(parsed, dict) and all(isinstance(t, str) for t in parsed.get("tags", [])),
+        )
+        good = yaml.safe_load(frontmatter)
+        check(
+            "正常前置区的 tags 与预期一致",
+            isinstance(good, dict) and good.get("tags") == expected_tags,
+            str(good.get("tags") if isinstance(good, dict) else good),
+        )
+
+    # ---- 旧存档兼容：没有 steps 字段的往期也要有待办清单 ----
+    legacy = json.loads(json.dumps(report))
+    for section in legacy["sections"]:
+        if section["key"] == "github":
+            for item in section["items"]:
+                item.pop("steps", None)
+    md_legacy = obsidian.render_markdown(legacy, {})
+    check("旧存档（无 steps）退化成可勾选的安装命令", "- [ ] npm install -g cool-agent" in md_legacy)
+    check("旧存档里 install 仍保留代码块", "```bash" in md_legacy)
+
+    # ---- 降级报告也要能导出 ----
+    degraded = summarizer.build_fallback_result(
+        make_news(), make_repos(), summarizer.today_local(), "自检"
+    )
+    md_degraded = obsidian.render_markdown(degraded, {})
+    check("降级报告也能生成 Markdown", md_degraded.startswith("---\n") and "# " in md_degraded)
+    check("降级报告有醒目提示", "降级" in md_degraded)
+
+    # ---- 双链不得泄漏到网页与邮件 ----
+    subject = notifier.build_subject(report)
+    plain = notifier.build_plain_text(report, "https://example.com/")
+    mail_html = notifier.build_html(report, "https://example.com/")
+    check("邮件主题无双链", "[[" not in subject)
+    check("纯文本邮件无双链", "[[" not in plain and "]]" not in plain)
+    check("HTML 邮件无双链", "[[" not in mail_html and "]]" not in mail_html)
+    check("邮件里实体被还原成纯文本而非删掉", "OpenAI" in plain)
+
+    original = (
+        config.ARCHIVE_DIR,
+        config.DIST_DIR,
+        config.OUTPUT_HTML,
+        config.HISTORY_MANIFEST,
+        config.OBSIDIAN_DIR,
+    )
+    tmp = pathlib.Path(tempfile.mkdtemp(prefix="digest-obsidian-"))
+    try:
+        config.ARCHIVE_DIR = tmp / "archive"
+        config.DIST_DIR = tmp / "dist"
+        config.OUTPUT_HTML = config.DIST_DIR / "index.html"
+        config.HISTORY_MANIFEST = config.DIST_DIR / "history.json"
+        config.OBSIDIAN_DIR = tmp / "obsidian"
+
+        renderer.save_archive(report, STATS)
+        renderer.render_site(report, STATS)
+        page = config.OUTPUT_HTML.read_text(encoding="utf-8")
+        check("网页里没有双链残留", page.count("[[") == 0 and page.count("]]") == 0)
+        check("网页里实体被还原成纯文本", "OpenAI 发布新一代推理模型" in page)
+
+        manifest = config.HISTORY_MANIFEST.read_text(encoding="utf-8")
+        check("history.json 里没有双链", "[[" not in manifest)
+
+        archive_page = (config.DIST_DIR / "archive" / f"{report['date']}.html").read_text(
+            encoding="utf-8"
+        )
+        check("往期页面里也没有双链", archive_page.count("[[") == 0)
+
+        # 批量导出（main.py 走的就是这条路径）
+        written = obsidian.save_all(renderer.load_archive())
+        target = obsidian.markdown_path(report["date"])
+        check("批量导出写出了当天笔记", written == 1 and target.exists(), f"{written} 篇")
+        check("落盘内容与纯函数输出一致", target.read_text(encoding="utf-8") == md)
+        check("笔记文件名是 YYYY-MM-DD.md", target.name == f"{report['date']}.md")
+
+        # 路径穿越防护：畸形日期必须被拒绝，不能写到 obsidian/ 外面
+        try:
+            obsidian.markdown_path("../evil")
+            rejected = False
+        except ValueError:
+            rejected = True
+        check("畸形日期被拒绝写入", rejected)
+    finally:
+        (
+            config.ARCHIVE_DIR,
+            config.DIST_DIR,
+            config.OUTPUT_HTML,
+            config.HISTORY_MANIFEST,
+            config.OBSIDIAN_DIR,
+        ) = original
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
+def _snapshot_workspace() -> dict:
+    """
+    给真实产物目录拍快照（文件名 -> 大小 + mtime）。
+
+    自检全程都必须把输出重定向到临时目录。一旦哪个用例忘了改 config，就会把
+    测试假数据写进真实的 dist/ archive/ obsidian/ —— 这个坑踩过两次了
+    （一次把假首页写进 dist/，一次把假笔记写进 obsidian/，后者会被当成真早报
+    提交进仓库、同步进知识库）。所以在末尾做一次终检把它钉死。
+    """
+    snapshot = {}
+    for directory in (config.DIST_DIR, config.ARCHIVE_DIR, config.OBSIDIAN_DIR):
+        if not directory.exists():
+            continue
+        for path in sorted(directory.rglob("*")):
+            if path.is_file():
+                stat = path.stat()
+                snapshot[f"{directory.name}/{path.relative_to(directory).as_posix()}"] = (
+                    stat.st_size,
+                    stat.st_mtime_ns,
+                )
+    return snapshot
 
 
 def main() -> int:
     print("=" * 62)
     print("每日早报 · 离线自检")
     print("=" * 62)
+
+    # 开跑前先给真实产物目录拍照，跑完比对
+    workspace_before = _snapshot_workspace()
 
     test_text_utils()
     test_url_guard()
@@ -1226,6 +1525,20 @@ def main() -> int:
     test_github_daily_selection()
     test_archive_scanner()
     test_idempotent_guard()
+    test_obsidian_export()
+
+    # 终检：自检绝不能碰真实产物目录
+    workspace_after = _snapshot_workspace()
+    touched = sorted(set(workspace_after) - set(workspace_before)) + sorted(
+        key
+        for key in set(workspace_after) & set(workspace_before)
+        if workspace_after[key] != workspace_before[key]
+    )
+    check(
+        "自检没有污染真实产物目录（dist/ archive/ obsidian/）",
+        not touched,
+        f"被改动：{touched}",
+    )
 
     print("\n" + "=" * 62)
     print(f"结果：{PASSED} 项通过，{FAILED} 项失败")

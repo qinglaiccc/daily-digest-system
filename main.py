@@ -30,6 +30,7 @@ from typing import Any, Dict, List, Optional
 import config
 import fetcher
 import notifier
+import obsidian
 import renderer
 import summarizer
 
@@ -191,6 +192,25 @@ def guard_already_done(
     return report, stats
 
 
+def stage_obsidian() -> int:
+    """
+    Obsidian 导出阶段：把每一期存档都导出成 obsidian/YYYY-MM-DD.md。
+
+    每期都重新生成（不只当天），这样双链与排版规则升级后往期笔记会跟着一起更新，
+    不会在库里留下一批旧格式的死文件。此时整站渲染已经把存档准备好了，不需要重新采集。
+
+    失败不致命：网页已经发布、邮件已经发出，不该因为导出笔记失败而回滚整条流水线；
+    但会打 ERROR 日志，在 Actions 日志里能直接看到。
+    """
+    try:
+        count = obsidian.save_all(renderer.load_archive())
+        logger.info("Obsidian 导出完成：%d 篇笔记 → %s", count, config.OBSIDIAN_DIR)
+        return count
+    except Exception as exc:  # noqa: BLE001
+        logger.error("Obsidian 导出失败：%s", exc, exc_info=True)
+        return 0
+
+
 def stage_notify(report: Dict[str, Any], no_notify: bool, dry_run: bool) -> None:
     """通知阶段。失败只告警，不影响已生成的页面。"""
     if no_notify:
@@ -334,8 +354,11 @@ def main(argv: List[str] | None = None) -> int:
         if not stage_render(report, stats, write_archive=False):
             return 1
 
+        # 整站页面重渲染之后，Obsidian 笔记也按既有存档重新导出一次
+        stage_obsidian()
+
         dump_raw(report, diagnostics, stats)
-        logger.info("本次未重复发送邮件；线上页面已按既有存档重新渲染。")
+        logger.info("本次未重复发送邮件；线上页面与 Obsidian 笔记已按既有存档重新生成。")
 
         if args.serve:
             serve_preview(args.port)
@@ -356,6 +379,9 @@ def main(argv: List[str] | None = None) -> int:
         renderer.cleanup_dist()
     if not stage_render(report, stats, dry_run=args.dry_run):
         return 1
+
+    # ---- 3.5 导出 Obsidian 笔记 ----
+    stage_obsidian()
 
     dump_raw(report, diagnostics, stats)
 

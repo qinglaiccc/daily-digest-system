@@ -27,6 +27,9 @@ RAW_DUMP_PATH = DIST_DIR / "_raw.json"  # 调试用：原始采集结果快照
 ARCHIVE_DIR = BASE_DIR / "archive"
 HISTORY_MANIFEST = DIST_DIR / "history.json"
 
+# Obsidian 知识库导出：按天一份 Markdown，同样提交回仓库
+OBSIDIAN_DIR = BASE_DIR / "obsidian"
+
 
 # --------------------------------------------------------------------------
 # .env 加载（本地开发用；Actions 上走 Secrets，不会读这个文件）
@@ -544,6 +547,22 @@ GITHUB_EXCLUDE_NAME_PATTERNS = [
     r"^d2l",
     r"-curriculum",
 ]
+
+# --------------------------------------------------------------------------
+# Obsidian 导出
+# --------------------------------------------------------------------------
+# 每期早报除了发布网页，还会在 obsidian/ 下额外导出一份带 YAML 前置区与双链的
+# Markdown（obsidian/YYYY-MM-DD.md），方便直接丢进 Obsidian 库。
+#
+# 固定标签：每份 Markdown 的 tags 里都会带上这几个，再拼上模型提取的关键词。
+# 改成 "早报,AI,科技" 这样用逗号分隔即可。
+OBSIDIAN_FIXED_TAGS = [
+    t.strip() for t in os.getenv("OBSIDIAN_FIXED_TAGS", "早报,AI").split(",") if t.strip()
+]
+
+# 模型提取的关键词最多取几个（固定标签不计入这个上限）
+OBSIDIAN_MAX_KEYWORDS = int(os.getenv("OBSIDIAN_MAX_KEYWORDS", "5"))
+
 
 # --------------------------------------------------------------------------
 # 通知

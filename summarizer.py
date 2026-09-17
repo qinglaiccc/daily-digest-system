@@ -21,6 +21,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from urllib.parse import urlsplit
 
 import config
+import obsidian
 from fetcher import NewsItem, RepoItem, clean_text
 
 logger = logging.getLogger(__name__)
@@ -302,7 +303,18 @@ NEWS_SYSTEM_PROMPT = """你是一名严谨的科技与消费行业资讯编辑�
 2. 客观陈述。禁止主观评论、价值判断、情绪化形容词、预测、投资建议和"值得关注"之类的话术。
 3. 每条总结极度精简，控制在 60 个汉字以内，说清"谁 / 做了什么 / 关键结果或数据"即可。
 4. 每条必须携带原始素材里真实存在的链接，原样复制，不得改写、拼接或臆造。
-5. 只输出 JSON，不输出任何解释文字或 Markdown 代码块标记。"""
+5. **双链标注**：总结里凡出现"有持续追踪价值的具名实体"，就用双方括号包起来，例如
+   [[Anthropic]]、[[Claude]]、[[具身智能]]。要求：
+   - 只标注具体的公司、产品、模型、技术名词、机构；泛化词（人工智能、手机、市场、
+     芯片行业）一律不标 —— 标了会让双链图谱里塞满没有追踪价值的节点。
+   - 不标注数字、日期、百分比。
+   - **每条总结最多标注 3 个**；同一个实体只在其第一次出现处标注，不要反复刷屏。
+   - 只出现在 summary 字段里，**绝对不要**写进 title（标题要保持干净、可直接检索）。
+   - 括号内就是实体本名，不加"公司""概念""技术"之类后缀，也不要用 [[名称|别名]] 的竖线写法。
+6. **关键词**：另外为当天整体提炼 3-5 个关键词（焦点公司名或核心概念），填入 keywords 字段。
+   每个关键词是单个实体或概念，不带空格、标点、方括号、换行。
+   优先从你在第 5 条里标注过的双链实体中挑选，这样 Obsidian 里的标签和双链能互相对应。
+7. 只输出 JSON，不输出任何解释文字或 Markdown 代码块标记。"""
 
 # 新闻板块（不含 github，GitHub 走独立提示词）
 NEWS_SECTION_KEYS = ["intl_tech", "cn_tech", "intl_consumer", "cn_consumer"]
@@ -324,11 +336,12 @@ def build_news_user_prompt(payload: Dict[str, Any], report_date: date) -> str:
     schema_example = {
         "date": date_str,
         "digest": "一句话导读，40 字以内，概括当日最重要的 2-3 件事",
+        "keywords": ["3-5 个关键词或焦点公司", "每个都是单个实体或概念", "不带空格与标点"],
         "sections": {
             "intl_tech": [
                 {
-                    "title": "中文标题，20 字以内",
-                    "summary": "客观精简总结，60 字以内",
+                    "title": "中文标题，20 字以内，不要写双链",
+                    "summary": "客观精简总结，60 字以内，具名实体用 [[双链]] 包裹",
                     "source": "来源媒体名",
                     "url": "https://原始素材中的真实链接",
                 }
@@ -360,6 +373,8 @@ def build_news_user_prompt(payload: Dict[str, Any], report_date: date) -> str:
 - 同一个事件被多家媒体报道时，只保留一条，选信息量最大的那家作为来源。
 - source 字段填原始素材里的媒体名 / 站点名。
 - digest 要覆盖当日最重要的 2-3 件事，不要只写一件事。
+- summary 里的具名实体按系统提示的要求用 [[双链]] 包裹（每条最多 3 个），title 里不要出现双链。
+- keywords 填 3-5 个当天整体的焦点公司或核心概念，用于给这篇笔记打标签。
 
 【输出格式】只输出下面这个 JSON 对象，不要有任何前后缀文字：
 {json.dumps(schema_example, ensure_ascii=False, indent=2)}
@@ -384,7 +399,9 @@ GITHUB_SYSTEM_PROMPT = """你是一位擅长把开源项目讲给外行听的技
 3. **安装命令必须来自 README 原文。** README 里没有明确命令时，install 字段留空字符串，
    不要凭经验臆造 `npm install xxx` 这类命令——普通读者会照着敲，编造的命令会浪费他们的时间。
 4. **不吹不黑。** 不写"革命性""颠覆性""必装"这类营销词，只陈述它实际做了什么。
-5. 只输出 JSON，不输出任何解释文字或 Markdown 代码块标记。"""
+5. **部署步骤不得臆造。** steps 里的每一步只允许是两类内容：README 里逐字出现的命令，
+   或 README 里明确写出的前置条件（例如"需要先安装 Node 18"）。README 没写的一律不许补。
+6. 只输出 JSON，不输出任何解释文字或 Markdown 代码块标记。"""
 
 
 def build_github_user_prompt(repos_payload: List[Dict[str, Any]], report_date: date) -> str:
@@ -403,6 +420,10 @@ def build_github_user_prompt(repos_payload: List[Dict[str, Any]], report_date: d
                     "核心功能亮点 3",
                 ],
                 "guide": "应用与部署指南：普通人该怎么用起来。1-2 句话，说清前置条件（要不要装 Node/Docker/Python）和大致步骤，80 字以内",
+                "steps": [
+                    "第 1 步：前置条件或第一条命令，25 字以内，逐字来自 README",
+                    "第 2 步：下一条命令",
+                ],
                 "install": "从 README 原文摘出的安装或运行命令，单行；确实找不到任何命令才留空",
             }
         ],
@@ -445,6 +466,15 @@ def build_github_user_prompt(repos_payload: List[Dict[str, Any]], report_date: d
    README 里通常有 Installation / Quick Start / Getting Started / 安装 / 快速开始 这类章节，
    **请主动去定位并摘出其中最先出现的那条可执行命令**（安装或启动命令），不要因为没明说就跳过。
    只有确实通篇找不到任何可执行命令时（例如纯在线服务、纯文档项目）才留空字符串 ""。
+
+5. **steps（部署步骤清单）** —— 2 到 5 条，每条 25 字以内，按"从零跑起来"的先后顺序排列。
+   这是给读者一份照着做就能跑通的清单，所以要写成动宾短语或可直接复制执行的命令：
+   - README 里有命令的，就把命令逐字写进来（例如 `npm install -g openclaw`）。
+   - 没有命令的，写前置条件（例如「先安装 Docker Desktop」）。
+   - 纯在线服务、打开网页就能用的，写访问方式（例如「访问官网注册后即可使用」）。
+   - **不要自己编命令**；README 里确实什么都没有时，给空数组 []。
+   - **不要在字符串里自带 `- [ ] `、`-`、`1.` 之类的前缀**，渲染时由程序统一添加，
+     你自己加了会变成 `- [ ] - [ ] xxx` 这种重复前缀。
 
 【覆盖要求】{len(repos_payload)} 个项目就要输出 {len(repos_payload)} 条，顺序与下面的素材保持一致。
 只有在完全无法判断某个项目是做什么的（连 intro 都写不出来）时才允许省略，
@@ -577,13 +607,18 @@ def normalize_news_result(
     raw: Dict[str, Any],
     guard: UrlGuard,
     report_date: date,
-) -> tuple[List[Dict[str, Any]], str, int]:
+) -> tuple[List[Dict[str, Any]], str, int, List[str]]:
     """
     规整新闻部分的模型输出。
 
-    返回 (板块列表, 导读, 丢弃条数)。板块顺序严格跟随 config.SECTION_DEFS 里的新闻板块。
+    返回 (板块列表, 导读, 丢弃条数, 关键词)。
+    板块顺序严格跟随 config.SECTION_DEFS 里的新闻板块。
+    关键词是给 Obsidian 前置区打标签用的，会先经 obsidian.sanitize_tag 消毒。
     """
     digest = _coerce_str(raw.get("digest"), limit=120)
+    keywords = obsidian.coerce_keywords(
+        raw.get("keywords"), limit=config.OBSIDIAN_MAX_KEYWORDS
+    )
 
     raw_sections = raw.get("sections")
     if not isinstance(raw_sections, dict):
@@ -633,7 +668,7 @@ def normalize_news_result(
 
         sections.append({**sec_def, "items": items[: config.ITEMS_PER_SECTION]})
 
-    return sections, digest, dropped
+    return sections, digest, dropped, keywords
 
 
 def _coerce_str_list(value: Any, limit: int = 60, max_items: int = 6) -> List[str]:
@@ -651,6 +686,9 @@ def _coerce_str_list(value: Any, limit: int = 60, max_items: int = 6) -> List[st
         text = _coerce_str(part, limit=limit)
         # 去掉模型可能加的项目符号前缀
         text = re.sub(r"^\s*[-*·•\d]+[.、)）]?\s*", "", text).strip()
+        # 再去掉 Markdown 清单标记。模型（尤其写部署步骤时）经常自带 "- [ ] "，
+        # 渲染 Obsidian 时我们还会再加一次前缀，不清掉就会变成 "- [ ] - [ ] xxx"。
+        text = re.sub(r"^\[[ xX✓]?\]\s*", "", text).strip()
         if text:
             result.append(text)
         if len(result) >= max_items:
@@ -708,6 +746,9 @@ def normalize_github_result(
         features = _coerce_str_list(entry.get("features"), limit=60, max_items=5)
         guide = _coerce_str(entry.get("guide"), limit=260)
         install = _coerce_str(entry.get("install"), limit=200)
+        # 部署步骤：给 Obsidian 渲染成 "- [ ] " 待办清单用。
+        # 空数组是合法结果（README 里确实没有任何可执行命令的项目）。
+        steps = _coerce_str_list(entry.get("steps"), limit=140, max_items=6)
 
         if not intro and not features:
             # 连简介和亮点都没有，这条没有展示价值
@@ -726,6 +767,7 @@ def normalize_github_result(
                 "intro": intro,
                 "features": features,
                 "guide": guide,
+                "steps": steps,
                 "install": install,
                 # summary 与 intro 保持一致，让邮件/纯文本等旧通道无需改动即可复用
                 "summary": intro,
@@ -802,6 +844,7 @@ def build_fallback_result(
             "intro": repo.description or "（AI 解析不可用，仅展示仓库原始描述）",
             "features": [],
             "guide": "",
+            "steps": [],
             "install": "",
             "summary": repo.description or "（AI 解析不可用，仅展示仓库原始描述）",
             "source": "GitHub",
@@ -824,6 +867,7 @@ def build_fallback_result(
     return {
         "date": report_date.isoformat(),
         "digest": f"AI 摘要暂不可用（{reason}），以下为原始采集内容。",
+        "keywords": [],
         "sections": sections,
         "degraded": True,
         "degraded_reason": reason,
@@ -873,6 +917,7 @@ def build_fallback_github_section(repos: List[RepoItem]) -> List[Dict[str, Any]]
             "intro": repo.description or "（AI 解析不可用，仅展示仓库原始描述）",
             "features": [],
             "guide": "",
+            "steps": [],
             "install": "",
             "summary": repo.description or "（AI 解析不可用，仅展示仓库原始描述）",
             "source": "GitHub",
@@ -929,6 +974,7 @@ def summarize(
     github_items: List[Dict[str, Any]] = []
     github_lead = ""
     digest = ""
+    keywords: List[str] = []
 
     # ---- 新闻部分 ----
     if news_payload["news"]:
@@ -938,7 +984,7 @@ def summarize(
                 build_news_user_prompt(news_payload, report_date),
                 "新闻",
             )
-            news_sections, digest, _ = normalize_news_result(raw, guard, report_date)
+            news_sections, digest, _, keywords = normalize_news_result(raw, guard, report_date)
         except Exception as exc:  # noqa: BLE001
             logger.error("新闻板块提炼失败：%s", exc, exc_info=True)
             news_sections, _ = build_fallback_news_section(news, f"{type(exc).__name__}: {exc}")
@@ -983,6 +1029,8 @@ def summarize(
     result: Dict[str, Any] = {
         "date": report_date.isoformat(),
         "digest": digest,
+        # 当天整体的焦点公司 / 核心概念，Obsidian 前置区用它拼 tags
+        "keywords": keywords,
         "sections": sections,
     }
 

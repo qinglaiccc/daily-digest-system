@@ -28,6 +28,7 @@ from email.utils import formataddr, formatdate, make_msgid
 from typing import Any, Dict, List, Optional
 
 import config
+import obsidian
 from summarizer import format_date_cn
 
 logger = logging.getLogger(__name__)
@@ -73,6 +74,7 @@ def _total_items(report: Dict[str, Any]) -> int:
 # --------------------------------------------------------------------------
 def build_subject(report: Dict[str, Any]) -> str:
     """邮件主题：日期 + 导读摘要，超长按字符截断。"""
+    report = obsidian.strip_wikilinks_deep(report)
     report_date = date.fromisoformat(report["date"])
     subject = f"每日早报 · {report_date.strftime('%m月%d日')}"
 
@@ -94,6 +96,8 @@ def build_subject(report: Dict[str, Any]) -> str:
 # --------------------------------------------------------------------------
 def build_plain_text(report: Dict[str, Any], site_url: str) -> str:
     """纯文本正文。给不支持 HTML 的客户端兜底，也便于全文检索。"""
+    # 双链只对 Obsidian 有意义，邮件里要把 [[Anthropic]] 还原成 Anthropic
+    report = obsidian.strip_wikilinks_deep(report)
     report_date = date.fromisoformat(report["date"])
     lines: List[str] = [
         f"每日早报 · {format_date_cn(report_date)}",
@@ -135,6 +139,8 @@ def build_plain_text(report: Dict[str, Any], site_url: str) -> str:
 # HTML 版本（表格布局 + 行内样式，兼容主流邮箱客户端）
 # --------------------------------------------------------------------------
 def build_html(report: Dict[str, Any], site_url: str) -> str:
+    # 双链只对 Obsidian 有意义，邮件里要把 [[Anthropic]] 还原成 Anthropic
+    report = obsidian.strip_wikilinks_deep(report)
     report_date = date.fromisoformat(report["date"])
     date_cn = format_date_cn(report_date)
 

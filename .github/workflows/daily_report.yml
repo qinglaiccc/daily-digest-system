@@ -166,6 +166,7 @@ jobs:
             echo ""
             echo "- 运行模式：\`${{ github.event.inputs.dry_run == 'true' && 'dry-run' || 'production' }}\`"
             echo "- 强制重出：\`${{ github.event.inputs.force == 'true' && '是（已忽略当日幂等闸门）' || '否' }}\`"
+            echo "- 产物文件：\`dist/index.html\` + \`obsidian/<日期>.md\`"
             echo "- 产物文件：\`dist/index.html\`"
             echo "- 站点地址：${{ vars.SITE_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}"
           } >> "$GITHUB_STEP_SUMMARY"
@@ -179,21 +180,31 @@ jobs:
           retention-days: 7
           if-no-files-found: warn
 
-      - name: 保存往期存档到仓库
+      - name: 保存往期存档与 Obsidian 笔记到仓库
         if: success() && github.event.inputs.dry_run != 'true'
         run: |
           set -euo pipefail
 
           # Actions 每次运行都是全新的干净检出，往期存档必须提交回仓库才能累积。
           # 否则第二天运行时 archive/ 是空的，历史记录每天都会归零。
-          if [ ! -d archive ]; then
-            echo "::warning::没有生成 archive 目录，跳过"
+          # obsidian/ 同理：它是给 Obsidian 库用的笔记，也必须在仓库里长期累积。
+          if [ ! -d archive ] && [ ! -d obsidian ]; then
+            echo "::warning::archive/ 与 obsidian/ 都不存在，跳过"
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add archive
+
+          # 两个目录都存在时才分别 add。
+          # 这里用 if 而不是 "[ -d x ] && git add x"：后者在目录缺失时整条命令返回非零，
+          # 叠加 set -e 容易踩坑，写成 if 语义明确。
+          if [ -d archive ]; then
+            git add archive
+          fi
+          if [ -d obsidian ]; then
+            git add obsidian
+          fi
 
           if git diff --staged --quiet; then
             echo "往期存档无变化，跳过提交"
@@ -201,11 +212,11 @@ jobs:
           fi
 
           # [skip ci] 防止这次提交再次触发本工作流形成死循环
-          git commit -m "chore: 保存往期存档 $(TZ=Asia/Shanghai date +%F) [skip ci]"
+          git commit -m "chore: 保存往期存档与 Obsidian 笔记 $(TZ=Asia/Shanghai date +%F) [skip ci]"
 
           # checkout 可能处于 detached HEAD，显式推回目标分支
           git push origin "HEAD:${{ github.ref_name }}"
-          echo "::notice::往期存档已提交到 ${{ github.ref_name }}"
+          echo "::notice::往期存档与 Obsidian 笔记已提交到 ${{ github.ref_name }}"
 
       - name: 部署到 gh-pages 分支
         if: success() && github.event.inputs.dry_run != 'true'

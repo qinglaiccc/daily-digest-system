@@ -25,6 +25,7 @@ from typing import Any, Dict, List, Optional
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 import config
+import obsidian
 from summarizer import format_date_cn, local_now
 
 logger = logging.getLogger(__name__)
@@ -60,12 +61,29 @@ def _format_stars(value: Any) -> str:
     return str(int(number))
 
 
+def _finalize_html(value: Any) -> Any:
+    """
+    所有模板输出值的统一后处理：把 Obsidian 双链降级成纯文本。
+
+    模型是按"给 Obsidian 用"的口径在 summary 里写 [[Anthropic]] 的，直接输出到网页上
+    就是一对多余的方括号。这里统一拆掉，让同一份数据在网页端保持干净。
+
+    为什么用 finalize 而不是去模板里逐处加过滤器：模板有几十个文本输出点
+    （标题、摘要、原文对照、亮点、指南、命令、导读、往期索引……），
+    漏掉任何一处都会让方括号泄漏到页面上；finalize 是每个输出表达式都会经过的唯一入口。
+    """
+    if isinstance(value, str):
+        return obsidian.strip_wikilinks(value)
+    return value
+
+
 def _build_environment() -> Environment:
     env = Environment(
         loader=FileSystemLoader(str(config.BASE_DIR)),
         autoescape=select_autoescape(["html", "xml"]),
         trim_blocks=True,
         lstrip_blocks=True,
+        finalize=_finalize_html,
     )
     env.filters["starnum"] = _format_stars
     return env
@@ -334,7 +352,9 @@ def render_site(report: Dict[str, Any], stats: Dict[str, Any]) -> Dict[str, Any]
                     {
                         "date": e["date"],
                         "date_cn": e["date_cn"],
-                        "digest": e["digest"],
+                        # history.json 是给外部工具读的清单，不是 Obsidian 笔记，
+                        # 双链在这里没有意义，一并降级成纯文本
+                        "digest": obsidian.strip_wikilinks(e["digest"]),
                         "count": e["count"],
                         "url": f"archive/{e['date']}.html",
                     }

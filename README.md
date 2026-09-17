@@ -1,13 +1,13 @@
 # 每日早报自动化系统
 
-每天早上 8:00（Asia/Shanghai）自动抓取科技/消费新闻与 GitHub 热门项目，调用 DeepSeek 做客观精简总结，渲染成响应式网页发布到 GitHub Pages，并推送 HTML 邮件。
+每天早上 7:30（Asia/Shanghai）由外部定时器触发，自动抓取科技/消费新闻与 GitHub 热门项目，调用 DeepSeek 做客观精简总结，渲染成响应式网页发布到 GitHub Pages、导出一份带双链的 Obsidian 笔记，并推送 HTML 邮件。
 
 ```
-┌─────────────┐   ┌──────────────┐   ┌──────────────┐   ┌──────────────┐
-│ 1. 数据采集  │ → │ 2. AI 提炼    │ → │ 3. HTML 渲染  │ → │ 4. 通知/部署  │
-│ 24 个 RSS   │   │ DeepSeek     │   │ 瑞士极简风格   │   │ SMTP 邮件 +   │
-│ GitHub API  │   │ 五大板块      │   │ + 往期存档     │   │ gh-pages     │
-└─────────────┘   └──────────────┘   └──────────────┘   └──────────────┘
+┌─────────────┐   ┌──────────────┐   ┌──────────────────┐   ┌──────────────┐
+│ 1. 数据采集  │ → │ 2. AI 提炼    │ → │ 3. 渲染          │ → │ 4. 通知/部署  │
+│ 24 个 RSS   │   │ DeepSeek     │   │ 瑞士极简网页      │   │ SMTP 邮件 +   │
+│ GitHub API  │   │ 五大板块      │   │ + Obsidian 双链笔记│   │ gh-pages     │
+└─────────────┘   └──────────────┘   └──────────────────┘   └──────────────┘
 ```
 
 ## 网页功能
@@ -23,6 +23,119 @@
 | **降级可读** | AI 不可用时页面照常生成，并在顶部说明原因 |
 
 **关于「原文」模式**：原文标题与摘录直接取自 RSS / GitHub 的原始素材，不经过模型改写，所以不存在被编造或翻译失真的风险。中文模式下这些字段隐藏，切到「双语」时以浅灰小字附在中文标题下方，切到「原文」时升为标题级字号。
+
+## Obsidian 知识库导出
+
+同一份数据除了发布网页，还会额外导出一份带 **YAML 前置区**与**实体双链**的 Markdown
+到仓库根目录的 `obsidian/YYYY-MM-DD.md`，可以直接把这个目录当作 Obsidian 库打开（或放进已有库）。
+
+### 长什么样
+
+```markdown
+---
+title: 每日早报-2026-09-17
+date: 2026-09-17
+type: 早报
+tags:
+  - 早报
+  - AI
+  - 华为
+  - 昇腾960
+  - Manus
+items: 30
+news: 25
+repos: 5
+sources: 9
+---
+
+> 华为昇腾960提前登场，美联储三年多来首次加息，Manus估值翻倍至40亿美元。
+
+# 国际科技新闻
+
+**Meta深度伪造规则被指根本不足**
+
+监督委员会称[[Meta]]对AI深度伪造内容的规则"一贯且根本不足"，要求优先处理相关举报。 — [Engadget](https://...)
+
+# GitHub 热门效率与 AI 工具
+
+**openclaw/openclaw**
+
+★389.9k · TypeScript · 近期趋势
+
+装在自己电脑上的 AI 助手，能在微信、Slack 等你常用的聊天软件里直接使唤它。
+
+**核心亮点**
+
+- 在 Discord、Telegram 等聊天里对话
+- 数据、记忆和密钥都存在自己电脑
+
+**应用与部署指南**
+
+在 macOS、Linux 或 Windows 上跑一条安装命令即可。
+
+- [ ] 打开终端
+- [ ] 运行 curl -fsSL https://openclaw.ai/install.sh | bash
+- [ ] 按提示完成配置
+
+```bash
+curl -fsSL https://openclaw.ai/install.sh | bash
+```
+
+[查看仓库](https://github.com/openclaw/openclaw)
+```
+
+### 前置区字段
+
+`title` / `date` / `tags` 是必须的三项。另加 `type` 与四个计数，是为了 Dataview 之类的
+数据库插件好用，例如：
+
+```dataview
+TABLE items, repos, sources
+FROM "obsidian"
+WHERE type = "早报"
+SORT date DESC
+```
+
+不需要这些字段的话，删掉 `obsidian.py` 里 `build_frontmatter` 对应的几行即可，不影响正文。
+
+### 双链是怎么来的
+
+模型在写 summary 时，会把**有持续追踪价值的具名实体**（公司、产品、模型、技术名词）用
+`[[双方括号]]` 包起来，每天的早报于是自然形成一个实体图谱 —— 点开 `[[华为]]` 就能看到
+它在历史上出现过的每一期。提示词里有几条硬约束：每条最多 3 个、只标具体实体不标泛化词
+（不标"人工智能""手机"）、同一实体只标首次出现、只出现在 summary 里不进标题。
+
+**双链只存在于 Obsidian 笔记里。** 网页、邮件、`history.json` 都会把 `[[Anthropic]]`
+还原成 `Anthropic`（见 `obsidian.strip_wikilinks`）—— 方括号对非 Obsidian 读者只是噪音。
+
+### 待办清单
+
+GitHub 板块的「应用与部署指南」会渲染成 `- [ ]` 待办清单，在 Obsidian 里可以直接打勾。
+
+清单语法由程序生成而不是让模型写：模型写清单时常飘成 `* [ ]`、`1. [ ]`，
+甚至把 `- [ ]` 塞进正文，渲染时再加一次前缀就变成 `- [ ] - [ ] xxx`。
+所以提示词明确要求**不要自带前缀**，`summarizer._coerce_str_list` 里也做了一道兜底清洗。
+
+### 几个实现上的坑
+
+| 坑 | 后果 | 处理 |
+| --- | --- | --- |
+| 摘要按字符数截断 | 会把双链拦腰切断，留下 `[[Anthrop…` | `repair_wikilinks` 专门清理不闭合的 `[[` |
+| 关键词含 `:` `[` `]` `#` 或换行 | 直接把 YAML 前置区解析搞崩，整篇属性全丢 | `sanitize_tag` 把这些字符全部归一成 `-` |
+| 关键词含空格 | Obsidian 标签不允许空格 | 归一成连字符（`machine learning` → `machine-learning`） |
+| 关键词是纯数字 | Obsidian 拒绝纯数字标签 | 直接丢弃 |
+| 存档日期字段被污染 | 可能写到 `obsidian/` 目录外面去 | `markdown_path` 用正则校验日期，不合法直接拒绝 |
+| 模板里几十处文本输出 | 漏掉任何一处都会让 `[[` 泄漏到网页上 | 用 Jinja 的 `finalize` 钩子统一处理，而非逐处加过滤器 |
+
+### 配置
+
+| 环境变量 | 默认值 | 说明 |
+| --- | --- | --- |
+| `OBSIDIAN_FIXED_TAGS` | `早报,AI` | 每篇都带的固定标签，逗号分隔 |
+| `OBSIDIAN_MAX_KEYWORDS` | `5` | 模型提取的关键词最多取几个（固定标签不计入） |
+
+`obsidian/` 与 `archive/` 一样会由 Actions 提交回仓库，历史笔记长期累积。
+每期都会重新导出（不只当天），所以双链或排版规则升级后，往期笔记会跟着一起更新。
 
 ## GitHub 板块：3 + 2 混合推荐
 
@@ -205,14 +318,17 @@ openclaw/openclaw                     389.7k stars · TypeScript
 ├── fetcher.py                   # 数据采集：RSS（并发）+ GitHub Search API
 ├── summarizer.py                # DeepSeek 提炼、提示词、防幻觉校验、降级
 ├── renderer.py                  # 渲染今日页 + 全部往期页 + 往期索引 + history.json
+├── obsidian.py                  # Obsidian 导出：YAML 前置区、实体双链、待办清单
 ├── notifier.py                  # 邮件推送（标准库 smtplib + email.mime）
 ├── template.html                # 早报正文模板（Swiss 风格，自包含 CSS）
 ├── template_index.html          # 往期索引页模板
-├── selftest.py                  # 离线自检（207 项，无需密钥/联网）
+├── selftest.py                  # 离线自检（266 项，无需密钥/联网）
 ├── requirements.txt
 ├── .env                         # 本地密钥（已 gitignore，不会提交）
 ├── archive/                     # 往期存档 JSON —— 必须提交进仓库，是历史记录的数据源
 │   └── YYYY-MM-DD.json
+├── obsidian/                    # Obsidian 笔记 —— 同样提交进仓库，长期累积
+│   └── YYYY-MM-DD.md
 ├── .github/workflows/daily_report.yml
 └── dist/                        # 生成产物（已 gitignore，仅 gh-pages 分支发布）
     ├── index.html               # 今日
@@ -369,6 +485,8 @@ RECEIVER_EMAIL=你的QQ号@qq.com   ← 收件地址，与自己相同即可
 | `GITHUB_MIN_STARS` | `50` | GitHub 项目的最低星数 |
 | `GITHUB_TOPICS` | 见 `config.py` | 检索的标签 |
 | `NOTIFY_ENABLED` | `true` | 设为 `false` 可全局关闭推送 |
+| `OBSIDIAN_FIXED_TAGS` | `早报,AI` | Obsidian 笔记的固定标签，逗号分隔 |
+| `OBSIDIAN_MAX_KEYWORDS` | `5` | 模型提取的关键词最多取几个 |
 | `HTTP_TIMEOUT` | `20` | 单个请求超时（秒） |
 | `LLM_MAX_INPUT_CHARS` | `45000` | 送进模型的素材字符上限 |
 
@@ -405,6 +523,8 @@ RECEIVER_EMAIL=你的QQ号@qq.com   ← 收件地址，与自己相同即可
 8. **重复触发幂等**：定时责任交给外部定时器之后，同一天被触发多次是常态（Test Run / 重试 / Re-run）。
    当天已出过正式早报时直接跳过，不重复发邮件、不重复调 AI，但仍会把整站重新渲染出来以免部署步骤因
    `dist/` 缺失而失败。需要强制重出时用 `--force`。详见「外部定时器（cron-job.org）配置白皮书」。
+9. **Obsidian 导出不阻断主流程**：Markdown 导出失败只记 ERROR 日志，不会让已经发出的页面与邮件回滚；
+   但导出用的是同一份内存数据，正常运行时不存在"网页成功、笔记失败"的中间态。
 
 ## 本地自检
 
