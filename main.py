@@ -9,11 +9,12 @@
     python main.py                 # 完整流程
     python main.py --dry-run       # 跳过 AI 与推送，用原始素材渲染页面（本地调试用）
     python main.py --no-notify     # 跑完整流程但不推送
+    python main.py --force         # 忽略"今天已生成过"的幂等闸门，强制重跑
     python main.py --skip-fetch-cache  # 忽略 _raw.json 缓存，强制重新采集
     python main.py --serve         # 渲染后起一个本地 HTTP 服务预览
 
 退出码：
-    0  正常完成
+    0  正常完成（含命中幂等闸门而跳过的情况）
     1  致命错误（页面都没能生成）
 """
 
@@ -24,7 +25,7 @@ import json
 import logging
 import sys
 from datetime import datetime, timezone
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 import config
 import fetcher
@@ -122,12 +123,20 @@ def stage_summarize(
 
 def stage_render(
     report: Dict[str, Any],
-    diagnostics: Dict[str, str],
     stats: Dict[str, Any],
+    *,
+    write_archive: bool = True,
+    dry_run: bool = False,
 ) -> bool:
-    """渲染阶段：写入当天存档并渲染整站（今日页 + 全部往期页）。失败即致命。"""
+    """
+    渲染阶段：写入当天存档并渲染整站（今日页 + 全部往期页）。失败即致命。
+
+    write_archive=False 用于幂等跳过路径：那种情况 report 本来就是从存档里读出来的，
+    再写一次只会刷新 generated_at，在 Actions 里就会多出一个无意义的提交。
+    """
     try:
-        renderer.save_archive(report, stats)
+        if write_archive:
+            renderer.save_archive(report, stats, dry_run=dry_run)
         result = renderer.render_site(report, stats)
         logger.info(
             "整站渲染完成：往期页面 %d 期，历史共 %d 期",
@@ -140,6 +149,46 @@ def stage_render(
     except Exception as exc:  # noqa: BLE001
         logger.error("页面渲染失败：%s", exc, exc_info=True)
         return False
+
+
+def guard_already_done(
+    today: str,
+    force: bool,
+) -> Optional[tuple[Dict[str, Any], Dict[str, Any]]]:
+    """
+    幂等闸门：当天已经出过正式早报就不要再跑一遍。
+
+    为什么必须有这道闸门：改成外部定时器（cron-job.org 等）触发之后，同一天被触发
+    多次是很正常的事——在控制台点一次 "Test Run"、任务失败后重试、手动 Re-run，
+    都会再打一次 workflow_dispatch 接口。没有闸门时每次重复触发都会：
+      · 再发一封一模一样的邮件
+      · 再调一次 DeepSeek（白烧额度）
+      · 用新的 generated_at 覆盖当天存档，产生无意义的 git 提交
+
+    返回 (report, stats) 表示"今天已完成，应当跳过"；返回 None 表示正常往下执行。
+    dry-run 产物不算数，否则本地预览一次就会挡住当天的正式运行。
+    """
+    if force:
+        logger.info("指定了 --force，跳过当日幂等检查")
+        return None
+
+    payload = renderer.load_archive_entry(today)
+    if payload is None:
+        return None
+
+    if payload.get("dry_run"):
+        logger.info("当日存档是 dry-run 预览产物，不作为已完成依据，继续正常执行")
+        return None
+
+    report = payload["report"]
+    stats = payload.get("stats") or {}
+
+    logger.warning("=" * 68)
+    logger.warning("幂等闸门：%s 的早报已存在，跳过采集 / AI 提炼 / 邮件推送", today)
+    logger.warning("存档生成于 %s", payload.get("generated_at", "未知时间"))
+    logger.warning("如需强制重跑（例如今天的版面有问题要重出一期）：加 --force")
+    logger.warning("=" * 68)
+    return report, stats
 
 
 def stage_notify(report: Dict[str, Any], no_notify: bool, dry_run: bool) -> None:
@@ -226,6 +275,11 @@ def parse_args(argv: List[str] | None = None) -> argparse.Namespace:
         help="跳过 DeepSeek 与邮件推送，用原始素材渲染页面",
     )
     parser.add_argument("--no-notify", action="store_true", help="不发送邮件")
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="即使当天已经生成过，也强制重新采集并再出一期",
+    )
     parser.add_argument("-v", "--verbose", action="store_true", help="输出调试日志")
     parser.add_argument("--serve", action="store_true", help="渲染后启动本地预览服务")
     parser.add_argument("--port", type=int, default=8000, help="预览服务端口（默认 8000）")
@@ -260,6 +314,33 @@ def main(argv: List[str] | None = None) -> int:
         else:
             logger.info("邮件收件人：%s", "、".join(config.resolve_recipients()) or "(未配置)")
 
+    # ---- 0. 幂等闸门 ----
+    # 外部定时器（cron-job.org 等）重复触发同一天是常态：点一次 Test Run、
+    # 失败后重试、手动 Re-run 都会再打一次 dispatch 接口。这里先挡一道。
+    already_done = guard_already_done(summarizer.today_local().isoformat(), args.force)
+
+    if already_done is not None:
+        report, stats = already_done
+        # 不重新采集、不重新提炼：只把整站按既有存档重渲染一遍。
+        # dist/ 必须存在，否则后面的 gh-pages 部署步骤会因为目录缺失而失败。
+        diagnostics = {
+            "news": "命中幂等闸门，沿用当日存档，未重新采集",
+            "github": "命中幂等闸门，沿用当日存档，未重新采集",
+        }
+        stats["skipped"] = True
+
+        if not args.keep_dist:
+            renderer.cleanup_dist()
+        if not stage_render(report, stats, write_archive=False):
+            return 1
+
+        dump_raw(report, diagnostics, stats)
+        logger.info("本次未重复发送邮件；线上页面已按既有存档重新渲染。")
+
+        if args.serve:
+            serve_preview(args.port)
+        return 0
+
     # ---- 1. 采集 ----
     news, repos, diagnostics, stats = stage_fetch()
 
@@ -273,7 +354,7 @@ def main(argv: List[str] | None = None) -> int:
     # ---- 3. 渲染 ----
     if not args.keep_dist:
         renderer.cleanup_dist()
-    if not stage_render(report, diagnostics, stats):
+    if not stage_render(report, stats, dry_run=args.dry_run):
         return 1
 
     dump_raw(report, diagnostics, stats)

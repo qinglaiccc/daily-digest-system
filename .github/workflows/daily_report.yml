@@ -2,25 +2,46 @@ name: 每日早报
 
 # ---------------------------------------------------------------------------
 # 触发方式
-#   schedule         : 每天 UTC 23:37（= Asia/Shanghai 次日 07:37）自动执行
-#   workflow_dispatch: 手动触发，可勾选 dry-run 只验证链路不调用 AI / 不推送
+#   workflow_dispatch: 唯一入口。由外部定时器（cron-job.org）每天 07:30（北京）
+#                      POST 一次 GitHub 的 dispatch 接口来触发。
+#                      手动在 Actions 页面点 "Run workflow" 也是走这条路。
+#                      可勾选 dry-run 只验证链路，不调用 AI / 不推送 / 不提交。
 #
-# 【为什么不是 0 0 * * *】
-# GitHub 的 schedule 是 best-effort 调度，"整点"（尤其 UTC 00:00）是全网最拥堵的时段。
-# 实测本仓库在 0 0 * * * 下被推迟了约 4 小时 11–15 分才触发（12:11 / 12:15 北京时间）。
-# GitHub 官方文档对延迟的建议原话就是「换一个不是整点的分钟」。
-# 这里改成 23:37 —— 既避开整点，也避开 UTC 午夜这个最拥挤的时间窗。
+# 【为什么删掉了 schedule】
+# GitHub 的 schedule 触发器是 best-effort 语义，实测延迟如下（全部为北京时间）：
 #
-# 注意：这只能降低被推迟的概率，无法保证准点。真要严格准点，需要外部定时器
-# 调 workflow_dispatch 接口，见 README「定时触发不准时怎么办」。
+#   cron 表达式      期望触发      实际触发            延迟
+#   ---------------  ------------  ------------------  --------
+#   0 0 * * *        08:00         09-15 12:15         4h15m
+#   0 0 * * *        08:00         09-16 12:11         4h11m
+#   37 23 * * *      07:37         09-17 09:39         2h02m
+#
+# 换成非整点的分钟只是把 4 小时压到 2 小时，仍然完全不可用。
+# 另外每次运行的 run_started_at 都等于 created_at（排队 0 分钟），说明这段延迟
+# 全部发生在 GitHub 调度器内部、连运行实例都还没创建——调 concurrency、
+# 换 runner、加 timeout 都救不了，只能绕开 schedule 这个触发器本身。
+#
+# 对照数据：同一仓库的 workflow_dispatch 运行，created → started 全部是 0.0 分钟。
+# 即"外部打接口"这条路是秒级响应的。
+#
+# 【代价与对策】
+# 定时责任转移到外部服务后，这个工作流不再被 GitHub 自动调度。顺带的好处是
+# 也绕开了"仓库 60 天无提交则自动停用定时工作流"的限制。
+# 外部定时器的完整配置见 README「外部定时器（cron-job.org）配置白皮书」。
+#
+# 防重复：外部定时器可能重复触发（Test Run / 重试 / 手动 Re-run），
+# 重复触发由 main.py 的幂等闸门挡住——当天已出过正式早报则跳过，
+# 不再发邮件、不再调 DeepSeek。需要强制重出时用 --force。
 # ---------------------------------------------------------------------------
 on:
-  schedule:
-    - cron: "37 23 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
         description: "dry-run：跳过 DeepSeek 与邮件推送，仅验证采集与渲染"
+        type: boolean
+        default: false
+      force:
+        description: "force：忽略「今天已出过」的幂等闸门，强制重出一期（会再发一封邮件）"
         type: boolean
         default: false
 
@@ -62,36 +83,41 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: 记录实际触发时间
+      - name: 记录触发信息
         run: |
-          # 用于跟踪 GitHub 调度延迟：把「期望时间」与「实际触发时间」的差值打出来，
-          # 连续几次就能判断延迟是否稳定、以及调整 cron 是否有效。
+          # 定时责任已经交给外部定时器，"期望时间"不再是 cron 表达式，而是
+          # cron-job.org 上配置的那个时刻（默认北京时间 07:30）。
           #
-          # 注意：只有 schedule 触发才有"延迟"可言。手动触发（workflow_dispatch）
-          # 与 cron 时间无关，算出来的差值没有意义，所以那种情况只打印时间不报警。
+          # 注意：这个偏差只能当参考。手动 Re-run、点 cron-job.org 的 Test Run
+          # 都会让偏差变大，那是人主动触发的，不代表定时器不准。
           python - <<'PY'
           import os
           from datetime import datetime, timedelta, timezone
 
           CST = timezone(timedelta(hours=8))
+          TARGET_HOUR, TARGET_MINUTE = 7, 30          # 与 cron-job.org 上的配置保持一致
+          TARGET_LABEL = f"{TARGET_HOUR:02d}:{TARGET_MINUTE:02d}"
+
           now_utc = datetime.now(timezone.utc)
           now_cst = now_utc.astimezone(CST)
           event = os.environ.get("GITHUB_EVENT_NAME", "?")
 
           print(f"事件类型    : {event}")
+          print(f"触发者      : {os.environ.get('GITHUB_ACTOR', '?')}")
+          print(f"引用        : {os.environ.get('GITHUB_REF_NAME', '?')}")
           print(f"实际触发 UTC: {now_utc:%Y-%m-%d %H:%M:%S}")
           print(f"实际触发北京: {now_cst:%Y-%m-%d %H:%M:%S}")
+          print(f"外部定时目标: {TARGET_LABEL}（北京）")
 
           if event != "schedule":
-              print("非 schedule 触发，跳过调度延迟计算（该指标只对定时任务有意义）")
+              print("由外部定时器 / 手动触发，不做延迟判定（该指标只对内置 schedule 有意义）")
               raise SystemExit(0)
 
-          expected_utc = now_utc.replace(hour=23, minute=37, second=0, microsecond=0)
-          if expected_utc > now_utc:
-              expected_utc -= timedelta(days=1)
+          expected = now_cst.replace(hour=TARGET_HOUR, minute=TARGET_MINUTE, second=0, microsecond=0)
+          if expected > now_cst:
+              expected -= timedelta(days=1)
 
-          delay = (now_utc - expected_utc).total_seconds() / 60
-          print("cron 期望 UTC: 23:37（北京次日 07:37）")
+          delay = (now_cst - expected).total_seconds() / 60
           print(f"调度延迟    : {delay:.0f} 分钟")
 
           if delay > 120:
@@ -121,12 +147,16 @@ jobs:
           SITE_URL: ${{ vars.SITE_URL }}
         run: |
           set -euo pipefail
+          ARGS=""
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
             echo "::notice::dry-run 模式运行"
-            python main.py --dry-run
-          else
-            python main.py
+            ARGS="$ARGS --dry-run"
           fi
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+            echo "::notice::force 模式运行：忽略当日幂等闸门"
+            ARGS="$ARGS --force"
+          fi
+          python main.py $ARGS
 
       - name: 写入 Actions 摘要
         if: always()
@@ -135,6 +165,7 @@ jobs:
             echo "## 每日早报生成结果"
             echo ""
             echo "- 运行模式：\`${{ github.event.inputs.dry_run == 'true' && 'dry-run' || 'production' }}\`"
+            echo "- 强制重出：\`${{ github.event.inputs.force == 'true' && '是（已忽略当日幂等闸门）' || '否' }}\`"
             echo "- 产物文件：\`dist/index.html\`"
             echo "- 站点地址：${{ vars.SITE_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}"
           } >> "$GITHUB_STEP_SUMMARY"

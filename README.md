@@ -402,6 +402,9 @@ RECEIVER_EMAIL=你的QQ号@qq.com   ← 收件地址，与自己相同即可
 5. **邮件兼容性**：邮件正文用「表格布局 + 行内样式」单独生成一份，因为 Gmail / QQ 邮箱 / Outlook 普遍不支持 flex、grid 与 `<style>` 标签；同时附带纯文本版本作为兜底。
 6. **失败告警**：工作流失败时会发一封告警邮件，附 Actions 日志直达链接与常见原因排查清单。
 7. **产物留档**：`dist/_raw.json` 保存当次的结构化结果与采集诊断，随 Artifact 上传保留 7 天。
+8. **重复触发幂等**：定时责任交给外部定时器之后，同一天被触发多次是常态（Test Run / 重试 / Re-run）。
+   当天已出过正式早报时直接跳过，不重复发邮件、不重复调 AI，但仍会把整站重新渲染出来以免部署步骤因
+   `dist/` 缺失而失败。需要强制重出时用 `--force`。详见「外部定时器（cron-job.org）配置白皮书」。
 
 ## 本地自检
 
@@ -477,36 +480,216 @@ print('最新:', d.entries[0].get('published') if d.entries else '无')
 
 `条目数 > 0 且格式为 rss20/atom10` 且最新时间在一天内，才算可用。
 
+## 外部定时器（cron-job.org）配置白皮书
+
+### 为什么必须换掉 GitHub 自己的 schedule
+
+本仓库**已经删掉了 `schedule` 触发器**，只保留 `workflow_dispatch`。原因是实测数据：
+
+| 运行 | cron 表达式 | 期望触发（北京） | 实际触发（北京） | 调度延迟 | 排队延迟 |
+| --- | --- | --- | --- | --- | --- |
+| #3 | `0 0 * * *` | 08:00 | 09-15 **12:15** | 4 小时 15 分 | 0 分钟 |
+| #4 | `0 0 * * *` | 08:00 | 09-16 **12:11** | 4 小时 11 分 | 0 分钟 |
+| #7 | `37 23 * * *` | 07:37 | 09-17 **09:39** | 2 小时 02 分 | 0 分钟 |
+
+两个关键结论：
+
+1. **排队延迟全部是 0 分钟**（每次运行的 `run_started_at` 都等于 `created_at`）。
+   也就是说运行实例一旦被创建就立刻开始跑了，这段延迟完全发生在 GitHub 调度器内部 ——
+   连运行实例都还没创建，所以调 `concurrency`、换 runner、加 `timeout` 都救不了。
+2. 把 cron 从整点挪到非整点（`0 0` → `37 23`）只是把 4 小时压缩到 2 小时，**仍然不可用**。
+
+对照组：同一仓库的 `workflow_dispatch` 运行，`created → started` 全部是 **0.0 分钟**。
+所以"外部打接口"这条路是秒级响应的。
+
+顺带的好处：删掉 `schedule` 之后，也绕开了 GitHub「仓库 60 天无提交则自动停用定时工作流」的限制。
+
+### 一、复制粘贴清单
+
+#### 1. URL
+
+```
+https://api.github.com/repos/qinglaiccc/daily-digest-system/actions/workflows/daily_report.yml/dispatches
+```
+
+URL 里的 `daily_report.yml` 是**工作流文件名**（不是 `name:` 字段里的中文名「每日早报」）。
+写错文件名会返回 `404 Not Found`，看起来像"仓库或权限有问题"，其实只是文件名不对。
+
+#### 2. HTTP Method
+
+**POST**。
+
+⚠️ 这是最容易踩的坑：cron-job.org 默认是 **GET**，而 GET 打这个地址会返回 **404**
+（GitHub 只为该地址定义了 POST）。实测：
+
+| 请求 | 返回 |
+| --- | --- |
+| `POST` 正确地址 | **204 No Content** |
+| `GET` 同一地址 | 404 Not Found |
+| `POST` 但文件名写错 | 404 Not Found |
+
+所以必须去 **Advanced settings → Request method** 手动切成 POST。
+
+#### 3. Headers
+
+四条，逐条加（cron-job.org 用 `Key: Value` 的键值对形式，一行一条）：
+
+| Key | Value |
+| --- | --- |
+| `Accept` | `application/vnd.github+json` |
+| `Authorization` | `Bearer 你的PAT` |
+| `X-GitHub-Api-Version` | `2022-11-28` |
+| `Content-Type` | `application/json` |
+
+注意 `Authorization` 的值里 `Bearer` 和 token 之间是**一个空格**，`Bearer` 首字母大写。
+用 `token xxx` 的旧写法在部分接口上会返回 401。
+
+cron-job.org **不允许**自定义 `User-Agent` 和 `Connection` 两个头，但这不影响 ——
+GitHub 只需要请求里存在 User-Agent，cron-job.org 会发自己的默认值。
+
+#### 4. Body
+
+正式运行（会真实采集、调 AI、发邮件）：
+
+```json
+{"ref":"main"}
+```
+
+只想验证链路通不通、**不想收到多余邮件**时：
+
+```json
+{"ref":"main","inputs":{"dry_run":"true"}}
+```
+
+注意 `inputs` 里的值写成字符串 `"true"` 或布尔 `true` **实测都能生效**（都返回 204，
+且都确实走了 dry-run 分支）。上面的字符串写法是 GitHub 文档里的形式，优先用它。
+
+`ref` 必须是真实存在的分支名，这里就是 `main`。
+
+#### 5. 时间表与时区
+
+- **Schedule**：每天 `07:30`
+- **Time zone**：**必须显式确认为 `Asia/Shanghai`**
+
+这是第二个"时区坑"：cron-job.org 的时间是按**账户时区**解释的。如果账户时区是 UTC，
+那 `07:30` 就变成了北京时间 15:30，你会以完全相同的方式再踩一次坑。
+
+整条链路的耗时可参考：采集 RSS + GitHub 约 1–2 分钟，两次 DeepSeek 调用约 1–2 分钟，
+渲染与邮件几秒。**所以 07:30 触发，邮件大约 07:33–07:35 到**。
+
+#### 6. 通知设置（默认是关的，必须手动打开）
+
+cron-job.org 的通知开关**默认全部关闭**：
+
+| 设置 | 默认值 | 建议 |
+| --- | --- | --- |
+| `onFailure`（失败时通知） | `false` | **打开** |
+| `onFailureCount`（连续失败几次才通知） | `1` | 保持 `1` |
+| `onSuccess`（恢复成功时通知） | `false` | **打开** |
+| `onDisable`（被自动停用时通知） | `false` | **打开**，这条最重要 |
+
+`onDisable` 是保命开关：免费版在**连续失败 25 次后会把这个任务自动停用**。
+如果不打开这个通知，任务被停用你不会收到任何提示，早报会静默消失。
+
+### 二、Token 怎么给
+
+cron-job.org 是第三方，token 会存在它的服务器上。所以**不要**用你现有的全量权限 token。
+
+去 GitHub → Settings → Developer settings → **Personal access tokens → Fine-grained tokens**
+新建一个：
+
+| 项 | 值 |
+| --- | --- |
+| Token name | `cron-job-org-daily-digest` |
+| Expiration | 90 天（配个日历提醒） |
+| Repository access | Only select repositories → `daily-digest-system` |
+| Permissions → **Actions** | **Read and write**（这是唯一必需的权限） |
+| Permissions → Metadata | Read（自动带上，删不掉） |
+| Permissions → Contents | Read |
+
+**只需要 `Actions: Read and write`。** 不要给它 `Contents: write` —— 触发工作流不需要写代码的权限。
+
+如果这个 token 泄露，最坏情况是别人能触发你的工作流，而不是能改你的代码。
+
+验证 token 是否有权限，可以用这条命令（把 `<PAT>` 换成真值）：
+
+```bash
+curl -i -X POST \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: Bearer <PAT>" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+  -H "Content-Type: application/json" \
+  https://api.github.com/repos/qinglaiccc/daily-digest-system/actions/workflows/daily_report.yml/dispatches \
+  -d '{"ref":"main","inputs":{"dry_run":"true"}}'
+```
+
+看到 `HTTP/2 204` 就是通了。常见错误码对照：
+
+| 返回码 | 含义 |
+| --- | --- |
+| `204` | 成功，工作流已开始排队 |
+| `404` | 文件名写错 / ref 不存在 / token 权限不足（GitHub 对无权访问的资源统一返回 404 而不是 403） |
+| `401` | `Authorization` 头的格式错了 |
+| `422` | body 格式错误（比如 `ref` 指向了不存在的分支） |
+
+### 三、幂等闸门：为什么重复触发不会重复发邮件
+
+改成外部触发之后，同一天被触发多次是**常态**：点一次 cron-job.org 的 "Test Run"、
+任务失败后重试、在 Actions 页面点 "Re-run"，都会再打一次 dispatch 接口。
+没有防护的话每次都会再发一封一模一样的邮件、再烧一次 DeepSeek 额度。
+
+`main.py` 里有一道幂等闸门：**当天已经出过正式早报就跳过**，只把整站按既有存档重新渲染一遍
+（保证 `dist/` 存在，否则 gh-pages 部署步骤会因为目录缺失而失败），不发邮件、不重新采集、不重新调 AI。
+
+几个边界情况都处理了：
+
+| 情况 | 行为 |
+| --- | --- |
+| 当天没有存档 | 正常执行 |
+| 当天有正式存档 | 跳过，打印存档生成时间 |
+| 当天存档是 `--dry-run` 产物 | **不算数**，正常执行（否则本地预览一次就会挡住当天的正式出刊） |
+| 存档文件损坏 | 按"不存在"处理（宁可重跑一次，也不能把当天卡死） |
+| 需要强制重出一期 | 加 `--force`，或在 Actions 页面勾选 **force** 输入项 |
+
+所以：**在 cron-job.org 上点 "Test Run" 是安全的** —— 如果当天早报已经出过，它就是一次空跑。
+但在"当天还没出过早报"的时候点 Test Run，会真的发一封邮件。第一次配置时想安全测试，
+请把 body 临时换成 `{"ref":"main","inputs":{"dry_run":"true"}}`，确认返回 204 且运行变绿之后再换回正式 body。
+
+### 四、第一次配置后的验收清单
+
+配置完当天就能确认这几件事：
+
+- [ ] 到点后 GitHub Actions 出现一条 `workflow_dispatch` 的新运行，**触发时间与 07:30 相差在 1 分钟内**
+- [ ] 该运行的日志里「记录触发信息」这一步打印的是 `事件类型: workflow_dispatch`
+- [ ] cron-job.org 的任务历史里，这次执行被标成**成功**（预期返回码 204）
+- [ ] 邮件在 07:35 前后到达
+- [ ] cron-job.org 的通知设置里 `onFailure` / `onDisable` 都打开了
+
+第一周请重点看第 3 条。cron-job.org 把 2xx 视为成功还是只认 200，官方文档没有明确写；
+GitHub 这个接口实测返回的是 204。如果它把 204 判成失败，你会每天收到一封"任务失败"通知 ——
+**这是好事，说明通知是通的**，此时回来把 `onFailure` 的判定问题反馈给我，改用
+Cloudflare Workers（能自己控制判定逻辑）即可。
+
+### 五、备选方案
+
+| 方案 | 优点 | 缺点 |
+| --- | --- | --- |
+| **cron-job.org** | 零代码，5 分钟配完 | token 存在第三方；成功判定规则不透明 |
+| **Cloudflare Workers Cron Triggers** | 免费，判定逻辑自己写，secret 存在 Cloudflare | 需要写几行代码并 `wrangler deploy` |
+| **本机 Windows 任务计划程序** | 完全不碰第三方，token 不出本机 | 电脑必须开机；关机就漏一次 |
+| 自己的服务器 crontab | 最可控 | 前提是你有常开的服务器 |
+
 ## 常见问题
 
-**Q：定时任务没有在 8:00 准点跑？**
+**Q：定时任务没有准点跑？**
 
-这是 GitHub 调度器的行为，不是 cron 写错了。实测数据（cron 原本就是正确的 `0 0 * * *`）：
+已经不用 GitHub 的 `schedule` 了 —— 它在实测中会被推迟 2～4 小时，且排队延迟为 0 分钟，
+说明延迟完全发生在 GitHub 调度器内部，无法调优。现在改为由外部定时器
+（cron-job.org）在每天 07:30 调用 `workflow_dispatch` 接口触发。
 
-| 运行 | 实际触发（北京） | cron 期望 | 排队延迟 | 调度延迟 |
-| --- | --- | --- | --- | --- |
-| #3 | 09-15 **12:15** | 08:00 | 0 分钟 | ~4 小时 15 分 |
-| #4 | 09-16 **12:11** | 08:00 | 0 分钟 | ~4 小时 11 分 |
-
-注意"排队延迟 0 分钟"——**任务一旦被调度就立刻开始了，是 GitHub 拖了很久才调度它**。
-GitHub 官方文档承认 `schedule` 是 best-effort，高峰期会被推迟，并建议
-「换一个不是整点的分钟」。而 `0 0 * * *` 恰好是全网最拥堵的时段（整点 + UTC 午夜）。
-
-**当前对策**：cron 已改为 `23:37 UTC`（北京 07:37），避开整点与 UTC 午夜。
-工作流里加了一步「记录实际触发时间」，会打印期望时间与实际的差值，连续几次就能判断
-这个调整有没有效、延迟是否稳定。
-
-**要严格准点只有一个办法**：用外部定时器在指定时刻调用 GitHub 的 `workflow_dispatch` 接口。
-GitHub Actions 自己的 `schedule` 做不到分钟级准点。可选方案：
-
-1. **cron-job.org**（免费）：建一个任务，每天北京时间 08:00 POST 到
-   `https://api.github.com/repos/<owner>/<repo>/actions/workflows/daily_report.yml/dispatches`，
-   带 header `Authorization: Bearer <PAT>` 和 body `{"ref":"main"}`
-2. **Cloudflare Workers Cron Triggers**：免费额度足够，写几行 fetch 即可
-3. 任何你自己的服务器上的 crontab
-
-注意外部方案需要一个有 `actions:write` 权限的 PAT，且这个 PAT 会存在第三方服务上 ——
-建议单独生成一个只用于触发的最小权限 token，不要复用其他用途的 token。
+完整的原因分析、实测数据、以及在 cron-job.org 上的全部配置参数（URL / Method / Headers /
+Body / 时区 / 通知开关 / 最小权限 Token），见上一节
+**「外部定时器（cron-job.org）配置白皮书」**。
 
 **Q：页面 404？**
 依次检查：仓库是 Public（私有仓库的 Pages 需要 Pro）；Settings → Pages 的 Source 选了 `gh-pages` 分支；`gh-pages` 分支确实存在（跑过一次正式工作流后才有）。
@@ -553,12 +736,13 @@ GitHub Search API 的配额：匿名 10 次/分钟，带 Token 30 次/分钟。�
 python main.py                     # 完整流程（真实调用 DeepSeek 并渲染整站）
 python main.py --dry-run           # 跳过 AI 与推送，用原始素材渲染
 python main.py --no-notify         # 跑完整流程但不推送
+python main.py --force             # 忽略「今天已出过」的幂等闸门，强制重出一期
 python main.py --serve --port 8000 # 渲染后起本地预览服务（带 charset 头）
 python main.py --keep-dist         # 渲染前不清空 dist
 python main.py -v                  # 输出调试日志
 ```
 
-退出码：`0` 正常，`1` 致命错误（连页面都没生成）。
+退出码：`0` 正常（含命中幂等闸门而跳过的情况），`1` 致命错误（连页面都没生成）。
 
 ## 免责声明
 

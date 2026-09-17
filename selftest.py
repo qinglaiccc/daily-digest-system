@@ -1116,6 +1116,96 @@ def test_archive_scanner() -> None:
         shutil.rmtree(tmp, ignore_errors=True)
 
 
+def test_idempotent_guard() -> None:
+    """
+    幂等闸门：外部定时器（cron-job.org）重复触发同一天时，必须跳过而不是再发一封邮件。
+
+    覆盖点：
+      · 当天没有存档            → 放行
+      · 当天有正式存档          → 拦下并回传既有 report / stats
+      · --force                 → 突破闸门强制重出
+      · 当天存档是 dry-run 产物 → 不算数（否则本地预览一次就会挡住当天的正式出刊）
+      · 存档损坏                → 按不存在处理，不能把当天彻底卡死
+      · 端到端：命中闸门时 main() 返回 0、重渲染出 dist、且不回写存档
+    """
+    print("\n[15] 幂等闸门（防外部定时器重复触发）")
+
+    import logging
+    import shutil
+    import tempfile
+
+    import main as main_module
+
+    original = (
+        config.ARCHIVE_DIR,
+        config.DIST_DIR,
+        config.OUTPUT_HTML,
+        config.HISTORY_MANIFEST,
+        config.RAW_DUMP_PATH,
+    )
+    tmp = pathlib.Path(tempfile.mkdtemp(prefix="digest-guard-"))
+    try:
+        config.ARCHIVE_DIR = tmp / "archive"
+        config.DIST_DIR = tmp / "dist"
+        config.OUTPUT_HTML = config.DIST_DIR / "index.html"
+        config.HISTORY_MANIFEST = config.DIST_DIR / "history.json"
+        config.RAW_DUMP_PATH = config.DIST_DIR / "_raw.json"
+        config.ARCHIVE_DIR.mkdir(parents=True)
+
+        today = summarizer.today_local().isoformat()
+        rep = summarizer.build_fallback_result(
+            make_news(), make_repos(), summarizer.today_local(), "自检"
+        )
+
+        # 1. 当天还没出过 —— 必须放行
+        check("无当日存档时放行", main_module.guard_already_done(today, force=False) is None)
+
+        # 2. 出了正式的一期 —— 必须拦下，并把既有内容交回给调用方复用
+        archive_file = renderer.save_archive(rep, STATS)
+        guarded = main_module.guard_already_done(today, force=False)
+        check("有正式存档时拦下", guarded is not None)
+        if guarded:
+            check("拦下时回传既有 report", guarded[0].get("date") == today, str(guarded[0].get("date")))
+            check("拦下时回传既有 stats", guarded[1].get("rss_ok") == STATS["rss_ok"])
+
+        # 3. --force 是唯一的逃生口（对应 workflow 的 force 输入项）
+        check("--force 突破闸门", main_module.guard_already_done(today, force=True) is None)
+
+        # 4. dry-run 产物只是预览，不能用来判定"今天已出过"
+        renderer.save_archive(rep, STATS, dry_run=True)
+        payload = json.loads(archive_file.read_text(encoding="utf-8"))
+        check("dry-run 会写入标记", payload.get("dry_run") is True)
+        check("dry-run 存档不算数", main_module.guard_already_done(today, force=False) is None)
+
+        # 5. 存档损坏时按不存在处理 —— 宁可重跑一次，也不能把当天卡死
+        archive_file.write_text("{ 这不是合法 JSON", encoding="utf-8")
+        check("存档损坏时放行", main_module.guard_already_done(today, force=False) is None)
+
+        # 6. 端到端：命中闸门时 main() 仍要把整站渲染出来，否则部署步骤会因为 dist/ 缺失而失败
+        renderer.save_archive(rep, STATS)
+        before = archive_file.read_text(encoding="utf-8")
+
+        # 这一步会打不少日志，压掉以免淹没自检结果
+        logging.disable(logging.CRITICAL)
+        try:
+            code = main_module.main([])
+        finally:
+            logging.disable(logging.NOTSET)
+
+        check("命中闸门时 main() 返回 0", code == 0, f"返回码 {code}")
+        check("命中闸门时已生成 dist/index.html", config.OUTPUT_HTML.exists())
+        check("命中闸门时未回写存档", before == archive_file.read_text(encoding="utf-8"))
+    finally:
+        (
+            config.ARCHIVE_DIR,
+            config.DIST_DIR,
+            config.OUTPUT_HTML,
+            config.HISTORY_MANIFEST,
+            config.RAW_DUMP_PATH,
+        ) = original
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
 def main() -> int:
     print("=" * 62)
     print("每日早报 · 离线自检")
@@ -1135,6 +1225,7 @@ def main() -> int:
     test_deepseek_pipeline()
     test_github_daily_selection()
     test_archive_scanner()
+    test_idempotent_guard()
 
     print("\n" + "=" * 62)
     print(f"结果：{PASSED} 项通过，{FAILED} 项失败")

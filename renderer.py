@@ -110,14 +110,20 @@ def archive_path(for_date: str) -> Path:
     return config.ARCHIVE_DIR / f"{for_date}.json"
 
 
-def save_archive(report: Dict[str, Any], stats: Dict[str, Any]) -> Path:
-    """把当天的报告落成 archive/YYYY-MM-DD.json（会被提交回仓库）。"""
+def save_archive(report: Dict[str, Any], stats: Dict[str, Any], dry_run: bool = False) -> Path:
+    """
+    把当天的报告落成 archive/YYYY-MM-DD.json（会被提交回仓库）。
+
+    dry_run=True 时会在存档里打上标记：这类存档只是预览产物，不能用来判定
+    "今天已经出过正式早报"，否则本地跑一次 --dry-run 就会把当天的正式运行挡在门外。
+    """
     config.ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
     target = archive_path(report["date"])
 
     payload = {
         "date": report["date"],
         "generated_at": datetime.now(timezone.utc).isoformat(),
+        "dry_run": bool(dry_run),
         "stats": stats,
         "report": report,
     }
@@ -125,8 +131,32 @@ def save_archive(report: Dict[str, Any], stats: Dict[str, Any]) -> Path:
         json.dumps(payload, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    logger.info("已写入往期存档：%s", target)
+    logger.info("已写入往期存档：%s%s", target, "（dry-run 预览产物）" if dry_run else "")
     return target
+
+
+def load_archive_entry(for_date: str) -> Optional[Dict[str, Any]]:
+    """
+    读取单日存档的完整载荷（含 dry_run 标记），供幂等判断使用。
+
+    与 load_archive() 的区别：这里要保留 payload 外层字段，而且要区分
+    "文件不存在" 和 "文件损坏"——两者对调用方都意味着"没有可用的当日存档"。
+    """
+    path = archive_path(for_date)
+    if not path.exists():
+        return None
+
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        logger.warning("读取当日存档 %s 失败：%s", path.name, exc)
+        return None
+
+    if not isinstance(data, dict) or not isinstance(data.get("report"), dict):
+        logger.warning("当日存档 %s 结构异常，按不存在处理", path.name)
+        return None
+
+    return data
 
 
 def load_archive() -> List[Dict[str, Any]]:
