@@ -1,5 +1,5 @@
 {
-  "classic_offset": 16,
+  "classic_offset": 18,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -158,12 +158,15 @@
     "wavetermdev/waveterm",
     "korcarc/text-humanizer",
     "ApodexAI/FrontierAgent",
-    "super-productivity/super-productivity"
+    "super-productivity/super-productivity",
+    "shinthink/blitzstrike",
+    "Human-Agent-Society/reef",
+    "jarun/nnn"
   ],
   "last_run_date": "2026-09-19",
   "last_classic": [
-    "open-webui/open-webui",
-    "langchain-ai/langchain"
+    "x1xhlol/system-prompts-and-models-of-ai-tools",
+    "DietrichGebert/ponytail"
   ],
-  "updated_at": "2026-09-19T00:00:59.872976+00:00"
+  "updated_at": "2026-09-19T23:55:36.457140+00:00"
 }

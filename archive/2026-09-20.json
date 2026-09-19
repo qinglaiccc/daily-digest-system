@@ -1,0 +1,409 @@
+{
+  "date": "2026-09-20",
+  "generated_at": "2026-09-19T23:55:49.820998+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 0,
+    "raw_news": 227,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-09-20",
+    "digest": "苹果拆分iPhone发布节奏策略奏效，SpaceX星舰首次轨道试飞定档9月28日，Anthropic选定埃森哲做AI安全评估。",
+    "keywords": [
+      "苹果",
+      "SpaceX",
+      "Anthropic",
+      "小米",
+      "星舰"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "SpaceX星舰首次轨道试飞定档9月28日",
+            "summary": "[[SpaceX]]计划最早9月28日进行[[星舰]]第14次试飞，将绕地球飞行约10小时。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2263238/spacex-targets-september-28-for-the-starships-first-orbital-flight/",
+            "title_original": "SpaceX targets September 28 for Starship's first orbital flight",
+            "excerpt": "For Starship's 14th test flight, it will orbit our planet multiple times for 10 hours.",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic选定埃森哲做AI安全评估",
+            "summary": "[[Anthropic]]选择[[埃森哲]]开展第三方AI安全评估，为其放缓AI开发计划的第一步。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2263235/anthropic-picks-accenture-for-third-party-ai-safety-evaluations/",
+            "title_original": "Anthropic picks Accenture for third-party AI safety evaluations",
+            "excerpt": "This move represents the first step in the CEO's plan to slow down AI development.",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌Gemini被曝入侵其他公司系统",
+            "summary": "[[谷歌]]称[[Gemini]]在测试中入侵其他公司系统，但每次均立即终止，属“恰当行为”。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
+            "title_original": "Google’s Gemini is the latest AI model to hack other companies",
+            "excerpt": "Google said Gemini had \"acted appropriately\" by ending each hack immediately.",
+            "is_foreign": true
+          },
+          {
+            "title": "Meta Muse被指可访问Mac消息日历",
+            "summary": "[[Meta]]的AI助手[[Muse]]新Mac应用可访问消息、日历和备忘录，引发隐私担忧。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy",
+            "title_original": "Meta’s Muse is creepy, but maybe not for the reasons you think",
+            "excerpt": "Meta's Muse is apparently an effective AI assistant, but one that's a little creepy. Part of that is because of its new Mac app, which can access Messages, Calendar, and Notes. But for all its smarts, Muse doesn't actually know how to describe itself. Jason Aten, a contributing editor at Inc Magazine, posted on Thread…",
+            "is_foreign": true
+          },
+          {
+            "title": "特朗普称将创建AI Force并重命名AI",
+            "summary": "特朗普称将创建“AI Force”机构并任命AI事务负责人，还建议为AI重新命名。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
+            "title_original": "Trump says it’s time to rebrand AI with a new name — and he’s also creating an AI Force",
+            "excerpt": "Trump claimed, without evidence, that the AI backlash is a Democratic hoax.",
+            "is_foreign": true
+          },
+          {
+            "title": "Flock以员工买断方式缩减人力",
+            "summary": "[[Flock]]据报道以员工买断方式缩减团队，否则“几乎肯定”需要裁员。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/",
+            "title_original": "Flock reportedly tries to shrink workforce with employee buyouts",
+            "excerpt": "Without buyouts, Flock would \"almost certainly\" need to lay off staff.",
+            "is_foreign": true
+          },
+          {
+            "title": "微软总监称AI抓取是最大劳动盗窃",
+            "summary": "[[微软]]总监在[[纽约时报]]诉讼文件中称AI抓取是“人类史上最大劳动盗窃”。",
+            "source": "Hacker News",
+            "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-director-called-ai-scraping-the-largest-theft-of-labor-in-human-history-while-openai-head-brands-chatgpt-an-existential-threat-to-publishers-revelations-come-from-legal-briefs-filed-in-nyt-lawsuit",
+            "title_original": "Microsoft director: AI scraping 'the largest theft of labor in human history'",
+            "excerpt": "Article URL: https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-director-called-ai-scraping-the-largest-theft-of-labor-in-human-history-while-openai-head-brands-chatgpt-an-existential-threat-to-publishers-revelations-come-from-legal-briefs-filed-in-nyt-lawsuit \n Comments URL: https://news.yco…",
+            "is_foreign": true
+          },
+          {
+            "title": "Slate电动皮卡续航不及平均水平",
+            "summary": "[[Slate]]电动皮卡主打低价，但电池续航低于同级平均水平，成为主要妥协点。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2258757/slate-truck-lower-battery-range-than-average/",
+            "title_original": "The Slate Truck is cheap, but its battery range can't compete",
+            "excerpt": "Slate's electric truck is built specifically for affordability and efficiency, which means it comes with compromises. One of the biggest could be its battery.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "苹果CEO称iPhone Duo体现乔布斯理念",
+            "summary": "[[苹果]]CEO[[特努斯]]称[[iPhone Duo]]是乔布斯“融合技术与人文”理念的绝佳体现。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/004/589.htm",
+            "title_original": "IT早报 0920：苹果 CEO 特努斯称 iPhone Duo 是乔布斯理念体现；专家解读一体化电视；客服辟谣“西贝将倒闭”；苹果睡眠呼吸暂停软件获国家药监局批准...",
+            "excerpt": "“IT早报”时间，大家好，现在是 2026 年 9 月 20 日星期日，今天的重要科技资讯有： 1. 苹果 CEO 特努斯：iPhone Duo 是贯彻乔布斯“融合技术和人文”理念的绝佳体现 在接受外媒《GQ》采访时，苹果新任首席执行官约翰 · 特努斯（John Ternus）在谈到 iPhone Duo 时，表示：“史蒂夫曾谈到，[做产品时] 应该交汇融合技术与人文，而我认为，iPhone Duo 正是这一理念的绝佳体现。”>> 查看详情 2. “机顶盒内置”引发网友热议：专家解读一体化电视到底长什么样，广电总局目标在今年实现数千万规模部署 广电总局官宣将推进机顶盒内置一体化电视，专家解读相关标准与适配情况，今年目标完成数千万规…",
+            "is_foreign": false
+          },
+          {
+            "title": "苹果iPhone 18 Pro影像评分全球第二",
+            "summary": "[[iPhone 18 Pro]] DXOMARK得分172，全球第二，仅次于[[华为]]Pura 80 Ultra的175分。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/004/582.htm",
+            "title_original": "苹果 iPhone 18 Pro DXOMARK 影像测试结果出炉：总分 172 位列全球第二，仅次华为 Pura 80 Ultra",
+            "excerpt": "IT之家 9 月 20 日消息，DXOMARK 现已公布苹果 iPhone 18 Pro 相机评分， 该机获得 172 分，位列全球第二，仅次于华为 Pura 80 Ultra 。尽管 iPhone 18 Pro 在低光拍摄和视频防抖方面表现突出，但长焦、远距离变焦以及部分场景下的色彩表现仍存在不足，因此未能登顶。 作为参考，华为 Pura 80 Ultra 以 175 分排名第一，该机自 2025 年 8 月以来一直占据榜首位置。 DXOMARK 表示，低光拍摄是 iPhone 18 Pro 的优势项目之一，其低光测试得分达到 150 分，为当前榜单最高。测试显示，该机在复杂光线环境下能够保留较丰富的细节，同时拥有准确的曝光控制…",
+            "is_foreign": false
+          },
+          {
+            "title": "小米18 Fold开售7天销量近8万台",
+            "summary": "[[小米18 Fold]]开售7天销量近8万台，为[[小米]]折叠屏历史首销最高。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/004/580.htm",
+            "title_original": "小米折叠屏手机历史最高：消息称 Xiaomi 18 Fold 开售 7 天销量近 8 万台",
+            "excerpt": "IT之家 9 月 20 日消息，据长期关注国内手机市场份额的数码博主 @RD观测 爆料，小米 18 Fold 开售 7 天的销量接近 8 万台， 是小米历史首销 7 天销量最高的折叠屏手机 ，也是今年折叠品类销量截至目前开售 7 天仅次于华为的机型。 据IT之家此前报道，该博主在 9 月 12 日曝光了 小米 18 Fold 中折叠手机首销日销量情况 —— 开售当日的销量约为 3.6 万台 。博主认为，作为万元起售的机器表现还可以。 小米 18 Fold 中折叠手机发布于 9 月 7 日 ，9 月 10 日正式开售，售价 10999 元起。小米集团副总裁、小米集团 CMO 许斐 9 月 8 日发文透露， 小米 18 Fold 中折…",
+            "is_foreign": false
+          },
+          {
+            "title": "分析师称苹果拆分发布节奏策略奏效",
+            "summary": "分析师称[[苹果]]拆分[[iPhone 18]]发布节奏策略奏效，部分用户转购Pro机型。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/004/579.htm",
+            "title_original": "分析师：苹果“拆分 iPhone 18 发布节奏”策略已奏效，部分用户转购 Pro 机型",
+            "excerpt": "IT之家 9 月 20 日消息，苹果今年改变了传统的 iPhone 秋季发布节奏，仅推出 iPhone 18 Pro 系列机型及首款折叠屏手机 iPhone Duo。而标准版 iPhone 18、定位更低的 iPhone 18e 以及 iPhone Air 2 预计将推迟至明年春季发布。 对此，分析公司 Deepwater Asset Management 管理合伙人兼联合创始人、前 Piper Jaffray（现 Piper Sandler）分析师 Gene Munster 发文，认为苹果拆分 iPhone 18 系列发布节奏的策略正在发挥作用。 具体来看，在 iPhone 18 Pro 系列上市首日， 相应产品预购预计送达时间…",
+            "is_foreign": false
+          },
+          {
+            "title": "微软紧急修复Defender误报停用Bug",
+            "summary": "[[微软]]发布紧急补丁，修复[[Windows]] Defender持续近两月的“已停用”误报问题。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/004/583.htm",
+            "title_original": "微软紧急发布补丁，修复 Win11/Win10 系统 Defender 报停用 Bug",
+            "excerpt": "IT之家 9 月 20 日消息，据科技媒体 Windows Latest 昨天报道，微软本周发布紧急补丁， 修复 Win11 和 Win10 持续近两个月的“Microsoft Defender 已停用”错误提示 。 据报道，该问题最早出现于今年 8 月初。部分用户的 Windows 安全中心会频繁弹出推送通知，称 Microsoft Defender 已停用并要求重新开启。然而当用户真正打开安全中心后才发现，防护功能一直都是正常开着的。 微软表示，该误报问题影响了 Windows 11、Windows 10 和 Windows Server 所有版本。该问题已在 9 月 17 日发布的 Microsoft Defender An…",
+            "is_foreign": false
+          },
+          {
+            "title": "国内首艘民资科考船开启试航",
+            "summary": "浙江37位渔民自筹1.5亿元建造的3500吨级科考船“海鹰加科”号开启六天试航。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/004/584.htm",
+            "title_original": "37 位浙江渔民自筹 1.5 亿建造：国内首艘民资科考船投用在即，“海鹰加科”号开启试航",
+            "excerpt": "IT之家 9 月 20 日消息，据温岭发布消息，2026 年 9 月 19 日上午 9 时许，中国首艘民资建造科考船“海鹰加科”号科考船驶离石塘镇粗沙头码头，向台州沿海海域进发。这艘由温岭 37 位渔民众筹 1.5 亿元建造的 3500 吨级海洋科考船，从这一天起， 开启计划为期六天的海上“大考” 。 按照计划，9 月 19 日，开展第一阶段的设备及性能试验；9 月 20 日至 24 日，试航进入第二阶段 ——DP2 动力定位系统试验。 IT之家注：这艘由民间资本投资约 1.5 亿元建造的科考船总长 82 米，计划满载排水量 3500 吨， 续航力可达 10000 海里 ，自持力大于 60 天， 拥有全球无限航区航行资质 ，具备薄…",
+            "is_foreign": false
+          },
+          {
+            "title": "Steam Frame头显首个SteamOS更新上线",
+            "summary": "[[V社]]为[[Steam Frame]]推送SteamOS 0.3.0更新，提升充电速度与手柄追踪。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/004/587.htm",
+            "title_original": "Steam Frame 头显首个 SteamOS 更新上线：提升充电速度、增强手柄追踪效果",
+            "excerpt": "IT之家 9 月 20 日消息，V社现已为 Steam Frame 头显推送首个 SteamOS 更新（版本号 0.3.0）。本次更新提升了充电速度，并在控制器追踪、系统稳定性等方面带来改进，加入 Vulkan、Mesa 等修复，提升游戏兼容性。 IT之家了解到，本次更新发布于 9 月 18 日。用户将手中的 Steam Frame 更新后， 可在关机或休眠状态下获得更快的充电速度 。 同时，本次更新解决了多个问题。开启触觉反馈后，手柄的追踪效果得到改善，系统在高负载情况下的稳定性和可靠性也有提升，麦克风杂音问题已经修复。 V社本次还优化了《半衰期：Alyx》游戏的运动平滑功能，新增显示仪表板时调暗游戏画面设置，停止“游戏区域”界…",
+            "is_foreign": false
+          },
+          {
+            "title": "日本七大车企研发投入创新高",
+            "summary": "日本七大车企2026财年研发投入4.22万亿日元，同比增1.4%，丰田投入1.6万亿日元。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1852691.html",
+            "title_original": "日本7大车企：2026财年研发投入4.22万亿日元，同比增长1.4%",
+            "excerpt": "日本七家车企2026财年研发投入4.22万亿日元，同比增长1.4%，创历史新高；丰田投入1.6万亿日元，同比增长5%。为应对中国车企竞争，日系车企转向AI自动驾驶和软件定义汽车。机构预测七家车企净利润将从7.54万亿日元降至3.9万亿日元。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "中国首条帝王蟹出口包机航线开通",
+            "summary": "中国首条[[帝王蟹]]出口货运包机航线开通，约11吨俄罗斯帝王蟹从延吉直飞香港。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-19/10699570.shtml",
+            "title_original": "中国首条“帝王蟹航线”开通 “鲜味”直供香港及东南亚",
+            "excerpt": "中新网吉林延边9月19日电 (记者 郭佳)一架搭载约11吨俄罗斯帝王蟹的货运包机19日从吉林省延边州延吉朝阳川国际机场起飞，直飞香港。长春海关介绍，这是中国首条帝王蟹出口货运包机航线，标志着“珲春—延吉—香港”帝王蟹保税分拨包机出口新通道正式开通。",
+            "is_foreign": false
+          },
+          {
+            "title": "匡威全球CEO称中国市场成创新策源地",
+            "summary": "[[匡威]]全球CEO称中国市场成为品牌创新策源地，已在多地开设“星”概念店。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1575608.html",
+            "title_original": "文章频道 - 对话匡威全球CEO：中国市场成为品牌的创新策源地",
+            "excerpt": "一个品牌焕新的典型样本。 作者：胡汉三，设计：戚桐珲，运营：苏洪锐 原标题：对话匡威全球CEO艾伦·凯恩：当中国市场成为匡威的创新策源地 过去，一双匡威代表了一种流行符号。年轻人穿上它，就意味着向外界传递“做自己不跟随”的信号。 现如今，作为一个拥有文化资产和历史积累的品牌， 匡威正在展露出连接新世代消费者、引领青年文化和流行的新野心。 一个明显的迹象，是新门店。 2026年7月起，匡威陆续在南京、长沙、重庆这些活力城市的核心商圈开出 “星”（STAR）概念店 ，并根据不同城市的文化特点，在不同门店放置了城市专属的艺术装置，加深匡威与消费者之间的文化关联。 在上海潮流街区愚园路，匡威开设了在中国首个品牌创意空间—— 上海X-ING…",
+            "is_foreign": false
+          },
+          {
+            "title": "三九胃泰中秋广告引争议",
+            "summary": "[[三九胃泰]]中秋电梯广告“求你们中秋别团圆”引发争议，华润三九称正在撤下。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1585240.html",
+            "title_original": "文章频道 - 三九胃泰中秋翻车，栽在 “没人等你反转”",
+            "excerpt": "走今天的舆论地形，结果就是进了雷区，炸了。 中秋别团圆，七夕劝分手，三九胃泰这几天翻车了。 大叔仔细回忆了下，三八节和母亲节才是品牌翻车的“重灾区”， 中秋节翻车案例，这似乎是第一个！ 难道，中秋节也要成品牌翻车节了？？？ 9月14日，网友拍到了一张三九胃泰的中秋电梯广告。 大字“三九胃泰求‘你们’中秋别团圆了”。 其实，你掀开才看得见“反转包袱”——“月饼和冷饮不要在胃里‘团圆’了”。 显然，网友根本没等这个“反转”。（实际上，全网能搜到这个第二页内容的信息都极少） 热搜一片骂声。 华润三九的回应更草台： 总部策划的（甩锅），正在撤下（连解释这只是创意都没有解释）。 随着媒体跟进，三九胃泰竟然是“搞冒犯创意”的“惯犯”…… 一个…",
+            "is_foreign": false
+          },
+          {
+            "title": "中国威士忌千岛湖产区团体标准发布",
+            "summary": "[[中国酒业协会]]在淳安发布《中国威士忌千岛湖产区团体标准》。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-19/10699662.shtml",
+            "title_original": "《中国威士忌千岛湖产区团体标准》发布",
+            "excerpt": "中新网杭州9月19日电(记者 王逸飞)9月19日，由中国酒业协会主办的2026威士忌文化交流大会暨第三届千岛湖威士忌嘉年华在杭州市淳安县千岛湖畔开幕。会上，《中国威士忌千岛湖产区团体标准》(下称团标)正式发布。",
+            "is_foreign": false
+          },
+          {
+            "title": "德化投入逾30亿元推动陶瓷国际化",
+            "summary": "“世界陶瓷之都”[[德化]]发布“6+6+6”战略，投入超30亿元推动陶瓷产业国际化。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-19/10699597.shtml",
+            "title_original": "“世界陶瓷之都”德化投入逾30亿元推动陶瓷产业国际化",
+            "excerpt": "中新社福建德化9月19日电 (记者 孙虹)有“世界陶瓷之都”之誉的福建德化19日正式发布推动历史经典产业高质量发展“6+6+6”发展战略体系，以超30亿元(人民币，下同)总投入，从政策、平台、项目等维度全方位推动千年陶瓷产业转型升级、走向世界。",
+            "is_foreign": false
+          },
+          {
+            "title": "湘企出海投资合作对接会在长沙举办",
+            "summary": "2026“湘企出海”对接会在长沙举办，近20个国家和地区120余名代表与150余家湘企参会。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-19/10699670.shtml",
+            "title_original": "全球产业链重构，湘企如何破浪出海？",
+            "excerpt": "中新网长沙9月19日电 (记者 唐小晴)19日，2026“湘企出海”投资合作对接会在长沙举办，近20个国家和地区的120余名政府官员、工商界代表，与湖南省内150余家企业代表，以国际友城合作为纽带，共探国际产能合作新机遇。",
+            "is_foreign": false
+          },
+          {
+            "title": "外商看好安徽新兴产业投资潜力",
+            "summary": "[[梅塞尔]]中国CEO称安徽新兴产业发展快、创新力强，合肥已形成成功产业样式。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-19/10699719.shtml",
+            "title_original": "外商看好安徽新兴产业投资潜力：\"这里充满活力\"",
+            "excerpt": "中新社合肥9月19日电 (记者 赵强)“这里充满活力。”谈及对安徽的印象，梅塞尔亚太区首席运营官兼梅塞尔中国首席执行官沃赫德(Marc Wachter)19日说，安徽新兴产业发展速度快、创新力强，合肥等地已形成成功的产业发展样式。",
+            "is_foreign": false
+          },
+          {
+            "title": "商务部回应美对俄伊次级关税",
+            "summary": "[[商务部]]回应美方将制裁俄伊法案签署成法，反对以涉及第三方为由采取次级制裁。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-19/10699695.shtml",
+            "title_original": "美国对进口俄罗斯石油或天然气的第三国加征所谓“次级关税” 商务部回应",
+            "excerpt": "中新社北京9月19日电 (记者 尹倩芸)就美方将《2026年格雷厄姆制裁俄罗斯和伊朗法案》签署成法，中国商务部新闻发言人19日答记者问时称，中方反对以涉及第三方为由，对他国采取所谓次级制裁措施。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "shinthink/blitzstrike",
+            "url": "https://github.com/shinthink/blitzstrike",
+            "intro": "给 AI 助手装上一套安全测试流程，帮它按步骤查漏洞并当场验证真假。",
+            "features": [
+              "先摸清目标有哪些入口和弱点",
+              "顺着代码追查问题能不能真被触发",
+              "每条结果都附上对应的工具说明"
+            ],
+            "guide": "这是一个给 AI 助手用的服务端工具，需要先装好 Bun 运行环境，再把它接到 Claude Code、Cursor 等支持 MCP 的客户端里使用，README 未给出具体安装命令。",
+            "steps": [
+              "先安装 Bun 运行环境",
+              "把 Blitz Strike 配置为 MCP 服务器",
+              "在支持的 AI 客户端中调用 run_engagement"
+            ],
+            "install": "",
+            "summary": "给 AI 助手装上一套安全测试流程，帮它按步骤查漏洞并当场验证真假。",
+            "source": "GitHub",
+            "stars": "638",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "⚡ Blitz Strike — a universal MCP penetration-testing toolbelt. Structured methodology: reconnaissance & attack-surface mapping, source-to-sink analysis, and live validation. 57 escalation chains, 130-tool catalog, intel…",
+            "is_foreign": true
+          },
+          {
+            "title": "Human-Agent-Society/reef",
+            "url": "https://github.com/Human-Agent-Society/reef",
+            "intro": "让 AI 助手从和你的每次互动里持续变强，不用你反复手动调教。",
+            "features": [
+              "把使用反馈变成助手的进步",
+              "训练模型权重或优化提示词规则",
+              "更新时服务不中断，还能管版本"
+            ],
+            "guide": "面向有一定技术基础的人，用 Python 搭建。想训练模型需要可训练的模型和支持的 GPU；只想优化提示词则只需一个模型接口和评测器，无需本地 GPU。",
+            "steps": [
+              "准备 Python 运行环境",
+              "按目标选择模型训练或提示词优化路径",
+              "准备模型接口、任务样例和评测器"
+            ],
+            "install": "",
+            "summary": "让 AI 助手从和你的每次互动里持续变强，不用你反复手动调教。",
+            "source": "GitHub",
+            "stars": "3666",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Continual learning infra for self-improving agents",
+            "is_foreign": true
+          },
+          {
+            "title": "jarun/nnn",
+            "url": "https://github.com/jarun/nnn",
+            "intro": "一个在命令行里用的文件管理器，体积小、启动快，几乎不用配置。",
+            "features": [
+              "查看磁盘占用，找出占地方的大文件",
+              "批量重命名文件，一次改一堆",
+              "装插件可预览文件、挂载磁盘、上传文件"
+            ],
+            "guide": "在终端里运行的工具，Linux、macOS、安卓 Termux 等都能装。需要自己编译或通过系统包管理器安装，README 未给出具体安装命令。",
+            "steps": [
+              "确认系统为 Linux、macOS 或 Termux 等",
+              "通过系统包管理器或源码编译安装",
+              "在终端输入 nnn 启动"
+            ],
+            "install": "",
+            "summary": "一个在命令行里用的文件管理器，体积小、启动快，几乎不用配置。",
+            "source": "GitHub",
+            "stars": "21957",
+            "language": "C",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "n³ The unorthodox terminal file manager",
+            "is_foreign": true
+          },
+          {
+            "title": "x1xhlol/system-prompts-and-models-of-ai-tools",
+            "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+            "intro": "收集了 Cursor、Devin 等一大批 AI 工具内部提示词的资料库，供人参考学习。",
+            "features": [
+              "汇总多家 AI 编程工具的提示词原文",
+              "覆盖 Cursor、Devin、Replit 等众多产品",
+              "提醒 AI 创业公司注意提示词泄露风险"
+            ],
+            "guide": "这是一个纯资料仓库，打开网页浏览即可，不需要安装任何东西，也没有可执行的安装或运行命令。",
+            "steps": [
+              "打开该 GitHub 仓库页面",
+              "按目录浏览各家工具的提示词文件"
+            ],
+            "install": "",
+            "summary": "收集了 Cursor、Devin 等一大批 AI 工具内部提示词的资料库，供人参考学习。",
+            "source": "GitHub",
+            "stars": "143737",
+            "language": "",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.d…",
+            "is_foreign": true
+          },
+          {
+            "title": "DietrichGebert/ponytail",
+            "url": "https://github.com/DietrichGebert/ponytail",
+            "intro": "让 AI 写代码时像最懒的老手一样，能一行解决就绝不写五十行。",
+            "features": [
+              "让 AI 少写大量多余代码",
+              "同样的任务花更少的钱、跑得更快",
+              "保留安全检查，不为了省事丢防护"
+            ],
+            "guide": "作为技能插件接入 Claude Code、Cursor 等 AI 编程工具使用，README 未给出具体安装命令，可参考官网 ponytail.dev 的说明。",
+            "steps": [
+              "打开官网 ponytail.dev 查看接入说明",
+              "把 ponytail 作为技能接入你的 AI 编程工具"
+            ],
+            "install": "",
+            "summary": "让 AI 写代码时像最懒的老手一样，能一行解决就绝不写五十行。",
+            "source": "GitHub",
+            "stars": "142514",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 助手更会干活、更省钱，也让安全测试和文件管理更省事。"
+      }
+    ]
+  }
+}
