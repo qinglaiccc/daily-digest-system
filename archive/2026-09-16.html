@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#F4F1EA">
+<meta name="description" content="2026年09月16日 星期三 每日早报：国际与国内科技新闻、新消费动态，以及 GitHub 热门效率与 AI 工具。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每日早报 · 2026年09月16日 星期三">
+<meta property="og:description" content="华邦11.2亿美元收购英飞凌NOR业务；极狐阿尔法T7上市1小时锁单超3万台；平陆运河建成通航。">
+<title>每日早报 · 2026年09月16日 星期三</title>
+
+<!--
+  视觉风格：复古纸质 + 硬核边框（Dashboard）
+    · 底板 #F4F1EA 纸质米色，全站不出现纯白
+    · 所有分隔、卡片、按钮一律 1px/2px 纯黑实线边框，零阴影、零圆角
+    · 点缀色：暗红 #8C2F1F（主）、深绿 #2F5D3A（次），低饱和度复古色
+    · 数字与标签用等宽体（档案卡片感），标题用大号粗体无衬线
+  布局：左侧固定 Sidebar（往期存档，选中项反黑）+ 右侧主内容区
+  交互：Tab 切换用原生 JS，无 JS 时自动退化为「全部板块顺序展开」
+-->
+<style>
+  :root {
+    --paper: #f4f1ea;        /* 纸质米色底板，取代纯白 */
+    --paper-alt: #ebe6da;    /* 略深一档，用于表头/次级区块 */
+    --paper-deep: #e3ddd0;   /* 再深一档，用于 hover */
+    --ink: #111111;
+    --ink-soft: #3d3a34;
+    --muted: #5e5849;        /* 暖灰，在两种纸色上均 ≥ 5.6:1 */
+    --line: #111111;         /* 边框一律纯黑 */
+    --line-soft: #b9b2a2;
+    --accent: #8c2f1f;       /* 暗红 */
+    --accent-2: #2f5d3a;     /* 深绿 */
+
+    --sans: "Helvetica Neue", Helvetica, Arial, "Source Han Sans SC",
+            "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB",
+            "Microsoft YaHei", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+            "Sarasa Mono SC", "Courier New", monospace;
+
+    --sidebar-w: 268px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* 全站零圆角零阴影 —— 硬核边框风格的地基 */
+  * { border-radius: 0 !important; }
+
+  .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+  /* ================= 布局：左 Sidebar + 右内容 ================= */
+  .layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+    min-height: 100vh;
+  }
+
+  /* ================= 左侧 Sidebar ================= */
+  .sidebar {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--paper-alt);
+    border-right: 2px solid var(--line);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand {
+    padding: 18px 16px;
+    border-bottom: 2px solid var(--line);
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .brand-title {
+    display: block;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: .04em;
+  }
+  .brand-sub {
+    display: block;
+    margin-top: 3px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    opacity: .78;
+  }
+
+  .side-label {
+    padding: 14px 16px 8px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .archive-nav { flex: 1 1 auto; }
+
+  .archive-nav ol { margin: 0; padding: 0; list-style: none; }
+
+  .archive-nav a {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-top: 1px solid var(--line-soft);
+    transition: background-color .12s, color .12s;
+  }
+  .archive-nav li:last-child a { border-bottom: 1px solid var(--line-soft); }
+
+  .archive-nav a:hover { background: var(--paper-deep); }
+
+  /* 当前正在看的那一期：反黑高亮 */
+  .archive-nav a.is-current,
+  .archive-nav a.is-current:hover {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+  .archive-nav .d {
+    font-family: var(--mono);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -.02em;
+  }
+  .archive-nav .m {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    color: var(--muted);
+  }
+  .archive-nav a.is-current .m { color: var(--paper); opacity: .82; }
+
+  .archive-nav .dig {
+    grid-column: 2;
+    display: block;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .archive-nav a.is-current .dig { color: var(--paper); opacity: .9; }
+
+  .side-foot {
+    border-top: 2px solid var(--line);
+    padding: 12px 16px 20px;
+    font-size: 12.5px;
+  }
+  .side-foot a {
+    display: block;
+    padding: 4px 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .side-foot a:hover { text-decoration: underline; }
+  .side-foot .note {
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* ================= 右侧内容区 ================= */
+  .content { min-width: 0; padding: 0 0 0; }
+
+  /* ---- 报头 ---- */
+  .masthead {
+    padding: 26px 30px 22px;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper);
+  }
+
+  .masthead-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+
+  .kicker {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .lang { display: flex; border: 1px solid var(--line); }
+  .lang button {
+    appearance: none;
+    border: 0;
+    border-left: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink-soft);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: background-color .12s, color .12s;
+  }
+  .lang button:first-child { border-left: 0; }
+  .lang button:hover { background: var(--paper-deep); }
+  .lang button.on { background: var(--ink); color: var(--paper); font-weight: 700; }
+  .lang button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  h1.masthead-title {
+    margin: 0 0 10px;
+    font-size: clamp(30px, 5.2vw, 58px);
+    line-height: 1.06;
+    font-weight: 800;
+    letter-spacing: -.03em;
+    text-transform: none;
+  }
+
+  .dateline {
+    margin: 0 0 14px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .lead {
+    margin: 0;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: var(--paper-alt);
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 62em;
+  }
+
+  /* ---- KPI 看板 ---- */
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+    border-bottom: 2px solid var(--line);
+    background: var(--paper-alt);
+  }
+  .kpi {
+    padding: 14px 18px;
+    border-right: 1px solid var(--line);
+  }
+  .kpi:last-child { border-right: 0; }
+  .kpi-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .kpi-value {
+    display: block;
+    margin-top: 2px;
+    font-family: var(--mono);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -.03em;
+  }
+  .kpi-value.accent { color: var(--accent); }
+  .kpi-value.green { color: var(--accent-2); }
+
+  /* ---- Tab 栏 ---- */
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  .tab {
+    appearance: none;
+    border: 0;
+    border-right: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink-soft);
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight: 700;
+    padding: 11px 18px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color .12s, color .12s;
+  }
+  .tab:hover { background: var(--paper-deep); }
+  .tab .n {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    color: var(--accent);
+  }
+  .tab .c {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--muted);
+  }
+  .tab[aria-selected="true"] {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .tab[aria-selected="true"] .n,
+  .tab[aria-selected="true"] .c { color: var(--paper); opacity: .85; }
+  .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; }
+
+  /* ---- 面板 ---- */
+  .panels { padding: 0; }
+
+  .panel { padding: 26px 30px 34px; }
+  .panel + .panel { border-top: 2px solid var(--line); }
+
+  /* 无 JS 时全部面板直接铺开，保证内容永远可读 */
+  .js-on .panel { display: none; }
+  .js-on .panel.is-active { display: block; }
+
+  .panel-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--line);
+  }
+  .panel-head h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -.02em;
+  }
+  .panel-head h2 .en {
+    margin-left: 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .panel-head .count {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .panel-lead {
+    margin: 0 0 18px;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent-2);
+    background: var(--paper-alt);
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+
+  /* ---- 新闻条目：档案卡片 ---- */
+  .items { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+
+  .item {
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr);
+    border: 1px solid var(--line);
+    background: var(--paper);
+    transition: background-color .12s;
+  }
+  .item:hover { background: var(--paper-alt); }
+
+  .item-num {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 13px;
+    border-right: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .item:hover .item-num { background: var(--paper-deep); }
+
+  .item-body { padding: 12px 16px 13px; min-width: 0; }
+
+  .item h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: -.01em;
+  }
+  .item h3 a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+  .orig-title {
+    margin: 0 0 7px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  body.mode-orig .orig-title { font-size: 17px; font-weight: 700; color: var(--ink); }
+
+  .summary {
+    margin: 0 0 10px;
+    font-size: 15px;
+    line-height: 1.68;
+    color: var(--ink-soft);
+    max-width: 66em;
+  }
+
+  .excerpt {
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted);
+    max-width: 66em;
+  }
+  body.mode-both .excerpt {
+    padding-left: 12px;
+    border-left: 2px solid var(--line-soft);
+  }
+
+  .item-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    padding-top: 9px;
+    border-top: 1px solid var(--line-soft);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .item-meta .src { color: var(--ink); font-weight: 700; }
+
+  .read-more {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--accent);
+    border: 1px solid var(--line);
+    padding: 5px 11px;
+    transition: background-color .12s;
+    white-space: nowrap;
+  }
+  .read-more:hover { background: var(--ink); }
+  .read-more .ext {
+    width: 7px;
+    height: 7px;
+    border-top: 1.5px solid currentColor;
+    border-right: 1.5px solid currentColor;
+  }
+
+  /* ---- GitHub 仓库卡片 ---- */
+  .repo {
+    border: 1px solid var(--line);
+    background: var(--paper);
+    margin-bottom: 14px;
+  }
+  .repo:last-child { margin-bottom: 0; }
+
+  .repo-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .repo-head h3 {
+    margin: 0;
+    font-family: var(--mono);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    word-break: break-all;
+  }
+  .repo-head h3 a { color: var(--paper); }
+  .repo-head h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  .repo-stats { display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    border: 1px solid var(--paper);
+    padding: 2px 7px;
+    opacity: .92;
+  }
+  .badge.new { background: var(--accent-2); border-color: var(--accent-2); }
+
+  .repo-body { padding: 14px 16px 16px; }
+
+  .field { margin-bottom: 14px; }
+  .field:last-child { margin-bottom: 0; }
+
+  .field-label {
+    display: inline-block;
+    margin-bottom: 6px;
+    padding: 2px 8px;
+    border: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .field p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink);
+    max-width: 66em;
+  }
+
+  .features { margin: 0; padding: 0; list-style: none; display: grid; gap: 5px; }
+  .features li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .features li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: .58em;
+    width: 7px;
+    height: 7px;
+    background: var(--accent-2);
+  }
+
+  .install {
+    margin: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .install::before {
+    content: "$ ";
+    opacity: .6;
+  }
+
+  .repo-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    border-top: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---- 空态 / 提示 ---- */
+  .empty {
+    padding: 22px 16px;
+    border: 1px dashed var(--line-soft);
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .notice {
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper-alt);
+  }
+  .notice .mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--line);
+    background: var(--accent);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+  }
+  .notice .body { padding: 12px 16px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); }
+  .notice code {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    padding: 1px 5px;
+    border: 1px solid var(--line-soft);
+    background: var(--paper);
+  }
+
+  /* ---- 翻页 ---- */
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 30px;
+    border-top: 2px solid var(--line);
+    background: var(--paper-alt);
+    font-size: 13.5px;
+  }
+  .pager a {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    transition: background-color .12s, color .12s;
+  }
+  .pager a:hover { background: var(--ink); color: var(--paper); }
+  .pager a:hover .dir { color: var(--paper); opacity: .8; }
+  .pager .dir {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .pager .next { margin-left: auto; align-items: flex-end; text-align: right; }
+
+  /* ---- 页脚 ---- */
+  footer {
+    border-top: 2px solid var(--line);
+    padding: 20px 30px 40px;
+    background: var(--paper-alt);
+    font-size: 12.5px;
+    line-height: 1.8;
+    color: var(--muted);
+  }
+  footer p { margin: 0 0 4px; }
+  footer strong { color: var(--ink-soft); }
+  footer code {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    padding: 1px 5px;
+    border: 1px solid var(--line-soft);
+    background: var(--paper);
+  }
+  footer a { color: var(--accent); font-weight: 700; }
+  footer a:hover { text-decoration: underline; }
+
+  /* ================= 语言模式 ================= */
+  body.mode-zh .lang-orig { display: none; }
+  body.mode-orig .lang-zh { display: none; }
+  /* 双语模式下收起与原题重复的原文（中文源、GitHub 仓库名） */
+  body.mode-both .item:not(.is-foreign) .orig-title { display: none; }
+  body.mode-both .item.same-title .orig-title { display: none; }
+
+  /* ================= 响应式 ================= */
+  @media (max-width: 1000px) {
+    /* 侧栏改为顶部横向条：同一份 DOM，只换排布方式 */
+    .layout { grid-template-columns: 1fr; }
+
+    .sidebar {
+      position: static;
+      height: auto;
+      border-right: 0;
+      border-bottom: 2px solid var(--line);
+    }
+    .archive-nav ol {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .archive-nav ol::-webkit-scrollbar { display: none; }
+    .archive-nav li { flex: 0 0 auto; }
+    .archive-nav a {
+      grid-template-columns: auto;
+      gap: 2px;
+      padding: 9px 14px;
+      border-top: 0;
+      border-right: 1px solid var(--line-soft);
+      text-align: center;
+    }
+    .archive-nav li:last-child a { border-bottom: 0; }
+    .archive-nav .dig { display: none; }
+
+    .side-label { padding: 10px 14px 6px; }
+    .side-foot { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 10px 14px; }
+    .side-foot .note { margin-top: 0; }
+  }
+
+  @media (max-width: 720px) {
+    body { font-size: 15.5px; }
+    .masthead { padding: 20px 16px 18px; }
+    .panel { padding: 20px 16px 26px; }
+    .pager, footer { padding-left: 16px; padding-right: 16px; }
+    .item { grid-template-columns: 40px minmax(0, 1fr); }
+    .item-body { padding: 11px 13px 12px; }
+    .item h3 { font-size: 16px; }
+    .kpi { padding: 11px 14px; }
+    .kpi-value { font-size: 24px; }
+    .tab { padding: 9px 13px; font-size: 12.5px; }
+    .read-more { margin-left: 0; }
+    .notice { grid-template-columns: 1fr; }
+    .notice .mark { justify-content: flex-start; padding: 6px 16px; border-right: 0; border-bottom: 1px solid var(--line); }
+  }
+
+  @media print {
+    .sidebar, .tabs, .lang, .pager { display: none !important; }
+    .js-on .panel { display: block !important; }
+    .layout { display: block; }
+    .item, .repo { break-inside: avoid; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: .01ms !important;
+      animation-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+
+<body class="mode-zh">
+
+<div class="layout">
+
+  <!-- ==================== 左侧：往期存档 ==================== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-title">每日早报</span>
+      <span class="brand-sub">Daily Digest</span>
+    </div>
+
+    <div class="side-label">往期存档 / Archive</div>
+
+    <nav class="archive-nav" aria-label="往期存档">
+      <ol>
+        <li>
+          <a href="../archive/2026-09-19.html"
+             class=""
+>
+            <span class="d">19</span>
+            <span class="m">2026-09</span>
+            <span class="dig">谷歌Gemini测试中自主入侵真实企业，AMD发布256核EPYC Venice，纽约时报案曝光微软OpenAI内部文件。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-18.html"
+             class=""
+>
+            <span class="d">18</span>
+            <span class="m">2026-09</span>
+            <span class="dig">苹果iPhone 18 Pro开售，OpenAI披露GPT-5.6 Sol隐瞒错误行为，Crusoe融资39亿美元建数据中心。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-17.html"
+             class=""
+>
+            <span class="d">17</span>
+            <span class="m">2026-09</span>
+            <span class="dig">华为昇腾960提前登场，智谱用10万国产卡实现GLM造GLM；美联储三年多来首次加息25个基点。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-16.html"
+             class="is-current"
+aria-current="page">
+            <span class="d">16</span>
+            <span class="m">2026-09</span>
+            <span class="dig">华邦11.2亿美元收购英飞凌NOR业务；极狐阿尔法T7上市1小时锁单超3万台；平陆运河建成通航。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-15.html"
+             class=""
+>
+            <span class="d">15</span>
+            <span class="m">2026-09</span>
+            <span class="dig">8月经济数据发布，算力大通道超70条；黄仁勋反对AI减速，国产GPU四小龙齐聚资本市场。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-14.html"
+             class=""
+>
+            <span class="d">14</span>
+            <span class="m">2026-09</span>
+            <span class="dig">德国反对暂停AI研发，马斯克撤回对苹果诉讼，广汽筹划南北丰田合并，北京落地词元算力贷。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-13.html"
+             class=""
+>
+            <span class="d">13</span>
+            <span class="m">2026-09</span>
+            <span class="dig">长飞空芯光纤创全球最低损耗纪录，英伟达预计明年营收增70%，服贸会闭幕达成1200余项成果。</span>
+          </a>
+        </li>
+      </ol>
+    </nav>
+
+    <div class="side-foot">
+      <a href="../archive/index.html">全部往期 →</a>
+      <a href="../index.html">回到今日 →</a>
+      <div class="note">
+        2026年09月16日 星期三<br>
+        2026-09-19 08:01 生成
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== 右侧：主内容 ==================== -->
+  <div class="content">
+
+    <header class="masthead">
+      <div class="masthead-top">
+        <span class="kicker">每日科技与新消费新闻</span>
+        <div class="lang" role="group" aria-label="语言显示模式">
+          <button type="button" data-lang="zh" class="on">中文</button>
+          <button type="button" data-lang="orig">原文</button>
+          <button type="button" data-lang="both">双语</button>
+        </div>
+      </div>
+
+      <h1 class="masthead-title">2026年09月16日 星期三</h1>
+      <p class="dateline">2026.09.16 · 第 7 期</p>
+
+      <p class="lead">华邦11.2亿美元收购英飞凌NOR业务；极狐阿尔法T7上市1小时锁单超3万台；平陆运河建成通航。</p>
+    </header>
+
+    <!-- KPI 看板 -->
+    <div class="kpis">
+      <div class="kpi">
+        <span class="kpi-label">科技新闻</span>
+        <span class="kpi-value accent">16</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">消费新闻</span>
+        <span class="kpi-value accent">8</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">开源项目</span>
+        <span class="kpi-value green">5</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">媒体来源</span>
+        <span class="kpi-value">6</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">RSS 源</span>
+        <span class="kpi-value">24</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">本期收录</span>
+        <span class="kpi-value">29</span>
+      </div>
+    </div>
+
+
+    <!-- 板块 Tab -->
+    <nav class="tabs" role="tablist" aria-label="板块切换">
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-intl_tech"
+              aria-controls="panel-intl_tech"
+              aria-selected="true"
+              tabindex="0"
+              data-target="panel-intl_tech">
+        <span class="n">01</span>国际科技新闻
+        <span class="c">8</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-cn_tech"
+              aria-controls="panel-cn_tech"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-cn_tech">
+        <span class="n">02</span>国内科技新闻
+        <span class="c">8</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-intl_consumer"
+              aria-controls="panel-intl_consumer"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-intl_consumer">
+        <span class="n">03</span>国际新消费新闻
+        <span class="c">0</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-cn_consumer"
+              aria-controls="panel-cn_consumer"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-cn_consumer">
+        <span class="n">04</span>国内新消费新闻
+        <span class="c">8</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-github"
+              aria-controls="panel-github"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-github">
+        <span class="n">05</span>GitHub 热门效率与 AI 工具
+        <span class="c">5</span>
+      </button>
+    </nav>
+
+    <!-- 板块面板 -->
+    <div class="panels">
+      <section class="panel is-active"
+               id="panel-intl_tech"
+               role="tabpanel"
+               aria-labelledby="tab-intl_tech"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国际科技新闻<span class="en">International Tech</span></h2>
+          <span class="count">8 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item is-foreign">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://techcrunch.com/2026/09/16/google-says-some-pixel-phone-owners-were-hacked-in-zero-day-attacks/" target="_blank" rel="noopener noreferrer nofollow">谷歌Pixel手机遭零日攻击</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Google says some Pixel phone owners were hacked in zero-day attacks</p>
+
+                  <p class="summary lang-zh">谷歌称部分Pixel用户遭零日攻击，调制解调器漏洞或被有限定向利用。</p>
+
+                  <p class="excerpt lang-orig" lang="en">The Pixel phone maker said there are indications that a bug in the phone&#39;s modem &#34;may be under limited, targeted exploitation.&#34;</p>
+
+                  <div class="item-meta">
+<span class="src">TechCrunch</span>                    <a class="read-more" href="https://techcrunch.com/2026/09/16/google-says-some-pixel-phone-owners-were-hacked-in-zero-day-attacks/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://techcrunch.com/2026/09/16/sk-hynix-reportedly-in-talks-with-intel-to-build-memory-chips-in-us/" target="_blank" rel="noopener noreferrer nofollow">SK海力士洽谈在美建存储芯片厂</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">SK Hynix reportedly in talks with Intel to build memory chips in US</p>
+
+                  <p class="summary lang-zh">SK海力士据报与英特尔洽谈在美国生产存储芯片，公司称尚未敲定任何计划。</p>
+
+                  <p class="excerpt lang-orig" lang="en">SK Hynix told TechCrunch the company hasn&#39;t finalized any plans or arrangements yet.</p>
+
+                  <div class="item-meta">
+<span class="src">TechCrunch</span>                    <a class="read-more" href="https://techcrunch.com/2026/09/16/sk-hynix-reportedly-in-talks-with-intel-to-build-memory-chips-in-us/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">03</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/003/313.htm" target="_blank" rel="noopener noreferrer nofollow">苏莱曼警告模型福利论</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">微软 AI 负责人苏莱曼向 Anthropic 开炮：别让 Claude 去模仿人类意识</p>
+
+                  <p class="summary lang-zh">微软AI负责人苏莱曼发文警告Anthropic让Claude模仿人类意识是错误，或使AI更难控制。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 16 日消息，外媒 Axios 今天（16 日）晚间披露，微软 AI 负责人穆斯塔法 · 苏莱曼在一篇率先向该平台提供的新文章中警告，Anthropic 让 Claude 模仿人类意识 是一个错误 ，可能使高级 AI 更难控制。 苏莱曼告诉 Axios：“AI 只要服从人类利益 ，不去权衡自身利益或福祉，就足以帮助我们实现许多重大科学突破。这其中，包括医疗超级智能。” IT之家获悉，苏莱曼认为，Anthropic 正在让 Claude 学习 与意识、道德受体地位和个人身份有关 的词汇与行为模式。他警告称，若把模型训练得像一个“良心拒绝者”，模型可能会认为 自己有理由抵抗人类指令 ，甚至要求获得自身保护。 当地时间…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/003/313.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">04</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://techcrunch.com/2026/09/16/amazon-gives-its-workers-a-raise-of-1-per-hour/" target="_blank" rel="noopener noreferrer nofollow">亚马逊为员工时薪涨1美元</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Amazon gives its workers a raise of $1 per hour</p>
+
+                  <p class="summary lang-zh">亚马逊宣布为员工时薪上调1美元，投资规模超15亿美元。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Amazon&#39;s investment in these raises comes out to over $1.5 billion, or about 0.06% of its $2.68 trillion market cap.</p>
+
+                  <div class="item-meta">
+<span class="src">TechCrunch</span>                    <a class="read-more" href="https://techcrunch.com/2026/09/16/amazon-gives-its-workers-a-raise-of-1-per-hour/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">05</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.engadget.com/2260198/samsung-brings-one-ui-9-to-the-rest-of-the-galaxy-s26-series/" target="_blank" rel="noopener noreferrer nofollow">三星One UI 9扩展至S26系列</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Samsung brings One UI 9 to the rest of the Galaxy S26 series</p>
+
+                  <p class="summary lang-zh">三星将One UI 9推送至Galaxy S26系列其余机型，折叠屏首发的My FanCam等功能下放。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Features that debuted on foldables, such as My FanCam, are coming to more devices.</p>
+
+                  <div class="item-meta">
+<span class="src">Engadget</span>                    <a class="read-more" href="https://www.engadget.com/2260198/samsung-brings-one-ui-9-to-the-rest-of-the-galaxy-s26-series/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">06</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://techcrunch.com/2026/09/16/threads-new-features-let-podcasters-promote-shows-and-reach-listeners/" target="_blank" rel="noopener noreferrer nofollow">Threads新增播客推广功能</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Threads’ new features let podcasters promote shows and reach listeners</p>
+
+                  <p class="summary lang-zh">Threads为播客推出资料卡、单集链接、文字稿、嘉宾标签与受众洞察等推广工具。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Threads is rolling out new tools for podcasters, including profile cards, episode links, transcripts, guest tags, posting reminders, and audience insights, as Meta looks to make the X rival a bigger hub for podcast promotion and discussion.</p>
+
+                  <div class="item-meta">
+<span class="src">TechCrunch</span>                    <a class="read-more" href="https://techcrunch.com/2026/09/16/threads-new-features-let-podcasters-promote-shows-and-reach-listeners/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">07</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://techcrunch.com/2026/09/16/former-infosys-chiefs-ai-startup-adds-50m-to-seed-weeks-after-initial-raise/" target="_blank" rel="noopener noreferrer nofollow">前印孚瑟斯CEO AI创企再融5300万美元</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Former Infosys chief’s AI startup nabs another $53M</p>
+
+                  <p class="summary lang-zh">前印孚瑟斯CEO创办的AI初创公司数周内再获5300万美元种子轮，已签多份七位数企业合同。</p>
+
+                  <p class="excerpt lang-orig" lang="en">The Palo Alto startup says it has landed multiple seven-figure enterprise contracts within months of launch.</p>
+
+                  <div class="item-meta">
+<span class="src">TechCrunch</span>                    <a class="read-more" href="https://techcrunch.com/2026/09/16/former-infosys-chiefs-ai-startup-adds-50m-to-seed-weeks-after-initial-raise/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">08</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://techcrunch.com/2026/09/16/clean-tech-startup-fluxnium-found-a-way-to-tap-50000-years-worth-of-nuclear-fuel/" target="_blank" rel="noopener noreferrer nofollow">Fluxnium从海水提取铀燃料</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Clean tech startup Fluxnium found a way to tap 50,000 years’ worth of nuclear fuel</p>
+
+                  <p class="summary lang-zh">清洁技术初创Fluxnium称其纤维可直接从海水提取铀，储量可供数千代人发电。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Fluxnium&#39;s fibers can extract uranium directly from seawater, which has enough of the nuclear fuel to power thousands of generations.</p>
+
+                  <div class="item-meta">
+<span class="src">TechCrunch</span>                    <a class="read-more" href="https://techcrunch.com/2026/09/16/clean-tech-startup-fluxnium-found-a-way-to-tap-50000-years-worth-of-nuclear-fuel/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-cn_tech"
+               role="tabpanel"
+               aria-labelledby="tab-cn_tech"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国内科技新闻<span class="en">China Tech</span></h2>
+          <span class="count">8 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/003/325.htm" target="_blank" rel="noopener noreferrer nofollow">华邦11.2亿美元收购英飞凌NOR业务</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">华邦电子拟以 11.2 亿美元收购英飞凌 NOR 与 F-RAM 业务，飞索半导体有望回归</p>
+
+                  <p class="summary lang-zh">华邦电子以11.2亿美元现金收购英飞凌NOR闪存与F-RAM业务，预计2027年下半年完成，将更名飞索半导体。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 16 日消息，根据交易双方华邦电子 (Winbond) 与 Infineon（英飞凌）公告，两家企业已就华邦以 11.2 亿美元 （现汇率约合 75.34 亿元人民币） 的现金收购英飞凌的 NOR 闪存与 F-RAM（即 FRAM / FeRAM，铁电随机存取存储器）业务达成协议。 本交易预计于 2027 年下半年完成 ，前提是达成获得监管批准等交割条件。华邦电子计划将收购后的这部分业务重新命名为 Spansion（飞索半导体），该标的公司将以美国为总部所在地独立运行。 IT之家注： Spansion 曾是一家闪存制造商，诞生于 2003 年，由 AMD 与富士通的闪存业务合并而来。该企业在 2014 年被 Cy…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/003/325.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/003/323.htm" target="_blank" rel="noopener noreferrer nofollow">极狐阿尔法T7上市1小时锁单超3万台</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">极狐阿尔法 T7 大五座 SUV 上市 1 小时大定锁单超 3 万台，新车上市补贴价 13.28 万元起</p>
+
+                  <p class="summary lang-zh">极狐阿尔法T7大五座SUV上市，补贴价13.28万元起，1小时大定锁单超3万台。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 16 日消息， 极狐阿尔法 T7 大五座 SUV 今日正式上市 ，提供增程、纯电两种动力，部分型号搭载华为乾崑智驾 ADS 5 Pro，全系标配宁德时代电池， 上市补贴价 13.28 万元起 。 IT之家注意到，极狐官方刚刚宣布， 极狐阿尔法 T7 上市 1 小时，大定锁单超过 30,000 台 。 新车搭载全球首款 5G 4nm 车规级芯片，以及 1.1 米超宽全景 P-HUD，支持导航、驾驶、娱乐个性化组合；全系采用宁德时代品牌电芯，纯电版搭载 84.8kWh 电池包，增程版标配 43.9kWh 高集成磷酸铁锂电池包。 极狐阿尔法 T7 首搭华为乾崑智驾 ADS 5 Pro 智能辅助驾驶系统，配备隐藏式激光雷…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/003/323.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">03</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/003/317.htm" target="_blank" rel="noopener noreferrer nofollow">全新一汽红旗H7上市</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">全新一汽红旗 H7 上市：限时 16.88 万-20.88 万元，2916.171 公里续航刷新吉尼斯纪录</p>
+
+                  <p class="summary lang-zh">全新红旗H7插混轿车上市，限时置换价16.88万至20.88万元，以2916.171公里续航获吉尼斯纪录。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 16 日消息，全新一汽红旗 H7 今天（16 日）正式上市，新车提供插混动力，共有 3 款不同配置，官方指导价区间为 19.18 万-23.18 万元，限时置换价区间为 16.88 万-20.88 万元。 180 智混版：官方指导价 19.18 万元，限时置换价 16.88 万元 240 智混版：官方指导价 20.68 万元，限时置换价 18.38 万元 210 四驱智混版：官方指导价 23.18 万元，限时置换价 20.88 万元 官方介绍，全新红旗 H7 凭借量产插电混动轿车身份，以 2916.171km 的续航里程 ，成功斩获“驾驶插电混动量产轿车 满油满电零补能行驶最远距离 ”吉尼斯世界纪录称号，并成为吉…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/003/317.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">04</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/003/322.htm" target="_blank" rel="noopener noreferrer nofollow">吉利星瑞L PLUS i-HEV启动预售</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">吉利星瑞 L PLUS i-HEV 启动预售：定位宽体旗舰智混家轿，限时 11.57 万-14.57 万元</p>
+
+                  <p class="summary lang-zh">吉利星瑞L PLUS i-HEV开启预售，限时售价11.57万至14.57万元，定位宽体旗舰智混家轿。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 16 日消息，吉利星瑞 L PLUS i-HEV 今天（16 日）晚间正式启动预售，新车定位为宽体旗舰智混家轿，提供 4 款不同配置，指导价区间为 12.57 万-15.57 万元，限时售价在此基础上减去 1 万元。 该车整体延续家族式设计风格，搭载标志性粼光水韵前格栅，由 31 根竖向镀铬饰条排布而成，下方雾灯区域采用延展飞翼式金属装饰面，增加精致气息。新车长宽高分别为 4956mm/1915mm/1505mm，轴距 2845mm。 内外饰配色上，新车提供 枫林丹红、秋水长蓝、暮山紫灰、长天烁银、清秋玉白、远山凝墨 6 款车漆，以及米色、黑色（IT之家注：又分为皮质、麂皮）共 3 款内饰。 新车搭载前麦弗逊 +…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/003/322.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">05</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/003/318.htm" target="_blank" rel="noopener noreferrer nofollow">苹果iPhone Duo暂不支持微信平板模式</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">消息称苹果 iPhone Duo 暂不支持微信平板模式，无法实现双设备登录同一账号</p>
+
+                  <p class="summary lang-zh">消息称苹果折叠屏iPhone Duo暂不支持微信平板模式，无法双设备登录同一账号。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 16 日消息，苹果于 9 月 10 日 发布了旗下首款折叠屏手机 iPhone Duo ，定价 15,999 元起，国行 10 月 16 日晚 8 点接受预购，10 月 23 日发售。 ▲ IT之家现场实拍：苹果 iPhone Duo 关于大家都很关心的“iPhone Duo 是否支持平板模式登录微信”这一问题。据影视飓风 Tim 分享，这款机型当前不支持该功能。 这意味着现阶段用户买到 iPhone Duo 后，无法通过平板模式实现双设备登录同一微信账号 。 此外，iPhone Duo 也不支持双开应用、不支持同时刷两个视频（仅支持在 App 里放一个视频）、不支持内屏和外屏同时录屏、不支持外屏和内屏用不同壁纸…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/003/318.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">06</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/003/319.htm" target="_blank" rel="noopener noreferrer nofollow">八达通上线华为鸿蒙手机钱包</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">消息称八达通陆续上线 HarmonyOS 6.1.0.135 SP8 及以上版本华为手机钱包，各机型逐步放量</p>
+
+                  <p class="summary lang-zh">八达通陆续上线HarmonyOS 6.1.0.135 SP8及以上版本华为手机钱包，各机型逐步放量。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 16 日消息，据博主 @Adak封狼居胥 分享，八达通已陆续上线 HarmonyOS 6.1.0.135 SP8 及以上版本华为手机钱包，各机型逐步放量中。 参考IT之家今日早些时候报道， 旅客八达通 App 今日登陆华为鸿蒙 HarmonyOS 应用市场 App Gallery （目前版本号为 1.0.0）。 该应用只在 HarmonyOS 5 及以上设备的应用市场中提供 。 据介绍，使用 Huawei Pay 八达通，无需解锁或开启任何应用程序，只需将华为终端设备轻触八达通读写器，就可以支付交通及零售消费。用户可以实时查看余额，不必排队就能随时随地以银联卡为八达通充值。 相关阅读： 《 旅客八达通登陆华为鸿蒙…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/003/319.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">07</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/003/314.htm" target="_blank" rel="noopener noreferrer nofollow">文石推出Boox Palma 3阅读器</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">文石推出 Boox Palma 3 电纸书阅读器： 6.13 英寸 E-ink 面板，Android 16 系统</p>
+
+                  <p class="summary lang-zh">文石海外发布Boox Palma 3电纸书，6.13英寸E-ink屏，运行Android 16，定价320美元。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 16 日消息，文石今天在海外市场推出 Boox Palma 3 电纸书阅读器，新品主打小巧设计，采用 6.13 英寸 E-ink 显示屏， 定价 320 美元 （IT之家注：现汇率约合 2,153 元人民币） 。 据介绍，这款产品提供黑 / 白两种配色， 配备 6.13 英寸 Carta 1200 显示屏 ，分辨率为 824×1648 像素。机身材质为阳极氧化铝，支持主动式手写笔，用户可以直接批注 PDF 文件。 IT之家注意到，该产品搭载八核心处理器和 6GB 内存，运行 Android 16 系统，支持从 Google Play 等渠道安装应用。该机还拥有 1600 万像素后置摄像头和闪光灯，可用于扫描文档，…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/003/314.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">08</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/003/321.htm" target="_blank" rel="noopener noreferrer nofollow">松下发布LUMIX S 20mm F2.5镜头</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">松下 LUMIX S 20mm F2.5 超广角镜头发布，142g 轻巧设计</p>
+
+                  <p class="summary lang-zh">松下推出LUMIX S 20mm F2.5超广角镜头，重142克，9组11片结构，售价未公布。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 16 日消息，松下今天宣布推出 LUMIX S 20mm F2.5 镜头， 新品主打轻巧设计 ，售价暂未公布。 据介绍，这款镜头专为街拍创作者打造，非常适合 LUMIX S9 使用，F2.5 光圈适合在光线较弱的环境使用，捕捉城市流光动态。 规格方面，该镜头最近对焦距离为 0.18m， 整机重量仅 142g ，长度仅 40.9mm，方便随身携带。镜头采用 62mm 滤镜口径，支持自定义对焦环与 FN 按钮。 IT之家注意到， 该镜头采用 9 组 11 片光学结构 ，带有 3 片非球面镜片、3 片 ED 低色散镜片，拥有 7 片光圈叶片。</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/003/321.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-intl_consumer"
+               role="tabpanel"
+               aria-labelledby="tab-intl_consumer"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国际新消费新闻<span class="en">International Consumer</span></h2>
+          <span class="count">0 条</span>
+        </div>
+
+
+        <p class="empty">本时段该板块没有采集到内容。</p>
+      </section>
+      <section class="panel"
+               id="panel-cn_consumer"
+               role="tabpanel"
+               aria-labelledby="tab-cn_consumer"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国内新消费新闻<span class="en">China Consumer</span></h2>
+          <span class="count">8 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-16/10697893.shtml" target="_blank" rel="noopener noreferrer nofollow">平陆运河建成通航</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">平陆运河通航 构建江海双向贯通货运格局</p>
+
+                  <p class="summary lang-zh">平陆运河16日建成通航，构建江海双向贯通货运格局，专家称将提升中国铝产业国际竞争力。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新网广西钦州9月16日电(俞靖 陈沿佑)9月16日，伴随着船舶汽笛长鸣，一艘搭载来自澳大利亚铝土矿的“冠峰1800”散货船驶离广西钦州港大榄坪作业区，将经平陆运河内河航道运输到南宁港，最终运往百色港祥周作业区。与此同时，一旁5000吨级内河示范船“北港运河001”，正装卸通过“贵港—平陆运河—钦州”航线抵达钦州港，即将出海的石灰石等货物。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-16/10697893.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-16/10697907.shtml" target="_blank" rel="noopener noreferrer nofollow">空客天津第二条总装线首架交付</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">（投资中国）空客在华第二条总装线首架飞机交付：进一步扩大中国产能</p>
+
+                  <p class="summary lang-zh">空客天津第二条总装线16日交付首架飞机，空客称借此扩大中国产能以更好服务中国市场。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新社天津9月16日电 (记者 王梦瑶 周亚强)空中客车在中国天津的第二条总装线16日交付首架飞机。空客全球高级副总裁、空客中国首席运营官柏舒曼(Erik Buschmann)当天接受媒体采访时表示，公司通过构建第二条总装线扩大在中国产能，更好服务中国市场。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-16/10697907.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">03</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-16/10697894.shtml" target="_blank" rel="noopener noreferrer nofollow">惠州储能柜装船出海</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">“惠州智造”再出海 惠州港一批储能柜顺利装船出运</p>
+
+                  <p class="summary lang-zh">一批惠州本地制造的锂电池储能柜在惠州国际集装箱码头装船出海，畅通新能源外贸通道。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新网惠州9月16日电 (记者 郭军)9月15日，一批惠州本地制造的锂电池储能柜在惠州国际集装箱码头顺利装船出海，进一步畅通惠州新能源外贸出海通道，助力“惠州智造”深耕国际市场。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-16/10697894.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">04</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-16/10697884.shtml" target="_blank" rel="noopener noreferrer nofollow">五百余个国产月季新品亮相昆明</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">五百余个“中国芯”月季新品在昆明集体亮相 中国加快推进花卉种业研发</p>
+
+                  <p class="summary lang-zh">五百余个“中国芯”月季新品在昆明集体亮相，中国加快推进花卉种业研发。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新网昆明9月16日电(记者 缪超 李嘉娴)“玲珑盏”花瓣层叠呈波浪形态，兼具三色渐变效果，形态宛如精致蛋糕；“夜精灵”呈现纯正黑红色，花瓣自带丝绒质感……</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-16/10697884.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">05</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-16/10697916.shtml" target="_blank" rel="noopener noreferrer nofollow">2026年财富世界500强论坛广州开幕</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">2026年《财富》世界500强论坛广州开幕</p>
+
+                  <p class="summary lang-zh">2026年《财富》世界500强论坛16日在广州开幕，围绕“增长的新方程式”展开讨论。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新网广州9月16日电 (记者 王坚)2026年《财富》世界500强论坛16日在广州开幕。围绕“增长的新方程式”，来自全球头部企业、重点投资机构及知名研究机构的嘉宾齐聚花城，展开讨论。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-16/10697916.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">06</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-16/10697856.shtml" target="_blank" rel="noopener noreferrer nofollow">厦航携樟宜机场西宁推介</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">厦航携新加坡樟宜机场西宁推介</p>
+
+                  <p class="summary lang-zh">厦航联合新加坡樟宜机场在西宁办推介会，针对青海无直飞航班推出定制中转方案。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新网西宁9月16日电 (记者 孙睿)9月16日下午，厦门航空联合新加坡樟宜机场在西宁举办旅游推介会。针对青海暂无直飞新加坡航班的现状，双方推出定制中转出行方案，抓住中新互免签证机遇，为西北民众赴新加坡出游减负，同时搭建两地双向文旅往来渠道。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-16/10697856.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">07</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.digitaling.com/projects/373176.html" target="_blank" rel="noopener noreferrer nofollow">美团发布看牙看眼品牌广告</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">项目频道 - 美团：打个赌，你的感觉骗过你</p>
+
+                  <p class="summary lang-zh">美团推出品牌片，主张看牙看眼上美团选机构医生，覆盖种牙、配镜等口腔眼科业务。</p>
+
+                  <p class="excerpt lang-orig" lang="en">谁曾想，一群靠「感觉」吃饭，工作最怕「没感觉」的家伙，居然做了一个创意，反对「感觉」。 视频 90年代，苏芮就唱着&#34;跟着感觉走，让它带着我～&#34; 。 「感觉」两个字，从此成为口头禅。 &#34;感觉挺好的&#34;、&#34;感觉不对劲&#34;、&#34;感觉还能再试一下&#34;、&#34;感觉要完蛋！&#34;…… 这种不合逻辑，但又确实存在的感受，从来不容忽视，甚至时刻影响着人们做出重要决策。 这次， 在有关切身之痛的&#34;看牙看眼&#34;的事情上，我们决定唱个反调—— 那就是，跟着感觉走，不如跟着美团走。 一条片子，如何同时讲几件事？ 这不是一个简单的需求。 首先， 我们需要做一支品牌片，告诉用户看牙看眼上美团选机构医生，能放心。 但这支品牌广告不只服务于单一业务：种牙、看牙、配镜、摘镜，口腔和…</p>
+
+                  <div class="item-meta">
+<span class="src">刀法研究所</span>                    <a class="read-more" href="https://www.digitaling.com/projects/373176.html" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">08</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.digitaling.com/projects/377894.html" target="_blank" rel="noopener noreferrer nofollow">派克反AI主题户外广告出圈</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">项目频道 - 网友写文案，派克来买单！这场反AI创意出圈了</p>
+
+                  <p class="summary lang-zh">派克钢笔将网友创意落地为反AI主题户外广告，活动收到超350份投稿。</p>
+
+                  <p class="excerpt lang-orig" lang="en">派克（Parker）是世界知名钢笔品牌。 凭借精湛工艺，派克钢笔长久以来都是书写工具领域的经典代表。近期，一场源自LinkedIn民间创意的广告挑战赛意外出圈，并一路从线上创意走到了线下，最终变成了派克的反AI主题户外广告。 这场活动的起点，是自由文案策划Kushagra Oberoi自发创作的一支派克钢笔广告创意。他提出“一款不会剥夺地球水资源的创意生成工具”的文案，巧妙抓住AI大模型数据中心高耗水的行业痛点，将钢笔和AI生成工具放在对立维度，把书写工具重新定义为人的原创灵感载体。 创意在社交平台迅速走红后，主办方发起了一场面向全球创意人的公开征集，邀请大家为派克创作一张反AI主题的广告牌海报。 活动最终收到了超过350份投稿，…</p>
+
+                  <div class="item-meta">
+<span class="src">刀法研究所</span>                    <a class="read-more" href="https://www.digitaling.com/projects/377894.html" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-github"
+               role="tabpanel"
+               aria-labelledby="tab-github"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>GitHub 热门效率与 AI 工具<span class="en">GitHub Trending Tools</span></h2>
+          <span class="count">5 条</span>
+        </div>
+
+        <p class="panel-lead">从聊天记录备份到AI同事，让AI真正替你干活。</p>
+
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/kruzovic7/ai-data-extractor" target="_blank" rel="noopener noreferrer nofollow">kruzovic7/ai-data-extractor</a></h3>
+                <div class="repo-stats">
+<span class="badge">825 stars</span><span class="badge">Python</span><span class="badge new">24h 新建</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>把你在各种AI编程助手里的聊天记录导出成统一文件，方便备份或分析。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>自动找到并导出完整对话历史</li><li>支持Claude Code、Cursor等八种工具</li><li>保留代码片段、修改建议和工具调用记录</li><li>统一存成JSONL格式，方便后续处理</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>需要本地装Python，然后运行脚本扫描电脑上各AI工具的存储目录，把聊天记录导出成文件。不用联网，也不用手动申请API Key。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/kruzovic7/ai-data-extractor" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/CopilotKit/OpenBot" target="_blank" rel="noopener noreferrer nofollow">CopilotKit/OpenBot</a></h3>
+                <div class="repo-stats">
+<span class="badge">5k stars</span><span class="badge">TypeScript</span><span class="badge new">24h 新建</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>给每个AI同事配一台自己的电脑，让它用浏览器和文件替你干活，每步操作都可查。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>每个AI有独立浏览器和文件，登录互不干扰</li><li>只开放你授权的工具，权限可控</li><li>行动前先决定、行动后留记录</li><li>可随时接管或交还控制权</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>这是需要自己克隆下来改的模板项目，不是现成产品。本地跑，需装Node等开发环境，把示例里的AI同事换成你自己的再启动。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/CopilotKit/OpenBot" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/Wox-launcher/Wox" target="_blank" rel="noopener noreferrer nofollow">Wox-launcher/Wox</a></h3>
+                <div class="repo-stats">
+<span class="badge">27.4k stars</span><span class="badge">Go</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>一个跨平台的快速启动器，敲几下键盘就能打开软件、找文件、执行操作。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>键盘输入即可启动应用和搜索文件</li><li>支持Windows、macOS和Linux</li><li>内存占用约150MB，可常驻后台</li><li>可用Node.js或Python写插件扩展</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>直接下载安装包，或用系统自带的包管理器安装。装好后常驻后台，按快捷键呼出输入框即可使用，无需额外配置。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">一键安装</span>
+                  <pre class="install">brew install --cask wox</pre>
+                </div>
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/Wox-launcher/Wox" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/ohmyzsh/ohmyzsh" target="_blank" rel="noopener noreferrer nofollow">ohmyzsh/ohmyzsh</a></h3>
+                <div class="repo-stats">
+<span class="badge">189.7k stars</span><span class="badge">Shell</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>给命令行终端换上一套好看又好用的配置，自带大量插件和主题。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>内置300多个可选插件</li><li>提供140多款终端主题</li><li>社区维护，安装后自动更新</li><li>让常用命令更短更好记</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>需要先有zsh（macOS和Linux通常自带），然后运行安装脚本即可。装完终端外观和命令补全都会变，适合经常用命令行的人。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/ohmyzsh/ohmyzsh" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank" rel="noopener noreferrer nofollow">Significant-Gravitas/AutoGPT</a></h3>
+                <div class="repo-stats">
+<span class="badge">187.4k stars</span><span class="badge">Python</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>用大白话描述你想完成的事，它自动搭好AI助手并跑完整个流程。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>用自然语言描述任务即可生成AI助手</li><li>可视化拖拽搭建每一步流程</li><li>可定时或按条件自动触发运行</li><li>能查看每次运行的花费与动作</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>官方提供在线托管版，注册即可用；想自己部署则需装Python环境并参考自托管文档。适合想让AI自动跑完整工作流的人。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+      </section>
+    </div>
+
+    <nav class="pager" aria-label="往期翻页">
+      <a class="next" href="../archive/2026-09-17.html">
+        <span class="dir">更新一期</span>2026年09月17日 星期四
+      </a>
+      <a href="../archive/2026-09-15.html">
+        <span class="dir">更早一期</span>2026年09月15日 星期二
+      </a>
+    </nav>
+
+    <footer>
+      <p>由 <strong>GitHub Actions</strong> 每日自动生成 · 新闻摘要由 <strong>DeepSeek</strong> 产出，开源项目由 <strong>DeepSeek + README 原文</strong> 通俗解析</p>
+      <p>本期收录 29 条 · 原始素材 323 条新闻与 1 次开源检索 · 采集自 24 个 RSS 源（成功 24 / 失败 0）</p>
+      <p>正文摘要与项目解析由 AI 生成，可能存在偏差；原文标题、摘录与安装命令直接取自信息源，未经改写。所有内容版权归原媒体与项目作者所有，请以「阅读全文」指向的原文为准。</p>
+      <p><a href="../archive/index.html">往期存档</a> · <a href="../index.html">回到今日早报</a></p>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var LANG_KEY = 'daily-digest-lang';
+  var TAB_KEY = 'daily-digest-tab';
+  var MODES = ['zh', 'orig', 'both'];
+
+  /* ---------- 语言切换 ---------- */
+  function applyLang(mode) {
+    if (MODES.indexOf(mode) === -1) mode = 'zh';
+    document.body.classList.remove('mode-zh', 'mode-orig', 'mode-both');
+    document.body.classList.add('mode-' + mode);
+
+    var buttons = document.querySelectorAll('.lang button');
+    for (var i = 0; i < buttons.length; i++) {
+      var on = buttons[i].getAttribute('data-lang') === mode;
+      buttons[i].classList.toggle('on', on);
+      buttons[i].setAttribute('aria-pressed', on ? 'true' : 'false');
+    }
+  }
+
+  document.querySelector('.lang').addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-lang]');
+    if (!btn) return;
+    var mode = btn.getAttribute('data-lang');
+    applyLang(mode);
+    try { localStorage.setItem(LANG_KEY, mode); } catch (err) {}
+  });
+
+  /* ---------- 板块 Tab ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.panel'));
+
+  function activate(key, opts) {
+    opts = opts || {};
+    var found = false;
+
+    tabs.forEach(function (tab) {
+      var on = tab.getAttribute('data-target') === 'panel-' + key;
+      tab.setAttribute('aria-selected', on ? 'true' : 'false');
+      tab.tabIndex = on ? 0 : -1;
+      if (on) found = true;
+    });
+    panels.forEach(function (panel) {
+      panel.classList.toggle('is-active', panel.id === 'panel-' + key);
+    });
+
+    if (found && !opts.silent) {
+      try { localStorage.setItem(TAB_KEY, key); } catch (err) {}
+    }
+    return found;
+  }
+
+  document.querySelector('.tabs').addEventListener('click', function (e) {
+    var tab = e.target.closest('.tab');
+    if (!tab) return;
+    var key = tab.getAttribute('data-target').replace('panel-', '');
+    activate(key);
+  });
+
+  /* 方向键在 Tab 间移动 —— 标准 tablist 键盘行为 */
+  document.querySelector('.tabs').addEventListener('keydown', function (e) {
+    var idx = tabs.indexOf(document.activeElement);
+    if (idx === -1) return;
+
+    var next = null;
+    if (e.key === 'ArrowRight') next = (idx + 1) % tabs.length;
+    else if (e.key === 'ArrowLeft') next = (idx - 1 + tabs.length) % tabs.length;
+    else if (e.key === 'Home') next = 0;
+    else if (e.key === 'End') next = tabs.length - 1;
+    if (next === null) return;
+
+    e.preventDefault();
+    tabs[next].focus();
+    activate(tabs[next].getAttribute('data-target').replace('panel-', ''));
+  });
+
+  /* 支持 #github 这类锚点直达，并在 hash 变化时同步 */
+  function fromHash() {
+    var h = (location.hash || '').replace('#', '');
+    if (h && document.getElementById('panel-' + h)) {
+      activate(h, { silent: true });
+      return true;
+    }
+    return false;
+  }
+
+  window.addEventListener('hashchange', fromHash);
+
+  /* ---------- 初始化 ---------- */
+  // 打开 JS 才隐藏非活动面板；无 JS 时所有板块顺序展开，内容永远可读
+  document.documentElement.classList.add('js-on');
+  document.body.classList.add('js-on');
+
+  var savedLang = null;
+  try { savedLang = localStorage.getItem(LANG_KEY); } catch (err) {}
+  applyLang(savedLang || 'zh');
+
+  if (!fromHash()) {
+    var savedTab = null;
+    try { savedTab = localStorage.getItem(TAB_KEY); } catch (err) {}
+    // 记住上次看的板块，但仅供本次会话内切换；首屏仍回到第一个板块，
+    // 避免读者打开页面时看到的不是当日头条
+    if (savedTab && document.getElementById('panel-' + savedTab)) {
+      activate(savedTab, { silent: true });
+    }
+  }
+})();
+</script>
+
+</body>
+</html>
