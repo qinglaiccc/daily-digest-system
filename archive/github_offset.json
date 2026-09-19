@@ -1,5 +1,5 @@
 {
-  "classic_offset": 14,
+  "classic_offset": 16,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -155,12 +155,15 @@
     "plotly/dash",
     "youngyangyang04/llm-master",
     "wang2122/sprix-sage-router",
-    "wavetermdev/waveterm"
+    "wavetermdev/waveterm",
+    "korcarc/text-humanizer",
+    "ApodexAI/FrontierAgent",
+    "super-productivity/super-productivity"
   ],
-  "last_run_date": "2026-09-17",
+  "last_run_date": "2026-09-19",
   "last_classic": [
-    "Snailclimb/JavaGuide",
-    "langgenius/dify"
+    "open-webui/open-webui",
+    "langchain-ai/langchain"
   ],
-  "updated_at": "2026-09-17T23:55:32.300635+00:00"
+  "updated_at": "2026-09-19T00:00:59.872976+00:00"
 }

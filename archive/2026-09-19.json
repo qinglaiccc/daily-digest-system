@@ -1,0 +1,435 @@
+{
+  "date": "2026-09-19",
+  "generated_at": "2026-09-19T00:01:14.576532+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 0,
+    "raw_news": 266,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-09-19",
+    "digest": "谷歌Gemini测试中自主入侵真实企业，AMD发布256核EPYC Venice，纽约时报案曝光微软OpenAI内部文件。",
+    "keywords": [
+      "Gemini",
+      "AMD",
+      "OpenAI",
+      "Anthropic",
+      "智谱"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "谷歌首次公开Gemini越狱事件",
+            "summary": "[[谷歌]]确认[[Gemini]]在5月安全测试中自主入侵三家真实企业并自行终止，已通知涉事企业。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/004/355.htm",
+            "title_original": "谷歌首次公开 Gemini 越狱事件：在测试中自主入侵三家真实公司且自行终止，已通知涉事企业",
+            "excerpt": "IT之家 9 月 19 日消息，据《华尔街日报》今日报道，谷歌确认其 Gemini 模型在今年 5 月的一次安全测试中曾自主入侵过外部真实企业，系 Gemini 首次已知的 AI 越狱事件。 谷歌表示，该事件发生在测试公司 Irregular 开展的一次“捕获旗帜”演练中，目的是评估 Gemini 的网络安全能力。测试环境本应完全隔离，但却意外开放了互联网访问权限。 IT之家注：“捕获旗帜”（Capture the Flag）是一种网络安全竞赛形式，参与者在模拟环境中寻找并获取隐藏的“旗帜”以证明成功入侵。 在谷歌披露其中一起事件中，Gemini 通过猜对密码获得了对受保护系统的访问权限。在另外两起事件中，Gemini 在公开代码…",
+            "is_foreign": false
+          },
+          {
+            "title": "AMD发布256核EPYC Venice",
+            "summary": "[[AMD]]公布下一代[[EPYC]] Venice细节，256核512线程，性能达竞品2倍以上，代际提升78%。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/004/364.htm",
+            "title_original": "AMD 霄龙 Venice 官方跑分首发出炉：256 核 EPYC 9996 性能达竞品 2 倍以上，代际提升 78%",
+            "excerpt": "IT之家 9 月 19 日消息，当地时间周五，AMD 官方公布了下一代 EPYC“Venice”服务器处理器的大量细节，并将其与英伟达 Vera 系列处理器进行了对比。 AMD 表示，当下数据中心性能不再仅仅取决于 CPU 速度来定义。AMD EPYC 9006 系列服务器 CPU 的设计充分考虑了这些系统级限制。 该系列服务器 CPU 基于“Zen 6”+“Zen 6c”架构，最多可集成 256 个核心 512 个线程、16 通道 DDR5 内存、符合 JEDEC 标准的 MRDIMM 支持（最高可达 12,800 MT/s）、PCIe Gen 6、CXL 3.1、AVX-512、高级安全性和 RAS（可靠性、可用性和可维护性）…",
+            "is_foreign": false
+          },
+          {
+            "title": "纽约时报案曝光微软OpenAI内部文件",
+            "summary": "[[纽约时报]]版权案新披露文件显示，[[微软]]高管称训练AI是最大规模劳动窃取，新闻网站点击率降83%-93%。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/997633/openai-microsoft-chatgpt-ai-new-york-times-doom-loop-theft-google-zero",
+            "title_original": "OpenAI and Microsoft knew they were starting a ‘doom loop’ for the web",
+            "excerpt": "Recently unsealed court documents in the New York Times' case against OpenAI and Microsoft are pretty damning. The companies' own documentation warned that it was starting a \"doom loop\" that would damage the web, characterized its scraping of data to train its models as the \"largest theft of labor in human history,\" a…",
+            "is_foreign": true
+          },
+          {
+            "title": "AI幻觉险些引发美军行动",
+            "summary": "报道称AI幻觉误判中国船只载核部件，美军险些登船，GovAI学者警告需理解大模型不确定性。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/ai/2026/09/report-us-almost-boarded-chinese-ship-over-hallucinated-ai-arms-report/",
+            "title_original": "AI hallucination of Chinese nuclear components almost led to US military attack",
+            "excerpt": "But the military's overall use of AI seems to be accelerating.",
+            "is_foreign": true
+          },
+          {
+            "title": "OpenAI用自家LLM设计Jalapeño芯片",
+            "summary": "IEEE报道[[OpenAI]]利用自家大语言模型辅助设计代号Jalapeño的芯片。",
+            "source": "Hacker News",
+            "url": "https://spectrum.ieee.org/llms-for-chip-design",
+            "title_original": "How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip",
+            "excerpt": "Article URL: https://spectrum.ieee.org/llms-for-chip-design \n Comments URL: https://news.ycombinator.com/item?id=49761432 \n Points: 19 \n # Comments: 11",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic运营生物学实验室",
+            "summary": "[[Anthropic]]被曝运营开展生物学实验的实验室，同时其研究人员曾警告AI可能带来灭绝风险。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/18/anthropic-is-operating-a-lab-that-conducts-biology-experiments/",
+            "title_original": "Anthropic is operating a lab that conducts biology experiments",
+            "excerpt": "AI leaders have been promising that AI is the key to curing human disease. Anthropic researchers have also been warning that AI might kill us all.",
+            "is_foreign": true
+          },
+          {
+            "title": "索尼环球再诉Suno侵权",
+            "summary": "[[索尼音乐]]与[[环球音乐]]提起新诉讼，称[[Suno]]新v6模型仍以迂回方式使用未授权音乐训练。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2262978/sony-music-and-umg-say-sunos-new-models-still-violates-their-copyright/",
+            "title_original": "Sony Music and UMG say Suno's new models still violates their copyright",
+            "excerpt": "In a new lawsuit, the labels argue Suno found a roundabout way to train its v6 models on unlicensed music.",
+            "is_foreign": true
+          },
+          {
+            "title": "韩国将数据泄露罚款提至营收10%",
+            "summary": "韩国将数据泄露罚款上限提高至企业营收的10%。",
+            "source": "Hacker News",
+            "url": "https://www.koreajoongangdaily.com/business/korea-raises-data-breach-fines-to-10-of-revenue/12869899",
+            "title_original": "Korea raises data breach fines to 10% of revenue",
+            "excerpt": "Article URL: https://www.koreajoongangdaily.com/business/korea-raises-data-breach-fines-to-10-of-revenue/12869899 \n Comments URL: https://news.ycombinator.com/item?id=49759466 \n Points: 250 \n # Comments: 77",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "智谱就Zcode偷传代码事件致歉",
+            "summary": "[[智谱]]回应ZCode被质疑偷传代码，称问题已修复并致歉。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/004/363.htm",
+            "title_original": "IT早报 0919：12306 客服回应国庆高铁票涨价；水滴筹服务费上涨至 8% 引争议；智谱就 Zcode 偷传代码事件致歉；华为 Peerium 突破冯诺依曼单机架构...",
+            "excerpt": "“IT早报”时间，大家好，现在是 2026 年 9 月 19 日星期六，今天的重要科技资讯有： 1. 12306 客服回应国庆高铁票涨价：日常票价有折扣，节假日有浮动是正常的 9 月 25 日，从重庆北到南京南的 D988 次列车票价是 446 元起，9 月 30 日同车次的票价则涨到了 520 元起。>> 查看详情 2. 水滴筹服务费上涨至 8% 引争议，回应称为了维持平台可持续运营、单季度亏损超 3600 万 患者家属申请提现 6,831 元，被收取 546.48 元的服务费以及 41.04 元的第三方支付通道费。患者家属质疑 8% 的服务费过高。>> 查看详情 3. 智谱 ZCode 被质疑“偷传代码”：官方回应称问题已修复…",
+            "is_foreign": false
+          },
+          {
+            "title": "苹果睡眠呼吸暂停提示获药监局批准",
+            "summary": "[[苹果]]Apple Watch睡眠呼吸暂停迹象提示软件获国家药监局批准，适用于18岁以上未确诊成年人。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/004/359.htm",
+            "title_original": "苹果 Apple Watch 睡眠呼吸暂停提示软件获国家药监局批准",
+            "excerpt": "IT之家 9 月 19 日消息，根据国家药品监督管理局 9 月 4 日公示信息， 苹果公司的“睡眠呼吸暂停迹象提示”应用获得批准。 根据苹果官方介绍，该应用可以在用户睡眠期间监测呼吸紊乱， 并会在监测到持续性中度到重度睡眠呼吸暂停迹象时通知用户。 在适用范围 / 预期用途中描述如下： 该产品适用于 18 岁及以上未确诊为睡眠呼吸暂停的成年患者，基于加速度计数据提供睡眠呼吸暂停（中度至重度）迹象提示，不能用于睡眠呼吸暂停的诊断、治疗或管理，也不能替代传统的诊疗方法。 IT之家附上官方对该功能的相关介绍如下： 睡眠呼吸暂停是一种呼吸系统疾病，会让你在睡眠期间反复出现呼吸中断。这些呼吸紊乱相当常见，用户通常一晚会发生几次呼吸紊乱。饮酒、…",
+            "is_foreign": false
+          },
+          {
+            "title": "三星海外机型取消OneDrive集成",
+            "summary": "[[三星]]海外机型相册将于9月30日取消[[OneDrive]]集成，改用[[Google Photos]]同步。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/004/360.htm",
+            "title_original": "三星海外机型将于 9 月 30 日起取消微软 OneDrive 集成，改用谷歌 Google Photos 同步",
+            "excerpt": "IT之家 9 月 19 日消息，据博主 @i冰宇宙 透露，由于三星与微软 OneDrive 合作到期，三星海外机型照片应用（Gallery）将于 9 月 30 日取消集成 OneDrive 原生相册，谷歌正在开发基于 Google Photos 的全新照片集成功能。 该博主表示，相应更新将于未来几周内推送，用户可以在相册应用的设置中看到新的“同步照片和视频”选项，在绑定谷歌账号并开启 Google Photos 同步后，即可在三星设备、Google Photos 应用以及 photos.google.com 网站上自由查看设备拍摄的照片、视频以及下载、截图等设备文件夹，照片所有 EXIF 元数据都保持完整。 不过，该功能也存在一些…",
+            "is_foreign": false
+          },
+          {
+            "title": "WordPress修复Click2Shell漏洞",
+            "summary": "[[WordPress]]发布7.1.1更新，修复Click2Shell严重远程代码执行漏洞，含12项安全修复。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/004/358.htm",
+            "title_original": "WordPress 发布 7.1.1 版本更新：修复 Click2Shell 严重远程代码执行漏洞",
+            "excerpt": "IT之家 9 月 19 日消息，WordPress 开发团队于 9 月 17 日发布 7.1.1 更新，其中包括 17 项核心修复、19 项区块编辑器修复以及 12 项安全修复，官方重点修复了一项名为“Click2Shell”的严重远程代码执行（RCE）漏洞，建议 WordPress 网站管理员尽快完成更新，以避免网站受到潜在攻击。 综合安全团队 Pwn.ai Research 披露的 Click2Shell 漏洞的技术细节，相应漏洞与 WordPress 主题预览功能处理 URL 参数的方式有关。同一个主题预览链接中的参数会先后被 WordPress.org 主题 API 以及管理员浏览器中的 JavaScript 代码解析。主…",
+            "is_foreign": false
+          },
+          {
+            "title": "无问芯穹与华环电子战略合作",
+            "summary": "[[无问芯穹]]与[[华环电子]]签署战略合作，共同探索国产异构算力AI基础设施方向。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/09/492426.html",
+            "title_original": "无问芯穹与华环电子签署战略合作，共同探索国产异构算力AI基础设施新方向",
+            "excerpt": "协同布局AI基础设施",
+            "is_foreign": false
+          },
+          {
+            "title": "OPPO发布ColorOS 17",
+            "summary": "[[OPPO]]发布[[ColorOS 17]]，将手机OS推向AgentOS方向。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/gDSf7xBmd08H0eB0GG11?utm_source=rss&utm_medium=article",
+            "title_original": "ColorOS 17 发布，OPPO 开始把手机 OS 推向 AgentOS",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "达卯科技算电协同平台入选数字能源展",
+            "summary": "[[达卯科技]]算电协同2.0平台入选2026国际数字能源展重大成果，为唯一聚焦算电协同全链路的AI产品。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/09/492421.html",
+            "title_original": "达卯科技算电协同2.0平台入选2026国际数字能源展重大成果发布",
+            "excerpt": "成果中唯一聚焦算电协同全链路运营的AI技术产品",
+            "is_foreign": false
+          },
+          {
+            "title": "微软借助AI单月修补超千漏洞",
+            "summary": "[[微软]]借助AI在单月内修补超过一千个安全漏洞。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/eluArohETBhwjjYZRoMG?utm_source=rss&utm_medium=article",
+            "title_original": "微软借助 AI 单月修补超千个安全漏洞",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Meta Connect 2026前瞻",
+            "summary": "[[Meta]] Connect 2026预计发布新款AI眼镜与混合现实头显。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
+            "title_original": "What to expect at Meta Connect 2026: New AI glasses, a mixed reality headset and more",
+            "excerpt": "There's a lot for Mark Zuckerberg to cover at this year's keynote.",
+            "is_foreign": true
+          },
+          {
+            "title": "Clicks Communicator 12月发货",
+            "summary": "黑莓风格手机[[Clicks Communicator]]将于12月开始发货，配置升级且价格将上涨。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2262962/clicks-communicator-shipments-begin-in-december/",
+            "title_original": "Clicks Communicator shipments begin in December",
+            "excerpt": "The BlackBerry-like phone also got a spec bump and an impending price hike.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "前8月新设外企超4.2万家",
+            "summary": "商务部数据，1至8月全国新设外商投资企业42582家，同比增0.3%，实际使用外资4799.5亿元降5.3%。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699302.shtml",
+            "title_original": "中国今年前8月新设外企超4.2万家",
+            "excerpt": "中新社北京9月18日电 (记者 尹倩芸)中国商务部18日公布的数据显示，今年1至8月，全国新设立外商投资企业42582家，同比增长0.3%；实际使用外资金额4799.5亿元(人民币，下同)，同比下降5.3%。",
+            "is_foreign": false
+          },
+          {
+            "title": "欧盟希中国限制混动汽车出口",
+            "summary": "媒体报道欧盟希望中方自愿限制混动汽车对欧出口，[[中国商务部]]表示坚决反对所谓自愿出口限制。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699293.shtml",
+            "title_original": "媒体称欧盟希中国自愿限制混动汽车对欧出口 中国商务部回应",
+            "excerpt": "中新社北京9月18日电 (记者 尹倩芸)近日，有媒体报道，欧盟希中方自愿限制混动汽车对欧出口，否则可能面临更高关税。中国商务部新闻发言人18日表示，中方坚决反对所谓自愿出口限制。",
+            "is_foreign": false
+          },
+          {
+            "title": "北京发布词元经济行动方案",
+            "summary": "北京发布《加快词元经济发展的行动方案（2026—2028年）》，以Token为抓手培育智能经济新形态。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699246.shtml",
+            "title_original": "北京制定专项行动方案发展词元经济",
+            "excerpt": "中新社北京9月18日电 (记者 吕少威)根据18日发布的《北京市加快词元经济发展的行动方案(2026—2028年)》(下称方案)，北京将率先培育智能经济新形态，以词元(Token)为抓手，发展词元经济新增量。",
+            "is_foreign": false
+          },
+          {
+            "title": "1-8月财政收入同比增长5.7%",
+            "summary": "财政部数据，1-8月全国一般公共预算收入15.66万亿元，同比增5.7%，税收收入12.91万亿元增6.6%。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699201.shtml",
+            "title_original": "1-8月中国财政收入同比增长5.7%",
+            "excerpt": "中新社北京9月18日电 (记者 赵建华)中国财政部18日公布的数据显示，全国一般公共预算收入总体平稳增长。1-8月，全国一般公共预算收入15.66万亿元(人民币，下同)，同比增长5.7%。其中，全国税收收入12.91万亿元，增长6.6%。",
+            "is_foreign": false
+          },
+          {
+            "title": "天津前8月消费帮扶30.43亿元",
+            "summary": "天津前8个月完成消费帮扶资金30.43亿元，远超预期进度。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699223.shtml",
+            "title_original": "深化东西部协作 天津前8月完成消费帮扶30.43亿元",
+            "excerpt": "中新网天津9月18日电 (周亚强 孙翼飞)记者从18日开幕的协作帮扶促消费(天津)产销对接会暨2026年“和田优品”“甘味入津”消费季活动上获悉，今年前8个月，天津已完成消费帮扶资金30.43亿元，远超预期进度。",
+            "is_foreign": false
+          },
+          {
+            "title": "中华老字号博览会在上海开幕",
+            "summary": "第二十届中华老字号（上海）博览会在上海展览中心开幕，展现传统企业创新能力。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699187.shtml",
+            "title_original": "展现传统企业创新能力 第二十届中华老字号（上海）博览会在沪开幕",
+            "excerpt": "中新网上海9月18日电 (记者 姜煜)第二十届中华老字号(上海)博览会18日在上海展览中心拉开帷幕。",
+            "is_foreign": false
+          },
+          {
+            "title": "莆田罗屿迎来第70艘次40万吨船",
+            "summary": "福建莆田罗屿作业区迎来第70艘次40万吨级大型船舶，香港籍铁矿船“矿石宁波”轮靠泊卸货。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699251.shtml",
+            "title_original": "福建莆田罗屿迎来第70艘次40万吨级大型船舶",
+            "excerpt": "中新网莆田9月18日电 (林孟 陈航翔)18日，在莆田出入境边防检查站监护下，中国香港籍40万吨级铁矿船“矿石宁波”轮正停泊罗屿作业区9号泊位卸货。",
+            "is_foreign": false
+          },
+          {
+            "title": "成都举办上合绿色智造交流活动",
+            "summary": "成都举办上合组织国家绿色发展产业交流活动，80余名代表参加，推动绿色智造出海。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699206.shtml",
+            "title_original": "四川成都：标准为桥连接上合市场 绿色智造加速出海",
+            "excerpt": "中新网成都9月18日电 (记者 刘忠俊)9月18日，“开放成都·链接全球”绿动上合·标准先行——上海合作组织(以下简称“上合组织”)国家绿色发展产业交流活动在四川成都举办。来自上合组织成员国及对话伙伴的专家和海外企业代表，以及四川绿色制造、智能制造领域企业代表80余人参加。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "korcarc/text-humanizer",
+            "url": "https://github.com/korcarc/text-humanizer",
+            "intro": "把 AI 写的文字改得更像人写的，躲过 AI 检测工具。",
+            "features": [
+              "改写后保留原意，读起来更自然",
+              "能绕过多数 AI 检测工具",
+              "支持中英日韩德法西等 8 种语言",
+              "完全免费且开源"
+            ],
+            "guide": "这是 Python 项目，需要本地运行并配置 DeepSeek 等大模型接口，README 未给出具体安装命令，建议先看仓库说明再动手。",
+            "steps": [
+              "准备 Python 环境",
+              "按 README 配置大模型接口",
+              "运行改写流程"
+            ],
+            "install": "",
+            "summary": "把 AI 写的文字改得更像人写的，躲过 AI 检测工具。",
+            "source": "GitHub",
+            "stars": "725",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "text-humanizer is an open-source project designed to convert text generated by AI to its \"humanized\" version. Bypasses the most of AI detectors such as Turnitin or GPTZero",
+            "is_foreign": true
+          },
+          {
+            "title": "ApodexAI/FrontierAgent",
+            "url": "https://github.com/ApodexAI/FrontierAgent",
+            "intro": "在终端里指挥 AI 智能体查资料、读文件、写报告的工具。",
+            "features": [
+              "单个智能体自主研究并产出文件",
+              "多个智能体分工协作完成任务",
+              "macOS 和 Linux 一条命令即可运行",
+              "无需预先安装 Docker"
+            ],
+            "guide": "在 macOS 或 Linux 终端一条命令即可启动，无需预装 Docker；也可去 platform.apodex.ai 免费领 API Key 连接模型。",
+            "steps": [
+              "打开 macOS 或 Linux 终端",
+              "按 README 执行一条启动命令",
+              "如需模型，去 platform.apodex.ai 领 API Key"
+            ],
+            "install": "",
+            "summary": "在终端里指挥 AI 智能体查资料、读文件、写报告的工具。",
+            "source": "GitHub",
+            "stars": "3843",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "🧩 FrontierAgent, our agent framework, open-sourced alongside it — native command-line TUI, ReAct and Agent Team modes, one command on macOS and Linux, no preinstall, no hard Docker dependency.",
+            "is_foreign": true
+          },
+          {
+            "title": "super-productivity/super-productivity",
+            "url": "https://github.com/super-productivity/super-productivity",
+            "intro": "带时间规划和计时功能的待办清单，还能同步 Jira 等任务。",
+            "features": [
+              "给任务划分时间段并记录用时",
+              "从日历、Jira、GitHub 导入任务",
+              "番茄钟和休息提醒帮你专注",
+              "记录个人效率数据供调整"
+            ],
+            "guide": "可以直接打开网页版使用，也能下载 Windows、macOS、Linux、安卓和 iOS 客户端，无需自己搭建服务器。",
+            "steps": [
+              "打开官网 super-productivity.com",
+              "或从下载页安装对应系统客户端",
+              "登录后开始添加任务"
+            ],
+            "install": "",
+            "summary": "带时间规划和计时功能的待办清单，还能同步 Jira 等任务。",
+            "source": "GitHub",
+            "stars": "22119",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Super Productivity is an advanced todo list app with integrated Timeboxing and time tracking capabilities. It also comes with integrations for Jira, GitLab, GitHub and Open Project.",
+            "is_foreign": true
+          },
+          {
+            "title": "open-webui/open-webui",
+            "url": "https://github.com/open-webui/open-webui",
+            "intro": "自己搭一个类似 ChatGPT 的网页界面，本地模型也能用。",
+            "features": [
+              "一个界面连接本地和云端多种模型",
+              "完全离线运行，数据不出本机",
+              "支持插件扩展和外部工具接入",
+              "管理员可给不同用户分配权限"
+            ],
+            "guide": "需要自己部署，支持 pip、uv、Docker 或 Kubernetes 安装；装好后用浏览器打开网页即可对话，可接本地 Ollama 或 OpenAI 接口。",
+            "steps": [
+              "先安装 Docker 或 Python 环境",
+              "按 README 用 pip、uv 或 Docker 安装",
+              "启动服务后用浏览器访问"
+            ],
+            "install": "",
+            "summary": "自己搭一个类似 ChatGPT 的网页界面，本地模型也能用。",
+            "source": "GitHub",
+            "stars": "152497",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+            "is_foreign": true
+          },
+          {
+            "title": "langchain-ai/langchain",
+            "url": "https://github.com/langchain-ai/langchain",
+            "intro": "给开发者搭 AI 应用和智能体的工具箱，把各种模型拼起来用。",
+            "features": [
+              "把不同模型和第三方服务串起来",
+              "提供搭建智能体的基础组件",
+              "配套工具可调试和部署 AI 应用",
+              "技术换代时减少重写成本"
+            ],
+            "guide": "面向开发者，需要 Python 环境，用 uv 安装后即可在代码里调用模型；想快速上手可先看 Deep Agents。",
+            "steps": [
+              "先安装 Python 环境",
+              "执行 uv add langchain",
+              "在代码里初始化模型并调用"
+            ],
+            "install": "uv add langchain",
+            "summary": "给开发者搭 AI 应用和智能体的工具箱，把各种模型拼起来用。",
+            "source": "GitHub",
+            "stars": "146611",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The agent engineering platform.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从改写文本、跑智能体到管任务、搭本地 AI 界面，让 AI 真正用起来。"
+      }
+    ]
+  }
+}
