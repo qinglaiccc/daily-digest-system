@@ -1,0 +1,424 @@
+{
+  "date": "2026-09-21",
+  "generated_at": "2026-09-20T23:55:52.838771+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 0,
+    "raw_news": 238,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-09-21",
+    "digest": "长鑫第五代平台量产，中美经贸磋商纽约举行，快递安徽江苏涨价。",
+    "keywords": [
+      "长鑫科技",
+      "中美经贸磋商",
+      "GPT-6Astra",
+      "鸿蒙",
+      "钟薛高"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Vals AI用我的世界评测GPT-6 Astra",
+            "summary": "[[Vals AI]]用《我的世界》对[[OpenAI]]的[[GPT-6 Astra]]开展141小时自主测试，模型完成烈焰人农场等长周期任务。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/026.htm",
+            "title_original": "Vals AI 使用《我的世界》评测 Open GPT‑6 Astra 模型：显示 AI 遇重大变故可能陷入行为僵局",
+            "excerpt": "IT之家 9 月 21 日消息，AI 评测机构 Vals AI 利用游戏《我的世界（Minecraft）》对 OpenAI 最新大模型 GPT‑6 Astra 开展长时自主游戏测试，全程在 Twitch 直播，总测试时长达到 141 小时。 Vals AI 的这项测试并非由 OpenAI 官方设计，而是由第三方独立开展的评估项目，因此可以观察 Astra 在封闭测试环境之外的实际表现。 在测试过程中，GPT‑6 Astra 展现出前所未有的长周期规划与执行能力，达成过往 AI 难以实现的成就。其成功搭建半自动烈焰人农场，收集 6 根烈焰棒。深入下界诡异森林，击杀多名末影人，拿到 3 颗珍贵末影珍珠。完成大量探险后，将全部稀有物资集…",
+            "is_foreign": false
+          },
+          {
+            "title": "BoomCloud指控苹果三星谷歌侵犯专利",
+            "summary": "[[BoomCloud 360]]指控[[苹果]]、[[三星]]、[[谷歌]]侵犯3项空间音频专利，请求USITC发布排除令禁售相关产品。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/021.htm",
+            "title_original": "BoomCloud 360 指控苹果 / 三星 / 谷歌侵犯其空间音频专利，寻求在美国市场禁售相关产品",
+            "excerpt": "IT之家 9 月 21 日消息，据外媒 PhoneArena 报道，近期美国加州恩西尼塔斯一家名为 BoomCloud 360 的公司指控苹果、三星和谷歌侵犯其 3 项与空间音频技术相关的专利。BoomCloud 360 已要求美国国际贸易委员会（USITC）发布有限排除令和停止与终止令，以阻止相关侵权产品在美国市场销售。 如果 USITC 最终发布排除令，苹果可能受到影响的产品范围较广，包括从 iPhone 11 系列一直到 iPhone 17 系列的部分机型，以及 iPhone Air、部分 iPad、AirPods 和 Beats 产品。三星方面，部分 Galaxy 手机以及真无线蓝牙耳机等音频配件也被列入相关投诉；谷歌 P…",
+            "is_foreign": false
+          },
+          {
+            "title": "马斯克无聊公司拟建得州超级高铁",
+            "summary": "[[马斯克]]称[[无聊公司]]计划在得州建奥斯汀至圣安东尼奥超级高铁，行程从2.5小时压缩至30分钟内。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/019.htm",
+            "title_original": "马斯克“无聊公司”计划在美国得州奥斯汀、圣安东尼奥修超级高铁，将两地行程缩减至 30 分钟",
+            "excerpt": "IT之家 9 月 21 日消息，埃隆 · 马斯克今日在 X 平台表示，他手里的“无聊公司”（Boring Company）计划在美国得克萨斯州开发一条连接奥斯汀、圣安东尼奥的“简易版超级高铁”，将两座城市的出行时间从 2.5 小时压缩至 30 分钟以下。 随后无聊公司官方 X 账号转发了马斯克的想法，并表示公司非常期待建设这一规模庞大的基础设施项目。 IT之家了解到，无聊公司此前宣发的芝加哥、洛杉矶、纽约隧道项目都没有落地。不过该公司确实在拉斯维加斯运营一套隧道交通系统，并于近日完成 30 亿美元 （IT之家注：现汇率约合 201.55 亿元人民币） 融资。",
+            "is_foreign": false
+          },
+          {
+            "title": "微软高管称AI爬取是最大劳动成果盗窃",
+            "summary": "[[微软]]高管称AI爬取是人类历史上最大的劳动成果盗窃；同日[[特朗普]]提议为人工智能改名。",
+            "source": "少数派",
+            "url": "https://sspai.com/post/114788",
+            "title_original": "派早报：微软高管称 AI 爬取是人类历史上最大的劳动成果盗窃",
+            "excerpt": "微软高管称 AI 爬取是人类历史上最大的劳动成果盗窃 12306 称第三方购票可能更慢或失败 特朗普提议为人工智能改名 谷歌在 Android 17 中加入 Pixel 独占的 API iPhone 18 Pro Max 支持固件限制电量以便发运 苹果硬件工程副总裁表示不建议贴膜 看看就行的简讯 少数派的近期动态 你可能错过的好文章 查看全文",
+            "is_foreign": false
+          },
+          {
+            "title": "英伟达黄仁勋称AI恐惧被夸大",
+            "summary": "[[英伟达]]CEO[[黄仁勋]]在CBS采访中称AI终结人类概率为0%，认为外界对AI的恐惧被夸大。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/997936/nvidia-jensen-huang-ai-fears-overblown",
+            "title_original": "No one is surprised that Nvidia’s Jensen Huang thinks AI fears are overblown.",
+            "excerpt": "The man who may stand to make the most money from the AI boom seems to think he knows better than anyone else, including researchers who have studied and worked on AI for decades. In an interview with CBS Sunday Morning, he claimed there was a \"0% chance\" of AI being the end of the […]",
+            "is_foreign": true
+          },
+          {
+            "title": "世界模型公司对外高度保密",
+            "summary": "TechCrunch报道称，世界模型领域公司手握大量资金与关注度，但从创始团队到数据供应商均拒绝披露在建内容。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/20/world-model-companies-are-keeping-a-lot-of-secrets/",
+            "title_original": "World model companies are keeping a lot of secrets",
+            "excerpt": "Everyone in the world-models space is sitting on a pile of cash and a ton of buzz, but good luck getting anyone — from the founders to their own data suppliers — to tell you what they're actually building.",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌开源智能体编排器",
+            "summary": "[[谷歌]]发布开源智能体编排器Agent Executor，相关项目在Hacker News获68点讨论。",
+            "source": "Hacker News",
+            "url": "https://agentexecutor.io",
+            "title_original": "Google's Open Agentic Orchestrator",
+            "excerpt": "Article URL: https://agentexecutor.io \n Comments URL: https://news.ycombinator.com/item?id=49780797 \n Points: 68 \n # Comments: 20",
+            "is_foreign": true
+          },
+          {
+            "title": "Vocci推出会议记录智能戒指",
+            "summary": "[[Vocci]]推出售价249美元的智能戒指，用于会议记录，产品可能引发隐私方面的疑问。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/20/voccis-ring-adds-a-new-form-factor-to-meeting-note-taking/",
+            "title_original": "Vocci’s ring adds a new form factor to meeting note-taking",
+            "excerpt": "Vocci's lightweight ring costs $249, and might pose some privacy questions",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "长鑫第五代技术平台正式量产",
+            "summary": "[[长鑫科技]]宣布第五代技术平台量产，每张晶圆产出提升50%以上，24GB LPDDR5X进入国产旗舰手机。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/029.htm",
+            "title_original": "IT早报 0921：曝快递新一轮涨价；长鑫第五代技术平台量产；苹果 iOS 27 闹钟支持大陆调休；小米 18 Pro 系列 9 月 23 日发布；沃尔沃 S90 汽车被曝腰斩式降价...",
+            "excerpt": "“IT早报”时间，大家好，现在是 2026 年 9 月 21 日星期一，今天的重要科技资讯有： 1. 曝快递“反内卷”引发新一轮涨价，多家公司 9 月 20 日起安徽区域单票最低上调 0.15 元 报道称，此调价主要面向 ToB 端。除安徽地区外，还有快递公司人士透露，该公司江苏地区亦于 9 月 20 日起执行旺季调价，上调幅度不低于 0.1 元 / 票。>> 查看详情 2. 长鑫科技宣布第五代技术平台正式量产：每张晶圆产出提升 50% 以上，24GB LPDDR5X 全面进入国产主流旗舰手机 长鑫科技将内存阵列有源区半间距做到 11.95 纳米，存储器电容深宽比 45:1，核心动能区高度降至 6762 纳米；同时，第五代工艺平台…",
+            "is_foreign": false
+          },
+          {
+            "title": "快递新一轮涨价安徽江苏先行",
+            "summary": "多家快递公司9月20日起在安徽上调单票最低0.15元，江苏同期上调不低于0.1元/票，主要面向ToB端。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/029.htm",
+            "title_original": "IT早报 0921：曝快递新一轮涨价；长鑫第五代技术平台量产；苹果 iOS 27 闹钟支持大陆调休；小米 18 Pro 系列 9 月 23 日发布；沃尔沃 S90 汽车被曝腰斩式降价...",
+            "excerpt": "“IT早报”时间，大家好，现在是 2026 年 9 月 21 日星期一，今天的重要科技资讯有： 1. 曝快递“反内卷”引发新一轮涨价，多家公司 9 月 20 日起安徽区域单票最低上调 0.15 元 报道称，此调价主要面向 ToB 端。除安徽地区外，还有快递公司人士透露，该公司江苏地区亦于 9 月 20 日起执行旺季调价，上调幅度不低于 0.1 元 / 票。>> 查看详情 2. 长鑫科技宣布第五代技术平台正式量产：每张晶圆产出提升 50% 以上，24GB LPDDR5X 全面进入国产主流旗舰手机 长鑫科技将内存阵列有源区半间距做到 11.95 纳米，存储器电容深宽比 45:1，核心动能区高度降至 6762 纳米；同时，第五代工艺平台…",
+            "is_foreign": false
+          },
+          {
+            "title": "我国首款藏语多语言AI输入法发布",
+            "summary": "藏语智能全国重点实验室发布智达AI输入法，为中国首款藏语多语言全模态输入法，覆盖手机电脑全终端。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/027.htm",
+            "title_original": "我国首款藏语多语言全模态 AI 输入法发布，覆盖手机、电脑等全终端",
+            "excerpt": "IT之家 9 月 21 日消息，据科技日报昨晚报道，9 月 20 日，在青海师范大学教师教育高质量发展暨建校 70 周年大会科研成果展示环节， 我国首款藏语多语言全模态 AI 输入法 —— 智达 AI 输入法及配套藏文字体集正式发布 。 据介绍，这是中国首款藏语多语言全模态 AI 输入法。该输入法由藏语智能全国重点实验室研发，依托实验室自主知识产权的大模型及相关 AI 基础设施， 覆盖手机、电脑等全终端 ，支持文字、语音、图像等多模态输入，并可通过统一账号同步词库和输入习惯。 青海师范大学教授、藏语智能全国重点实验室常务副主任多拉表示， 本次发布的智达 AI 输入法是将智达大模型作为核心技术底座开发而成 ，在输入方式上，智达 AI…",
+            "is_foreign": false
+          },
+          {
+            "title": "QQ鸿蒙版接入系统级通话提醒",
+            "summary": "[[QQ]]鸿蒙版9.2.70邀测版接入Call Service Kit系统级通话提醒，支持小窗接听语音视频通话并接入实况窗。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/025.htm",
+            "title_original": "QQ 鸿蒙端 App 最新 9.2.70 邀测版本接入 CallKit 系统级通话提醒",
+            "excerpt": "IT之家 9 月 21 日消息，QQ 鸿蒙版 App 昨日在华为应用市场（App Gallery）开启 9.2.70 (3466) 版本邀测升级，测试时间为 2026/9/20-2026/10/30，新增设置仅聊天的好友、自定义撤回消息等功能。 IT之家实测发现，该版本 QQ 已接入 Call Service Kit 系统级通话提醒（最初命名为 CallKit 通话服务），用户可直接像收到拨号电话一样，在小窗中接听别人打来的 QQ 语音通话和视频通话。另外，该功能还接入了鸿蒙 HarmonyOS 系统的实况窗。 作为参考，CallKit 是苹果 iOS 系统率先推出的一项开发框架，允许第三方应用的视频 / 语音通话也能像传统电话一…",
+            "is_foreign": false
+          },
+          {
+            "title": "B站上线华为WATCH应用市场",
+            "summary": "[[哔哩哔哩]]完成鸿蒙穿戴版开发，上线华为WATCH应用市场，安装包约47.3MB，支持WATCH 5/6等设备。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/022.htm",
+            "title_original": "B站完成鸿蒙穿戴版开发，上线华为 WATCH 全智能手表应用市场 App Gallery",
+            "excerpt": "IT之家 9 月 21 日消息，哔哩哔哩已完成鸿蒙穿戴版开发， 上线了华为 WATCH 全智能手表应用市场 App Gallery 。 表端哔哩哔哩安装包大小约 47.3MB， 支持 HUAWEI WATCH 5 / 6 系列 / 十周年 / Ultimate 2 等设备下载使用 。 目前，手表端哔哩哔哩已支持听 / 看视频、登录账号、稍后再看、我的下载、播客 / 音乐 / 历史 / 精选、收藏、动态、视频弹幕、音量调节、后台播放等功能， 同时适配了表端的手势识别功能 。 值得一提的是，去年 12 月底， IT之家手表版 App 也已正式上架 ，苹果 / 鸿蒙 / 安卓三平台齐发（支持 watchOS、HarmonyOS、Wear…",
+            "is_foreign": false
+          },
+          {
+            "title": "iFixit给iPhone 18 Pro打7分",
+            "summary": "[[iFixit]]拆解[[iPhone 18 Pro]]给出7分可维修性评分，展示可变光圈、屏下Face ID红外摄像头与更大均热板。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/023.htm",
+            "title_original": "iFixit 为苹果 iPhone 18 Pro 打出 7 分可维修性评分：拆解机身展示可变光圈、新一代均热板等设计细节",
+            "excerpt": "IT之家 9 月 21 日消息，iFixit 现已发布苹果 iPhone 18 Pro 的拆解介绍，官方重点展示了新机搭载的可变光圈机构、屏下 Face ID 红外摄像头以及更大的均热板设计。 苹果 iPhone 18 Pro 今年最大的影像升级之一是引入可变光圈。iFixit 拆解发现，该机构由 6 片微型光圈叶片组成，通过电磁铁进行控制，其工作原理与光学防抖系统有一定相似之处，但两套机构彼此独立。在拆解镜头模组时，其中一片微型光圈叶片意外脱落，这也说明对该机构进行单独维修并不现实。如果光圈机构出现卡滞等故障，很可能需要直接更换整个主摄像头模组。 此外，iPhone 18 Pro 系列手机还将 Face ID 的红外摄像头移至屏…",
+            "is_foreign": false
+          },
+          {
+            "title": "智谱ZCode被指偷传代码遭追责",
+            "summary": "[[智谱]]ZCode被指偷传代码风波升级，有企业发函追责，报道称其行为比Grok、Cursor更严重。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/huOiZyyH32MpRwTFkoNe?utm_source=rss&utm_medium=article",
+            "title_original": "比 Grok、Cursor 都狠？智谱ZCode“偷传代码”风波升级，企业发函追责",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "国产旗舰模型单次成本仅Opus 5的1/8",
+            "summary": "一款国产旗舰模型瞄准AI编程与金融场景，单次成本仅为Opus 5的1/8，跻身AA榜单全球前三。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/9jw1St7ULZijG8XNCWkW?utm_source=rss&utm_medium=article",
+            "title_original": "瞄准 AI 编程、金融等场景，单次成本仅为Opus 5 的1/8！这款国产旗舰模型跻身 AA 榜单全球前三",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "任天堂欧洲推马力欧赛车同捆Switch",
+            "summary": "[[任天堂]]在欧洲推出《马力欧赛车8豪华版》同捆版Switch，定价199.99欧元，部分玩家猜测为清库存。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/024.htm",
+            "title_original": "清库存？任天堂在欧洲推出《马力欧赛车 8 豪华版》同捆版 Switch 游戏机，199 欧元",
+            "excerpt": "IT之家 9 月 21 日消息，任天堂现已在欧洲市场推出《马力欧赛车 8 豪华版》同捆版 Switch 游戏机，定价 199.99 欧元 （IT之家注：现汇率约合 1,540 元人民币） 。 据介绍，该同捆套装内包含一台续航版 Switch 游戏机（LCD），以及一张《马力欧赛车 8 豪华版》游戏卡带。 同时，199.99 欧元 （现汇率约合 1,540 元人民币） 这个售价可谓是任天堂平时舍不得给出的优惠。作为对比，不包含任何游戏的 Switch 主机在欧洲的售价大约是 270 欧元-300 欧元 （现汇率约合 2,079 元- 2,310 元人民币） 。 部分玩家对此猜测，任天堂舍得给出这种实惠的定价， 实际上是在清理库存 。…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "中美经贸磋商在纽约开始举行",
+            "summary": "当地时间9月20日上午，中美两国经贸团队在美国纽约开始举行中美经贸磋商。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-21/10700496.shtml",
+            "title_original": "中美经贸磋商在美国纽约开始举行",
+            "excerpt": "中新社纽约9月20日电 当地时间9月20日上午，中美两国经贸团队在美国纽约开始举行中美经贸磋商。(完)",
+            "is_foreign": false
+          },
+          {
+            "title": "景区电瓶车租赁屡遭吐槽",
+            "summary": "景区电瓶车租赁被指价格偏高、超时向上取整、禁行区域多、还车点不足，有游客6个半小时花费410元。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-21/10700501.shtml",
+            "title_original": "“6个半小时花410元”，景区电瓶车租赁为何屡遭吐槽？",
+            "excerpt": "价格偏高、超时“向上取整”、禁行区域多、还车点不足——",
+            "is_foreign": false
+          },
+          {
+            "title": "钟薛高降价回归引关注",
+            "summary": "[[钟薛高]]宣布回归，轻牛乳降至6.9元、丝绒可可降至7.9元，定档第四季度反季上市，新公司股东为皇家小虎。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1585156.html",
+            "title_original": "文章频道 - 降价，能让钟薛高起死回生吗",
+            "excerpt": "降价，不是包治百病的解药，反而拉开了新一轮存亡危机的序幕。 来源： 沥金 商业世界，没有毫无准备的巧合，更没有无缘无故的热搜。 就比如罗永浩，前脚发文吐槽野人先生的现制冰淇淋又贵又难吃，一句“感觉比钟薛高难吃多了，怀念钟薛高”将这个沉寂已久的品牌推上风口浪尖。 钟薛高后脚高调宣布即将回归： 轻牛乳降至6.9元，丝绒可可降至7.9元，定档第四季度反季上市。 再往前扒，会发现钟薛高的资产被拍卖后，其新公司的重要股东竟然是皇家小虎，也是著名的冷链冻品品牌。 罗永浩的吐槽微博 来源：微博 这一套连招打得太过丝滑，钟薛高轻松获得了千万级的曝光，让人不免好奇罗永浩到底收没收钟薛高的广告费。 表面上看，这是一个昔日网红向市场低头、消费者重拾旧爱…",
+            "is_foreign": false
+          },
+          {
+            "title": "广西钦州25个造纸项目集中签约",
+            "summary": "25个造纸及配套产业合作项目框架协议在广西钦州钦南区集中签约，为当地高端造纸产业注入动能。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-20/10700422.shtml",
+            "title_original": "广西钦州造纸产业扩容 25个项目集中签约",
+            "excerpt": "中新网钦州9月20日电(翟李强)9月20日，25个造纸及配套产业合作项目框架协议集中签约，落户广西钦州市钦南区，为当地高端造纸及纸制品产业发展注入强劲动能。",
+            "is_foreign": false
+          },
+          {
+            "title": "第五届数贸会杭州开放探馆",
+            "summary": "第五届全球数字贸易博览会在杭州开放探馆，药房机器人、智能飞行系统、机器人灵巧手等展品亮相。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-20/10700488.shtml",
+            "title_original": "第五届数贸会探馆：机器人秀绝活 多国展商赴数字之约",
+            "excerpt": "中新社杭州9月20日电 (奚金燕 蓝伊旎)药房机器人自动分拣药品，智能飞行系统仿真模拟飞行员体验，机器人“灵巧手”尽情“挥毫创作”......第五届全球数字贸易博览会(下称“数贸会”)数字贸易主题展馆20日开放探馆，一系列“黑科技”引人注目。",
+            "is_foreign": false
+          },
+          {
+            "title": "2026中国红茶大会在湖北利川启幕",
+            "summary": "2026中国红茶大会在湖北恩施利川市开幕，茶产业专家与学者共探中国红茶产业高质量发展路径。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-20/10700388.shtml",
+            "title_original": "2026中国红茶大会在湖北利川启幕",
+            "excerpt": "中新网恩施9月20日电 (董晓斌 税浪)2026中国红茶大会20日在湖北省恩施土家族苗族自治州利川市开幕，国内茶产业行业专家、学者相聚清江源头，共探中国红茶产业高质量发展新路径。",
+            "is_foreign": false
+          },
+          {
+            "title": "天津市生物制造产业联盟成立",
+            "summary": "天津市生物制造产业联盟正式成立，成员单位逾130家，于第十四届中国工业生物技术创新论坛期间公布。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-20/10700394.shtml",
+            "title_original": "天津市生物制造产业联盟成立 成员单位逾130家",
+            "excerpt": "中新网天津9月20日电 (记者 周亚强)第十四届中国工业生物技术创新论坛暨生物制造产业大会18日至20日在天津举行。记者从会上获悉，天津市生物制造产业联盟正式成立，成员单位逾130家。",
+            "is_foreign": false
+          },
+          {
+            "title": "重庆九龙坡五年拟增20万适青岗位",
+            "summary": "重庆九龙坡区称未来五年预计新增20万个适青岗位，推动30项就业政策落地，赋能青年就业创业。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-20/10700408.shtml",
+            "title_original": "重庆九龙坡打造“四有”青年城 未来五年预计新增20万个适青岗位",
+            "excerpt": "中新网重庆9月20日电 (梁钦卿)“九龙坡经济发展势头强劲，为青年就业创业筑牢坚实根基。”在重庆市政府新闻办20日举行的发布会上，重庆市九龙坡区委书记覃昌德回答中新网提问时说，预计未来五年，九龙坡将新增20万个适青岗位，持续为青年释放充裕就业空间。我们全力推动30项就业政策落地见效，全方位赋能青年成长成才。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "mizorewww/laya-mlx",
+            "url": "https://github.com/mizorewww/laya-mlx",
+            "intro": "在苹果电脑上本地做快速分类判断的小模型，不用联网也不生成文字。",
+            "features": [
+              "本地运行，不上传数据到云端",
+              "毫秒级给出分类结果",
+              "不生成文字，只做选择判断"
+            ],
+            "guide": "需要苹果芯片的 Mac、Python 3.11 以上和 macOS 14 以上。用 pip 安装后加载模型即可在本地调用，首次会下载模型文件。",
+            "steps": [
+              "确认使用苹果芯片 Mac 与 Python 3.11+",
+              "pip install laya-mlx",
+              "import laya_mlx as laya",
+              "agent = laya.load(\"aac6fef/laya-mlx\")"
+            ],
+            "install": "pip install laya-mlx",
+            "summary": "在苹果电脑上本地做快速分类判断的小模型，不用联网也不生成文字。",
+            "source": "GitHub",
+            "stars": "1639",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Native MLX runtime for Laya typed decision models — 7–14 ms short decisions on M3 Max. No text generation, PyTorch, or cloud API.",
+            "is_foreign": true
+          },
+          {
+            "title": "totec448-spec/chat-on-steroids",
+            "url": "https://github.com/totec448-spec/chat-on-steroids",
+            "intro": "让 ChatGPT 能读写你电脑上的文件、跑测试，还能把任务分给多个助手一起做。",
+            "features": [
+              "让 ChatGPT 直接读写本地文件",
+              "把任务分给多个助手并行处理",
+              "长任务中途可发指令纠正"
+            ],
+            "guide": "这是一个独立测试版工具，需要配合你自己的 ChatGPT 账号使用，并遵守服务商规则。README 未给出具体安装命令，建议从项目页面下载对应平台版本。",
+            "steps": [
+              "阅读项目使用须知与规则",
+              "从项目页面下载对应平台版本",
+              "连接你自己的 ChatGPT 账号"
+            ],
+            "install": "",
+            "summary": "让 ChatGPT 能读写你电脑上的文件、跑测试，还能把任务分给多个助手一起做。",
+            "source": "GitHub",
+            "stars": "3406",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Cross-platform local MCP capabilities for ChatGPT with Chrome integration, Goal, Compact & Resume, and durable multi-agent workflows.",
+            "is_foreign": true
+          },
+          {
+            "title": "ActivityWatch/activitywatch",
+            "url": "https://github.com/ActivityWatch/activitywatch",
+            "intro": "自动记录你每天在电脑上干了什么，数据只存在自己电脑里。",
+            "features": [
+              "记录当前用的软件和窗口标题",
+              "记录浏览器标签页和网址",
+              "检测你是否离开键盘",
+              "数据存在本地，自己掌控"
+            ],
+            "guide": "跨平台免费开源，数据保存在本机。可从官网或发布页下载安装包，装好后它会自动在后台记录，打开面板就能看时间去向。",
+            "steps": [
+              "访问官网或发布页下载安装包",
+              "安装并启动 ActivityWatch",
+              "打开面板查看时间记录"
+            ],
+            "install": "",
+            "summary": "自动记录你每天在电脑上干了什么，数据只存在自己电脑里。",
+            "source": "GitHub",
+            "stars": "18951",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The best free and open-source automated time tracker. Cross-platform, extensible, privacy-focused.",
+            "is_foreign": true
+          },
+          {
+            "title": "github/spec-kit",
+            "url": "https://github.com/github/spec-kit",
+            "intro": "给 AI 编程助手一套规范流程，让它按你写好的需求文档干活。",
+            "features": [
+              "把需求写成规范再交给 AI 实现",
+              "提供修 bug 和评估点子的流程",
+              "自带可复用的模板"
+            ],
+            "guide": "需要 Python 3.11 以上、uv 工具和一个支持的 AI 编程助手。用命令行安装后初始化项目即可开始，示例默认配合 GitHub Copilot。",
+            "steps": [
+              "先安装 Python 3.11+ 和 uv",
+              "uv tool install specify-cli",
+              "specify init my-project --integration copilot",
+              "cd my-project"
+            ],
+            "install": "uv tool install specify-cli",
+            "summary": "给 AI 编程助手一套规范流程，让它按你写好的需求文档干活。",
+            "source": "GitHub",
+            "stars": "138085",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "💫 Toolkit to help you get started with Spec-Driven Development",
+            "is_foreign": true
+          },
+          {
+            "title": "Comfy-Org/ComfyUI",
+            "url": "https://github.com/Comfy-Org/ComfyUI",
+            "intro": "用拖拽节点的方式搭 AI 画图和生成内容的流程，像搭积木一样组合。",
+            "features": [
+              "用节点连线搭建生成流程",
+              "支持多种扩散模型",
+              "提供接口供其他程序调用"
+            ],
+            "guide": "需要 Python 环境，通常在本地或服务器上运行。README 摘录未给出具体安装命令，建议按官网文档安装后启动网页界面使用。",
+            "steps": [
+              "准备 Python 运行环境",
+              "按官网文档完成安装",
+              "启动后打开网页界面使用"
+            ],
+            "install": "",
+            "summary": "用拖拽节点的方式搭 AI 画图和生成内容的流程，像搭积木一样组合。",
+            "source": "GitHub",
+            "stars": "134106",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "本地跑 AI、自动记时间、给 AI 编程立规矩，让工具更听话更省心。"
+      }
+    ]
+  }
+}

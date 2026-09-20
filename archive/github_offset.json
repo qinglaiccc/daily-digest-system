@@ -1,5 +1,5 @@
 {
-  "classic_offset": 18,
+  "classic_offset": 20,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -161,12 +161,15 @@
     "super-productivity/super-productivity",
     "shinthink/blitzstrike",
     "Human-Agent-Society/reef",
-    "jarun/nnn"
+    "jarun/nnn",
+    "mizorewww/laya-mlx",
+    "totec448-spec/chat-on-steroids",
+    "ActivityWatch/activitywatch"
   ],
-  "last_run_date": "2026-09-19",
+  "last_run_date": "2026-09-20",
   "last_classic": [
-    "x1xhlol/system-prompts-and-models-of-ai-tools",
-    "DietrichGebert/ponytail"
+    "github/spec-kit",
+    "Comfy-Org/ComfyUI"
   ],
-  "updated_at": "2026-09-19T23:55:36.457140+00:00"
+  "updated_at": "2026-09-20T23:55:38.998180+00:00"
 }
