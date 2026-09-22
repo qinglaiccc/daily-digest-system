@@ -37,6 +37,17 @@ import config
 logger = logging.getLogger(__name__)
 
 _TAG_RE = re.compile(r"<[^>]+>")
+# 有些源的标题会带上栏目前缀，例如刀法研究所的 "项目频道 - xxx" / "文章频道 - xxx"。
+# 只匹配"以『xx频道』开头 + 破折号"这一种形态，避免误伤标题里本来就有的破折号。
+_CHANNEL_PREFIX_RE = re.compile(r"^[\u4e00-\u9fff]{2,6}频道\s*[-–—|｜]\s*(.+)$")
+
+
+def strip_channel_prefix(title: str) -> str:
+    """去掉 RSS 标题里的栏目前缀（"项目频道 - xxx" → "xxx"）。"""
+    if not title:
+        return title
+    matched = _CHANNEL_PREFIX_RE.match(title.strip())
+    return matched.group(1).strip() if matched else title
 _WS_RE = re.compile(r"[ \t\r\f\v]+")
 _MULTI_NL_RE = re.compile(r"\n{3,}")
 
@@ -224,6 +235,13 @@ def fetch_rss_source(
     name = source["name"]
     url = source["url"]
 
+    # 源级时间窗覆盖。有些高质量源是"日更/周更"节奏（比如 newsletter 类），
+    # 用全局 24 小时窗口会把它们整个过滤掉。哪个源需要放宽，就在源配置里写
+    # lookback_hours，不要为了迁就一个源去动全局窗口。
+    override = source.get("lookback_hours")
+    if override:
+        since = datetime.now(timezone.utc) - timedelta(hours=float(override))
+
     response = session.get(url, timeout=config.HTTP_TIMEOUT)
     response.raise_for_status()
 
@@ -248,7 +266,7 @@ def fetch_rss_source(
     undated: List[NewsItem] = []
 
     for entry in entries[:80]:  # 单源最多看 80 条，避免个别大源拖慢速度
-        title = clean_text(entry.get("title"), limit=200)
+        title = clean_text(strip_channel_prefix(clean_text(entry.get("title"), limit=200)), limit=200)
         link = _extract_entry_link(entry)
         if not title or not link:
             continue
@@ -328,7 +346,171 @@ def fetch_all_news(session: Optional[requests.Session] = None) -> tuple[List[New
             logger.info("RSS 源成功 [%s] 新增 %d 条", src["name"], added)
 
     logger.info("RSS 采集完成：%s", report.summary)
+
+    # HuggingFace 的 JSON 数据流与 RSS 源合并。仍然按 URL 去重，
+    # 因为 HF 论文里常出现的 GitHub 仓库链接可能和别的源重复。
+    hf_items, hf_report = fetch_hf_streams(session)
+    for item in hf_items:
+        key = item.url.split("?")[0].rstrip("/")
+        if key in seen_urls:
+            continue
+        seen_urls.add(key)
+        collected.append(item)
+
+    report.ok += hf_report.ok
+    report.failed += hf_report.failed
+    report.items += hf_report.items
+    for message in hf_report.errors:
+        report.add_error(message)
+
+    logger.info("全部新闻源采集完成：%s", report.summary)
     return collected, report
+
+
+# --------------------------------------------------------------------------
+# HuggingFace 数据流（JSON 接口，不是 RSS）
+# --------------------------------------------------------------------------
+def fetch_hf_daily_papers(session: requests.Session) -> List[NewsItem]:
+    """
+    HuggingFace 每日热门论文（社区投票）。
+
+    这是个 JSON 接口而不是 feed，feedparser 解析它会直接失败，所以单独走一条路。
+    与 RSS 源不同，它**没有**"过去 24 小时"的概念：daily_papers 是一个滚动榜单，
+    最新一篇也常常是两三天前提交的。所以这里用独立的时间窗（HF_LOOKBACK_HOURS），
+    而不是全局的 24 小时 —— 否则整个源会被静默清空（这类"配了但永远 0 条"的
+    问题最难发现，所以宁可把窗口放宽并写清楚原因）。
+    """
+    response = session.get(
+        config.HF_DAILY_PAPERS_URL,
+        params={"limit": config.HF_PAPERS_LIMIT},
+        timeout=config.HTTP_TIMEOUT,
+    )
+    response.raise_for_status()
+    payload = response.json()
+    if not isinstance(payload, list):
+        raise ValueError(f"daily_papers 返回了非数组结构：{type(payload).__name__}")
+
+    since = datetime.now(timezone.utc) - timedelta(hours=config.HF_LOOKBACK_HOURS)
+    items: List[NewsItem] = []
+
+    for row in payload:
+        if not isinstance(row, dict):
+            continue
+        paper = row.get("paper") if isinstance(row.get("paper"), dict) else {}
+        title = clean_text(row.get("title") or paper.get("title"), limit=200)
+        paper_id = clean_text(paper.get("id"), limit=40)
+
+        # 论文的规范链接是 /papers/<id>；没有 id 时退回项目主页
+        url = (
+            f"https://huggingface.co/papers/{paper_id}"
+            if paper_id
+            else clean_text(paper.get("projectPage"), limit=300)
+        )
+        if not title or not url:
+            continue
+
+        published = _parse_iso(row.get("publishedAt") or paper.get("publishedAt"))
+        if published and published < since:
+            continue
+
+        upvotes = paper.get("upvotes")
+        body = clean_text(row.get("summary") or paper.get("summary"), limit=320)
+        prefix = f"（HuggingFace 每日论文{f'，{upvotes} 票' if upvotes else ''}）"
+        desc = clean_text(paper.get("githubRepo"), limit=120)
+        summary = f"{prefix}{body}" + (f" 代码：{desc}" if desc else "")
+
+        items.append(
+            NewsItem(
+                title=title,
+                url=url,
+                source="HuggingFace 论文",
+                summary=summary,
+                published=published,
+                region="intl",
+                category="tech",
+            )
+        )
+
+    return items
+
+
+def fetch_hf_trending_models(session: requests.Session) -> List[NewsItem]:
+    """
+    HuggingFace 热门模型（按 trendingScore 排序）。
+
+    同样不做时间窗过滤：榜单本身就是"最近在涨"的信号，而 modelId 对应的仓库
+    可能是几个月前建的（日期会很旧）。用创建时间过滤会把真正在爆的模型滤掉 ——
+    这属于"看起来在筛选、实际上在误杀"的典型陷阱，所以这里显式不过滤。
+    """
+    response = session.get(config.HF_TRENDING_MODELS_URL, timeout=config.HTTP_TIMEOUT)
+    response.raise_for_status()
+    payload = response.json()
+    if not isinstance(payload, list):
+        raise ValueError(f"trending models 返回了非数组结构：{type(payload).__name__}")
+
+    items: List[NewsItem] = []
+    for row in payload[: config.HF_MODELS_LIMIT]:
+        if not isinstance(row, dict):
+            continue
+        model_id = clean_text(row.get("modelId") or row.get("id"), limit=160)
+        if not model_id:
+            continue
+
+        pipeline = clean_text(row.get("pipeline_tag"), limit=40)
+        likes = row.get("likes")
+        downloads = row.get("downloads")
+        score = row.get("trendingScore")
+        tags = [t for t in (row.get("tags") or []) if isinstance(t, str)][:6]
+
+        bits = [f"（HuggingFace 热门模型，trendingScore {score}）"]
+        if pipeline:
+            bits.append(f"类型 {pipeline}。")
+        if likes or downloads:
+            bits.append(f"likes {likes or 0}，下载 {downloads or 0}。")
+        if tags:
+            bits.append("标签：" + "、".join(tags) + "。")
+
+        items.append(
+            NewsItem(
+                title=f"{model_id} 登上 HuggingFace 热门模型榜",
+                url=f"https://huggingface.co/{model_id}",
+                source="HuggingFace 模型",
+                summary="".join(bits),
+                published=None,
+                region="intl",
+                category="tech",
+            )
+        )
+
+    return items
+
+
+def fetch_hf_streams(session: requests.Session) -> tuple[List[NewsItem], FetchReport]:
+    """抓 HuggingFace 的两条数据流，任一条失败只记日志、不互相影响。"""
+    report = FetchReport(label="HuggingFace 源")
+    items: List[NewsItem] = []
+
+    if not config.HF_ENABLED:
+        logger.info("HF_ENABLED=false，跳过 HuggingFace 数据流")
+        return items, report
+
+    for label, func in (
+        ("每日论文", fetch_hf_daily_papers),
+        ("热门模型", fetch_hf_trending_models),
+    ):
+        try:
+            got = func(session)
+        except Exception as exc:  # noqa: BLE001 —— 与 RSS 源同样单点容错
+            report.failed += 1
+            report.add_error(f"HuggingFace {label}: {type(exc).__name__}: {exc}")
+            logger.warning("HuggingFace 源失败 [%s] %s", label, exc)
+            continue
+        report.ok += 1
+        report.items += len(got)
+        items.extend(got)
+        logger.info("HuggingFace 源成功 [%s] 新增 %d 条", label, len(got))
+
+    return items, report
 
 
 # --------------------------------------------------------------------------

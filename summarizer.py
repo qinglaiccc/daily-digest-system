@@ -22,6 +22,7 @@ from urllib.parse import urlsplit
 
 import config
 import obsidian
+import ranking
 from fetcher import NewsItem, RepoItem, clean_text
 
 logger = logging.getLogger(__name__)
@@ -180,79 +181,42 @@ _BUCKETS = [
 ]
 
 
-def select_candidates(news: List[NewsItem]) -> List[NewsItem]:
-    """
-    按 (region, category) 分桶后各取前 N 条，避免某个板块的原始素材被其他板块挤掉。
-    """
-    buckets: Dict[Tuple[str, str], List[NewsItem]] = {b: [] for b in _BUCKETS}
-    others: List[NewsItem] = []
-
-    for item in news:
-        key = (item.region or "", item.category or "")
-        if key in buckets:
-            buckets[key].append(item)
-        else:
-            others.append(item)
-
-    def sort_key(i: NewsItem):
-        return i.published or datetime.min.replace(tzinfo=timezone.utc)
-
-    selected: List[NewsItem] = []
-    per_bucket = config.CANDIDATES_PER_SECTION
-
-    for key in _BUCKETS:
-        pool = sorted(buckets[key], key=sort_key, reverse=True)
-        # 同源内容最多占一半，保证素材来源多样
-        picked: List[NewsItem] = []
-        source_counter: Dict[str, int] = {}
-        cap = max(3, per_bucket // 2)
-        for item in pool:
-            if source_counter.get(item.source, 0) >= cap:
-                continue
-            source_counter[item.source] = source_counter.get(item.source, 0) + 1
-            picked.append(item)
-            if len(picked) >= per_bucket:
-                break
-        # 单源限制导致没取满时，放宽限制补齐
-        if len(picked) < per_bucket:
-            chosen_ids = {id(i) for i in picked}
-            for item in pool:
-                if id(item) in chosen_ids:
-                    continue
-                picked.append(item)
-                if len(picked) >= per_bucket:
-                    break
-        selected.extend(picked)
-
-    others.sort(key=sort_key, reverse=True)
-    selected.extend(others[:per_bucket])
-
-    return selected
-
-
 def _payload_size(payload: Any) -> int:
     return len(json.dumps(payload, ensure_ascii=False))
 
 
-def _fit_budget_news(payload: Dict[str, Any]) -> Dict[str, Any]:
+def _fit_rerank_budget(
+    sections: Dict[str, List[Dict[str, Any]]],
+) -> Dict[str, List[Dict[str, Any]]]:
     """
-    新闻部分的字符预算。
+    重排调用的字符预算。
 
-    新闻与 GitHub 现在是两次独立调用，各自有独立的上下文窗口，
-    所以预算也分开分配，不再互相挤占。
+    重排只需要知道"这条讲的是什么"，不需要完整摘要，所以超预算时优先压摘要长度
+    （320 → 140 → 80），而不是丢条目。
+
+    为什么不丢条目：丢条目等于替主编做了决定，会在候选池里留下一个看不见的盲区；
+    而压缩摘要只是让判断依据变粗，条目本身还在。这个取舍直接关系到用户抱怨的"漏网之鱼"。
     """
-    budget = int(config.LLM_MAX_INPUT_CHARS * 0.6)
-    news = payload["news"]
+    budget = config.RERANK_MAX_INPUT_CHARS
+    if _payload_size(sections) <= budget:
+        return sections
 
-    while _payload_size(payload) > budget and news:
-        news.pop()
+    logger.warning(
+        "重排素材超预算（%d > %d 字符），摘要压缩到 140 字符",
+        _payload_size(sections),
+        budget,
+    )
+    for entries in sections.values():
+        for entry in entries:
+            entry["raw_summary"] = (entry.get("raw_summary") or "")[:140]
 
-    if news and _payload_size(payload) > budget:
-        logger.warning("新闻素材仍超预算（%d > %d），截断摘要", _payload_size(payload), budget)
-        for item in news:
-            item["raw_summary"] = item.get("raw_summary", "")[:120]
+    if _payload_size(sections) > budget:
+        logger.warning("仍超预算（%d 字符），进一步压到 80 字符", _payload_size(sections))
+        for entries in sections.values():
+            for entry in entries:
+                entry["raw_summary"] = (entry.get("raw_summary") or "")[:80]
 
-    return payload
+    return sections
 
 
 def _fit_budget_github(repos_payload: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
@@ -328,10 +292,23 @@ def _news_section_spec_text() -> str:
     )
 
 
-def build_news_user_prompt(payload: Dict[str, Any], report_date: date) -> str:
+def build_news_user_prompt(
+    selected: Dict[str, List[Dict[str, Any]]],
+    report_date: date,
+) -> str:
+    """
+    新闻写作提示词。
+
+    与重构前的关键区别：送进来的**已经是筛好的条目**（每个板块 N 条，由
+    ranking.py 的本地筛选 + 本次调用前的 rerank 共同决定），所以这里明确要求
+    模型"不要增删"。
+
+    为什么要把选择权和写作权分开：以前是"给 80 多条候选，让模型自己挑 8 条"，
+    结果是模型会挑走热点噪音、漏掉真正硬核的内容（用户看到的 jev 漏报就是这个机制的锅）。
+    现在选择由确定性代码 + 一次专门的重排调用负责，写作调用只做它擅长的事 —— 写。
+    """
     date_str = report_date.strftime("%Y-%m-%d")
     weekday = _WEEKDAY_CN[report_date.weekday()]
-    per_section = config.ITEMS_PER_SECTION
 
     schema_example = {
         "date": date_str,
@@ -352,10 +329,19 @@ def build_news_user_prompt(payload: Dict[str, Any], report_date: date) -> str:
         },
     }
 
-    return f"""请把下面的原始素材整理成 {date_str}（{weekday}，Asia/Shanghai）的每日早报。
+    counts = "、".join(
+        f"{next((s['title'] for s in NEWS_SECTION_DEFS if s['key'] == key), key)} {len(items)} 条"
+        for key, items in selected.items()
+    )
+
+    return f"""请把下面**已经选定**的素材整理成 {date_str}（{weekday}，Asia/Shanghai）的每日早报。
 
 【板块要求】必须严格使用以下四个板块，不得增加、删除或改名：
 {_news_section_spec_text()}
+
+【最重要的一条】每个板块下面列出的条目**已经由主编选定，你不需要增删或替换**，
+只需逐条写成简报。不要因为觉得某条不重要就省略它，也不要自己补充素材里没有的条目。
+条数分布：{counts}。
 
 【分类口径】不设大公司专属板块。所有大厂动态——包括 AI、芯片、云服务、航天、自动驾驶、
 具身智能、加密货币、算力基础设施等——一律归入对应的「国际科技新闻」或「国内科技新闻」，
@@ -363,15 +349,12 @@ def build_news_user_prompt(payload: Dict[str, Any], report_date: date) -> str:
 「国际新消费新闻」「国内新消费新闻」聚焦零售、品牌、消费品、电商、冷链物流、餐饮、
 服饰、美妆、出海消费、消费投融资等。
 
-【数量】每个板块最多 {per_section} 条，按重要性从高到低排列。
-原始素材不足以填满时，就给多少写多少，绝对禁止凑数或用无关内容填充。
-素材明显不属于任何板块时直接丢弃。
+【数量】每个板块的条数以给出的素材条数为准，有几条就写几条。
+某个板块的素材列表为空时，就把该板块写成空数组 []，绝对禁止凑数或用无关内容填充。
 
 【写作要求】
 - 全部用中文输出。英文标题翻译成中文。
 - 每条 summary 控制在 60 个汉字以内，一句话，主语明确，包含关键数字。
-- 同一个事件被多家媒体报道时，只保留一条，选信息量最大的那家作为来源。
-- source 字段填原始素材里的媒体名 / 站点名。
 - digest 要覆盖当日最重要的 2-3 件事，不要只写一件事。
 - summary 里的具名实体按系统提示的要求用 [[双链]] 包裹（每条最多 3 个），title 里不要出现双链。
 - keywords 填 3-5 个当天整体的焦点公司或核心概念，用于给这篇笔记打标签。
@@ -379,8 +362,8 @@ def build_news_user_prompt(payload: Dict[str, Any], report_date: date) -> str:
 【输出格式】只输出下面这个 JSON 对象，不要有任何前后缀文字：
 {json.dumps(schema_example, ensure_ascii=False, indent=2)}
 
-【原始素材】
-{json.dumps(payload, ensure_ascii=False, indent=1)}
+【已选定的素材（按板块分组，index 仅供你对应，不要输出到结果里）】
+{json.dumps(selected, ensure_ascii=False, indent=1)}
 """
 
 
@@ -488,6 +471,124 @@ def build_github_user_prompt(repos_payload: List[Dict[str, Any]], report_date: d
 【仓库素材】
 {json.dumps(repos_payload, ensure_ascii=False, indent=1)}
 """
+
+
+# --------------------------------------------------------------------------
+# 提示词：主编级重排（第三个独立调用）
+# --------------------------------------------------------------------------
+RERANK_SYSTEM_PROMPT = """你是这份每日早报的主编，任务是从候选池里挑出今天真正值得写进早报的条目。
+
+取舍标准，按优先级从高到低：
+1. 新模型 / 新版本发布，尤其是开源权重、带 benchmark 数据的
+2. AGI 与推理能力进展、算法或训练方法上的突破
+3. 算力基建：芯片、超节点、数据中心、推理成本
+4. 开发者工具与智能体框架（含 CLI、SDK、协议、MCP 这类）
+5. 有实质技术含量的安全事件与漏洞
+
+以下类别**一律不选**，无论看起来多热闹：
+人事变动、诉讼与监管纠纷、常规数码产品评测与导购、股市行情与宏观财经、
+政治军事与社会议题、只有概念没有落地信息的内容。
+
+你的判断要独立，不要因为某条来源知名就默认它重要。只输出 JSON，不要解释文字。"""
+
+
+def build_rerank_user_prompt(
+    sections: Dict[str, List[Dict[str, Any]]],
+    keep_per_section: int,
+) -> str:
+    date_str = today_local().strftime("%Y-%m-%d")
+
+    schema_example = {key: [0, 3, 5] for key in sections}
+
+    empty_note = [k for k, v in sections.items() if not v]
+    empty_line = (
+        f"注意：{'、'.join(empty_note)} 的候选列表本来就是空的，直接返回空数组 []。"
+        if empty_note
+        else ""
+    )
+
+    return f"""今天是 {date_str}。下面是四个板块的候选条目，请为**每个板块**挑出最重要的
+{keep_per_section} 条，按重要性从高到低排列。
+
+【怎么返回】用候选条目自带的 index 字段回答，不要复制标题，不要输出任何素材里没有的下标。
+schema 里的数字只是格式示例，**不是**答案：
+{json.dumps(schema_example, ensure_ascii=False)}
+
+【数量】每个板块最多 {keep_per_section} 条。候选不足 {keep_per_section} 条时就全部返回。
+如果某个板块的候选确实都不合格，可以少返回甚至返回空数组 —— 宁可少而精，不要凑数。
+{empty_line}
+
+【判断依据】index 对应的 title 和 raw_summary 是唯一依据，不要凭标题里的公司名联想发挥。
+同一件事被多条候选覆盖时，只保留信息量最大的那条。
+
+【输出格式】只输出下面这个 JSON 对象，不要有任何前后缀文字：
+{json.dumps(schema_example, ensure_ascii=False, indent=2)}
+
+【候选条目】
+{json.dumps(sections, ensure_ascii=False, indent=1)}
+"""
+
+
+def _coerce_index_list(value: Any) -> List[int]:
+    """
+    把模型返回的下标列表规整成 int 列表。
+
+    容错三种常见偏差：返回 {"index": 3} 这种对象、返回单个数字、返回数字字符串。
+    真正的越界检查在 ranking.merge_llm_selection 里做（那里才知道池子多大）。
+    """
+    if isinstance(value, bool):
+        return []
+    if isinstance(value, int):
+        return [value]
+    if isinstance(value, str):
+        digits = re.findall(r"\d+", value)
+        return [int(d) for d in digits[:10]]
+    if not isinstance(value, list):
+        return []
+
+    out: List[int] = []
+    for entry in value:
+        if isinstance(entry, bool):
+            continue
+        if isinstance(entry, int):
+            out.append(entry)
+        elif isinstance(entry, str):
+            digits = re.findall(r"\d+", entry)
+            if digits:
+                out.append(int(digits[0]))
+        elif isinstance(entry, dict):
+            for key in ("index", "idx", "i", "id"):
+                if isinstance(entry.get(key), int) and not isinstance(entry.get(key), bool):
+                    out.append(entry[key])
+                    break
+    return out
+
+
+def rerank_candidates(pool: Dict[str, List[Any]]) -> Dict[str, List[int]]:
+    """
+    让 DeepSeek 在本地筛过的池子上做价值判定，返回每个板块选中的池内下标。
+
+    这是本流水线的第三次独立调用（新闻写作、GitHub 解析、主编重排）。
+    之所以愿意多花这一次调用：本地关键词规则能砍掉跑题内容，但判断不了
+    "这条算不算真正的算法突破"，而那正是用户在意的维度。
+
+    成本控制：只送 title + 截断后的 raw_summary，池子上限 25/板块
+    （见 config.RERANK_POOL_PER_SECTION），实测提示词约 6-9k token，
+    相对新闻写作调用的 ~13k token 是很小的一笔。
+    """
+    sections = ranking.selected_sections(pool)
+    sections = _fit_rerank_budget(sections)
+
+    raw = _chat_json(
+        RERANK_SYSTEM_PROMPT,
+        build_rerank_user_prompt(sections, config.RERANK_KEEP_PER_SECTION),
+        "重排",
+    )
+
+    picks: Dict[str, List[int]] = {}
+    for key in sections:
+        picks[key] = _coerce_index_list(raw.get(key))
+    return picks
 
 
 # --------------------------------------------------------------------------
@@ -944,10 +1045,14 @@ def summarize(
     """
     完整提炼流程。
 
-    新闻与 GitHub 走两次独立的 DeepSeek 调用：
-      - 两边的素材形态、写作要求、输出结构完全不同，拆开可以让提示词各司其职
-      - 任一侧失败只降级那一侧，不会因为 GitHub README 拉垮而丢掉全部新闻
-    整体仍然保证不抛异常：最坏情况退回全量降级结果。
+    三次独立的 DeepSeek 调用，各司其职：
+      1. 主编重排 —— 在本地筛过的池子上做价值判定，决定"写什么"
+      2. 新闻写作 —— 把已选定的条目写成简报，只写不选
+      3. GitHub 解析 —— 把仓库讲成人话
+    拆开的原因：新闻与 GitHub 的素材形态、写作要求、输出结构完全不同；
+    而"选择"和"写作"混在一次调用里，正是之前漏掉硬核内容的机制性原因
+    （模型在写 60 字摘要的同时还要兼顾排序，排序质量必然让位于文字质量）。
+    任一侧失败只降级那一侧。整体仍然保证不抛异常。
     """
     report_date = today_local()
     guard = UrlGuard(news, repos)
@@ -955,19 +1060,27 @@ def summarize(
     if dry_run:
         return build_fallback_result(news, repos, report_date, "dry-run 模式")
 
-    candidates = select_candidates(news)
-    logger.info("送入模型的新闻候选 %d 条 / 仓库候选 %d 个", len(candidates), len(repos))
+    # ---- 阶段一：本地三道闸门（零成本）----
+    pool = ranking.build_pool(news)
+    pool_size = sum(len(v) for v in pool.values())
+    logger.info("本地筛选后候选池：%d 条（原始 %d 条）", pool_size, len(news))
 
-    news_payload = _fit_budget_news(
-        {
-            "report_date": report_date.isoformat(),
-            "news": [item.to_prompt_dict() for item in candidates],
-        }
-    )
     github_payload = _fit_budget_github([repo.to_prompt_dict() for repo in repos])
 
-    if not news_payload["news"] and not github_payload:
-        return build_fallback_result(news, repos, report_date, "无可用原始素材")
+    if pool_size == 0 and not github_payload:
+        return build_fallback_result(news, repos, report_date, "本地筛选后无可用素材")
+
+    # ---- 阶段二：DeepSeek 重排（失败则退回本地排序）----
+    selection = ranking.fallback_selection(pool)
+    if pool_size and config.RERANK_ENABLED:
+        try:
+            picks = rerank_candidates(pool)
+            selection = ranking.merge_llm_selection(pool, picks)
+            logger.info("DeepSeek 重排完成：%s", ranking.summarize_selection(selection))
+        except Exception as exc:  # noqa: BLE001 —— 重排不是必需环节，失败必须可降级
+            logger.warning("DeepSeek 重排失败，改用本地排序：%s", exc)
+    selected_payload = ranking.selected_sections(selection)
+    selected_total = sum(len(v) for v in selected_payload.values())
 
     degraded_parts: List[str] = []
     news_sections: List[Dict[str, Any]] = []
@@ -976,12 +1089,12 @@ def summarize(
     digest = ""
     keywords: List[str] = []
 
-    # ---- 新闻部分 ----
-    if news_payload["news"]:
+    # ---- 阶段三：新闻写作 ----
+    if selected_total:
         try:
             raw = _chat_json(
                 NEWS_SYSTEM_PROMPT,
-                build_news_user_prompt(news_payload, report_date),
+                build_news_user_prompt(selected_payload, report_date),
                 "新闻",
             )
             news_sections, digest, _, keywords = normalize_news_result(raw, guard, report_date)

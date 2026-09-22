@@ -28,6 +28,7 @@ import config
 import fetcher
 import notifier
 import obsidian
+import ranking
 import renderer
 import summarizer
 
@@ -764,18 +765,38 @@ def test_deepseek_pipeline() -> None:
         ensure_ascii=False,
     )
 
+    # 重排调用返回的是"每个板块选哪些下标"。make_news() 造了 3 条：
+    # intl/tech、cn/tech、cn/consumer 各 1 条，所以每个板块的池子里最多 1 个候选。
+    rerank_canned = json.dumps(
+        {"intl_tech": [0], "cn_tech": [0], "intl_consumer": [], "cn_consumer": [0]},
+        ensure_ascii=False,
+    )
+
     class Handler(BaseHTTPRequestHandler):
         def do_POST(self):  # noqa: N802
             length = int(self.headers.get("Content-Length", 0))
             body = json.loads(self.rfile.read(length) or b"{}")
             user_text = json.dumps(body, ensure_ascii=False)
 
-            # 靠 system 提示词区分是新闻调用还是 GitHub 调用
+            # 靠 system 提示词区分三种调用：主编重排 / 新闻写作 / GitHub 解析
             system = (body.get("messages") or [{}])[0].get("content") or ""
             is_github = "开源项目" in system or "技术布道者" in system
-            calls.append({"is_github": is_github, "body": body, "user": user_text})
+            is_rerank = "主编" in system
+            calls.append(
+                {
+                    "is_github": is_github,
+                    "is_rerank": is_rerank,
+                    "body": body,
+                    "user": user_text,
+                }
+            )
 
-            content = github_canned if is_github else news_canned
+            if is_github:
+                content = github_canned
+            elif is_rerank:
+                content = rerank_canned
+            else:
+                content = news_canned
             payload = {
                 "id": "mock-1",
                 "object": "chat.completion",
@@ -816,24 +837,30 @@ def test_deepseek_pipeline() -> None:
         server.shutdown()
         server.server_close()
 
-    news_calls = [c for c in calls if not c["is_github"]]
+    rerank_calls = [c for c in calls if c["is_rerank"]]
+    news_calls = [c for c in calls if not c["is_github"] and not c["is_rerank"]]
     gh_calls = [c for c in calls if c["is_github"]]
     by_key = {s["key"]: s["items"] for s in result["sections"]}
 
-    check("新闻与 GitHub 各发起一次独立调用", len(news_calls) == 1 and len(gh_calls) == 1,
-          f"新闻 {len(news_calls)} 次 / GitHub {len(gh_calls)} 次")
-    check("两次调用都指定 json_object 输出",
+    check("主编重排 / 新闻写作 / GitHub 解析各发起一次独立调用",
+          len(rerank_calls) == 1 and len(news_calls) == 1 and len(gh_calls) == 1,
+          f"重排 {len(rerank_calls)} 次 / 新闻 {len(news_calls)} 次 / GitHub {len(gh_calls)} 次")
+    check("三次调用都指定 json_object 输出",
           all(c["body"].get("response_format", {}).get("type") == "json_object" for c in calls))
-    check("两次调用都带 system 提示词",
+    check("三次调用都带 system 提示词",
           all((c["body"].get("messages") or [{}])[0].get("role") == "system" for c in calls))
 
     news_user = news_calls[0]["user"] if news_calls else ""
     gh_user = gh_calls[0]["user"] if gh_calls else ""
     gh_system = (gh_calls[0]["body"]["messages"][0]["content"] if gh_calls else "")
+    rerank_user = rerank_calls[0]["user"] if rerank_calls else ""
 
     check("新闻提示词含四大板块", all(k in news_user for k in summarizer.NEWS_SECTION_KEYS))
     check("新闻提示词不再包含 github 板块", '"github"' not in news_user)
     check("新闻提示词含分类口径", "不设大公司专属板块" in news_user)
+    check("新闻写作调用明确要求不要增删条目", "不需要增删或替换" in news_user)
+    check("重排调用只要求返回下标", "不要复制标题" in rerank_user and "不要输出任何素材里没有的下标" in rerank_user)
+    check("重排调用带上了四个板块的候选", all(k in rerank_user for k in summarizer.NEWS_SECTION_KEYS))
     check("GitHub 提示词含客观性约束", "禁止编造" in gh_system)
     check("GitHub 提示词要求大白话", "说人话" in gh_system)
     check("GitHub 提示词要求命令来自 README", "必须来自 README" in gh_system or "README 原文" in gh_system)
@@ -1502,6 +1529,225 @@ def _snapshot_workspace() -> dict:
     return snapshot
 
 
+def _mk_news(title: str, summary: str = "", source: str = "测试源",
+             region: str = "intl", category: str = "tech") -> fetcher.NewsItem:
+    """造一条刚发布（因此新鲜度加分最大）的新闻，便于断言排序与筛选。"""
+    return fetcher.NewsItem(
+        title=title,
+        url=f"https://example.com/{abs(hash(title)) % 10**8}",
+        source=source,
+        summary=summary,
+        published=datetime.now(timezone.utc),
+        region=region,
+        category=category,
+    )
+
+
+def test_ranking_engine() -> None:
+    """主编级前置筛选：三道闸门 + 强触发白名单 + 重排容错。"""
+    print("\n[17] 主编级前置筛选引擎")
+
+    # ---- 闸门①：硬否决 ----
+    vetoed = [
+        _mk_news("美中期选举逾百名否认选举者参选", "政治"),
+        _mk_news("A股粮食板块逆势上涨", "主要股指集体下跌"),
+        _mk_news("资生堂起诉奥乐齐不正当竞争", "美妆品牌诉讼"),
+        _mk_news("某公司 CTO 离职", "人事变动"),
+    ]
+    for item in vetoed:
+        check(f"硬否决生效：{item.title[:14]}", ranking.veto_hit(item) != "")
+
+    # ---- 闸门②：板块相关性 ----
+    # 注意构造：这条**不在**硬否决词表里（否决返回空），但内容确实不属于消费板块，
+    # 这样才能把"相关性闸门"和"硬否决"两层分开验证。
+    macro = _mk_news("某省出台新能源汽车补贴细则", "地方产业扶持政策",
+                     source="财经源", region="cn", category="consumer")
+    check("与板块不符的内容被相关性闸门拦下",
+          ranking.veto_hit(macro) == "" and ranking.section_hint_hit(macro, "cn_consumer") == [])
+    real_consumer = _mk_news("某连锁咖啡品牌门店数破万", "零售品牌扩张",
+                             source="刀法研究所", region="cn", category="consumer")
+    check("真正的消费新闻能过板块闸门",
+          ranking.section_hint_hit(real_consumer, "cn_consumer") != [])
+    # 美联储加息这条更彻底：它连硬否决都过不了
+    check("宏观货币政策直接被硬否决",
+          ranking.veto_hit(_mk_news("美联储三年多来首次加息", "加息 25 个基点")) != "")
+
+    # ---- 闸门③：强触发白名单 ----
+    jev = _mk_news("浏览器智能体 jev 发布", "动态索引动作空间")
+    check("强触发词命中识别正确", "jev" in ranking.force_hits(jev), str(ranking.force_hits(jev)))
+    # 关键行为：强触发豁免硬否决。漏掉硬核新闻的代价 > 多收一条带噪音的新闻。
+    sued = _mk_news("Anthropic 因版权问题被起诉", "claude 模型相关诉讼")
+    check("强触发词豁免硬否决",
+          ranking.veto_hit(sued) == "" and "claude" in ranking.force_hits(sued))
+    plain_sued = _mk_news("某公司因版权被起诉", "普通诉讼")
+    check("没有强触发词时否决仍然生效", ranking.veto_hit(plain_sued) == "起诉")
+
+    # ---- 词表本身的约束（防止以后有人把泛化词加回去）----
+    broad = {"ai", "llm", "模型", "芯片", "大模型", "人工智能"}
+    offenders = sorted(t for t in config.GEEK_FORCE_KEYWORDS if t.lower() in broad)
+    check("强触发词表里没有宽泛类别词（否则等于没筛）", not offenders, f"混入了：{offenders}")
+
+    # ---- 短英文词必须按词边界匹配 ----
+    # 按子串匹配时 ai 会命中 email / domain / captcha，等于闸门失效。
+    check("短英文词不误命中子串", not ranking.matches("email marketing campaign", "ai"))
+    check("短英文词不误命中 captcha", not ranking.matches("domain available", "ai"))
+    check("短英文词仍能命中整词", ranking.matches("new ai model released", "ai"))
+    check("带连字符的关键词不被 \\b 切碎",
+          ranking.matches("gpt-5 turbo", "gpt-5") and not ranking.matches("gpt-50 turbo", "gpt-5"))
+    check("中文关键词仍走子串匹配", ranking.matches("华为昇腾960提前登场", "昇腾"))
+
+    # ---- 板块话题词必须覆盖双语 ----
+    # 国际消费板块的源全是英文站，话题词只有中文的话这个板块会永远空着。
+    en_consumer = _mk_news("Retail brand opens 500 new stores", "consumer chain expansion",
+                           source="Retail Dive", region="intl", category="consumer")
+    check("英文消费新闻能过国际消费板块闸门",
+          ranking.section_hint_hit(en_consumer, "intl_consumer") != [],
+          str(ranking.section_hint_hit(en_consumer, "intl_consumer")))
+
+    # ---- 英文否决词 ----
+    en_sued = _mk_news("Startup sued over data practices", "lawsuit filed")
+    check("英文诉讼类被硬否决", ranking.veto_hit(en_sued) != "", ranking.veto_hit(en_sued))
+
+    # ---- 标题栏目前缀清理 ----
+    check("栏目前缀被去掉",
+          fetcher.strip_channel_prefix("项目频道 - edition×文淇：拥抱好心情") == "edition×文淇：拥抱好心情")
+    check("普通标题里的破折号不受影响",
+          fetcher.strip_channel_prefix("OpenAI 发布新模型 - 推理成本下降") == "OpenAI 发布新模型 - 推理成本下降")
+
+    # ---- 池子构建 ----
+    news = vetoed + [macro, real_consumer, jev,
+                     _mk_news("新一代大模型发布，开源权重登顶 SOTA", "训练成本下降 40%"),
+                     _mk_news("iPhone 27 开箱图赏", "常规数码产品评测")]
+    pool = ranking.build_pool(news)
+    all_kept = [e.item.title for entries in pool.values() for e in entries]
+    check("跑题条目全部被挡在池外", not any(t in all_kept for t in [v.title for v in vetoed]))
+    check("宏观财经没进消费板块",
+          "美联储三年多来首次加息" not in [e.item.title for e in pool["cn_consumer"]])
+    check("硬核条目进了池子",
+          any("jev" in t for t in all_kept) and any("SOTA" in t for t in all_kept))
+    check("数码评测被减分后排在末尾",
+          all("开箱" not in e.item.title for e in pool["intl_tech"][:1]))
+
+    # ---- 强触发条目不受池子截断影响 ----
+    many = [_mk_news(f"普通科技新闻 {i}", "发布新产品", region="intl", category="tech")
+            for i in range(60)]
+    many.insert(30, _mk_news("jev 智能体重大更新", "硬核 Agent"))
+    tiny_pool = ranking.build_pool(many, pool_per_section=5)
+    check("池子截断后强触发条目仍在（防漏网之鱼）",
+          any("jev" in e.item.title for e in tiny_pool["intl_tech"]),
+          f"{[e.item.title for e in tiny_pool['intl_tech']]}")
+
+    # ---- 重排合并：容错 ----
+    # 专门造一个**不含强触发条目**的池子：否则保底名额会先占位，
+    # 就测不出"模型给的合法下标是否被采纳"这一件事了。
+    plain_pool = ranking.build_pool(
+        [_mk_news(f"某开发框架发布 {i} 版本", "新增 SDK 与 API") for i in range(4)]
+    )
+    plain = plain_pool["intl_tech"]
+    check("测试池内确实没有强触发条目", plain and all(not e.forced for e in plain))
+    if len(plain) >= 3:
+        merged = ranking.merge_llm_selection(plain_pool, {"intl_tech": [2]}, keep=1)
+        check("合法下标被采纳", merged["intl_tech"][0] is plain[2],
+              f"取到了 {merged['intl_tech'][0].item.title}")
+
+    merged_bad = ranking.merge_llm_selection(
+        plain_pool,
+        {"intl_tech": [-1, 999, "abc", None, True]},
+        keep=1,
+    )
+    check("非法下标被安全忽略且不会导致空结果", len(merged_bad["intl_tech"]) == 1,
+          str([e.item.title for e in merged_bad["intl_tech"]]))
+
+    # 模型漏掉强触发条目时，保底名额必须把它塞回来
+    forced_pool = {"intl_tech": tiny_pool["intl_tech"]}
+    rescued = ranking.merge_llm_selection(forced_pool, {"intl_tech": []}, keep=2)
+    check("模型没选强触发条目时由保底名额补回",
+          any("jev" in e.item.title for e in rescued["intl_tech"]),
+          f"{[e.item.title for e in rescued['intl_tech']]}")
+
+    # 每个板块不得超过 keep 条
+    capped = ranking.merge_llm_selection(pool, {k: list(range(50)) for k in pool}, keep=3)
+    check("每个板块不超过配额", all(len(v) <= 3 for v in capped.values()),
+          str({k: len(v) for k, v in capped.items()}))
+
+    # 重排不可用时的降级路径
+    fb = ranking.fallback_selection(pool, keep=2)
+    check("重排失败时可退回纯本地排序", all(len(v) <= 2 for v in fb.values()))
+
+    # 序号映射给 prompt 用
+    payload = ranking.selected_sections(pool)
+    check("送进 prompt 的字段齐全",
+          all(set(e) == {"index", "title", "source", "url", "raw_summary"}
+              for v in payload.values() for e in v))
+
+
+def test_hf_fetchers() -> None:
+    """HuggingFace 两条 JSON 数据流的解析与窗口规则（用桩会话，不联网）。"""
+
+    print("\n[18] HuggingFace JSON 数据流")
+
+    class _StubResponse:
+        def __init__(self, payload: Any) -> None:
+            self._payload = payload
+
+        def raise_for_status(self) -> None:
+            return None
+
+        def json(self) -> Any:
+            return self._payload
+
+    class _StubSession:
+        def __init__(self, payload: Any) -> None:
+            self._payload = payload
+
+        def get(self, url, **kwargs):  # noqa: ANN003
+            return _StubResponse(self._payload)
+
+    now = datetime.now(timezone.utc)
+    fresh = (now - timedelta(hours=6)).isoformat().replace("+00:00", "Z")
+    stale = (now - timedelta(days=10)).isoformat().replace("+00:00", "Z")
+
+    papers = [
+        {"title": "Grounded Action Model", "publishedAt": fresh, "summary": "3D grounding",
+         "paper": {"id": "2609.23863", "upvotes": 42, "githubRepo": "https://github.com/a/b"}},
+        {"title": "十天前的旧论文", "publishedAt": stale, "summary": "old",
+         "paper": {"id": "2609.00001", "upvotes": 1}},
+    ]
+    items = fetcher.fetch_hf_daily_papers(_StubSession(papers))
+    check("论文条数按时间窗过滤", len(items) == 1, f"{len(items)} 条")
+    check("论文链接用 /papers/<id> 规范地址",
+          items and items[0].url == "https://huggingface.co/papers/2609.23863", items[0].url if items else "")
+    check("论文票数写进摘要", items and "42 票" in items[0].summary)
+    check("论文归属国际科技板块", items and (items[0].region, items[0].category) == ("intl", "tech"))
+
+    models = [
+        {"modelId": "Qwen/Qwen-Image-2.1", "trendingScore": 1439, "likes": 1491,
+         "downloads": 6523, "pipeline_tag": "text-to-image", "tags": ["diffusion", "moe"],
+         # 创建时间很早：热门模型榜不该按创建时间过滤，否则会把真正在爆的模型误杀
+         "createdAt": "2023-01-01T00:00:00.000Z"},
+    ]
+    mitems = fetcher.fetch_hf_trending_models(_StubSession(models))
+    check("热门模型不做创建时间过滤（否则误杀老仓库新爆发）", len(mitems) == 1, f"{len(mitems)} 条")
+    check("模型链接正确", mitems and mitems[0].url == "https://huggingface.co/Qwen/Qwen-Image-2.1")
+    check("模型摘要含 trendingScore 与标签",
+          mitems and "1439" in mitems[0].summary and "diffusion" in mitems[0].summary)
+
+    # 结构异常必须抛错（由 fetch_hf_streams 单点兜底），而不是静默产出空列表
+    for label, func, bad in (
+        ("论文", fetcher.fetch_hf_daily_papers, {"error": "nope"}),
+        ("模型", fetcher.fetch_hf_trending_models, {"error": "nope"}),
+    ):
+        try:
+            func(_StubSession(bad))
+            raised = False
+        except ValueError:
+            raised = True
+        check(f"HF {label} 接口结构异常时显式报错", raised)
+
+    check("HF 两条流挂在同一个报告对象下可分别容错",
+          hasattr(fetcher, "fetch_hf_streams"))
+
+
 def main() -> int:
     print("=" * 62)
     print("每日早报 · 离线自检")
@@ -1526,6 +1772,8 @@ def main() -> int:
     test_archive_scanner()
     test_idempotent_guard()
     test_obsidian_export()
+    test_ranking_engine()
+    test_hf_fetchers()
 
     # 终检：自检绝不能碰真实产物目录
     workspace_after = _snapshot_workspace()
