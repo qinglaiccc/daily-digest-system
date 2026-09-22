@@ -1,0 +1,380 @@
+{
+  "date": "2026-09-22",
+  "generated_at": "2026-09-22T00:01:13.229993+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 0,
+    "raw_news": 305,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-09-22",
+    "digest": "OpenAI 新模型攻破百余数学难题，美东机场因光纤被挖断大规模停飞，浪潮信息发布国产超节点服务器。",
+    "keywords": [
+      "OpenAI",
+      "浪潮信息",
+      "vivo",
+      "lululemon",
+      "具身智能"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "美东机场因光纤被挖断停飞八小时",
+            "summary": "新泽西施工挖断 [[FAA]] 主备光纤，纽约、费城等地机场停飞约八小时，约 7000 架次航班延误或取消。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/508.htm",
+            "title_original": "正值联合国大会高级别周：施工队挖断光纤致美东机场大规模停飞八小时，约 7000 架次航班延误或取消",
+            "excerpt": "IT之家 9 月 22 日消息，当地时间 9 月 21 日上午 9 时 45 分许，美国新泽西州一处施工点意外切断了一条 FAA 使用的电信光纤线路，导致费城终端雷达进近管制设施（TRACON）主通信电路故障。该设施负责为纽约地区三大机场以及费城、波士顿等地机场提供空中交通管制服务。 主电路故障后，系统尝试切换至备用光纤线路，但发现该备用线路已被施工队意外切断。FAA 局长布莱恩 · 贝德福德（Bryan Bedford）表示，断裂的光纤位于新泽西州新不伦瑞克至纽瓦克之间，长约 600 英尺，修复可能需要约 13 小时。 FAA 随即对纽约肯尼迪国际机场、拉瓜迪亚机场、纽瓦克自由国际机场，以及费城国际机场、泰特波罗机场和波士顿洛根…",
+            "is_foreign": false
+          },
+          {
+            "title": "OpenAI 成立数学顾问组",
+            "summary": "[[OpenAI]] 在普林斯顿高等研究院设数学与 AI 顾问组，并披露一神秘模型已解决 100 多个数学开放问题。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/500.htm",
+            "title_original": "OpenAI 宣布成立数学与 AI 顾问组，神秘新模型 24 天攻破 100+ 世界级难题",
+            "excerpt": "IT之家 9 月 22 日消息，OpenAI 宣布成立“数学与 AI 顾问组”（Advisory Group on Mathematics and Artificial Intelligence）。据介绍，该顾问组设在普林斯顿高等研究院，由九位数学家组成，将独立于 OpenAI 运作。 相较于此，更重磅的是 OpenAI 在公告中披露 —— 公司于 8 月 28 日开始训练的一个神秘模型已成功解决了多个数学领域中 100 多个长期未解决的开放问题（包含此前引发争议的纳维-斯托克斯千年大奖难题）。 OpenAI 称，该模型在数学领域的进展速度令公司内部的数学家感到惊讶，这引发了关于如何以最佳方式告知学界的内部讨论。 OpenAI 认…",
+            "is_foreign": false
+          },
+          {
+            "title": "谷歌因位置数据被罚 4.03 亿欧元",
+            "summary": "爱尔兰数据保护委员会对 [[Google]] 处理位置数据的行为开出 4.03 亿欧元罚单。",
+            "source": "Hacker News",
+            "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location",
+            "title_original": "Data Protection Commission fines Google €403M over processing of location data",
+            "excerpt": "Article URL: https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location \n Comments URL: https://news.ycombinator.com/item?id=49794354 \n Points: 48 \n # Comments: 12",
+            "is_foreign": true
+          },
+          {
+            "title": "Meta AI 助手 Muse 曝高危漏洞",
+            "summary": "[[Meta]] 的 AI 助手 [[Muse]] 被曝存在严重 0-day 漏洞，一次 ClickFix 攻击即可完全劫持该代理。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/",
+            "title_original": "Muse, Meta's extraordinarily privileged AI assistant, has a serious 0-day",
+            "excerpt": "A simple ClickFix attack is only one way to completely hijack the new agent.",
+            "is_foreign": true
+          },
+          {
+            "title": "加州收紧 AI 数据中心能耗规则",
+            "summary": "加州州长纽森签署七项法案，要求为数据中心设新费率分类，防止其将公用事业成本转嫁给居民。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/998453/california-ai-data-center-bills",
+            "title_original": "California tightens rules on AI data center energy and water use",
+            "excerpt": "California Gov. Gavin Newsom has signed seven bills designed to prevent AI data centers from passing utility costs onto residents, as reported earlier by the Los Angeles Times. The package of laws requires the California Public Utilities Commission to introduce a new rate classification for data centers while forcing…",
+            "is_foreign": true
+          },
+          {
+            "title": "欧盟要求数据中心披露能耗",
+            "summary": "欧盟提出可持续性标签制度，将强制数据中心披露能耗与用水量，并制定最低性能标准。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2264607/the-eu-will-force-data-centers-to-disclose-their-energy-and-water-use/",
+            "title_original": "The EU will force data centers to disclose their energy and water use",
+            "excerpt": "The EU has proposed a sustainability labeling system ahead of bringing in minimum data center performance standards.",
+            "is_foreign": true
+          },
+          {
+            "title": "亚马逊投 2000 万美元护科罗拉多河",
+            "summary": "[[Amazon]] 计划投入 2000 万美元用于科罗拉多河保护项目，其数据中心用水量仍受外界质疑。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/998539/amazon-data-center-water-conservation-colorado-river",
+            "title_original": "Amazon wants to help the Colorado River, but we still don’t know how much water the company uses",
+            "excerpt": "Amazon plans to spend $20 million on water conservation projects along the Colorado River, a crucial but dwindling water supply for 40 million people in the Western US. The initiative comes as Amazon and other tech companies face mounting scrutiny over how much water their data centers use. Amazon has a goal of becomi…",
+            "is_foreign": true
+          },
+          {
+            "title": "沙特联合富士康推出电动车品牌",
+            "summary": "沙特主权基金 PIF 与 [[Foxconn]] 合资成立车企 Ceer，发布两款电动车，进军汽车制造业。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/cars/2026/09/saudi-arabia-wants-a-car-industry-launches-ceer-with-two-evs/",
+            "title_original": "Saudi Arabia wants a car industry, launches Ceer with two EVs",
+            "excerpt": "The new carmaker is a joint venture between the Saudi PIF and Foxconn.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "浪潮信息发布元脑 SD200 Ultra",
+            "summary": "[[浪潮信息]] 推出元脑 SD200 Ultra 超节点，基于国产芯片单机承载 2.8 万亿参数 [[Kimi K3]]，Token 时延降至 5.85 毫秒。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/504.htm",
+            "title_original": "浪潮信息发布元脑 SD200 Ultra 超节点：单机承载 2.8 万亿参数 Kimi K3，Token 时延首次突破 5.85 毫秒",
+            "excerpt": "IT之家 9 月 22 日消息，在昨日的 2026 人工智能计算大会（AICC2026）上，浪潮信息宣布推出元脑 SD200 Ultra 超节点 AI 服务器与元脑 HC2000 多元算力机组。 据官方介绍，元脑 SD200 Ultra 基于国产 AI 芯片打造，单机可承载运行 2.8 万亿参数的 Kimi K3 大模型。 浪潮表示，SD200 Ultra 的 Token 生成时延首次降至 5.85 毫秒以内，相当于单用户速度 170 Tokens/s，达到业界平均水平的 5 倍。该机型支持 10 万亿参数规模前沿模型单机运行。 IT之家注：Token 生成时延指大模型每输出一个词元所需的平均时间，是衡量推理响应速度的核心指标之一…",
+            "is_foreign": false
+          },
+          {
+            "title": "vivo X500 系列发布 5499 元起",
+            "summary": "[[vivo]] 发布 X500 系列手机，首发天玑 9600M 芯片，支持 8K 原生 Live，售价 5499 元起。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/506.htm",
+            "title_original": "IT早报 0922：闲鱼回应“媒体报道色情引流”；5499 元起 vivo X500 系列手机发布；被质疑“偷传代码”后智谱 ZCode 开源；AMD 市值历史首次突破 1 万亿美元...",
+            "excerpt": "“IT早报”时间，大家好，现在是 2026 年 9 月 22 日星期二，今天的重要科技资讯有： 1. 闲鱼回应“媒体报道色情引流的情况”：成立专项小组严打色情引流，呼吁各平台联合行动 闲鱼被曝涉及色情引流的相关话题内容 9 月 21 日冲上热搜。闲鱼官方 9 月 21 日宣布，成立专项小组严打色情引流，并呼吁各平台联合行动。官方表示，坚决对利用色情内容进行引流、欺诈的违法行为说不，已成立专项小组，并建立“前置识别 — 即时处置 — 警企联动”等综合防控治理机制，坚决打击。>> 查看详情 2. vivo X500 手机发布：首发天玑 9600M、8K 原生 Live，5499 元起 在 9 月 21 日晚举行的 vivo X500…",
+            "is_foreign": false
+          },
+          {
+            "title": "国内首个 2 吨级载重系留气球试运行",
+            "summary": "国内首个 2 吨级载重系留气球在藏东南特高压工程西藏段试运行，可将输电塔材吊运至海拔 4000 米山脊。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/507.htm",
+            "title_original": "国内首个 2 吨级载重系留气球成功试运行，不修路也能吊运输电塔材至海拔 4000 米陡峭山脊",
+            "excerpt": "IT之家 9 月 22 日消息，据电网头条、央视财经消息， 国内首个 2 吨级载重系留气球昨日在藏东南 — 粤港澳大湾区 ±800 千伏特高压直流输电工程西藏段成功试运行 ，为高海拔、陡峭山区和生态敏感区域电网工程建设运输难题提供了全新解决方案。 IT之家注：系留气球，是用缆绳连接气球与地面控制装置，通过收放缆绳控制气球高度和水平位置的浮空器，集气动设计、结构力学、智能控制、锚泊工程于一体。这个“空中搬运工”利用氦气浮力承担主要载荷，地面系留系统控制运动。 据介绍，这款 2 吨级载重系留气球直径 25 米、体积 8000 立方米，相当于一栋 8 层楼大小，可实现不修路、不架索道，一个直径 25 米的大气球，把 2 吨重输电塔材，吊…",
+            "is_foreign": false
+          },
+          {
+            "title": "华为发布 RTN 5100 微波方案",
+            "summary": "[[华为]] 发布公共频谱点对多点微波方案 RTN 5100，传输容量与站点接入数量均提升 2 倍，最多接入 128 个远端站。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/499.htm",
+            "title_original": "华为发布新一代公共频谱点对多点微波方案 RTN 5100，传输容量和站点接入数量实现 2 倍提升",
+            "excerpt": "IT之家 9 月 22 日消息，据华为无线网络公众号消息，在华为全联接大会 2026 上，华为发布新一代公共频谱点对多点微波方案 RTN 5100。华为微波产品线副总裁徐炀丙在发言时介绍，相比上一代产品， RTN 5100 的传输容量和站点接入数量均实现了 2 倍提升 ，并进一步增强了空口加密的安全性。 ▲ 华为微波产品线副总裁徐炀丙介绍 据介绍，RTN 5100 工作在 5GHz 公共频谱，单个中心站设备最大可支持 2 路各 1 Gbps 吞吐量， 并可接入最多 128 个远端站点 ，同时可根据业务需求进行点对多点、点对点和长链中继等多种灵活组网模式，充分满足 4K 级超清视频、宽带上网和海量站点的接入回传需求。 另外，RTN…",
+            "is_foreign": false
+          },
+          {
+            "title": "4000 千瓦海洋救助船列编",
+            "summary": "我国自行设计建造的 4000 千瓦中型海洋救助船“北海救 151”轮列编，全船核心设备实现 100% 国产化。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/502.htm",
+            "title_original": "核心设备 100% 国产：我国自行设计建造的 4000 千瓦中型海洋救助船“北海救 151”轮列编",
+            "excerpt": "IT之家 9 月 22 日消息，据央视新闻报道，我国自行设计建造的 4000 千瓦中型海洋救助船“北海救 151”轮昨日正式入列交通运输部北海救助局。作为北部海区首艘中型海洋救助船，该轮将正式投入北部海区海上动态值班待命， 填补了北方海域中型专业救助船舶的装备空白 。 据介绍，全新列编的“北海救 151”轮， 最亮眼的就是实现了全船核心设备 100% 国产化 。船舶的主发电柴油机和辅机，就是整艘船的“动力心脏”，为全船搜救、照明、操控等所有设备提供电力保障。 以往同类型救助船，这套核心机组全部依赖进口，而在“北海救 151”轮上，国产大功率中速机组首次批量应用于该等级救助船，并且根据北方低温、高海况的作业特点进行了量身适配。 值得…",
+            "is_foreign": false
+          },
+          {
+            "title": "索尼申请 AI 自修复系统专利",
+            "summary": "[[索尼]] SIE 申请 AI 自动诊断修复系统专利，可由 AI 服务器实时生成诊断固件并部署至故障 PlayStation 主机。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/501.htm",
+            "title_original": "索尼 SIE 申请“AI 自修复系统”专利：利用人工智能实时生成诊断固件以修复 PlayStation 游戏机故障",
+            "excerpt": "IT之家 9 月 22 日消息，据专利聚合网站 Patentlyze 披露，索尼 SIE 近日提交一项基于 AI 的 PlayStation 自动诊断和修复系统专利，该系统可以持续监测联网的 PlayStation 设备，在发现软件问题后由 AI 服务器实时生成针对性的诊断固件，并将其直接部署到出现故障的主机上，从而减少用户联系客服的需求。 IT之家参考专利描述，该系统的目标之一是减少保修申请、客服工单以及传统故障排查过程中需要用户反复操作的步骤。当系统检测到主机存在问题后，AI 模型不会简单调用预先编写好的修复方案，而是根据具体故障生成相应的修复代码，并进一步判断问题能否自动处理。如果无法解决，则将相关问题升级给人工客服或技术人…",
+            "is_foreign": false
+          },
+          {
+            "title": "微软就下一代 Xbox 发起用户调查",
+            "summary": "[[微软]] 通过 Xbox Insider Hub 调查玩家对下一代主机 Project Helix 的需求，询问是否需支持实体光盘。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/503.htm",
+            "title_original": "微软就下一代 XBOX 游戏机 Project Helix 功能发起用户调查，询问玩家新机是否需要支持实体光盘",
+            "excerpt": "IT之家 9 月 22 日消息，据外媒 Power Up Gaming 报道，微软近期通过 XBOX Insider Hub 应用向部分用户发放调查问卷，询问玩家希望微软下一代 XBOX 游戏机“Project Helix”加入哪些功能。 外媒表示，相应调查中的一项内容涉及实体光盘。微软询问玩家是否希望主机支持“从实体光盘安装游戏”，并提供“没必要”“最好有”和“必须有”三个选项。 其中，“必须有”意味着如果缺少该功能，用户可能不会购买这款主机 。 不过，这份调查并不能证明 Project Helix 最终会配备光驱，即使调查结果显示玩家高度重视实体游戏。即便未来主机加入光驱，也可能主要用于运行此前 XBOX 主机的实体版游戏，并…",
+            "is_foreign": false
+          },
+          {
+            "title": "宇树发布 Dex5-S 灵巧手",
+            "summary": "[[宇树科技]] 发布 Dex5-S 灵巧手，售价 3.99 万元起；2025 年全球人形机器人销量 7000 台，今年预计突破 9 万台。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8148014.html",
+            "title_original": "【钛晨报】中国央行召开外资金融机构座谈会，潘功胜最新发声；沈鼓集团大幅波动，上交所再次通报；AUDI遭德国总部拒绝？奥迪中国、上汽奥迪接连发声",
+            "excerpt": "支付宝宣布组织调整和全新任命；宇树科技发布Dex5-S灵巧手，3.99万元起；理想汽车总裁马东辉：马赫芯片、碳化硅模块可外供；Kimi与海外云厂商分成模式正式落地；港交所拟将主要交易门槛提至50%；2025年全球人形机器人销量达7000台，今年出货量预计突破9万台。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "苹果门店设计师质疑 AI 购物",
+            "summary": "苹果零售店设计者 Ron Johnson 表示，[[Apple]] 的核心优势始终是人，不认同硅谷对 AI 购物的押注。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/21/the-man-who-built-apples-stores-doesnt-buy-silicon-valleys-bet-on-ai-shopping/",
+            "title_original": "The man who built Apple’s stores doesn’t buy Silicon Valley’s bet on AI shopping",
+            "excerpt": "Apple Store architect Ron Johnson says Apple's secret sauce has always been its people.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "lululemon 在华销售下滑",
+            "summary": "[[lululemon]] 2026 财年二季度全球净营收同比下降约 4%，中国市场可比销售额大跌，股价创八年多新低。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1585338.html",
+            "title_original": "文章频道 - 1000块一条的lululemon，中产不好意思穿了",
+            "excerpt": "lululemon，正在失去自己的品牌内核。 来源： 沥金 清晨的阳光透过百叶窗，林珊站在衣柜前，目光略过那一排曾让她引以为傲的lululemon瑜伽裤，最终伸手抽走了一条更为宽松、随性的直筒运动裤。 这种发生在无数个中产卧室里的微妙转变，正为lululemon带来一场狂风暴雨。 9月4日美股收盘，lululemon股价暴跌 17.38%，收于100.61美元，创下八年多来的新低，超23亿美元市值一日蒸发。今年以来，该股累计跌幅已超过五成。 财报更是无情宣告着一个中产神话的破灭，2026财年第二季度，lululemon全球净营收同比下降约4%，在中国这个曾经支撑集团高速增长的市场，按固定汇率期内净营收下降了2%、可比销售额更是大跌…",
+            "is_foreign": false
+          },
+          {
+            "title": "中国机器人从能用到好用",
+            "summary": "中国机器人产业从赛场走向工厂，正由“能用”向“好用”升级，应用场景持续扩展。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-22/10701212.shtml",
+            "title_original": "中国机器人从“能用”走向“好用”",
+            "excerpt": "赛场上跑起来 工厂里干起来",
+            "is_foreign": false
+          },
+          {
+            "title": "商场趣味赛事成引流新玩法",
+            "summary": "郑州、武汉、东营等地商场推出补作业大赛、嗑瓜子大赛等趣味赛事，以低门槛强参与吸引消费者。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-22/10701199.shtml",
+            "title_original": "邀请消费者“来玩”，趣味赛事成为商场引流新“玩法”",
+            "excerpt": "近期，一批看似与购物不搭边的趣味比赛走进商场。郑州中原锦艺城推出“补作业大赛”，武汉群星城举行“嗑瓜子但不吃大赛”，东营吾悦广场则办起甩人字拖比赛。低门槛、强参与的趣味赛事，正成为一些商场吸引消费者的新玩法。",
+            "is_foreign": false
+          },
+          {
+            "title": "重庆新游轮世纪梦想号首航",
+            "summary": "重庆新游轮“世纪梦想号”在朝天门码头首航，投入重庆至宜昌长江三峡航线运营。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-21/10701181.shtml",
+            "title_original": "重庆新游轮“世纪梦想号”长江首航",
+            "excerpt": "中新社重庆9月21日电 (张旭)重庆新游轮“世纪梦想号”21日晚在朝天门码头正式首航，投入重庆—宜昌长江三峡航线运营。",
+            "is_foreign": false
+          },
+          {
+            "title": "北京杭州深圳列 AI 算力城市前三",
+            "summary": "《2026 年中国人工智能计算力发展评估报告》显示，北京、杭州、深圳位列 AI 算力城市前三。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-21/10701180.shtml",
+            "title_original": "报告：北京、杭州、深圳位列中国人工智能算力城市排名前三",
+            "excerpt": "中新社北京9月21日电 (记者 吕少威)21日在北京发布的《2026年中国人工智能计算力发展评估报告》显示，在2026年中国人工智能算力城市排行榜中，北京、杭州、深圳位列前三，上海、广州、成都、南京、武汉、济南、苏州进入前十。",
+            "is_foreign": false
+          },
+          {
+            "title": "全国苹果产销形势分析会举行",
+            "summary": "中国果品流通协会在山西大宁举办 2026 全国苹果产销形势分析会，研判产销形势并推动产销协作。",
+            "source": "中新网财经",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-21/10701106.shtml",
+            "title_original": "产销协作促发展 2026全国苹果产销形势分析会在山西大宁举行",
+            "excerpt": "中新网临汾9月21日电 (记者 杨静)由中国果品流通协会主办的2026全国苹果产销形势分析会20日至21日在山西省临汾市大宁县举行。来自苹果主产区主管部门、科研院所、行业协会，以及生产、经营、加工、进出口、仓储、电商和大型水果批发市场等领域的代表参加会议，共同研判苹果产销形势，交流产业发展经验，推动产销协作。",
+            "is_foreign": false
+          },
+          {
+            "title": "图拉斯官宣 Papi 酱为品牌大使",
+            "summary": "[[图拉斯]] 官宣首位品牌大使 Papi 酱，主推支点手机壳等产品，将品类价格上限拉至近 200 元。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/378776.html",
+            "title_original": "项目频道 - 图拉斯xPapi酱：Vlog博主的那些创作日常",
+            "excerpt": "当玩手机成为无法回避的日常，有品牌从中看到了品类机会。 凭借支点手机壳这一爆款，图拉斯把品类价格上限拉到了近 200 元。在拉开定位差异的同时，也用覆盖全场景的功能性，避开了网红产品的命运。 近期，图拉斯官宣首位品牌大使，Papi酱。 当支点手机壳的实用性已经广为人知后，品牌的叙事重心转向创作——图拉斯，是每一个内容创作者的好搭子。 “随时随地，就酱创造” 短片中，三款核心产品依次登场：图拉斯 O3Wave 支点壳、图拉斯 Flow 随心充、图拉斯大眼仔智能屏显充电器。 papi 酱延续了她内容创作者的身份，把产品放进碎片场景里，通过剧情化内容具象呈现。 支点壳的磁吸功能 还可以360度旋转、灵活放在任何合适的位置 小红书发布文案…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "jaredpalmer/kev",
+            "url": "https://github.com/jaredpalmer/kev",
+            "intro": "tiny Jev-like family of decision models built on top of Qwen3.5 you can train and run on your own",
+            "features": [],
+            "guide": "",
+            "steps": [],
+            "install": "",
+            "summary": "tiny Jev-like family of decision models built on top of Qwen3.5 you can train and run on your own",
+            "source": "GitHub",
+            "stars": "2414",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "",
+            "is_foreign": true,
+            "untranslated": true
+          },
+          {
+            "title": "jub0t/Concat",
+            "url": "https://github.com/jub0t/Concat",
+            "intro": "Free & Open-Source CapCut replacement (supports MCPs).",
+            "features": [],
+            "guide": "",
+            "steps": [],
+            "install": "",
+            "summary": "Free & Open-Source CapCut replacement (supports MCPs).",
+            "source": "GitHub",
+            "stars": "3174",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "",
+            "is_foreign": true,
+            "untranslated": true
+          },
+          {
+            "title": "alyssaxuu/screenity",
+            "url": "https://github.com/alyssaxuu/screenity",
+            "intro": "The free and privacy-friendly screen recorder with no limits 🎥",
+            "features": [],
+            "guide": "",
+            "steps": [],
+            "install": "",
+            "summary": "The free and privacy-friendly screen recorder with no limits 🎥",
+            "source": "GitHub",
+            "stars": "18714",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "",
+            "is_foreign": true,
+            "untranslated": true
+          },
+          {
+            "title": "excalidraw/excalidraw",
+            "url": "https://github.com/excalidraw/excalidraw",
+            "intro": "Virtual whiteboard for sketching hand-drawn like diagrams",
+            "features": [],
+            "guide": "",
+            "steps": [],
+            "install": "",
+            "summary": "Virtual whiteboard for sketching hand-drawn like diagrams",
+            "source": "GitHub",
+            "stars": "132622",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "",
+            "is_foreign": true,
+            "untranslated": true
+          },
+          {
+            "title": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "intro": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained…",
+            "features": [],
+            "guide": "",
+            "steps": [],
+            "install": "",
+            "summary": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained…",
+            "source": "GitHub",
+            "stars": "120194",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "",
+            "is_foreign": true,
+            "untranslated": true
+          }
+        ],
+        "lead": ""
+      }
+    ],
+    "degraded": true,
+    "degraded_reason": "以下板块未完成 AI 处理：GitHub（RuntimeError）",
+    "partial_degraded": true
+  }
+}

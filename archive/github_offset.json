@@ -1,5 +1,5 @@
 {
-  "classic_offset": 20,
+  "classic_offset": 22,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -164,12 +164,15 @@
     "jarun/nnn",
     "mizorewww/laya-mlx",
     "totec448-spec/chat-on-steroids",
-    "ActivityWatch/activitywatch"
+    "ActivityWatch/activitywatch",
+    "jaredpalmer/kev",
+    "jub0t/Concat",
+    "alyssaxuu/screenity"
   ],
-  "last_run_date": "2026-09-20",
+  "last_run_date": "2026-09-22",
   "last_classic": [
-    "github/spec-kit",
-    "Comfy-Org/ComfyUI"
+    "excalidraw/excalidraw",
+    "Graphify-Labs/graphify"
   ],
-  "updated_at": "2026-09-20T23:55:38.998180+00:00"
+  "updated_at": "2026-09-22T00:00:55.320750+00:00"
 }
