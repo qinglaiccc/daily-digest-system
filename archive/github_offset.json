@@ -1,5 +1,5 @@
 {
-  "classic_offset": 22,
+  "classic_offset": 24,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -167,12 +167,15 @@
     "ActivityWatch/activitywatch",
     "jaredpalmer/kev",
     "jub0t/Concat",
-    "alyssaxuu/screenity"
+    "alyssaxuu/screenity",
+    "jev-chat/jev-chat-jarvis",
+    "Player-YN/BrowserKitten",
+    "feder-cr/aihawk_mcp_server"
   ],
   "last_run_date": "2026-09-22",
   "last_classic": [
-    "excalidraw/excalidraw",
-    "Graphify-Labs/graphify"
+    "supabase/supabase",
+    "google-gemini/gemini-cli"
   ],
-  "updated_at": "2026-09-22T00:00:55.320750+00:00"
+  "updated_at": "2026-09-22T03:57:20.787247+00:00"
 }
