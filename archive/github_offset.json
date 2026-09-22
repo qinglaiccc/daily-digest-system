@@ -1,5 +1,5 @@
 {
-  "classic_offset": 24,
+  "classic_offset": 26,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -170,12 +170,15 @@
     "alyssaxuu/screenity",
     "jev-chat/jev-chat-jarvis",
     "Player-YN/BrowserKitten",
-    "feder-cr/aihawk_mcp_server"
+    "feder-cr/aihawk_mcp_server",
+    "mizorewww/laya-coreml",
+    "Nanako0129/sepia",
+    "feder-cr/invisible_playwright_mcp"
   ],
   "last_run_date": "2026-09-22",
   "last_classic": [
-    "supabase/supabase",
-    "google-gemini/gemini-cli"
+    "JuliusBrussee/caveman",
+    "pytorch/pytorch"
   ],
-  "updated_at": "2026-09-22T03:57:20.787247+00:00"
+  "updated_at": "2026-09-22T23:55:40.693818+00:00"
 }

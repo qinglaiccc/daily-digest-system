@@ -1,0 +1,376 @@
+{
+  "date": "2026-09-23",
+  "generated_at": "2026-09-22T23:55:53.995042+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 21,
+    "rss_ok": 23,
+    "rss_failed": 0,
+    "raw_news": 280,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-09-23",
+    "digest": "OpenAI与Anthropic同日发布新模型并掀起价格战，高通发布第六代骁龙8芯片。",
+    "keywords": [
+      "OpenAI",
+      "Anthropic",
+      "高通",
+      "Claude",
+      "GPT-6"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Rabbit推出无需R1硬件的AI智能体",
+            "summary": "[[Rabbit]]发布OS3智能体操作系统，云端运行，可跨Windows、Mac、Linux本地操作，无需R1硬件。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/999094/rabbit-ai-agent-os3",
+            "title_original": "Rabbit’s new AI agent doesn’t need an R1 to run",
+            "excerpt": "Rabbit, the company behind the underwhelming R1 device, is rolling out a standalone AI agent that you don't need its hardware to use, as reported earlier by Wired. The startup says its new OS3 \"agentic operating system\" runs in the cloud but operates locally across Windows, Mac, and Linux devices. According to Rabbit,…",
+            "is_foreign": true
+          },
+          {
+            "title": "JevBench发布类型化决策模型基准",
+            "summary": "开发者推出[[JevBench]]，用于可复现评测Jev类模型，称其比LLM更快更便宜且智能水平相近。",
+            "source": "Hacker News",
+            "url": "https://benchmarkheaven.com/jev-models",
+            "title_original": "Show HN: JevBench, a reproducible benchmark for typed decision models",
+            "excerpt": "Hi HN! I built JevBench because Jev kicks ass, and the world deserves to know how the serious open source and fake lookalike projects really perform in comparison. Jev-class models return bounded choices and probabilities instead of text, and are disruptively faster and cheaper than LLMs, while being similarly intelli…",
+            "is_foreign": true
+          },
+          {
+            "title": "OpenAI发布GPT-6 Sol与Luna",
+            "summary": "[[OpenAI]]发布[[GPT-6]] Sol和Luna，称成本更低、错误更少，与Astra同源。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+            "title_original": "OpenAI launches GPT-6 Sol and Luna, boasting lower cost and fewer mistakes",
+            "excerpt": "OpenAI is launching two new models, which it says are cut from the same cloth as Astra.",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic发布Claude Opus 5.5",
+            "summary": "[[Anthropic]]发布[[Claude Opus 5.5]]，为Claude 5.5家族首个模型，HN获1096点、768条评论。",
+            "source": "Hacker News",
+            "url": "https://www.anthropic.com/claude-opus-5-5",
+            "title_original": "Claude Opus 5.5",
+            "excerpt": "Article URL: https://www.anthropic.com/claude-opus-5-5 \n Comments URL: https://news.ycombinator.com/item?id=49803892 \n Points: 1096 \n # Comments: 768",
+            "is_foreign": true
+          },
+          {
+            "title": "Claude Opus 5.5与GPT-6引发价格战",
+            "summary": "[[Anthropic]]发布Opus 5.5约一小时后，[[OpenAI]]发布GPT-6 Sol和Luna，[[Simon Willison]]称新模型评测尚需时间。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
+            "title_original": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
+            "excerpt": "Yesterday was Grok 4.7 ( pelicans ) and MiMo v2.6 Flash/Pro ( more pelicans ). Today Anthropic released Claude Opus 5.5 , and around an hour later OpenAI released GPT-6 Sol and GPT-6 Luna . It's going to take a while to get a good read on all of these new models, but here are my impressions so far. \n GPT-6 Sol and Lun…",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "高通发布第六代骁龙8超级至尊版",
+            "summary": "[[高通]]发布第六代骁龙8超级至尊版，称全球最快移动CPU，CPU首超5GHz，GPU性能提升44%。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/006/004.htm",
+            "title_original": "全球最快移动 CPU：高通发布第六代骁龙 8 超级至尊版芯片，CPU 行业首超 5GHz、GPU 性能提升 44%",
+            "excerpt": "IT之家 9 月 23 日消息，夏威夷时间 9 月 22 日 9 点（北京时间 9 月 23 日 3 点）召开的 2026 骁龙峰会上，高通公司宣布推出第六代骁龙 8 超级至尊版移动平台和第六代骁龙 8 至尊版移动平台， 官方表示这是“全球最快移动 CPU”。 高通称两款产品面向“智能体人工智能”时代的移动终端需求，主要应用于下一代旗舰智能手机。 IT之家援引博文介绍，第六代骁龙 8 超级至尊版定位为其性能最强的移动平台之一，重点提升终端侧人工智能、移动游戏和影像处理能力。 其中，平台搭载的 Adreno Neural Fusion 技术可利用人工智能辅助图形渲染；结合高级专业视频编解码器和智能像素控制技术，平台还可支持更复杂的场…",
+            "is_foreign": false
+          },
+          {
+            "title": "零刻公布Panther Lake款ME Pro NAS",
+            "summary": "[[零刻]]公布基于[[Panther Lake]]的ME Pro NAS迷你主机，配腾讯AI管家Marvis，10月底前上线。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/979.htm",
+            "title_original": "零刻公布 \"Panther Lake\" 款 ME Pro NAS 迷你主机，支持多项 AI 应用",
+            "excerpt": "IT之家 9 月 22 日消息，零刻 (Beelink) 今日在英特尔技术创新与产业生态大会 (Intel Connection 2026) 上公布了基于第三代酷睿 Ultra 处理器 \"Panther Lake\" 的新款 ME Pro 系列 NAS 型迷你主机。 新款 ME Pro 可选酷睿 Ultra X7 358H / 酷睿 Ultra 5 325 处理器 ，其中前者拥有更为强大的 GPU AI 算力。新品计划于 2026 年 10 月底前正式上线。 IT之家了解到，新款 ME Pro 配备腾讯操作系统级个人 AI 管家智能体 Marvis ，拥有文件内容理解、跨端远程控制能力，提供本地 AI 处理模式；合作伙伴飞牛 fnO…",
+            "is_foreign": false
+          },
+          {
+            "title": "OpenAI发布GPT-6 Sol和Luna，API降价50%",
+            "summary": "[[OpenAI]]发布[[GPT-6]] Sol和Luna，API价格较GPT-5.6促销价降50%，Astra仍为最强模型。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/006/001.htm",
+            "title_original": "OpenAI 发布 GPT-6 Sol 和 Luna 模型，API 价格大降 50%",
+            "excerpt": "IT之家 9 月 23 日消息，OpenAI 今日发布 GPT-6 系列模型的最新成员 GPT-6 Sol 和 GPT-6 Luna 。 OpenAI 官方表示，两款模型采用与 GPT-6 Astra 类似的方法进行训练，将 Astra 在专业工作、事实性、编码、计算机使用和对齐等方面 最先进的性能带入更快、更经济的模型 。 GPT-6 Sol 和 Luna 模型的 API 价格相比 GPT-5.6 促销价降低 50% 。不过 OpenAI 官方也表示，GPT-6 Astra 依然是其整体上最优秀的模型，如果你想要最佳效果和无妥协的体验，还是建议选择 GPT-6 Astra。 性能方面，在 AutomationBench 的跨应用…",
+            "is_foreign": false
+          },
+          {
+            "title": "Anthropic发布Claude Opus 5.5",
+            "summary": "[[Anthropic]]发布[[Claude Opus 5.5]]，性能媲美Fable 5.1，运行成本比Opus 5低40%。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/005/998.htm",
+            "title_original": "Anthropic 发布 Claude Opus 5.5 模型：性能媲美 Fable 5.1，运行成本比 Opus 5 低 40%",
+            "excerpt": "IT之家 9 月 23 日消息，Anthropic 今日正式发布了 Claude Opus 5.5 模型，这是其全新 Claude 5.5 家族的首个模型， 宣称在大多数工作上表现可媲美 Claude Fable 5.1，运行成本比 Opus 5 低 40% 。 IT之家从 Anthropic 公告获悉，具体来看，Claude Opus 5.5 模型有以下提升： 性能方面，Opus 5.5 比 Opus 5 有了很大提升，官方宣传早期测试者在最复杂的工作中看到性能大幅提升。一名测试人员在不到一天内完成了 68 万行代码迁移 —— 这一任务本应耗时数周。 Opus 5.5 擅长发现并修复软件中的低效程序 —— 当官方要求它将网页应用…",
+            "is_foreign": false
+          },
+          {
+            "title": "高通携阶跃适配300亿参数端侧模型",
+            "summary": "[[高通]]携手[[阶跃]]等为第六代骁龙8超级至尊版适配StepEdge-Omni 30B-MoE，预填充吞吐超330 Token/s。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/006/008.htm",
+            "title_original": "预填充吞吐超 330 Token/s：高通携手阶跃等为第六代骁龙 8 超级至尊版端侧适配 300 亿参数 AI 模型",
+            "excerpt": "IT之家 9 月 23 日消息，夏威夷时间 9 月 22 日 9 点（北京时间 9 月 23 日 3 点）召开的 2026 骁龙峰会上，高通宣布携手阶跃、无量火及江波龙，基于第六代骁龙 8 超级至尊版移动平台， 端侧适配与推理优化阶跃 StepEdge-Omni 30B-MoE 模型，并现场演示相关智能体助手。 该模型拥有 300 亿参数，依托混合专家架构，仅根据任务需要激活部分专家模块，以降低计算量和内存带宽需求。 合作方通过推理引擎、异构调度及存储方案优化，让模型运行内存需求较行业常规方案降低超过 50%，并支持在智能手机上稳定运行。 高通表示，该方案无需调用云端服务，可以在本地完成邮件理解、行程规划、日历同步、航班及酒店推荐…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "亚马逊要求Meta将其移出Muse AI体验",
+            "summary": "[[亚马逊]]称未获事先通知，要求[[Meta]]将其从Muse AI购物智能体体验中移除。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/amazon-meta-muse-ai-agent-shopping-experience/831018/",
+            "title_original": "Amazon asks Meta to remove it from the Muse AI agent experience",
+            "excerpt": "The e-commerce giant — which is no stranger to the opt-out approach of agentic purchases — said it was not given advance notice Muse would access its shop.",
+            "is_foreign": true
+          },
+          {
+            "title": "On目标2029年销售额近乎翻倍",
+            "summary": "[[On]]计划借足球品类实现未来三年高双位数增长，目标2029年销售额近乎翻倍，分析师存疑。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/on-growth-sales-targets-challenging-athletics-market/831021/",
+            "title_original": "On looks to nearly double sales by 2029 despite ‘far more challenging’ market",
+            "excerpt": "A recent entry into soccer will help propel the brand through high-teens growth over the next three years, according to executives. Analysts aren’t so sure.",
+            "is_foreign": true
+          },
+          {
+            "title": "FAO Schwarz开设亚马逊店铺",
+            "summary": "[[FAO Schwarz]]在[[亚马逊]]开设店铺扩展线上业务，并在洛克菲勒中心旗舰店设亚马逊快闪店。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/fao-schwarz-opens-amazon-storefront/830992/",
+            "title_original": "FAO Schwarz opens Amazon storefront",
+            "excerpt": "The toy retailer is expanding its online presence via the e-commerce giant and will feature an Amazon pop-up shop at its flagship store in Rockefeller Center.",
+            "is_foreign": true
+          },
+          {
+            "title": "酒店成为品牌新展厅",
+            "summary": "[[Lela Rose]]、[[Public Goods]]和[[Quilt]]等品牌在风景地酒店展示产品，触达新客群。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/marketing/brands-briefing-are-hotels-the-new-brand-showrooms/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Brands Briefing: Are hotels the new brand showrooms?",
+            "excerpt": "Brands like Lela Rose, Public Goods and Quilt are betting on hotels in picturesque locales to market their products to new audiences.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "安克空气耳夹AeroClip 2官宣张凌赫",
+            "summary": "[[安克]]首次启用品牌代言人[[张凌赫]]，推广国内首款耳夹耳机AeroClip 2。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/378027.html",
+            "title_original": "安克空气耳夹AeroClip 2×张凌赫：搭，每一种可能",
+            "excerpt": "张凌赫的新搭子，是谁？ 是安克空气耳夹AeroClip 2耳夹耳机！ （点击查看张凌赫的新搭子） 安克×张凌赫会有什么新的可能？ 安克，人人熟知的全球智能硬件科技新锐。 虽然已经向海外推出了全线智能影音等产品，也收获了超多认可，但这是第一次向国内市场推广全新的耳夹耳机，也是第一次启用品牌代言人——张凌赫。 仔细研究这两者会发现很有趣： 安克追求“极致创新 激发可能”，一直都在突破不同领域，从智能硬件再到智能影音等，从国内再到海外； 而张凌赫从一个“电气工程”理科生，想去国家电网结果却成为了频频破圈的艺人； 看似两者都有着理工男专注严谨，却又频频“突破无限可能”。 有没有想过，一个耳机会限制你？ 先研究一下耳机，我们习惯了基于某种需…",
+            "is_foreign": false
+          },
+          {
+            "title": "有门招聘美术实习生",
+            "summary": "[[有门]]在上海普陀区招聘美术实习生，要求平面设计能力，具备AI内容生成技能优先。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/jobs/276121.html",
+            "title_original": "美术实习生",
+            "excerpt": "招聘企业: 有门 工作区域: 上海普陀区 发布时间: 2026-09-22 Job ID: 276121 职位描述 Job Description 职位描述： 1、根据项目需求，完成相应设计作品，如平面海报、微信长图排版、修图、手绘插图等； 2、与团队、客户沟通，修改、完善各类设计作品； 3、项目经理交办的其它工作。 任职要求： 1、有较好平面设计能力，对构图、色彩、品牌风格有一定理解； 2、熟练掌握常用设计软件如Photoshop、AI、c4d等；有插画能力为佳； 3、了解并具备AI内容生成技能优先； 4、有灵气、有丰富的作品，需附上简历和作品。 更多精彩内容请访问 数英网 - 文章频道 - 项目频道 - 招聘频道",
+            "is_foreign": false
+          },
+          {
+            "title": "中好招聘创意组长",
+            "summary": "[[中好]]在上海长宁区招聘美术背景创意组长，负责把控创意方向并带领团队。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/jobs/276114.html",
+            "title_original": "创意组长 GH (art base)",
+            "excerpt": "招聘企业: 中好 上海 工作区域: 上海长宁区 发布时间: 2026-09-22 Job ID: 276114 职位描述 Job Description \n 我需要你：: \n 1.以策略为导向把控创意方向，激发团队成员创意热情，带领团队高效完成工作； \n 2. 有良好的沟通能力，向客户阐述和表达创意设计观点。 \n 我猜你： \n 1. 对如何用美术视觉来实现品牌商业价值，有着自己的洞察和见解，你相信所有人的直觉总有一个交叉点，这个交叉点让你把方案卖给客户，让客户把产品卖给用户。 \n 2. 你拥有精准的沟通能力，或者强大的动手能力，可以让想象力最贫乏的人都理解你要做得东西有多酷。 \n 3. 你的脆弱和敏感都留给创作了，你在工作中是个皮…",
+            "is_foreign": false
+          },
+          {
+            "title": "FF佛海佛瑞招聘资深文案",
+            "summary": "[[FF佛海佛瑞]]在上海长宁区招聘资深文案，需与美术指导合作，有洋酒、运动、3C经验更佳。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/jobs/276100.html",
+            "title_original": "Senior Copywriter资深文案",
+            "excerpt": "招聘企业: FF佛海佛瑞 工作区域: 上海长宁区 发布时间: 2026-09-22 Job ID: 276100 职位描述 Job Description 职位描述： 1. 以年轻新鲜的视角和思维方式，根据不同品牌和项目需求，提供当代的、有洞察的观点、创意思考和解决方案。体裁包括但不限于品牌大创意、影片创意、品牌口号、社媒文案等。 2. 与美术指导合作，确保每一个经手的创意和项目在提案和出街过程中的完美呈现。 3. 有高级洋酒、运动品牌、3C品牌经验更佳。 任职要求： 1. 讨厌丑东西、参与过并渴望创造更多的成功营销战役、不甘于原地踏步。 2. 热衷观察和吸收每天一变的当下潮流和洞察，熟稔各时代的各类艺术、视觉、设计风格。 3.…",
+            "is_foreign": false
+          },
+          {
+            "title": "SG胜加招聘资深创意文案",
+            "summary": "[[SG胜加]]在广州招聘资深创意文案或创意组长，要求3年以上经验，附独立作品。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/jobs/276072.html",
+            "title_original": "资深创意文案/创意组长-广州",
+            "excerpt": "招聘企业: SG胜加 工作区域: 广东广州 发布时间: 2026-09-22 Job ID: 276072 职位描述 Job Description 岗位职责： 1、负责品牌创意及策略输出，同时对文案撰写有较高追求； 2、3年以上从业经验，懂洞察懂创意； 3、热爱创意，具备创意策略提炼能力及较强的抗压能力。 首先，你是个创意， 你可以拥抱AI， 但你需要更新锐的洞察； 其次，你是个文案， 你还是可以拥抱AI， 但你得相信自己的竞争力是产出一些没有模版化的沟通； 最后，你是团队的一员， 我们适当拥抱彼此， 做“值得一提”的伙伴也做“值得一提”的方案。 简历要求：附本人近一年独立完成或主创作品 注：此岗位属于胜加集团旗下厂牌——胜观I…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "mizorewww/laya-coreml",
+            "url": "https://github.com/mizorewww/laya-coreml",
+            "intro": "在苹果电脑上本地跑小型决策 AI，不用联网、不生成文字，几毫秒出结果。",
+            "features": [
+              "本地运行，断网也能用",
+              "一次判断约 5 毫秒，反应很快",
+              "自带贪吃蛇演示，能看概率和延迟",
+              "比同类方案更省电"
+            ],
+            "guide": "需要苹果 M 系列芯片的 Mac、macOS 15 以上、Python 3.11 到 3.13。用 pip 装好后下载模型，再运行贪吃蛇演示即可，首次启动可能要等几十秒。",
+            "steps": [
+              "确认是苹果 M 芯片 Mac 且系统为 macOS 15+",
+              "安装 Python 3.11 到 3.13",
+              "pip install 'laya-coreml[demo]'",
+              "hf download aac6fef/laya-multilingual-coreml-ane --local-dir models/snake",
+              "laya-coreml-snake --model ./models/snake"
+            ],
+            "install": "pip install 'laya-coreml[demo]'",
+            "summary": "在苹果电脑上本地跑小型决策 AI，不用联网、不生成文字，几毫秒出结果。",
+            "source": "GitHub",
+            "stars": "1282",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Local Laya typed decisions on Apple Core ML and Neural Engine. Validated ports, ~5 ms short decisions on M3 Max, reproducible speed and energy benchmarks.",
+            "is_foreign": true
+          },
+          {
+            "title": "Nanako0129/sepia",
+            "url": "https://github.com/Nanako0129/sepia",
+            "intro": "帮 AI 写的东西去掉那股机器味，让文章和小说读起来更像人写的。",
+            "features": [
+              "改写文字，去掉 AI 腔",
+              "只诊断不改动，先看问题在哪",
+              "小说会先修故事结构再改词句",
+              "不同文体用不同规则"
+            ],
+            "guide": "这是一个给 AI 助手用的技能包，支持 77 种以上助手。用 Skills CLI 一条命令安装，Claude Code、Codex 等还有专门插件版本。",
+            "steps": [
+              "确认你的 AI 助手支持 Agent Skills 标准",
+              "用 Skills CLI 安装该技能",
+              "在助手对话中调用 write 或 review 等操作"
+            ],
+            "install": "",
+            "summary": "帮 AI 写的东西去掉那股机器味，让文章和小说读起来更像人写的。",
+            "source": "GitHub",
+            "stars": "2778",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "De-AI writing skill for any Agent Skills-compatible agent (77+ via the Skills CLI), with native plugins for Claude Code, Codex, Grok Build, and Antigravity. Narrative-architecture repair for fiction, venue-matched rules…",
+            "is_foreign": true
+          },
+          {
+            "title": "feder-cr/invisible_playwright_mcp",
+            "url": "https://github.com/feder-cr/invisible_playwright_mcp",
+            "intro": "一个不容易被网站识别的浏览器助手，你用大白话说要干什么，它自己上网操作。",
+            "features": [
+              "用大白话指挥它上网操作",
+              "不容易被网站拦截或弹验证码",
+              "能接进 Claude Code 等编程助手",
+              "自带网页界面，左边聊天右边看浏览器"
+            ],
+            "guide": "先装 uv 工具，再把它装进你的 AI 助手；或者用网页版，需要自备 OpenRouter 的 API Key，然后打开本地网页使用。",
+            "steps": [
+              "安装 uv 工具",
+              "claude plugin marketplace add feder-cr/invisible_playwright_mcp",
+              "claude plugin install aihawk@feder-cr",
+              "或运行 uvx aihawk ui --openrouter-key sk-or-...",
+              "打开 http://127.0.0.1:8765 开始使用"
+            ],
+            "install": "uvx aihawk ui --openrouter-key sk-or-...",
+            "summary": "一个不容易被网站识别的浏览器助手，你用大白话说要干什么，它自己上网操作。",
+            "source": "GitHub",
+            "stars": "31626",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Anti-detect agentic stealth browser: undetected browsing, browser automation, Python AI web browsing agent, computer use, scraping, lead generation. No captchas.",
+            "is_foreign": true
+          },
+          {
+            "title": "JuliusBrussee/caveman",
+            "url": "https://github.com/JuliusBrussee/caveman",
+            "intro": "让 AI 编程助手说话像原始人一样简短，省下大量按字计费的开销。",
+            "features": [
+              "把 AI 回复压缩得更短",
+              "省下约六成的字数费用",
+              "一条命令安装，不用账号和密钥",
+              "实测对代码质量影响很小"
+            ],
+            "guide": "给编程助手用的技能，一条命令即可安装，不需要注册账号或填 API Key，装完在助手里直接生效。",
+            "steps": [
+              "确认已安装 Node 环境",
+              "npx skills add JuliusBrussee/caveman -g",
+              "在 AI 编程助手中正常提问即可"
+            ],
+            "install": "npx skills add JuliusBrussee/caveman -g",
+            "summary": "让 AI 编程助手说话像原始人一样简短，省下大量按字计费的开销。",
+            "source": "GitHub",
+            "stars": "107383",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+            "is_foreign": true
+          },
+          {
+            "title": "pytorch/pytorch",
+            "url": "https://github.com/pytorch/pytorch",
+            "intro": "做人工智能最常用的编程工具包，让 Python 能方便地调用显卡算力训练模型。",
+            "features": [
+              "像用表格软件一样处理大量数字",
+              "能调用显卡加速计算",
+              "内置自动求导，方便训练模型",
+              "可搭配 NumPy 等常用库一起用"
+            ],
+            "guide": "需要先装 Python，再按官网指引选择对应系统的安装命令；也可以用官方提供的 Docker 镜像直接跑。",
+            "steps": [
+              "安装 Python 环境",
+              "访问官网按系统选择安装命令",
+              "或使用官方 Docker 镜像"
+            ],
+            "install": "",
+            "summary": "做人工智能最常用的编程工具包，让 Python 能方便地调用显卡算力训练模型。",
+            "source": "GitHub",
+            "stars": "103182",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+            "is_foreign": true
+          }
+        ],
+        "lead": "本地跑 AI、让 AI 少说废话、自动上网干活，省钱又省事。"
+      }
+    ]
+  }
+}
