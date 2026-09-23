@@ -1,0 +1,376 @@
+{
+  "date": "2026-09-24",
+  "generated_at": "2026-09-23T23:55:51.314011+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 21,
+    "rss_ok": 23,
+    "rss_failed": 0,
+    "raw_news": 277,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-09-24",
+    "digest": "OpenAI 发布 GPT-6 Sol 与 Luna 并降价五成，Anthropic 宣布成立生命科学实验室，Claude 自主发现新型酶系统。",
+    "keywords": [
+      "OpenAI",
+      "Anthropic",
+      "Claude",
+      "Meta",
+      "沃尔玛"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Meta 为 Muse 智能体增加邮件与视频通话能力",
+            "summary": "[[Meta]] 为 [[Muse]] 智能体新增专属邮箱地址，并支持用户与其视频通话。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/999454/meta-muse-ai-agent-video-chat-connect-2026",
+            "title_original": "Meta is making Muse more powerful and will let you video chat with it, too",
+            "excerpt": "Meta is quickly iterating on its new Muse AI agent, announcing a bunch of updates today that make the bot more capable and able to chat with you in more ways. Muse agents are getting their own email addresses that they can use for accomplishing tasks. You'll also be able to communicate with your Muse […]",
+            "is_foreign": true
+          },
+          {
+            "title": "实测 Meta Muse 智能体购物体验",
+            "summary": "The Verge 实测 [[Meta]] 的 [[Muse]] 智能体，称其擅长替用户完成购物下单。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/999526/meta-muse-ai-agent-hands-on-shopping",
+            "title_original": "Meta’s AI agent is a cute little guy who’s great at spending my money",
+            "excerpt": "Modern life comes with an unending, auto-populating to-do list. It never ceases to amaze me how I can be doing nothing at all, minding my own business, and suddenly something needs to be taken care of. You're telling me a tree branch fell in the backyard and now I have to figure out what to […]",
+            "is_foreign": true
+          },
+          {
+            "title": "Claude 发现具 CRISPR 样重复的新型酶系统",
+            "summary": "[[Anthropic]] 称 [[Claude]] 自主发现一种具 CRISPR 样重复序列的新型酶系统。",
+            "source": "Hacker News",
+            "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+            "title_original": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+            "excerpt": "Article URL: https://www.anthropic.com/news/claude-discovers-novel-enzyme-system \n Comments URL: https://news.ycombinator.com/item?id=49820134 \n Points: 437 \n # Comments: 478",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌发布 Gemini 3.8 文本转语音模型",
+            "summary": "[[Google]] 发布 [[Gemini 3.8]] 文本转语音模型，相关技术细节已在官方博客公布。",
+            "source": "Hacker News",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
+            "title_original": "Gemini 3.8 text-to-speech",
+            "excerpt": "Article URL: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/ \n Comments URL: https://news.ycombinator.com/item?id=49817615 \n Points: 241 \n # Comments: 118",
+            "is_foreign": true
+          },
+          {
+            "title": "DeepSeek-V4.1-Flash 登 HuggingFace 热门榜",
+            "summary": "[[DeepSeek]] 的 [[DeepSeek-V4.1-Flash]] 登上 HuggingFace 热门模型榜，下载量 570909。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+            "title_original": "deepseek-ai/DeepSeek-V4.1-Flash 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 585）类型 image-text-to-text。likes 3666，下载 570909。标签：transformers、safetensors、deepseek_v41、text-generation、image-text-to-text、license:mit。",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "平头哥发布真武 V900 等算力产品",
+            "summary": "[[平头哥]] 在云栖大会发布 [[真武 V900]] 芯片及互联芯片、网卡、SSD 主控等全栈产品。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/370864",
+            "title_original": "从单卡到千卡互联，平头哥真武 V900 背后的 AI 算力变局",
+            "excerpt": "作者｜Cynthia \n 编辑｜郑玄 \n 9 月 22 日的 2026 杭州云栖大会，平头哥少见地被完整推到了主论坛台前。 \n 当天上午，吴泳铭完成主旨演讲后，千问大模型、多模态模型负责人依次登场，随后就是平头哥副总裁高慧。她的演讲题目是「Agentic 时代卓越算力基石」。 \n 平头哥带来的产品，则从一颗最新得真武 V900 芯片，一直延伸到 ICN Switch 互联芯片、磐脉智能网卡、镇岳 SSD 主控、倚天 CPU 路线图，以及下一步的算、存、网全栈协同的超节点服务器。 \n \n 发布「产品全家桶」地背后，是 Agentic 时代的负载变化：算力需求已经从训练为主进一步走向推理增长，应用从单轮请求变成连续的多步任务， 硬件的…",
+            "is_foreign": false
+          },
+          {
+            "title": "黄仁勋称 AI 公司不应获反垄断豁免",
+            "summary": "[[英伟达]] CEO [[黄仁勋]] 表示，要求监管的 AI 公司不应获得反垄断或责任法豁免。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/006/514.htm",
+            "title_original": "黄仁勋对 AI 公司放话：要求监管就不应获得反垄断豁免",
+            "excerpt": "北京时间 9 月 24 日，据路透社报道，英伟达 CEO 黄仁勋 (Jensen Huang) 认为，AI 公司不应获得反垄断法或责任法的豁免。 在周三播出的《纽约时报》播客节目中，黄仁勋接受了近两个小时的采访，就 OpenAI 智能体入侵 Hugging Face 一事进行了广泛讨论。Hugging Face 是开源 AI 软件中心，在本月被英伟达以 130 亿美元收购。 黄仁勋一直反对对 AI 安全进行全面监管，即便 OpenAI 和 Anthropic 等实验室呼吁进行此类监管。他重申了自己的立场，即 AI 实验室有责任测试其产品，只有在确信模型安全后才会发布。 根据《纽约时报》公布的文字记录，黄仁勋说：“不过，考虑到他们所…",
+            "is_foreign": false
+          },
+          {
+            "title": "小米 MiMo-V3 将采用 HySparse 2 架构",
+            "summary": "[[小米]] 罗福莉宣布 [[MiMo-V3]] 采用新架构，HySparse 2 使 1M 长度预填充算量降 5.02 倍。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/006/502.htm",
+            "title_original": "罗福莉官宣小米 MiMo-V3 采用全新架构，核心 HySparse 2 今日发布",
+            "excerpt": "IT之家 9 月 23 日消息，小米 MiMo 大模型负责人罗福莉今日发文，宣布 MiMo-V3 即将采用全新架构。其核心 HySparse 2 今日发布，带来更少的预填充、更小的 KV 缓存、更出色的长上下文检索。 在 1M（100 万）Token 长度下，预填充计算量（FLOPs）降低 5.02 倍 在 1M Token 长度下，KV 缓存缩小 4.5 倍 具有更高的 MRCRv2 和 RULER-v2 评分，同时 AgentPPL 和 LongPPL 更低 罗福莉表示，智能体（Agentic）推理是一种截然不同的工作负载。每一轮交互，一个简短的动作可能会返回需要进行预填充的长文本观察结果，同时上下文还在不断增长。这使得预填充…",
+            "is_foreign": false
+          },
+          {
+            "title": "OpenAI 发布 GPT-6 Sol 和 Luna 模型",
+            "summary": "[[OpenAI]] 发布 [[GPT-6 Sol]] 与 [[GPT-6 Luna]]，API 价格较 GPT-5.6 促销价降低 50%。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/370829",
+            "title_original": "OpenAI 发布 GPT-6 Sol 和 Luna；传字节跳动豆包收缩对话团队；千问发布 AI 手机全栈解决方案 | 极客早知道",
+            "excerpt": "OpenAI 发布 GPT-6 Sol 和 Luna 模型，API 价格大降 50% \n 9 月 23 日消息，OpenAI 今日发布 GPT-6 系列模型的最新成员 GPT-6 Sol 和 GPT-6 Luna。 \n OpenAI 官方表示，两款模型采用与 GPT-6 Astra 类似的方法进行训练，将 Astra 在专业工作、事实性、编码、计算机使用和对齐等方面最先进的性能带入更快、更经济的模型。 \n GPT-6 Sol 和 Luna 模型的 API 价格相比 GPT-5.6 促销价降低 50%。不过 OpenAI 官方也表示，GPT-6 Astra 依然是其整体上最优秀的模型，如果你想要最佳效果和无妥协的体验，还是建议选择…",
+            "is_foreign": false
+          },
+          {
+            "title": "Anthropic 成立生命科学团队与实验室",
+            "summary": "[[Anthropic]] 成立生命科学团队及分子生物学实验室，[[Claude]] 自主发现新型酶系统 ART。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/006/524.htm",
+            "title_original": "Anthropic 宣布成立生命科学团队和实验室，Claude 自主发现新型酶系统",
+            "excerpt": "IT之家 9 月 24 日消息，当地时间 9 月 23 日，Anthropic 宣布成立生命科学研究团队及自有分子生物学实验室，并公布了一项由 Claude 参与生物学研究取得的早期成果。 在人类科学家仅提供宏观研究方向的情况下，Claude 自主发现了一种此前未被表征的酶系统，Anthropic 将其命名为阵列关联逆转录酶（Array-associated Reverse Transcriptases，ART）。 该发现来自 Anthropic 旧金山湾区实验室，是其生命科学团队自 2026 年春季组建以来的首个公开成果。相关预印本论文已于同日发布，尚待同行评审。 Anthropic 表示，分享这一早期成果既是为了展示 Clau…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "调查显示消费者后悔听从 AI 购物建议",
+            "summary": "一项新调查显示，部分消费者因听从 AI 购物推荐而产生后悔情绪。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/shoppers-burned-bad-ai-purchase-recommendations/831013/",
+            "title_original": "Shoppers burned by bad AI recommendations",
+            "excerpt": "As more consumers turn to AI to suggest purchases, some regret following the technology’s advice, a new survey finds.",
+            "is_foreign": true
+          },
+          {
+            "title": "Target 新营销活动主打设计传承",
+            "summary": "[[Target]] 推出新营销活动，将设计传承作为核心，并延伸至创作者合作与体验活动。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/target-inside-out-ad-campaign-marketing-design-legacy/831146/",
+            "title_original": "Target’s new campaign puts design legacy at center of marketing",
+            "excerpt": "The effort will extend to creator partnerships and experiential activations and arrives as the retailer’s turnaround efforts begin to show results.",
+            "is_foreign": true
+          },
+          {
+            "title": "At Home 让顾客参与会员计划改版",
+            "summary": "[[At Home]] 借助顾客调研、焦点小组与行为测试，推出新的会员忠诚度计划。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/at-home-customers-voice-loyalty-program-evolution/831085/",
+            "title_original": "At Home gives its customers a voice in its loyalty program evolution",
+            "excerpt": "The retailer leveraged customer research, focus groups and behavioral testing to create the new program.",
+            "is_foreign": true
+          },
+          {
+            "title": "Staples 首席营销官谈 B2B 营销新按钮",
+            "summary": "[[Staples]] 推出全漏斗营销活动，以“困难按钮”形象推进 B2B 业务推广。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/staples-chief-marketer-hard-button-ad-campaign/830795/",
+            "title_original": "Staples’ chief marketer on introducing a hard button amid bigger B2B push",
+            "excerpt": "A full-funnel campaign focuses on a dark alter ego for the easy button that leads to workplace conundrums like misprinted store signs.",
+            "is_foreign": true
+          },
+          {
+            "title": "Spot & Tango 投入 350 万美元做品牌营销",
+            "summary": "狗粮品牌 [[Spot & Tango]] 今年投入 350 万美元做品牌营销，去年该项支出为零。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/marketing/spot-tango-is-making-a-3-5m-bet-on-brand-marketing-after-years-of-spending-0/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Spot & Tango is making a $3.5M bet on brand marketing after years of spending $0",
+            "excerpt": "This year, dog food brand Spot & Tango is funneling $3.5 million into top-of-funnel marketing, an effort that spans from out-of-home ads to connected TV to events. It's a notable shift from last year, when the brand spent effectively $0 on top-of-funnel marketing.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "沃尔玛全国首家新一代门店落地成都",
+            "summary": "[[沃尔玛]] 在成都温江开出全国首家新一代门店，约 3000 平方米、约 1 万个 SKU。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1588012.html",
+            "title_original": "沃尔玛新店，为何变小了",
+            "excerpt": "不是把超市做小，而是把“人”做回中心。 最近，沃尔玛在成都温江新光天地开了一家新店，这是沃尔玛全国首家新一代门店。 约3000平方米，约1万个SKU。 进门是烘焙、鲜花和短保鲜食；货架更低、通道更宽，川味火锅、鲜切牛肉、果切、即食食品、小包装商品被放在更显眼的位置。周边5公里，App最快30分钟送达。 开业当天，排队、限流，烘焙区飘着香味，鲜花区围满人， 沃集鲜货架一度被扫空。 很多人的第一反应是： 原来沃尔玛可以这么好逛。 但真正值得看的，不是沃尔玛突然变好逛了，而是它逼零售回答一个问题： 当手机可以买一切，消费者为什么还要走进一家超市？ 答案，可能就藏在这家被“缩小”的沃尔玛里。 图源/经济观察报 店做小，是因为“大而全”失效…",
+            "is_foreign": false
+          },
+          {
+            "title": "爱奇艺秋季悦享会发布 350 余部新作",
+            "summary": "[[爱奇艺]] 秋季悦享会发布 350 余部新作片单，并推出全新品牌营销体系。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1590112.html",
+            "title_original": "2026爱奇艺秋季悦享会：350+内容新作发布，智创驱动品牌新增长",
+            "excerpt": "以AI驱动创新，以内容促进增长。 9月23日，以 “AI向新，砺行致远” 为主题的2026爱奇艺iJOY秋季悦享会在上海举办。 会上，爱奇艺发布2026—2027年度350余部新作片单，推出了全新品牌营销体系，高管分享了爱奇艺All in AI赋能影视长片制作的战略、创作者生态建设布局及对影视行业变局的洞察， 展现了平台在内容供给、创作生态和商业营销上的持续创新。 爱奇艺创始人、首席执行官龚宇在开场演讲中介绍了 公司AI战略的三大重点，即All in AI赋能实拍影视长片及AIGC长片，全力建设健康的内容创作者生态，探索AI催生的新形态作品。 他还介绍了爱奇艺创作者生态建设布局，致力于建设“影视创作者和观众的社区”，搭建起七大创作…",
+            "is_foreign": false
+          },
+          {
+            "title": "天猫家装节发布四大趋势营销",
+            "summary": "[[天猫]] 秋季家装节围绕 AI 智活等四大趋势，联合 13 个品牌展开营销。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/378832.html",
+            "title_original": "天猫家装节：家，不是一个讲规矩的地方",
+            "excerpt": "Brief 这是一个偏促销的Brief，天猫秋季家装节，四个趋势、13 个品牌，格力、萤石、海尔、美世达、狄普、曼斯菲尔、苏木源、德龙、小米、Stanley、小吉、朱炳仁、SKG…… 听上去就是一场标准的“趋势发布 + 产品种草”。 AI、家具、咖啡、复古，四件事各说各的，放在一起很容易变成一张功能清单。 Brief里给了我们四个“活”： AI智活、家具灵活、玩咖鲜活、古典再活。 机器学着看人：灯知道你在哪个房间，风知道怀里有人要绕开。 一张桌子，早上是餐桌，下午是书桌，晚上是孩子的战场。 博物馆里的画回到客厅和浴室，继续被人靠、被人坐、被人丢纸飞机。 这四个\"活\"，干的是同一件事： 把那些不必要的规矩挪开。 回到家，回归生活，做…",
+            "is_foreign": false
+          },
+          {
+            "title": "ITO 发布卢昱晓代言新广告片",
+            "summary": "[[ITO]] 发布代言人卢昱晓主演的新广告片《回环有时，我去无限》。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/378958.html",
+            "title_original": "ITO×卢昱晓：回环有时，我去无限",
+            "excerpt": "《回环有时，我去无限》 「我」离无限有多远? 去年，我们的答案是： 一次旅行，便能抵达 。 这一次，我们重新看向，那些出发之后回来的时刻。 无限一定意味着一直向前吗？或者，回到起点，也可以是另一种出发。 今年，ITO陪伴品牌代言人卢昱晓回到曾经生活的地方。与许久未见的朋友、尚未抵达的海岸，共同将旅途折回自身。 ∞从来不只向外延伸。它有交点，也有回环。离开，抵达，重返，再出发。世界在时间里留下痕迹，我们也带着新的目光，重新看见它。 伦敦的街道，依然保留着旧日的轮廓。她曾在这里度过了一段时光，而后走进演员这个未被预设的角色。多年以后再回来，地点没有改变，观看它的人已经不同。 继续向前，她去往康沃尔与马盖特。潮汐与风不断改写海岸，小镇的…",
+            "is_foreign": false
+          },
+          {
+            "title": "乐纯 CEO 扫码视频营销引消费者吐槽",
+            "summary": "[[乐纯]] 在酸奶包装设置 CEO 亲自录制的小视频，被消费者吐槽文案说教。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1589818.html",
+            "title_original": "乐纯CEO亲自录小视频当福利？登味快溢出屏幕了",
+            "excerpt": "有嘉豪那味了。 本来只想开心喝口酸奶，结果看到这包装上的文案，直接两眼一黑。 文案最让人不适的地方，就是那股扑面而来的登味。 一上来就是一种老师提问学生的口吻。 “你知道吗？”，上来就默认消费者是不懂的。 录就录吧，还乐纯CEO “亲自” 录给你的。我还亲自买了，亲自吃了呢！ 之前扫码进去就能看到乐纯CEO大讲特讲 神经科学 。 看完内心OS：真的0人想要，好吗？！ 网友评价是： 我只是想喝个酸奶而已，谁录的小视频真的一点不重要。消费者压根没想要这份“附赠”～ 帖子下面，网友更是直接吐槽，疑似老板 出道失败 。 买酸奶，真的不是因为 喜欢 CEO！ 员工想方设法 讨好老板 ，却想让消费者承情。 看完已经 倒胃口 了。 整天净整些虚…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "NandhaKishorM/laya",
+            "url": "https://github.com/NandhaKishorM/laya",
+            "intro": "给一段文字快速做选择题、打分或判断是/否的 AI 小工具，不用等它慢慢写字。",
+            "features": [
+              "一次就能给出答案，不用逐字生成",
+              "支持 100 多种语言的文字判断",
+              "能自动挑合适的模型处理请求"
+            ],
+            "guide": "面向开发者，需要 Python 环境，从 Hugging Face 下载模型后调用；普通用户暂时用不上。",
+            "steps": [
+              "准备 Python 环境",
+              "从 Hugging Face 下载 laya 模型",
+              "调用模型对文字做判断"
+            ],
+            "install": "",
+            "summary": "给一段文字快速做选择题、打分或判断是/否的 AI 小工具，不用等它慢慢写字。",
+            "source": "GitHub",
+            "stars": "20372",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Non-autoregressive System 1 decision engine. Typed choice, score and yes/no decisions over any text in a single forward pass, in 100+ languages, with a router that picks the right checkpoint per request.",
+            "is_foreign": true
+          },
+          {
+            "title": "shadcn-ui/lint",
+            "url": "https://github.com/shadcn-ui/lint",
+            "intro": "给 AI 写代码时立规矩的检查工具，防止它乱改你的界面样式。",
+            "features": [
+              "自定义设计规则，AI 违规就报错",
+              "报错时告诉 AI 该怎么改",
+              "支持 React、Svelte、Vue 项目"
+            ],
+            "guide": "需要 Node 环境，在 Tailwind v4 项目里安装；也可以把 SETUP.md 链接丢给 AI 助手自动配置。",
+            "steps": [
+              "准备 Node 环境",
+              "把 SETUP.md 链接发给 AI 助手配置",
+              "选择并配置你的设计规则"
+            ],
+            "install": "",
+            "summary": "给 AI 写代码时立规矩的检查工具，防止它乱改你的界面样式。",
+            "source": "GitHub",
+            "stars": "2700",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "An agent-first linter for Tailwind design systems. Write design system rules that agents can verify.",
+            "is_foreign": true
+          },
+          {
+            "title": "rowboatlabs/rowboat",
+            "url": "https://github.com/rowboatlabs/rowboat",
+            "intro": "装在电脑上的开源 AI 助手，帮你管邮件、记笔记、开会记录还能自动干活。",
+            "features": [
+              "把邮件、会议、聊天整理成知识库",
+              "自动给重要邮件起草回复",
+              "可设定时或触发式后台任务"
+            ],
+            "guide": "直接下载 Mac/Windows/Linux 安装包即可使用，无需自己搭环境。",
+            "steps": [
+              "从官网下载对应系统安装包",
+              "安装并打开 Rowboat",
+              "连接邮箱等账号开始使用"
+            ],
+            "install": "",
+            "summary": "装在电脑上的开源 AI 助手，帮你管邮件、记笔记、开会记录还能自动干活。",
+            "source": "GitHub",
+            "stars": "17961",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "AI coworker with memory and collaboration",
+            "is_foreign": true
+          },
+          {
+            "title": "hacksider/Deep-Live-Cam",
+            "url": "https://github.com/hacksider/Deep-Live-Cam",
+            "intro": "用一张照片就能实时换脸，或一键给视频换脸的开源工具。",
+            "features": [
+              "一张照片即可实时换脸",
+              "一键给视频做换脸",
+              "内置检查拦截不当内容"
+            ],
+            "guide": "需要 Python 环境，本地运行；使用真人脸需获得对方同意，并标注为换脸内容。",
+            "steps": [
+              "准备 Python 环境",
+              "按 README 安装依赖",
+              "运行程序并选择人脸图片"
+            ],
+            "install": "",
+            "summary": "用一张照片就能实时换脸，或一键给视频换脸的开源工具。",
+            "source": "GitHub",
+            "stars": "96812",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "real time face swap and one-click video deepfake with only a single image",
+            "is_foreign": true
+          },
+          {
+            "title": "puppeteer/puppeteer",
+            "url": "https://github.com/puppeteer/puppeteer",
+            "intro": "用代码遥控浏览器自动点按钮、填表单、抓网页的工具。",
+            "features": [
+              "用代码自动操作浏览器",
+              "默认后台运行不弹窗口",
+              "可截图、抓取网页内容"
+            ],
+            "guide": "需要 Node 环境，用 npm 安装；安装时会自动下载配套浏览器，也可手动补下载。",
+            "steps": [
+              "准备 Node 环境",
+              "运行 npm i puppeteer",
+              "若浏览器未下载，运行 npx puppeteer browsers install"
+            ],
+            "install": "npm i puppeteer",
+            "summary": "用代码遥控浏览器自动点按钮、填表单、抓网页的工具。",
+            "source": "GitHub",
+            "stars": "95616",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "JavaScript API for Chrome and Firefox",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 更会做判断、守规矩、干活和自动操作网页"
+      }
+    ]
+  }
+}
