@@ -1,0 +1,335 @@
+{
+  "date": "2026-09-25",
+  "generated_at": "2026-09-24T23:55:54.469525+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 21,
+    "rss_ok": 23,
+    "rss_failed": 0,
+    "raw_news": 275,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-09-25",
+    "digest": "Meta的Muse与Instinct掀起AI代理热潮，百度颁最高奖、DeepSeek推理提速近7倍，Tapestry接入Gemini购物。",
+    "keywords": [
+      "AI代理",
+      "DeepSeek",
+      "百度",
+      "东方树叶",
+      "零售媒体"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Meta的Muse与OpenClaw高度相似",
+            "summary": "[[Meta]]新AI代理[[Muse]]上线即登顶App Store，美国日活约60万；AI代理平台[[Instinct]]正以25亿美元估值融资。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/report/1000180/muse-openclaw-instinct-lookalike",
+            "title_original": "Muse sure looks a lot like OpenClaw",
+            "excerpt": "We seem to be entering into an AI agent renaissance. Meta's new consumer-facing AI agent, Muse, topped the App Store charts soon after its release and has 600,000 daily active users in the US, by an Apptopia estimate. And AI agent platform Instinct, whose eponymous creator is fundraising at a $2.5 billion valuation, h…",
+            "is_foreign": true
+          },
+          {
+            "title": "太初ZDTaichu5.0-9B登热门榜",
+            "summary": "[[TaichuAI]]的[[ZDTaichu5.0-9B]]登上HuggingFace热门模型榜，trendingScore 482，获赞1040，下载8313。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/TaichuAI/ZDTaichu5.0-9B",
+            "title_original": "TaichuAI/ZDTaichu5.0-9B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 482）类型 image-text-to-text。likes 1040，下载 8313。标签：safetensors、zdtaichu5_0、multimodal、vision-language-model、spatial-reasoning、agent。",
+            "is_foreign": true
+          },
+          {
+            "title": "DeepSeek-V4.1-Flash登热门榜",
+            "summary": "[[DeepSeek]]的[[DeepSeek-V4.1-Flash]]登上HuggingFace热门模型榜，trendingScore 506，获赞3714，下载606028。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+            "title_original": "deepseek-ai/DeepSeek-V4.1-Flash 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 506）类型 image-text-to-text。likes 3714，下载 606028。标签：transformers、safetensors、deepseek_v41、text-generation、image-text-to-text、license:mit。",
+            "is_foreign": true
+          },
+          {
+            "title": "Qwen3.8-27B登热门模型榜",
+            "summary": "[[Qwen]]的[[Qwen3.8-27B]]登上HuggingFace热门模型榜，trendingScore 497，获赞16219，下载6765008。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+            "title_original": "Qwen/Qwen3.8-27B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 497）类型 image-text-to-text。likes 16219，下载 6765008。标签：transformers、safetensors、qwen3_5、image-text-to-text、conversational、license:apache-2.0。",
+            "is_foreign": true
+          },
+          {
+            "title": "Ternary-Bonsai-2-27B登热门榜",
+            "summary": "[[prism-ml]]的[[Ternary-Bonsai-2-27B-gguf]]登上HuggingFace热门模型榜，trendingScore 1735，获赞2039，下载2991233。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
+            "title_original": "prism-ml/Ternary-Bonsai-2-27B-gguf 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 1735）类型 text-generation。likes 2039，下载 2991233。标签：llama.cpp、gguf、ternary、2-bit、llama-cpp、cuda。",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "李彦宏颁百度最高奖",
+            "summary": "[[李彦宏]]为技术团队颁发[[百度最高奖]]，天池与dodo两队各获100万美元，分别聚焦[[昆仑芯]]超节点与企业AI员工。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/371030",
+            "title_original": "李彦宏的长期主义，进入回报周期",
+            "excerpt": "作者｜cola \n 编辑｜郑玄 \n \n 9 月 21 日，百度创始人李彦宏在内部活动上为技术团队颁发「百度最高奖」。两支入围团队均获奖，各获 100 万美元奖励。 \n 其中，天池团队面向万亿级 MoE 大模型，自主研发百度天池超节点架构；dodo 团队是通过打造企业 AI 员工。 \n 它们代表着百度当下两条重要的技术探索：基于 昆仑芯 的天池超节点，向更大规模的 AI 基础设施深入；以及让 Agent 真正进入组织。 \n 但如果把时间轴再往前拉，百度今天的 AI 故事，还有一条更早埋下的技术伏笔——昆仑芯。 \n 2010 年前后，百度搜索业务的服务器集群规模随流量高速扩张，海外进口芯片单片成本高达上万美元，持续攀升的算力开支不断挤…",
+            "is_foreign": false
+          },
+          {
+            "title": "3D生成大模型进入Agent时代",
+            "summary": "[[GPT-6 Astra]]发布后可直接进入[[Blender]]搭建住宅场景并自行返工，3D内容创作竞争转向Agent能力。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/371031",
+            "title_original": "Agent 时代来了，3D 生成大模型接下来比什么？",
+            "excerpt": "9 月 3 日，GPT-6 Astra 的发布，把 3D 内容创作带到了舞台中央。 \n 在 GPT-6 Astra 官方发布页的一个不到 3 分钟的视频里与后续解读中，Astra 已经能直接进入 Blender，从一句住宅设计需求开始搭场景，先生成极简住宅，后来又将其扩展为围绕庭院展开的家庭住宅。里面有卧室、办公室、厨房和卫生间；家具从床板、衣柜挂杆、烤箱、餐具抽屉，再到灯光模拟，一应俱全。甚至水槽表面的法线出了问题之后，Astra 还会自己返工。 \n 为了制作 30 秒室内漫游，它还会把相机放在约 1.65 米的人眼高度，用 24—26mm 镜头安排四段运动；进入 Unreal Engine 5 之后，它又自己处理 FBX、JS…",
+            "is_foreign": false
+          },
+          {
+            "title": "梁文锋署名RSI沙盒论文",
+            "summary": "[[DeepSeek]]联合[[清华大学]]发表论文，[[梁文锋]]署名，研究用沙盒开启RSI。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8151587.html",
+            "title_original": "梁文锋用沙盒开启RSI",
+            "excerpt": "DeepSeek联合清华大学发论文，梁文锋署名",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek推理吞吐提升近7倍",
+            "summary": "[[DeepSeek]]通过内核补齐与通信重构，推理吞吐提升近7倍，1.5台6000D跑赢1台B300。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/09/496925.html",
+            "title_original": "PCIe显卡被低估了！内核补齐+通信重构，DeepSeek推理吞吐翻近7倍",
+            "excerpt": "1.5台6000D跑赢1台B300！",
+            "is_foreign": false
+          },
+          {
+            "title": "摩尔线程适配Protenix-v2",
+            "summary": "[[摩尔线程]]MTT S5000完成[[字节跳动]]Protenix-v2全链路推理支持，覆盖大分子预测等三大AI4S场景。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/006/989.htm",
+            "title_original": "摩尔线程官宣：MTT S5000 适配字节跳动 Protenix-v2 开源生物分子结构预测模型",
+            "excerpt": "IT之家 9 月 24 日消息，摩尔线程今天宣布，旗下训推一体智算卡 MTT S5000 正式完成了开源生物分子结构预测模型 Protenix-v2 的全链路推理支持。 据IT之家了解，Protenix-v2 开源模型由字节跳动 Seed 团队研发，发布于 2026 年 4 月，在多项核心基准测试中性能持平甚至超越 DeepMind AlphaFold 3，是目前全球少数能够对蛋白质、DNA、RNA 及小分子配体复合物进行高精度端到端预测的开源基座。 MTT S5000 此次适配，标志着摩尔线程实现了大分子结构预测、全基因组序列建模与临床医学影像三大 AI for Science（AI4S）核心场景的端到端工程验证，为国内药企及科…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Tapestry接入Gemini购物",
+            "summary": "[[Tapestry]]旗下[[Coach]]与[[Kate Spade]]商品可在[[Google]]的Gemini应用及AI模式中直接购买。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/tapestry-sell-via-google-gemini-app-ai-mode/830890/",
+            "title_original": "Tapestry to sell via Google’s Gemini app, AI Mode",
+            "excerpt": "Coach and Kate Spade items are now available for purchase in Google’s AI shopping ecosystem.",
+            "is_foreign": true
+          },
+          {
+            "title": "零售商AI代理监管难",
+            "summary": "零售业AI代理使用量激增，但可见性不足，受监管数据面临风险。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/retail-ai-agents-visibility-data-breaches-netskope/831035/",
+            "title_original": "Retailers tamp down shadow AI but struggle to oversee agentic sprawl",
+            "excerpt": "The use of AI agents is soaring in the retail sector, but visibility remains a major challenge, with regulated data at risk.",
+            "is_foreign": true
+          },
+          {
+            "title": "Lowe's试点无人机配送",
+            "summary": "[[Lowe's]]联合[[Wing]]与[[DoorDash]]在北卡罗来纳州门店试点无人机配送，初期覆盖超100个SKU。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/lowes-drone-delivery-pilot-wing-doordash/831233/",
+            "title_original": "Lowe’s debuts drone delivery pilot with Wing, DoorDash",
+            "excerpt": "The initial rollout at a North Carolina store involves over 100 SKUs and could later expand to other locations.",
+            "is_foreign": true
+          },
+          {
+            "title": "Instacart降低商品加价",
+            "summary": "[[Instacart]] CEO Chris Rogers称降低线上加价、会员权益与配送费是推动杂货电商增长的关键。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/technology/why-instacart-is-focused-on-reducing-item-markups-to-grow-its-delivery-platform/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Why Instacart is focused on reducing item markups to grow its delivery platform",
+            "excerpt": "Instacart CEO Chris Rogers says lower online markups, loyalty perks and cheaper delivery options are crucial to driving more online grocery growth in the coming years.",
+            "is_foreign": true
+          },
+          {
+            "title": "百思买推CTV零售媒体",
+            "summary": "[[Best Buy]]将联网电视置于零售媒体核心，推出新广告业务品牌Best Buy CTV。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/marketing/big-box-briefing-best-buy-puts-ctv-at-the-center-of-its-retail-media-pitch/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Big-Box Briefing: Best Buy puts CTV at the center of its retail media pitch",
+            "excerpt": "Best Buy is increasingly putting its electronics roots at the heart of its retail media pitch. On Wednesday, Best Buy held its annual showcase event highlighting what’s coming up in its retail media business — including a new part of its advertising business that the company is branding as Best Buy CTV.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "东方树叶反超农夫山泉瓶装水",
+            "summary": "[[农夫山泉]]2026上半年茶饮料收入131.2亿元，超过水的96.4亿元，[[东方树叶]]成第一大业务。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1588257.html",
+            "title_original": "打败农夫山泉的，居然是另一个“农夫山泉”",
+            "excerpt": "东方树叶是怎么做大的？ 作者：胡一鸣，来源： 一鸣谈品牌 在很多人的认知里，农夫山泉就是一家卖水的公司。 但如果看了农夫山泉最新的财报，你会发现一个反常识的数据：2026年上半年，农夫山泉的茶饮料卖了131.2亿，而水只卖了96.4亿，茶饮料比水多卖了35亿。 茶饮料进一步取代水，成为农夫山泉的第一大业务。而这背后的头号功臣，就是东方树叶。 这就引出了一个很违背直觉的问题： 一个靠包装水打下江山的企业，为什么允许另一个品牌抢走自己核心业务的主位？ 很多企业也想要打造第二增长曲线，但在战略资源的投入上却出现错配，生怕被新业务抢了风头。 东方树叶反超农夫山泉说明了一件事： 一个企业真正的战略能力，不是靠死守原来的第一业务，而是主动培养…",
+            "is_foreign": false
+          },
+          {
+            "title": "部分品牌slogan回归购买理由",
+            "summary": "部分品牌将slogan从情感价值回落到产品体验与购买理由，以回答消费者最基本的选择问题。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1583133.html",
+            "title_original": "有些品牌，正在把slogan往回改",
+            "excerpt": "品牌真正值钱的东西，反而都很朴素。 这几年品牌只要改slogan，一般都是往上升华。 产品讲过了，就升华成生活方式。 生活方式讲过了，就升华成情感。 情感再往上，就升华成态度、价值观、社会意义。 这个操作大家都很熟悉了。 但最近我发现，有些品牌居然开始把slogan往回改—— 从情感价值，回落到购买理由； 从大情绪，回落到产品体验； 从大价值，回落到只有自己能占的价值； 甚至从社会意义，回落到产品本身该做的事。 我暂且把这种现象叫作： 品牌价值回落。 这里的“回落”不降级。更像是品牌发现，价值说得太大、太远之后，反而越来越难回答他们的消费者几个最基本的问题： 你到底好在哪？ 为什么我要买你？ 为什么非得是你？ 问题不在升华，问题在…",
+            "is_foreign": false
+          },
+          {
+            "title": "海尔洗碗机因网友翻红",
+            "summary": "[[海尔]]一台1997年洗碗机经小红书博主分享后翻红，网友要求量产，品牌与用户共创营销。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1588320.html",
+            "title_original": "海尔洗碗机意外翻红，这届网友才是最强乙方",
+            "excerpt": "网友点火，品牌添柴。 原标题：海尔误上颁奖台、雪王闯进月饼圈，这届网友才是最强乙方吧 有些网友的营销天赋，恐怕在在座各位广告人、正规军之上。 以前大家总觉得，创意必须出自高大上的 4A 会议室，必须经过层层审批和精雕细琢，be like《早春晴朗》。 现在的真实情况是， 这届网友意外成了地表最强乙方，不用过五关斩六将的提案，偶然的一条评论、一条帖子、一条视频都有可能成为品牌的爆款创意。 「网友点火，品牌添柴」 的共创模式，正在成为品牌营销性价比最高（but 也是最不可控）的妙计。 海尔“返聘”1997年洗碗机 被网友连夜要求量产 最近，海尔的一台三十年前的洗碗机“翻红”了。 事情的起因是一位小红书博主@虾球多看书曾在去年分享过自己…",
+            "is_foreign": false
+          },
+          {
+            "title": "伊利脱脂奶销售额增36%",
+            "summary": "[[伊利]]脱脂奶今年YTD06销售额同比增长36.34%，品牌转向让用户主动选择而非教育市场。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/379091.html",
+            "title_original": "别卷了，伊利脱脂纯牛奶劝你“脱”掉负担",
+            "excerpt": "白奶市场，越来越卷了。 同质化竞争之下，脱脂奶是少数还在增长的品类—— 今年YTD06，伊利脱脂奶销售额同比增长36.34%。 但增长背后有一个问题：脱脂奶的核心卖点（0脂肪、轻盈无负担），消费者早就知道。 所有品牌都在说，用户已经免疫了。 伊利脱脂奶这次要做的， 不是“教育市场”，而是“让用户主动选择”。 所以，我们没有再重复那些固有认知，而是往下挖了一层。 首先找准我们的TA 他们不是健身狂人，不是自律达人，不是每天早上六点起来跑步的人。 他们是普通人。 是一边加班一边吃沙拉的人。 是累了一天还要逼自己做运动的人。 是明明想吃火锅但点了轻食的人。 是深夜饿到失眠还要忍住不吃的人。 他们一边想变好，一边被生活榨干。 他们需要的不…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "mikehasa/golive-skill",
+            "url": "https://github.com/mikehasa/golive-skill",
+            "intro": "Take your agent-built product live: hosting, database, domain, email, payments — on your own accounts. Open-source Agent Skill + zero-dependency Node CLI: detect → plan → approve → apply → verify. No GoLive account, bac…",
+            "features": [],
+            "guide": "",
+            "steps": [],
+            "install": "",
+            "summary": "Take your agent-built product live: hosting, database, domain, email, payments — on your own accounts. Open-source Agent Skill + zero-dependency Node CLI: detect → plan → approve → apply → verify. No GoLive account, bac…",
+            "source": "GitHub",
+            "stars": "874",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "",
+            "is_foreign": true,
+            "untranslated": true
+          },
+          {
+            "title": "lnkiai/m3e-canvas",
+            "url": "https://github.com/lnkiai/m3e-canvas",
+            "intro": "Sketch Material 3 Expressive screens in the browser and turn them into vibe-coding prompts.",
+            "features": [],
+            "guide": "",
+            "steps": [],
+            "install": "",
+            "summary": "Sketch Material 3 Expressive screens in the browser and turn them into vibe-coding prompts.",
+            "source": "GitHub",
+            "stars": "8159",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "",
+            "is_foreign": true,
+            "untranslated": true
+          },
+          {
+            "title": "omnivore-app/omnivore",
+            "url": "https://github.com/omnivore-app/omnivore",
+            "intro": "Omnivore is a complete, open source read-it-later solution for people who like reading.",
+            "features": [],
+            "guide": "",
+            "steps": [],
+            "install": "",
+            "summary": "Omnivore is a complete, open source read-it-later solution for people who like reading.",
+            "source": "GitHub",
+            "stars": "16259",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "",
+            "is_foreign": true,
+            "untranslated": true
+          },
+          {
+            "title": "thedotmack/claude-mem",
+            "url": "https://github.com/thedotmack/claude-mem",
+            "intro": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw,…",
+            "features": [],
+            "guide": "",
+            "steps": [],
+            "install": "",
+            "summary": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw,…",
+            "source": "GitHub",
+            "stars": "94627",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "",
+            "is_foreign": true,
+            "untranslated": true
+          },
+          {
+            "title": "infiniflow/ragflow",
+            "url": "https://github.com/infiniflow/ragflow",
+            "intro": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+            "features": [],
+            "guide": "",
+            "steps": [],
+            "install": "",
+            "summary": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+            "source": "GitHub",
+            "stars": "91276",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "",
+            "is_foreign": true,
+            "untranslated": true
+          }
+        ],
+        "lead": ""
+      }
+    ],
+    "degraded": true,
+    "degraded_reason": "以下板块未完成 AI 处理：GitHub（RuntimeError）",
+    "partial_degraded": true
+  }
+}
