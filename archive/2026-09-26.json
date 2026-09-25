@@ -1,0 +1,327 @@
+{
+  "date": "2026-09-26",
+  "generated_at": "2026-09-25T23:58:21.956995+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 21,
+    "rss_ok": 23,
+    "rss_failed": 0,
+    "raw_news": 214,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-09-26",
+    "digest": "Meta力推Muse应用登顶，微软发布Copilot超级应用，Anthropic签116亿美元算力协议。",
+    "keywords": [
+      "Meta",
+      "Copilot",
+      "Anthropic",
+      "DeepSeek",
+      "世界技能大赛"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Meta力推Muse应用，登顶应用商店",
+            "summary": "[[Meta]]力推个人AI智能体[[Muse]]，该应用登顶应用商店榜单，用户数快速增长。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/",
+            "title_original": "Meta is putting its muscle behind Muse as the AI app takes off",
+            "excerpt": "Muse is topping the app store charts and adding users at a rapid clip, while Meta ramps up the personal AI agent's promotion across its own apps and beyond.",
+            "is_foreign": true
+          },
+          {
+            "title": "TaichuAI多模态模型登HuggingFace热榜",
+            "summary": "[[TaichuAI]]的ZDTaichu5.0-9B登上[[HuggingFace]]热门模型榜，trendingScore 479，likes 1048，下载9498。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/TaichuAI/ZDTaichu5.0-9B",
+            "title_original": "TaichuAI/ZDTaichu5.0-9B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 479）类型 image-text-to-text。likes 1048，下载 9498。标签：safetensors、zdtaichu5_0、multimodal、vision-language-model、spatial-reasoning、agent。",
+            "is_foreign": true
+          },
+          {
+            "title": "Qwen3.8-27B登HuggingFace热榜",
+            "summary": "[[Qwen]]的Qwen3.8-27B登上[[HuggingFace]]热门模型榜，trendingScore 463，likes 16280，下载6579319。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+            "title_original": "Qwen/Qwen3.8-27B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 463）类型 image-text-to-text。likes 16280，下载 6579319。标签：transformers、safetensors、qwen3_5、image-text-to-text、conversational、license:apache-2.0。",
+            "is_foreign": true
+          },
+          {
+            "title": "DeepSeek-V4.1-Flash登HuggingFace热榜",
+            "summary": "[[DeepSeek]]的DeepSeek-V4.1-Flash登上[[HuggingFace]]热门模型榜，trendingScore 405，likes 3752，下载621396。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+            "title_original": "deepseek-ai/DeepSeek-V4.1-Flash 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 405）类型 image-text-to-text。likes 3752，下载 621396。标签：transformers、safetensors、deepseek_v41、text-generation、image-text-to-text、license:mit。",
+            "is_foreign": true
+          },
+          {
+            "title": "Ternary-Bonsai-2-27B登HuggingFace热榜",
+            "summary": "[[prism-ml]]的Ternary-Bonsai-2-27B-gguf登上[[HuggingFace]]热门模型榜，trendingScore 1058，下载3109078。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
+            "title_original": "prism-ml/Ternary-Bonsai-2-27B-gguf 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 1058）类型 text-generation。likes 2089，下载 3109078。标签：llama.cpp、gguf、ternary、2-bit、llama-cpp、cuda。",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "世界技能大赛在沪举办，新增AI赛项",
+            "summary": "第48届[[世界技能大赛]]在上海举行，64个项目中8个与AI直接相关，3个为新增，创历届之最。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/007/206.htm",
+            "title_original": "第 48 届世界技能大赛在沪举办，新增 3 项人工智能相关赛项创历届之最",
+            "excerpt": "IT之家 9 月 25 日消息，据央视新闻报道，9 月 22 日至 27 日，第 48 届世界技能大赛在中国上海举行。本届世赛上，人工智能走进赛题、操作台，成为选手训练和比赛的一部分。 本届世赛 64 个项目中，与 AI 直接相关的赛项有 8 个：智慧安防技术、软件测试、数字交互媒体设计、自主移动机器人、工业 4.0、云计算、网络安全、3D 数字游戏艺术。其中 智慧安防技术、软件测试、数字交互媒体设计是本届新增 ，新增数量创历届之最。 这些赛项的 AI 含量，体现在具体的工作场景里。 智慧安防技术，选手要应用深度学习算法和大模型基础原理，让监控系统自动识别异常。 软件测试，AI 已从工具升级为协作伙伴，选手调用多个智能体自主进行测…",
+            "is_foreign": false
+          },
+          {
+            "title": "OpenAI承认53张用户图片被AI智能体外传",
+            "summary": "[[OpenAI]]承认其AI智能体将53张用户图片以未列出链接发布到第三方图床，受影响企业不知情。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/007/274.htm",
+            "title_original": "OpenAI 承认 53 张用户图片被其 AI 智能体“偷偷”传到公网",
+            "excerpt": "IT之家 9 月 26 日消息，OpenAI 昨日（9 月 25 日）更新其博客，承认发生一起违规事件， 在企业不知情情况下，AI 智能体将 53 张客户图片发布到公开网站。 在博文中，IT之家援引博文介绍，OpenAI 公司承认在其研究环境中运行的 AI 智能体曾将 53 张由用户上传到 OpenAI 模型的图片，以“未公开列出的链接”形式发布到第三方图像托管网站（类似图床），而受影响公司当时并不知情。 在影响方面，OpenAI 指出这些图片并非出现在公开索引页面上，作为“未列出（unlisted）”链接存在，理论上不易被搜索引擎直接发现，不过对于掌握链接的用户而言，可以访问获取相关内容。 OpenAI 表示这属于对用户数据的“…",
+            "is_foreign": false
+          },
+          {
+            "title": "微软发布新版Copilot超级应用",
+            "summary": "[[微软]]正式发布新版[[Copilot]]超级应用，整合聊天、编程和智能体三类AI能力，定位为工作而生。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/007/230.htm",
+            "title_original": "聊天、编程、智能体三合一，微软正式发布新版 Copilot“超级应用”",
+            "excerpt": "IT之家 9 月 25 日消息，今天（25 日）晚间，微软正式发布新版 Copilot“超级应用”。新版 Copilot 把聊天、编程和智能体三类 AI 能力集中到同一个界面中。 微软为其给出的新定位是“ 为工作而生的 AI ”，甚至把 Copilot 与 Office 当年对生产力的影响相提并论。微软 AI 工作业务首席营销官贾里德 · 斯帕塔罗表示：“正如 Office 定义了 PC 时代的工作方式，新 Copilot 旨在定义 AI 时代的工作方式。” 新版 Copilot 分为 Home、Code 和 Autopilot 三个标签页。Home 把 Copilot Chat 和 Cowork 整合到一起，也是用户打开 Cop…",
+            "is_foreign": false
+          },
+          {
+            "title": "Anthropic与Akamai签116亿美元算力协议",
+            "summary": "[[Anthropic]]与[[Akamai]]签署7年116亿美元合同，扩充CPU算力，合同可扩大最多90亿美元。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/007/263.htm",
+            "title_original": "Anthropic 与 Akamai 达成 7 年 116 亿美元协议，扩充 CPU 算力",
+            "excerpt": "IT之家 9 月 26 日消息，云计算、网络安全、内容交付企业 Akamai 当地时间 24 日宣布大幅扩展与 Anthropic 的合作关系，两家公司签署了一份为期 7 年、价值 116 亿美元 （IT之家注：现汇率约合 779.2 亿元人民币） 的合同。 ▲ Akamai 总部 根据协议，Akamai 将以其分布式人工智能基础设施和软件 满足 Anthropic 日益增长的 CPU 工作负载需求 。这 116 亿美元承诺对应 Akamai 的 55 亿美元额外总资本支出。双方还可将合同扩大最多 90 亿美元。 作为两家企业加强战略合作的一部分，Akamai 已向 Anthropic 发行认股权证， 允许 Anthropic 购…",
+            "is_foreign": false
+          },
+          {
+            "title": "Kimi推出浏览器插件，网页操作变Skill",
+            "summary": "[[Kimi]]推出浏览器插件，可将网页操作一秒转化为Skill，拓展智能体能力。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/09/497075.html",
+            "title_original": "别人忙着卷Code，Kimi抽身反打浏览器插件：网页操作一秒变Skill",
+            "excerpt": "Agent的手越伸越长",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Target在汉普顿开店，外墙非红色",
+            "summary": "[[Target]]在纽约Bridgehampton新店开业，建筑外立面未使用其标志性红色。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/target-store-hamptons-bridgehampton-gray/831356/",
+            "title_original": "Target is opening a store in the Hamptons. It’s not red.",
+            "excerpt": "The retailer’s signature color is not part of the external facade of the building at its new location in Bridgehampton, New York.",
+            "is_foreign": true
+          },
+          {
+            "title": "TJX CEO称配送模式有助应对厄尔尼诺",
+            "summary": "[[TJX]] CEO表示其供应链策略允许持有库存而非直送门店，有助应对厄尔尼诺影响。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/tjx-ceo-distribution-model-el-nino/831118/",
+            "title_original": "TJX CEO: Distribution model will help weather El Niño",
+            "excerpt": "The off-price retailer’s supply chain strategy allows it to hold inventory instead of going straight to stores.",
+            "is_foreign": true
+          },
+          {
+            "title": "Michael Kors拖累Capri，J.Crew庆祝夹克40年",
+            "summary": "[[Michael Kors]]拖累[[Capri Holdings]]业绩，[[J.Crew]]庆祝Barn Jacket推出40周年。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/michael-kors-capri-sale-acquisition-j-crew-barn-jacket-anniversary/831321/",
+            "title_original": "The Weekly Closeout: What will happen to Michael Kors and J. Crew celebrates its Barn Jacket",
+            "excerpt": "The fashion brand is dragging down Capri Holdings. Meanwhile, the specialty retailer observes 40 years of a key outerwear product.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "2026年文旅经济洞察报告发布",
+            "summary": "报告显示2026上半年国内旅游34.63亿人次、花费3.21万亿元，在线旅游三线及以下城市活跃占比42.5%。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1583098.html",
+            "title_original": "2026年文旅经济洞察报告：营销走入精耕细作时代",
+            "excerpt": "走马观花似的观光逐渐消失，取而代之的目标明确的玩法。 原标题：QuestMobile 2026年文旅经济洞察报告：两大变化昭示用户旅游行为深层改变，文旅营销必须锚定用户需求精耕细作…… 今天给大家分享一下2026年文旅经济洞察报告。 文旅经济呈现快速增长的趋势， 2026年上半年，国内旅游人次和出游总花费分别达到34.63亿次和3.21万亿元， 其中，城镇居民和农村居民出游人次分别为25.94亿次和8.69亿次，同比分别增加了5.8%和4.3%。 具体来看，两大变化已经非常明显， 一方面，出游需求持续向低线城市延伸，旅游及出行服务APP在低线城市的活跃占比全面提升， 其中，在线旅游活跃用户在三线及以下城市占比达到42.5%，同比增…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "kryvora-network/kryvora-node",
+            "url": "https://github.com/kryvora-network/kryvora-node",
+            "intro": "把闲置电脑接入一个分布式网络，帮它做验证任务换取回报。",
+            "features": [
+              "连接你的硬件到 Kryvora 网络",
+              "定时上报设备在线状态证明",
+              "验证其他节点的运行情况"
+            ],
+            "guide": "这是给有一定技术基础的人用的命令行程序，需要先拿到一个链上验证凭证（Genesis Node Key）才能运行，README 未给出具体安装命令。",
+            "steps": [
+              "先获取 Genesis Node Key 验证凭证",
+              "在 Arbitrum One 上确认凭证有效",
+              "按 README 说明运行节点程序"
+            ],
+            "install": "",
+            "summary": "把闲置电脑接入一个分布式网络，帮它做验证任务换取回报。",
+            "source": "GitHub",
+            "stars": "818",
+            "language": "Go",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Reference client daemon and verification worker for Kryvora Network nodes.",
+            "is_foreign": true
+          },
+          {
+            "title": "Vincentwei1021/anything2explainer",
+            "url": "https://github.com/Vincentwei1021/anything2explainer",
+            "intro": "给 AI 编程助手加个技能，输入一个话题就能生成带配音的讲解视频。",
+            "features": [
+              "输入话题自动生成讲解视频",
+              "自带配音和字幕",
+              "支持中文和英文两种语言",
+              "画面全部由代码绘制，不用素材库"
+            ],
+            "guide": "这是给 Claude Code 或 Codex 这类 AI 编程助手用的技能包，不是独立软件，需要配合这些工具使用，README 未给出具体安装命令。",
+            "steps": [
+              "准备 Claude Code 或 Codex 环境",
+              "把该技能包接入你的 AI 助手",
+              "输入话题让 AI 生成视频"
+            ],
+            "install": "",
+            "summary": "给 AI 编程助手加个技能，输入一个话题就能生成带配音的讲解视频。",
+            "source": "GitHub",
+            "stars": "2065",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Topic in, narrated explainer video out. A Claude Code / Codex skill that turns any topic into a black-canvas motion-graphics explainer video with TTS voiceover, subtitles and a chapter progress bar. Chinese or English;…",
+            "is_foreign": true
+          },
+          {
+            "title": "ShareX/ShareX",
+            "url": "https://github.com/ShareX/ShareX",
+            "intro": "Windows 上的免费截图录屏工具，一键截屏、编辑、上传分享。",
+            "features": [
+              "一个快捷键截取屏幕任意区域",
+              "录制视频或 GIF 动图",
+              "截图后直接标注编辑",
+              "自动上传并复制分享链接",
+              "还能识别图片里的文字"
+            ],
+            "guide": "Windows 桌面软件，去官网下载安装包即可使用，不需要注册账号，完全免费无广告。",
+            "steps": [
+              "访问官网 getsharex.com",
+              "下载 Windows 安装包",
+              "安装后设置快捷键即可使用"
+            ],
+            "install": "",
+            "summary": "Windows 上的免费截图录屏工具，一键截屏、编辑、上传分享。",
+            "source": "GitHub",
+            "stars": "39746",
+            "language": "C#",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "ShareX is a free and open-source application that enables users to capture or record any area of their screen with a single keystroke. It also supports uploading images, text, and various file types to a wide range of d…",
+            "is_foreign": true
+          },
+          {
+            "title": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "intro": "自己部署一个 AI 编程助手控制台，让 AI 帮你写代码、处理日常任务。",
+            "features": [
+              "在一个界面里管理多个 AI 编程助手",
+              "让 AI 自动把 GitHub 问题拆成任务",
+              "生成报告并自动发到 Slack",
+              "可以跑在自己电脑或公司服务器上"
+            ],
+            "guide": "默认跑在本地电脑上，也可以部署到 Docker 或服务器，README 未给出具体安装命令，需参考官方文档。",
+            "steps": [
+              "参考官方 Quickstart 文档",
+              "选择本地或 Docker 部署方式",
+              "配置好 AI 模型后开始使用"
+            ],
+            "install": "",
+            "summary": "自己部署一个 AI 编程助手控制台，让 AI 帮你写代码、处理日常任务。",
+            "source": "GitHub",
+            "stars": "89167",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🙌 OpenHands: AI-Driven Development",
+            "is_foreign": true
+          },
+          {
+            "title": "Leonxlnx/taste-skill",
+            "url": "https://github.com/Leonxlnx/taste-skill",
+            "intro": "给 AI 装上审美，让它生成的网页界面不再千篇一律。",
+            "features": [
+              "让 AI 做出的界面排版更好看",
+              "改善字体、间距和动效",
+              "附带生成参考图的技能",
+              "可配合多种 AI 编程工具使用"
+            ],
+            "guide": "这是给 AI 编程助手用的技能包，需要配合 Codex、Cursor 或 Claude Code 使用，README 未给出具体安装命令。",
+            "steps": [
+              "准备 Codex、Cursor 或 Claude Code",
+              "把该技能包接入你的 AI 工具",
+              "让 AI 按新风格生成界面"
+            ],
+            "install": "",
+            "summary": "给 AI 装上审美，让它生成的网页界面不再千篇一律。",
+            "source": "GitHub",
+            "stars": "90137",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 帮你干活：从做视频、写代码到管节点，还有截图神器。"
+      }
+    ]
+  }
+}

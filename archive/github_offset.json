@@ -1,5 +1,5 @@
 {
-  "classic_offset": 30,
+  "classic_offset": 32,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-09-16T14:59:34.738944+00:00",
   "recent_trending": [
-    "DayuanJiang/next-ai-draw-io",
-    "sumimakito/Mac-Duo",
-    "s1dashu/ip-as-logo-skill",
     "feder-cr/AIHawk",
     "kruzovic7/ai-data-extractor",
     "CopilotKit/OpenBot",
@@ -174,12 +171,15 @@
     "rowboatlabs/rowboat",
     "mikehasa/golive-skill",
     "lnkiai/m3e-canvas",
-    "omnivore-app/omnivore"
+    "omnivore-app/omnivore",
+    "kryvora-network/kryvora-node",
+    "Vincentwei1021/anything2explainer",
+    "ShareX/ShareX"
   ],
-  "last_run_date": "2026-09-24",
+  "last_run_date": "2026-09-25",
   "last_classic": [
-    "thedotmack/claude-mem",
-    "infiniflow/ragflow"
+    "OpenHands/OpenHands",
+    "Leonxlnx/taste-skill"
   ],
-  "updated_at": "2026-09-24T23:55:38.824410+00:00"
+  "updated_at": "2026-09-25T23:58:10.716588+00:00"
 }
