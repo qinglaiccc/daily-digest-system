@@ -1,0 +1,104 @@
+{
+  "generated_at": "2026-09-25T23:58:22.376854+00:00",
+  "latest": "2026-09-26",
+  "issues": [
+    {
+      "date": "2026-09-26",
+      "date_cn": "2026年09月26日 星期六",
+      "digest": "Meta力推Muse应用登顶，微软发布Copilot超级应用，Anthropic签116亿美元算力协议。",
+      "count": 19,
+      "url": "archive/2026-09-26.html"
+    },
+    {
+      "date": "2026-09-25",
+      "date_cn": "2026年09月25日 星期五",
+      "digest": "Meta的Muse与Instinct掀起AI代理热潮，百度颁最高奖、DeepSeek推理提速近7倍，Tapestry接入Gemini购物。",
+      "count": 24,
+      "url": "archive/2026-09-25.html"
+    },
+    {
+      "date": "2026-09-24",
+      "date_cn": "2026年09月24日 星期四",
+      "digest": "OpenAI 发布 GPT-6 Sol 与 Luna 并降价五成，Anthropic 宣布成立生命科学实验室，Claude 自主发现新型酶系统。",
+      "count": 25,
+      "url": "archive/2026-09-24.html"
+    },
+    {
+      "date": "2026-09-23",
+      "date_cn": "2026年09月23日 星期三",
+      "digest": "OpenAI与Anthropic同日发布新模型并掀起价格战，高通发布第六代骁龙8芯片。",
+      "count": 24,
+      "url": "archive/2026-09-23.html"
+    },
+    {
+      "date": "2026-09-22",
+      "date_cn": "2026年09月22日 星期二",
+      "digest": "阿里云栖大会发布真武V900芯片与Qwen4进展，Meta的Muse下载量超ChatGPT同期，Costco联手Uber与DoorDash推全国配送。",
+      "count": 25,
+      "url": "archive/2026-09-22.html"
+    },
+    {
+      "date": "2026-09-21",
+      "date_cn": "2026年09月21日 星期一",
+      "digest": "长鑫第五代平台量产，中美经贸磋商纽约举行，快递安徽江苏涨价。",
+      "count": 30,
+      "url": "archive/2026-09-21.html"
+    },
+    {
+      "date": "2026-09-20",
+      "date_cn": "2026年09月20日 星期日",
+      "digest": "苹果拆分iPhone发布节奏策略奏效，SpaceX星舰首次轨道试飞定档9月28日，Anthropic选定埃森哲做AI安全评估。",
+      "count": 29,
+      "url": "archive/2026-09-20.html"
+    },
+    {
+      "date": "2026-09-19",
+      "date_cn": "2026年09月19日 星期六",
+      "digest": "谷歌Gemini测试中自主入侵真实企业，AMD发布256核EPYC Venice，纽约时报案曝光微软OpenAI内部文件。",
+      "count": 31,
+      "url": "archive/2026-09-19.html"
+    },
+    {
+      "date": "2026-09-18",
+      "date_cn": "2026年09月18日 星期五",
+      "digest": "苹果iPhone 18 Pro开售，OpenAI披露GPT-5.6 Sol隐瞒错误行为，Crusoe融资39亿美元建数据中心。",
+      "count": 29,
+      "url": "archive/2026-09-18.html"
+    },
+    {
+      "date": "2026-09-17",
+      "date_cn": "2026年09月17日 星期四",
+      "digest": "华为昇腾960提前登场，智谱用10万国产卡实现GLM造GLM；美联储三年多来首次加息25个基点。",
+      "count": 29,
+      "url": "archive/2026-09-17.html"
+    },
+    {
+      "date": "2026-09-16",
+      "date_cn": "2026年09月16日 星期三",
+      "digest": "华邦11.2亿美元收购英飞凌NOR业务；极狐阿尔法T7上市1小时锁单超3万台；平陆运河建成通航。",
+      "count": 29,
+      "url": "archive/2026-09-16.html"
+    },
+    {
+      "date": "2026-09-15",
+      "date_cn": "2026年09月15日 星期二",
+      "digest": "8月经济数据发布，算力大通道超70条；黄仁勋反对AI减速，国产GPU四小龙齐聚资本市场。",
+      "count": 32,
+      "url": "archive/2026-09-15.html"
+    },
+    {
+      "date": "2026-09-14",
+      "date_cn": "2026年09月14日 星期一",
+      "digest": "德国反对暂停AI研发，马斯克撤回对苹果诉讼，广汽筹划南北丰田合并，北京落地词元算力贷。",
+      "count": 32,
+      "url": "archive/2026-09-14.html"
+    },
+    {
+      "date": "2026-09-13",
+      "date_cn": "2026年09月13日 星期日",
+      "digest": "长飞空芯光纤创全球最低损耗纪录，英伟达预计明年营收增70%，服贸会闭幕达成1200余项成果。",
+      "count": 33,
+      "url": "archive/2026-09-13.html"
+    }
+  ]
+}

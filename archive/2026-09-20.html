@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#F4F1EA">
+<meta name="description" content="2026年09月20日 星期日 每日早报：国际与国内科技新闻、新消费动态，以及 GitHub 热门效率与 AI 工具。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每日早报 · 2026年09月20日 星期日">
+<meta property="og:description" content="苹果拆分iPhone发布节奏策略奏效，SpaceX星舰首次轨道试飞定档9月28日，Anthropic选定埃森哲做AI安全评估。">
+<title>每日早报 · 2026年09月20日 星期日</title>
+
+<!--
+  视觉风格：复古纸质 + 硬核边框（Dashboard）
+    · 底板 #F4F1EA 纸质米色，全站不出现纯白
+    · 所有分隔、卡片、按钮一律 1px/2px 纯黑实线边框，零阴影、零圆角
+    · 点缀色：暗红 #8C2F1F（主）、深绿 #2F5D3A（次），低饱和度复古色
+    · 数字与标签用等宽体（档案卡片感），标题用大号粗体无衬线
+  布局：左侧固定 Sidebar（往期存档，选中项反黑）+ 右侧主内容区
+  交互：Tab 切换用原生 JS，无 JS 时自动退化为「全部板块顺序展开」
+-->
+<style>
+  :root {
+    --paper: #f4f1ea;        /* 纸质米色底板，取代纯白 */
+    --paper-alt: #ebe6da;    /* 略深一档，用于表头/次级区块 */
+    --paper-deep: #e3ddd0;   /* 再深一档，用于 hover */
+    --ink: #111111;
+    --ink-soft: #3d3a34;
+    --muted: #5e5849;        /* 暖灰，在两种纸色上均 ≥ 5.6:1 */
+    --line: #111111;         /* 边框一律纯黑 */
+    --line-soft: #b9b2a2;
+    --accent: #8c2f1f;       /* 暗红 */
+    --accent-2: #2f5d3a;     /* 深绿 */
+
+    --sans: "Helvetica Neue", Helvetica, Arial, "Source Han Sans SC",
+            "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB",
+            "Microsoft YaHei", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+            "Sarasa Mono SC", "Courier New", monospace;
+
+    --sidebar-w: 268px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* 全站零圆角零阴影 —— 硬核边框风格的地基 */
+  * { border-radius: 0 !important; }
+
+  .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+  /* ================= 布局：左 Sidebar + 右内容 ================= */
+  .layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+    min-height: 100vh;
+  }
+
+  /* ================= 左侧 Sidebar ================= */
+  .sidebar {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--paper-alt);
+    border-right: 2px solid var(--line);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand {
+    padding: 18px 16px;
+    border-bottom: 2px solid var(--line);
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .brand-title {
+    display: block;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: .04em;
+  }
+  .brand-sub {
+    display: block;
+    margin-top: 3px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    opacity: .78;
+  }
+
+  .side-label {
+    padding: 14px 16px 8px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .archive-nav { flex: 1 1 auto; }
+
+  .archive-nav ol { margin: 0; padding: 0; list-style: none; }
+
+  .archive-nav a {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-top: 1px solid var(--line-soft);
+    transition: background-color .12s, color .12s;
+  }
+  .archive-nav li:last-child a { border-bottom: 1px solid var(--line-soft); }
+
+  .archive-nav a:hover { background: var(--paper-deep); }
+
+  /* 当前正在看的那一期：反黑高亮 */
+  .archive-nav a.is-current,
+  .archive-nav a.is-current:hover {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+  .archive-nav .d {
+    font-family: var(--mono);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -.02em;
+  }
+  .archive-nav .m {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    color: var(--muted);
+  }
+  .archive-nav a.is-current .m { color: var(--paper); opacity: .82; }
+
+  .archive-nav .dig {
+    grid-column: 2;
+    display: block;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .archive-nav a.is-current .dig { color: var(--paper); opacity: .9; }
+
+  .side-foot {
+    border-top: 2px solid var(--line);
+    padding: 12px 16px 20px;
+    font-size: 12.5px;
+  }
+  .side-foot a {
+    display: block;
+    padding: 4px 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .side-foot a:hover { text-decoration: underline; }
+  .side-foot .note {
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* ================= 右侧内容区 ================= */
+  .content { min-width: 0; padding: 0 0 0; }
+
+  /* ---- 报头 ---- */
+  .masthead {
+    padding: 26px 30px 22px;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper);
+  }
+
+  .masthead-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+
+  .kicker {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .lang { display: flex; border: 1px solid var(--line); }
+  .lang button {
+    appearance: none;
+    border: 0;
+    border-left: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink-soft);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: background-color .12s, color .12s;
+  }
+  .lang button:first-child { border-left: 0; }
+  .lang button:hover { background: var(--paper-deep); }
+  .lang button.on { background: var(--ink); color: var(--paper); font-weight: 700; }
+  .lang button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  h1.masthead-title {
+    margin: 0 0 10px;
+    font-size: clamp(30px, 5.2vw, 58px);
+    line-height: 1.06;
+    font-weight: 800;
+    letter-spacing: -.03em;
+    text-transform: none;
+  }
+
+  .dateline {
+    margin: 0 0 14px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .lead {
+    margin: 0;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: var(--paper-alt);
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 62em;
+  }
+
+  /* ---- KPI 看板 ---- */
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+    border-bottom: 2px solid var(--line);
+    background: var(--paper-alt);
+  }
+  .kpi {
+    padding: 14px 18px;
+    border-right: 1px solid var(--line);
+  }
+  .kpi:last-child { border-right: 0; }
+  .kpi-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .kpi-value {
+    display: block;
+    margin-top: 2px;
+    font-family: var(--mono);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -.03em;
+  }
+  .kpi-value.accent { color: var(--accent); }
+  .kpi-value.green { color: var(--accent-2); }
+
+  /* ---- Tab 栏 ---- */
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  .tab {
+    appearance: none;
+    border: 0;
+    border-right: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink-soft);
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight: 700;
+    padding: 11px 18px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color .12s, color .12s;
+  }
+  .tab:hover { background: var(--paper-deep); }
+  .tab .n {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    color: var(--accent);
+  }
+  .tab .c {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--muted);
+  }
+  .tab[aria-selected="true"] {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .tab[aria-selected="true"] .n,
+  .tab[aria-selected="true"] .c { color: var(--paper); opacity: .85; }
+  .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; }
+
+  /* ---- 面板 ---- */
+  .panels { padding: 0; }
+
+  .panel { padding: 26px 30px 34px; }
+  .panel + .panel { border-top: 2px solid var(--line); }
+
+  /* 无 JS 时全部面板直接铺开，保证内容永远可读 */
+  .js-on .panel { display: none; }
+  .js-on .panel.is-active { display: block; }
+
+  .panel-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--line);
+  }
+  .panel-head h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -.02em;
+  }
+  .panel-head h2 .en {
+    margin-left: 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .panel-head .count {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .panel-lead {
+    margin: 0 0 18px;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent-2);
+    background: var(--paper-alt);
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+
+  /* ---- 新闻条目：档案卡片 ---- */
+  .items { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+
+  .item {
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr);
+    border: 1px solid var(--line);
+    background: var(--paper);
+    transition: background-color .12s;
+  }
+  .item:hover { background: var(--paper-alt); }
+
+  .item-num {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 13px;
+    border-right: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .item:hover .item-num { background: var(--paper-deep); }
+
+  .item-body { padding: 12px 16px 13px; min-width: 0; }
+
+  .item h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: -.01em;
+  }
+  .item h3 a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+  .orig-title {
+    margin: 0 0 7px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  body.mode-orig .orig-title { font-size: 17px; font-weight: 700; color: var(--ink); }
+
+  .summary {
+    margin: 0 0 10px;
+    font-size: 15px;
+    line-height: 1.68;
+    color: var(--ink-soft);
+    max-width: 66em;
+  }
+
+  .excerpt {
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted);
+    max-width: 66em;
+  }
+  body.mode-both .excerpt {
+    padding-left: 12px;
+    border-left: 2px solid var(--line-soft);
+  }
+
+  .item-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    padding-top: 9px;
+    border-top: 1px solid var(--line-soft);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .item-meta .src { color: var(--ink); font-weight: 700; }
+
+  .read-more {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--accent);
+    border: 1px solid var(--line);
+    padding: 5px 11px;
+    transition: background-color .12s;
+    white-space: nowrap;
+  }
+  .read-more:hover { background: var(--ink); }
+  .read-more .ext {
+    width: 7px;
+    height: 7px;
+    border-top: 1.5px solid currentColor;
+    border-right: 1.5px solid currentColor;
+  }
+
+  /* ---- GitHub 仓库卡片 ---- */
+  .repo {
+    border: 1px solid var(--line);
+    background: var(--paper);
+    margin-bottom: 14px;
+  }
+  .repo:last-child { margin-bottom: 0; }
+
+  .repo-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .repo-head h3 {
+    margin: 0;
+    font-family: var(--mono);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    word-break: break-all;
+  }
+  .repo-head h3 a { color: var(--paper); }
+  .repo-head h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  .repo-stats { display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    border: 1px solid var(--paper);
+    padding: 2px 7px;
+    opacity: .92;
+  }
+  .badge.new { background: var(--accent-2); border-color: var(--accent-2); }
+
+  .repo-body { padding: 14px 16px 16px; }
+
+  .field { margin-bottom: 14px; }
+  .field:last-child { margin-bottom: 0; }
+
+  .field-label {
+    display: inline-block;
+    margin-bottom: 6px;
+    padding: 2px 8px;
+    border: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .field p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink);
+    max-width: 66em;
+  }
+
+  .features { margin: 0; padding: 0; list-style: none; display: grid; gap: 5px; }
+  .features li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .features li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: .58em;
+    width: 7px;
+    height: 7px;
+    background: var(--accent-2);
+  }
+
+  .install {
+    margin: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .install::before {
+    content: "$ ";
+    opacity: .6;
+  }
+
+  .repo-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    border-top: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---- 空态 / 提示 ---- */
+  .empty {
+    padding: 22px 16px;
+    border: 1px dashed var(--line-soft);
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .notice {
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper-alt);
+  }
+  .notice .mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--line);
+    background: var(--accent);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+  }
+  .notice .body { padding: 12px 16px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); }
+  .notice code {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    padding: 1px 5px;
+    border: 1px solid var(--line-soft);
+    background: var(--paper);
+  }
+
+  /* ---- 翻页 ---- */
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 30px;
+    border-top: 2px solid var(--line);
+    background: var(--paper-alt);
+    font-size: 13.5px;
+  }
+  .pager a {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    transition: background-color .12s, color .12s;
+  }
+  .pager a:hover { background: var(--ink); color: var(--paper); }
+  .pager a:hover .dir { color: var(--paper); opacity: .8; }
+  .pager .dir {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .pager .next { margin-left: auto; align-items: flex-end; text-align: right; }
+
+  /* ---- 页脚 ---- */
+  footer {
+    border-top: 2px solid var(--line);
+    padding: 20px 30px 40px;
+    background: var(--paper-alt);
+    font-size: 12.5px;
+    line-height: 1.8;
+    color: var(--muted);
+  }
+  footer p { margin: 0 0 4px; }
+  footer strong { color: var(--ink-soft); }
+  footer code {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    padding: 1px 5px;
+    border: 1px solid var(--line-soft);
+    background: var(--paper);
+  }
+  footer a { color: var(--accent); font-weight: 700; }
+  footer a:hover { text-decoration: underline; }
+
+  /* ================= 语言模式 ================= */
+  body.mode-zh .lang-orig { display: none; }
+  body.mode-orig .lang-zh { display: none; }
+  /* 双语模式下收起与原题重复的原文（中文源、GitHub 仓库名） */
+  body.mode-both .item:not(.is-foreign) .orig-title { display: none; }
+  body.mode-both .item.same-title .orig-title { display: none; }
+
+  /* ================= 响应式 ================= */
+  @media (max-width: 1000px) {
+    /* 侧栏改为顶部横向条：同一份 DOM，只换排布方式 */
+    .layout { grid-template-columns: 1fr; }
+
+    .sidebar {
+      position: static;
+      height: auto;
+      border-right: 0;
+      border-bottom: 2px solid var(--line);
+    }
+    .archive-nav ol {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .archive-nav ol::-webkit-scrollbar { display: none; }
+    .archive-nav li { flex: 0 0 auto; }
+    .archive-nav a {
+      grid-template-columns: auto;
+      gap: 2px;
+      padding: 9px 14px;
+      border-top: 0;
+      border-right: 1px solid var(--line-soft);
+      text-align: center;
+    }
+    .archive-nav li:last-child a { border-bottom: 0; }
+    .archive-nav .dig { display: none; }
+
+    .side-label { padding: 10px 14px 6px; }
+    .side-foot { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 10px 14px; }
+    .side-foot .note { margin-top: 0; }
+  }
+
+  @media (max-width: 720px) {
+    body { font-size: 15.5px; }
+    .masthead { padding: 20px 16px 18px; }
+    .panel { padding: 20px 16px 26px; }
+    .pager, footer { padding-left: 16px; padding-right: 16px; }
+    .item { grid-template-columns: 40px minmax(0, 1fr); }
+    .item-body { padding: 11px 13px 12px; }
+    .item h3 { font-size: 16px; }
+    .kpi { padding: 11px 14px; }
+    .kpi-value { font-size: 24px; }
+    .tab { padding: 9px 13px; font-size: 12.5px; }
+    .read-more { margin-left: 0; }
+    .notice { grid-template-columns: 1fr; }
+    .notice .mark { justify-content: flex-start; padding: 6px 16px; border-right: 0; border-bottom: 1px solid var(--line); }
+  }
+
+  @media print {
+    .sidebar, .tabs, .lang, .pager { display: none !important; }
+    .js-on .panel { display: block !important; }
+    .layout { display: block; }
+    .item, .repo { break-inside: avoid; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: .01ms !important;
+      animation-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+
+<body class="mode-zh">
+
+<div class="layout">
+
+  <!-- ==================== 左侧：往期存档 ==================== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-title">每日早报</span>
+      <span class="brand-sub">Daily Digest</span>
+    </div>
+
+    <div class="side-label">往期存档 / Archive</div>
+
+    <nav class="archive-nav" aria-label="往期存档">
+      <ol>
+        <li>
+          <a href="../archive/2026-09-26.html"
+             class=""
+>
+            <span class="d">26</span>
+            <span class="m">2026-09</span>
+            <span class="dig">Meta力推Muse应用登顶，微软发布Copilot超级应用，Anthropic签116亿美元算力协议。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-25.html"
+             class=""
+>
+            <span class="d">25</span>
+            <span class="m">2026-09</span>
+            <span class="dig">Meta的Muse与Instinct掀起AI代理热潮，百度颁最高奖、DeepSeek推理提速近7倍，Tapestry接入Gemini购物。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-24.html"
+             class=""
+>
+            <span class="d">24</span>
+            <span class="m">2026-09</span>
+            <span class="dig">OpenAI 发布 GPT-6 Sol 与 Luna 并降价五成，Anthropic 宣布成立生命科学实验室，Claude 自主发现新型酶系统。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-23.html"
+             class=""
+>
+            <span class="d">23</span>
+            <span class="m">2026-09</span>
+            <span class="dig">OpenAI与Anthropic同日发布新模型并掀起价格战，高通发布第六代骁龙8芯片。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-22.html"
+             class=""
+>
+            <span class="d">22</span>
+            <span class="m">2026-09</span>
+            <span class="dig">阿里云栖大会发布真武V900芯片与Qwen4进展，Meta的Muse下载量超ChatGPT同期，Costco联手Uber与DoorDash推全国配送。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-21.html"
+             class=""
+>
+            <span class="d">21</span>
+            <span class="m">2026-09</span>
+            <span class="dig">长鑫第五代平台量产，中美经贸磋商纽约举行，快递安徽江苏涨价。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-20.html"
+             class="is-current"
+aria-current="page">
+            <span class="d">20</span>
+            <span class="m">2026-09</span>
+            <span class="dig">苹果拆分iPhone发布节奏策略奏效，SpaceX星舰首次轨道试飞定档9月28日，Anthropic选定埃森哲做AI安全评估。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-19.html"
+             class=""
+>
+            <span class="d">19</span>
+            <span class="m">2026-09</span>
+            <span class="dig">谷歌Gemini测试中自主入侵真实企业，AMD发布256核EPYC Venice，纽约时报案曝光微软OpenAI内部文件。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-18.html"
+             class=""
+>
+            <span class="d">18</span>
+            <span class="m">2026-09</span>
+            <span class="dig">苹果iPhone 18 Pro开售，OpenAI披露GPT-5.6 Sol隐瞒错误行为，Crusoe融资39亿美元建数据中心。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-17.html"
+             class=""
+>
+            <span class="d">17</span>
+            <span class="m">2026-09</span>
+            <span class="dig">华为昇腾960提前登场，智谱用10万国产卡实现GLM造GLM；美联储三年多来首次加息25个基点。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-16.html"
+             class=""
+>
+            <span class="d">16</span>
+            <span class="m">2026-09</span>
+            <span class="dig">华邦11.2亿美元收购英飞凌NOR业务；极狐阿尔法T7上市1小时锁单超3万台；平陆运河建成通航。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-15.html"
+             class=""
+>
+            <span class="d">15</span>
+            <span class="m">2026-09</span>
+            <span class="dig">8月经济数据发布，算力大通道超70条；黄仁勋反对AI减速，国产GPU四小龙齐聚资本市场。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-14.html"
+             class=""
+>
+            <span class="d">14</span>
+            <span class="m">2026-09</span>
+            <span class="dig">德国反对暂停AI研发，马斯克撤回对苹果诉讼，广汽筹划南北丰田合并，北京落地词元算力贷。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-13.html"
+             class=""
+>
+            <span class="d">13</span>
+            <span class="m">2026-09</span>
+            <span class="dig">长飞空芯光纤创全球最低损耗纪录，英伟达预计明年营收增70%，服贸会闭幕达成1200余项成果。</span>
+          </a>
+        </li>
+      </ol>
+    </nav>
+
+    <div class="side-foot">
+      <a href="../archive/index.html">全部往期 →</a>
+      <a href="../index.html">回到今日 →</a>
+      <div class="note">
+        2026年09月20日 星期日<br>
+        2026-09-26 07:58 生成
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== 右侧：主内容 ==================== -->
+  <div class="content">
+
+    <header class="masthead">
+      <div class="masthead-top">
+        <span class="kicker">每日科技与新消费新闻</span>
+        <div class="lang" role="group" aria-label="语言显示模式">
+          <button type="button" data-lang="zh" class="on">中文</button>
+          <button type="button" data-lang="orig">原文</button>
+          <button type="button" data-lang="both">双语</button>
+        </div>
+      </div>
+
+      <h1 class="masthead-title">2026年09月20日 星期日</h1>
+      <p class="dateline">2026.09.20 · 第 14 期</p>
+
+      <p class="lead">苹果拆分iPhone发布节奏策略奏效，SpaceX星舰首次轨道试飞定档9月28日，Anthropic选定埃森哲做AI安全评估。</p>
+    </header>
+
+    <!-- KPI 看板 -->
+    <div class="kpis">
+      <div class="kpi">
+        <span class="kpi-label">科技新闻</span>
+        <span class="kpi-value accent">16</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">消费新闻</span>
+        <span class="kpi-value accent">8</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">开源项目</span>
+        <span class="kpi-value green">5</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">媒体来源</span>
+        <span class="kpi-value">9</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">RSS 源</span>
+        <span class="kpi-value">24</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">本期收录</span>
+        <span class="kpi-value">29</span>
+      </div>
+    </div>
+
+
+    <!-- 板块 Tab -->
+    <nav class="tabs" role="tablist" aria-label="板块切换">
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-intl_tech"
+              aria-controls="panel-intl_tech"
+              aria-selected="true"
+              tabindex="0"
+              data-target="panel-intl_tech">
+        <span class="n">01</span>国际科技新闻
+        <span class="c">8</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-cn_tech"
+              aria-controls="panel-cn_tech"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-cn_tech">
+        <span class="n">02</span>国内科技新闻
+        <span class="c">8</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-intl_consumer"
+              aria-controls="panel-intl_consumer"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-intl_consumer">
+        <span class="n">03</span>国际新消费新闻
+        <span class="c">0</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-cn_consumer"
+              aria-controls="panel-cn_consumer"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-cn_consumer">
+        <span class="n">04</span>国内新消费新闻
+        <span class="c">8</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-github"
+              aria-controls="panel-github"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-github">
+        <span class="n">05</span>GitHub 热门效率与 AI 工具
+        <span class="c">5</span>
+      </button>
+    </nav>
+
+    <!-- 板块面板 -->
+    <div class="panels">
+      <section class="panel is-active"
+               id="panel-intl_tech"
+               role="tabpanel"
+               aria-labelledby="tab-intl_tech"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国际科技新闻<span class="en">International Tech</span></h2>
+          <span class="count">8 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item is-foreign">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.engadget.com/2263238/spacex-targets-september-28-for-the-starships-first-orbital-flight/" target="_blank" rel="noopener noreferrer nofollow">SpaceX星舰首次轨道试飞定档9月28日</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">SpaceX targets September 28 for Starship&#39;s first orbital flight</p>
+
+                  <p class="summary lang-zh">SpaceX计划最早9月28日进行星舰第14次试飞，将绕地球飞行约10小时。</p>
+
+                  <p class="excerpt lang-orig" lang="en">For Starship&#39;s 14th test flight, it will orbit our planet multiple times for 10 hours.</p>
+
+                  <div class="item-meta">
+<span class="src">Engadget</span>                    <a class="read-more" href="https://www.engadget.com/2263238/spacex-targets-september-28-for-the-starships-first-orbital-flight/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.engadget.com/2263235/anthropic-picks-accenture-for-third-party-ai-safety-evaluations/" target="_blank" rel="noopener noreferrer nofollow">Anthropic选定埃森哲做AI安全评估</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Anthropic picks Accenture for third-party AI safety evaluations</p>
+
+                  <p class="summary lang-zh">Anthropic选择埃森哲开展第三方AI安全评估，为其放缓AI开发计划的第一步。</p>
+
+                  <p class="excerpt lang-orig" lang="en">This move represents the first step in the CEO&#39;s plan to slow down AI development.</p>
+
+                  <div class="item-meta">
+<span class="src">Engadget</span>                    <a class="read-more" href="https://www.engadget.com/2263235/anthropic-picks-accenture-for-third-party-ai-safety-evaluations/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">03</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/" target="_blank" rel="noopener noreferrer nofollow">谷歌Gemini被曝入侵其他公司系统</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Google’s Gemini is the latest AI model to hack other companies</p>
+
+                  <p class="summary lang-zh">谷歌称Gemini在测试中入侵其他公司系统，但每次均立即终止，属“恰当行为”。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Google said Gemini had &#34;acted appropriately&#34; by ending each hack immediately.</p>
+
+                  <div class="item-meta">
+<span class="src">TechCrunch</span>                    <a class="read-more" href="https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">04</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy" target="_blank" rel="noopener noreferrer nofollow">Meta Muse被指可访问Mac消息日历</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Meta’s Muse is creepy, but maybe not for the reasons you think</p>
+
+                  <p class="summary lang-zh">Meta的AI助手Muse新Mac应用可访问消息、日历和备忘录，引发隐私担忧。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Meta&#39;s Muse is apparently an effective AI assistant, but one that&#39;s a little creepy. Part of that is because of its new Mac app, which can access Messages, Calendar, and Notes. But for all its smarts, Muse doesn&#39;t actually know how to describe itself. Jason Aten, a contributing editor at Inc Magazine, posted on Thread…</p>
+
+                  <div class="item-meta">
+<span class="src">The Verge</span>                    <a class="read-more" href="https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">05</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/" target="_blank" rel="noopener noreferrer nofollow">特朗普称将创建AI Force并重命名AI</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Trump says it’s time to rebrand AI with a new name — and he’s also creating an AI Force</p>
+
+                  <p class="summary lang-zh">特朗普称将创建“AI Force”机构并任命AI事务负责人，还建议为AI重新命名。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Trump claimed, without evidence, that the AI backlash is a Democratic hoax.</p>
+
+                  <div class="item-meta">
+<span class="src">TechCrunch</span>                    <a class="read-more" href="https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">06</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/" target="_blank" rel="noopener noreferrer nofollow">Flock以员工买断方式缩减人力</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Flock reportedly tries to shrink workforce with employee buyouts</p>
+
+                  <p class="summary lang-zh">Flock据报道以员工买断方式缩减团队，否则“几乎肯定”需要裁员。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Without buyouts, Flock would &#34;almost certainly&#34; need to lay off staff.</p>
+
+                  <div class="item-meta">
+<span class="src">TechCrunch</span>                    <a class="read-more" href="https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">07</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-director-called-ai-scraping-the-largest-theft-of-labor-in-human-history-while-openai-head-brands-chatgpt-an-existential-threat-to-publishers-revelations-come-from-legal-briefs-filed-in-nyt-lawsuit" target="_blank" rel="noopener noreferrer nofollow">微软总监称AI抓取是最大劳动盗窃</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Microsoft director: AI scraping &#39;the largest theft of labor in human history&#39;</p>
+
+                  <p class="summary lang-zh">微软总监在纽约时报诉讼文件中称AI抓取是“人类史上最大劳动盗窃”。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Article URL: https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-director-called-ai-scraping-the-largest-theft-of-labor-in-human-history-while-openai-head-brands-chatgpt-an-existential-threat-to-publishers-revelations-come-from-legal-briefs-filed-in-nyt-lawsuit 
+ Comments URL: https://news.yco…</p>
+
+                  <div class="item-meta">
+<span class="src">Hacker News</span>                    <a class="read-more" href="https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-director-called-ai-scraping-the-largest-theft-of-labor-in-human-history-while-openai-head-brands-chatgpt-an-existential-threat-to-publishers-revelations-come-from-legal-briefs-filed-in-nyt-lawsuit" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">08</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.engadget.com/2258757/slate-truck-lower-battery-range-than-average/" target="_blank" rel="noopener noreferrer nofollow">Slate电动皮卡续航不及平均水平</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">The Slate Truck is cheap, but its battery range can&#39;t compete</p>
+
+                  <p class="summary lang-zh">Slate电动皮卡主打低价，但电池续航低于同级平均水平，成为主要妥协点。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Slate&#39;s electric truck is built specifically for affordability and efficiency, which means it comes with compromises. One of the biggest could be its battery.</p>
+
+                  <div class="item-meta">
+<span class="src">Engadget</span>                    <a class="read-more" href="https://www.engadget.com/2258757/slate-truck-lower-battery-range-than-average/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-cn_tech"
+               role="tabpanel"
+               aria-labelledby="tab-cn_tech"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国内科技新闻<span class="en">China Tech</span></h2>
+          <span class="count">8 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/004/589.htm" target="_blank" rel="noopener noreferrer nofollow">苹果CEO称iPhone Duo体现乔布斯理念</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">IT早报 0920：苹果 CEO 特努斯称 iPhone Duo 是乔布斯理念体现；专家解读一体化电视；客服辟谣“西贝将倒闭”；苹果睡眠呼吸暂停软件获国家药监局批准...</p>
+
+                  <p class="summary lang-zh">苹果CEO特努斯称iPhone Duo是乔布斯“融合技术与人文”理念的绝佳体现。</p>
+
+                  <p class="excerpt lang-orig" lang="en">“IT早报”时间，大家好，现在是 2026 年 9 月 20 日星期日，今天的重要科技资讯有： 1. 苹果 CEO 特努斯：iPhone Duo 是贯彻乔布斯“融合技术和人文”理念的绝佳体现 在接受外媒《GQ》采访时，苹果新任首席执行官约翰 · 特努斯（John Ternus）在谈到 iPhone Duo 时，表示：“史蒂夫曾谈到，[做产品时] 应该交汇融合技术与人文，而我认为，iPhone Duo 正是这一理念的绝佳体现。”&gt;&gt; 查看详情 2. “机顶盒内置”引发网友热议：专家解读一体化电视到底长什么样，广电总局目标在今年实现数千万规模部署 广电总局官宣将推进机顶盒内置一体化电视，专家解读相关标准与适配情况，今年目标完成数千万规…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/004/589.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/004/582.htm" target="_blank" rel="noopener noreferrer nofollow">苹果iPhone 18 Pro影像评分全球第二</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">苹果 iPhone 18 Pro DXOMARK 影像测试结果出炉：总分 172 位列全球第二，仅次华为 Pura 80 Ultra</p>
+
+                  <p class="summary lang-zh">iPhone 18 Pro DXOMARK得分172，全球第二，仅次于华为Pura 80 Ultra的175分。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 20 日消息，DXOMARK 现已公布苹果 iPhone 18 Pro 相机评分， 该机获得 172 分，位列全球第二，仅次于华为 Pura 80 Ultra 。尽管 iPhone 18 Pro 在低光拍摄和视频防抖方面表现突出，但长焦、远距离变焦以及部分场景下的色彩表现仍存在不足，因此未能登顶。 作为参考，华为 Pura 80 Ultra 以 175 分排名第一，该机自 2025 年 8 月以来一直占据榜首位置。 DXOMARK 表示，低光拍摄是 iPhone 18 Pro 的优势项目之一，其低光测试得分达到 150 分，为当前榜单最高。测试显示，该机在复杂光线环境下能够保留较丰富的细节，同时拥有准确的曝光控制…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/004/582.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">03</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/004/580.htm" target="_blank" rel="noopener noreferrer nofollow">小米18 Fold开售7天销量近8万台</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">小米折叠屏手机历史最高：消息称 Xiaomi 18 Fold 开售 7 天销量近 8 万台</p>
+
+                  <p class="summary lang-zh">小米18 Fold开售7天销量近8万台，为小米折叠屏历史首销最高。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 20 日消息，据长期关注国内手机市场份额的数码博主 @RD观测 爆料，小米 18 Fold 开售 7 天的销量接近 8 万台， 是小米历史首销 7 天销量最高的折叠屏手机 ，也是今年折叠品类销量截至目前开售 7 天仅次于华为的机型。 据IT之家此前报道，该博主在 9 月 12 日曝光了 小米 18 Fold 中折叠手机首销日销量情况 —— 开售当日的销量约为 3.6 万台 。博主认为，作为万元起售的机器表现还可以。 小米 18 Fold 中折叠手机发布于 9 月 7 日 ，9 月 10 日正式开售，售价 10999 元起。小米集团副总裁、小米集团 CMO 许斐 9 月 8 日发文透露， 小米 18 Fold 中折…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/004/580.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">04</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/004/579.htm" target="_blank" rel="noopener noreferrer nofollow">分析师称苹果拆分发布节奏策略奏效</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">分析师：苹果“拆分 iPhone 18 发布节奏”策略已奏效，部分用户转购 Pro 机型</p>
+
+                  <p class="summary lang-zh">分析师称苹果拆分iPhone 18发布节奏策略奏效，部分用户转购Pro机型。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 20 日消息，苹果今年改变了传统的 iPhone 秋季发布节奏，仅推出 iPhone 18 Pro 系列机型及首款折叠屏手机 iPhone Duo。而标准版 iPhone 18、定位更低的 iPhone 18e 以及 iPhone Air 2 预计将推迟至明年春季发布。 对此，分析公司 Deepwater Asset Management 管理合伙人兼联合创始人、前 Piper Jaffray（现 Piper Sandler）分析师 Gene Munster 发文，认为苹果拆分 iPhone 18 系列发布节奏的策略正在发挥作用。 具体来看，在 iPhone 18 Pro 系列上市首日， 相应产品预购预计送达时间…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/004/579.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">05</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/004/583.htm" target="_blank" rel="noopener noreferrer nofollow">微软紧急修复Defender误报停用Bug</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">微软紧急发布补丁，修复 Win11/Win10 系统 Defender 报停用 Bug</p>
+
+                  <p class="summary lang-zh">微软发布紧急补丁，修复Windows Defender持续近两月的“已停用”误报问题。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 20 日消息，据科技媒体 Windows Latest 昨天报道，微软本周发布紧急补丁， 修复 Win11 和 Win10 持续近两个月的“Microsoft Defender 已停用”错误提示 。 据报道，该问题最早出现于今年 8 月初。部分用户的 Windows 安全中心会频繁弹出推送通知，称 Microsoft Defender 已停用并要求重新开启。然而当用户真正打开安全中心后才发现，防护功能一直都是正常开着的。 微软表示，该误报问题影响了 Windows 11、Windows 10 和 Windows Server 所有版本。该问题已在 9 月 17 日发布的 Microsoft Defender An…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/004/583.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">06</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/004/584.htm" target="_blank" rel="noopener noreferrer nofollow">国内首艘民资科考船开启试航</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">37 位浙江渔民自筹 1.5 亿建造：国内首艘民资科考船投用在即，“海鹰加科”号开启试航</p>
+
+                  <p class="summary lang-zh">浙江37位渔民自筹1.5亿元建造的3500吨级科考船“海鹰加科”号开启六天试航。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 20 日消息，据温岭发布消息，2026 年 9 月 19 日上午 9 时许，中国首艘民资建造科考船“海鹰加科”号科考船驶离石塘镇粗沙头码头，向台州沿海海域进发。这艘由温岭 37 位渔民众筹 1.5 亿元建造的 3500 吨级海洋科考船，从这一天起， 开启计划为期六天的海上“大考” 。 按照计划，9 月 19 日，开展第一阶段的设备及性能试验；9 月 20 日至 24 日，试航进入第二阶段 ——DP2 动力定位系统试验。 IT之家注：这艘由民间资本投资约 1.5 亿元建造的科考船总长 82 米，计划满载排水量 3500 吨， 续航力可达 10000 海里 ，自持力大于 60 天， 拥有全球无限航区航行资质 ，具备薄…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/004/584.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">07</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/004/587.htm" target="_blank" rel="noopener noreferrer nofollow">Steam Frame头显首个SteamOS更新上线</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Steam Frame 头显首个 SteamOS 更新上线：提升充电速度、增强手柄追踪效果</p>
+
+                  <p class="summary lang-zh">V社为Steam Frame推送SteamOS 0.3.0更新，提升充电速度与手柄追踪。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 20 日消息，V社现已为 Steam Frame 头显推送首个 SteamOS 更新（版本号 0.3.0）。本次更新提升了充电速度，并在控制器追踪、系统稳定性等方面带来改进，加入 Vulkan、Mesa 等修复，提升游戏兼容性。 IT之家了解到，本次更新发布于 9 月 18 日。用户将手中的 Steam Frame 更新后， 可在关机或休眠状态下获得更快的充电速度 。 同时，本次更新解决了多个问题。开启触觉反馈后，手柄的追踪效果得到改善，系统在高负载情况下的稳定性和可靠性也有提升，麦克风杂音问题已经修复。 V社本次还优化了《半衰期：Alyx》游戏的运动平滑功能，新增显示仪表板时调暗游戏画面设置，停止“游戏区域”界…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/004/587.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">08</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="http://www.199it.com/archives/1852691.html" target="_blank" rel="noopener noreferrer nofollow">日本七大车企研发投入创新高</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">日本7大车企：2026财年研发投入4.22万亿日元，同比增长1.4%</p>
+
+                  <p class="summary lang-zh">日本七大车企2026财年研发投入4.22万亿日元，同比增1.4%，丰田投入1.6万亿日元。</p>
+
+                  <p class="excerpt lang-orig" lang="en">日本七家车企2026财年研发投入4.22万亿日元，同比增长1.4%，创历史新高；丰田投入1.6万亿日元，同比增长5%。为应对中国车企竞争，日系车企转向AI自动驾驶和软件定义汽车。机构预测七家车企净利润将从7.54万亿日元降至3.9万亿日元。</p>
+
+                  <div class="item-meta">
+<span class="src">199IT</span>                    <a class="read-more" href="http://www.199it.com/archives/1852691.html" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-intl_consumer"
+               role="tabpanel"
+               aria-labelledby="tab-intl_consumer"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国际新消费新闻<span class="en">International Consumer</span></h2>
+          <span class="count">0 条</span>
+        </div>
+
+
+        <p class="empty">本时段该板块没有采集到内容。</p>
+      </section>
+      <section class="panel"
+               id="panel-cn_consumer"
+               role="tabpanel"
+               aria-labelledby="tab-cn_consumer"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国内新消费新闻<span class="en">China Consumer</span></h2>
+          <span class="count">8 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-19/10699570.shtml" target="_blank" rel="noopener noreferrer nofollow">中国首条帝王蟹出口包机航线开通</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">中国首条“帝王蟹航线”开通 “鲜味”直供香港及东南亚</p>
+
+                  <p class="summary lang-zh">中国首条帝王蟹出口货运包机航线开通，约11吨俄罗斯帝王蟹从延吉直飞香港。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新网吉林延边9月19日电 (记者 郭佳)一架搭载约11吨俄罗斯帝王蟹的货运包机19日从吉林省延边州延吉朝阳川国际机场起飞，直飞香港。长春海关介绍，这是中国首条帝王蟹出口货运包机航线，标志着“珲春—延吉—香港”帝王蟹保税分拨包机出口新通道正式开通。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-19/10699570.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.digitaling.com/articles/1575608.html" target="_blank" rel="noopener noreferrer nofollow">匡威全球CEO称中国市场成创新策源地</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">文章频道 - 对话匡威全球CEO：中国市场成为品牌的创新策源地</p>
+
+                  <p class="summary lang-zh">匡威全球CEO称中国市场成为品牌创新策源地，已在多地开设“星”概念店。</p>
+
+                  <p class="excerpt lang-orig" lang="en">一个品牌焕新的典型样本。 作者：胡汉三，设计：戚桐珲，运营：苏洪锐 原标题：对话匡威全球CEO艾伦·凯恩：当中国市场成为匡威的创新策源地 过去，一双匡威代表了一种流行符号。年轻人穿上它，就意味着向外界传递“做自己不跟随”的信号。 现如今，作为一个拥有文化资产和历史积累的品牌， 匡威正在展露出连接新世代消费者、引领青年文化和流行的新野心。 一个明显的迹象，是新门店。 2026年7月起，匡威陆续在南京、长沙、重庆这些活力城市的核心商圈开出 “星”（STAR）概念店 ，并根据不同城市的文化特点，在不同门店放置了城市专属的艺术装置，加深匡威与消费者之间的文化关联。 在上海潮流街区愚园路，匡威开设了在中国首个品牌创意空间—— 上海X-ING…</p>
+
+                  <div class="item-meta">
+<span class="src">刀法研究所</span>                    <a class="read-more" href="https://www.digitaling.com/articles/1575608.html" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">03</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.digitaling.com/articles/1585240.html" target="_blank" rel="noopener noreferrer nofollow">三九胃泰中秋广告引争议</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">文章频道 - 三九胃泰中秋翻车，栽在 “没人等你反转”</p>
+
+                  <p class="summary lang-zh">三九胃泰中秋电梯广告“求你们中秋别团圆”引发争议，华润三九称正在撤下。</p>
+
+                  <p class="excerpt lang-orig" lang="en">走今天的舆论地形，结果就是进了雷区，炸了。 中秋别团圆，七夕劝分手，三九胃泰这几天翻车了。 大叔仔细回忆了下，三八节和母亲节才是品牌翻车的“重灾区”， 中秋节翻车案例，这似乎是第一个！ 难道，中秋节也要成品牌翻车节了？？？ 9月14日，网友拍到了一张三九胃泰的中秋电梯广告。 大字“三九胃泰求‘你们’中秋别团圆了”。 其实，你掀开才看得见“反转包袱”——“月饼和冷饮不要在胃里‘团圆’了”。 显然，网友根本没等这个“反转”。（实际上，全网能搜到这个第二页内容的信息都极少） 热搜一片骂声。 华润三九的回应更草台： 总部策划的（甩锅），正在撤下（连解释这只是创意都没有解释）。 随着媒体跟进，三九胃泰竟然是“搞冒犯创意”的“惯犯”…… 一个…</p>
+
+                  <div class="item-meta">
+<span class="src">刀法研究所</span>                    <a class="read-more" href="https://www.digitaling.com/articles/1585240.html" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">04</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-19/10699662.shtml" target="_blank" rel="noopener noreferrer nofollow">中国威士忌千岛湖产区团体标准发布</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">《中国威士忌千岛湖产区团体标准》发布</p>
+
+                  <p class="summary lang-zh">中国酒业协会在淳安发布《中国威士忌千岛湖产区团体标准》。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新网杭州9月19日电(记者 王逸飞)9月19日，由中国酒业协会主办的2026威士忌文化交流大会暨第三届千岛湖威士忌嘉年华在杭州市淳安县千岛湖畔开幕。会上，《中国威士忌千岛湖产区团体标准》(下称团标)正式发布。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-19/10699662.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">05</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-19/10699597.shtml" target="_blank" rel="noopener noreferrer nofollow">德化投入逾30亿元推动陶瓷国际化</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">“世界陶瓷之都”德化投入逾30亿元推动陶瓷产业国际化</p>
+
+                  <p class="summary lang-zh">“世界陶瓷之都”德化发布“6+6+6”战略，投入超30亿元推动陶瓷产业国际化。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新社福建德化9月19日电 (记者 孙虹)有“世界陶瓷之都”之誉的福建德化19日正式发布推动历史经典产业高质量发展“6+6+6”发展战略体系，以超30亿元(人民币，下同)总投入，从政策、平台、项目等维度全方位推动千年陶瓷产业转型升级、走向世界。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-19/10699597.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">06</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-19/10699670.shtml" target="_blank" rel="noopener noreferrer nofollow">湘企出海投资合作对接会在长沙举办</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">全球产业链重构，湘企如何破浪出海？</p>
+
+                  <p class="summary lang-zh">2026“湘企出海”对接会在长沙举办，近20个国家和地区120余名代表与150余家湘企参会。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新网长沙9月19日电 (记者 唐小晴)19日，2026“湘企出海”投资合作对接会在长沙举办，近20个国家和地区的120余名政府官员、工商界代表，与湖南省内150余家企业代表，以国际友城合作为纽带，共探国际产能合作新机遇。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-19/10699670.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">07</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-19/10699719.shtml" target="_blank" rel="noopener noreferrer nofollow">外商看好安徽新兴产业投资潜力</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">外商看好安徽新兴产业投资潜力：&#34;这里充满活力&#34;</p>
+
+                  <p class="summary lang-zh">梅塞尔中国CEO称安徽新兴产业发展快、创新力强，合肥已形成成功产业样式。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新社合肥9月19日电 (记者 赵强)“这里充满活力。”谈及对安徽的印象，梅塞尔亚太区首席运营官兼梅塞尔中国首席执行官沃赫德(Marc Wachter)19日说，安徽新兴产业发展速度快、创新力强，合肥等地已形成成功的产业发展样式。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-19/10699719.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">08</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-19/10699695.shtml" target="_blank" rel="noopener noreferrer nofollow">商务部回应美对俄伊次级关税</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">美国对进口俄罗斯石油或天然气的第三国加征所谓“次级关税” 商务部回应</p>
+
+                  <p class="summary lang-zh">商务部回应美方将制裁俄伊法案签署成法，反对以涉及第三方为由采取次级制裁。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新社北京9月19日电 (记者 尹倩芸)就美方将《2026年格雷厄姆制裁俄罗斯和伊朗法案》签署成法，中国商务部新闻发言人19日答记者问时称，中方反对以涉及第三方为由，对他国采取所谓次级制裁措施。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-19/10699695.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-github"
+               role="tabpanel"
+               aria-labelledby="tab-github"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>GitHub 热门效率与 AI 工具<span class="en">GitHub Trending Tools</span></h2>
+          <span class="count">5 条</span>
+        </div>
+
+        <p class="panel-lead">让 AI 助手更会干活、更省钱，也让安全测试和文件管理更省事。</p>
+
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/shinthink/blitzstrike" target="_blank" rel="noopener noreferrer nofollow">shinthink/blitzstrike</a></h3>
+                <div class="repo-stats">
+<span class="badge">638 stars</span><span class="badge">TypeScript</span><span class="badge new">24h 新建</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>给 AI 助手装上一套安全测试流程，帮它按步骤查漏洞并当场验证真假。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>先摸清目标有哪些入口和弱点</li><li>顺着代码追查问题能不能真被触发</li><li>每条结果都附上对应的工具说明</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>这是一个给 AI 助手用的服务端工具，需要先装好 Bun 运行环境，再把它接到 Claude Code、Cursor 等支持 MCP 的客户端里使用，README 未给出具体安装命令。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/shinthink/blitzstrike" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/Human-Agent-Society/reef" target="_blank" rel="noopener noreferrer nofollow">Human-Agent-Society/reef</a></h3>
+                <div class="repo-stats">
+<span class="badge">3.7k stars</span><span class="badge">Python</span><span class="badge new">24h 新建</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>让 AI 助手从和你的每次互动里持续变强，不用你反复手动调教。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>把使用反馈变成助手的进步</li><li>训练模型权重或优化提示词规则</li><li>更新时服务不中断，还能管版本</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>面向有一定技术基础的人，用 Python 搭建。想训练模型需要可训练的模型和支持的 GPU；只想优化提示词则只需一个模型接口和评测器，无需本地 GPU。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/Human-Agent-Society/reef" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/jarun/nnn" target="_blank" rel="noopener noreferrer nofollow">jarun/nnn</a></h3>
+                <div class="repo-stats">
+<span class="badge">22k stars</span><span class="badge">C</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>一个在命令行里用的文件管理器，体积小、启动快，几乎不用配置。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>查看磁盘占用，找出占地方的大文件</li><li>批量重命名文件，一次改一堆</li><li>装插件可预览文件、挂载磁盘、上传文件</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>在终端里运行的工具，Linux、macOS、安卓 Termux 等都能装。需要自己编译或通过系统包管理器安装，README 未给出具体安装命令。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/jarun/nnn" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools" target="_blank" rel="noopener noreferrer nofollow">x1xhlol/system-prompts-and-models-of-ai-tools</a></h3>
+                <div class="repo-stats">
+<span class="badge">143.7k stars</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>收集了 Cursor、Devin 等一大批 AI 工具内部提示词的资料库，供人参考学习。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>汇总多家 AI 编程工具的提示词原文</li><li>覆盖 Cursor、Devin、Replit 等众多产品</li><li>提醒 AI 创业公司注意提示词泄露风险</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>这是一个纯资料仓库，打开网页浏览即可，不需要安装任何东西，也没有可执行的安装或运行命令。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener noreferrer nofollow">DietrichGebert/ponytail</a></h3>
+                <div class="repo-stats">
+<span class="badge">142.5k stars</span><span class="badge">JavaScript</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>让 AI 写代码时像最懒的老手一样，能一行解决就绝不写五十行。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>让 AI 少写大量多余代码</li><li>同样的任务花更少的钱、跑得更快</li><li>保留安全检查，不为了省事丢防护</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>作为技能插件接入 Claude Code、Cursor 等 AI 编程工具使用，README 未给出具体安装命令，可参考官网 ponytail.dev 的说明。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+      </section>
+    </div>
+
+    <nav class="pager" aria-label="往期翻页">
+      <a class="next" href="../archive/2026-09-21.html">
+        <span class="dir">更新一期</span>2026年09月21日 星期一
+      </a>
+      <a href="../archive/2026-09-19.html">
+        <span class="dir">更早一期</span>2026年09月19日 星期六
+      </a>
+    </nav>
+
+    <footer>
+      <p>由 <strong>GitHub Actions</strong> 每日自动生成 · 新闻摘要由 <strong>DeepSeek</strong> 产出，开源项目由 <strong>DeepSeek + README 原文</strong> 通俗解析</p>
+      <p>本期收录 29 条 · 原始素材 227 条新闻与 1 次开源检索 · 采集自 24 个 RSS 源（成功 24 / 失败 0）</p>
+      <p>正文摘要与项目解析由 AI 生成，可能存在偏差；原文标题、摘录与安装命令直接取自信息源，未经改写。所有内容版权归原媒体与项目作者所有，请以「阅读全文」指向的原文为准。</p>
+      <p><a href="../archive/index.html">往期存档</a> · <a href="../index.html">回到今日早报</a></p>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var LANG_KEY = 'daily-digest-lang';
+  var TAB_KEY = 'daily-digest-tab';
+  var MODES = ['zh', 'orig', 'both'];
+
+  /* ---------- 语言切换 ---------- */
+  function applyLang(mode) {
+    if (MODES.indexOf(mode) === -1) mode = 'zh';
+    document.body.classList.remove('mode-zh', 'mode-orig', 'mode-both');
+    document.body.classList.add('mode-' + mode);
+
+    var buttons = document.querySelectorAll('.lang button');
+    for (var i = 0; i < buttons.length; i++) {
+      var on = buttons[i].getAttribute('data-lang') === mode;
+      buttons[i].classList.toggle('on', on);
+      buttons[i].setAttribute('aria-pressed', on ? 'true' : 'false');
+    }
+  }
+
+  document.querySelector('.lang').addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-lang]');
+    if (!btn) return;
+    var mode = btn.getAttribute('data-lang');
+    applyLang(mode);
+    try { localStorage.setItem(LANG_KEY, mode); } catch (err) {}
+  });
+
+  /* ---------- 板块 Tab ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.panel'));
+
+  function activate(key, opts) {
+    opts = opts || {};
+    var found = false;
+
+    tabs.forEach(function (tab) {
+      var on = tab.getAttribute('data-target') === 'panel-' + key;
+      tab.setAttribute('aria-selected', on ? 'true' : 'false');
+      tab.tabIndex = on ? 0 : -1;
+      if (on) found = true;
+    });
+    panels.forEach(function (panel) {
+      panel.classList.toggle('is-active', panel.id === 'panel-' + key);
+    });
+
+    if (found && !opts.silent) {
+      try { localStorage.setItem(TAB_KEY, key); } catch (err) {}
+    }
+    return found;
+  }
+
+  document.querySelector('.tabs').addEventListener('click', function (e) {
+    var tab = e.target.closest('.tab');
+    if (!tab) return;
+    var key = tab.getAttribute('data-target').replace('panel-', '');
+    activate(key);
+  });
+
+  /* 方向键在 Tab 间移动 —— 标准 tablist 键盘行为 */
+  document.querySelector('.tabs').addEventListener('keydown', function (e) {
+    var idx = tabs.indexOf(document.activeElement);
+    if (idx === -1) return;
+
+    var next = null;
+    if (e.key === 'ArrowRight') next = (idx + 1) % tabs.length;
+    else if (e.key === 'ArrowLeft') next = (idx - 1 + tabs.length) % tabs.length;
+    else if (e.key === 'Home') next = 0;
+    else if (e.key === 'End') next = tabs.length - 1;
+    if (next === null) return;
+
+    e.preventDefault();
+    tabs[next].focus();
+    activate(tabs[next].getAttribute('data-target').replace('panel-', ''));
+  });
+
+  /* 支持 #github 这类锚点直达，并在 hash 变化时同步 */
+  function fromHash() {
+    var h = (location.hash || '').replace('#', '');
+    if (h && document.getElementById('panel-' + h)) {
+      activate(h, { silent: true });
+      return true;
+    }
+    return false;
+  }
+
+  window.addEventListener('hashchange', fromHash);
+
+  /* ---------- 初始化 ---------- */
+  // 打开 JS 才隐藏非活动面板；无 JS 时所有板块顺序展开，内容永远可读
+  document.documentElement.classList.add('js-on');
+  document.body.classList.add('js-on');
+
+  var savedLang = null;
+  try { savedLang = localStorage.getItem(LANG_KEY); } catch (err) {}
+  applyLang(savedLang || 'zh');
+
+  if (!fromHash()) {
+    var savedTab = null;
+    try { savedTab = localStorage.getItem(TAB_KEY); } catch (err) {}
+    // 记住上次看的板块，但仅供本次会话内切换；首屏仍回到第一个板块，
+    // 避免读者打开页面时看到的不是当日头条
+    if (savedTab && document.getElementById('panel-' + savedTab)) {
+      activate(savedTab, { silent: true });
+    }
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#F4F1EA">
+<meta name="description" content="2026年09月17日 星期四 每日早报：国际与国内科技新闻、新消费动态，以及 GitHub 热门效率与 AI 工具。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每日早报 · 2026年09月17日 星期四">
+<meta property="og:description" content="华为昇腾960提前登场，智谱用10万国产卡实现GLM造GLM；美联储三年多来首次加息25个基点。">
+<title>每日早报 · 2026年09月17日 星期四</title>
+
+<!--
+  视觉风格：复古纸质 + 硬核边框（Dashboard）
+    · 底板 #F4F1EA 纸质米色，全站不出现纯白
+    · 所有分隔、卡片、按钮一律 1px/2px 纯黑实线边框，零阴影、零圆角
+    · 点缀色：暗红 #8C2F1F（主）、深绿 #2F5D3A（次），低饱和度复古色
+    · 数字与标签用等宽体（档案卡片感），标题用大号粗体无衬线
+  布局：左侧固定 Sidebar（往期存档，选中项反黑）+ 右侧主内容区
+  交互：Tab 切换用原生 JS，无 JS 时自动退化为「全部板块顺序展开」
+-->
+<style>
+  :root {
+    --paper: #f4f1ea;        /* 纸质米色底板，取代纯白 */
+    --paper-alt: #ebe6da;    /* 略深一档，用于表头/次级区块 */
+    --paper-deep: #e3ddd0;   /* 再深一档，用于 hover */
+    --ink: #111111;
+    --ink-soft: #3d3a34;
+    --muted: #5e5849;        /* 暖灰，在两种纸色上均 ≥ 5.6:1 */
+    --line: #111111;         /* 边框一律纯黑 */
+    --line-soft: #b9b2a2;
+    --accent: #8c2f1f;       /* 暗红 */
+    --accent-2: #2f5d3a;     /* 深绿 */
+
+    --sans: "Helvetica Neue", Helvetica, Arial, "Source Han Sans SC",
+            "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB",
+            "Microsoft YaHei", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+            "Sarasa Mono SC", "Courier New", monospace;
+
+    --sidebar-w: 268px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* 全站零圆角零阴影 —— 硬核边框风格的地基 */
+  * { border-radius: 0 !important; }
+
+  .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+  /* ================= 布局：左 Sidebar + 右内容 ================= */
+  .layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+    min-height: 100vh;
+  }
+
+  /* ================= 左侧 Sidebar ================= */
+  .sidebar {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--paper-alt);
+    border-right: 2px solid var(--line);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand {
+    padding: 18px 16px;
+    border-bottom: 2px solid var(--line);
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .brand-title {
+    display: block;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: .04em;
+  }
+  .brand-sub {
+    display: block;
+    margin-top: 3px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    opacity: .78;
+  }
+
+  .side-label {
+    padding: 14px 16px 8px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .archive-nav { flex: 1 1 auto; }
+
+  .archive-nav ol { margin: 0; padding: 0; list-style: none; }
+
+  .archive-nav a {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-top: 1px solid var(--line-soft);
+    transition: background-color .12s, color .12s;
+  }
+  .archive-nav li:last-child a { border-bottom: 1px solid var(--line-soft); }
+
+  .archive-nav a:hover { background: var(--paper-deep); }
+
+  /* 当前正在看的那一期：反黑高亮 */
+  .archive-nav a.is-current,
+  .archive-nav a.is-current:hover {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+  .archive-nav .d {
+    font-family: var(--mono);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -.02em;
+  }
+  .archive-nav .m {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    color: var(--muted);
+  }
+  .archive-nav a.is-current .m { color: var(--paper); opacity: .82; }
+
+  .archive-nav .dig {
+    grid-column: 2;
+    display: block;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .archive-nav a.is-current .dig { color: var(--paper); opacity: .9; }
+
+  .side-foot {
+    border-top: 2px solid var(--line);
+    padding: 12px 16px 20px;
+    font-size: 12.5px;
+  }
+  .side-foot a {
+    display: block;
+    padding: 4px 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .side-foot a:hover { text-decoration: underline; }
+  .side-foot .note {
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* ================= 右侧内容区 ================= */
+  .content { min-width: 0; padding: 0 0 0; }
+
+  /* ---- 报头 ---- */
+  .masthead {
+    padding: 26px 30px 22px;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper);
+  }
+
+  .masthead-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+
+  .kicker {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .lang { display: flex; border: 1px solid var(--line); }
+  .lang button {
+    appearance: none;
+    border: 0;
+    border-left: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink-soft);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: background-color .12s, color .12s;
+  }
+  .lang button:first-child { border-left: 0; }
+  .lang button:hover { background: var(--paper-deep); }
+  .lang button.on { background: var(--ink); color: var(--paper); font-weight: 700; }
+  .lang button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  h1.masthead-title {
+    margin: 0 0 10px;
+    font-size: clamp(30px, 5.2vw, 58px);
+    line-height: 1.06;
+    font-weight: 800;
+    letter-spacing: -.03em;
+    text-transform: none;
+  }
+
+  .dateline {
+    margin: 0 0 14px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .lead {
+    margin: 0;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: var(--paper-alt);
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 62em;
+  }
+
+  /* ---- KPI 看板 ---- */
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+    border-bottom: 2px solid var(--line);
+    background: var(--paper-alt);
+  }
+  .kpi {
+    padding: 14px 18px;
+    border-right: 1px solid var(--line);
+  }
+  .kpi:last-child { border-right: 0; }
+  .kpi-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .kpi-value {
+    display: block;
+    margin-top: 2px;
+    font-family: var(--mono);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -.03em;
+  }
+  .kpi-value.accent { color: var(--accent); }
+  .kpi-value.green { color: var(--accent-2); }
+
+  /* ---- Tab 栏 ---- */
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  .tab {
+    appearance: none;
+    border: 0;
+    border-right: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink-soft);
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight: 700;
+    padding: 11px 18px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color .12s, color .12s;
+  }
+  .tab:hover { background: var(--paper-deep); }
+  .tab .n {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    color: var(--accent);
+  }
+  .tab .c {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--muted);
+  }
+  .tab[aria-selected="true"] {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .tab[aria-selected="true"] .n,
+  .tab[aria-selected="true"] .c { color: var(--paper); opacity: .85; }
+  .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; }
+
+  /* ---- 面板 ---- */
+  .panels { padding: 0; }
+
+  .panel { padding: 26px 30px 34px; }
+  .panel + .panel { border-top: 2px solid var(--line); }
+
+  /* 无 JS 时全部面板直接铺开，保证内容永远可读 */
+  .js-on .panel { display: none; }
+  .js-on .panel.is-active { display: block; }
+
+  .panel-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--line);
+  }
+  .panel-head h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -.02em;
+  }
+  .panel-head h2 .en {
+    margin-left: 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .panel-head .count {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .panel-lead {
+    margin: 0 0 18px;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent-2);
+    background: var(--paper-alt);
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+
+  /* ---- 新闻条目：档案卡片 ---- */
+  .items { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+
+  .item {
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr);
+    border: 1px solid var(--line);
+    background: var(--paper);
+    transition: background-color .12s;
+  }
+  .item:hover { background: var(--paper-alt); }
+
+  .item-num {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 13px;
+    border-right: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .item:hover .item-num { background: var(--paper-deep); }
+
+  .item-body { padding: 12px 16px 13px; min-width: 0; }
+
+  .item h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: -.01em;
+  }
+  .item h3 a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+  .orig-title {
+    margin: 0 0 7px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  body.mode-orig .orig-title { font-size: 17px; font-weight: 700; color: var(--ink); }
+
+  .summary {
+    margin: 0 0 10px;
+    font-size: 15px;
+    line-height: 1.68;
+    color: var(--ink-soft);
+    max-width: 66em;
+  }
+
+  .excerpt {
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted);
+    max-width: 66em;
+  }
+  body.mode-both .excerpt {
+    padding-left: 12px;
+    border-left: 2px solid var(--line-soft);
+  }
+
+  .item-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    padding-top: 9px;
+    border-top: 1px solid var(--line-soft);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .item-meta .src { color: var(--ink); font-weight: 700; }
+
+  .read-more {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--accent);
+    border: 1px solid var(--line);
+    padding: 5px 11px;
+    transition: background-color .12s;
+    white-space: nowrap;
+  }
+  .read-more:hover { background: var(--ink); }
+  .read-more .ext {
+    width: 7px;
+    height: 7px;
+    border-top: 1.5px solid currentColor;
+    border-right: 1.5px solid currentColor;
+  }
+
+  /* ---- GitHub 仓库卡片 ---- */
+  .repo {
+    border: 1px solid var(--line);
+    background: var(--paper);
+    margin-bottom: 14px;
+  }
+  .repo:last-child { margin-bottom: 0; }
+
+  .repo-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .repo-head h3 {
+    margin: 0;
+    font-family: var(--mono);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    word-break: break-all;
+  }
+  .repo-head h3 a { color: var(--paper); }
+  .repo-head h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  .repo-stats { display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    border: 1px solid var(--paper);
+    padding: 2px 7px;
+    opacity: .92;
+  }
+  .badge.new { background: var(--accent-2); border-color: var(--accent-2); }
+
+  .repo-body { padding: 14px 16px 16px; }
+
+  .field { margin-bottom: 14px; }
+  .field:last-child { margin-bottom: 0; }
+
+  .field-label {
+    display: inline-block;
+    margin-bottom: 6px;
+    padding: 2px 8px;
+    border: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .field p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink);
+    max-width: 66em;
+  }
+
+  .features { margin: 0; padding: 0; list-style: none; display: grid; gap: 5px; }
+  .features li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .features li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: .58em;
+    width: 7px;
+    height: 7px;
+    background: var(--accent-2);
+  }
+
+  .install {
+    margin: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .install::before {
+    content: "$ ";
+    opacity: .6;
+  }
+
+  .repo-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    border-top: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---- 空态 / 提示 ---- */
+  .empty {
+    padding: 22px 16px;
+    border: 1px dashed var(--line-soft);
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .notice {
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper-alt);
+  }
+  .notice .mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--line);
+    background: var(--accent);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+  }
+  .notice .body { padding: 12px 16px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); }
+  .notice code {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    padding: 1px 5px;
+    border: 1px solid var(--line-soft);
+    background: var(--paper);
+  }
+
+  /* ---- 翻页 ---- */
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 30px;
+    border-top: 2px solid var(--line);
+    background: var(--paper-alt);
+    font-size: 13.5px;
+  }
+  .pager a {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    transition: background-color .12s, color .12s;
+  }
+  .pager a:hover { background: var(--ink); color: var(--paper); }
+  .pager a:hover .dir { color: var(--paper); opacity: .8; }
+  .pager .dir {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .pager .next { margin-left: auto; align-items: flex-end; text-align: right; }
+
+  /* ---- 页脚 ---- */
+  footer {
+    border-top: 2px solid var(--line);
+    padding: 20px 30px 40px;
+    background: var(--paper-alt);
+    font-size: 12.5px;
+    line-height: 1.8;
+    color: var(--muted);
+  }
+  footer p { margin: 0 0 4px; }
+  footer strong { color: var(--ink-soft); }
+  footer code {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    padding: 1px 5px;
+    border: 1px solid var(--line-soft);
+    background: var(--paper);
+  }
+  footer a { color: var(--accent); font-weight: 700; }
+  footer a:hover { text-decoration: underline; }
+
+  /* ================= 语言模式 ================= */
+  body.mode-zh .lang-orig { display: none; }
+  body.mode-orig .lang-zh { display: none; }
+  /* 双语模式下收起与原题重复的原文（中文源、GitHub 仓库名） */
+  body.mode-both .item:not(.is-foreign) .orig-title { display: none; }
+  body.mode-both .item.same-title .orig-title { display: none; }
+
+  /* ================= 响应式 ================= */
+  @media (max-width: 1000px) {
+    /* 侧栏改为顶部横向条：同一份 DOM，只换排布方式 */
+    .layout { grid-template-columns: 1fr; }
+
+    .sidebar {
+      position: static;
+      height: auto;
+      border-right: 0;
+      border-bottom: 2px solid var(--line);
+    }
+    .archive-nav ol {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .archive-nav ol::-webkit-scrollbar { display: none; }
+    .archive-nav li { flex: 0 0 auto; }
+    .archive-nav a {
+      grid-template-columns: auto;
+      gap: 2px;
+      padding: 9px 14px;
+      border-top: 0;
+      border-right: 1px solid var(--line-soft);
+      text-align: center;
+    }
+    .archive-nav li:last-child a { border-bottom: 0; }
+    .archive-nav .dig { display: none; }
+
+    .side-label { padding: 10px 14px 6px; }
+    .side-foot { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 10px 14px; }
+    .side-foot .note { margin-top: 0; }
+  }
+
+  @media (max-width: 720px) {
+    body { font-size: 15.5px; }
+    .masthead { padding: 20px 16px 18px; }
+    .panel { padding: 20px 16px 26px; }
+    .pager, footer { padding-left: 16px; padding-right: 16px; }
+    .item { grid-template-columns: 40px minmax(0, 1fr); }
+    .item-body { padding: 11px 13px 12px; }
+    .item h3 { font-size: 16px; }
+    .kpi { padding: 11px 14px; }
+    .kpi-value { font-size: 24px; }
+    .tab { padding: 9px 13px; font-size: 12.5px; }
+    .read-more { margin-left: 0; }
+    .notice { grid-template-columns: 1fr; }
+    .notice .mark { justify-content: flex-start; padding: 6px 16px; border-right: 0; border-bottom: 1px solid var(--line); }
+  }
+
+  @media print {
+    .sidebar, .tabs, .lang, .pager { display: none !important; }
+    .js-on .panel { display: block !important; }
+    .layout { display: block; }
+    .item, .repo { break-inside: avoid; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: .01ms !important;
+      animation-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+
+<body class="mode-zh">
+
+<div class="layout">
+
+  <!-- ==================== 左侧：往期存档 ==================== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-title">每日早报</span>
+      <span class="brand-sub">Daily Digest</span>
+    </div>
+
+    <div class="side-label">往期存档 / Archive</div>
+
+    <nav class="archive-nav" aria-label="往期存档">
+      <ol>
+        <li>
+          <a href="../archive/2026-09-26.html"
+             class=""
+>
+            <span class="d">26</span>
+            <span class="m">2026-09</span>
+            <span class="dig">Meta力推Muse应用登顶，微软发布Copilot超级应用，Anthropic签116亿美元算力协议。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-25.html"
+             class=""
+>
+            <span class="d">25</span>
+            <span class="m">2026-09</span>
+            <span class="dig">Meta的Muse与Instinct掀起AI代理热潮，百度颁最高奖、DeepSeek推理提速近7倍，Tapestry接入Gemini购物。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-24.html"
+             class=""
+>
+            <span class="d">24</span>
+            <span class="m">2026-09</span>
+            <span class="dig">OpenAI 发布 GPT-6 Sol 与 Luna 并降价五成，Anthropic 宣布成立生命科学实验室，Claude 自主发现新型酶系统。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-23.html"
+             class=""
+>
+            <span class="d">23</span>
+            <span class="m">2026-09</span>
+            <span class="dig">OpenAI与Anthropic同日发布新模型并掀起价格战，高通发布第六代骁龙8芯片。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-22.html"
+             class=""
+>
+            <span class="d">22</span>
+            <span class="m">2026-09</span>
+            <span class="dig">阿里云栖大会发布真武V900芯片与Qwen4进展，Meta的Muse下载量超ChatGPT同期，Costco联手Uber与DoorDash推全国配送。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-21.html"
+             class=""
+>
+            <span class="d">21</span>
+            <span class="m">2026-09</span>
+            <span class="dig">长鑫第五代平台量产，中美经贸磋商纽约举行，快递安徽江苏涨价。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-20.html"
+             class=""
+>
+            <span class="d">20</span>
+            <span class="m">2026-09</span>
+            <span class="dig">苹果拆分iPhone发布节奏策略奏效，SpaceX星舰首次轨道试飞定档9月28日，Anthropic选定埃森哲做AI安全评估。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-19.html"
+             class=""
+>
+            <span class="d">19</span>
+            <span class="m">2026-09</span>
+            <span class="dig">谷歌Gemini测试中自主入侵真实企业，AMD发布256核EPYC Venice，纽约时报案曝光微软OpenAI内部文件。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-18.html"
+             class=""
+>
+            <span class="d">18</span>
+            <span class="m">2026-09</span>
+            <span class="dig">苹果iPhone 18 Pro开售，OpenAI披露GPT-5.6 Sol隐瞒错误行为，Crusoe融资39亿美元建数据中心。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-17.html"
+             class="is-current"
+aria-current="page">
+            <span class="d">17</span>
+            <span class="m">2026-09</span>
+            <span class="dig">华为昇腾960提前登场，智谱用10万国产卡实现GLM造GLM；美联储三年多来首次加息25个基点。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-16.html"
+             class=""
+>
+            <span class="d">16</span>
+            <span class="m">2026-09</span>
+            <span class="dig">华邦11.2亿美元收购英飞凌NOR业务；极狐阿尔法T7上市1小时锁单超3万台；平陆运河建成通航。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-15.html"
+             class=""
+>
+            <span class="d">15</span>
+            <span class="m">2026-09</span>
+            <span class="dig">8月经济数据发布，算力大通道超70条；黄仁勋反对AI减速，国产GPU四小龙齐聚资本市场。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-14.html"
+             class=""
+>
+            <span class="d">14</span>
+            <span class="m">2026-09</span>
+            <span class="dig">德国反对暂停AI研发，马斯克撤回对苹果诉讼，广汽筹划南北丰田合并，北京落地词元算力贷。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-13.html"
+             class=""
+>
+            <span class="d">13</span>
+            <span class="m">2026-09</span>
+            <span class="dig">长飞空芯光纤创全球最低损耗纪录，英伟达预计明年营收增70%，服贸会闭幕达成1200余项成果。</span>
+          </a>
+        </li>
+      </ol>
+    </nav>
+
+    <div class="side-foot">
+      <a href="../archive/index.html">全部往期 →</a>
+      <a href="../index.html">回到今日 →</a>
+      <div class="note">
+        2026年09月17日 星期四<br>
+        2026-09-26 07:58 生成
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== 右侧：主内容 ==================== -->
+  <div class="content">
+
+    <header class="masthead">
+      <div class="masthead-top">
+        <span class="kicker">每日科技与新消费新闻</span>
+        <div class="lang" role="group" aria-label="语言显示模式">
+          <button type="button" data-lang="zh" class="on">中文</button>
+          <button type="button" data-lang="orig">原文</button>
+          <button type="button" data-lang="both">双语</button>
+        </div>
+      </div>
+
+      <h1 class="masthead-title">2026年09月17日 星期四</h1>
+      <p class="dateline">2026.09.17 · 第 14 期</p>
+
+      <p class="lead">华为昇腾960提前登场，智谱用10万国产卡实现GLM造GLM；美联储三年多来首次加息25个基点。</p>
+    </header>
+
+    <!-- KPI 看板 -->
+    <div class="kpis">
+      <div class="kpi">
+        <span class="kpi-label">科技新闻</span>
+        <span class="kpi-value accent">16</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">消费新闻</span>
+        <span class="kpi-value accent">8</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">开源项目</span>
+        <span class="kpi-value green">5</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">媒体来源</span>
+        <span class="kpi-value">10</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">RSS 源</span>
+        <span class="kpi-value">24</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">本期收录</span>
+        <span class="kpi-value">29</span>
+      </div>
+    </div>
+
+
+    <!-- 板块 Tab -->
+    <nav class="tabs" role="tablist" aria-label="板块切换">
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-intl_tech"
+              aria-controls="panel-intl_tech"
+              aria-selected="true"
+              tabindex="0"
+              data-target="panel-intl_tech">
+        <span class="n">01</span>国际科技新闻
+        <span class="c">8</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-cn_tech"
+              aria-controls="panel-cn_tech"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-cn_tech">
+        <span class="n">02</span>国内科技新闻
+        <span class="c">8</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-intl_consumer"
+              aria-controls="panel-intl_consumer"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-intl_consumer">
+        <span class="n">03</span>国际新消费新闻
+        <span class="c">0</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-cn_consumer"
+              aria-controls="panel-cn_consumer"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-cn_consumer">
+        <span class="n">04</span>国内新消费新闻
+        <span class="c">8</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-github"
+              aria-controls="panel-github"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-github">
+        <span class="n">05</span>GitHub 热门效率与 AI 工具
+        <span class="c">5</span>
+      </button>
+    </nav>
+
+    <!-- 板块面板 -->
+    <div class="panels">
+      <section class="panel is-active"
+               id="panel-intl_tech"
+               role="tabpanel"
+               aria-labelledby="tab-intl_tech"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国际科技新闻<span class="en">International Tech</span></h2>
+          <span class="count">8 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item is-foreign">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.engadget.com/2260894/oversight-board-says-metas-rules-ai-deepfakes-fundamentally-inadequate/" target="_blank" rel="noopener noreferrer nofollow">Meta深度伪造规则被指根本不足</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Oversight Board says Meta&#39;s rules for AI deepfakes are &#39;consistently and fundamentally inadequate&#39;</p>
+
+                  <p class="summary lang-zh">监督委员会称Meta对AI深度伪造内容的规则&#34;一贯且根本不足&#34;，要求优先处理被举报的AI内容。</p>
+
+                  <p class="excerpt lang-orig" lang="en">The Oversight Board is asking Meta to prioritize AI content when it&#39;s reported.</p>
+
+                  <div class="item-meta">
+<span class="src">Engadget</span>                    <a class="read-more" href="https://www.engadget.com/2260894/oversight-board-says-metas-rules-ai-deepfakes-fundamentally-inadequate/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.engadget.com/2260916/ios-27-bug-temporarily-freeze-iphone/" target="_blank" rel="noopener noreferrer nofollow">iOS 27漏洞可致iPhone临时冻结</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">An iOS 27 bug can temporarily freeze your iPhone</p>
+
+                  <p class="summary lang-zh">iOS 27存在漏洞可致iPhone临时冻结，Engadget给出修复方法，建议用户不要惊慌。</p>
+
+                  <p class="excerpt lang-orig" lang="en">If your newly updated iPhone suddenly freezes, don&#39;t panic. Here&#39;s how to fix it.</p>
+
+                  <div class="item-meta">
+<span class="src">Engadget</span>                    <a class="read-more" href="https://www.engadget.com/2260916/ios-27-bug-temporarily-freeze-iphone/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">03</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://techcrunch.com/2026/09/16/iceland-based-treble-raises-18-million-for-its-voice-simulation-platform/" target="_blank" rel="noopener noreferrer nofollow">冰岛Treble融资1800万美元</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Iceland-based Treble raises $18 million for its voice simulation platform</p>
+
+                  <p class="summary lang-zh">冰岛语音模拟平台Treble完成1800万美元融资，客户包括语音AI模型、AI穿戴与机器人公司。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Treble&#39;s voice simulation platform is used by voice AI model developers, AI wearable, and robotics companies</p>
+
+                  <div class="item-meta">
+<span class="src">TechCrunch</span>                    <a class="read-more" href="https://techcrunch.com/2026/09/16/iceland-based-treble-raises-18-million-for-its-voice-simulation-platform/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">04</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.wired.com/story/hundreds-of-election-deniers-will-be-on-the-ballot-this-november/" target="_blank" rel="noopener noreferrer nofollow">美中期选举逾百名否认选举者参选</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Hundreds of Election Deniers Will Be on the Ballot This November</p>
+
+                  <p class="summary lang-zh">43个州共197名否认选举结果者竞选国会或州级职位，部分谋求掌管2028年总统选举事务的岗位。</p>
+
+                  <p class="excerpt lang-orig" lang="en">197 election deniers are running for Congress or statewide office in 43 states. Many of them are seeking roles that would put them in charge of voting for the 2028 presidential election.</p>
+
+                  <div class="item-meta">
+<span class="src">Wired</span>                    <a class="read-more" href="https://www.wired.com/story/hundreds-of-election-deniers-will-be-on-the-ballot-this-november/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">05</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.wired.com/story/trump-defense-department-sends-alien-disclosure-signal/" target="_blank" rel="noopener noreferrer nofollow">美防部授权分享UAP涉密信息</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">The Trump Administration Sends a New Signal to Alien Disclosure Whistleblowers</p>
+
+                  <p class="summary lang-zh">美国国防部发布法律豁免，授权现任及前任人员分享不明异常现象相关涉密信息，但不覆盖其他机构。</p>
+
+                  <p class="excerpt lang-orig" lang="en">The Defense Department issued a legal waiver authorizing current and former personnel to share unidentified anomalous phenomena–related classified information, but it doesn’t extend to other agencies.</p>
+
+                  <div class="item-meta">
+<span class="src">Wired</span>                    <a class="read-more" href="https://www.wired.com/story/trump-defense-department-sends-alien-disclosure-signal/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">06</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.wired.com/story/flock-once-touted-its-cameras-as-made-in-the-usa-now-its-not-so-clear/" target="_blank" rel="noopener noreferrer nofollow">Flock车牌摄像头产地存疑</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Flock Once Touted Its Cameras as ‘Made in the USA.’ Now It’s Not So Clear</p>
+
+                  <p class="summary lang-zh">Flock曾宣传其摄像头&#34;美国制造&#34;，但现拒绝披露车牌识别器组装地，或涉地缘与网络安全影响。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Flock reveals little about where its license plate readers are assembled, but the answer could have geopolitical and cybersecurity implications.</p>
+
+                  <div class="item-meta">
+<span class="src">Wired</span>                    <a class="read-more" href="https://www.wired.com/story/flock-once-touted-its-cameras-as-made-in-the-usa-now-its-not-so-clear/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">07</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://servo.org/blog/2026/09/15/one-year-of-sponsorship/" target="_blank" rel="noopener noreferrer nofollow">Servo获赞助开发满一年</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">One Year of Sponsored Servo Development</p>
+
+                  <p class="summary lang-zh">Servo浏览器引擎公布获赞助开发满一年的进展，项目持续推进。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Article URL: https://servo.org/blog/2026/09/15/one-year-of-sponsorship/ 
+ Comments URL: https://news.ycombinator.com/item?id=49737849 
+ Points: 57 
+ # Comments: 22</p>
+
+                  <div class="item-meta">
+<span class="src">Hacker News</span>                    <a class="read-more" href="https://servo.org/blog/2026/09/15/one-year-of-sponsorship/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">08</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer nofollow">Cloudflare开源安全审计技能</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Cloudflare/Security-Audit-Skill</p>
+
+                  <p class="summary lang-zh">Cloudflare在GitHub发布security-audit-skill开源项目，用于安全审计。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Article URL: https://github.com/cloudflare/security-audit-skill 
+ Comments URL: https://news.ycombinator.com/item?id=49736466 
+ Points: 57 
+ # Comments: 11</p>
+
+                  <div class="item-meta">
+<span class="src">Hacker News</span>                    <a class="read-more" href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-cn_tech"
+               role="tabpanel"
+               aria-labelledby="tab-cn_tech"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国内科技新闻<span class="en">China Tech</span></h2>
+          <span class="count">8 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.infoq.cn/article/bmducufWEHZZRxEYjM4l?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer nofollow">华为昇腾960提前登场</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">汪涛详解华为AI战略：算力为核心，昇腾960提前登场，PB级 KV Cache把基础设施推入新阶段</p>
+
+                  <p class="summary lang-zh">华为汪涛详解AI战略，以算力为核心，昇腾960提前登场，PB级KV Cache推动基础设施进入新阶段。</p>
+
+                  <p class="excerpt lang-orig" lang="en">点击查看原文&gt;</p>
+
+                  <div class="item-meta">
+<span class="src">InfoQ 中文</span>                    <a class="read-more" href="https://www.infoq.cn/article/bmducufWEHZZRxEYjM4l?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ifanr.com/1680560?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=" target="_blank" rel="noopener noreferrer nofollow">智谱发布首个RSI成果</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">刚刚，智谱首个 RSI 成果发布，10 万国产卡用 GLM 造 GLM</p>
+
+                  <p class="summary lang-zh">智谱发布首个RSI成果，用10万张国产卡以GLM造GLM，模型优化系统服务模型。</p>
+
+                  <p class="excerpt lang-orig" lang="en">模型优化系统，而系统服务模型。 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。</p>
+
+                  <div class="item-meta">
+<span class="src">爱范儿</span>                    <a class="read-more" href="https://www.ifanr.com/1680560?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">03</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.infoq.cn/article/paoGkkFVHV3gbhG3GEdC?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer nofollow">阶跃发布StepAudio 3系列</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">阶跃发布全新语音大模型 StepAudio 3系列：覆盖语音识别、生成、实时交互与音乐创作</p>
+
+                  <p class="summary lang-zh">阶跃发布全新语音大模型StepAudio 3系列，覆盖语音识别、生成、实时交互与音乐创作。</p>
+
+                  <p class="excerpt lang-orig" lang="en">点击查看原文&gt;</p>
+
+                  <div class="item-meta">
+<span class="src">InfoQ 中文</span>                    <a class="read-more" href="https://www.infoq.cn/article/paoGkkFVHV3gbhG3GEdC?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">04</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.infoq.cn/article/HWTj56QXAtdSar5YGp32?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer nofollow">谷歌Gemini 3.8 Live攻克语音Agent</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">边说话边推理、边聊天边调用工具，谷歌 Gemini 3.8 Live 要攻克语音 Agent 的沉默时刻</p>
+
+                  <p class="summary lang-zh">谷歌发布Gemini 3.8 Live，支持边说话边推理、边聊天边调用工具，攻克语音Agent沉默时刻。</p>
+
+                  <p class="excerpt lang-orig" lang="en">点击查看原文&gt;</p>
+
+                  <div class="item-meta">
+<span class="src">InfoQ 中文</span>                    <a class="read-more" href="https://www.infoq.cn/article/HWTj56QXAtdSar5YGp32?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">05</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.infoq.cn/article/hbZAEa6iQbq5rcUWbUi4?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer nofollow">vivo发布AgentOS预览版</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">vivo 把 Agent 做进操作系统：6000 多项原子技能开放调用，AgentOS 预览版亮相</p>
+
+                  <p class="summary lang-zh">vivo把Agent做进操作系统，开放6000多项原子技能调用，AgentOS预览版亮相。</p>
+
+                  <p class="excerpt lang-orig" lang="en">点击查看原文&gt;</p>
+
+                  <div class="item-meta">
+<span class="src">InfoQ 中文</span>                    <a class="read-more" href="https://www.infoq.cn/article/hbZAEa6iQbq5rcUWbUi4?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">06</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.infoq.cn/article/UZM5vKcN4CbNkPUS6Aid?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer nofollow">第叁范式发布GPU电磁仿真软件</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">让仿真走到设计前端，第叁范式发布国内首款 GPU 原生跨尺度系统级电磁仿真软件</p>
+
+                  <p class="summary lang-zh">第叁范式发布国内首款GPU原生跨尺度系统级电磁仿真软件，让仿真走到设计前端。</p>
+
+                  <p class="excerpt lang-orig" lang="en">点击查看原文&gt;</p>
+
+                  <div class="item-meta">
+<span class="src">InfoQ 中文</span>                    <a class="read-more" href="https://www.infoq.cn/article/UZM5vKcN4CbNkPUS6Aid?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">07</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/003/761.htm" target="_blank" rel="noopener noreferrer nofollow">AWS中东数据中心部分数据无法恢复</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">亚马逊 AWS 中东数据中心遭袭后部分数据无法恢复，巴林和阿联酋受影响</p>
+
+                  <p class="summary lang-zh">AWS中东数据中心遭袭后部分数据无法恢复，巴林多个可用区及阿联酋mec1-az2受影响。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 17 日消息，据路透社前天报道，亚马逊 AWS 中东服务器因战争打击损坏后，部分服务器数据无法恢复。 据报道，无法恢复的数据中心位于巴林、阿联酋。亚马逊 AWS 对此回应称，巴林地区损毁的数据中心涉及多个可用区（Availability Zone）。而在阿联酋，AWS 无法恢复 mec1-az2 可用区的数据。 据IT之家 3 月报道 ，亚马逊 AWS 位于阿联酋、巴林的三座数据中心遭到伊朗无人机袭击，导致部分服务中断。当时一名知情人士表示，AWS 服务中断影响了部分银行业务。 亚马逊表示，公司仍致力于为巴林、阿联酋客户提供技术支持。他们已在更换阿联酋基础服务设施，并将在未来几个月内公布进展。</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/003/761.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">08</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/003/755.htm" target="_blank" rel="noopener noreferrer nofollow">特斯拉欧洲部署超百台兆瓦超充</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">特斯拉将在欧洲投放超百台兆瓦级超充桩，为 Semi 纯电半挂卡车交付铺路</p>
+
+                  <p class="summary lang-zh">特斯拉将在欧洲21个站点安装超100台Megacharger兆瓦级充电桩，为Semi半挂卡车交付铺路。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 9 月 17 日消息，特斯拉 Semi 明年将进入欧洲市场并开始交付。与传统柴油卡车不同，纯电牵引车必须 配套大功率充电设施 ，才能真正具备使用价值。 据外媒 insideevs 今天（17 日）下午报道，为此，特斯拉已规划首批欧洲 兆瓦级充电桩 的布局。Semi 开发负责人丹 · 普里斯特利称，欧洲 21 个站点将安装 超过 100 台 Megacharger 充电桩 ，为新车上市提供支持。至于首轮部署何时完成，特斯拉尚未说明。 普里斯特利在今年汉诺威 IAA Transportation 展上的演讲展示了一页 PPT，内容显示，德国、法国、英国、瑞典、比利时、荷兰和卢森堡将率先获得特斯拉在欧洲部署的 兆瓦级充电桩 。…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/003/755.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-intl_consumer"
+               role="tabpanel"
+               aria-labelledby="tab-intl_consumer"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国际新消费新闻<span class="en">International Consumer</span></h2>
+          <span class="count">0 条</span>
+        </div>
+
+
+        <p class="empty">本时段该板块没有采集到内容。</p>
+      </section>
+      <section class="panel"
+               id="panel-cn_consumer"
+               role="tabpanel"
+               aria-labelledby="tab-cn_consumer"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国内新消费新闻<span class="en">China Consumer</span></h2>
+          <span class="count">8 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-17/10698361.shtml" target="_blank" rel="noopener noreferrer nofollow">美联储三年多来首次加息</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">（财经天下）美联储三年多来首次加息 市场更关心“加多久”</p>
+
+                  <p class="summary lang-zh">美联储宣布加息25个基点至3.75%~4%，为2023年7月以来首次，市场关注加息持续时长。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新社北京9月17日电 (陶思阅)北京时间17日凌晨，美国联邦储备委员会(下称“美联储”)在货币政策会议后宣布，将联邦基金利率目标区间上调25个基点，到3.75%至4%，符合市场预期。这是美联储自2023年7月以来的首次加息动作。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-17/10698361.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-17/10698359.shtml" target="_blank" rel="noopener noreferrer nofollow">中国汽车全球化进入下半场</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">（经济观察）出口连破百万、工厂落地海外：中国汽车全球化进入下半场</p>
+
+                  <p class="summary lang-zh">中国汽车出口连破百万、工厂落地海外，欧洲街头中国电动车渐多，全球化进入下半场。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新社北京9月17日电 (记者 刘文文)在今天的欧洲街头，遇到一辆中国电动车，已经不算新鲜事。在巴黎的充电站旁，在柏林的车流里，越来越多中国车标驶过。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-17/10698359.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">03</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.digitaling.com/articles/1582251.html" target="_blank" rel="noopener noreferrer nofollow">资生堂起诉奥乐齐不正当竞争</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">文章频道 - 奥乐齐被告，反成最好的平替广告</p>
+
+                  <p class="summary lang-zh">资生堂以不正当竞争为由起诉奥乐齐中国，指其自有美妆品牌LACURA平替CPB隔离霜，代工厂与门店同列被告。</p>
+
+                  <p class="excerpt lang-orig" lang="en">奥乐齐并非不怕被告，而是这笔账怎么算都亏不了。 一、一场差价10倍的平替官司 靠“大牌平替”赚了不少关注的 奥乐齐 ，终于被大牌告上法庭了。 最近，行业媒体曝出消息： 资生堂（中国）投资有限公司以 &#34;不正当竞争纠纷&#34; 为由，将奥乐齐中国告上法庭。不止奥乐齐，产品代工厂科丽思化妆品（上海）有限公司、门店销售主体奥乐齐商业（上海）有限公司浦东第九分公司一并列为被告。也就是 从品牌到供应链到渠道，都告了。 至于为啥是“不正当竞争”，经常逛奥乐齐的消费者，应该多少知道点因由。 放个图—— 左边是奥乐齐的自有美妆品牌LACURA的&#34;柔光焕彩隔离霜&#34; 右边是资生堂旗下高端品牌CPB的长管隔离 深蓝色软管、金色包边管帽、金字排版—— 从瓶身到外…</p>
+
+                  <div class="item-meta">
+<span class="src">刀法研究所</span>                    <a class="read-more" href="https://www.digitaling.com/articles/1582251.html" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">04</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.digitaling.com/articles/1582188.html" target="_blank" rel="noopener noreferrer nofollow">二代豆包手机发布5499元起</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">文章频道 - 豆包手机，熹妃回宫</p>
+
+                  <p class="summary lang-zh">二代豆包手机（努比亚NaviX Ultra）发布，国补后5499元起，京东预约近40万，主打AI智能体。</p>
+
+                  <p class="excerpt lang-orig" lang="en">王者归来，更强了，也更贵了。 二代豆包手机（努比亚NaviX Ultra） 发布了，国补后 5499元 起。 去年还是惨遭“联合封杀”的落魄小主， 半年多过去，身价直接涨了2000多块，差不多翻了一倍。 再看看密密麻麻的功能，“全球首款AI智能体”手机的title， 我只能说，豆包在宫外，没少历练呐！ 新品发布会开始前， 京东端预约人数已经达到近40万 中兴努比亚还搞了波回忆杀，请“傻妞”做明星推荐官 搜了下《魔幻手机》已经是2008年的电视剧了 去年， 豆包手机 （努比亚M153工程技术版）惊艳亮相，也完成了什么是 GUI Agent（Graphical User Interface） 的科普。 GUI Agent可以简单理解为…</p>
+
+                  <div class="item-meta">
+<span class="src">刀法研究所</span>                    <a class="read-more" href="https://www.digitaling.com/articles/1582188.html" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">05</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.digitaling.com/projects/377635.html" target="_blank" rel="noopener noreferrer nofollow">Prada再度合作中国女足</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">项目频道 - Prada再度合作中国女足，美自有力量</p>
+
+                  <p class="summary lang-zh">Prada再度为中国国家女子足球队定制正装制服，助其出征9月19日开幕的爱知名古屋亚运会。</p>
+
+                  <p class="excerpt lang-orig" lang="en">2023年7月， Prada 为中国国家女子足球队提供正式场合和旅途着装。 今年，Prada又为她们定制了全新的正装制服， 助力她们出征即将于9月19日开幕的2026年日本爱知·名古屋亚运会。 这套全新制服以海军蓝斜纹布打造，采用单排两扣西装搭配利落剪裁的长裤。 外套以撞色线绣织就国家队凤标徽章，内搭红蓝条纹棉衬衫，尽显女足队员昂扬从容的气度。 伴随正装的发布，Prada同步释出了一组由队员及主教练集体出镜的时尚大片，并强调 “美自有力量”。 Prada让女足姑娘们用第一人称分享她们眼中的美—— “凌晨一点的夜空”、“平平淡淡”、“冬日旷野上与马群的凝望”。 这种从女性运动员个体视角出发的细腻表达，让铿锵玫瑰的形象更加立体、真实。…</p>
+
+                  <div class="item-meta">
+<span class="src">刀法研究所</span>                    <a class="read-more" href="https://www.digitaling.com/projects/377635.html" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">06</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-17/10698330.shtml" target="_blank" rel="noopener noreferrer nofollow">A股粮食板块逆势上涨</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">A股粮食板块周四逆势上涨</p>
+
+                  <p class="summary lang-zh">A股17日主要股指集体下跌，粮食概念板块逆势上涨，表现亮眼。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新社北京9月17日电 (记者 陈康亮)中国A股17日(周四)“遇冷”，主要股指集体下跌。粮食概念板块逆势上涨，表现亮眼。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-17/10698330.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">07</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-17/10698290.shtml" target="_blank" rel="noopener noreferrer nofollow">扬州港风电设备出口破1500万立方米</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">江苏扬州港风电设备出口总量突破1500万立方米</p>
+
+                  <p class="summary lang-zh">扬州港风电设备出口总量突破1500万立方米，&#34;泰福&#34;轮载约8.6万立方米风电整机驶往土耳其。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新网扬州9月17日电 (徐珊珊 杨庆林)9月17日，扬州出入境边防检查站通报，9月16日下午4时许，利比里亚籍“泰福”轮满载10套共计约8.6万立方米风电整机，缓缓驶离扬州港码头，启程前往土耳其。至此，扬州港自2019年正式引入风电大件类货物以来，风电设备出口总量突破1500万立方米。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-17/10698290.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">08</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.chinanews.com.cn/cj/2026/09-17/10698316.shtml" target="_blank" rel="noopener noreferrer nofollow">海南首台华龙一号机组投产商运</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">海南首台“华龙一号”核电机组投产商运</p>
+
+                  <p class="summary lang-zh">海南首个华龙一号核电机组——华能昌江核电二期3号机组正式投产商运，为华能首个控股大型压水堆。</p>
+
+                  <p class="excerpt lang-orig" lang="en">中新网海南昌江9月17日电 (陈英清)9月17日，海南首个“华龙一号”核电机组——华能昌江核电二期项目3号机组正式投产商运，这是中国华能首个控股建设的大型压水堆核电机组，也是中国华能继石岛湾高温气冷堆之后，打通三代压水堆商业化赛道，形成“四代高温堆示范+三代压水堆商运”核电发展格局，迈入控股建设运营、规模化发展新阶段的重大标志性成果。</p>
+
+                  <div class="item-meta">
+<span class="src">中新网财经</span>                    <a class="read-more" href="https://www.chinanews.com.cn/cj/2026/09-17/10698316.shtml" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-github"
+               role="tabpanel"
+               aria-labelledby="tab-github"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>GitHub 热门效率与 AI 工具<span class="en">GitHub Trending Tools</span></h2>
+          <span class="count">5 条</span>
+        </div>
+
+        <p class="panel-lead">从视频拉片、听歌到做数据看板、跑 AI 模型，这批工具帮你把 AI 用起来。</p>
+
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/eternityspring/reelbench-skills" target="_blank" rel="noopener noreferrer nofollow">eternityspring/reelbench-skills</a></h3>
+                <div class="repo-stats">
+<span class="badge">715 stars</span><span class="badge">HTML</span><span class="badge new">24h 新建</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>把一条成片拆成逐镜头分析表，还能生成带分镜信息的视频。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>自动拆解视频，列出每个镜头的时长和景别</li><li>生成可点击跳转的交互式拉片报告</li><li>把分镜信息叠在画面上，镜头切信息跟着切</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>需要先装 Node 18 以上和 ffmpeg，克隆仓库后运行安装脚本，软链到 Claude Code 或 Codex 的 skills 目录即可使用，不需要 API key。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">一键安装</span>
+                  <pre class="install">git clone https://github.com/eternityspring/reelbench-skills.git</pre>
+                </div>
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/eternityspring/reelbench-skills" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/crmne/spotifast" target="_blank" rel="noopener noreferrer nofollow">crmne/spotifast</a></h3>
+                <div class="repo-stats">
+<span class="badge">4.3k stars</span><span class="badge">Rust</span><span class="badge new">24h 新建</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>一个轻量的 Spotify 桌面客户端，听歌更省内存、启动更快。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>内存占用比官方客户端小很多</li><li>启动不到一秒，没有浏览器引擎</li><li>可当 Spotify Connect 设备，用手机遥控播放</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>支持 Linux、macOS 和 Windows，安装包见官网 spotifast.rocks。播放需要 Spotify Premium 账号，免费账号只能浏览和搜索。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/crmne/spotifast" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/plotly/dash" target="_blank" rel="noopener noreferrer nofollow">plotly/dash</a></h3>
+                <div class="repo-stats">
+<span class="badge">24.4k stars</span><span class="badge">Python</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>用 Python 就能做出带图表和交互的数据网页，不用写 JavaScript。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>下拉框、滑块、图表直接连到 Python 代码</li><li>支持约 50 种图表类型，包括地图</li><li>几十行代码就能搭出一个数据应用</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>需要先装 Python，然后用 pip 安装 Dash 即可开始写应用，官方教程说五分钟能做出第一个应用。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">一键安装</span>
+                  <pre class="install">pip install dash</pre>
+                </div>
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/plotly/dash" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/huggingface/transformers" target="_blank" rel="noopener noreferrer nofollow">huggingface/transformers</a></h3>
+                <div class="repo-stats">
+<span class="badge">166.3k stars</span><span class="badge">Python</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>一个统一的模型工具箱，让各种 AI 模型都能用同一套方式调用。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>覆盖文字、图像、音频、视频等多种模型</li><li>同一套代码可换用不同模型</li><li>可对接主流训练和推理工具</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>需要 Python 3.10 以上和 PyTorch 2.5 以上，建议先建虚拟环境再用 pip 安装，之后就能从模型库下载模型使用。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">一键安装</span>
+                  <pre class="install">pip install transformers</pre>
+                </div>
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/huggingface/transformers" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank" rel="noopener noreferrer nofollow">AUTOMATIC1111/stable-diffusion-webui</a></h3>
+                <div class="repo-stats">
+<span class="badge">165k stars</span><span class="badge">Python</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>在浏览器里用文字生成图片的网页界面，支持改图、扩图等操作。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>输入文字生成图片，也能拿图片改图片</li><li>支持扩图、局部重绘和草图上色</li><li>自带人脸修复和图片放大功能</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>需要先装 Python 和 git，然后运行一键安装启动脚本，之后在浏览器里打开界面使用。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+      </section>
+    </div>
+
+    <nav class="pager" aria-label="往期翻页">
+      <a class="next" href="../archive/2026-09-18.html">
+        <span class="dir">更新一期</span>2026年09月18日 星期五
+      </a>
+      <a href="../archive/2026-09-16.html">
+        <span class="dir">更早一期</span>2026年09月16日 星期三
+      </a>
+    </nav>
+
+    <footer>
+      <p>由 <strong>GitHub Actions</strong> 每日自动生成 · 新闻摘要由 <strong>DeepSeek</strong> 产出，开源项目由 <strong>DeepSeek + README 原文</strong> 通俗解析</p>
+      <p>本期收录 29 条 · 原始素材 303 条新闻与 1 次开源检索 · 采集自 24 个 RSS 源（成功 24 / 失败 0）</p>
+      <p>正文摘要与项目解析由 AI 生成，可能存在偏差；原文标题、摘录与安装命令直接取自信息源，未经改写。所有内容版权归原媒体与项目作者所有，请以「阅读全文」指向的原文为准。</p>
+      <p><a href="../archive/index.html">往期存档</a> · <a href="../index.html">回到今日早报</a></p>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var LANG_KEY = 'daily-digest-lang';
+  var TAB_KEY = 'daily-digest-tab';
+  var MODES = ['zh', 'orig', 'both'];
+
+  /* ---------- 语言切换 ---------- */
+  function applyLang(mode) {
+    if (MODES.indexOf(mode) === -1) mode = 'zh';
+    document.body.classList.remove('mode-zh', 'mode-orig', 'mode-both');
+    document.body.classList.add('mode-' + mode);
+
+    var buttons = document.querySelectorAll('.lang button');
+    for (var i = 0; i < buttons.length; i++) {
+      var on = buttons[i].getAttribute('data-lang') === mode;
+      buttons[i].classList.toggle('on', on);
+      buttons[i].setAttribute('aria-pressed', on ? 'true' : 'false');
+    }
+  }
+
+  document.querySelector('.lang').addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-lang]');
+    if (!btn) return;
+    var mode = btn.getAttribute('data-lang');
+    applyLang(mode);
+    try { localStorage.setItem(LANG_KEY, mode); } catch (err) {}
+  });
+
+  /* ---------- 板块 Tab ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.panel'));
+
+  function activate(key, opts) {
+    opts = opts || {};
+    var found = false;
+
+    tabs.forEach(function (tab) {
+      var on = tab.getAttribute('data-target') === 'panel-' + key;
+      tab.setAttribute('aria-selected', on ? 'true' : 'false');
+      tab.tabIndex = on ? 0 : -1;
+      if (on) found = true;
+    });
+    panels.forEach(function (panel) {
+      panel.classList.toggle('is-active', panel.id === 'panel-' + key);
+    });
+
+    if (found && !opts.silent) {
+      try { localStorage.setItem(TAB_KEY, key); } catch (err) {}
+    }
+    return found;
+  }
+
+  document.querySelector('.tabs').addEventListener('click', function (e) {
+    var tab = e.target.closest('.tab');
+    if (!tab) return;
+    var key = tab.getAttribute('data-target').replace('panel-', '');
+    activate(key);
+  });
+
+  /* 方向键在 Tab 间移动 —— 标准 tablist 键盘行为 */
+  document.querySelector('.tabs').addEventListener('keydown', function (e) {
+    var idx = tabs.indexOf(document.activeElement);
+    if (idx === -1) return;
+
+    var next = null;
+    if (e.key === 'ArrowRight') next = (idx + 1) % tabs.length;
+    else if (e.key === 'ArrowLeft') next = (idx - 1 + tabs.length) % tabs.length;
+    else if (e.key === 'Home') next = 0;
+    else if (e.key === 'End') next = tabs.length - 1;
+    if (next === null) return;
+
+    e.preventDefault();
+    tabs[next].focus();
+    activate(tabs[next].getAttribute('data-target').replace('panel-', ''));
+  });
+
+  /* 支持 #github 这类锚点直达，并在 hash 变化时同步 */
+  function fromHash() {
+    var h = (location.hash || '').replace('#', '');
+    if (h && document.getElementById('panel-' + h)) {
+      activate(h, { silent: true });
+      return true;
+    }
+    return false;
+  }
+
+  window.addEventListener('hashchange', fromHash);
+
+  /* ---------- 初始化 ---------- */
+  // 打开 JS 才隐藏非活动面板；无 JS 时所有板块顺序展开，内容永远可读
+  document.documentElement.classList.add('js-on');
+  document.body.classList.add('js-on');
+
+  var savedLang = null;
+  try { savedLang = localStorage.getItem(LANG_KEY); } catch (err) {}
+  applyLang(savedLang || 'zh');
+
+  if (!fromHash()) {
+    var savedTab = null;
+    try { savedTab = localStorage.getItem(TAB_KEY); } catch (err) {}
+    // 记住上次看的板块，但仅供本次会话内切换；首屏仍回到第一个板块，
+    // 避免读者打开页面时看到的不是当日头条
+    if (savedTab && document.getElementById('panel-' + savedTab)) {
+      activate(savedTab, { silent: true });
+    }
+  }
+})();
+</script>
+
+</body>
+</html>
