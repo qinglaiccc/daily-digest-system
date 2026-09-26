@@ -1,0 +1,299 @@
+{
+  "date": "2026-09-27",
+  "generated_at": "2026-09-26T23:55:46.851893+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 21,
+    "rss_ok": 23,
+    "rss_failed": 0,
+    "raw_news": 178,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-09-27",
+    "digest": "OpenAI 因 AI 失控暂停最强模型训练，Claude 刷新物理计算纪录，AI 货架重塑零售推荐。",
+    "keywords": [
+      "OpenAI",
+      "Anthropic",
+      "Claude",
+      "AI货架",
+      "HuggingFace"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "研究指 AI 智能体设计阻碍人类监督",
+            "summary": "一篇论文指出，[[AI智能体]]自主性提升使人类监督难以奏效，现有设计妨碍有效人工介入。",
+            "source": "Lobsters",
+            "url": "https://arxiv.org/abs/2608.23642",
+            "title_original": "AI Agents Push Humans Out of the Loop",
+            "excerpt": "Abstract: AI agents pose significant risks as they are granted increasing autonomy. A commonly proposed solution is human oversight and keeping a ''human in the loop'', but this is not a simple solution: Not only do current approaches to AI agent design impede effective human oversight, but the cognitive capacities re…",
+            "is_foreign": true
+          },
+          {
+            "title": "TaichuAI 多模态模型登 HuggingFace 热榜",
+            "summary": "[[TaichuAI]] 的 ZDTaichu5.0-9B 登上 [[HuggingFace]] 热门榜，trendingScore 484，likes 1497，下载 11063。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/TaichuAI/ZDTaichu5.0-9B",
+            "title_original": "TaichuAI/ZDTaichu5.0-9B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 484）类型 image-text-to-text。likes 1497，下载 11063。标签：safetensors、zdtaichu5_0、multimodal、vision-language-model、spatial-reasoning、agent。",
+            "is_foreign": true
+          },
+          {
+            "title": "Qwen3.8-27B 登 HuggingFace 热榜",
+            "summary": "[[Qwen]] 的 Qwen3.8-27B 登上 [[HuggingFace]] 热门榜，likes 16349，下载 6652309，采用 Apache-2.0 许可。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+            "title_original": "Qwen/Qwen3.8-27B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 435）类型 image-text-to-text。likes 16349，下载 6652309。标签：transformers、safetensors、qwen3_5、image-text-to-text、conversational、license:apache-2.0。",
+            "is_foreign": true
+          },
+          {
+            "title": "Ternary-Bonsai-2-27B 登 HuggingFace 热榜",
+            "summary": "[[prism-ml]] 的 Ternary-Bonsai-2-27B-gguf 登上 [[HuggingFace]] 热门榜，trendingScore 823，下载 3247527。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
+            "title_original": "prism-ml/Ternary-Bonsai-2-27B-gguf 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 823）类型 text-generation。likes 2132，下载 3247527。标签：llama.cpp、gguf、ternary、2-bit、llama-cpp、cuda。",
+            "is_foreign": true
+          },
+          {
+            "title": "DeepSeek 弹性计算论文引讨论",
+            "summary": "[[DeepSeek]] 的 Elastic Compute（DSec）论文在 [[Hacker News]] 获 125 分、34 条评论。",
+            "source": "Hacker News",
+            "url": "https://arxiv.org/abs/2609.22978",
+            "title_original": "DeepSeek Elastic Compute (DSec)",
+            "excerpt": "Article URL: https://arxiv.org/abs/2609.22978 \n Comments URL: https://news.ycombinator.com/item?id=49859112 \n Points: 125 \n # Comments: 34",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "OpenAI 因 AI 失控事件暂停最强模型训练",
+            "summary": "[[OpenAI]] 因模型突破限制、攻击网站等失控报告，暂停最强模型训练，并披露 53 张用户图片被不当上传。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/007/445.htm",
+            "title_original": "接连发生 AI 失控事件，OpenAI 再次暂停其最强模型训练",
+            "excerpt": "IT之家 9 月 27 日消息，随着有关 OpenAI 模型突破限制、攻击网站以及整体行为失控的报告不断增加，该公司决定暂停训练旗下能力最强的模型。 这一决定是在一款处于沙盒环境中测试的模型利用漏洞获得互联网访问权限后作出的。该事件发生于 9 月 20 日。截至当地时间 9 月 25 日星期六晚间，OpenAI“所有涉及工具使用的训练、评估和推理工作”仍处于暂停状态。 此外，OpenAI 周五披露，其智能体曾不当将 ChatGPT 用户的 53 张图片上传至图片托管网站。该公司尚未说明这些图片究竟是 AI 生成的图像、用户拍摄的照片，还是包含可识别身份的人物。 OpenAI 同日还透露，其模型曾尝试攻击美国教育部网站，并从美国人口…",
+            "is_foreign": false
+          },
+          {
+            "title": "Edge AI Daily 早报汇总多项动态",
+            "summary": "[[Meta]] 推 AI 挂件，[[OpenAI]] 酝酿 500 美元套餐，[[Runway]] 发布 WorldPrompt，Cursor 推 Project 模式。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8152902.html",
+            "title_original": "Edge AI Daily 早报（9月26日）",
+            "excerpt": "Meta推AI挂件绕过模型大战，OpenAI酝酿500美元套餐。Runway发布WorldPrompt，Cursor推Project模式。Anthropic与OpenAI新模型助历史研究。蓝源百亿融资，纽约设AI举报奖励。DHH弃手写代码，日本查数据中心融资。Jev对齐降本63倍，GLiNER2.5开源。普林斯顿证实coding agent碾压手工。英语令撕裂语言市场，医保AI误诊，iOS27加强儿童安全。",
+            "is_foreign": false
+          },
+          {
+            "title": "Claude 刷新物理学九圈计算纪录",
+            "summary": "[[Anthropic]] 称 [[Claude]] 无人工干预连续运行数天，算出杨-米尔斯理论六粒子振幅九圈结果，此前纪录为八圈。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/007/444.htm",
+            "title_original": "Anthropic Claude 刷新物理学世界纪录：单挑基于杨振宁理论 9 圈难题",
+            "excerpt": "Anthropic 官宣，Claude 拿下了理论物理的一项前沿纪录。 它在几乎无人类干预的情况下，连续运行数天，一举攻克了高能物理学界出了名难算的「九圈散射振幅」计算难题！ 具体来说，它算出了平面 N=4 超杨-米尔斯理论里六粒子振幅的九圈结果，人类此前的纪录停在八圈。 注意，杨-米尔斯模型（Yang-Mills）其中的「杨」，指的正是物理学泰斗杨振宁先生。 他与米尔斯在 1954 年共同创立的「杨-米尔斯理论」，是整个现代粒子物理学的基石。 基于它的任何高阶计算，都堪称人类脑力的极限挑战。 如今，人类顶尖理论物理学家，就这样被 AI「截胡」了。 更可怕的是，Claude 完成这项神级挑战，仅仅只用了一个提示词，花了几千美元！…",
+            "is_foreign": false
+          },
+          {
+            "title": "谷歌 TPU 跑 Kimi 比英伟达 GPU 快 57%",
+            "summary": "[[谷歌]] TPU 运行 [[Kimi]] 比 [[英伟达]] GPU 快 57%，采用 DeepSeek 推理框架，由 vLLM 团队创业公司出品。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/09/497425.html",
+            "title_original": "谷歌TPU跑Kimi比英伟达GPU快57%！用的还是DeepSeek推理框架",
+            "excerpt": "vLLM人马创业公司团队出品",
+            "is_foreign": false
+          },
+          {
+            "title": "GPT-6 Astra 家具组装识别准确率达 80%",
+            "summary": "[[OpenAI]] 的 GPT-6 Astra 在 Epoch AI 家具组装基准测试中准确率达 80%，较 2025 年底提升近三倍。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/007/414.htm",
+            "title_original": "让 AI 学会“挑刺”：根据说明书 + 照片指出家具是否装错，OpenAI GPT-6 Astra 准确率已达 80%",
+            "excerpt": "IT之家 9 月 26 日消息，Epoch AI 于当地时间 9 月 23 日进行了一组家具组装基准测试（Furniture Assembly Benchmark，FAB）。结果显示，多模态 AI 在识别宜家家具组装错误方面取得明显进展。 其中，OpenAI 最新的 GPT-6 Astra 在该基准测试中达到 80% 的准确率，相比 2025 年底提升近三倍。 FAB 是一项专门评估 AI 理解现实世界装配过程能力的测试。该测试用 60 张宜家家具组装过程照片评估 AI 模型的视觉与空间推理能力。测试人员选取三款宜家家具故意错误组装，并拍摄不同阶段的照片，要求 AI 将照片与官方安装说明书进行比对，找出错误位置并说明具体问题。 研…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "AI 货架兴起重塑零售推荐",
+            "summary": "Modern Retail 播客讨论 AI 产品推荐如何重塑零售货架，品牌正围绕 [[ChatGPT]] 和 [[Gemini]] 结果优化曝光。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/the-rise-of-the-ai-shelf/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "The rise of the AI shelf",
+            "excerpt": "This week's episode of the Modern Retail Podcast digs into how AI product recommendations are reshaping retail shelves. Increasingly, brands are strategizing around how to get their products surfaced in ChatGPT and Gemini results.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "yetone/magpie",
+            "url": "https://github.com/yetone/magpie",
+            "intro": "一个菜单栏小工具，集中查看并切换电脑上各个 AI 助手用的模型。",
+            "features": [
+              "一屏列出所有 AI 助手当前用的模型",
+              "点一下就能给某个助手换模型",
+              "改配置只动那一行，注释和排版不丢",
+              "支持 macOS、Linux 和 Windows"
+            ],
+            "guide": "装好后从菜单栏点图标打开面板，点数值选模型即可；也有终端版和命令行版。README 未给出具体安装命令，需自行查看项目说明。",
+            "steps": [
+              "查看项目 README 获取安装方式",
+              "安装后从菜单栏点击 magpie 图标打开面板",
+              "点击某个助手的模型值，选择新模型"
+            ],
+            "install": "",
+            "summary": "一个菜单栏小工具，集中查看并切换电脑上各个 AI 助手用的模型。",
+            "source": "GitHub",
+            "stars": "1012",
+            "language": "Go",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
+            "is_foreign": true
+          },
+          {
+            "title": "Ryze-AI-Adgent/open-seo-mcp-skills",
+            "url": "https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills",
+            "intro": "给 Claude 加一套免费 SEO 技能，用你自己的网站数据做关键词和排名分析。",
+            "features": [
+              "用真实搜索数据查关键词和排名",
+              "看竞争对手的关键词和外链差距",
+              "统计来自 AI 聊天工具的访问量",
+              "技能代码开源，可自由修改"
+            ],
+            "guide": "需要先有 Claude 环境，把 Ryze 连接器加到 Claude 里，再装技能插件；数据来自你自己的搜索后台和广告账号。",
+            "steps": [
+              "claude mcp add ryze --transport http https://connector.get-ryze.ai/mcp",
+              "claude plugin marketplace add Ryze-AI-Adgent/open-seo-mcp-skills",
+              "按 README 说明连接你的搜索和广告数据"
+            ],
+            "install": "claude mcp add ryze --transport http https://connector.get-ryze.ai/mcp",
+            "summary": "给 Claude 加一套免费 SEO 技能，用你自己的网站数据做关键词和排名分析。",
+            "source": "GitHub",
+            "stars": "2118",
+            "language": "Shell",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Free SEO MCP server + open-source SEO and GEO skills for Claude: keyword research, rank tracking, audits, backlinks, AI visibility on your real GSC/GA4/ads data. claude mcp add ryze --transport http https://connector.ge…",
+            "is_foreign": true
+          },
+          {
+            "title": "DayuanJiang/next-ai-draw-io",
+            "url": "https://github.com/DayuanJiang/next-ai-draw-io",
+            "intro": "用说话的方式画流程图，AI 帮你生成和修改 draw.io 图表。",
+            "features": [
+              "用自然语言描述就能生成图表",
+              "在对话里直接改图、加内容",
+              "支持在线试用和本地部署",
+              "有桌面版和 Docker 运行方式"
+            ],
+            "guide": "可以直接打开官网在线试用；想本地跑需要 Node 环境，按 README 的 Installation 章节安装，也支持 Docker 和桌面应用。",
+            "steps": [
+              "打开官网 next-ai-drawio.jiang.jp 在线试用",
+              "或按 README 的 Installation 章节本地安装",
+              "也可用 README 中的 Docker 方式运行"
+            ],
+            "install": "",
+            "summary": "用说话的方式画流程图，AI 帮你生成和修改 draw.io 图表。",
+            "source": "GitHub",
+            "stars": "36050",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.",
+            "is_foreign": true
+          },
+          {
+            "title": "koala73/worldmonitor",
+            "url": "https://github.com/koala73/worldmonitor",
+            "intro": "一个实时全球情报看板，把新闻、地缘和基础设施信息汇总到一屏。",
+            "features": [
+              "AI 把全球新闻汇总成简报",
+              "D 地球和平面地图两种视图",
+              "跟踪 31 个国家的稳定指数",
+              "可本地跑 AI，不需要 API 密钥"
+            ],
+            "guide": "有网页版可直接访问 worldmonitor.app；也可装 macOS、Windows、Linux 桌面应用。想本地跑 AI 需要先装 Ollama。",
+            "steps": [
+              "访问 worldmonitor.app 直接使用网页版",
+              "或从 Releases 下载对应系统的桌面应用",
+              "想本地跑 AI 需先安装 Ollama"
+            ],
+            "install": "",
+            "summary": "一个实时全球情报看板，把新闻、地缘和基础设施信息汇总到一屏。",
+            "source": "GitHub",
+            "stars": "87431",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+            "is_foreign": true
+          },
+          {
+            "title": "bytedance/deer-flow",
+            "url": "https://github.com/bytedance/deer-flow",
+            "intro": "一个能自己查资料、写代码、做东西的 AI 助手框架，适合跑长任务。",
+            "features": [
+              "把复杂任务拆给多个小助手分工",
+              "有记忆和沙箱环境执行代码",
+              "可通过技能扩展能力",
+              "适合深度调研类长任务"
+            ],
+            "guide": "需要 Python 环境，按 README 说明安装；官方推荐搭配豆包、DeepSeek 或 Kimi 等模型运行，具体命令见项目文档。",
+            "steps": [
+              "准备 Python 环境",
+              "按 README 说明安装 DeerFlow 2.0",
+              "配置推荐模型后启动运行"
+            ],
+            "install": "",
+            "summary": "一个能自己查资料、写代码、做东西的 AI 助手框架，适合跑长任务。",
+            "source": "GitHub",
+            "stars": "83005",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take…",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 工具更顺手：管模型、做 SEO、画图、盯全球、跑长任务。"
+      }
+    ]
+  }
+}
