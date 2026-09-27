@@ -1,5 +1,5 @@
 {
-  "classic_offset": 36,
+  "classic_offset": 38,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-09-16T14:59:34.738944+00:00",
   "recent_trending": [
-    "lissy93/dashy",
-    "eternityspring/reelbench-skills",
-    "crmne/spotifast",
     "plotly/dash",
     "youngyangyang04/llm-master",
     "wang2122/sprix-sage-router",
@@ -174,12 +171,15 @@
     "DayuanJiang/next-ai-draw-io",
     "freestylefly/WeChatBridge",
     "qingjian-team/qingjian",
-    "Flow-Launcher/Flow.Launcher"
+    "Flow-Launcher/Flow.Launcher",
+    "nokia-applied-research/AnyJev",
+    "XiaoDuoYa/codex-with-chatgpt",
+    "Wox-launcher/Wox"
   ],
   "last_run_date": "2026-09-27",
   "last_classic": [
-    "lobehub/lobehub",
-    "D4Vinci/Scrapling"
+    "rtk-ai/rtk",
+    "netdata/netdata"
   ],
-  "updated_at": "2026-09-27T08:14:00.006031+00:00"
+  "updated_at": "2026-09-27T23:58:18.131652+00:00"
 }

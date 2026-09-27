@@ -1,0 +1,283 @@
+{
+  "date": "2026-09-28",
+  "generated_at": "2026-09-27T23:58:28.727704+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 204,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-09-28",
+    "digest": "GPT-6 Astra 控制真车完成封闭测试，DeepSeek 年化收入达 10 亿美元，黑客低价兜售 AI 模型访问权限。",
+    "keywords": [
+      "GPT-6",
+      "DeepSeek",
+      "Claude",
+      "千问办公",
+      "量子计算"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "用 Claude 清理电视预装软件存风险",
+            "summary": "Engadget 提醒，让 [[Claude]] 清理电视预装软件可能导致电视崩溃，不建议如此操作。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2267074/why-claude-cleaning-tv-bloatware-not-best-idea/",
+            "title_original": "Why letting Claude clean your TV's bloatware isn't the best idea",
+            "excerpt": "Don't let an AI bot potentially crash your TV.",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini Live 与 ChatGPT Voice 对话对比",
+            "summary": "Engadget 对比 [[Gemini Live]] 与 [[ChatGPT Voice]]，评估哪款 AI 语音对话更自然。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2266889/gemini-live-vs-gpt-live-which-offers-more-natural-conversation/",
+            "title_original": "Gemini Live vs. ChatGPT Voice: Which AI offers a more natural conversation?",
+            "excerpt": "Speaking with an AI chatbot can be a little awkward, but companies like Google and OpenAI are working on fixing that.",
+            "is_foreign": true
+          },
+          {
+            "title": "Qwen-Image-2.1 无审查版登热门榜",
+            "summary": "[[Qwen-Image-2.1]] 无审查 GGUF 版登上 HuggingFace 热门模型榜，获 2078 赞、下载 964220 次。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+            "title_original": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 1718）类型 text-to-image。likes 2078，下载 964220。标签：gguf、qwen、image-generation、comfyui、comfyui-gguf、text-to-image。",
+            "is_foreign": true
+          },
+          {
+            "title": "生物安全是一场 AI 军备竞赛",
+            "summary": "[[Radical Numerics]] CEO Eric Nguyen 称，公司用生物链式思维与多模态感知应对生物防御军备竞赛。",
+            "source": "Latent Space",
+            "url": "https://www.latent.space/p/bio-security-is-an-ai-arms-race-eric",
+            "title_original": "🔬Bio-security is an AI Arms Race - Eric Nguyen (CEO, Radical Numerics)",
+            "excerpt": "Radical Numerics is using biological chain-of-thought and multimodal perception to keep up with the bio-defense arms race, design new genomes and gain insights into biology itself.",
+            "is_foreign": true
+          },
+          {
+            "title": "Fireworks AI 发布 Ember-1",
+            "summary": "[[Fireworks AI]] 发布 [[Ember-1]]，相关讨论在 Hacker News 获 304 分、164 条评论。",
+            "source": "Hacker News",
+            "url": "https://fireworks.ai/blog/ember-1",
+            "title_original": "Ember-1",
+            "excerpt": "Article URL: https://fireworks.ai/blog/ember-1 \n Comments URL: https://news.ycombinator.com/item?id=49868830 \n Points: 304 \n # Comments: 164",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "GPT-6 Astra 已能控制真车",
+            "summary": "[[GPT-6 Astra]] 未经专门自动驾驶训练，成功控制真车完成封闭场地测试。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8153325.html",
+            "title_original": "不用专门训练自动驾驶，GPT-6 Astra已经能开真车了？",
+            "excerpt": "GPT-6 Astra成功控制真车完成封闭场地测试，通用大模型开始迈向真实物理世界。",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek 年化收入达 10 亿美元",
+            "summary": "[[DeepSeek]] 年化收入达 10 亿美元，较此前不足 5 亿美元翻倍以上，拟以 5000 亿元估值融资 500 亿元。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1854388.html",
+            "title_original": "The Information：DeepSeek年化收入10亿美元，增长一倍以上",
+            "excerpt": "据The Information，梁文锋称公司年化收入10亿美元，较几个月前不足5亿美元增长一倍以上。增长靠8月API提价，需求仍强劲。收入几乎全来自API。拟以5000亿元估值融资500亿元，并筹备上市。超70%算力用于训练。",
+            "is_foreign": false
+          },
+          {
+            "title": "量子计算小盒子跑通端到端",
+            "summary": "量子计算设备以“小盒子”形态跑通端到端流程，数据全程不出门，目标让开发者说句话就能跑量子计算。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/09/498605.html",
+            "title_original": "量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门",
+            "excerpt": "想让开发者“说句话就能跑量子计算”",
+            "is_foreign": false
+          },
+          {
+            "title": "黑客暗网低价兜售 AI 模型权限",
+            "summary": "黑客在暗网兜售 AI 模型访问权限，最低价仅为正版 3%，[[谷歌]] 威胁情报团队称 LLM 劫持活动明显增多。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/007/619.htm",
+            "title_original": "黑客在暗网兜售 AI 模型访问权限，最低价仅有正版 3%",
+            "excerpt": "IT之家 9 月 28 日消息，据英国《金融时报》当地时间 26 日报道，非法获取 AI 模型和算力，正迅速成为网络犯罪黑市上最抢手的商品，黑客希望借助价格高昂的大模型实施勒索、网络战和间谍活动。 谷歌威胁情报团队首席分析师约翰 · 霍特奎斯特披露，今年所谓“LLM 劫持”活动明显增多，具体表现于 倒卖公开 AI 工具的被盗登录凭据 ，以及部分团体盗用他人算力，以免费运行自己的模型。 从事网络安全工作 20 年的霍特奎斯特坦言：“我们在地下市场看到，一个围绕 AI 使用权限形成的经济体系在不断壮大。” 霍特奎斯特警告，攻击者能够 以低廉价格使用原本昂贵的 AI ，从而在成本上占据优势，被攻击方为了防御同样需要使用这些 AI 工具。…",
+            "is_foreign": false
+          },
+          {
+            "title": "阿里整合 AI 办公力量推千问办公",
+            "summary": "[[阿里]] 整合 AI 办公力量推出 [[千问办公]]，切入企业办公入口、数据与 Agent 平台竞争。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/371040",
+            "title_original": "阿里整合 AI 办公力量后，千问办公怎么打这场大战？",
+            "excerpt": "办公正在成为全球 AI 行业竞争最集中的战场之一。 \n 相比聊天、搜索，AI 在企业办公场景下的落地要复杂的多，一方面需要连接、调用企业的文档、邮件、知识库，另一方面还需要 AI 理解审批、销售、财务等业务流程。而今年以来 Agent 快速发展，让 AI 进入「千司千面」的企业办公场景成为可能。 \n 因此，从微软、谷歌到国内的互联网和云计算公司，行业竞争的重点都在从模型能力延伸到办公入口、企业数据、Agent 平台和业务流程。企业客户是否愿意采用，AI 能否安全地接触组织数据、进入实际工作流，也开始成为比模型能力更受企业关注的竞争要素。 \n 这一轮全球竞赛中，阿里把注下在了千问办公。 \n 千问办公并非从零成立，而是阿里将 Qode…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "nokia-applied-research/AnyJev",
+            "url": "https://github.com/nokia-applied-research/AnyJev",
+            "intro": "把现成的大模型改造成会给出概率判断的决策助手，不用重新训练。",
+            "features": [
+              "让模型对选项给出真实概率，而不是随口猜",
+              "不用训练，几百条标注就能调好",
+              "一条命令完成转换、部署和效果测量"
+            ],
+            "guide": "需要 Python 环境，用 pip 安装后按 README 三条命令把模型转成决策接口；适合有技术背景的人本地部署。",
+            "steps": [
+              "pip install \"anyjev[hf]\"",
+              "python -m anyjev.truncate Qwen/Qwen2.5-7B-Instruct 18 ./qwen-b18",
+              "vllm serve ./qwen-b18 --task embed"
+            ],
+            "install": "pip install \"anyjev[hf]\"",
+            "summary": "把现成的大模型改造成会给出概率判断的决策助手，不用重新训练。",
+            "source": "GitHub",
+            "stars": "827",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Turn any LLM into a Jev-style decision model: typed decisions, real probabilities, no training. (continue updating, welcome any issue and PR request)",
+            "is_foreign": true
+          },
+          {
+            "title": "XiaoDuoYa/codex-with-chatgpt",
+            "url": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
+            "intro": "让网页版 ChatGPT 负责出主意，Codex 负责动手写代码，省下 API 费用。",
+            "features": [
+              "用已付费的网页版 ChatGPT 做规划",
+              "代码只读不传，仓库不会上传",
+              "不用 API Key，官方网页加安全桥接"
+            ],
+            "guide": "不懂技术也行：把 README 里那段安装说明原样复制给 Codex，让它自动装好；需要已有 ChatGPT 付费订阅和 Codex。",
+            "steps": [
+              "复制 README 中的安装说明给 Codex",
+              "让 Codex 自动完成安装配置",
+              "遇到问题先让 Codex 更新到最新版"
+            ],
+            "install": "",
+            "summary": "让网页版 ChatGPT 负责出主意，Codex 负责动手写代码，省下 API 费用。",
+            "source": "GitHub",
+            "stars": "6773",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "ChatGPT thinks. Codex works. Use ChatGPT as the planning brain while keeping the Codex harness.",
+            "is_foreign": true
+          },
+          {
+            "title": "Wox-launcher/Wox",
+            "url": "https://github.com/Wox-launcher/Wox",
+            "intro": "一个按快捷键就能搜应用、找文件、执行操作的桌面启动器。",
+            "features": [
+              "键盘输入就能打开应用和文件",
+              "支持插件扩展，可用脚本自己加功能",
+              "内存占用约 150MB，常驻后台不卡"
+            ],
+            "guide": "Windows、macOS、Linux 都能装，用系统包管理器一条命令即可；装好后按快捷键呼出输入框使用。",
+            "steps": [
+              "macOS 执行 brew install --cask wox",
+              "Windows 执行 winget install -e --id Wox.Wox",
+              "安装后按快捷键呼出输入框"
+            ],
+            "install": "brew install --cask wox",
+            "summary": "一个按快捷键就能搜应用、找文件、执行操作的桌面启动器。",
+            "source": "GitHub",
+            "stars": "27456",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "A cross-platform launcher that simply works",
+            "is_foreign": true
+          },
+          {
+            "title": "rtk-ai/rtk",
+            "url": "https://github.com/rtk-ai/rtk",
+            "intro": "给 AI 编程助手装个过滤器，把命令输出压缩后再喂给模型，省 token 钱。",
+            "features": [
+              "压缩命令输出，最多省九成 token",
+              "支持 100 多种常用命令",
+              "单个程序文件，不用装依赖"
+            ],
+            "guide": "装一个命令行工具即可，macOS 用 Homebrew、Windows 用 winget、Linux 用脚本；装完让 AI 助手走它转发命令。",
+            "steps": [
+              "macOS 执行 brew install rtk",
+              "Windows 执行 winget install rtk-ai.rtk",
+              "Linux 执行 curl 安装脚本"
+            ],
+            "install": "brew install rtk",
+            "summary": "给 AI 编程助手装个过滤器，把命令输出压缩后再喂给模型，省 token 钱。",
+            "source": "GitHub",
+            "stars": "81834",
+            "language": "Rust",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
+            "is_foreign": true
+          },
+          {
+            "title": "netdata/netdata",
+            "url": "https://github.com/netdata/netdata",
+            "intro": "实时监控服务器和应用的运行状态，出问题能第一时间看到并报警。",
+            "features": [
+              "每秒刷新指标和图表，看得清",
+              "自动发现异常并发出告警",
+              "数据留在本地，不用上传中心"
+            ],
+            "guide": "README 强调零配置即可部署，通常用官方安装脚本或 Docker 跑起来；具体命令 README 摘录里没给全，建议看官网文档。",
+            "steps": [
+              "参考官网文档选择安装方式",
+              "按文档完成部署后打开监控面板"
+            ],
+            "install": "",
+            "summary": "实时监控服务器和应用的运行状态，出问题能第一时间看到并报警。",
+            "source": "GitHub",
+            "stars": "80675",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The fastest path to AI-powered full stack observability, even for lean teams.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 更省钱、更聪明，也让电脑操作更顺手。"
+      }
+    ]
+  }
+}
