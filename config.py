@@ -202,6 +202,35 @@ RSS_SOURCES = [
         "enabled": True,
     },
     {
+        # AI 垂类 feed：与全站 feed 并存。同一媒体多条 feed 属同族（源族配额会
+        # 把同族在单个板块压到 1 条），加它只为提高 AI 密度，不增加版面占比。
+        # 注意：本机探测时该 feed 连接被重置（本机网络对部分海外站点有 SSL 闪断史，
+        # 此前 GitHub API 也出现过同样现象而云端正常），接入后以云端运行日志为准。
+        "name": "TechCrunch AI",
+        "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+        "region": "intl",
+        "category": "tech",
+        "enabled": True,
+    },
+    {
+        "name": "VentureBeat AI",
+        "url": "https://venturebeat.com/category/ai/feed/",
+        "region": "intl",
+        "category": "tech",
+        # 同上：本机探测 SSL 失败，云端待验证；单源失败有容错，最坏是日志几条 WARNING
+        "enabled": True,
+    },
+    {
+        "name": "Latent Space",
+        "url": "https://www.latent.space/feed",
+        "region": "intl",
+        "category": "tech",
+        # 实测可用（HTTP 200，20 条，48h 内 1 条）。AI 工程师播客/深度访谈，周更节奏，
+        # 全局 24h 窗口会经常清空它，给它单独放宽到 7 天 —— 深度内容值得等。
+        "lookback_hours": 168,
+        "enabled": True,
+    },
+    {
         "name": "The Verge",
         "url": "https://www.theverge.com/rss/index.xml",
         "region": "intl",
@@ -458,15 +487,18 @@ RSS_SOURCES = [
 # 它们不是 feed，所以不能塞进 RSS_SOURCES（feedparser 解析 JSON 会直接失败）。
 HF_ENABLED = os.getenv("HF_ENABLED", "true").lower() not in ("0", "false", "no")
 HF_DAILY_PAPERS_URL = "https://huggingface.co/api/daily_papers"
-HF_TRENDING_MODELS_URL = (
-    "https://huggingface.co/api/models?sort=trendingScore&direction=-1&limit=25"
-)
+# 注意：limit 等查询参数由 fetcher 动态传（候选面要给新鲜度排序留余量），这里只留接口地址
+HF_TRENDING_MODELS_URL = "https://huggingface.co/api/models"
 HF_PAPERS_LIMIT = int(os.getenv("HF_PAPERS_LIMIT", "25"))
 HF_MODELS_LIMIT = int(os.getenv("HF_MODELS_LIMIT", "15"))
 
 # HF daily_papers 是滚动榜单，不是"过去 24 小时"的流：实测最新一篇也常是两三
 # 天前提交的。用全局 24 小时窗口会把这个源整个静默清空，所以单独给它一个更宽的窗口。
 HF_LOOKBACK_HOURS = int(os.getenv("HF_LOOKBACK_HOURS", "48"))
+
+# HF 热门模型的"新发布"判定窗口：createdAt 在此窗口内的模型排在老仓库前面。
+# 只影响排序不做硬过滤 —— 老仓库的新爆发仍然能进，重复由跨天去重拦截。
+HF_FRESH_HOURS = int(os.getenv("HF_FRESH_HOURS", "48"))
 
 
 # --------------------------------------------------------------------------
@@ -568,6 +600,8 @@ SECTION_HINTS = {
         "命令行", "cli", "容器", "docker", "kubernetes", "数据库", "前端", "后端",
         "agent", "智能体", "自动化", "效率", "工具", "平台", "软件", "硬件",
         "模型训练", "推理", "微调", "蒸馏", "多模态", "数据集",
+        # 研究进展类（实测缺口：'某研究突破'这类标题曾因无词可命中被相关性闸门误杀）
+        "研究", "论文", "突破", "实验室", "benchmark", "基准测试",
         "startup", "融资", "发布", "版本",
     ],
     "cn_tech": [
@@ -578,6 +612,7 @@ SECTION_HINTS = {
         "命令行", "cli", "容器", "docker", "数据库", "前端", "后端", "国产", "厂商",
         "agent", "智能体", "自动化", "效率", "工具", "平台", "软件", "硬件",
         "模型训练", "推理", "微调", "蒸馏", "多模态", "数据集", "新能源",
+        "研究", "论文", "突破", "实验室", "基准测试",
         "发布", "版本",
     ],
     "intl_consumer": [
@@ -612,6 +647,51 @@ RERANK_MAX_INPUT_CHARS = int(os.getenv("RERANK_MAX_INPUT_CHARS", "24000"))
 RERANK_KEEP_PER_SECTION = int(os.getenv("RERANK_KEEP_PER_SECTION", "5"))
 # 每个板块为强触发词预留的保底名额（命中强触发词的条目一定进得来）
 FORCE_RESERVED_PER_SECTION = int(os.getenv("FORCE_RESERVED_PER_SECTION", "2"))
+
+# --------------------------------------------------------------------------
+# 跨天去重（seen_articles）
+# --------------------------------------------------------------------------
+# 背景（09-26/27 实测）：HF 热门模型榜顶部高度稳定，同 3 个模型连霸两天版面。
+# 根因是流水线只有"当次运行内"的 URL 去重，没有跨天记忆 —— 慢轮换的榜单天然重复。
+SEEN_STATE_FILE = ARCHIVE_DIR / "seen_articles.json"
+
+# 记住最近几天的已发内容。7 天：足够拦住"榜单慢轮换"（HF 模型榜一轮约 3-5 天），
+# 又不至于把"上周的热点今天有了新进展"这类合理的跟进报道也拦掉。
+SEEN_DAYS = int(os.getenv("SEEN_DAYS", "7"))
+
+# 标题模糊匹配阈值。为什么需要：标题是模型改写后输出的，同一条新闻两天的标题
+# 实测只差几个空格（'TaichuAI多模态模型登HuggingFace热榜' vs
+# 'TaichuAI 多模态模型登 HuggingFace 热榜'），精确匹配抓不到。
+# 归一化（去空格标点）解决空格问题；模糊匹配解决改写问题。0.9 是比较保守的值 ——
+# 宁可漏拦一条相似标题，也不误杀"同主体不同事件"的两条新闻。
+SEEN_TITLE_SIMILARITY = float(os.getenv("SEEN_TITLE_SIMILARITY", "0.9"))
+
+# --------------------------------------------------------------------------
+# 信源多样性配额（Diversity Capping）
+# --------------------------------------------------------------------------
+# 背景：HF 的两条流（论文 / 模型）都塞满 AI 关键词，重排时会把整个板块挤占。
+# 同一"源族"在同一个板块里最多入选 N 条（默认 1）。
+# 用"族"而不是"源名"分组，是因为同一个媒体经常有多个 feed：
+#   HuggingFace 论文 + HuggingFace 模型 → 一族（合计最多 1 条）
+#   Hacker News + Hacker News 高分      → 一族（合计最多 1 条）
+# 没有映射到的源各自成族。
+SOURCE_CAP_PER_SECTION = int(os.getenv("SOURCE_CAP_PER_SECTION", "1"))
+
+SOURCE_FAMILIES = {
+    "huggingface 论文": "huggingface",
+    "huggingface 模型": "huggingface",
+    "hacker news": "hackernews",
+    "hacker news 高分": "hackernews",
+}
+
+# --------------------------------------------------------------------------
+# 弹性板块（宁缺毋滥）
+# --------------------------------------------------------------------------
+# True：尊重主编重排的选择 —— 它只挑了 2 条就出 2 条，不再用本地排序回填凑数。
+# False：回退旧行为（不足 keep 时用本地排序补满）。
+# 注意这只约束"LLM 没选的不硬塞"；被源族配额拦下时，仍会从池中顺延补位其他源
+#（把名额让给别家是任务本意），且强触发条目的保底名额不受影响。
+RERANK_RESPECT_PICKS = os.getenv("RERANK_RESPECT_PICKS", "true").lower() not in ("0", "false", "no")
 
 # --------------------------------------------------------------------------
 # GitHub 热门项目采集

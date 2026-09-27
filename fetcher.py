@@ -13,6 +13,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import html
 import json
 import logging
@@ -48,6 +49,29 @@ def strip_channel_prefix(title: str) -> str:
         return title
     matched = _CHANNEL_PREFIX_RE.match(title.strip())
     return matched.group(1).strip() if matched else title
+
+
+def normalize_title_for_dedup(title: str) -> str:
+    """
+    跨天去重用的标题归一化。
+
+    为什么不能只用原文标题精确匹配：标题最终是模型改写后输出的，同一条新闻两天的
+    标题常常**只差几个空格或标点**（实测：'TaichuAI多模态模型登HuggingFace热榜' 与
+    'TaichuAI 多模态模型登 HuggingFace 热榜'）。所以这里去掉全部空白与标点、
+    转小写后再比较，把"改写噪音"压掉，留下内容本身。
+    """
+    if not title:
+        return ""
+    text = re.sub(r"[\s\W_]+", "", title.lower(), flags=re.UNICODE)
+    return text
+
+
+def dedup_url_key(url: str) -> str:
+    """URL 的去重键：去掉查询串与末尾斜杠（与 run 内去重规则一致），再哈希定长存储。"""
+    if not url:
+        return ""
+    key = url.split("?")[0].rstrip("/")
+    return hashlib.sha1(key.encode("utf-8")).hexdigest() if key else ""
 _WS_RE = re.compile(r"[ \t\r\f\v]+")
 _MULTI_NL_RE = re.compile(r"\n{3,}")
 
@@ -438,20 +462,49 @@ def fetch_hf_trending_models(session: requests.Session) -> List[NewsItem]:
     """
     HuggingFace 热门模型（按 trendingScore 排序）。
 
-    同样不做时间窗过滤：榜单本身就是"最近在涨"的信号，而 modelId 对应的仓库
-    可能是几个月前建的（日期会很旧）。用创建时间过滤会把真正在爆的模型滤掉 ——
-    这属于"看起来在筛选、实际上在误杀"的典型陷阱，所以这里显式不过滤。
+    【新鲜度优先】跨天去重上线后修正了之前的决策：早先"不做时间过滤"的理由是
+    按创建时间硬过滤会误杀老仓库的新爆发；但现在榜单顶部高度稳定，同 3 个模型
+    能连霸两天版面（09-26/27 实测），光靠去重会把整个板块越排越薄。
+    所以改为**软偏好**：createdAt 在 HF_FRESH_HOURS 内的排前面，老仓库新爆发
+    仍然能进（不会硬过滤掉），只是让位给真正新发布的模型。重复本身由跨天去重拦截。
     """
-    response = session.get(config.HF_TRENDING_MODELS_URL, timeout=config.HTTP_TIMEOUT)
+    response = session.get(
+        config.HF_TRENDING_MODELS_URL,
+        # 候选面给足余量：新鲜优先排序要在足够大的列表里才有得挑，
+        # 只拉 25 条的话新鲜模型可能根本不在里面
+        params={"sort": "trendingScore", "direction": "-1", "limit": max(50, config.HF_MODELS_LIMIT * 3)},
+        timeout=config.HTTP_TIMEOUT,
+    )
     response.raise_for_status()
     payload = response.json()
     if not isinstance(payload, list):
         raise ValueError(f"trending models 返回了非数组结构：{type(payload).__name__}")
 
+    fresh_cutoff = datetime.now(timezone.utc) - timedelta(hours=config.HF_FRESH_HOURS)
+
+    def _created_at(row: Dict[str, Any]) -> Optional[datetime]:
+        raw = row.get("createdAt")
+        if not isinstance(raw, str):
+            return None
+        try:
+            return datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except ValueError:
+            return None
+
+    # 排序键：新鲜优先，其次 trendingScore。createdAt 缺失按"不新鲜"处理但保留原始顺序稳定性。
+    rows = [
+        r for r in payload
+        if isinstance(r, dict) and (r.get("modelId") or r.get("id"))
+    ]
+    rows.sort(
+        key=lambda r: (
+            0 if ((_created_at(r) or datetime.min.replace(tzinfo=timezone.utc)) >= fresh_cutoff) else 1,
+            -(r.get("trendingScore") or 0),
+        )
+    )
+
     items: List[NewsItem] = []
-    for row in payload[: config.HF_MODELS_LIMIT]:
-        if not isinstance(row, dict):
-            continue
+    for row in rows[: config.HF_MODELS_LIMIT]:
         model_id = clean_text(row.get("modelId") or row.get("id"), limit=160)
         if not model_id:
             continue
@@ -462,7 +515,12 @@ def fetch_hf_trending_models(session: requests.Session) -> List[NewsItem]:
         score = row.get("trendingScore")
         tags = [t for t in (row.get("tags") or []) if isinstance(t, str)][:6]
 
+        created = _created_at(row)
+        is_fresh = bool(created and created >= fresh_cutoff)
+
         bits = [f"（HuggingFace 热门模型，trendingScore {score}）"]
+        if is_fresh:
+            bits.append("**新发布**。")
         if pipeline:
             bits.append(f"类型 {pipeline}。")
         if likes or downloads:
@@ -476,7 +534,7 @@ def fetch_hf_trending_models(session: requests.Session) -> List[NewsItem]:
                 url=f"https://huggingface.co/{model_id}",
                 source="HuggingFace 模型",
                 summary="".join(bits),
-                published=None,
+                published=created if is_fresh else None,
                 region="intl",
                 category="tech",
             )
@@ -930,6 +988,124 @@ def save_github_state(state: Dict[str, Any]) -> None:
     except OSError as exc:
         # 状态写不进去只会导致明天重复推荐，不该让整期早报失败
         logger.error("轮播状态写入失败（%s）：%s", path, exc)
+
+
+# --------------------------------------------------------------------------
+# 跨天去重（seen_articles）
+# --------------------------------------------------------------------------
+def _empty_seen_state() -> Dict[str, Any]:
+    return {
+        "records": [],     # [{u: url哈希, t: 归一化标题, d: 日期}]，只保留最近 SEEN_DAYS 天
+        "updated_at": "",
+    }
+
+
+def load_seen_articles() -> Dict[str, Any]:
+    """
+    读取跨天去重状态。
+
+    与轮播状态同样的容错策略：文件缺失 / 损坏 / 结构不对，都当作空状态处理 ——
+    去重失效的最坏结果只是"某天重复了一条"，绝不能让它把整期早报搞挂。
+    """
+    path = config.SEEN_STATE_FILE
+    state = _empty_seen_state()
+
+    if not path.exists():
+        logger.info("跨天去重状态文件不存在，本次无历史记录：%s", path.name)
+        return state
+
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        logger.warning("跨天去重状态文件损坏（%s），本次按无历史记录处理：%s", path.name, exc)
+        return state
+
+    if not isinstance(data, dict) or not isinstance(data.get("records"), list):
+        logger.warning("跨天去重状态文件结构异常，本次按无历史记录处理")
+        return state
+
+    state["records"] = [r for r in data["records"] if isinstance(r, dict)]
+    return state
+
+
+def prune_seen_articles(state: Dict[str, Any], today: str) -> Dict[str, Any]:
+    """只保留最近 SEEN_DAYS 天内的记录（按记录日期字符串比较，ISO 格式可直接比大小）。"""
+    from datetime import date as _date
+
+    try:
+        cutoff = (_date.fromisoformat(today) - timedelta(days=config.SEEN_DAYS)).isoformat()
+    except ValueError:
+        cutoff = ""
+
+    kept = [
+        r for r in state.get("records", [])
+        if isinstance(r.get("d"), str) and (not cutoff or r["d"] >= cutoff)
+    ]
+    dropped = len(state.get("records", [])) - len(kept)
+    if dropped:
+        logger.info("跨天去重记录修剪：%d 条超过 %d 天的记录被移除", dropped, config.SEEN_DAYS)
+    state["records"] = kept
+    return state
+
+
+def save_seen_articles(state: Dict[str, Any]) -> None:
+    """保存跨天去重状态。写失败只影响明天的去重，不阻断流水线。"""
+    path = config.SEEN_STATE_FILE
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        state["updated_at"] = datetime.now(timezone.utc).isoformat()
+        path.write_text(
+            json.dumps(state, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        logger.info("已保存跨天去重状态：%d 条记录（%s）", len(state.get("records", [])), path.name)
+    except OSError as exc:
+        logger.error("跨天去重状态写入失败（%s）：%s", path, exc)
+
+
+def seen_keys_from_report(report: Dict[str, Any]) -> List[Dict[str, str]]:
+    """
+    从一份最终 report 里提取需要记住的 (url哈希, 归一化标题, 日期)。
+
+    只记四个新闻板块 —— GitHub 板块有自己的轮播与记忆机制（GITHUB_RECENT_MEMORY），
+    两套去重各管各的，混在一起会互相干扰（比如把轮播里还没轮到的经典项目提前拉黑）。
+    """
+    report_date = str(report.get("date") or "")
+    records: List[Dict[str, str]] = []
+    seen_keys: set = set()
+
+    for section in report.get("sections") or []:
+        if section.get("key") == "github":
+            continue
+        for item in section.get("items") or []:
+            url_hash = dedup_url_key(item.get("url", ""))
+            norm_title = normalize_title_for_dedup(item.get("title", ""))
+            if not url_hash and not norm_title:
+                continue
+            key = (url_hash, norm_title)
+            if key in seen_keys:
+                continue
+            seen_keys.add(key)
+            records.append({"u": url_hash, "t": norm_title, "d": report_date})
+
+    return records
+
+
+def record_seen_articles(state: Dict[str, Any], report: Dict[str, Any]) -> Dict[str, Any]:
+    """把当期最终入选的内容并入 seen 状态（按内容键去重，重复触发不会膨胀）。"""
+    existing_keys = {(r.get("u"), r.get("t")) for r in state.get("records", [])}
+    added = 0
+    for record in seen_keys_from_report(report):
+        key = (record["u"], record["t"])
+        if key in existing_keys:
+            continue
+        existing_keys.add(key)
+        state.setdefault("records", []).append(record)
+        added += 1
+
+    if added:
+        logger.info("跨天去重记录：%d 条本期内容已写入（累计 %d 条）", added, len(state["records"]))
+    return state
 
 
 # --------------------------------------------------------------------------

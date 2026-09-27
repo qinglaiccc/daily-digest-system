@@ -21,15 +21,16 @@
 
 from __future__ import annotations
 
+import difflib
 import logging
 import re
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from functools import lru_cache
-from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Sequence, Set, Tuple
 
 import config
-from fetcher import NewsItem
+from fetcher import NewsItem, dedup_url_key, normalize_title_for_dedup
 
 logger = logging.getLogger(__name__)
 
@@ -89,6 +90,87 @@ class ScoredItem:
     forced: bool = False
     force_terms: List[str] = field(default_factory=list)
     notes: List[str] = field(default_factory=list)
+
+
+# --------------------------------------------------------------------------
+# 跨天去重
+# --------------------------------------------------------------------------
+def _seen_index(
+    records: Sequence[Dict[str, Any]],
+    today: str,
+) -> Tuple[Set[str], List[Tuple[str, str]]]:
+    """
+    把 seen 记录整理成两个查询结构：(URL 哈希集合, [(归一化标题, 日期)])。
+
+    当天自己的记录会被剔除：force 重跑时当天内容已在 seen 里，
+    不剔除的话整期早报会被自己拦成 0 条。
+    """
+    hashes: Set[str] = set()
+    titles: List[Tuple[str, str]] = []
+    for record in records:
+        if not isinstance(record, dict):
+            continue
+        if record.get("d") == today:
+            continue
+        url_hash = record.get("u")
+        if isinstance(url_hash, str) and url_hash:
+            hashes.add(url_hash)
+        title = record.get("t")
+        if isinstance(title, str) and title:
+            titles.append((title, str(record.get("d") or "")))
+    return hashes, titles
+
+
+def _title_seen_before(
+    norm_title: str,
+    seen_titles: Sequence[Tuple[str, str]],
+    threshold: float,
+) -> Optional[str]:
+    """
+    判断标题是否与已发内容重复。返回命中的已发标题；None 表示不重复。
+
+    两级匹配：归一化后精确相等 → 直接判重；否则模糊相似度（带长度预过滤，
+    避免 300 条候选 × 200 条历史的全量 SequenceMatcher）。
+    """
+    if not norm_title:
+        return None
+    for seen_title, _day in seen_titles:
+        if norm_title == seen_title:
+            return seen_title
+        # 预过滤：长度差太大不可能是同一条新闻的改写
+        if abs(len(norm_title) - len(seen_title)) > 20:
+            continue
+        if difflib.SequenceMatcher(None, norm_title, seen_title).ratio() >= threshold:
+            return seen_title
+    return None
+
+
+def is_seen_before(
+    item: NewsItem,
+    seen_hashes: Set[str],
+    seen_titles: Sequence[Tuple[str, str]],
+    today: str,
+) -> Optional[str]:
+    """返回重复原因描述（用于日志）；None 表示不是重复内容。"""
+    url_hash = dedup_url_key(item.url)
+    if url_hash and url_hash in seen_hashes:
+        return "URL 已推送过"
+    norm_title = normalize_title_for_dedup(item.title)
+    hit = _title_seen_before(
+        norm_title, seen_titles, config.SEEN_TITLE_SIMILARITY
+    )
+    if hit:
+        return f"标题与已发内容相似（历史：{hit[:24]}…）"
+    return None
+
+
+# --------------------------------------------------------------------------
+# 源族与配额
+# --------------------------------------------------------------------------
+def source_family(source: str) -> str:
+    """源的所属族。同一媒体的多条 feed 归为一族，共享板块配额。"""
+    key = (source or "").strip().lower()
+    return config.SOURCE_FAMILIES.get(key, key or "未知来源")
 
 
 # --------------------------------------------------------------------------
@@ -181,22 +263,39 @@ def build_pool(
     news: Sequence[NewsItem],
     *,
     pool_per_section: Optional[int] = None,
+    seen: Optional[Sequence[Dict[str, Any]]] = None,
+    today: Optional[str] = None,
 ) -> Dict[str, List[ScoredItem]]:
     """
     把原始新闻筛成"按板块分组的候选池"。
 
-    逐个条目：定板块 → 硬否决 → 板块相关性 → 评分 → 入池。
+    逐个条目：定板块 → 跨天去重 → 硬否决 → 板块相关性 → 评分 → 入池。
     最后每个板块按 (是否强触发, 分数) 倒序排列，截到 pool_per_section ——
     但强触发条目**不受截断影响**，一定会留在池子里（这正是"防漏网之鱼"的落点：
     保证写在代码里，而不是指望提示词里的一句"请不要漏掉"）。
+
+    seen 是跨天去重历史（fetcher.load_seen_articles 的 records）。去重闸门
+    排在最前面，并且**强触发词不豁免它**：强触发豁免的是"评分逻辑"（别漏），
+    而"已经推送过的内容"不是评分问题 —— 重复推送本身就是用户明确要消灭的问题。
     """
     cap = pool_per_section if pool_per_section is not None else config.RERANK_POOL_PER_SECTION
 
+    today = today or ""
+    seen_hashes, seen_titles = _seen_index(seen or [], today)
+
     pools: Dict[str, List[ScoredItem]] = {key: [] for key in NEWS_SECTIONS}
-    stats = {"vetoed": 0, "irrelevant": 0, "forced": 0}
+    stats = {"seen": 0, "vetoed": 0, "irrelevant": 0, "forced": 0}
 
     for item in news:
         section = section_of(item)
+
+        # 闸门⓪：跨天去重。已经推送过的内容，无论多重磅都不再进第二天的版面。
+        seen_reason = is_seen_before(item, seen_hashes, seen_titles, today)
+        if seen_reason:
+            stats["seen"] += 1
+            logger.debug("跨天去重（%s）：%s", seen_reason, item.title[:40])
+            continue
+
         hits = force_hits(item)
         forced = bool(hits)
 
@@ -238,7 +337,8 @@ def build_pool(
             pools[key] = sorted(kept_forced + kept_rest, key=lambda e: (e.forced, e.score), reverse=True)
 
     logger.info(
-        "本地筛选：硬否决 %d 条，板块不匹配 %d 条，强触发 %d 条；入池 %s",
+        "本地筛选：跨天去重 %d 条，硬否决 %d 条，板块不匹配 %d 条，强触发 %d 条；入池 %s",
+        stats["seen"],
         stats["vetoed"],
         stats["irrelevant"],
         stats["forced"],
@@ -260,77 +360,120 @@ def build_pool(
 # --------------------------------------------------------------------------
 # 最终选择
 # --------------------------------------------------------------------------
-def fallback_selection(
+def finalize_selection(
     pool: Dict[str, List[ScoredItem]],
+    picks: Optional[Dict[str, Iterable[int]]] = None,
     keep: Optional[int] = None,
 ) -> Dict[str, List[ScoredItem]]:
     """
-    纯本地选择：每个板块取分数最高的前 keep 条（强触发条目优先占位）。
+    最终选定：强触发保底 → 主编顺序 → 源族配额 → 弹性截断。
 
-    LLM 重排不可用时走这条路径。因为没有语义判断，只能靠本地分数，
-    所以**强触发条目的保底名额在这条路径上尤其重要** —— 它是"硬核新闻不被漏掉"
-    的最后一道保障。
-    """
-    limit = keep if keep is not None else config.RERANK_KEEP_PER_SECTION
-    return {key: entries[:limit] for key, entries in pool.items()}
+    四条规则，优先级从高到低：
+    1. 强触发条目按保底名额（FORCE_RESERVED_PER_SECTION）先行占位，豁免源族配额；
+       超出保底名额的强触发条目与其他条目一样受配额约束。
+    2. picks 给出主编的优先顺序（池内下标）。下标容错（越界/非整数/重复）在这里兜掉。
+    3. 源族配额：同一源族在同一板块最多 SOURCE_CAP_PER_SECTION 条 —— 被 config 注释里
+       那个"HF 榜单霸屏"问题就是这条治的。配额拦下主编的选择时，从池中其余条目
+       （按本地排序）顺延补位，把名额让给别的源。
+    4. 弹性（宁缺毋滥）：主编没选够时**不回填** —— 它只挑了 2 条就出 2 条，
+       版面空着也不注水。唯一的例外是第 3 条的补位（那是"换来源"而不是"凑数量"）。
 
-
-def merge_llm_selection(
-    pool: Dict[str, List[ScoredItem]],
-    picks: Dict[str, Iterable[int]],
-    keep: Optional[int] = None,
-) -> Dict[str, List[ScoredItem]]:
-    """
-    合并 LLM 的重排结果，并强制把强触发条目塞回去。
-
-    picks 是 {板块: [池内下标, ...]}，由 summarizer 从模型返回里解析。
-    下标的容错（越界、非整数、重复）都在这里兜掉，不信任模型给的任何数字。
-
-    关键点：**模型没有最终否决权。** 即使它把某条强触发条目排除了，
-    这里也会按保底名额把它补回来 —— 用户要求"无视任何评分逻辑强制入选"，
-    这个保证必须落在代码里。
+    picks=None 表示 LLM 重排不可用：此时主编顺序退化为池子的本地排序
+    （下标 0..n-1 全部有效），行为等同于旧的纯本地选择，但同样受配额与弹性约束。
     """
     limit = keep if keep is not None else config.RERANK_KEEP_PER_SECTION
     result: Dict[str, List[ScoredItem]] = {}
 
     for key, entries in pool.items():
-        chosen: List[ScoredItem] = []
-        seen: set = set()
+        if not entries:
+            result[key] = []
+            continue
 
-        # 1) 强触发条目按保底名额先行占位
-        forced_entries = [e for e in entries if e.forced]
-        for entry in forced_entries[: config.FORCE_RESERVED_PER_SECTION]:
-            chosen.append(entry)
-            seen.add(id(entry))
+        raw_picks = list(picks.get(key) or []) if picks else []
+        if picks is None:
+            # 重排不可用：本地排序就是主编顺序
+            raw_picks = list(range(len(entries)))
 
-        # 2) 采纳模型的选择（下标做边界检查）
-        raw_picks = list(picks.get(key) or [])
+        # 主编顺序（去重、保序、边界检查）
+        ordered: List[ScoredItem] = []
+        seen_ids: Set[int] = set()
         for index in raw_picks:
             if not isinstance(index, int) or isinstance(index, bool):
                 continue
             if index < 0 or index >= len(entries):
                 continue
             entry = entries[index]
-            if id(entry) in seen:
+            if id(entry) in seen_ids:
                 continue
+            seen_ids.add(id(entry))
+            ordered.append(entry)
+
+        # 模型给了下标但全是非法值（越界/脏类型）——这是输出损坏的信号，
+        # 不是"主编明确不选"。退回本地序。区别于 picks 为空数组：那是主编
+        # 明确表达"这个板块今天没有值得报的"，弹性生效，尊重它。
+        if raw_picks and not ordered:
+            logger.warning("板块 [%s] 的重排下标全部非法（%s），退回本地排序",
+                           key, raw_picks[:10])
+            ordered = list(entries)
+
+        chosen: List[ScoredItem] = []
+        chosen_ids: Set[int] = set()
+        family_count: Dict[str, int] = {}
+        forced_reserved = 0
+        blocked_by_quota = 0
+
+        def _admit(entry: ScoredItem) -> bool:
+            """尝试收录一条；返回是否收录。配额拦截时返回 False。"""
+            nonlocal forced_reserved, blocked_by_quota
+            family = source_family(entry.item.source)
+            # 强触发条目在保底名额内豁免配额（它们是罕见事件，优先级最高）
+            if entry.forced and forced_reserved < config.FORCE_RESERVED_PER_SECTION:
+                forced_reserved += 1
+            elif family_count.get(family, 0) >= config.SOURCE_CAP_PER_SECTION:
+                blocked_by_quota += 1
+                return False
+            family_count[family] = family_count.get(family, 0) + 1
             chosen.append(entry)
-            seen.add(id(entry))
+            chosen_ids.add(id(entry))
+            return True
+
+        # 1) 强触发条目按保底名额先行占位（在主编顺序之前，保证它们一定进得来）
+        for entry in entries:
             if len(chosen) >= limit:
                 break
+            if entry.forced and id(entry) not in chosen_ids:
+                _admit(entry)
 
-        # 3) 模型给的不够（或全给了非法下标）时，用本地分数补齐
-        if len(chosen) < limit:
+        # 2) 走主编顺序
+        for entry in ordered:
+            if len(chosen) >= limit:
+                break
+            if id(entry) in chosen_ids:
+                continue
+            _admit(entry)
+
+        # 3) 配额拦下过主编的选择时，从池中其余条目按本地排序顺延补位。
+        #    注意这只发生在"主编的选择被配额挤掉"的场合 —— 主编本来就选得少
+        #    （弹性）时 blocked_by_quota == 0，不会触发回填。
+        if picks is not None and blocked_by_quota and len(chosen) < limit:
             for entry in entries:
-                if id(entry) in seen:
-                    continue
-                chosen.append(entry)
-                seen.add(id(entry))
                 if len(chosen) >= limit:
                     break
+                if id(entry) in chosen_ids:
+                    continue
+                _admit(entry)
 
-        result[key] = chosen[:limit]
+        result[key] = chosen
 
     return result
+
+
+def fallback_selection(
+    pool: Dict[str, List[ScoredItem]],
+    keep: Optional[int] = None,
+) -> Dict[str, List[ScoredItem]]:
+    """纯本地选择（LLM 重排不可用时的降级路径）。带源族配额，无弹性截断。"""
+    return finalize_selection(pool, picks=None, keep=keep)
 
 
 def selected_sections(
@@ -370,9 +513,11 @@ __all__ = [
     "section_hint_hit",
     "section_of",
     "local_score",
+    "is_seen_before",
+    "source_family",
     "build_pool",
+    "finalize_selection",
     "fallback_selection",
-    "merge_llm_selection",
     "selected_sections",
     "summarize_selection",
 ]

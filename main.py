@@ -111,15 +111,33 @@ def stage_summarize(
     news: List[fetcher.NewsItem],
     repos: List[fetcher.RepoItem],
     dry_run: bool,
+    seen: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     """提炼阶段。summarizer 内部已做降级，这里再兜一层。"""
     try:
-        return summarizer.summarize(news, repos, dry_run=dry_run)
+        return summarizer.summarize(news, repos, dry_run=dry_run, seen=seen)
     except Exception as exc:  # noqa: BLE001
         logger.error("提炼阶段异常，强制降级：%s", exc, exc_info=True)
         return summarizer.build_fallback_result(
             news, repos, summarizer.today_local(), f"{type(exc).__name__}: {exc}"
         )
+
+
+def stage_record_seen(report: Dict[str, Any]) -> None:
+    """
+    把当期最终入选的新闻写进跨天去重状态。
+
+    为什么放在渲染成功之后：record 的语义是"已正式推送"，渲染失败的那次
+    没有真正发布出去，不该拦截以后的重试。dry-run 不记录（没有推送）。
+    记录失败只影响明天的去重，不阻断流水线。
+    """
+    try:
+        state = fetcher.load_seen_articles()
+        fetcher.prune_seen_articles(state, str(report.get("date") or summarizer.today_local().isoformat()))
+        fetcher.record_seen_articles(state, report)
+        fetcher.save_seen_articles(state)
+    except Exception as exc:  # noqa: BLE001
+        logger.error("跨天去重状态记录失败：%s", exc, exc_info=True)
 
 
 def stage_render(
@@ -371,14 +389,21 @@ def main(argv: List[str] | None = None) -> int:
         logger.error("新闻与 GitHub 均未采集到任何内容，终止流程")
         return 1
 
+    # 跨天去重历史：渲染成功后才会追加记录（见 stage_record_seen）
+    seen_state = fetcher.load_seen_articles()
+    fetcher.prune_seen_articles(seen_state, summarizer.today_local().isoformat())
+
     # ---- 2. 提炼 ----
-    report = stage_summarize(news, repos, args.dry_run)
+    report = stage_summarize(news, repos, args.dry_run, seen=seen_state.get("records"))
 
     # ---- 3. 渲染 ----
     if not args.keep_dist:
         renderer.cleanup_dist()
     if not stage_render(report, stats, dry_run=args.dry_run):
         return 1
+
+    if not args.dry_run:
+        stage_record_seen(report)
 
     # ---- 3.5 导出 Obsidian 笔记 ----
     stage_obsidian()

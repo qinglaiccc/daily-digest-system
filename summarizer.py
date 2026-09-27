@@ -1041,6 +1041,7 @@ def summarize(
     news: List[NewsItem],
     repos: List[RepoItem],
     dry_run: bool = False,
+    seen: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     """
     完整提炼流程。
@@ -1053,6 +1054,9 @@ def summarize(
     而"选择"和"写作"混在一次调用里，正是之前漏掉硬核内容的机制性原因
     （模型在写 60 字摘要的同时还要兼顾排序，排序质量必然让位于文字质量）。
     任一侧失败只降级那一侧。整体仍然保证不抛异常。
+
+    seen 是跨天去重历史（fetcher.load_seen_articles 的 records 字段），
+    传 None 时没有跨天记忆（dry-run / 老调用方兼容）。
     """
     report_date = today_local()
     guard = UrlGuard(news, repos)
@@ -1060,8 +1064,8 @@ def summarize(
     if dry_run:
         return build_fallback_result(news, repos, report_date, "dry-run 模式")
 
-    # ---- 阶段一：本地三道闸门（零成本）----
-    pool = ranking.build_pool(news)
+    # ---- 阶段一：本地闸门（零成本，含跨天去重）----
+    pool = ranking.build_pool(news, seen=seen, today=report_date.isoformat())
     pool_size = sum(len(v) for v in pool.values())
     logger.info("本地筛选后候选池：%d 条（原始 %d 条）", pool_size, len(news))
 
@@ -1071,14 +1075,24 @@ def summarize(
         return build_fallback_result(news, repos, report_date, "本地筛选后无可用素材")
 
     # ---- 阶段二：DeepSeek 重排（失败则退回本地排序）----
-    selection = ranking.fallback_selection(pool)
+    picks: Optional[Dict[str, List[int]]] = None
     if pool_size and config.RERANK_ENABLED:
         try:
             picks = rerank_candidates(pool)
-            selection = ranking.merge_llm_selection(pool, picks)
-            logger.info("DeepSeek 重排完成：%s", ranking.summarize_selection(selection))
+            logger.info("DeepSeek 重排完成：%s", picks)
         except Exception as exc:  # noqa: BLE001 —— 重排不是必需环节，失败必须可降级
             logger.warning("DeepSeek 重排失败，改用本地排序：%s", exc)
+            picks = None
+
+    # 安全网：模型对**所有**板块都返回空（通常意味着输出被解析坏或模型抽风），
+    # 而不是真的"今天没新闻"。全部板块同时空的概率极低，按重排失败处理，
+    # 退回本地排序。单个板块返回空是正常弹性，尊重它。
+    if picks is not None and pool_size and not any(picks.values()):
+        logger.warning("DeepSeek 重排返回了空选择（候选池有 %d 条），按重排失败处理", pool_size)
+        picks = None
+
+    selection = ranking.finalize_selection(pool, picks=picks)
+    logger.info("最终选定：%s", ranking.summarize_selection(selection))
     selected_payload = ranking.selected_sections(selection)
     selected_total = sum(len(v) for v in selected_payload.values())
 

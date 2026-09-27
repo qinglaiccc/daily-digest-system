@@ -1171,6 +1171,7 @@ def test_idempotent_guard() -> None:
         config.HISTORY_MANIFEST,
         config.RAW_DUMP_PATH,
         config.OBSIDIAN_DIR,
+        config.SEEN_STATE_FILE,
     )
     tmp = pathlib.Path(tempfile.mkdtemp(prefix="digest-guard-"))
     try:
@@ -1182,6 +1183,8 @@ def test_idempotent_guard() -> None:
         # main() 里含 Obsidian 导出阶段，这个目录必须一起重定向，
         # 否则 main([]) 会把测试用的假数据写进真实的 obsidian/ 知识库目录。
         config.OBSIDIAN_DIR = tmp / "obsidian"
+        # 同理：main() 的正式路径会写跨天去重状态，不重定向会污染真实历史
+        config.SEEN_STATE_FILE = config.ARCHIVE_DIR / "seen_articles.json"
         config.ARCHIVE_DIR.mkdir(parents=True)
 
         today = summarizer.today_local().isoformat()
@@ -1239,6 +1242,7 @@ def test_idempotent_guard() -> None:
             config.HISTORY_MANIFEST,
             config.RAW_DUMP_PATH,
             config.OBSIDIAN_DIR,
+            config.SEEN_STATE_FILE,
         ) = original
         shutil.rmtree(tmp, ignore_errors=True)
 
@@ -1646,27 +1650,39 @@ def test_ranking_engine() -> None:
     plain = plain_pool["intl_tech"]
     check("测试池内确实没有强触发条目", plain and all(not e.forced for e in plain))
     if len(plain) >= 3:
-        merged = ranking.merge_llm_selection(plain_pool, {"intl_tech": [2]}, keep=1)
+        merged = ranking.finalize_selection(plain_pool, {"intl_tech": [2]}, keep=1)
         check("合法下标被采纳", merged["intl_tech"][0] is plain[2],
               f"取到了 {merged['intl_tech'][0].item.title}")
 
-    merged_bad = ranking.merge_llm_selection(
+    # 主编只挑 1 条 → 只出 1 条（弹性：不回填凑数）
+    merged_elastic = ranking.finalize_selection(plain_pool, {"intl_tech": [1]}, keep=3)
+    check("主编选得少时不回填（宁缺毋滥）",
+          len(merged_elastic["intl_tech"]) == 1 and merged_elastic["intl_tech"][0] is plain[1],
+          str([e.item.title for e in merged_elastic["intl_tech"]]))
+
+    # 主编明确选 0 条（空数组）→ 空板块
+    merged_empty = ranking.finalize_selection(plain_pool, {"intl_tech": []}, keep=3)
+    check("主编明确选 0 条时板块为空", merged_empty["intl_tech"] == [])
+
+    # 下标全是非法值 → 视为输出损坏，退回本地排序（区别于明确选 0 条）
+    merged_bad = ranking.finalize_selection(
         plain_pool,
         {"intl_tech": [-1, 999, "abc", None, True]},
         keep=1,
     )
-    check("非法下标被安全忽略且不会导致空结果", len(merged_bad["intl_tech"]) == 1,
+    check("非法下标视为输出损坏并退回本地排序",
+          len(merged_bad["intl_tech"]) == 1 and merged_bad["intl_tech"][0] is plain[0],
           str([e.item.title for e in merged_bad["intl_tech"]]))
 
     # 模型漏掉强触发条目时，保底名额必须把它塞回来
     forced_pool = {"intl_tech": tiny_pool["intl_tech"]}
-    rescued = ranking.merge_llm_selection(forced_pool, {"intl_tech": []}, keep=2)
+    rescued = ranking.finalize_selection(forced_pool, {"intl_tech": []}, keep=2)
     check("模型没选强触发条目时由保底名额补回",
           any("jev" in e.item.title for e in rescued["intl_tech"]),
           f"{[e.item.title for e in rescued['intl_tech']]}")
 
     # 每个板块不得超过 keep 条
-    capped = ranking.merge_llm_selection(pool, {k: list(range(50)) for k in pool}, keep=3)
+    capped = ranking.finalize_selection(pool, {k: list(range(50)) for k in pool}, keep=3)
     check("每个板块不超过配额", all(len(v) <= 3 for v in capped.values()),
           str({k: len(v) for k, v in capped.items()}))
 
@@ -1674,11 +1690,127 @@ def test_ranking_engine() -> None:
     fb = ranking.fallback_selection(pool, keep=2)
     check("重排失败时可退回纯本地排序", all(len(v) <= 2 for v in fb.values()))
 
+    # ---- 源族配额（HF 榜单霸屏的治本断言）----
+    quota_news = [
+        _mk_news("HF 模型 Alpha 登榜", "榜单更新", source="HuggingFace 模型"),
+        _mk_news("HF 模型 Beta 登榜", "榜单更新", source="HuggingFace 模型"),
+        _mk_news("HF 模型 Gamma 登榜", "榜单更新", source="HuggingFace 模型"),
+        _mk_news("某 AI 芯片发布", "算力硬件", source="TechCrunch"),
+        _mk_news("某开源框架更新", "开发者工具", source="Lobsters"),
+        _mk_news("某实验室研究突破", "论文", source="Simon Willison"),
+    ]
+    quota_pool = ranking.build_pool(quota_news, today="2026-01-01")
+    quota_sel = ranking.finalize_selection(
+        quota_pool, {k: list(range(len(v))) for k, v in quota_pool.items()}
+    )
+    quota_fams = [ranking.source_family(e.item.source) for e in quota_sel["intl_tech"]]
+    check("同一源族最多 1 条（治 HF 霸屏）",
+          quota_fams.count("huggingface") == 1, str(quota_fams))
+    check("配额拦下后名额由其他源补位",
+          len(quota_sel["intl_tech"]) == 4 and quota_fams.count("huggingface") == 1,
+          f"{len(quota_sel['intl_tech'])} 条 / {quota_fams}")
+
+    # HN 双 feed 归一族
+    hn_pool = ranking.build_pool([
+        _mk_news("HN 热议开源 AI 框架发布", "开发者工具", source="Hacker News"),
+        _mk_news("HN 高分 AI 芯片突破", "算力", source="Hacker News 高分"),
+        _mk_news("某大模型评测结果公布", "benchmark", source="TechCrunch"),
+    ], today="2026-01-01")
+    hn_sel = ranking.finalize_selection(hn_pool, {k: list(range(len(v))) for k, v in hn_pool.items()})
+    hn_fams = [ranking.source_family(e.item.source) for e in hn_sel["intl_tech"]]
+    check("HN 首页与高分归同一族", hn_fams.count("hackernews") == 1, str(hn_fams))
+
+    # 强触发豁免配额至保底名额，超出部分仍受约束
+    forced_quota = ranking.build_pool([
+        _mk_news("重磅：jev 模型发布", "开源权重", source="HuggingFace 模型"),
+        _mk_news("jev 框架更新", "智能体框架", source="HuggingFace 模型"),
+        _mk_news("jev 第三条动态", "推理模型", source="HuggingFace 模型"),
+        _mk_news("普通科技新闻发布", "芯片", source="TechCrunch"),
+    ], today="2026-01-01")
+    fq_sel = ranking.finalize_selection(
+        forced_quota, {k: list(range(len(v))) for k, v in forced_quota.items()}
+    )
+    fq_fams = [ranking.source_family(e.item.source) for e in fq_sel["intl_tech"]]
+    check("强触发豁免配额至保底名额（2 条）",
+          fq_fams.count("huggingface") == config.FORCE_RESERVED_PER_SECTION, str(fq_fams))
+    check("保底名额之外的条目仍受配额且其他源可补位",
+          "普通科技新闻发布" in [e.item.title for e in fq_sel["intl_tech"]],
+          str([e.item.title for e in fq_sel["intl_tech"]]))
+
     # 序号映射给 prompt 用
     payload = ranking.selected_sections(pool)
     check("送进 prompt 的字段齐全",
           all(set(e) == {"index", "title", "source", "url", "raw_summary"}
               for v in payload.values() for e in v))
+
+
+def test_cross_day_dedup() -> None:
+    """
+    跨天去重：用 09-26/27 两期的**真实存档标题**回放，验证同 3 个 HF 模型被 100% 拦截。
+
+    背景：那两天国际科技板块连续推送相同模型（TaichuAI / Qwen3.8-27B / Ternary-Bonsai-2-27B），
+    且两天的标题只差几个空格（模型输出不稳定）—— 精确匹配抓不到，必须归一化 + 模糊匹配。
+    """
+    print("\n[19] 跨天去重（seen_articles）")
+
+    # ---- 09-26 期实际推送的内容（从 archive/2026-09-26.json 核对）----
+    seen_26 = [
+        {"u": fetcher.dedup_url_key("https://huggingface.co/TaichuAI/Taichu-V2"),
+         "t": fetcher.normalize_title_for_dedup("TaichuAI多模态模型登HuggingFace热榜"), "d": "2026-09-26"},
+        {"u": fetcher.dedup_url_key("https://huggingface.co/Qwen/Qwen3.8-27B"),
+         "t": fetcher.normalize_title_for_dedup("Qwen3.8-27B登HuggingFace热榜"), "d": "2026-09-26"},
+        {"u": fetcher.dedup_url_key("https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"),
+         "t": fetcher.normalize_title_for_dedup("DeepSeek-V4.1-Flash登HuggingFace热榜"), "d": "2026-09-26"},
+        {"u": fetcher.dedup_url_key("https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B"),
+         "t": fetcher.normalize_title_for_dedup("Ternary-Bonsai-2-27B登HuggingFace热榜"), "d": "2026-09-26"},
+    ]
+
+    # ---- 09-27 期实际出现的变体标题（空格不同，同一批模型）----
+    day27 = [
+        _mk_news("TaichuAI 多模态模型登 HuggingFace 热榜", "榜单",
+                 source="HuggingFace 模型", ),
+        _mk_news("Qwen3.8-27B 登 HuggingFace 热榜", "榜单",
+                 source="HuggingFace 模型"),
+        _mk_news("Ternary-Bonsai-2-27B 登 HuggingFace 热榜", "榜单",
+                 source="HuggingFace 模型"),
+        _mk_news("某全新开源模型发布", "开源权重", source="TechCrunch"),
+    ]
+    blocked = [
+        item for item in day27
+        if ranking.is_seen_before(item, *ranking._seen_index(seen_26, "2026-09-27"), today="2026-09-27")
+    ]
+    check("26 日已发 → 27 日变体标题 100% 拦截", len(blocked) == 3, f"{len(blocked)}/3")
+    check("新内容不受影响", "某全新开源模型发布" not in [i.title for i in blocked])
+
+    # ---- 当天的记录不拦自己（force 重跑不能把整期拦成 0 条）----
+    self_records = seen_26 + [
+        {"u": fetcher.dedup_url_key("https://example.com/today"), "t": "今天的文章", "d": "2026-09-27"},
+    ]
+    hashes, titles = ranking._seen_index(self_records, "2026-09-27")
+    today_item = _mk_news("今天的文章", "", source="TechCrunch")
+    check("当日记录不拦当日内容（force 重跑安全）",
+          ranking.is_seen_before(today_item, hashes, titles, "2026-09-27") is None)
+
+    # ---- URL 拦截与修剪 ----
+    stale = [{"u": fetcher.dedup_url_key("https://example.com/old"), "t": "十天前的旧文", "d": "2026-09-10"}]
+    state = fetcher.prune_seen_articles({"records": seen_26 + stale}, "2026-09-27")
+    dates = {r["d"] for r in state["records"]}
+    check("超过 7 天的记录被修剪", "2026-09-10" not in dates and len(state["records"]) == 4,
+          str(dates))
+
+    # ---- 从 report 提取记录：只记新闻板块，幂等 ----
+    rep = summarizer.build_fallback_result(make_news(), make_repos(), summarizer.today_local(), "自检")
+    state2 = fetcher.record_seen_articles(fetcher._empty_seen_state(), rep)
+    n1 = len(state2["records"])
+    state2 = fetcher.record_seen_articles(state2, rep)
+    check("重复记录幂等（重复触发不膨胀）", len(state2["records"]) == n1, f"{n1} -> {len(state2['records'])}")
+    check("GitHub 板块不进 seen（有自己的轮播记忆）",
+          all("cool-agent" not in (r.get("t") or "") for r in state2["records"]))
+
+    # ---- 归一化本身的断言 ----
+    check("标题归一化吃掉空格与标点差异",
+          fetcher.normalize_title_for_dedup("Qwen3.8-27B 登 HuggingFace 热榜")
+          == fetcher.normalize_title_for_dedup("Qwen3.8-27B登HuggingFace热榜"))
 
 
 def test_hf_fetchers() -> None:
@@ -1721,16 +1853,25 @@ def test_hf_fetchers() -> None:
     check("论文归属国际科技板块", items and (items[0].region, items[0].category) == ("intl", "tech"))
 
     models = [
-        {"modelId": "Qwen/Qwen-Image-2.1", "trendingScore": 1439, "likes": 1491,
-         "downloads": 6523, "pipeline_tag": "text-to-image", "tags": ["diffusion", "moe"],
-         # 创建时间很早：热门模型榜不该按创建时间过滤，否则会把真正在爆的模型误杀
+        # 老仓库新爆发：不硬过滤，但排到新鲜模型后面（软偏好）
+        {"modelId": "old/legacy-model", "trendingScore": 9999, "likes": 5000,
+         "downloads": 999999, "pipeline_tag": "text-generation", "tags": [],
          "createdAt": "2023-01-01T00:00:00.000Z"},
+        {"modelId": "Qwen/Qwen-Image-2.1", "trendingScore": 100, "likes": 1491,
+         "downloads": 6523, "pipeline_tag": "text-to-image", "tags": ["diffusion", "moe"],
+         "createdAt": (datetime.now(timezone.utc) - timedelta(hours=6))
+         .isoformat().replace("+00:00", "Z")},
     ]
     mitems = fetcher.fetch_hf_trending_models(_StubSession(models))
-    check("热门模型不做创建时间过滤（否则误杀老仓库新爆发）", len(mitems) == 1, f"{len(mitems)} 条")
-    check("模型链接正确", mitems and mitems[0].url == "https://huggingface.co/Qwen/Qwen-Image-2.1")
+    check("热门模型不按创建时间硬过滤（老仓库新爆发仍能进）", len(mitems) == 2, f"{len(mitems)} 条")
+    check("新发布模型排在长线霸榜模型前面",
+          mitems and mitems[0].title.startswith("Qwen/"),
+          mitems[0].title if mitems else "")
+    check("新发布模型带 published（可进新鲜度排序与去重）",
+          mitems and mitems[0].published is not None)
+    check("模型链接正确", mitems and mitems[1].url == "https://huggingface.co/old/legacy-model")
     check("模型摘要含 trendingScore 与标签",
-          mitems and "1439" in mitems[0].summary and "diffusion" in mitems[0].summary)
+          mitems and "100" in mitems[0].summary and "diffusion" in mitems[0].summary)
 
     # 结构异常必须抛错（由 fetch_hf_streams 单点兜底），而不是静默产出空列表
     for label, func, bad in (
@@ -1773,6 +1914,7 @@ def main() -> int:
     test_idempotent_guard()
     test_obsidian_export()
     test_ranking_engine()
+    test_cross_day_dedup()
     test_hf_fetchers()
 
     # 终检：自检绝不能碰真实产物目录

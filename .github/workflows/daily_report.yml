@@ -188,6 +188,8 @@ jobs:
           # Actions 每次运行都是全新的干净检出，往期存档必须提交回仓库才能累积。
           # 否则第二天运行时 archive/ 是空的，历史记录每天都会归零。
           # obsidian/ 同理：它是给 Obsidian 库用的笔记，也必须在仓库里长期累积。
+          # seen_articles.json（跨天去重状态）也在 archive/ 下，随本步骤一并回写 ——
+          # 它是去重引擎的记忆，丢了的话第二天榜单类内容会重新霸屏。
           if [ ! -d archive ] && [ ! -d obsidian ]; then
             echo "::warning::archive/ 与 obsidian/ 都不存在，跳过"
             exit 0
