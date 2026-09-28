@@ -1,0 +1,314 @@
+{
+  "date": "2026-09-29",
+  "generated_at": "2026-09-28T23:55:51.278525+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 312,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-09-29",
+    "digest": "Anthropic 发布 Claude Sonnet 5.5，AI 智能体 Instinct 获 10 亿美元融资；阿里云领跑中国汽车 AI 云市场。",
+    "keywords": [
+      "Claude",
+      "Anthropic",
+      "阿里云",
+      "Kimi",
+      "AI智能体"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Vespper 推出 Docx MCP 工具",
+            "summary": "[[Vespper]] 发布 Docx MCP，由微调模型驱动，可让 AI 智能体高效编辑 Word 文档，速度提升 3 倍、成本降低 2 倍。",
+            "source": "Hacker News",
+            "url": "https://www.vespper.com/blog/launching-vespper-docx-mcp",
+            "title_original": "Launch HN: Vespper (YC F24) – SOTA Docx MCP",
+            "excerpt": "Hey HN! We're Dudu and Topaz from Vespper ( https://vespper.com ). Vespper is an MCP that lets AI agents efficiently edit Word documents, powered by our fine-tuned model. It's currently 3× faster, 2× cheaper and more accurate than the closest alternative. Check out an overview of how the product works here: https://yo…",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic 发布 Claude Sonnet 5.5",
+            "summary": "[[Anthropic]] 发布 [[Claude]] Sonnet 5.5，运行速度提升 30% 以上，多数任务成本降低最多 30%，定价与 Sonnet 5 相同。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/",
+            "title_original": "Claude Sonnet 5.5",
+            "excerpt": "Claude Sonnet 5.5 \nNew Sonnet model from Anthropic today. They say it \"runs 30%+ faster, and costs up to 30% less for most work\" - it's priced the same as Sonnet 5 but appears to beat it on every benchmark, and should be cheaper to run as well. \n Here are some pelicans riding bicycles . Sonnet 5.5 suffered from the sa…",
+            "is_foreign": true
+          },
+          {
+            "title": "AI 智能体 Instinct 获 10 亿美元 C 轮融资",
+            "summary": "AI 智能体 [[Instinct]] 完成 10 亿美元 C 轮融资，估值达 100 亿美元，创始人 Noah Shinn 称将把产品带给更多人。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
+            "title_original": "Viral AI agent Instinct raises $1B Series C at a $10B valuation",
+            "excerpt": "\"This funding helps us bring Instinct to more people and continue building the future of personal AI. It’s an exciting, creative time, and we're just getting started,\" founder Noah Shinn said in a statement.",
+            "is_foreign": true
+          },
+          {
+            "title": "F1 阿塞拜疆站：几乎势均力敌",
+            "summary": "F1 阿塞拜疆站，Kimi Antonelli 在排位赛撞车后未能重现蒙扎站表现。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/cars/2026/09/f1-in-azerbaijan-that-was-almost-a-close-run-thing/",
+            "title_original": "F1 in Azerbaijan: That was almost a close-run thing",
+            "excerpt": "Kimi Antonelli could not repeat his Monza magic after a crash in qualifying.",
+            "is_foreign": true
+          },
+          {
+            "title": "AI 何时算作出科学发现",
+            "summary": "[[Anthropic]] 此前宣布设立分子生物学实验室，由 [[Claude]] 智能体阅读并推测生物学难题，引发 AI 是否算作科学发现的讨论。",
+            "source": "MIT Technology Review",
+            "url": "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/",
+            "title_original": "When can we say AI made a scientific discovery?",
+            "excerpt": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Last Wednesday, Anthropic announced that earlier this year it had launched a molecular biology lab, where Claude agents read and conjecture about hard biology problems and human sci…",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "阿里云领跑中国汽车 AI 云市场",
+            "summary": "沙利文报告显示 [[阿里云]] 在中国汽车公有云市场份额居首，智能座舱进入 Agent 时代，算力与 AI 底座成竞争主线。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/371357",
+            "title_original": "中国智能汽车的后台，越来越像阿里云的主场",
+            "excerpt": "中国智能汽车产业，正在经历一场没有硝烟、却极为深刻的范式迭代。 \n 在 2026 云栖大会汽车行业峰会上，我们看到了智能汽车竞争的主线：智能座舱正全面进入 Agent 时代，车不再是执行指令的机器，而是能理解你的意图、主动帮你把事情办成的智能体；智能驾驶的竞争，也早已从算法层下沉到工程层。数据产线的效率、训练集群的稳定性、模型迭代的周期，这些工程层的东西，正在决定胜负。 \n 如果切换一下视角，会发现另一条更隐蔽的竞争主线正在成形： 谁能成为中国智能汽车产业的算力与 AI 底座？ \n 数据给了一个相当清晰的答案。根据沙利文联合头豹近日发布的《2026 年中国汽车 AI 云市场追踪报告（26H1）》， 阿里云在中国汽车公有云市场份额达…",
+            "is_foreign": false
+          },
+          {
+            "title": "月之暗面 Kimi K3.1 标识泄露",
+            "summary": "[[月之暗面]] API 后台出现 kimi-k3-1 标识，[[Kimi]] K3.1 预计支持 100 万 Token 上下文窗口，提供三档推理强度。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/008/033.htm",
+            "title_original": "月之暗面最强 AI 模型：Kimi K3.1 前端标识泄露，预计将在近期发布",
+            "excerpt": "IT之家 9 月 28 日消息，今日有多名开发者注意到月之暗面 API 平台的后台模型注册表中出现了“kimi-k3-1”标识，该模型标识通过了接口探测并可调用。 今日晚些时候，Kimi 官方开放平台也出现了 K3.1 或 K3 11111 模型的预告，支持 1M tokens 上下文窗口。 Kimi K3.1 预计支持最高 100 万 Token 上下文窗口，并提供 Low、High、Max 三档推理强度选项，可能引入 Agent 智能体模式、Swarm 多智能体协作以及搜索和批处理等任务模式。有开发者分析认为，多档推理强度的设计可能对应不同的算力资源配置与计费模型。 Kimi 开放平台显示，Kimi K3.1 的 API 价格…",
+            "is_foreign": false
+          },
+          {
+            "title": "Cloudflare 推出智能体开发栈生命周期",
+            "summary": "[[Cloudflare]] 推出智能体开发栈生命周期，旨在取代传统 SDLC。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/OooAe7xY816xAdLrkv8V?utm_source=rss&utm_medium=article",
+            "title_original": "Cloudflare 推出智能体开发栈生命周期，以取代传统 SDLC",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "基于 Termux 的 Android 开发服务器实操",
+            "summary": "少数派介绍不 root、不刷机，在 Android 手机通过 [[Termux]] 跑通 AI Agent 与微型 Linux 环境。",
+            "source": "少数派",
+            "url": "https://sspai.com/prime/story/dev-env-on-android-with-termux",
+            "title_original": "基于 Termux 的 Android 手机开发服务器实操",
+            "excerpt": "不 root、不刷机，在随身设备上跑通 AI Agent 与微型 Linux 环境。 查看全文 本文为会员文章，出自 《单篇文章》 ，订阅后可阅读全文。",
+            "is_foreign": false
+          },
+          {
+            "title": "梁文锋先修操场而非先卖门票",
+            "summary": "[[DeepSeek]] 论文引发 RSI 讨论，文章认为 Agent 成熟度与 AGI 的分界在于输入标准还是输入路径。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8154151.html",
+            "title_original": "梁文锋为什么先修操场，而不是先卖门票",
+            "excerpt": "DSec论文刷屏，\"RSI第一战\"的欢呼居多。但Agent成熟度与AGI的分界不在能力高低，在输入什么：输入路径的是自动化，输入标准、自己找路径的才是AGI。用\"标准谁给\"这把尺子重排座次会发现：操场已经修好，而真正的空白，在底座与行业之间。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "沃尔玛 CEO 回应动态定价担忧",
+            "summary": "[[沃尔玛]] CEO John Furner 发信回应数字货架标签与 Sparky 的定价担忧，但部分人认为一项专利仍留有余地。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/walmart-ceo-dynamic-pricing-concerns/831490/",
+            "title_original": "Walmart CEO addresses dynamic pricing concerns",
+            "excerpt": "John Furner issued a letter attempting to dispel pricing concerns about digital shelf labels and Sparky, but some say a Walmart patent leaves the door open.",
+            "is_foreign": true
+          },
+          {
+            "title": "加拿大服饰品牌 Duer 推出印刷杂志",
+            "summary": "加拿大性能牛仔裤品牌 [[Duer]] 推出季刊杂志 Interval，首期于 10 月发行，押注模拟媒介回潮。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/marketing/canadian-apparel-brand-duer-launches-a-print-magazine-as-analog-comes-back-in-style/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Canadian apparel brand Duer launches a print magazine as analog comes back in style",
+            "excerpt": "Duer, a performance jeans brand based in Canada, is leaning into print amid an analog resurgence. The company is publishing a quarterly magazine called Interval, with the first issue dropping in October.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "品类正在误导品牌战略",
+            "summary": "文章以 [[耐克]]、[[妮维雅]]、[[谷歌]] 为例，指出品类是供给端归类，消费者按自身目标跨品类选择，品类作为品牌战略起点有误。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1581698.html",
+            "title_original": "耐克、妮维雅、谷歌的警示：品类，正在误导品牌战略",
+            "excerpt": "品牌或许依旧强大，但却会流失对催生这个市场的原始需求的主导权。 “品类”，是一个被“实用”绑架的概念。 放到全球商业语境里，它方便写进 “ 业绩报表 ” ，能让公司轻松计算市场份额、识别对手、组合产品线、衡量渗透率、跟踪成果；而在国内，它更是 “ 营销提案 ” 里的常客，“抢占心智×品类第一”火了二十多年，企业家创业者们一听就能上头。 可对于“品牌战略”而言，品类是一个糟糕的起点。 为什么这么说？ 品类本质是供给端的归类方式，把生产、销售同类产品的品牌归在一起。但消费者并不按照这套分类思考，他们只在意自身目标、待解决的问题与所处现实的场景。考量的备选方案，往往会跨越多个品类。 当 “ 需求的满足方式 ” 发生改变时，这一差异就至关…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "dzhng/jevgrep",
+            "url": "https://github.com/dzhng/jevgrep",
+            "intro": "用一句话描述需求，就能帮你找出相关代码文件的命令行小工具。",
+            "features": [
+              "用大白话提问，直接返回相关文件",
+              "附带原文代码片段和阅读线索",
+              "支持 Claude Code、Codex 等编程助手"
+            ],
+            "guide": "需要先装 Node.js 22 以上版本，仅支持 macOS 或 Linux，还要准备一个 AI 服务的密钥。装好后运行授权命令，再安装技能包，就能在项目里提问找代码。",
+            "steps": [
+              "先安装 Node.js 22 或更高版本",
+              "运行 npm install -g @dzhng/jevgrep",
+              "运行 jg auth 完成授权",
+              "运行 jg skill 安装技能包",
+              "运行 jg \"问题\" ./项目路径 开始提问"
+            ],
+            "install": "npm install -g @dzhng/jevgrep",
+            "summary": "用一句话描述需求，就能帮你找出相关代码文件的命令行小工具。",
+            "source": "GitHub",
+            "stars": "1415",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Find code by asking what it does. A CLI for coding agents that uses Jev to discover relevant files and source context.",
+            "is_foreign": true
+          },
+          {
+            "title": "lissy93/dashy",
+            "url": "https://github.com/lissy93/dashy",
+            "intro": "自己搭建的个人导航首页，把常用网站和服务集中到一页。",
+            "features": [
+              "实时显示各服务是否在线",
+              "内置多种主题和图标可换",
+              "支持搜索、多页面和小组件"
+            ],
+            "guide": "适合自己搭服务器的人用，可以装在电脑或服务器上，用浏览器打开。README 里没有给出具体安装命令，建议按官方文档的入门章节操作。",
+            "steps": [
+              "先准备一台能跑服务的电脑或服务器",
+              "参考官方文档的入门章节安装",
+              "用浏览器打开页面并配置链接"
+            ],
+            "install": "",
+            "summary": "自己搭建的个人导航首页，把常用网站和服务集中到一页。",
+            "source": "GitHub",
+            "stars": "26594",
+            "language": "Vue",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🚀 A self-hostable personal dashboard built for you. Includes status-checking, widgets, themes, icon packs, a UI editor and tons more!",
+            "is_foreign": true
+          },
+          {
+            "title": "YishenTu/claudian",
+            "url": "https://github.com/YishenTu/claudian",
+            "intro": "给笔记软件 Obsidian 装个 AI 助手，直接在笔记里读写和搜索文件。",
+            "features": [
+              "在笔记里和 AI 对话改内容",
+              "选中文字就能让 AI 直接改写",
+              "用 @ 引用笔记里的文件"
+            ],
+            "guide": "这是 Obsidian 的插件，需要先装好 Obsidian，并且电脑上要有 Claude Code、Codex 等至少一种 AI 命令行工具。README 未给出具体安装命令，按插件方式安装即可。",
+            "steps": [
+              "先安装 Obsidian 笔记软件",
+              "电脑上装好 Claude Code 或 Codex 等工具",
+              "在 Obsidian 中安装并启用该插件"
+            ],
+            "install": "",
+            "summary": "给笔记软件 Obsidian 装个 AI 助手，直接在笔记里读写和搜索文件。",
+            "source": "GitHub",
+            "stars": "15522",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An Obsidian plugin that embeds Claude Code/Codex as an AI collaborator in your vault",
+            "is_foreign": true
+          },
+          {
+            "title": "hoppscotch/hoppscotch",
+            "url": "https://github.com/hoppscotch/hoppscotch",
+            "intro": "免费开源的接口调试工具，用来测试网站和 App 背后的数据接口。",
+            "features": [
+              "在网页上直接发请求看返回结果",
+              "支持多种请求方式和自定义方法",
+              "可换主题，还有专注模式"
+            ],
+            "guide": "打开官网就能直接在浏览器里用，不用安装；也提供桌面版和命令行版。README 未给出具体安装命令，想本地部署可参考官方文档。",
+            "steps": [
+              "打开官网 hoppscotch.io 直接使用",
+              "或按官方文档部署到自己的服务器"
+            ],
+            "install": "",
+            "summary": "免费开源的接口调试工具，用来测试网站和 App 背后的数据接口。",
+            "source": "GitHub",
+            "stars": "80540",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Open-Source API Development Ecosystem • https://hoppscotch.io • Offline, On-Prem & Cloud • Web, Desktop & CLI • Open-Source Alternative to Postman, Insomnia",
+            "is_foreign": true
+          },
+          {
+            "title": "tesseract-ocr/tesseract",
+            "url": "https://github.com/tesseract-ocr/tesseract",
+            "intro": "把图片里的文字识别成可编辑文本的老牌开源工具。",
+            "features": [
+              "识别图片中的文字，支持上百种语言",
+              "支持 PNG、JPEG、TIFF 等图片格式",
+              "可输出纯文本、PDF 等多种格式"
+            ],
+            "guide": "这是个命令行工具，没有图形界面，需要自己编译安装或装现成的软件包。README 未给出具体安装命令，建议按官方文档的安装章节操作。",
+            "steps": [
+              "参考官方文档的安装章节安装",
+              "准备要识别的图片文件",
+              "用 tesseract 命令识别并输出文本"
+            ],
+            "install": "",
+            "summary": "把图片里的文字识别成可编辑文本的老牌开源工具。",
+            "source": "GitHub",
+            "stars": "76740",
+            "language": "C++",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Tesseract Open Source OCR Engine (main repository)",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 与开发者更快找到代码、管好服务、读懂图片文字。"
+      }
+    ]
+  }
+}

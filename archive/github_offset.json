@@ -1,5 +1,5 @@
 {
-  "classic_offset": 38,
+  "classic_offset": 40,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-09-16T14:59:34.738944+00:00",
   "recent_trending": [
-    "plotly/dash",
-    "youngyangyang04/llm-master",
-    "wang2122/sprix-sage-router",
     "wavetermdev/waveterm",
     "korcarc/text-humanizer",
     "ApodexAI/FrontierAgent",
@@ -174,12 +171,15 @@
     "Flow-Launcher/Flow.Launcher",
     "nokia-applied-research/AnyJev",
     "XiaoDuoYa/codex-with-chatgpt",
-    "Wox-launcher/Wox"
+    "Wox-launcher/Wox",
+    "dzhng/jevgrep",
+    "lissy93/dashy",
+    "YishenTu/claudian"
   ],
-  "last_run_date": "2026-09-27",
+  "last_run_date": "2026-09-28",
   "last_classic": [
-    "rtk-ai/rtk",
-    "netdata/netdata"
+    "hoppscotch/hoppscotch",
+    "tesseract-ocr/tesseract"
   ],
-  "updated_at": "2026-09-27T23:58:18.131652+00:00"
+  "updated_at": "2026-09-28T23:55:38.206328+00:00"
 }
