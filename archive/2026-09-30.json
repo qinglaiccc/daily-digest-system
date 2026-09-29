@@ -1,0 +1,323 @@
+{
+  "date": "2026-09-30",
+  "generated_at": "2026-09-29T23:59:11.164173+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 278,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-09-30",
+    "digest": "OpenAI发布智能体Dots并因安全叫停GPT-6.1，特朗普与科技巨头签署AI自愿安全协议。",
+    "keywords": [
+      "OpenAI",
+      "xAI",
+      "Anthropic",
+      "Meta",
+      "Target"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "xAI 抢注 dot.com 域名调侃 OpenAI 发布",
+            "summary": "[[OpenAI]] 发布 AI 智能体 [[Dots]] 前，[[xAI]] 已拿下 dot.com 域名，现跳转至 Grok 下载页。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/",
+            "title_original": "The internet is convinced Elon Musk’s xAI trolled OpenAI’s ‘Dots’ launch",
+            "excerpt": "Before OpenAI launched its new AI agent, Dots, on Tuesday, Elon Musk's xAI had already acquired the domain name \"dot.com,\" which now redirects to the Grok chatbot download page.",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic 红队评估 GLM-5.3 与 Claude Mythos",
+            "summary": "[[Anthropic]] 红队用 100 项二进制漏洞利用任务测试，[[GLM-5.3]] 4% 试验实现完整控制流劫持，[[Claude Mythos Preview]] 为 6%。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/",
+            "title_original": "Quoting Anthropic Frontier Red Team",
+            "excerpt": "We evaluate several models on 100 tasks from the [internal Binary Exploitation benchmark] (selected at random), and find that GLM-5.3 develops full control flow hijacks in 4% of the trials; Claude Mythos Preview did so in 6%. Although GLM-5.3 performs below Claude Mythos Preview here, a meaningful threshold has clearl…",
+            "is_foreign": true
+          },
+          {
+            "title": "Meta 将 AI 智能体 Muse 扩展至小企业",
+            "summary": "[[Meta]] 宣布将 AI 智能体 [[Muse]] 扩展至小企业，称可帮助业主经营业务并寻找新客户。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/09/29/meta-is-expanding-its-ai-agent-muse-to-small-businesses/",
+            "title_original": "Meta is expanding its AI agent Muse to small businesses",
+            "excerpt": "The tech giant says the agent can help owners run their business and find new customers.",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini 与 Find Hub 可定位重要文件",
+            "summary": "[[Gemini]] 与 [[Find Hub]] 可帮助用户追踪重要文件，无需兼容标签。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2270766/gemini-find-hub-locate-important-documents/",
+            "title_original": "Gemini and Find Hub can help you locate your important documents — here's how",
+            "excerpt": "You can use Find Hub and Gemini to keep track of your documents without the need for a compatible tag.",
+            "is_foreign": true
+          },
+          {
+            "title": "OpenAI 称 GPT-6.1 安全性不足暂不发布",
+            "summary": "[[OpenAI]] 表示计划中的 [[GPT-6.1]] 安全性不足，暂不发布；当前公开模型也存在类似性能与安全权衡。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/ai/2026/09/openai-says-planned-gpt-6-1-is-too-insecure-to-release/",
+            "title_original": "OpenAI says planned GPT-6.1 is too insecure to release",
+            "excerpt": "Similar performance, security trade-offs also seen in current public models.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "特朗普与科技巨头签署 AI 自愿安全协议",
+            "summary": "[[特朗普]] 与科技企业高管会谈后签署 AI 自愿安全协议，企业同意聘请独立审计机构，并表态支持数据中心扩建。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/008/557.htm",
+            "title_original": "特朗普与科技巨头签署 AI 自愿安全协议，表态支持美国数据中心扩建",
+            "excerpt": "IT之家 9 月 30 日消息，美国总统唐纳德 · 特朗普（Donald Trump）当地时间周二表示，各大科技企业高管已经同意为人工智能建立自愿性行业标准；在社会各界愈发担忧人工智能安全问题、同时该行业在各地社区的建设规模持续扩大的背景下，特朗普再度表态，支持数据中心快速扩建。 此番发言是特朗普在白宫与科技企业高管举行会谈之后作出的。特朗普在自己的社交媒体平台上发布了一份协议文本，根据该文件，各家企业同意聘请“独立审计机构”，评估人工智能系统的运行效果是否符合设计者的初衷。各家企业还承诺，会尽力确保自家人工智能工具不会“以非预期的方式入侵或者访问各类技术系统”。 此前 OpenAI 与 Anthropic 先后报告，旗下的智能体…",
+            "is_foreign": false
+          },
+          {
+            "title": "OpenAI 推出全天候智能体 Dots",
+            "summary": "[[OpenAI]] 发布可持续运行的 AI 智能体 [[Dots]]，域名 dot.com 归属 [[xAI]]，现跳转至 Grok 下载页。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/008/559.htm",
+            "title_original": "OpenAI 推出全天候 AI 智能体 Dots，相关域名已被马斯克拿下",
+            "excerpt": "IT之家 9 月 30 日消息，当地时间周二，OpenAI 发布了一款名叫 Dots 的新产品。这是一款可以持续运行的人工智能智能体，拥有一个软乎乎、圆滚滚的卡通形象。虽说这个色彩明快的虚拟形象或许能博得大家一笑，但这次发布会过后，笑得最开心的人恐怕要数埃隆 · 马斯克（Elon Musk）。他曾是 OpenAI 的创始人，后来离开了这家公司，推出了竞品 Grok，此前还对 OpenAI 发起过诉讼，但最终败诉。 之所以会这样，是因为域名 dot.com 归属于马斯克旗下的 xAI，目前该域名会直接跳转至 xAI 的聊天机器人 Grok 应用的下载页面。根据域名信息查询系统 Whois 的登记记录，这个域名是在 7 月份刚刚完成过…",
+            "is_foreign": false
+          },
+          {
+            "title": "央行四箭齐发，房贷贴息政策落地",
+            "summary": "央行出台四项政策，房贷贴息落地；[[DeepSeek]] 发布 Harness v0.2 预览版；[[比亚迪]] 选举王传福为董事长。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8156446.html",
+            "title_original": "【钛晨报】重大利好！央行“四箭齐发”，房贷贴息政策落地；中行回应万事达信用卡遭盗刷；英伟达欲拉保险公司入场，为AI芯片融资风险兜底",
+            "excerpt": "2家A股公司今起停牌；DeepSeek Harness v0.2预览版正式发布；比亚迪选举王传福为第九届董事会董事长；荣耀Magic9全系列获“首批AI智能体手机”入网认证；中国气象局监测11月前后将形成超强厄尔尼诺事件；中美俄元首将于深圳APEC期间会晤？外交部回应。",
+            "is_foreign": false
+          },
+          {
+            "title": "OpenAI 因新模型太强叫停发布",
+            "summary": "[[OpenAI]] 因新模型能力过强叫停发布，AGI 计划暂停。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/09/499140.html",
+            "title_original": "OpenAI因新模型太强叫停发布",
+            "excerpt": "AGI计划暂停。",
+            "is_foreign": false
+          },
+          {
+            "title": "苏姿丰 550 亿元收购李飞飞世界模型",
+            "summary": "[[苏姿丰]] 以 550 亿元收购 [[李飞飞]] 的世界模型，双方在算力焦虑下联手。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1682291?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "苏姿丰550亿元买下李飞飞世界模型，AI 圈两位女王联手了",
+            "excerpt": "算力焦虑下的双向奔赴 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Kroger 等零售商构建智能体 AI 助手",
+            "summary": "[[Kroger]]、[[Giant Eagle]] 与 [[DoorDash]] 在 Groceryshop 大会阐述智能体 AI 工具理念，重点讨论如何训练购物者将智能体购物融入日常。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/technology/how-kroger-giant-eagle-and-doordash-are-building-their-agentic-ai-assistants/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "How Kroger, Giant Eagle and DoorDash are building their agentic AI assistants",
+            "excerpt": "Companies like Kroger, Giant Eagle and DoorDash outlined their philosophies on agentic AI tools at this year's Groceryshop conference. Much of the discussion centered around how to train shoppers to naturally integrate agentic shopping into their busy routines.",
+            "is_foreign": true
+          },
+          {
+            "title": "Target 下调近 2000 款商品价格",
+            "summary": "[[Target]] 在假日季前下调近 2000 款家居与服饰产品价格，消费者信心走弱。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/target-cuts-prices-consumer-sentiment-sours/831627/",
+            "title_original": "Target cuts prices as consumer sentiment sours",
+            "excerpt": "With the holiday season ramping up, the mass retailer reduced pricing on nearly 2,000 home and apparel products.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "伊索以慢营销制造品牌溢价",
+            "summary": "[[Aesop]] 通过宠物公益、影像展览等非促销活动制造慢欲望，将宠物清洁露销售额 5% 捐给比格公社。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1584666.html",
+            "title_original": "在快节奏里，伊索制造「慢欲望」",
+            "excerpt": "当文化资本不再稀缺，消费者还愿意支付溢价吗？ 原标题：Aēsop如何制造「慢欲望」？ 前段时间，实验犬公益机构“比格公社”发表了一封公开感谢信给护肤品牌Aesop（伊索）。 起因是，Aesop在全国多家门店推出 “爪爪会客厅” 活动，邀请用户携爱犬做客，领取宠物饼干礼，体验清洁服务，并将宠物清洁露销售额的5%捐给比格公社。 乍看这是一场普通的宠物营销， 但在公开信里，比格公社提到Aesop此次合作没有任何要求，纯粹只想捐助实验犬。 我关注Aesop这个品牌很多年，它其实做了不少像这样“格格不入”的事。 从各种影像展览、三八节送书，到文学图书馆、宠物公益，还有像散文一般的推送文案、时不时的歌单分享， 这些事都不会刺激消费者立马下单，…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "KKKKhazix/AIHOT",
+            "url": "https://github.com/KKKKhazix/AIHOT",
+            "intro": "一个能自动找热点、写日报的网站框架，换成你的行业信源就能用。",
+            "features": [
+              "自动从多种信源收集资料并筛选",
+              "用大模型写中文标题和摘要",
+              "把同一件事的报道聚成一个事件",
+              "按讨论热度排出每日热点日报"
+            ],
+            "guide": "需要自己部署网站，支持 RSS、网页、X 账号等信源。仓库带 18 个公开 AI 资讯源做示范，换成你行业的信源即可。",
+            "steps": [
+              "查看仓库文档了解部署方式",
+              "准备服务器和运行环境",
+              "替换成你自己行业的信源",
+              "调整精选标准后启动网站"
+            ],
+            "install": "",
+            "summary": "一个能自动找热点、写日报的网站框架，换成你的行业信源就能用。",
+            "source": "GitHub",
+            "stars": "3086",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。",
+            "is_foreign": true
+          },
+          {
+            "title": "plotly/dash",
+            "url": "https://github.com/plotly/dash",
+            "intro": "用 Python 就能做数据网页应用，不用写 JavaScript。",
+            "features": [
+              "下拉框、滑块等控件直接连 Python 代码",
+              "支持约 50 种图表类型包括地图",
+              "可自由定制应用外观",
+              "代码量少，几十行就能做交互应用"
+            ],
+            "guide": "需要先装 Python，然后通过 pip 安装 Dash 即可开始写应用。适合做数据看板和分析工具，在浏览器里运行。",
+            "steps": [
+              "先安装 Python 环境",
+              "用 pip 安装 Dash 库",
+              "参考官方教程写第一个应用",
+              "在浏览器中打开运行"
+            ],
+            "install": "",
+            "summary": "用 Python 就能做数据网页应用，不用写 JavaScript。",
+            "source": "GitHub",
+            "stars": "24446",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Data Apps & Dashboards for Python. No JavaScript Required.",
+            "is_foreign": true
+          },
+          {
+            "title": "streetwriters/notesnook",
+            "url": "https://github.com/streetwriters/notesnook",
+            "intro": "一款端到端加密的笔记应用，替代印象笔记，保护隐私。",
+            "features": [
+              "笔记在设备上加密后才上传",
+              "支持网页、桌面和手机客户端",
+              "完全开源，代码可审查",
+              "注重隐私同时保持易用"
+            ],
+            "guide": "普通用户可直接从官网下载各平台客户端使用；开发者想自己构建则需装 Node.js 和 npm，按仓库说明编译。",
+            "steps": [
+              "访问官网下载对应平台客户端",
+              "安装后注册账号即可使用",
+              "开发者需先安装 Node.js 和 npm",
+              "按仓库说明构建各端应用"
+            ],
+            "install": "",
+            "summary": "一款端到端加密的笔记应用，替代印象笔记，保护隐私。",
+            "source": "GitHub",
+            "stars": "14695",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "A fully open source & end-to-end encrypted note taking alternative to Evernote.",
+            "is_foreign": true
+          },
+          {
+            "title": "unslothai/unsloth",
+            "url": "https://github.com/unslothai/unsloth",
+            "intro": "一个桌面应用，让你在自己电脑上运行和训练 AI 模型。",
+            "features": [
+              "本地运行和训练大语言模型",
+              "支持图片和视频生成模型",
+              "可配合 Claude Code 等工具使用",
+              "支持多显卡和多种硬件"
+            ],
+            "guide": "直接下载 Windows、macOS 或 Linux 的桌面应用安装包；也可用命令行脚本安装，或使用 Docker 镜像。",
+            "steps": [
+              "从官网或 GitHub Releases 下载安装包",
+              "或运行安装脚本：curl -fsSL https://unsloth.ai/install.sh | sh",
+              "Windows 用户运行：irm https://unsloth.ai/install.ps1 | iex",
+              "也可使用 Docker 镜像 unsloth/unsloth"
+            ],
+            "install": "curl -fsSL https://unsloth.ai/install.sh | sh",
+            "summary": "一个桌面应用，让你在自己电脑上运行和训练 AI 模型。",
+            "source": "GitHub",
+            "stars": "77037",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4, MiniMax-H3, Gemma 4, FLUX and more.",
+            "is_foreign": true
+          },
+          {
+            "title": "hiyouga/LlamaFactory",
+            "url": "https://github.com/hiyouga/LlamaFactory",
+            "intro": "不用写代码就能微调 100 多种大语言模型，有网页界面。",
+            "features": [
+              "支持 100 多种大语言模型微调",
+              "提供零代码命令行和网页界面",
+              "可在本地或云端训练",
+              "被亚马逊、英伟达等公司使用"
+            ],
+            "guide": "需要 Python 环境，可本地安装后通过网页界面操作；也可直接用免费的 Colab 在线笔记本开始训练。",
+            "steps": [
+              "先安装 Python 环境",
+              "参考文档安装 LlamaFactory",
+              "启动网页界面或使用命令行",
+              "选择模型开始微调训练"
+            ],
+            "install": "",
+            "summary": "不用写代码就能微调 100 多种大语言模型，有网页界面。",
+            "source": "GitHub",
+            "stars": "75195",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024)",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从自动写日报到本地跑大模型，这批工具让 AI 和数据处理更省事。"
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "classic_offset": 40,
+  "classic_offset": 42,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-09-16T14:59:34.738944+00:00",
   "recent_trending": [
-    "wavetermdev/waveterm",
-    "korcarc/text-humanizer",
-    "ApodexAI/FrontierAgent",
     "super-productivity/super-productivity",
     "shinthink/blitzstrike",
     "Human-Agent-Society/reef",
@@ -174,12 +171,15 @@
     "Wox-launcher/Wox",
     "dzhng/jevgrep",
     "lissy93/dashy",
-    "YishenTu/claudian"
+    "YishenTu/claudian",
+    "KKKKhazix/AIHOT",
+    "plotly/dash",
+    "streetwriters/notesnook"
   ],
-  "last_run_date": "2026-09-28",
+  "last_run_date": "2026-09-29",
   "last_classic": [
-    "hoppscotch/hoppscotch",
-    "tesseract-ocr/tesseract"
+    "unslothai/unsloth",
+    "hiyouga/LlamaFactory"
   ],
-  "updated_at": "2026-09-28T23:55:38.206328+00:00"
+  "updated_at": "2026-09-29T23:58:59.259512+00:00"
 }
