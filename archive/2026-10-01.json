@@ -1,0 +1,302 @@
+{
+  "date": "2026-10-01",
+  "generated_at": "2026-09-30T23:55:49.898519+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 274,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-01",
+    "digest": "谷歌发布Gemini 4 Argon限可信防御者使用，OpenAI开发者大会推dots智能体并调整会员定价，蚂蚁百灵发布Ling-3.1-flash模型。",
+    "keywords": [
+      "Gemini4",
+      "OpenAI",
+      "Ling-3-1-flash",
+      "DeepSeek",
+      "大众点评"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "OpenAI推出Decisions API",
+            "summary": "[[OpenAI]]发布Decisions API，被称为Jev克隆，强调快速低成本智能的重要性。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
+            "title_original": "OpenAI’s Jev clone could help the frontier lab stop its swarming agents",
+            "excerpt": "OpenAI's \"Decisions API\" is a Jev clone that confirms the importance of fast, cheap intelligence.",
+            "is_foreign": true
+          },
+          {
+            "title": "Meta否认Muse读取私信",
+            "summary": "[[Meta]]否认其[[Muse]] AI代理未经许可读取用户私信，称需明确授权，反驳记者说法。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/09/30/meta-disputes-claim-that-muse-read-a-users-private-messages-without-permission/",
+            "title_original": "Meta disputes claim that Muse read a user’s private messages without permission",
+            "excerpt": "Meta says its Muse AI agent cannot access a user’s Messages without explicit permission, disputing a journalist’s account that the agent read his private messages while the required Mac setting was turned off.",
+            "is_foreign": true
+          },
+          {
+            "title": "OpenAI一周内推出Jev竞品",
+            "summary": "Latent Space报道[[OpenAI]] DevDay，对话CUA团队与API平台负责人，讨论一周内推出Jev竞品。",
+            "source": "Latent Space",
+            "url": "https://www.latent.space/p/devday-2026",
+            "title_original": "Why Dwarkesh is Wrong about Computer Use + How OpenAI shipped its Jev competitor in 1 Week",
+            "excerpt": "Our DevDay coverage - the first pod on the DevDay lineup - dives in with the leaders of OpenAI’s CUA team and API platform.",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌发布Gemini 4 Argon",
+            "summary": "[[Google]]发布[[Gemini 4]] Argon，称在软件工程、企业知识工作与网络安全防御达前沿性能，仅限可信防御者使用。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/1002980/google-gemini-4-argon",
+            "title_original": "Google announces Gemini 4 and says it’s so capable that only ‘trusted cyber defenders’ can have it right now",
+            "excerpt": "Google today revealed its next AI frontier model, which it's calling Gemini 4 Argon. The new model delivers \"frontier performance in complex workflows across real-world software engineering, enterprise knowledge work like legal and finance, and cybersecurity defense,\" according to chief AI architect and Google DeepMin…",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini 4 Argon暂不可用",
+            "summary": "[[Google]]宣布[[Gemini 4]] Argon模型，但用户暂无法使用，取代此前Gemini 3.5 Pro预期。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/",
+            "title_original": "Google announces Gemini 4 Argon AI model, but you can't use it yet",
+            "excerpt": "So much for Gemini 3.5 Pro.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "OpenAI推理之父谈多智能体",
+            "summary": "[[OpenAI]]推理之父访谈称，千禧年难题突破中10000个Agent最多占10%功劳，数学只是多智能体时代开胃菜。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/09/499654.html",
+            "title_original": "OpenAI推理之父最新访谈！数学只是多智能体时代的开胃菜",
+            "excerpt": "千禧年难题的突破，10000个Agent最多占了10%的功劳。",
+            "is_foreign": false
+          },
+          {
+            "title": "蚂蚁百灵发布Ling-3.1-flash",
+            "summary": "[[蚂蚁百灵]]发布[[Ling-3.1-flash]]模型，约560B总参数、25B激活参数，上下文1M，开放两周免费体验。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/008/907.htm",
+            "title_original": "蚂蚁百灵发布 Ling-3.1-flash 模型：约 560B 总参数、25B 激活参数",
+            "excerpt": "IT之家 9 月 30 日消息，蚂蚁百灵今日发布 Ling-3.1-flash 模型，拥有约 560B 总参数，每个 Token 激活约 25B 参数； 模型上下文窗口上限为 1M ，可容纳更长的文档、代码和任务历史。 官方表示，在研发过程中，围绕通用智能体、搜索、日常办公和软件研发等任务持续优化，并在医疗、金融和材料科学研究等场景持续提升模型能力。 此外， Ling-3.1-flash 将开放为期两周的免费体验 ；考虑到综合服务成本，免费体验期间模型服务长度为 256K。 免费体验期结束并转为付费服务后，计划开放 1M 上下文。届时， 团队也计划同步开源 ，并继续更新模型性能。 IT之家附这款模型在多个任务评测中得分如下：",
+            "is_foreign": false
+          },
+          {
+            "title": "OpenAI推出智能体dots",
+            "summary": "[[OpenAI]]开发者大会发布25项更新，推出智能体dots并调整会员定价，新增500美元/月Pro 500套餐。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372005",
+            "title_original": "OpenAI 推出个人 AI 智能体 dots；传豆包将推个人 AI 产品「Spell」；SpaceX 发射星舰成功入轨 | 极客早知道",
+            "excerpt": "OpenAI 开发者大会推出智能体 dots，重构会员定价，意图打造 AI 超级入口 \n 北京时间 9 月 30 日凌晨，OpenAI 举办其宣称规模最大的一届开发者大会，一次性发布 25 项更新，覆盖新模型、API、智能体、插件生态与企业软件市场。大会现场，Sam Altman 公布 ChatGPT Pro 会员调整方案时台下一片沉寂，套餐调价成为本次发布最受争议的内容。 \n 会员体系重新划分档位：原有 200 美元 / 月的 Pro 200 售价不变，但新订阅用户额度减半；新增 500 美元 / 月的 Pro 500 套餐，额度为 Plus 的 25 倍，独家开放 Astra Ultrafast 高速模式。OpenAI 的计价…",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek开源昇腾组件",
+            "summary": "[[DeepSeek]]开源[[昇腾]]平台基础设施组件，覆盖TileLang、计算库与分布式通信库。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/t5i2Yv2z0LwIbK36lteR?utm_source=rss&utm_medium=article",
+            "title_original": "DeepSeek 开源昇腾平台基础设施组件，覆盖 TileLang、计算库与分布式通信库",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "GPT-6.1 Sol推出",
+            "summary": "[[GPT-6.1 Sol]]推出，价格仅为Astra的五分之一；[[DeepSeek Harness]]推出桌面端预览版。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1682554?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "早报｜曝苹果新CEO想更快发产品/华为Mate 90真机进店/GPT‑6.1 Sol推出，价格仅Astra的五分之一",
+            "excerpt": "· DeepSeek Harness 推出桌面端预览版\n· 特斯拉 Roadster 发布会因天气推迟\n #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "大众点评推人感广告片",
+            "summary": "[[大众点评]]发布广告片，由谢霆锋出演，强调真实用户评价在找店决策中的人感优势。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/378195.html",
+            "title_original": "大众点评：听谢霆锋说，他跟你挺熟？",
+            "excerpt": "AI迭代太快了——但还是无法想象AI进入消费决策平台会怎样，是用一句最扎心、最直接、最不绕弯的话告诉你好吃、难看、难评，还是什么？ 然后呢，你信吗？信这些靠语料库喂出来的评价？ 所以 趁AI还没完全卷入这个领域，我们为大众点评做了条有“人味儿”的片。 视频 案子是年前比的，那是个猫砂盆都要谈AI的智能体井喷期。 客户brief中希望“强化大众点评找店、评价链路下的决策优势”，我们很自然地想到：AI时代，大众点评最核心的优势，就藏在它的名字里—— 人 ——倒不在人多，而在“ 人感 ”——哪家好吃哪家难吃，哪里好玩哪里必玩， 在大众点评就是靠一个个真实可感的“人”，用一句句真实主观的评价告诉你的。 我们为这些“人”，安了个颇有可信度的…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "feder-cr/dots",
+            "url": "https://github.com/feder-cr/dots",
+            "intro": "给 AI 配一个自带浏览器，让它上网操作时不容易被网站拦下来。",
+            "features": [
+              "AI 自己开浏览器上网操作",
+              "换模型只需改一个参数",
+              "每次运行保持同一身份",
+              "鼠标键盘动作像真人"
+            ],
+            "guide": "需要先装 uv 工具，然后一条命令启动，浏览器打开本地地址就能用；要自备 OpenRouter 的 API Key。",
+            "steps": [
+              "安装 uv 工具（README 提供一键脚本）",
+              "运行 uvx 命令启动 dots",
+              "带上自己的 OpenRouter Key",
+              "打开 http://127.0.0.1:8765 使用"
+            ],
+            "install": "uvx --from git+https://github.com/feder-cr/dots dots --openrouter-key sk-or-...",
+            "summary": "给 AI 配一个自带浏览器，让它上网操作时不容易被网站拦下来。",
+            "source": "GitHub",
+            "stars": "1932",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Open-source dots for the web: an AI agent with its own browser, one that does not get blocked.",
+            "is_foreign": true
+          },
+          {
+            "title": "wavetermdev/waveterm",
+            "url": "https://github.com/wavetermdev/waveterm",
+            "intro": "一个带 AI 助手的终端工具，把命令行、文件编辑和网页浏览放在同一个窗口里。",
+            "features": [
+              "AI 助手能看懂终端输出",
+              "远程连接断网后自动重连",
+              "内置编辑器改远程文件",
+              "拖拽排列终端和网页块"
+            ],
+            "guide": "支持 macOS、Linux、Windows，从官网下载安装包即可；用 AI 功能需自备 OpenAI、Claude 等 API Key，也可接本地模型。",
+            "steps": [
+              "访问官网下载对应系统安装包",
+              "安装后打开 Wave 终端",
+              "按需填入自己的 AI API Key"
+            ],
+            "install": "",
+            "summary": "一个带 AI 助手的终端工具，把命令行、文件编辑和网页浏览放在同一个窗口里。",
+            "source": "GitHub",
+            "stars": "22391",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An open-source, AI-integrated, cross-platform terminal for seamless workflows",
+            "is_foreign": true
+          },
+          {
+            "title": "espanso/espanso",
+            "url": "https://github.com/espanso/espanso",
+            "intro": "打字时自动把简写替换成完整内容，省下大量重复输入的时间。",
+            "features": [
+              "输入关键词自动替换成整段文字",
+              "几乎在任何软件里都能用",
+              "支持表情、图片和日期",
+              "配置全在本地不上传"
+            ],
+            "guide": "支持 Windows、macOS、Linux，从官网下载安装后，编辑本地配置文件写下触发词和替换内容即可，无需联网或账号。",
+            "steps": [
+              "从官网下载对应系统安装包",
+              "安装并启动 espanso",
+              "编辑配置文件添加触发词",
+              "在任意软件中输入触发词测试"
+            ],
+            "install": "",
+            "summary": "打字时自动把简写替换成完整内容，省下大量重复输入的时间。",
+            "source": "GitHub",
+            "stars": "14562",
+            "language": "Rust",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "A Privacy-first, Cross-platform Text Expander written in Rust",
+            "is_foreign": true
+          },
+          {
+            "title": "openclaw/openclaw",
+            "url": "https://github.com/openclaw/openclaw",
+            "intro": "装在自己电脑上的 AI 助手，能在你常用的聊天软件里直接对话干活。",
+            "features": [
+              "在 Discord、微信等聊天里对话",
+              "数据存在自己设备上",
+              "可换不同 AI 模型",
+              "有各平台原生客户端"
+            ],
+            "guide": "支持 macOS、Linux、Windows，用官方安装脚本一键装好，会自动准备所需的 Node 运行环境，装完在聊天软件里就能用。",
+            "steps": [
+              "运行官方安装脚本（macOS/Linux/WSL2）",
+              "Windows 用 PowerShell 安装命令",
+              "按提示完成初始配置",
+              "在聊天软件里开始对话"
+            ],
+            "install": "curl -fsSL https://openclaw.ai/install.sh | bash",
+            "summary": "装在自己电脑上的 AI 助手，能在你常用的聊天软件里直接对话干活。",
+            "source": "GitHub",
+            "stars": "390983",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
+            "is_foreign": true
+          },
+          {
+            "title": "obra/superpowers",
+            "url": "https://github.com/obra/superpowers",
+            "intro": "给写代码的 AI 助手定一套工作流程，让它先问清需求再动手写。",
+            "features": [
+              "先问清需求再写代码",
+              "把方案拆成小段给你确认",
+              "生成清晰的实施计划",
+              "支持多种编程助手工具"
+            ],
+            "guide": "这是一套给编程 AI 助手用的技能包，需先有 Claude Code、Cursor 等支持的助手工具，再按其文档安装启用。",
+            "steps": [
+              "先安装一个支持的编程 AI 助手",
+              "按文档安装 Superpowers 技能包",
+              "在助手里启用后开始新任务"
+            ],
+            "install": "",
+            "summary": "给写代码的 AI 助手定一套工作流程，让它先问清需求再动手写。",
+            "source": "GitHub",
+            "stars": "293465",
+            "language": "Shell",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An agentic skills framework & software development methodology that works.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 助手真正动手干活，从写代码到操作浏览器都更省心"
+      }
+    ]
+  }
+}
