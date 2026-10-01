@@ -1,5 +1,5 @@
 {
-  "classic_offset": 2,
+  "classic_offset": 4,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-09-30T23:55:38.531402+00:00",
   "recent_trending": [
-    "jarun/nnn",
-    "mizorewww/laya-mlx",
-    "totec448-spec/chat-on-steroids",
     "ActivityWatch/activitywatch",
     "jaredpalmer/kev",
     "jub0t/Concat",
@@ -174,12 +171,15 @@
     "streetwriters/notesnook",
     "feder-cr/dots",
     "wavetermdev/waveterm",
-    "espanso/espanso"
+    "espanso/espanso",
+    "Louis-CFM/coucou",
+    "super-productivity/super-productivity",
+    "Zettlr/Zettlr"
   ],
-  "last_run_date": "2026-09-30",
+  "last_run_date": "2026-10-01",
   "last_classic": [
-    "openclaw/openclaw",
-    "obra/superpowers"
+    "affaan-m/ECC",
+    "NousResearch/hermes-agent"
   ],
-  "updated_at": "2026-09-30T23:55:38.911838+00:00"
+  "updated_at": "2026-10-01T23:55:37.289297+00:00"
 }

@@ -1,0 +1,306 @@
+{
+  "date": "2026-10-02",
+  "generated_at": "2026-10-01T23:55:49.568355+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 260,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-02",
+    "digest": "谷歌发布Gemini 4，腾讯租甲骨文东南亚数据中心获10万AI芯片，Shopify推出AI建店工具Canvas。",
+    "keywords": [
+      "Gemini4",
+      "腾讯",
+      "甲骨文",
+      "Shopify",
+      "DoorDash"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Shopify推出Canvas，聊天即可建店",
+            "summary": "[[Shopify]]发布Canvas建站工具，商家可通过与AI代理[[Sidekick]]对话实时创建和定制网店。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/",
+            "title_original": "Shopify debuts Canvas, a way to build online stores by chatting with AI",
+            "excerpt": "Shopify’s new Canvas site builder lets merchants create and customize their online stores by chatting with its AI agent Sidekick, while watching the changes happen in real time.",
+            "is_foreign": true
+          },
+          {
+            "title": "Cloudflare clef登HuggingFace热门榜",
+            "summary": "[[Cloudflare]]新模型clef登上[[HuggingFace]]热门模型榜，trendingScore 292，likes 295，下载18。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/Cloudflare/clef",
+            "title_original": "Cloudflare/clef 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 292）**新发布**。类型 image-text-to-text。likes 295，下载 18。标签：transformers、safetensors、qwen3_5、image-text-to-text、clef、cloudflare。",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌Gemini Live上线Guided Vision",
+            "summary": "[[Google]]在[[Gemini Live]]推出Guided Vision，兼容安卓设备可实时音频描述摄像头画面内容。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision",
+            "title_original": "Google’s new Guided Vision feature can help you read the fine print",
+            "excerpt": "Guided Vision is launching in Gemini Live on compatible Android devices today to use AI to give real-time audio descriptions of anything you point your phone's camera at. By sharing your camera in Gemini Live, you can have Google's AI help with things like reading small text, describing your surroundings, finding or i…",
+            "is_foreign": true
+          },
+          {
+            "title": "开源汇编代码编辑器Rhun发布",
+            "summary": "开发者发布开源代码编辑器[[Rhun]]，支持Linux、Windows和苹果芯片Mac，核心为x86-64汇编。",
+            "source": "Hacker News",
+            "url": "https://rhun.app/",
+            "title_original": "Show HN: Rhun, an open-source code editor written in assembly",
+            "excerpt": "I found that I'm not using even 1/3 of vim/vscode features anymore. That's wht I'm building rhun - a small code editor for Linux, Windows and Apple silicon Macs. It obviously has Vim mode, a terminal, Git diffs and a panel for Claude Code or Codex sessions. The editor and pixel renderer share an x86-64 assembly core.…",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini 4 Argon发布，输出达1M",
+            "summary": "[[Gemini 4 Argon]]发布，输出长度达1M，目前仅限Fairwind计划的政府用户和可信网络防御者试用。",
+            "source": "Latent Space",
+            "url": "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer",
+            "title_original": "[AINews] Gemini 4 Argon: GDM’s answer to Astra/Fable, with 1M output",
+            "excerpt": "... but you can’t try it yet unless you are “government users and trusted cyber defenders in the Fairwind Program”",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "腾讯租甲骨文东南亚数据中心",
+            "summary": "[[腾讯]]与[[甲骨文]]签署五年期租赁协议，在东南亚数据中心获取约10万块先进AI芯片，估值约70亿美元。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/009/100.htm",
+            "title_original": "曝腾讯租用甲骨文东南亚数据中心：涉及约 10 万块先进 AI 芯片，交易估值约 70 亿美元",
+            "excerpt": "IT之家 10 月 1 日消息，据《金融时报》今日报道，腾讯已与甲骨文签署其最大海外租赁协议，在东南亚多个甲骨文数据中心获取约 10 万块先进 AI 芯片。腾讯和甲骨文均未回应置评请求。 知情人士称，腾讯今年同意一项五年期租赁，涉及东南亚多个甲骨文数据中心。交易估值约 70 亿美元 （IT之家注：现汇率约合 470.18 亿元人民币） ，首付约 30%。腾讯计划将这部分算力用于推进 AI 模型和智能体工具的开发。 据称，字节跳动和阿里巴巴仍是东南亚数据中心最大客户。此类租赁协议在美国规则下被允许，也可能提供英伟达在中国无法获取的先进芯片。中国科技巨头和前沿 AI 实验室正利用这些资源，用于模型训练等任务。 公司数据显示，腾讯第二季…",
+            "is_foreign": false
+          },
+          {
+            "title": "OpenAI称遭有组织蒸馏",
+            "summary": "[[OpenAI]]称7月遭遇有组织蒸馏活动，超1.5万名用户参与，7月28日已完全阻止，矛头指向[[月之暗面]]。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/009/112.htm",
+            "title_original": "OpenAI 称其遭遇有组织蒸馏，将矛头指向月之暗面",
+            "excerpt": "IT之家 10 月 1 日消息，当地时间 9 月 30 日，OpenAI 在官网发文，称其近期遭遇一场有组织的蒸馏活动。 OpenAI 在文中表示，该活动最初始于 7 月第一周， 符合对抗式蒸馏（adversarial distillation）之特征 ，即系统性未经授权地利用某模型输出或推理过程，帮助训练、复现或改进另一模型。 OpenAI 透露，7 月 1 日的初始活动规模较小，直到 7 月 24 日和 7 月 25 日流量突然大幅增加，当时有超过 4000 名用户发起了 1.6 万次请求。该公司进一步调查后发现，超 1.5 万名用户存在类似提示词活动。到 7 月 28 日，OpenAI 已完全阻止该批活动。 本次活动并没有破…",
+            "is_foreign": false
+          },
+          {
+            "title": "FDE成大模型新成本",
+            "summary": "钛媒体报道，[[腾讯]]经销、[[字节跳动]]驻场、[[Kimi]]借船，FDE模式正成为大模型落地的新成本。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8157828.html",
+            "title_original": "腾讯经销、字节驻场、Kimi借船：FDE成了大模型的新成本？",
+            "excerpt": "AI公司活成了它们最讨厌的样子。",
+            "is_foreign": false
+          },
+          {
+            "title": "Gemini 4正式发布",
+            "summary": "[[Gemini 4]]正式发布，被称首个写作强于代码的前沿模型，跑分表现突出。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1682765?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "Gemini 4 正式发布，我们终于有了一个写作强于代码的前沿模型",
+            "excerpt": "跑分不可思议，能力谨慎怀疑 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          },
+          {
+            "title": "谷歌Gemini 4突然发布",
+            "summary": "[[谷歌]]突然发布[[Gemini 4]]，搭载RSI加持，价格仅为Astra一半。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/10/499663.html",
+            "title_original": "谷歌Gemini 4突然发布！RSI加持，GPT和Opus都让让",
+            "excerpt": "价格只有Astra一半",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Meta面向小企业推出AI代理",
+            "summary": "[[Meta]]继个人版Muse后，面向小企业推出AI代理，协助处理日常任务。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/meta-debuts-ai-agent-muse-small-businesses/831890/",
+            "title_original": "Meta debuts AI agent for small businesses",
+            "excerpt": "After introducing Muse for personal users, the tech giant is offering its AI agent to small businesses seeking help with everyday tasks.",
+            "is_foreign": true
+          },
+          {
+            "title": "DoorDash新增零售商与短信购物助手",
+            "summary": "[[DoorDash]]新增[[Costco]]等零售商，并扩展Text DoorDash和Dasher Returns等购物功能。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/ai-strategies/doordash-adds-new-retailers-texting-shopping-assistant/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "DoorDash adds new retailers, texting shopping assistant",
+            "excerpt": "As DoorDash adds partners like Costco, the company is also expanding shopping features like Text DoorDash and Dasher Returns in an effort to become a one-stop marketplace.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "Louis-CFM/coucou",
+            "url": "https://github.com/Louis-CFM/coucou",
+            "intro": "住在 Mac 刘海或屏幕顶部的小宠物，帮你盯着 AI 编程助手的一举一动。",
+            "features": [
+              "实时查看 AI 编程会话的每一步操作",
+              "在刘海上直接批准或拒绝权限请求",
+              "一键跳转到对应的终端窗口",
+              "支持用自己的密钥和多个 AI 模型聊天"
+            ],
+            "guide": "这是 macOS 和 Windows 上的桌面小工具，需要先安装并运行 Claude Code 等 AI 编程助手，再从项目主页下载安装包即可使用。",
+            "steps": [
+              "先安装并运行 Claude Code 等 AI 编程助手",
+              "从项目主页下载对应系统的安装包",
+              "打开应用后即可在刘海或屏幕顶部看到小宠物"
+            ],
+            "install": "",
+            "summary": "住在 Mac 刘海或屏幕顶部的小宠物，帮你盯着 AI 编程助手的一举一动。",
+            "source": "GitHub",
+            "stars": "2455",
+            "language": "Swift",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "A tiny friend that lives in your notch (macOS) or at the top of your screen (Windows) and keeps an eye on your Claude Code sessions.",
+            "is_foreign": true
+          },
+          {
+            "title": "super-productivity/super-productivity",
+            "url": "https://github.com/super-productivity/super-productivity",
+            "intro": "一款把待办清单、时间规划和计时器合在一起的效率应用，还能同步 Jira 等平台的任务。",
+            "features": [
+              "用子任务、项目和标签整理待办事项",
+              "在时间轴上规划一天并对照日历",
+              "用看板和四象限视图直观排序任务",
+              "记录每项任务耗时并生成工时表"
+            ],
+            "guide": "可以直接打开网页版使用，也可以下载 Windows、macOS、Linux、安卓和 iOS 客户端。数据默认存在本地，无需注册账号。",
+            "steps": [
+              "打开官网或下载对应平台的客户端",
+              "直接创建任务开始使用，无需注册"
+            ],
+            "install": "",
+            "summary": "一款把待办清单、时间规划和计时器合在一起的效率应用，还能同步 Jira 等平台的任务。",
+            "source": "GitHub",
+            "stars": "22451",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Super Productivity is an advanced todo list app with integrated Timeboxing and time tracking capabilities. It also comes with integrations for Jira, GitLab, GitHub and Open Project.",
+            "is_foreign": true
+          },
+          {
+            "title": "Zettlr/Zettlr",
+            "url": "https://github.com/Zettlr/Zettlr",
+            "intro": "一款注重隐私的写作软件，帮学生和研究者把笔记整理成可发表的文稿。",
+            "features": [
+              "笔记默认只存在本地，注重隐私",
+              "和 Zotero 等文献管理工具联动插入引用",
+              "支持 LaTeX 和 Word 模板排版",
+              "一键导出成多种发布格式"
+            ],
+            "guide": "这是桌面写作软件，需要从官网下载对应系统的安装包。支持十几种语言，无需注册账号即可离线使用。",
+            "steps": [
+              "访问官网下载对应系统的安装包",
+              "安装后打开软件即可开始写作"
+            ],
+            "install": "",
+            "summary": "一款注重隐私的写作软件，帮学生和研究者把笔记整理成可发表的文稿。",
+            "source": "GitHub",
+            "stars": "13633",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Your One-Stop Publication Workbench",
+            "is_foreign": true
+          },
+          {
+            "title": "affaan-m/ECC",
+            "url": "https://github.com/affaan-m/ECC",
+            "intro": "给 AI 编程助手加装技能、记忆和安全防护的增强工具包。",
+            "features": [
+              "为 AI 助手添加可复用的技能",
+              "让助手记住跨会话的上下文",
+              "提供安全防护和权限管理",
+              "支持 Claude Code、Codex、Cursor 等多种助手"
+            ],
+            "guide": "通过 Claude Code 的插件命令安装，需要先装好 Claude Code。官方只认可 GitHub 仓库、npm 包和官网等渠道，别从第三方镜像下载。",
+            "steps": [
+              "先安装并配置好 Claude Code",
+              "用 Claude Code 的插件命令安装 ecc@ecc 插件",
+              "只从官方渠道安装，避免第三方镜像"
+            ],
+            "install": "",
+            "summary": "给 AI 编程助手加装技能、记忆和安全防护的增强工具包。",
+            "source": "GitHub",
+            "stars": "270700",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "is_foreign": true
+          },
+          {
+            "title": "NousResearch/hermes-agent",
+            "url": "https://github.com/NousResearch/hermes-agent",
+            "intro": "一个会自己积累经验、越用越懂你的 AI 助手，能跑在便宜的云服务器上。",
+            "features": [
+              "从使用中自动创建并改进技能",
+              "跨会话记住你的偏好和习惯",
+              "支持 Telegram、Discord 等多种聊天入口",
+              "可自由切换不同厂商的 AI 模型"
+            ],
+            "guide": "需要 Python 环境，可以跑在本地电脑或云服务器上。用 hermes model 命令切换模型，支持接入自己的 API 密钥。",
+            "steps": [
+              "准备 Python 运行环境",
+              "在本地或云服务器上部署运行",
+              "用 hermes model 命令选择要用的模型"
+            ],
+            "install": "",
+            "summary": "一个会自己积累经验、越用越懂你的 AI 助手，能跑在便宜的云服务器上。",
+            "source": "GitHub",
+            "stars": "250611",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The agent that grows with you",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 助手更听话、让日常任务更省心的效率工具合集"
+      }
+    ]
+  }
+}
