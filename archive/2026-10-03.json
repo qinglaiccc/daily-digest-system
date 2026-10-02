@@ -1,0 +1,301 @@
+{
+  "date": "2026-10-03",
+  "generated_at": "2026-10-02T23:55:46.152969+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 215,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-03",
+    "digest": "Meta开源Muse智能体代码，苹果收紧macOS完全磁盘访问权限，宜家关闭三家小型门店。",
+    "keywords": [
+      "Meta",
+      "Muse",
+      "苹果",
+      "macOS",
+      "宜家"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Meta开源Muse智能体代码",
+            "summary": "[[Meta]]开源[[Muse]]智能体代码，用户可自制搭载该AI的硬件设备。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link",
+            "title_original": "Meta open sources code to let you make Muse AI gadgets",
+            "excerpt": "Meta now lets you make your own Muse gadgets that feature the company's new AI agent with code that the company open sourced. The company suggests projects like loading Muse on a color E Ink display to show reminders, adding it to an HDMI stick so you can display Muse on a big screen, or […]",
+            "is_foreign": true
+          },
+          {
+            "title": "GLM-5.3无审查版登HuggingFace热榜",
+            "summary": "[[GLM-5.3]]无审查版登上[[HuggingFace]]热门模型榜，获102赞、127次下载。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
+            "title_original": "Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 93）**新发布**。类型 text-generation。likes 102，下载 127。标签：exllamav3、safetensors、glm_moe_dsa、exl3、glm、moe。",
+            "is_foreign": true
+          },
+          {
+            "title": "开源乐高AI生成器发布",
+            "summary": "开发者发布开源[[乐高]]AI生成器，用[[ChatGPT]]和[[Claude]]生成LDraw装配代码。",
+            "source": "Hacker News",
+            "url": "https://github.com/anteloc/ldraw-nova",
+            "title_original": "Show HN: Made an open-source Lego AI generator",
+            "excerpt": "Hi there :-) New on HN, first time posting. Past year, around December, I started experimenting with making ChatGPT and Claude generate source code in LDraw language. This LDraw is literally an \"assembly\" language, a low-level programming language that describes how to assemble LEGO pieces together into models, one pl…",
+            "is_foreign": true
+          },
+          {
+            "title": "Airbnb用AI重塑产品与体验",
+            "summary": "前[[Meta]] Llama负责人Ahmad Al-Dahle加入[[Airbnb]]，用AI改造产品开发与住客体验。",
+            "source": "Latent Space",
+            "url": "https://www.latent.space/p/airbnb",
+            "title_original": "Inside-Out AI: Rebuilding Airbnb Behind the Scenes and Across the Guest Experience",
+            "excerpt": "After leading Meta’s Llama models, Ahmad Al-Dahle is now transforming Airbnb with AI — from how its teams develop products to how it serves guests.",
+            "is_foreign": true
+          },
+          {
+            "title": "苹果警示AI智能体磁盘访问风险",
+            "summary": "[[苹果]]就AI智能体获取完全磁盘访问权限发出安全警示。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2276186/apple-sounds-the-alarm-on-ai-agents-and-full-disk-access/",
+            "title_original": "Apple sounds the alarm on AI agents and 'Full Disk Access'",
+            "excerpt": "There's an increasingly high cost to convenience.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "苹果收紧macOS完全磁盘访问权限",
+            "summary": "[[苹果]]升级[[macOS 27]]隐私管控，要求用户明确操作才能授予完全磁盘访问权限。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/009/381.htm",
+            "title_original": "苹果收紧 macOS 27 等完全磁盘访问权限，降低 AI 智能体操控风险",
+            "excerpt": "IT之家 10 月 3 日消息，苹果开发者网站昨日（10 月 2 日）发布公告，宣布将升级 macOS 27 等系统的隐私管控，要求用户通过更明确的操作，才能授予应用“完全磁盘访问权限”。 苹果表示，“完全磁盘访问权限”原本用于支持备份应用在 Mac 上正常运行。该权限会在很大程度上绕过系统为保护用户数据设置的常规控制，因此风险高于普通应用权限。 苹果指出，部分开发者正以可能危及用户安全的方式使用该权限。获得授权后，应用可访问系统中的文件、邮件、信息，甚至浏览历史；通讯类应用还可能影响用户通讯对象的隐私。 苹果未公布新管控的具体形式、上线时间或适用范围。公司称，其目标是确保真正希望授权的用户，在充分理解风险后，才能通过明确操作完成…",
+            "is_foreign": false
+          },
+          {
+            "title": "分析师体验Muse后清仓Airbnb加仓Meta",
+            "summary": "分析师MBI体验[[Muse]]约10天后清仓[[Airbnb]]、加仓[[Meta]]，认为AI智能体可绕过平台。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/009/375.htm",
+            "title_original": "下载体验了 Muse 后，我清仓了 Airbnb，加仓了 Meta",
+            "excerpt": "IT之家 10 月 3 日消息，9 月 29 日作客财经播客《The Synopsis》时，资深独立股票分析师 Mostly Borrowed Ideas（下文简称 MBI）表示： 在下载体验了 Muse 后，我清仓了 Airbnb，加仓了 Meta。 IT之家注：MBI 是独立分析师 Abdullah Al Rezwan 的笔名，他运营投资研究网站和 Substack 专栏 MBI Deep Dives，以跨行业的上市公司深度研究、投资日志和公开持仓讨论而知名。 在近期的访谈节目中，MBI 深入讨论 Meta 的 Muse AI 智能体，表示其测试 Muse 约 10 天后，认为 AI 智能体可能绕过 Airbnb 等平台直接完…",
+            "is_foreign": false
+          },
+          {
+            "title": "丘成桐新论文致谢GPT和Claude",
+            "summary": "[[丘成桐]]新论文致谢[[GPT]]和[[Claude]]，该问题44年前被列入其问题清单。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/10/499991.html",
+            "title_original": "丘成桐新论文致谢了GPT和Claude",
+            "excerpt": "44年前被亲自列入问题清单",
+            "is_foreign": false
+          },
+          {
+            "title": "MiniMax M3.1同题对标Opus 5.5",
+            "summary": "[[MiniMax M3.1]]与[[Opus 5.5]]同题交卷，表现超出预期。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1682850?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "和 Opus 5.5 同题交卷，MiniMax M3.1 让 Flash 开始超纲了",
+            "excerpt": "从智能的高度，到使用的广度 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek拥抱华为",
+            "summary": "[[DeepSeek]]在此时拥抱[[华为]]，被视为一次整体迁移而非简单适配。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8158082.html",
+            "title_original": "deepseek为什么要在此时拥抱华为？",
+            "excerpt": "这不是一次适配，这是一次搬家。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "宜家关闭三家小型门店",
+            "summary": "[[宜家]]关闭华盛顿特区、弗吉尼亚和马里兰三家小型规划订购店，其中一家开业不足一年。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/ikea-shutters-three-small-format-plan-and-order-stores/832021/",
+            "title_original": "Ikea to shutter 3 small-format plan and order stores",
+            "excerpt": "The retailer is closing locations in Washington, D.C., Virginia and Maryland, including one that opened less than a year ago, as it reevaluates its footprint.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "rehan-remade/universal-modder",
+            "url": "https://github.com/rehan-remade/universal-modder",
+            "intro": "让 AI 助手帮你给自己电脑上的游戏做模组，从找代码到做素材全包。",
+            "features": [
+              "自动识别游戏引擎和改法路线",
+              "用 AI 生成美术、3D 和音效素材",
+              "在运行中的游戏里测试模组效果",
+              "把经验记下来供下次复用"
+            ],
+            "guide": "需要先装好 Claude Code、Codex 等 AI 编程助手，再按对应方式安装插件；装完在游戏目录里启动助手即可。",
+            "steps": [
+              "先安装 Claude Code 或其他支持的 AI 助手",
+              "在 Claude Code 里执行 /plugin marketplace add rehan-remade/universal-modder",
+              "再执行 /plugin install universal-modder@universal-modder",
+              "在游戏目录中启动助手开始改模组"
+            ],
+            "install": "/plugin marketplace add rehan-remade/universal-modder",
+            "summary": "让 AI 助手帮你给自己电脑上的游戏做模组，从找代码到做素材全包。",
+            "source": "GitHub",
+            "stars": "2118",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
+            "is_foreign": true
+          },
+          {
+            "title": "mizorewww/laya-mlx",
+            "url": "https://github.com/mizorewww/laya-mlx",
+            "intro": "在苹果电脑上本地跑的小模型，专门做分类判断，不用联网也不生成文字。",
+            "features": [
+              "本地运行，不上传数据到云端",
+              "短判断只要十几毫秒",
+              "不生成文字，只输出选项结果",
+              "支持多语言版本"
+            ],
+            "guide": "需要苹果芯片的 Mac、Python 3.11 以上和 macOS 14 以上；用 pip 装好后写几行代码调用，首次运行会自动下载模型。",
+            "steps": [
+              "确认是 Apple Silicon 且 macOS 14+",
+              "安装 Python 3.11 或更高版本",
+              "执行 pip install laya-mlx",
+              "在代码里 load 模型并调用 predict"
+            ],
+            "install": "pip install laya-mlx",
+            "summary": "在苹果电脑上本地跑的小模型，专门做分类判断，不用联网也不生成文字。",
+            "source": "GitHub",
+            "stars": "6720",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Native MLX runtime for Laya typed decision models — 7–14 ms short decisions on M3 Max. No text generation, PyTorch, or cloud API.",
+            "is_foreign": true
+          },
+          {
+            "title": "jarun/nnn",
+            "url": "https://github.com/jarun/nnn",
+            "intro": "一个在终端里用的文件管理器，体积小、启动快，适合键盘操作。",
+            "features": [
+              "在命令行里浏览和管理文件",
+              "分析磁盘占用情况",
+              "批量重命名文件",
+              "用插件扩展预览、挂载等功能"
+            ],
+            "guide": "在 Linux、macOS、安卓 Termux 等系统的终端里安装即可使用，无需图形界面，几乎不用配置。",
+            "steps": [
+              "打开终端",
+              "按系统包管理器安装 nnn",
+              "输入 nnn 启动文件管理器"
+            ],
+            "install": "",
+            "summary": "一个在终端里用的文件管理器，体积小、启动快，适合键盘操作。",
+            "source": "GitHub",
+            "stars": "22032",
+            "language": "C",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "n³ The unorthodox terminal file manager",
+            "is_foreign": true
+          },
+          {
+            "title": "n8n-io/n8n",
+            "url": "https://github.com/n8n-io/n8n",
+            "intro": "把各种软件连起来自动干活的工具，还能搭 AI 流程，可自己部署。",
+            "features": [
+              "拖拽画布搭自动化流程",
+              "连接 1500 多个第三方服务",
+              "可接入多种 AI 模型不锁定厂商",
+              "能自己写代码扩展流程"
+            ],
+            "guide": "需要先装 Docker；用官方脚本或 Docker 命令启动后，浏览器打开本地 5678 端口就能用。",
+            "steps": [
+              "先安装 Docker",
+              "执行 curl -fsSL https://get.n8n.io | sh",
+              "浏览器访问 http://localhost:5678"
+            ],
+            "install": "curl -fsSL https://get.n8n.io | sh",
+            "summary": "把各种软件连起来自动干活的工具，还能搭 AI 流程，可自己部署。",
+            "source": "GitHub",
+            "stars": "206519",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+            "is_foreign": true
+          },
+          {
+            "title": "tensorflow/tensorflow",
+            "url": "https://github.com/tensorflow/tensorflow",
+            "intro": "谷歌开源的机器学习工具，用来训练和运行 AI 模型。",
+            "features": [
+              "搭建和训练神经网络模型",
+              "支持 Python 和 C++ 调用",
+              "可用 GPU 加速计算",
+              "提供大量现成工具和库"
+            ],
+            "guide": "需要先装 Python，用 pip 安装即可；想用显卡加速要额外配置 CUDA，也可以用 Docker 镜像。",
+            "steps": [
+              "安装 Python 环境",
+              "执行 pip install tensorflow",
+              "在代码中 import tensorflow 开始使用"
+            ],
+            "install": "pip install tensorflow",
+            "summary": "谷歌开源的机器学习工具，用来训练和运行 AI 模型。",
+            "source": "GitHub",
+            "stars": "200666",
+            "language": "C++",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An Open Source Machine Learning Framework for Everyone",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 帮你改游戏、做决策、管文件、连流程、跑模型。"
+      }
+    ]
+  }
+}
