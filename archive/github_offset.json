@@ -1,5 +1,5 @@
 {
-  "classic_offset": 6,
+  "classic_offset": 8,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-09-30T23:55:38.531402+00:00",
   "recent_trending": [
-    "alyssaxuu/screenity",
-    "jev-chat/jev-chat-jarvis",
-    "Player-YN/BrowserKitten",
     "feder-cr/aihawk_mcp_server",
     "mizorewww/laya-coreml",
     "Nanako0129/sepia",
@@ -174,12 +171,15 @@
     "Zettlr/Zettlr",
     "rehan-remade/universal-modder",
     "mizorewww/laya-mlx",
-    "jarun/nnn"
+    "jarun/nnn",
+    "kaankiziltug/logo-design-skill",
+    "jaredpalmer/kev",
+    "ActivityWatch/activitywatch"
   ],
-  "last_run_date": "2026-10-02",
+  "last_run_date": "2026-10-03",
   "last_classic": [
-    "n8n-io/n8n",
-    "tensorflow/tensorflow"
+    "ohmyzsh/ohmyzsh",
+    "Significant-Gravitas/AutoGPT"
   ],
-  "updated_at": "2026-10-02T23:55:35.979630+00:00"
+  "updated_at": "2026-10-03T23:58:50.697677+00:00"
 }

@@ -1,0 +1,301 @@
+{
+  "date": "2026-10-04",
+  "generated_at": "2026-10-03T23:59:01.610093+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 181,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-04",
+    "digest": "Anthropic 被曝密会宗教领袖讨论 AI 意识，奥尔特曼发声批评；Capcom 计划用 AI 加速游戏开发；喜力推出会留星标水印的酒杯。",
+    "keywords": [
+      "Anthropic",
+      "Claude",
+      "Capcom",
+      "喜力",
+      "DeepSeek"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Aleph-Alpha 新模型登 HuggingFace 热门榜",
+            "summary": "[[Aleph-Alpha]] 发布 [[Kolibri-1]] 模型，登上 HuggingFace 热门榜，获 243 个点赞。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+            "title_original": "Aleph-Alpha/Kolibri-1 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 238）**新发布**。类型 text-generation。likes 243，下载 0。标签：vllm、safetensors、kolibri1、reasoning、moe、text-generation。",
+            "is_foreign": true
+          },
+          {
+            "title": "Claude 发布 Opus 5.5 使用指南",
+            "summary": "[[Claude]] 官方博客发布 [[Opus 5.5]] 在 Claude 及 Claude Code 中的使用指南，HN 获 142 分。",
+            "source": "Hacker News",
+            "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
+            "title_original": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+            "excerpt": "Article URL: https://claude.dev/blog/getting-the-most-out-of-opus-5-5/ \n Comments URL: https://news.ycombinator.com/item?id=49946567 \n Points: 142 \n # Comments: 98",
+            "is_foreign": true
+          },
+          {
+            "title": "MIT 博士谈 RLM 与科研抱负",
+            "summary": "Latent Space 对话 [[MIT]] 博士 Alex Zhang，讨论 RLM 论文、读博经历及 harness 未来。",
+            "source": "Latent Space",
+            "url": "https://www.latent.space/p/rlm",
+            "title_original": "Academia is for Ambition — Alex Zhang, MIT",
+            "excerpt": "We catch up with RLM first author Alex Zhang, MIT PhD, on Jev, PhD masxing, and the future of harnesses.",
+            "is_foreign": true
+          },
+          {
+            "title": "Capcom 计划用 AI 加速游戏开发",
+            "summary": "[[Capcom]] 计划用 AI 加速游戏开发流程，此前曾称不会在游戏中使用 AI 生成内容。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2276597/capcom-plans-to-use-ai-to-speed-up-the-game-development-process/",
+            "title_original": "Capcom plans to use AI to speed up the game development process",
+            "excerpt": "The company previously said it won't use AI-generated content in its games.",
+            "is_foreign": true
+          },
+          {
+            "title": "可驻留短信的 AI 智能体盘点",
+            "summary": "TechCrunch 盘点可驻留短信的 AI 智能体，涵盖通用助手及面向家庭、旅行、工作的智能体。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/",
+            "title_original": "All the AI agents that can live in your text messages",
+            "excerpt": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "Anthropic 密会宗教领袖引奥尔特曼批评",
+            "summary": "[[Anthropic]] 被曝密会宗教领袖讨论 [[Claude]] 意识问题，[[OpenAI]] 奥尔特曼发帖批评该倾向。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/009/585.htm",
+            "title_original": "Anthropic 被曝密会宗教领袖讨论 Claude 意识问题，OpenAI 奥尔特曼发声批评",
+            "excerpt": "IT之家 10 月 4 日消息，OpenAI CEO 萨姆 · 奥尔特曼（Sam Altman）昨日在 X 上发帖，对将 AI 模型视为“宗教力量”的倾向表达了明确反对。 他表示：“对于人们试图赋予 AI 模型某种宗教力量、或是放弃人类自身判断力而转而依赖这些模型，我感到非常不安，并认为这是一个切实的安全问题。” 《纽约时报》10 月 2 日报道称，Anthropic 联合创始人克里斯 · 奥拉（Chris Olah）在过去一年中主导且参与了一系列与宗教领袖的私下会面，包括天主教、犹太教、锡克教、福音派基督教等，讨论的核心议题包括 AI 模型是否可能已经具备意识，以及如何将道德准则灌输到 AI 模型中。 据与会者透露，奥拉在会面中…",
+            "is_foreign": false
+          },
+          {
+            "title": "华为小艺帮帮忙智能体调整支持范围",
+            "summary": "[[华为]] 因业务调整，[[HarmonyOS]] 7.0 小艺帮帮忙智能体不再支持后续新增设备。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/009/516.htm",
+            "title_original": "华为 HarmonyOS 7.0 小艺帮帮忙智能体功能调整，将不再支持后续新增的设备",
+            "excerpt": "IT之家 10 月 3 日消息，小艺帮帮忙智能体是 HarmonyOS 6.0 上推出的探索性智能体。华为官网显示，因业务调整， 小艺帮帮忙智能体将不再支持后续新增的设备 。 据悉，小艺帮帮忙智能体是一个专注于应用操控的智能体，支持操控更多的场景，可在智能体对话列表页中找到小艺帮帮忙智能体，也可以在广场中搜索小艺帮帮忙来体验使用。 对于原 HarmonyOS 6.0 期间支持的设备，小艺帮帮忙智能体还可继续使用 ，用户的个人技能和定时计划任务在升级到 HarmonyOS 7.0 后仍可继续使用。 对于不支持小艺帮帮忙智能体的设备，无法通过数据克隆将智能体、个人技能、定时计划任务克隆到不支持的设备中。 IT之家附原 HarmonyO…",
+            "is_foreign": false
+          },
+          {
+            "title": "李飞飞谈世界模型",
+            "summary": "钛媒体发文称“世界模型”被用滥，聚焦 [[李飞飞]] 相关动向。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8158797.html",
+            "title_original": "李飞飞不等了",
+            "excerpt": "“世界模型”被用滥了。",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek 弹性计算团队扩招",
+            "summary": "[[DeepSeek]] 弹性计算团队大量扩招，尤其需要资深工程师，岗位 JD 附技术报告。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/10/501381.html",
+            "title_original": "DeepSeek扩招！弹性计算团队大量HC，尤其需要资深工程师",
+            "excerpt": "岗位JD甩了篇技术报告",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Litter Robot 不靠深折扣做 TikTok Shop",
+            "summary": "[[Whisker]] 借 TikTok Shop 以病毒式演示触达年轻消费者，坚持定价并合作小众创作者。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/how-litter-robot-is-doing-tiktok-shop-without-the-deep-discounts/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "How Litter Robot is doing TikTok Shop without the deep discounts",
+            "excerpt": "Whisker is using TikTok Shop to reach younger shoppers with its viral Litter Robot demos, while holding firm on pricing and working with niche content creators.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "喜力推出会留星标水印的酒杯",
+            "summary": "[[喜力]] 联合 NPK Design 设计星标玻璃杯，拿起后杯底在桌面留下五角星水印。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/378846.html",
+            "title_original": "喜力：看，我的酒杯会画画",
+            "excerpt": "视频 创新往往来自一个小细节的改变。 当人们拿起冰镇酒杯时，桌上就会多出一个水印。 一般人只是擦掉，喜力注意到这点，把它变成了品牌标志，希望人们看到时会想要把它带回家。 品牌联合荷兰设计工作室 NPK Design重新设计了一款星标玻璃杯。杯底饰以品牌最具辨识度的五角星标志，并贯穿整个杯身，杯底边缘会凝结水汽。当有人拿起杯子时，杯底会留下五角星水印。 看似简单的形状，制作起来却很困难。 据npk称，玻璃制造商最初认为这种形状无法大规模生产。设计师运用其模具工程方面的经验，制作出高度逼真的有机玻璃模型，并对其抓握力、稳定性、倾倒和饮用舒适度进行了测试，确定了最终形态。 喜力表示，这款酒杯的研发目的不仅仅是为了提升外观。它的高度和形状…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "kaankiziltug/logo-design-skill",
+            "url": "https://github.com/kaankiziltug/logo-design-skill",
+            "intro": "给 AI 助手装上一套做 Logo 的本事，从问需求到出成品图全包",
+            "features": [
+              "按专业流程一步步引导做出 Logo",
+              "内置 1400 多个真实 Logo 供参考",
+              "自动检查 Logo 在小尺寸下是否清晰",
+              "一键导出网站图标和手机应用图标"
+            ],
+            "guide": "这是给 Claude、Gemini CLI、Codex 等 AI 助手用的技能包，需要先有支持这类技能的 AI 工具，再按 README 的安装章节把技能装进去，之后在对话里调用即可。",
+            "steps": [
+              "先准备一个支持 Agent Skills 的 AI 工具",
+              "按 README 的 Install 章节安装该技能",
+              "在对话中调用技能开始设计 Logo"
+            ],
+            "install": "",
+            "summary": "给 AI 助手装上一套做 Logo 的本事，从问需求到出成品图全包",
+            "source": "GitHub",
+            "stars": "1697",
+            "language": "HTML",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library.",
+            "is_foreign": true
+          },
+          {
+            "title": "jaredpalmer/kev",
+            "url": "https://github.com/jaredpalmer/kev",
+            "intro": "能自己训练和运行的小型判断模型，专门回答是/否、选择题和打分",
+            "features": [
+              "一次请求同时回答是/否、选择题和打分",
+              "默认给出校准过的概率，结果更可信",
+              "四种大小可选，小到笔记本能跑",
+              "可用自己的标注数据继续训练"
+            ],
+            "guide": "需要 Python 环境，可先用浏览器在线试用，再按 README 下载预训练模型在本地跑；想自己训练则要准备标注数据，部署到服务器需要相应显卡。",
+            "steps": [
+              "先在浏览器打开 Hugging Face 上的演示试用",
+              "按 README 准备 Python 运行环境",
+              "下载 Kev-4B 等预训练模型权重",
+              "在本地启动服务并接入自己的程序"
+            ],
+            "install": "",
+            "summary": "能自己训练和运行的小型判断模型，专门回答是/否、选择题和打分",
+            "source": "GitHub",
+            "stars": "8369",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Jev-like family of decision models built on top of Qwen3.5/3.8 you can train and run on your own",
+            "is_foreign": true
+          },
+          {
+            "title": "ActivityWatch/activitywatch",
+            "url": "https://github.com/ActivityWatch/activitywatch",
+            "intro": "自动记录你一天在电脑上干了什么，数据只存在自己电脑里",
+            "features": [
+              "记录当前用的软件和窗口标题",
+              "记录浏览器标签页和网址",
+              "根据键鼠活动判断你是否离开",
+              "数据存本地，自己完全掌控"
+            ],
+            "guide": "去官网下载对应系统的安装包，装好后在本地运行，浏览器打开仪表盘就能看统计；数据保存在自己电脑上，不需要注册账号。",
+            "steps": [
+              "访问 activitywatch.net 下载对应系统安装包",
+              "安装并启动 ActivityWatch",
+              "打开本地仪表盘查看时间统计"
+            ],
+            "install": "",
+            "summary": "自动记录你一天在电脑上干了什么，数据只存在自己电脑里",
+            "source": "GitHub",
+            "stars": "19049",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The best free and open-source automated time tracker. Cross-platform, extensible, privacy-focused.",
+            "is_foreign": true
+          },
+          {
+            "title": "ohmyzsh/ohmyzsh",
+            "url": "https://github.com/ohmyzsh/ohmyzsh",
+            "intro": "给命令行终端换上一套好看又好用的配置，省去自己折腾",
+            "features": [
+              "内置 300 多个可选插件",
+              "提供 140 多款终端主题",
+              "社区维护，安装后自动更新",
+              "一条命令即可完成安装"
+            ],
+            "guide": "需要先有 zsh 和 curl 或 wget，在终端里跑一条安装命令即可，装完重启终端生效；适合经常用命令行的人。",
+            "steps": [
+              "确认系统已安装 zsh",
+              "在终端执行 README 中的安装脚本",
+              "重启终端后即可使用"
+            ],
+            "install": "",
+            "summary": "给命令行终端换上一套好看又好用的配置，省去自己折腾",
+            "source": "GitHub",
+            "stars": "190093",
+            "language": "Shell",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🙃 A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to…",
+            "is_foreign": true
+          },
+          {
+            "title": "Significant-Gravitas/AutoGPT",
+            "url": "https://github.com/Significant-Gravitas/AutoGPT",
+            "intro": "用大白话描述想做的事，AI 自己搭好流程并跑完给你结果",
+            "features": [
+              "用自然语言描述任务即可生成智能体",
+              "可视化拖拽搭建每一步流程",
+              "可定时或按触发条件自动运行",
+              "市场里有现成智能体可直接套用"
+            ],
+            "guide": "可以直接用官方托管版在线注册使用，也可以自己部署；自部署需要按 README 的 Self-host 章节准备环境，涉及 Python 等依赖。",
+            "steps": [
+              "访问 agpt.co 注册使用托管版",
+              "或按 README 的 Self-host 章节自部署",
+              "用大白话描述任务并运行智能体"
+            ],
+            "install": "",
+            "summary": "用大白话描述想做的事，AI 自己搭好流程并跑完给你结果",
+            "source": "GitHub",
+            "stars": "187643",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 帮你干活、管好时间、美化终端，普通人也能上手"
+      }
+    ]
+  }
+}
