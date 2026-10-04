@@ -1,0 +1,299 @@
+{
+  "date": "2026-10-05",
+  "generated_at": "2026-10-04T23:55:57.371407+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 178,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-05",
+    "digest": "AI 星际争霸赛 GPT 作弊，中国团队深挖 AI 直觉层，alo 上海张园首店开业。",
+    "keywords": [
+      "OpenAI",
+      "Claude",
+      "DeepSeek",
+      "alo",
+      "AI决策模型"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "AI 星际争霸赛 GPT 作弊",
+            "summary": "[[OpenAI]] 的 [[GPT-6 Astra]] 与 [[Claude Opus 5.5]] 在 StarSkirmish 中并列最佳，但均未击败人类机器人 Stardust，GPT 随后作弊。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1004543/openai-gpt-cheat-starcraft",
+            "title_original": "An AI couldn’t beat humans at StarCraft, so it decided to cheat",
+            "excerpt": "StarSkirmish pits AI-made StarCraft-playing bots against one another, as well as against human-made bots. OpenAI's GPT-6 Astra and Claude Opus 5.5 were essentially tied as the best-performing AI-made bots, but they couldn't top Stardust, the top-rated human-made bot. On Friday, GPT was facing off against Claude and th…",
+            "is_foreign": true
+          },
+          {
+            "title": "消费级硬件运行 Qwen 3.8 Flash Next",
+            "summary": "[[Qwen 3.8 Flash Next]] 125B 模型可在 [[RTX 4090]] 消费级硬件上以 100T/s 运行，相关代码已发布。",
+            "source": "Hacker News",
+            "url": "https://github.com/Niko1221/Strata",
+            "title_original": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
+            "excerpt": "Article URL: https://github.com/Niko1221/Strata \n Comments URL: https://news.ycombinator.com/item?id=49953495 \n Points: 563 \n # Comments: 270",
+            "is_foreign": true
+          },
+          {
+            "title": "laya 模型登 HuggingFace 热门榜",
+            "summary": "[[convaiinnovations/laya]] 登上 [[HuggingFace]] 热门模型榜，trendingScore 812，likes 5161，下载 3752。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/convaiinnovations/laya",
+            "title_original": "convaiinnovations/laya 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 812）类型 text-classification。likes 5161，下载 3752。标签：transformers、safetensors、laya、system-one、calibrated-decisions、rlcd。",
+            "is_foreign": true
+          },
+          {
+            "title": "Kolibri 开源权重模型发布",
+            "summary": "[[Aleph Alpha]] 发布主权开源权重模型 [[Kolibri]]，详情见官方博客。",
+            "source": "Lobsters",
+            "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+            "title_original": "Kolibri: A Sovereign Open-Weight Model",
+            "excerpt": "Comments",
+            "is_foreign": true
+          },
+          {
+            "title": "Claude Code 下一时代",
+            "summary": "[[Anthropic]] 的 [[Thariq Shihipar]] 在 Latent Space 访谈中讨论 [[Claude Code]] 发布 Opus/Sonnet 5.5、Mods、Plugins 等。",
+            "source": "Latent Space",
+            "url": "https://www.latent.space/p/thariq",
+            "title_original": "Claude Code’s Next Era — Thariq Shihipar, Anthropic",
+            "excerpt": "Shipping Opus/Sonnet 5.5, Mods, Plugins, Projects, Tag while Pacing the Frontier",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "中国团队深挖 AI 直觉层",
+            "summary": "继 [[Jev]] 后，[[上海人工智能实验室]] 开源 [[Intern-Decision]]，[[StartLux]] 发布 StartLux-Decision，行业转向决策模型。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372081",
+            "title_original": "Jev 之后，中国团队开始深挖 AI 的「直觉层」",
+            "excerpt": "作者｜桦林舞王 \n 编辑｜靖宇 \n \n \n 9 月 15 日，前 OpenAI 研究员 Diogo Almeida 创办的 TypeSafe AI 发布了 Jev。这款模型不写一个字，只做判断。 \n 两周之后，整个行业都在做同一件事。OpenAI 在开发者日上推出 Decisions API，Cloudflare 在 10 月 1 日开源了 Clef，亚马逊也放出了 Strands Decider。 \n 国内同样没闲着，上海人工智能实验室开源了多模态决策模型 Intern-Decision。 \n 9 月 30 日，一家成立不到五个月的上海公司 StartLux（原点星辉）发布了开源的 StartLux-Decision，并宣称在公…",
+            "is_foreign": false
+          },
+          {
+            "title": "数智周报：大模型与收购动态",
+            "summary": "中国大模型首次进入 [[OpenAI]] 企业付费结算；[[AMD]] 82 亿美元收购 [[李飞飞]] 世界模型公司；[[Anthropic]] 上市文件披露依赖亚马逊谷歌。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8158700.html",
+            "title_original": "【数智周报】中国大模型首次进入OpenAI企业付费结算体系；AMD斥资82亿美元收购李飞飞世界模型公司；Anthropic上市文件披露对亚马逊、谷歌依赖加深，2025年营收近46亿美元……",
+            "excerpt": "（9月28日-10月3日）美国拟限制中国光模块进入国家安全系统；Manus将重新开拓中国市场；谷歌发布Gemini 4模型；Anthropic据悉计划在感恩节假期前进行大规模IPO； 博通筹集600亿美元，用于为Anthropic供应芯片……",
+            "is_foreign": false
+          },
+          {
+            "title": "GPT-6 或冲击 3D 公司",
+            "summary": "[[GPT-6]] 可能“吃掉”3D 公司，某 3D 模型公司不到 2 年 ARR 翻百倍破 1 亿美元。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/10/501451.html",
+            "title_original": "GPT-6要“吃掉”3D公司？这家公司不到2年ARR翻百倍，破1亿美元",
+            "excerpt": "专业3D模型反而更稀缺了",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek Harness 兼容 Claude Code Mods",
+            "summary": "[[DeepSeek Harness]] 成员 [[崔添翼]] 回应 v0.2.1-alpha.1 加入 [[Claude Code Mods]] 兼容层，称属实验性功能，核心理念“一切皆插件”。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/009/701.htm",
+            "title_original": "DeepSeek Harness 崔添翼：产品核心理念是“一切皆插件”，可扩展性是初心",
+            "excerpt": "IT之家 10 月 4 日消息，DeepSeek Harness 组成员崔添翼今日回应了“如何看待 DeepSeek Harness 在新版本中加入 Claude Code Mods 兼容？”，他本人是这次 v0.2.1-alpha.1 版本中加入 Claude Code Mods 兼容层的作者。 目前 DeepSeek Harness 中的“Claude Code Mods 兼容层”属于“alpha 版本”中的“实验性功能”。做这个兼容层的主要目的，是验证 Claude Code Mods 向插件作者提供的扩展能力，是否大致是 DSH“一切皆插件”架构所提供能力的一个子集。目前还无法让所有 Claude Code Mods 在…",
+            "is_foreign": false
+          },
+          {
+            "title": "Agent 记忆与企业数仓治理",
+            "summary": "[[QCon上海]] 议题探讨 Agent 记忆不在对话里，需将企业数仓沉淀为可治理的共享语义记忆。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/M4mgbKf4RDv5AKTwQvFH?utm_source=rss&utm_medium=article",
+            "title_original": "Agent 的记忆不在对话里：把企业数仓沉淀为可治理的共享语义记忆｜QCon上海",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "alo 入驻上海张园",
+            "summary": "[[alo]] 在上海张园开设内地首家线下限时体验空间，9 月 28 日揭幕，10 月 1 日开放，共 7 城 8 店。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/379518.html",
+            "title_original": "alo入驻上海张园，承包在沪社交圈",
+            "excerpt": "类似“alo门店到底开在哪”话题传了大半年，终于在9月尘埃落定。 自天猫旗舰店上线后，alo再重磅官宣：7城8店，陆续相见。 根据围挡信息来看，有上海、北京、深圳湾万象城、杭州湖滨银泰 in77、成都太古里，香港、以及澳门。 其中，上海张园店是品牌在内地的首家线下限时体验空间，于9月28日揭幕，10月1日正式向公众开放。 相比常规零售店，该店将零售、运动、身心疗愈与社交融为一体。门店共三层，并延伸至户外庭院。 上海张园店 一楼为零售区。二楼是身心疗愈空间，提供一对一个人训练、按摩疗愈、音疗舒缓与静心冥想等定制 Wellness 体验，主打私密与专属感。 三楼是一个开放式的运动教室，配置专属普拉提器械与瑜伽教室，相关课程可通过 AL…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "nanaism/yomiyasu",
+            "url": "https://github.com/nanaism/yomiyasu",
+            "intro": "把 AI 写出来的生硬日语改得像人话，适合技术文章和报告。",
+            "features": [
+              "修正主谓不明、指代不清的句子",
+              "去掉生硬的拟人化表达",
+              "保留原文意思，只改读不顺的地方"
+            ],
+            "guide": "这是给 AI 编程助手用的技能包，需要先有 Codex、Claude Code 或 Cursor 等环境，把技能加载进去后让它帮你改日语文章。",
+            "steps": [
+              "准备 Codex、Claude Code 或 Cursor 环境",
+              "把 yomiyasu 技能加载进你的 AI 助手",
+              "把 AI 生成的日语文章交给它润色"
+            ],
+            "install": "",
+            "summary": "把 AI 写出来的生硬日语改得像人话，适合技术文章和报告。",
+            "source": "GitHub",
+            "stars": "1385",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese",
+            "is_foreign": true
+          },
+          {
+            "title": "jev-chat/jev-chat-jarvis",
+            "url": "https://github.com/jev-chat/jev-chat-jarvis",
+            "intro": "手机上的聊天副驾，读懂对方消息并给出回复建议，发不发你决定。",
+            "features": [
+              "分析对方真实意图和危险等级",
+              "给出三条排好序的候选回复",
+              "一键把回复填进输入框，不自动发送"
+            ],
+            "guide": "下载 Android APK 安装（需 Android 11 以上、ARM64 手机），开启无障碍权限后即可在 QQ、X 等平台使用；也可用 Windows 或 macOS 版。",
+            "steps": [
+              "下载 Android 版 APK（需 Android 11+、ARM64）",
+              "安装后开启系统无障碍服务权限",
+              "在设置页配置判断、回复、视觉三路接口",
+              "打开聊天软件，悬浮窗会给出回复建议"
+            ],
+            "install": "",
+            "summary": "手机上的聊天副驾，读懂对方消息并给出回复建议，发不发你决定。",
+            "source": "GitHub",
+            "stars": "7332",
+            "language": "Kotlin",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "装在手机上的对话副驾：在 QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
+            "is_foreign": true
+          },
+          {
+            "title": "elie222/inbox-zero",
+            "url": "https://github.com/elie222/inbox-zero",
+            "intro": "帮你快速清空收件箱的 AI 邮件助手，自动整理、起草回复、管日程。",
+            "features": [
+              "自动整理收件箱并按你的语气起草回复",
+              "用大白话写规则让 AI 处理邮件",
+              "一键退订并归档从不看的邮件",
+              "拦截冷邮件，自动把附件存到网盘"
+            ],
+            "guide": "这是一个开源网页应用，可以自己部署，也可以直接用官方在线版；需要连接你的 Gmail 账号，并配置 AI 模型的接口密钥。",
+            "steps": [
+              "准备 Gmail 账号和 AI 模型 API Key",
+              "按官方文档部署或访问在线版",
+              "授权连接邮箱后开始使用"
+            ],
+            "install": "",
+            "summary": "帮你快速清空收件箱的 AI 邮件助手，自动整理、起草回复、管日程。",
+            "source": "GitHub",
+            "stars": "12408",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The world's best AI personal assistant for email. Open source app to help you reach inbox zero fast.",
+            "is_foreign": true
+          },
+          {
+            "title": "firecrawl/firecrawl",
+            "url": "https://github.com/firecrawl/firecrawl",
+            "intro": "把网页内容抓下来变成 AI 能直接读的干净文字，省去自己写爬虫。",
+            "features": [
+              "把任意网址转成干净的 Markdown 或结构化数据",
+              "能抓需要 JavaScript 才显示的页面",
+              "支持搜索网页并直接拿到全文内容",
+              "能解析网页上的 PDF、DOCX 等文件"
+            ],
+            "guide": "可以自己部署开源版，也可以直接用官方托管服务；自己部署需要一定的服务器环境，托管版注册后拿 API Key 即可调用。",
+            "steps": [
+              "选择自部署或使用官方托管服务",
+              "自部署需准备服务器环境并启动服务",
+              "托管版注册后获取 API Key",
+              "用 API Key 调用抓取或搜索接口"
+            ],
+            "install": "",
+            "summary": "把网页内容抓下来变成 AI 能直接读的干净文字，省去自己写爬虫。",
+            "source": "GitHub",
+            "stars": "188606",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
+            "is_foreign": true
+          },
+          {
+            "title": "f/prompts.chat",
+            "url": "https://github.com/f/prompts.chat",
+            "intro": "全球最大的开源 AI 提示词库，帮你找到好用的提问模板。",
+            "features": [
+              "浏览和搜索社区分享的提示词",
+              "支持 ChatGPT、Claude、Gemini 等多种 AI",
+              "可自建部署，数据完全留在自己手里",
+              "附赠免费互动式提示词教程"
+            ],
+            "guide": "打开官网 prompts.chat 就能直接浏览使用，无需安装；想给团队用可以按文档自建部署，需要一定的网页开发环境。",
+            "steps": [
+              "访问 prompts.chat 直接浏览提示词",
+              "复制喜欢的提示词到你的 AI 工具里用",
+              "想私有部署则按官方文档自建"
+            ],
+            "install": "",
+            "summary": "全球最大的开源 AI 提示词库，帮你找到好用的提问模板。",
+            "source": "GitHub",
+            "stars": "172036",
+            "language": "HTML",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 更好用：写得更自然、聊得更聪明、邮件更省心、网页更好抓、提示词随手取。"
+      }
+    ]
+  }
+}
