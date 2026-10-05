@@ -1,0 +1,300 @@
+{
+  "date": "2026-10-06",
+  "generated_at": "2026-10-05T23:55:43.356598+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 241,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-06",
+    "digest": "Instinct 将 AI 代理引入群聊，TikTok 上线 AI 购物助手，丰田与五十铃发布新款氢燃料电池巴士。",
+    "keywords": [
+      "Instinct",
+      "TikTok",
+      "Gemini",
+      "丰田",
+      "Gap"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Instinct 将 AI 代理引入群聊",
+            "summary": "[[Instinct]] 推出群聊功能，好友无需账号即可共同使用 AI 代理规划旅行、拼车和协调活动，个人账户保持独立。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/10/05/instinct-brings-its-ai-agent-to-group-chats-even-for-friends-without-an-account/",
+            "title_original": "Instinct brings its AI agent to group chats, even for friends without an account",
+            "excerpt": "Instinct is launching group chats that let friends use its AI agent together for tasks like planning trips, organizing carpools, and coordinating events. The company says personal accounts remain separate, with permission required before personal agents share information or take action.",
+            "is_foreign": true
+          },
+          {
+            "title": "TikTok 推出 AI 购物助手与一键结账",
+            "summary": "[[TikTok]] 上线 AI 购物助手 Shopping Assistant，以对话式代理帮助用户发现和购买商品，并推出一键结账功能。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/10/05/tiktok-rolls-out-an-ai-shopping-assistant-and-one-click-checkout/",
+            "title_original": "TikTok rolls out an AI shopping assistant and one-click checkout",
+            "excerpt": "TikTok describes its new Shopping Assistant as a conversational AI agent designed to help users discover and purchase products.",
+            "is_foreign": true
+          },
+          {
+            "title": "TaichuAI 模型登上 HuggingFace 热门榜",
+            "summary": "[[TaichuAI]] 的 ZDTaichu5.0-9B 模型登上 [[HuggingFace]] 热门模型榜，获 2867 个赞、12782 次下载，支持图像文本输入与空间推理。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/TaichuAI/ZDTaichu5.0-9B",
+            "title_original": "TaichuAI/ZDTaichu5.0-9B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 208）类型 image-text-to-text。likes 2867，下载 12782。标签：safetensors、zdtaichu5_0、multimodal、vision-language-model、spatial-reasoning、agent。",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini 或支持代拨私人电话",
+            "summary": "[[Google]] 的 [[Gemini]] Call for Me 功能或扩展至私人通话，APK 拆解发现“Gemini Calling”界面，示例包括通知家人迟到。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1005177/google-gemini-call-for-me-expansion-rumors",
+            "title_original": "Gemini Call for Me might tell your mom you’re running late",
+            "excerpt": "Google may be expanding its \"Call for Me\" AI feature beyond business calls so you can use it to send messages to friends and family. Android Authority reports finding a \"Gemini Calling\" introductory screen in an APK teardown with examples that include \"Call Mom and tell her I will be 15 minutes late\" and \"Call […]",
+            "is_foreign": true
+          },
+          {
+            "title": "Dust 提出无反向传播预训练方法",
+            "summary": "qlabs 发布研究 Dust，提出无需反向传播即可预训练 Transformer 模型，在 Hacker News 获 74 分。",
+            "source": "Hacker News",
+            "url": "https://qlabs.sh/research/dust",
+            "title_original": "Dust: Pretraining Transformers Without Backpropagation",
+            "excerpt": "Article URL: https://qlabs.sh/research/dust \n Comments URL: https://news.ycombinator.com/item?id=49970871 \n Points: 74 \n # Comments: 5",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "丰田五十铃推出新款 Sora 氢燃料电池巴士",
+            "summary": "[[丰田]] 联合 [[五十铃]] 推出新款 Sora 氢燃料电池巴士，续航超 300 公里，较老款提升约 100 公里，由五十铃底盘搭载丰田燃料电池系统。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/009/919.htm",
+            "title_original": "丰田联合五十铃推出新款 Sora 氢燃料电池巴士，续航突破 300 公里",
+            "excerpt": "IT之家 10 月 6 日消息，丰田汽车于当地时间周一宣布，将推出新款 Sora 氢燃料电池巴士，续航里程超过 300 公里，相比老款车型提升约 100 公里。 据IT之家了解，丰田从 2018 年开始投放 Sora 巴士。新款车型由丰田与五十铃汽车联合开发，采用五十铃研发的巴士底盘平台，搭载丰田的燃料电池系统。 新款巴士同时使用燃料电池系统以及大容量电池，在实现更长续航的同时改善了车辆的使用性能。车内增设便于固定轮椅的装置，并且配备了最新的安全设备。燃料电池系统与氢气储罐布置在车顶，方便开展车辆维护作业。 五十铃同样在周一对外表示，将开始销售旗下首款燃料电池巴士 Erga FCV。这款巴士将由五十铃与日野汽车的合资企业 J‑Bu…",
+            "is_foreign": false
+          },
+          {
+            "title": "谷歌有望升级 Call for Me 支持私人通话",
+            "summary": "[[谷歌]] 有望将 [[Gemini]] 的 Call for Me 功能从商户电话扩展至亲友私人通话，已在 Pixel 11 系列推出。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/009/921.htm",
+            "title_original": "谷歌有望升级 Call for Me 功能：Gemini 将支持代用户拨打私人亲友电话",
+            "excerpt": "IT之家 10 月 6 日消息，有多少通电话，仅仅因为要跟其他人沟通实在太过麻烦，你就一拖再拖？人工智能早已承诺，会帮我们把生活里大量费力不讨好的杂事实现自动化。对于一部分人来说，其中最有吸引力的设想或许就是由 AI 替我们打电话。谷歌刚刚在 Pixel 11 系列手机上推出了“代我通话（Call for Me）”功能，而现在有迹象表明，这项功能可能将迎来一次重大功能拓展。 据IT之家了解，目前的代我通话专门设计用于拨打各类商户电话，它可以耐心听着等待接通的背景音乐，协助完成预约之类的事务。 听上去很不错，不过这项功能的适用范围还相当有限。既然 Gemini 属于通用大语言模型，何不进一步放开能力，把代我通话拓展，支持拨打亲友的私…",
+            "is_foreign": false
+          },
+          {
+            "title": "硅谷 AI 开源趋势观察",
+            "summary": "钛媒体发文称硅谷 AI 正在开源，大模型竞争从“哪家强”转向“哪家合适”。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8159477.html",
+            "title_original": "硅谷AI，正在开源",
+            "excerpt": "大模型从哪家强到哪家合适的转变。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Gap 推出 AI 辅助购物",
+            "summary": "[[Gap]] 上线 AI 辅助购物，客户可从 Alta Daily 和 Daydream 平台获取推荐，[[Banana Republic]] 和 [[Old Navy]] 同步推出对话式购物代理。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/gap-ai-assisted-shopping-three-decades-after-website/832070/",
+            "title_original": "Gap unveils AI-assisted shopping, three decades after its first website",
+            "excerpt": "Starting Monday, customers can get recommendations from the Alta Daily and Daydream platforms. Banana Republic and Old Navy are also launching conversational shopping agents.",
+            "is_foreign": true
+          },
+          {
+            "title": "AI 时代定价策略受审视",
+            "summary": "数字货架标签和定价算法截图引发消费者担忧，[[Walmart]] 和 [[McDonald's]] 等零售商因动态定价面临质疑。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/pricing-tactics-come-under-scrutiny-in-the-age-of-ai/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Pricing tactics come under scrutiny in the age of AI",
+            "excerpt": "Everything from the rise of digital shelf labels to screenshots of pricing algorithms is fueling concerns among consumers that retailers are increasingly using customer data to engage in dynamic pricing, and it is putting more retailers like Walmart and McDonald's on the defensive.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "播官宣卢昱晓为品牌大使",
+            "summary": "服饰品牌 [[播 broadcast]] 官宣演员 [[卢昱晓]] 为品牌大使，与 [[NOWNESS]] 合作推出 2026 冬季品牌大片《挥动季候风·故乡》。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/378860.html",
+            "title_original": "播×卢昱晓：挥动季候风",
+            "excerpt": "最近，播 broadcast 官宣演员卢昱晓成为品牌大使，并与 NOWNESS 共同带来 2026 冬季品牌大片《挥动季候风·故乡》。 从春夏的 《风辞典》 到秋冬的《挥动季候风》，这一年，播好像一直在追着“风”走的——春天的风，藏着南方潮湿的空气、旧屋窗缝和个人记忆；到了冬天，风从故乡吹来，也引出了另一个问题： 当人离开故乡，那些曾经裹挟着她的风，吹向了哪里？ 《挥动季候风·故乡》 文案 房间把风缩得很小。 那时候我还不知道， 画画并不真的从白纸开始。 我从小熟悉的光线和冷暖， 还有人与人相处的距离， 早在落笔以前， 就成了我看世界的方式。 风大时，纸页被轻轻掀起， 线条偶尔偏离。 我不急着纠正。 有些偏离， 本来就是画的一部分…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "storytold/photocraft",
+            "url": "https://github.com/storytold/photocraft",
+            "intro": "一个开源免费的修图软件，界面和快捷键都照着 Photoshop 来，不用联网也能用。",
+            "features": [
+              "支持图层、蒙版、调整图层等修图功能",
+              "能打开、编辑并保存真正的 PSD 文件",
+              "菜单和快捷键与 Photoshop 一致，上手快",
+              "本地运行，不联网，作品留在自己电脑上"
+            ],
+            "guide": "这是装在电脑上的原生软件，不是网页版。README 里没有给出安装命令，具体下载和安装方式需要到官网 getartcraft.com 查看。",
+            "steps": [
+              "前往官网 getartcraft.com 查看下载方式",
+              "下载对应系统的安装包并安装",
+              "打开软件即可开始修图"
+            ],
+            "install": "",
+            "summary": "一个开源免费的修图软件，界面和快捷键都照着 Photoshop 来，不用联网也能用。",
+            "source": "GitHub",
+            "stars": "2042",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "An open-source, clean-room reimplementation of Adobe Photoshop in pure Rust",
+            "is_foreign": true
+          },
+          {
+            "title": "alyssaxuu/screenity",
+            "url": "https://github.com/alyssaxuu/screenity",
+            "intro": "一个免费、不限时长的录屏工具，装在浏览器里，录完还能直接在屏幕上画标注。",
+            "features": [
+              "不限时长录制屏幕、标签页、摄像头",
+              "可录麦克风或电脑内部声音",
+              "录制时能在画面上画箭头、加文字",
+              "支持 AI 摄像头背景虚化或替换"
+            ],
+            "guide": "它是一款浏览器扩展，装好后在浏览器里点开就能录，不用装 Node 或 Docker。README 里没有给出安装命令，需从浏览器扩展商店或官网获取。",
+            "steps": [
+              "从浏览器扩展商店或官网安装 Screenity",
+              "在浏览器中打开扩展并选择录制范围",
+              "开始录制，录完可直接编辑导出"
+            ],
+            "install": "",
+            "summary": "一个免费、不限时长的录屏工具，装在浏览器里，录完还能直接在屏幕上画标注。",
+            "source": "GitHub",
+            "stars": "18751",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The free and privacy-friendly screen recorder with no limits 🎥",
+            "is_foreign": true
+          },
+          {
+            "title": "mrkai77/Loop",
+            "url": "https://github.com/mrkai77/Loop",
+            "intro": "一款让 Mac 窗口摆放变简单的工具，按住一个键拖动鼠标就能移动和调整窗口大小。",
+            "features": [
+              "按住触发键拖动鼠标即可调整窗口",
+              "调整前可先预览窗口最终位置",
+              "可自定义快捷键和配色主题",
+              "把窗口藏到屏幕边缘，随时唤出"
+            ],
+            "guide": "这是 macOS 应用，需要 macOS 13 或更高版本。README 里没有给出安装命令，需从项目页面下载安装包。",
+            "steps": [
+              "确认电脑系统为 macOS 13 或更高版本",
+              "从项目页面下载 Loop 安装包",
+              "安装后打开，按住触发键拖动鼠标调整窗口"
+            ],
+            "install": "",
+            "summary": "一款让 Mac 窗口摆放变简单的工具，按住一个键拖动鼠标就能移动和调整窗口大小。",
+            "source": "GitHub",
+            "stars": "11718",
+            "language": "Swift",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Window management made elegant.",
+            "is_foreign": true
+          },
+          {
+            "title": "huggingface/transformers",
+            "url": "https://github.com/huggingface/transformers",
+            "intro": "一个让开发者方便调用各种 AI 模型的工具库，文字、图片、语音模型都能用同一套方式加载。",
+            "features": [
+              "用统一方式加载文字、图像、语音等模型",
+              "可在线获取上百万个现成模型",
+              "既能用来跑模型，也能用来训练模型",
+              "兼容多种主流训练和推理工具"
+            ],
+            "guide": "需要先装 Python 3.10 以上和 PyTorch 2.5 以上，建议用虚拟环境。README 给出的第一步是创建虚拟环境，之后用 pip 安装。",
+            "steps": [
+              "先安装 Python 3.10+ 和 PyTorch 2.5+",
+              "python -m venv .my-env",
+              "激活虚拟环境后安装 transformers"
+            ],
+            "install": "python -m venv .my-env",
+            "summary": "一个让开发者方便调用各种 AI 模型的工具库，文字、图片、语音模型都能用同一套方式加载。",
+            "source": "GitHub",
+            "stars": "166982",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+            "is_foreign": true
+          },
+          {
+            "title": "AUTOMATIC1111/stable-diffusion-webui",
+            "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+            "intro": "一个在浏览器里用文字生成图片的界面，把 AI 画图工具做成了网页操作面板。",
+            "features": [
+              "输入文字生成图片，也能拿图片改图片",
+              "支持扩图、局部重绘和草图上色",
+              "可放大图片、修复人脸等后期处理",
+              "用括号语法控制提示词里各部分的权重"
+            ],
+            "guide": "需要在电脑上先装好 Python 和 Git，然后运行一键安装脚本，装好后在浏览器里打开使用。README 提到有一键安装运行脚本。",
+            "steps": [
+              "先安装 Python 和 Git",
+              "运行项目提供的一键安装运行脚本",
+              "在浏览器中打开界面开始生成图片"
+            ],
+            "install": "",
+            "summary": "一个在浏览器里用文字生成图片的界面，把 AI 画图工具做成了网页操作面板。",
+            "source": "GitHub",
+            "stars": "165195",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Stable Diffusion web UI",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从修图、录屏到跑 AI 模型，让普通人也能上手用的开源工具"
+      }
+    ]
+  }
+}
