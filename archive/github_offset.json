@@ -1,5 +1,5 @@
 {
-  "classic_offset": 12,
+  "classic_offset": 14,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-09-30T23:55:38.531402+00:00",
   "recent_trending": [
-    "rowboatlabs/rowboat",
-    "mikehasa/golive-skill",
-    "lnkiai/m3e-canvas",
     "omnivore-app/omnivore",
     "kryvora-network/kryvora-node",
     "Vincentwei1021/anything2explainer",
@@ -174,12 +171,15 @@
     "elie222/inbox-zero",
     "storytold/photocraft",
     "alyssaxuu/screenity",
-    "mrkai77/Loop"
+    "mrkai77/Loop",
+    "omlahore/RemoveMacAI",
+    "NandhaKishorM/laya",
+    "feder-cr/invisible_playwright_mcp"
   ],
-  "last_run_date": "2026-10-05",
+  "last_run_date": "2026-10-06",
   "last_classic": [
-    "huggingface/transformers",
-    "AUTOMATIC1111/stable-diffusion-webui"
+    "Snailclimb/JavaGuide",
+    "langgenius/dify"
   ],
-  "updated_at": "2026-10-05T23:55:32.024828+00:00"
+  "updated_at": "2026-10-06T23:55:37.416879+00:00"
 }

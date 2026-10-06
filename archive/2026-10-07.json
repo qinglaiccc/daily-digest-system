@@ -1,0 +1,310 @@
+{
+  "date": "2026-10-07",
+  "generated_at": "2026-10-06T23:55:49.371999+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 278,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-07",
+    "digest": "Mistral发布万亿参数大模型，华为昇腾中国份额反超英伟达，谷歌推出端侧多模态嵌入模型。",
+    "keywords": [
+      "Mistral",
+      "昇腾",
+      "EmbeddingGemma",
+      "世界模型",
+      "TikTokShop"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Mistral Large 4 引发基准测试讨论",
+            "summary": "[[Mistral Large 4]] 发布后，社区讨论基准测试已饱和，并用 [[Claude]] 与 [[GPT]] 生成火星犰狳 SVG 作调侃。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Oct/6/hn-49982139/",
+            "title_original": "Mistral Large 4",
+            "excerpt": "My comment on Mistral Large 4 — Hacker News. \n wren6991 : The benchmark is saturated. Frontier models are tested with an armadillo in fishnet tights jaywalking on Mars. \n \n OK well I couldn't resist this one: \n llm -m claude-opus-5.5 'Generate an SVG of an armadillo in fishnet tights jaywalking on Mars'\nllm -m gpt-6.1…",
+            "is_foreign": true
+          },
+          {
+            "title": "Mistral 发布万亿参数模型预览版",
+            "summary": "[[Mistral]] 发布 [[Mistral Large 4]] 预览版，1万亿总参数、490亿激活参数，基于3800块 [[NVIDIA]] Grace Blackwell GPU 训练。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Oct/6/le-chonk/",
+            "title_original": "Introducing Mistral Large 4: Le chonk",
+            "excerpt": "Introducing Mistral Large 4: Le chonk \nMistral are back in the game. Today they're releasing a preview of Mistral Large 4, a 1 trillion parameter, 49 billion active parameter model trained on their own cluster of 3,800 NVIDIA Grace Blackwell GPUs. \n The preview is available via their API. They promise to release the o…",
+            "is_foreign": true
+          },
+          {
+            "title": "Claude Code 建议消息功能分析",
+            "summary": "一篇分析文章认为 [[Claude Code]] 的建议消息功能，真正服务对象是模型本身，该帖获66分、34条评论。",
+            "source": "Hacker News",
+            "url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
+            "title_original": "Claude Code’s suggested message feature: I think the real customer is the model",
+            "excerpt": "Article URL: https://www.zohaib.cc/blog/smartest-claude-code-feature \n Comments URL: https://news.ycombinator.com/item?id=49981905 \n Points: 66 \n # Comments: 34",
+            "is_foreign": true
+          },
+          {
+            "title": "Mirror Particle 构建人类行为世界模型",
+            "summary": "[[Mirror Particle]] 将在 TechCrunch Disrupt 亮相，从零构建预测人类行为的 [[世界模型]]，认为 LLM 角色扮演不适合市场研究。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/10/06/mirror-particle-is-building-a-world-model-of-human-behavior/",
+            "title_original": "Mirror Particle is building a ‘world model’ of human behavior",
+            "excerpt": "Mirror Particle will launch at TechCrunch Disrupt's Startup Battlefield 200 with a world model built from scratch to predict human behavior, arguing that LLM role-play falls short for market research and brand strategy.",
+            "is_foreign": true
+          },
+          {
+            "title": "JEV-27B-VL 登 HuggingFace 热门榜",
+            "summary": "[[autotrust]] 的 [[JEV-27B-VL]] 登上 HuggingFace 热门模型榜，trendingScore 788，获974赞、152万次下载。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/autotrust/JEV-27B-VL",
+            "title_original": "autotrust/JEV-27B-VL 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 788）类型 image-text-to-text。likes 974，下载 1525286。标签：transformers、safetensors、qwen3_5、image-text-to-text、jev、system-one。",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "谷歌推出 EmbeddingGemma 2",
+            "summary": "[[谷歌]] 推出 [[EmbeddingGemma 2]]，7.4亿参数、支持多模态，量化后手机端运行仅需191MB内存，采用 Apache 2.0 许可。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/010/125.htm",
+            "title_original": "谷歌推出 EmbeddingGemma 2：支持多模态、7.4 亿参数量化手机端运行只需 191MB 内存",
+            "excerpt": "IT之家 10 月 7 日消息，去年谷歌推出了 EmbeddingGemma，为开发者提供轻量高质量的文本嵌入方案，下载量已超 2000 万次，广泛应用于端侧搜索工具和隐私优先检索增强生成（ RAG ）管线。 如今谷歌正式推出 EmbeddingGemma 2 ，将能力从文本扩展到代码、图像、视频、音频，可将这些内容统一映射到同一个嵌入空间。 IT之家援引博文介绍，该模型基于 Gemma 4 架构开发，采用商业友好的 Apache 2.0 许可发布，总参数为 7.4 亿，非常适合端侧推理。 EmbeddingGemma 2 基于 Gemini 嵌入模型同源技术打造，具备多项核心优势： 同尺寸顶尖性能：在子 1B 参数多模态嵌入模型…",
+            "is_foreign": false
+          },
+          {
+            "title": "Mistral 发布 Mistral Large 4 预览版",
+            "summary": "[[Mistral AI]] 发布 [[Mistral Large 4]] 公开预览版，1万亿总参数、490亿激活参数，权重本月底开放，正进行红队测试。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/010/108.htm",
+            "title_original": "宣称“欧美最强开源模型”：Mistral AI 发布 Mistral Large 4 公开预览版，月底开放权重",
+            "excerpt": "IT之家 10 月 6 日消息，当地时间 10 月 6 日，法国公司 Mistral AI 正式推出 Mistral Large 4 模型的公开预览版（Public Preview），简称 ML4，代号 le Chonk。 即日起，用户可以在 Mistral Studio 上体验预览版 API，模型权重将于本月底正式开放下载。 目前，官方正联合顶尖网络安全机构、受信任的合作伙伴及政府监管部门，在真实业务环境中对模型展开红队测试（Red-Teaming）。相关合作方将获得该模型的专项测试访问权限；该测试版本适当放宽了内容安全审查策略，并强化了网络安全攻防技术能力。 ML4 是一款拥有 1 万亿总参数、490 亿激活参数的原生多模态模…",
+            "is_foreign": false
+          },
+          {
+            "title": "世界模型赛道竞争分析",
+            "summary": "钛媒体发文分析 [[世界模型]] 赛道，指出芯片巨头正通过收编或突围方式抢占模型层。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8159876.html",
+            "title_original": "世界模型赛道：谁在收编，谁在突围？",
+            "excerpt": "芯片巨头们开抢模型",
+            "is_foreign": false
+          },
+          {
+            "title": "华为昇腾中国份额达50%",
+            "summary": "[[华为]] 全连接大会数据显示，[[昇腾]] AI芯片中国市场份额达50%，超越 [[英伟达]] 的8%，计划部署25.6万张计算卡。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1855535.html",
+            "title_original": "华为：2026年昇腾AI芯片中国市场份额达50%，超越英伟达的8%",
+            "excerpt": "华为全连接大会数据显示，昇腾AI芯片中国市场份额已达50%，超越英伟达的8%。2022年英伟达份额95%，昇腾仅3%，四年逆转。华为计划部署25.6万张计算卡，支持6至7家实验室训练10万亿至40万亿参数模型。软件生态壁垒正缩小。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "AI 时代门店店员角色探讨",
+            "summary": "Retail Dive 报道称，消费者到店前已通过 AI 获取信息，店员需在此基础上提供支持，专家讨论其角色定位。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/where-do-associates-fit-in-an-ai-world-retail/831640/",
+            "title_original": "Where do associates fit in an AI world?",
+            "excerpt": "Customers are arriving at stores more educated than ever, but associates still need to support or build on what those shoppers learned from AI, experts say.",
+            "is_foreign": true
+          },
+          {
+            "title": "Shapermint 瞄准中老年女性创作者",
+            "summary": "[[Shapermint]] 今年 [[TikTok Shop]] 销售额有望达1000万美元，其60%头部带货创作者年龄超过35岁。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/marketing/shapermint-is-on-track-to-hit-10m-in-tiktok-shop-sales-by-targeting-women-ages-35-65/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Shapermint is on track to hit $10M in TikTok Shop sales by targeting women ages 35-65",
+            "excerpt": "Shapermint is on track to hit $10 million in TikTok Shop sales this year thanks to its creator network, which skews older than the typical TikTok Shop influencer. Notably, 60% of the brand's top-performing affiliate creators are over the age of 35.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "农夫山泉22年广告语策略分析",
+            "summary": "刀法研究所分析 [[农夫山泉]] 22年五句广告语，认为其始终围绕“天然水”差异化价值，逐级构建证据链护城河。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1590042.html",
+            "title_original": "农夫山泉22年换了5句广告语，其实一句都没换",
+            "excerpt": "农夫山泉的文案为何深入人心？ 作者：九算，来源： 品牌战争论 当我们在做咨询时，有企业老板说你们说要保持差异化价值的一致性。 但是你看农夫山泉对外都变了好几次广告语，这其实是一个容易被误读的样本。 因为很多人只看到了文案表达的进化史：从农夫山泉有点甜到大自然的搬运工，再到越往山里去，水质就越好，一步步从感性到理性、从产品到水源地到场景。 这个说法没错，但你从差异化品牌价值的角度来看，你会发现农夫山泉22年干的，根本不是传播表达的改变，而是围绕一个天然水这个差异化品牌价值的五次筑墙： 它从来没换过差异化品牌价值，只把这个价值的证据链，一级一级垒成别人翻不过去的护城河。 差异化品牌价值是什么？是消费者大脑里这个品牌对外承诺的是什么，农…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "omlahore/RemoveMacAI",
+            "url": "https://github.com/omlahore/RemoveMacAI",
+            "intro": "给 Mac 关掉苹果 AI、广告和弹窗，还能腾出硬盘空间，改动都能撤销。",
+            "features": [
+              "一键关闭苹果智能并删除其模型文件",
+              "关掉系统分析和广告弹窗",
+              "关闭其他软件的后台自动更新",
+              "所有改动可随时还原"
+            ],
+            "guide": "在 Mac 的终端里粘贴一行命令即可安装图形版应用，装好后在「应用程序」里打开；首次打开需到系统设置里点「仍要打开」。",
+            "steps": [
+              "打开终端（应用程序 > 实用工具）",
+              "粘贴 README 中的安装命令并回车",
+              "首次打开到系统设置点「仍要打开」"
+            ],
+            "install": "curl -fsSL https://raw.githubusercontent.com/omlahore/RemoveMacAI/main/install.sh | bash -s app",
+            "summary": "给 Mac 关掉苹果 AI、广告和弹窗，还能腾出硬盘空间，改动都能撤销。",
+            "source": "GitHub",
+            "stars": "3093",
+            "language": "Swift",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Debloat macOS: turn off Apple Intelligence, analytics, ads and pop-ups. A native app and CLI, and every change can be undone.",
+            "is_foreign": true
+          },
+          {
+            "title": "NandhaKishorM/laya",
+            "url": "https://github.com/NandhaKishorM/laya",
+            "intro": "给一段文字做判断的小引擎，能选类别、打分、答是或否，支持上百种语言。",
+            "features": [
+              "一次就能给出选择、分数或是否判断",
+              "支持 100 多种语言",
+              "长文档最多可读 8192 个词",
+              "自动挑选合适的模型处理请求"
+            ],
+            "guide": "需要 Python 3.10 或更新版本，用 pip 装好后在代码里调用；也可选装网页服务、LangChain 等扩展。",
+            "steps": [
+              "确认已安装 Python 3.10 或更新版本",
+              "运行 python -m pip install laya",
+              "在代码中调用 router.predict 做判断"
+            ],
+            "install": "python -m pip install laya",
+            "summary": "给一段文字做判断的小引擎，能选类别、打分、答是或否，支持上百种语言。",
+            "source": "GitHub",
+            "stars": "31210",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Non-autoregressive System 1 decision engine. Typed choice, score and yes/no decisions over any text in a single forward pass, in 100+ languages, with a router that picks the right checkpoint per request.",
+            "is_foreign": true
+          },
+          {
+            "title": "feder-cr/invisible_playwright_mcp",
+            "url": "https://github.com/feder-cr/invisible_playwright_mcp",
+            "intro": "让 AI 助手自己上网操作浏览器，还不容易被网站的反机器人机制拦住。",
+            "features": [
+              "AI 助手可自动打开网页并操作",
+              "较难被验证码和反爬机制识别",
+              "可接入 Claude Code、Codex 等助手",
+              "自带网页界面，左边聊天右边看浏览器"
+            ],
+            "guide": "先装 uv 工具，再把它装进你的 AI 助手；也可用网页版，需要自备一个 OpenRouter 的密钥。",
+            "steps": [
+              "按 README 命令安装 uv 工具",
+              "用插件命令装进 Claude Code 等助手",
+              "网页版需准备 OpenRouter 密钥"
+            ],
+            "install": "claude plugin marketplace add feder-cr/invisible_playwright_mcp",
+            "summary": "让 AI 助手自己上网操作浏览器，还不容易被网站的反机器人机制拦住。",
+            "source": "GitHub",
+            "stars": "31778",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Playwright MCP server undetected by anti-bots and captchas: AI agent browses the web on anti-detect stealth Firefox, Python, undetected browser automation, scraping, computer use.",
+            "is_foreign": true
+          },
+          {
+            "title": "Snailclimb/JavaGuide",
+            "url": "https://github.com/Snailclimb/JavaGuide",
+            "intro": "一份面向 Java 后端求职者的面试复习资料，从基础到 AI 应用开发都有。",
+            "features": [
+              "覆盖 Java 基础、数据库、分布式等面试题",
+              "提供 AI 应用开发与面试指南",
+              "有面试突击版和 PDF 可下载",
+              "支持在线阅读，速度更快"
+            ],
+            "guide": "这是在线文档，无需安装任何软件，直接访问 javaguide.cn 阅读即可；想突击面试可看 interview.javaguide.cn。",
+            "steps": [
+              "访问 javaguide.cn 在线阅读",
+              "面试突击可访问 interview.javaguide.cn"
+            ],
+            "install": "",
+            "summary": "一份面向 Java 后端求职者的面试复习资料，从基础到 AI 应用开发都有。",
+            "source": "GitHub",
+            "stars": "159050",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
+            "is_foreign": true
+          },
+          {
+            "title": "langgenius/dify",
+            "url": "https://github.com/langgenius/dify",
+            "intro": "一个搭 AI 应用的工作台，拖拖拽拽就能做出带 AI 的流程和问答系统。",
+            "features": [
+              "在画布上可视化搭建 AI 工作流",
+              "支持多种 AI 模型和工具接入",
+              "内置知识库问答（RAG）能力",
+              "可云端用也可自己部署"
+            ],
+            "guide": "需要电脑有 2 核 CPU、4GB 内存，并先装好 Docker 和 Docker Compose；用几条命令启动后，浏览器打开本地地址初始化即可。",
+            "steps": [
+              "确认电脑满足 2 核 CPU、4GB 内存",
+              "安装 Docker 和 Docker Compose",
+              "进入 dify/docker 目录复制配置文件",
+              "运行 docker compose up -d 启动",
+              "浏览器打开 http://localhost/install 初始化"
+            ],
+            "install": "docker compose up -d",
+            "summary": "一个搭 AI 应用的工作台，拖拖拽拽就能做出带 AI 的流程和问答系统。",
+            "source": "GitHub",
+            "stars": "157970",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从系统清理、AI 决策到浏览器自动化与开发平台，帮普通人用上 AI 工具。"
+      }
+    ]
+  }
+}
