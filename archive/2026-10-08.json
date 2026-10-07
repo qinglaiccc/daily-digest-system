@@ -1,0 +1,284 @@
+{
+  "date": "2026-10-08",
+  "generated_at": "2026-10-07T23:55:58.435764+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 253,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-08",
+    "digest": "Meta Muse 登陆 iPad，Anthropic 发布 Claude Haiku 5.5，派拉蒙千亿收购时代华纳。",
+    "keywords": [
+      "Meta",
+      "Claude",
+      "OpenAI",
+      "派拉蒙",
+      "TikTok"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Meta Muse 登陆 iPad",
+            "summary": "[[Meta]] 的 AI 智能体 [[Muse]] 在移动端上线一个月后登陆 iPad，加速扩展助手覆盖范围与集成。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/10/07/metas-muse-launches-on-ipad-just-a-month-after-its-mobile-debut/",
+            "title_original": "Meta’s Muse launches on iPad just a month after its mobile debut",
+            "excerpt": "Meta’s AI agent Muse is now available on iPad, just a month after its mobile debut, as the company rapidly expands the assistant’s reach and integrations.",
+            "is_foreign": true
+          },
+          {
+            "title": "ICANN 开放新顶级域名申请",
+            "summary": "[[ICANN]] 宣布收到 1615 份新顶级域名申请，.agent 与 .agi 等后缀成为热门选项。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/1007132/icann-domains-2026-ai-agi",
+            "title_original": "It appears .agent and .agi are about to be the hot new domains",
+            "excerpt": "For the first time in years, the Internet Corporation for Assigned Names and Numbers - better known as ICANN - is accepting applications for new top-level domains. These are the suffixes at the end of all URLs, and you may know them as things like .com, .org, and .pizza. ICANN just announced the 1,615 applications […]",
+            "is_foreign": true
+          },
+          {
+            "title": "OpenAI 公布数学问题新结果",
+            "summary": "[[OpenAI]] 发布数百项重大数学问题结果，称多数由单个 AI 智能体响应单条提示生成。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2279815/openai-just-posted-hundreds-more-results-on-major-math-problems/",
+            "title_original": "OpenAI just posted hundreds more results on major math problems",
+            "excerpt": "The company said that most results were produced in a response to a single prompt given to a single AI agent.",
+            "is_foreign": true
+          },
+          {
+            "title": "unsloth 嵌入模型登热门榜",
+            "summary": "[[unsloth]] 的 embeddinggemma-2-GGUF 登上 [[HuggingFace]] 热门模型榜，获 161 赞、11470 次下载。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/unsloth/embeddinggemma-2-GGUF",
+            "title_original": "unsloth/embeddinggemma-2-GGUF 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 160）**新发布**。类型 feature-extraction。likes 161，下载 11470。标签：gguf、embedding、feature-extraction、multimodal-embedding、multimodal、vision。",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic 发布 Claude Haiku 5.5",
+            "summary": "[[Anthropic]] 发布 [[Claude Haiku 5.5]]，在 Hacker News 获 606 分、287 条评论。",
+            "source": "Hacker News 高分",
+            "url": "https://www.anthropic.com/claude-haiku-5-5",
+            "title_original": "Claude Haiku 5.5",
+            "excerpt": "Article URL: https://www.anthropic.com/claude-haiku-5-5 \n Comments URL: https://news.ycombinator.com/item?id=49996437 \n Points: 606 \n # Comments: 287",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "微软发布 VS Code v1.141",
+            "summary": "[[微软]] 发布 [[VS Code]] 1.141，新增清理僵尸 Agent 会话命令，改进沙盒安全与多会话布局。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/010/325.htm",
+            "title_original": "微软发布 VS Code v1.141：清理“僵尸”Agent 会话等",
+            "excerpt": "IT之家 10 月 8 日消息，微软昨日（10 月 7 日）更新推出 Visual Studio Code 1.141，本次更新聚焦 AI 智能体（Agent）工作流管理， 重点改进会话存储清理、跨平台沙盒安全、多会话并排布局，以及多 GitHub Enterprise 实例登录支持。 清理“僵尸”Agent 会话方面，新版增加 Chat: Open Worktree Cleanup 命令，可列出所有非活跃 Agent 会话的工作树（worktree）占用空间，并支持按“闲置时长”筛选、手动删除或设置自动清理策略。IT之家附上相关图片如下： 当存储占用达到阈值时，Agents 窗口会主动提示清理；已合并 PR 的会话可配置为自动清…",
+            "is_foreign": false
+          },
+          {
+            "title": "钛晨报：SpaceX 拟募资 400 亿美元",
+            "summary": "[[SpaceX]] 拟募资 400 亿美元采购 [[英伟达]] 芯片；[[智谱]] GLM-5.3 上架 Amazon 开启海外分成。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8160058.html",
+            "title_original": "【钛晨报】推动体育赛事发展，国务院办公厅最新部署；SpaceX拟募资400亿美元采购英伟达芯片；中国央行连续第23个月增持黄金",
+            "excerpt": "GLM-5.3上架Amazon，智谱打开海外收入分成通道；华为与高通宣布达成广泛专利许可协议；抖音7.5亿收购案终止；英伟达宣布将推出DGX SPARK 64GB，可在本地运行最高1000亿参数AI模型；软银完成对OpenAI追加投资最后一笔100亿美元，累计投资达646亿美元；国家税务总局发布全国统一的税务行政处罚裁量基准；中国推进7项天然气国际标准成功立项；财政部部长蓝佛安：要研究制定针对性强的增量政策，更加注重扩大国内有效需求；国庆假期后首个交易日，20只基金将集中开启认购；月之暗面据悉即将完成IPO前融资，估值将达500亿美元；Anthropic据悉计划在感恩节假期前进行大规模IPO；全球纯燃油车新车销量占比首次跌破50%…",
+            "is_foreign": false
+          },
+          {
+            "title": "AI Agent 驱动客户体验五大趋势",
+            "summary": "报告称 [[AI Agent]] 正从问答工具演进为跨系统执行体，推动客户服务与运营从自动化迈向智能化。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1843122.html",
+            "title_original": "2026客户体验新范式：AI Agent驱动企业增长五大趋势",
+            "excerpt": "报告认为，AI Agent正从单一问答工具演进为能够理解用户目标、制定执行计划并跨系统完成任务的智能执行体，推动客户服务、商业交易与企业运营从自动化迈向智能化，为企业构建覆盖全生命周期的客户体验体系。",
+            "is_foreign": false
+          },
+          {
+            "title": "派拉蒙 1100 亿美元收购时代华纳",
+            "summary": "[[派拉蒙]] 以 1100 亿美元收购 [[时代华纳]]；[[月之暗面]] 被曝完成 500 亿美元 Pre-IPO 融资。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372089",
+            "title_original": "派拉蒙 1100 亿美元收购时代华纳，好莱坞诞生新巨无霸；月之暗面被曝完成 500 亿美元 PreIPO 融资；微软、Meta 被曝要求员工减少使用 Claude",
+            "excerpt": "2026 诺贝尔物理学奖揭晓：把一立方公里南极冰变成望远镜，打开「中微子天文学」 \n 10 月 6 日，2026 年诺贝尔物理学奖授予比利时裔美国物理学家 Francis Halzen，以表彰其「对 IceCube 中微子天文台的决定性贡献，以及发现来自天体的高能中微子」。 \n Halzen 领导建设的 IceCube 位于南极，把超过 一立方公里的透明冰层本身变成粒子探测器：5000 多个光学传感器被埋入超过两公里深的冰层，通过捕捉中微子极少数与物质碰撞时产生的微弱光线，反推出粒子的来源。 \n 与传统望远镜利用光观察宇宙不同，中微子几乎可以不受阻碍地穿过物质，因此能够携带超新星、黑洞等极端宇宙事件的信息。 \n IceCube 的…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "TikTok 新增 AI 发现与一键结账",
+            "summary": "[[TikTok]] 将新增对话式 AI 智能体与一键结账功能，强化其商品发现引擎角色。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/tiktok-ai-powered-discovery-one-click-checkout/832326/",
+            "title_original": "TikTok to add AI-powered discovery and one-click checkout",
+            "excerpt": "The social media platform is hoping to capitalize on its role as a product discovery engine by adding a conversational AI agent and simpler checkout.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "storytold/filmcraft",
+            "url": "https://github.com/storytold/filmcraft",
+            "intro": "一个免费开源的视频剪辑软件，对标 Adobe Premiere Pro，能在电脑和浏览器里用。",
+            "features": [
+              "剪辑、调色、音效、字幕一站完成",
+              "支持 macOS、Windows、Linux 和浏览器",
+              "用公开素材就能剪出成片"
+            ],
+            "guide": "README 未给出安装命令，可先访问官网 getartcraft.com/apps/filmcraft 了解下载方式；浏览器版打开网页即可试用。",
+            "steps": [
+              "访问官网 getartcraft.com/apps/filmcraft",
+              "按页面提示选择对应系统版本"
+            ],
+            "install": "",
+            "summary": "一个免费开源的视频剪辑软件，对标 Adobe Premiere Pro，能在电脑和浏览器里用。",
+            "source": "GitHub",
+            "stars": "3265",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "An open-source, clean-room reimplementation of Adobe Premiere Pro built in pure Rust.",
+            "is_foreign": true
+          },
+          {
+            "title": "Ebony-Vinyl/dsh-our-free-model",
+            "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+            "intro": "给 dsh 装个插件，不用注册、不用填密钥，就能免费用上 DeepSeek、Kimi 等前沿模型。",
+            "features": [
+              "无需登录注册，装上就能用",
+              "免费不限量，模型清单自动更新",
+              "设置页一键升级，改完即时生效"
+            ],
+            "guide": "前提是你已经在用 dsh 这个工具；在 dsh 里安装本插件即可，无需账号、密钥或后台申请配额，纯插件挂载、零依赖。",
+            "steps": [
+              "先安装并打开 dsh 工具",
+              "在 dsh 中安装本插件",
+              "打开设置页确认可用模型列表"
+            ],
+            "install": "",
+            "summary": "给 dsh 装个插件，不用注册、不用填密钥，就能免费用上 DeepSeek、Kimi 等前沿模型。",
+            "source": "GitHub",
+            "stars": "3377",
+            "language": "JavaScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, DeepSeek V4.1 Flas…",
+            "is_foreign": true
+          },
+          {
+            "title": "rowboatlabs/rowboat",
+            "url": "https://github.com/rowboatlabs/rowboat",
+            "intro": "一个开源的私人 AI 助理，自带邮件、笔记和白板，能记住你的工作内容帮你干活。",
+            "features": [
+              "自动整理邮件并起草回复",
+              "把邮件会议笔记串成知识图谱",
+              "可设定时或触发式后台任务"
+            ],
+            "guide": "提供 Mac、Windows、Linux 安装包，从 README 的 Download 链接下载安装即可；无需自己搭服务器，装好就能用。",
+            "steps": [
+              "打开 README 中的 Download 链接",
+              "下载对应系统的安装包",
+              "安装后启动并按引导配置"
+            ],
+            "install": "",
+            "summary": "一个开源的私人 AI 助理，自带邮件、笔记和白板，能记住你的工作内容帮你干活。",
+            "source": "GitHub",
+            "stars": "17999",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "AI coworker with memory and collaboration",
+            "is_foreign": true
+          },
+          {
+            "title": "open-webui/open-webui",
+            "url": "https://github.com/open-webui/open-webui",
+            "intro": "一个自己部署的 AI 聊天界面，能接本地模型也能接云端模型，数据全在自己手里。",
+            "features": [
+              "一个界面切换多种 AI 模型",
+              "可完全离线运行，数据不外传",
+              "支持插件扩展和权限分组管理"
+            ],
+            "guide": "需要自己部署，支持 pip、uv、Docker 或 Kubernetes 安装；装好后用浏览器访问，可接本地 Ollama 或任意兼容 OpenAI 的接口。",
+            "steps": [
+              "准备 Python 或 Docker 环境",
+              "按 README 用 pip、uv 或 Docker 安装",
+              "启动后用浏览器打开访问"
+            ],
+            "install": "",
+            "summary": "一个自己部署的 AI 聊天界面，能接本地模型也能接云端模型，数据全在自己手里。",
+            "source": "GitHub",
+            "stars": "154165",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+            "is_foreign": true
+          },
+          {
+            "title": "DietrichGebert/ponytail",
+            "url": "https://github.com/DietrichGebert/ponytail",
+            "intro": "给 AI 编程助手装上一段提示词，让它像老练工程师一样少写代码、只写有用的。",
+            "features": [
+              "让 AI 少写约一半代码",
+              "同样任务更省钱、跑得更快",
+              "支持 Claude Code、Codex 等助手"
+            ],
+            "guide": "本质是一段提示词，装进你正在用的 AI 编程助手即可；Claude Code 和 Codex 有现成插件命令，其他助手可复制 AGENTS.md 到项目里。",
+            "steps": [
+              "/plugin marketplace add DietrichGebert/ponytail",
+              "/plugin install ponytail@ponytail",
+              "其他助手复制 AGENTS.md 到项目"
+            ],
+            "install": "/plugin marketplace add DietrichGebert/ponytail",
+            "summary": "给 AI 编程助手装上一段提示词，让它像老练工程师一样少写代码、只写有用的。",
+            "source": "GitHub",
+            "stars": "157573",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 更好用：视频剪辑、免费模型、个人助理与省代码技巧。"
+      }
+    ]
+  }
+}
