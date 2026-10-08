@@ -1,0 +1,312 @@
+{
+  "date": "2026-10-09",
+  "generated_at": "2026-10-08T23:55:49.058012+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 309,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-09",
+    "digest": "谷歌云发布通用工作智能体Gemini Agent，Anthropic推出Claude Haiku 5.5并大幅降价，沃尔玛推出1小时极速自提服务。",
+    "keywords": [
+      "Gemini",
+      "Claude",
+      "智能体",
+      "沃尔玛",
+      "机器人"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "谷歌将智能体AI引入Gemini",
+            "summary": "[[Google]]为[[Gemini]]加入智能体能力，可规划执行任务、调用子智能体与多模型，并拥有独立工作邮箱身份。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/",
+            "title_original": "Google brings agentic AI to Gemini, starting with businesses",
+            "excerpt": "Google is turning Gemini into an AI agent that can plan, execute tasks, and work across business apps and systems. The agent can delegate work to subagents, use multiple AI models, and even gets its own workplace identity, complete with an email address.",
+            "is_foreign": true
+          },
+          {
+            "title": "Underdog-Saluki-27B登热门模型榜",
+            "summary": "[[ConwayResearch]]发布Underdog-Saluki-27B-1.0，登HuggingFace热门榜，获103赞、142次下载，支持工具调用。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0",
+            "title_original": "ConwayResearch/Underdog-Saluki-27B-1.0 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 101）**新发布**。类型 text-generation。likes 103，下载 142。标签：gguf、llama.cpp、2-bit、tool-calling、function-calling、agents。",
+            "is_foreign": true
+          },
+          {
+            "title": "Cal AI创始人再创业获千万融资",
+            "summary": "[[Cal AI]]联合创始人Zach Yadegari为其新个人AI智能体初创公司融资1000万美元，与Instinct、Muse、Bee竞争。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/10/08/cal-ais-19-year-old-founder-just-raised-10m-for-his-new-ai-startup/",
+            "title_original": "Cal AI’s 19-year-old founder just raised $10M for his new AI startup",
+            "excerpt": "Zach Yadegari, the teen co-founder of popular Cal AI calorie tracking app, has launched a new personal AI agent startup that competes with Instinct, Muse, and Bee.",
+            "is_foreign": true
+          },
+          {
+            "title": "StepFun百万上下文模型现身",
+            "summary": "[[StepFun]]的Step 5 Preview在OpenRouter上线，为支持100万token上下文的MoE模型，HN获80点、23条评论。",
+            "source": "Hacker News",
+            "url": "https://openrouter.ai/stepfun/step-5-preview",
+            "title_original": "Step 5 Preview, a 1M-context MoE from StepFun, shows up on OpenRouter",
+            "excerpt": "Article URL: https://openrouter.ai/stepfun/step-5-preview \n Comments URL: https://news.ycombinator.com/item?id=50007764 \n Points: 80 \n # Comments: 23",
+            "is_foreign": true
+          },
+          {
+            "title": "Claude Haiku 5.5同价超GPT-6 Luna",
+            "summary": "[[Anthropic]]发布[[Claude Haiku 5.5]]，同价位性能优于GPT-6 Luna，主打小模型能力提升。",
+            "source": "Latent Space",
+            "url": "https://www.latent.space/p/ainews-claude-haiku-55-better-than",
+            "title_original": "[AINews] Claude Haiku 5.5 — better than GPT-6 Luna at the same pricing",
+            "excerpt": "yay small models",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "谷歌云发布Gemini Agent",
+            "summary": "[[谷歌云]]在Gemini at Work 2026发布[[Gemini Agent]]，定位通用工作智能体，支持Workspace及第三方服务，可自主完成多步骤任务。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/010/706.htm",
+            "title_original": "谷歌云发布 Gemini Agent，定位“通用工作智能体”",
+            "excerpt": "IT之家 10 月 8 日消息，谷歌云今天在 Gemini at Work 2026 发布会上宣布，面向企业客户推出 Gemini 智能体（Gemini Agent）。这款产品定位“通用工作智能体”， 支持 Gemini Enterprise 、Workspace 以及第三方服务 。 谷歌表示，Gemini Agent 只需要用户给出目标就能完成工作，支持回答问题、处理知识型工作、创建媒体内容，以及编写程序。 例如，当你的经理用邮件要求你制作项目最近进展 PPT 时，Workspace Intelligence 会认为该任务可以由 AI 完成，用户只需点一下按钮就能交给 Gemini 继续。 除了充当个人助理之外，Gemini 智…",
+            "is_foreign": false
+          },
+          {
+            "title": "STEPX Neo手机10月13日发布",
+            "summary": "大模型原生智能体手机[[STEPX Neo]]将于10月13日正式发布。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/10/501915.html",
+            "title_original": "大模型原生智能体手机STEPX Neo将于10月13日正式发布",
+            "excerpt": "",
+            "is_foreign": false
+          },
+          {
+            "title": "钛晨报：Manus融资超5亿美元",
+            "summary": "[[Manus]]完成超5亿美元新一轮融资；苹果要求明年4月所有App适配折叠屏；贝索斯称蓝色起源或数年内IPO。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8161611.html",
+            "title_original": "【钛晨报】中国人民银行发布人民币汇率的政策立场；尊界回应制动踏板支架底座断裂问题；苹果给开发者下硬规定：明年4月所有App必须适配折叠屏",
+            "excerpt": "Manus完成超5亿美元新一轮融资；一汽、广汽声明：一汽丰田仍将作为独立运营主体存续；谷歌云推出Gemini智能代理，可自主执行企业多步骤任务；贝索斯首次明确表态：蓝色起源或将数年内IPO；新就业形态劳动者权益保障办法公开征求意见；特朗普据悉买入了最高2500万美元的Meta股票；世贸组织上调2026年全球货物贸易增长预期；安妮·卡森获得2026年诺贝尔文学奖",
+            "is_foreign": false
+          },
+          {
+            "title": "Anthropic推出Claude for Workspace",
+            "summary": "[[Anthropic]]推出Claude for Google Workspace；[[Reflection]]发布首个开放权重模型Beam。",
+            "source": "少数派",
+            "url": "https://sspai.com/post/115455",
+            "title_original": "派早报：微软发布 Windows 相关新品、Google AI 新闻两则等",
+            "excerpt": "Anthropic 推出 Claude for Google Workspace、Reflection 发布首个开放权重模型 Beam 等。 查看全文",
+            "is_foreign": false
+          },
+          {
+            "title": "Claude Haiku 5.5跑分43降价90%",
+            "summary": "[[Anthropic]]发布[[Claude Haiku 5.5]]，AA榜单跑分43分，API定价较上代降低90%，20美元套餐额度达1200美元。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1856047.html",
+            "title_original": "Anthropic：Claude Haiku 5.5跑分43，API降价90%",
+            "excerpt": "Anthropic发布Claude Haiku 5.5，AA榜单跑分43分，较上代17分明显提升，超过多款国产模型。API定价较上代降低90%，20美元套餐额度达1200美元，相当于60倍。国产AI在性能与性价比上承压，失去性价比护城河。",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "沃尔玛推出1小时极速自提",
+            "summary": "[[沃尔玛]]推出1小时极速门店自提服务，未来数周全国推广，并采用Sorenson提供店内美国手语翻译。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/walmart-one-hour-express-store-pickup-asl-service-holiday/832464/",
+            "title_original": "Walmart debuts 1-hour express pickup, ASL service ahead of holidays",
+            "excerpt": "The mass retailer will expand the new pickup option nationwide in the upcoming weeks and is using Sorenson for in-store American Sign Language interpretation.",
+            "is_foreign": true
+          },
+          {
+            "title": "零售媒体高管流动成常态",
+            "summary": "[[Albertsons]]零售媒体业务人事变动，分析师称高管流动是零售媒体行业自始以来的持续主题。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/marketing/big-box-briefing-why-executive-turnover-has-been-a-consistent-theme-in-retail-media/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Big-Box Briefing: Why executive turnover has been a consistent theme in retail media",
+            "excerpt": "A shakeup at Albertsons’ retail media business has put a spotlight on the challenges retail media leaders are facing. Analysts say that turnover has been a consistent theme of retail media since the beginning. Here's why.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "机器人衍生赛道量产前夜升温",
+            "summary": "机器人量产前夜，RaaS区域代理、场景适配、运维售后与数据训练等衍生生意涌现，服务中小B端客户。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1591995.html",
+            "title_original": "量产前夜，机器人衍生赛道先火了",
+            "excerpt": "一批“给机器人打工”的新生意正在出现。 作者：成昱 过去两年，机器人行业无疑是最热门的新赛道之一。但一台机器人从走下生产线到真正“上岗”还有很长一段路。 谁把机器人送进客户现场？ 谁帮它认识电梯、门禁和货架？谁教它干活？ 谁收集它学习需要的数据？它坏了谁来修？ 这一连串的问题背后，是围绕机器人延展的新机会。 于是，除了造机器人，从设备落地、场景适配到运维售后、数据训练， 一批“给机器人打工”的新生意正在出现。 一、RaaS区域代理：卖机器人的“上班时间” 很多企业想通过机器人降本增效，却始终卡在落地第一道门槛： 一次性采购成本太高、试错风险太大。 哪怕设备功能成熟，硬件售价依旧让餐饮、酒店、园区、工厂等大量中小B端客户不敢轻易入局…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "QingYunA/answer-me-with-html",
+            "url": "https://github.com/QingYunA/answer-me-with-html",
+            "intro": "让 AI 把复杂问题的答案写成一页排版好的网页，而不是一大段难读的文字。",
+            "features": [
+              "提问后自动生成一页可读的 HTML 答案",
+              "自动画好图表和排版，不用自己动手",
+              "生成的文件可离线打开，不依赖网络"
+            ],
+            "guide": "这是一个给 AI 助手用的技能插件，装好后照常提问即可。README 未给出具体安装命令，需参考项目官网的安装说明。",
+            "steps": [
+              "打开项目官网查看安装说明",
+              "按说明把技能装到你的 AI 助手里",
+              "像平时一样提问，等待生成网页"
+            ],
+            "install": "",
+            "summary": "让 AI 把复杂问题的答案写成一页排版好的网页，而不是一大段难读的文字。",
+            "source": "GitHub",
+            "stars": "2319",
+            "language": "JavaScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。",
+            "is_foreign": true
+          },
+          {
+            "title": "storytold/lightcraft",
+            "url": "https://github.com/storytold/lightcraft",
+            "intro": "一个免费开源的修图软件，功能对标 Adobe Lightroom，照片全在自己电脑上处理。",
+            "features": [
+              "调光调色，原图不会被改动",
+              "支持局部蒙版和预设，快速出片",
+              "可在电脑本地或浏览器里使用"
+            ],
+            "guide": "有 macOS、Windows、Linux 桌面版，也能在浏览器里用。README 未给出具体安装命令，需到官网下载对应版本安装。",
+            "steps": [
+              "打开官网 getartcraft.com 的 LightCraft 页面",
+              "下载对应系统的安装包",
+              "安装后导入照片开始修图"
+            ],
+            "install": "",
+            "summary": "一个免费开源的修图软件，功能对标 Adobe Lightroom，照片全在自己电脑上处理。",
+            "source": "GitHub",
+            "stars": "5502",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "An open-source, clean-room reimplementation of Adobe Lightroom in pure Rust.",
+            "is_foreign": true
+          },
+          {
+            "title": "omnivore-app/omnivore",
+            "url": "https://github.com/omnivore-app/omnivore",
+            "intro": "一个开源的「稍后读」工具，把想看的文章存起来，慢慢读、做标注。",
+            "features": [
+              "收藏文章并高亮、写笔记",
+              "自动记住长文读到哪一页",
+              "支持 PDF、邮件订阅和浏览器插件"
+            ],
+            "guide": "官方云服务已于 2024 年 11 月停用，现在需要自己搭服务器才能用。README 未给出具体安装命令，需参考自托管指南部署。",
+            "steps": [
+              "准备一台服务器或本地环境",
+              "参考 README 里的自托管指南部署",
+              "部署完成后用浏览器或 App 登录使用"
+            ],
+            "install": "",
+            "summary": "一个开源的「稍后读」工具，把想看的文章存起来，慢慢读、做标注。",
+            "source": "GitHub",
+            "stars": "16277",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Omnivore is a complete, open source read-it-later solution for people who like reading.",
+            "is_foreign": true
+          },
+          {
+            "title": "langchain-ai/langchain",
+            "url": "https://github.com/langchain-ai/langchain",
+            "intro": "一套帮开发者搭建 AI 应用的工具箱，把大模型和各种功能拼起来用。",
+            "features": [
+              "把大模型和外部工具连接起来",
+              "提供现成组件，减少重复开发",
+              "可搭配 Deep Agents 做复杂任务"
+            ],
+            "guide": "面向开发者，需要先装 Python 环境，用 uv 安装后即可在代码里调用。使用前通常要准备大模型服务的 API Key。",
+            "steps": [
+              "先安装 Python 环境",
+              "运行 uv add langchain 安装",
+              "在代码里初始化模型并调用"
+            ],
+            "install": "uv add langchain",
+            "summary": "一套帮开发者搭建 AI 应用的工具箱，把大模型和各种功能拼起来用。",
+            "source": "GitHub",
+            "stars": "147397",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The agent engineering platform.",
+            "is_foreign": true
+          },
+          {
+            "title": "x1xhlol/system-prompts-and-models-of-ai-tools",
+            "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+            "intro": "收集了 Cursor、Devin 等热门 AI 工具内部提示词的资料库，供人参考学习。",
+            "features": [
+              "汇总多家 AI 工具的提示词内容",
+              "覆盖 Cursor、Devin 等常见工具",
+              "提醒 AI 创业公司注意提示词泄露风险"
+            ],
+            "guide": "这是一个纯资料仓库，打开网页浏览即可，不需要安装任何东西，也没有可执行的安装命令。",
+            "steps": [
+              "打开该 GitHub 仓库页面",
+              "浏览各 AI 工具的提示词文件"
+            ],
+            "install": "",
+            "summary": "收集了 Cursor、Devin 等热门 AI 工具内部提示词的资料库，供人参考学习。",
+            "source": "GitHub",
+            "stars": "143910",
+            "language": "",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.d…",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 更好用、让照片和文章更好管的开源工具合集"
+      }
+    ]
+  }
+}
