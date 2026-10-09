@@ -1,5 +1,5 @@
 {
-  "classic_offset": 18,
+  "classic_offset": 20,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-09-30T23:55:38.531402+00:00",
   "recent_trending": [
-    "DayuanJiang/next-ai-draw-io",
-    "freestylefly/WeChatBridge",
-    "qingjian-team/qingjian",
     "Flow-Launcher/Flow.Launcher",
     "nokia-applied-research/AnyJev",
     "XiaoDuoYa/codex-with-chatgpt",
@@ -174,12 +171,15 @@
     "rowboatlabs/rowboat",
     "QingYunA/answer-me-with-html",
     "storytold/lightcraft",
-    "omnivore-app/omnivore"
+    "omnivore-app/omnivore",
+    "LosaLosSantos/aurelio-finance",
+    "yetone/magpie",
+    "ShareX/ShareX"
   ],
-  "last_run_date": "2026-10-08",
+  "last_run_date": "2026-10-09",
   "last_classic": [
-    "langchain-ai/langchain",
-    "x1xhlol/system-prompts-and-models-of-ai-tools"
+    "github/spec-kit",
+    "Comfy-Org/ComfyUI"
   ],
-  "updated_at": "2026-10-08T23:55:37.867901+00:00"
+  "updated_at": "2026-10-09T23:58:10.556141+00:00"
 }

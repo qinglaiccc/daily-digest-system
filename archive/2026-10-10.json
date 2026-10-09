@@ -1,0 +1,314 @@
+{
+  "date": "2026-10-10",
+  "generated_at": "2026-10-09T23:58:23.116466+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 267,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-10",
+    "digest": "谷歌云发布Gemini Agent，TypeSafe AI估值达75亿美元，亚马逊秋季Prime Day美国线上消费近百亿美元。",
+    "keywords": [
+      "GeminiAgent",
+      "TypeSafeAI",
+      "Jev",
+      "亚马逊PrimeDay",
+      "自营商品"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Qwen-Image-2.1-Turbo 登 HuggingFace 热门榜",
+            "summary": "[[Qwen]] 发布文生图模型 [[Qwen-Image-2.1-Turbo]]，登 HuggingFace 热门榜，trendingScore 283，likes 285。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+            "title_original": "Qwen/Qwen-Image-2.1-Turbo 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 283）**新发布**。类型 text-to-image。likes 285，下载 0。标签：diffusers、safetensors、qwen、image-generation、image-editing、text-to-image。",
+            "is_foreign": true
+          },
+          {
+            "title": "Phocinae-Largha-150M-v1 登热门榜",
+            "summary": "[[Phocinae]] 发布文本分类模型 [[Phocinae-Largha-150M-v1]]，登 HuggingFace 热门榜，trendingScore 197，likes 228。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/Phocinae/Phocinae-Largha-150M-v1",
+            "title_original": "Phocinae/Phocinae-Largha-150M-v1 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 197）**新发布**。类型 text-classification。likes 228，下载 89。标签：transformers、safetensors、modernbert、fill-mask、decision-making、typed-decisions。",
+            "is_foreign": true
+          },
+          {
+            "title": "非文本 AI 模型 Jev 开发商估值 75 亿美元",
+            "summary": "[[TypeSafe]] 旗下非文本 AI 模型 [[Jev]] 发布数周后公司估值达 75 亿美元，称比 LLM 更快且用更少 token。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
+            "title_original": "The maker of non-text AI model Jev valued at $7.5B just weeks after launch",
+            "excerpt": "What has users and large corporations so excited about Jev is TypeSafe’s claim that it works significantly faster and uses far fewer tokens than LLMs.",
+            "is_foreign": true
+          },
+          {
+            "title": "ttok 1.0 发布",
+            "summary": "[[Simon Willison]] 发布 [[ttok]] 1.0，默认分词器从 GPT-4 切换为 GPT-5/GPT-6。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Oct/9/ttok/",
+            "title_original": "ttok 1.0",
+            "excerpt": "Release: ttok 1.0 \n I released ttok 0.4 , ran uv tool upgrade ttok , piped a file into the new version... and realized that it was defaulting to the GPT-4 tokenizer when it should very clearly default to GPT-5/GPT-6 instead! \n I figured switching the default was a reasonable excuse to finally ship a 1.0. \n OpenAI have…",
+            "is_foreign": true
+          },
+          {
+            "title": "AI 编程代理生成更多代码而非软件",
+            "summary": "研究称 [[AI 编程代理]] 提升代码生成量，但效率增益被人工审查瓶颈吸收，未转化为更多软件产出。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
+            "title_original": "AI coding agents generate more code, but not more software",
+            "excerpt": "Study finds coding efficiency gains get \"absorbed\" by human review \"bottleneck.\"",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "谷歌云发布 Gemini Agent",
+            "summary": "[[谷歌云]] 发布通用工作智能体 [[Gemini Agent]]，支持 Gemini 与 Claude 模型，可担任 PM、财务分析师等角色。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372143",
+            "title_original": "谷歌云发布 Gemini Agent；Manus 官宣五亿美元融资；小鹏上线 Robotaxi 打车小程序",
+            "excerpt": "谷歌云发布 Gemini Agent，支持多种 AI 模型 \n 10 月 8 日，谷歌云在 Gemini at Work 2026 发布会上宣布，面向企业客户推出 Gemini 智能体（Gemini Agent）。这款产品定位「通用工作智能体」，支持 Gemini Enterprise 、Workspace 以及第三方服务。 \n 谷歌表示，Gemini Agent 只需要用户给出目标就能完成工作，支持回答问题、处理知识型工作、创建媒体内容，以及编写程序。 \n 除了充当个人助理之外，Gemini 智能体还可以用作「团队成员」。它可以在团队中担任 PM、财务分析师等。 \n 目前，该智能体支持 Gemini 和 Claude 模型，未来…",
+            "is_foreign": false
+          },
+          {
+            "title": "openJiuwen 开源企业级 AgentOS",
+            "summary": "[[openJiuwen]] 发布并开源企业级 [[AgentOS]]，支持多 Agent 协同与自我进化，加速企业智能体落地。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/10/502106.html",
+            "title_original": "openJiuwen发布并开源企业级AgentOS，加速智能体规模落地企业",
+            "excerpt": "多Agent协同还能自我进化",
+            "is_foreign": false
+          },
+          {
+            "title": "TypeSafe AI 估值达 75 亿美元",
+            "summary": "[[TypeSafe AI]] 完成约 8.7 亿美元融资，[[a16z]] 领投，估值 75 亿美元；[[Jev]] 已被约三分之一财富 500 强采用。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/011/170.htm",
+            "title_original": "决策模型 Jev 爆火，开发商 TypeSafe AI 估值已达 75 亿美元",
+            "excerpt": "IT之家 10 月 10 日消息，据彭博社于当地时间 10 月 9 日报道，初创公司 TypeSafe AI 旗下的新型 AI 决策模型 Jev 刚刚推出数周便迅速走红。近日，该公司完成了一轮约 8.7 亿美元 （IT之家注：现汇率约合 58.42 亿元人民币） 的融资，由安德里森 · 霍洛维兹（Andreessen Horowitz、a16z）领投， 公司估值已达 75 亿美元 （现汇率约合 503.64 亿元人民币） 。 据这家初创公司透露，Jev 目前已被约三分之一的财富 500 强企业采用，不过公司并未公开具体客户名单。此外，该模型在上线短短数天内，用户规模便突破了 100 万大关。 据悉，此前投资了 OpenAI 和 x…",
+            "is_foreign": false
+          },
+          {
+            "title": "英伟达 RTX Spark 与 Claude Haiku 5.5 发布",
+            "summary": "[[英伟达]] 发布 RTX Spark 新品，[[Anthropic]] 发布 [[Claude Haiku 5.5]] 模型，OpenAI 在 ChatGPT 上线 GPT-6。",
+            "source": "少数派",
+            "url": "https://sspai.com/post/115532",
+            "title_original": "派早报：英伟达 RTX Spark 新品一览、Anthropic 发布 Claude Haiku 5.5 模型等",
+            "excerpt": "XMG 发布 PRO 18 系列笔记本、OpenAI 宣布在 ChatGPT 上线 GPT-6 模型 查看全文",
+            "is_foreign": false
+          },
+          {
+            "title": "谷歌推出办公 Agent",
+            "summary": "[[谷歌]] 推出办公 [[Agent]]，拥有独立账号、可创建子 Agent 并调用 [[Claude]]，用户 @ 即可派活。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/490gIS9Bk0NmylN7GIt1?utm_source=rss&utm_medium=article",
+            "title_original": "@ 一下就能派活？谷歌推出办公 Agent，拥有独立账号、能够创建子 Agent，还能调用 Claude",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "亚马逊 Prime Big Deal Days 美国线上消费近百亿美元",
+            "summary": "[[亚马逊]] 两日 Prime Big Deal Days 美国线上消费近 100 亿美元，带动 [[沃尔玛]] 等多店销售，消费者提前囤货。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/amazon-prime-big-deal-days-online-spend-nears-ten-billion/832604/",
+            "title_original": "Online spend during Amazon’s Prime Big Deal Days neared $10B in the US",
+            "excerpt": "The retailer’s two-day event drove sales at multiple stores including Walmart as consumers hunted for bargains and discounts ahead of the holiday rush.",
+            "is_foreign": true
+          },
+          {
+            "title": "亚马逊秋季 Prime Day 卖家表现",
+            "summary": "[[亚马逊]] 秋季 Prime Big Deal Days 开启假日销售，消费者追逐折扣与组合装，品牌方数据与反馈显示活动表现分化。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/marketing/how-amazon-fall-prime-day-went-for-sellers/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "How Amazon Fall Prime Day went for sellers",
+            "excerpt": "Amazon’s fall Prime Big Deals Days helped kick off early holiday sales as shoppers chased discounts and bundles and stocked up on essentials. Here's how the event went, based on data and anecdotes from brands.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "中产偏好有自营商品的超市",
+            "summary": "国内中产转向有自营商品的超市，[[奥乐齐]] 自有品牌占比超 90%，国内零售商该比例仅 8%，性价比成主因。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1589916.html",
+            "title_original": "纯过日子的中产，只逛有「自营商品」的超市?",
+            "excerpt": "零售业的下一个十年离不开自营。 来源： Vista氢商业 编辑：卢力麟，作者：Vista氢商业，设计：胖兔 零售业的下一个十年离不开自营。 纯过日子的中产，已经只逛「有自营商品」的超市了。 自营商品在欧美早已见怪不怪，德国硬折扣鼻祖奥乐齐的自有品牌占比超90%，但现在国内中产也开始对此越来越偏爱，只是目前国内零售商这个比例只有8%。 但 稀缺，不是中产追逐的唯一原因，更重要的是另外两个字： 便宜！ 如果只讲价格，那大家都去拼多多好了。 大家都知道，国内的中产讲究一个“精致抠”，性价比是一定要的，不能给我差的产品，还得让我买高兴了。 现在去超市逛逛，最显眼的爆款专区肯定是自有品牌占C位，关键是人家的产品从设计理念上考虑到了中产的生活…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "LosaLosSantos/aurelio-finance",
+            "url": "https://github.com/LosaLosSantos/aurelio-finance",
+            "intro": "装在自己电脑上的记账理财工具，还能跟 AI 顾问聊你的资产。",
+            "features": [
+              "记录银行、券商账户里的现金和持仓",
+              "自动算每笔投资的成本、收益和分红",
+              "看清基金背后真正持有的国家和行业",
+              "可选 AI 顾问，用自己的密钥对话"
+            ],
+            "guide": "需要先装 Git、Node.js 22 以上和 uv，然后在终端克隆项目并运行启动脚本；首次启动会自动装依赖并打开网页，先用演示数据试跑，去掉参数就用你自己的数据。",
+            "steps": [
+              "先安装 Git、Node.js 22+ 和 uv",
+              "git clone https://github.com/LosaLosSantos/aurelio-finance.git",
+              "cd aurelio-finance",
+              "./start.sh --demo"
+            ],
+            "install": "git clone https://github.com/LosaLosSantos/aurelio-finance.git",
+            "summary": "装在自己电脑上的记账理财工具，还能跟 AI 顾问聊你的资产。",
+            "source": "GitHub",
+            "stars": "1553",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Open-source personal finance app with an AI financial advisor: track your net worth, investments, ETFs, cash and debts on your own computer.",
+            "is_foreign": true
+          },
+          {
+            "title": "yetone/magpie",
+            "url": "https://github.com/yetone/magpie",
+            "intro": "一个菜单栏小工具，让各种 AI 编程助手随便换模型和账号。",
+            "features": [
+              "从菜单栏给每个 AI 助手换模型",
+              "一个密钥在所有助手里通用",
+              "额度用完自动切到下一个账号",
+              "支持 macOS、Windows 和 Linux"
+            ],
+            "guide": "从官网下载安装即可，支持菜单栏应用、窗口、网页和命令行多种用法；适合同时用多个 AI 助手或多套账号的人，只用一家官方套餐的话不需要它。",
+            "steps": [
+              "访问 usemagpie.ai 下载对应系统版本",
+              "安装后从菜单栏打开 magpie",
+              "在列表里为每个助手挑选模型"
+            ],
+            "install": "",
+            "summary": "一个菜单栏小工具，让各种 AI 编程助手随便换模型和账号。",
+            "source": "GitHub",
+            "stars": "7433",
+            "language": "Go",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
+            "is_foreign": true
+          },
+          {
+            "title": "ShareX/ShareX",
+            "url": "https://github.com/ShareX/ShareX",
+            "intro": "Windows 上的免费截图录屏工具，截完还能直接编辑和上传。",
+            "features": [
+              "一个快捷键截取屏幕任意区域",
+              "录屏或录成 GIF 动图",
+              "截图后直接标注、取色、识别文字",
+              "上传文件并自动复制分享链接"
+            ],
+            "guide": "这是 Windows 桌面软件，从官网下载安装包安装即可，不需要注册账号；装好后设置快捷键就能开始截图、录屏和上传。",
+            "steps": [
+              "访问 getsharex.com 下载安装包",
+              "安装并启动 ShareX",
+              "设置截图快捷键后开始使用"
+            ],
+            "install": "",
+            "summary": "Windows 上的免费截图录屏工具，截完还能直接编辑和上传。",
+            "source": "GitHub",
+            "stars": "39962",
+            "language": "C#",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "ShareX is a free and open-source application that enables users to capture or record any area of their screen with a single keystroke. It also supports uploading images, text, and various file types to a wide range of d…",
+            "is_foreign": true
+          },
+          {
+            "title": "github/spec-kit",
+            "url": "https://github.com/github/spec-kit",
+            "intro": "给 AI 编程助手定规矩的工具包，让它按流程写代码而不是乱写。",
+            "features": [
+              "先写清需求再让 AI 动手开发",
+              "提供修 bug 和评估点子的固定流程",
+              "模板可复用，也能换成自己的流程"
+            ],
+            "guide": "需要先装 Python 3.11 以上、uv 和一个受支持的 AI 编程助手，然后在终端安装命令行工具并初始化项目，示例默认用 GitHub Copilot。",
+            "steps": [
+              "先安装 Python 3.11+、uv 和 AI 编程助手",
+              "uv tool install specify-cli",
+              "specify init my-project --integration copilot",
+              "cd my-project"
+            ],
+            "install": "uv tool install specify-cli",
+            "summary": "给 AI 编程助手定规矩的工具包，让它按流程写代码而不是乱写。",
+            "source": "GitHub",
+            "stars": "140605",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "💫 Toolkit to help you get started with SDD or any other process!",
+            "is_foreign": true
+          },
+          {
+            "title": "Comfy-Org/ComfyUI",
+            "url": "https://github.com/Comfy-Org/ComfyUI",
+            "intro": "在自己电脑上跑 AI 画图的工具，用连线搭积木的方式控制生成过程。",
+            "features": [
+              "本地生成图片，不依赖在线服务",
+              "用节点连线自由组合生成流程",
+              "提供接口，方便接到别的程序里"
+            ],
+            "guide": "README 摘录里没有给出安装命令，只说明它是本地运行的 AI 内容生成引擎；具体安装方式请以项目主页和官方文档为准。",
+            "steps": [],
+            "install": "",
+            "summary": "在自己电脑上跑 AI 画图的工具，用连线搭积木的方式控制生成过程。",
+            "source": "GitHub",
+            "stars": "136634",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 与效率工具跑在自己手里：管钱、调模型、截图、写代码、画图。"
+      }
+    ]
+  }
+}
