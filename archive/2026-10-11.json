@@ -1,0 +1,307 @@
+{
+  "date": "2026-10-11",
+  "generated_at": "2026-10-10T23:55:52.384427+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 220,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-11",
+    "digest": "OpenAI发布AI智能体Dots并承诺隐私标准，字节腾讯加速个人智能体研发追赶Meta Muse。",
+    "keywords": [
+      "OpenAI",
+      "个人智能体",
+      "英伟达",
+      "字节跳动",
+      "红果"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "OpenAI发布AI智能体Dots并承诺隐私标准",
+            "summary": "[[OpenAI]]在DevDay发布AI智能体[[Dots]]，CEO称要树立前沿AI隐私新标准，并暗讽[[Meta]]的Muse数据保护不足。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots",
+            "title_original": "AI agent makers are promising privacy — will they deliver?",
+            "excerpt": "At this year's OpenAI DevDay, CEO Sam Altman unveiled the company's new AI agent Dots - and told the crowd that the company wants to \"set a new standard for privacy in frontier AI.\" OpenAI would spend the day taking veiled shots at Meta's Muse, its primary competitor, for failing to keep users' data safe. […]",
+            "is_foreign": true
+          },
+          {
+            "title": "Qwen-Image-2.1-Turbo模型登HuggingFace热门榜",
+            "summary": "[[AtomicChat]]的[[Qwen-Image-2.1-Turbo-Uncensored-GGUF]]登上HuggingFace热门模型榜，获199赞、下载7314次。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/AtomicChat/Qwen-Image-2.1-Turbo-Uncensored-GGUF",
+            "title_original": "AtomicChat/Qwen-Image-2.1-Turbo-Uncensored-GGUF 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 180）**新发布**。类型 text-to-image。likes 199，下载 7314。标签：gguf、atomic-chat、qwen、qwen-image、qwen3-vl、text-encoder。",
+            "is_foreign": true
+          },
+          {
+            "title": "Android Auto问题影响折叠屏手机通话",
+            "summary": "[[Android Auto]]出现故障，可能由[[Gemini]]引发，影响折叠屏手机通话功能。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2280033/android-auto-bug-affecting-foldable-phones-calling/",
+            "title_original": "This Android Auto problem is affecting calls on foldable phones",
+            "excerpt": "Gemini might be causing some issues with Android Auto.",
+            "is_foreign": true
+          },
+          {
+            "title": "Talorys：Cloudflare免费层自托管AI智能体",
+            "summary": "开发者发布[[Talorys]]，一个基于[[Cloudflare]]免费层的自托管个人AI智能体，在Hacker News获233点。",
+            "source": "Hacker News",
+            "url": "https://github.com/rociiu/talorys",
+            "title_original": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
+            "excerpt": "Article URL: https://github.com/rociiu/talorys \n Comments URL: https://news.ycombinator.com/item?id=50031614 \n Points: 233 \n # Comments: 118",
+            "is_foreign": true
+          },
+          {
+            "title": "字节语言模型研究：无需分词器可超越子词模型",
+            "summary": "论文显示标准扁平[[Transformer]]可直接处理原始字节序列，随参数规模扩大，性能超越传统子词模型。",
+            "source": "Lobsters",
+            "url": "https://arxiv.org/html/2610.05978v1",
+            "title_original": "Byte Language Models: Scaling, Emergent Abstractions, and Information Allocation",
+            "excerpt": "The paper challenges the assumption that language models need explicit tokenizers to be efficient demonstrating that standard flat Transformers can process raw byte sequences and actually outperform traditional subword models as parameter sizes scale. The prevailing thought in the field has been that processing raw by…",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "英伟达洽谈收购或追加投资Reflection AI",
+            "summary": "[[英伟达]]正深入谈判收购或追加投资[[Reflection AI]]，后者10月5日发布首款开放权重模型Beam，交易或采人才兼并模式。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/011/541.htm",
+            "title_original": "消息称英伟达洽谈收购 / 追加投资 Reflection AI，加码开源模型",
+            "excerpt": "IT之家 10 月 11 日消息，据金融时报消息，知情人士透露，英伟达正就收购美国初创公司 Reflection AI 或向其追加投资展开深入谈判。 Reflection AI 专注于开发开放权重模型，于当地时间 10 月 5 日发布旗下首款开放权重 AI 模型 Beam。 知情人士补充称，目前的谈判尚处初期阶段，潜在交易可能采取多种形式 —— 包括所谓“人才兼并”模式。在这一架构下，英伟达将吸纳其核心团队并获取技术授权，从而绕开全面并购通常伴随的漫长反垄断审查。 英伟达目前已是 Reflection 的主要股东之一，也可能选择通过新一轮股权投资，或以提供更多芯片与算力资源的合作方案，进一步加深与该公司的绑定。英伟达此前已向 Re…",
+            "is_foreign": false
+          },
+          {
+            "title": "字节腾讯加速个人AI智能体研发追赶Meta Muse",
+            "summary": "[[字节跳动]]国庆前加紧推进代号Spell的个人智能体项目，[[腾讯]]9月底上线个人智能体产品，追赶[[Meta]]的Muse。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/011/548.htm",
+            "title_original": "消息称字节、腾讯加速个人 AI 智能体研发，追赶 Meta Muse",
+            "excerpt": "IT之家 10 月 11 日消息，据财新报道，Meta 发布个人智能体 Muse 后，引起国内科技巨头迅速跟进。 10 月 9 日，字节内部人士透露， 字节跳动已在国庆假期前加紧推动个人智能体产品研发 。该项目起始于字节跳动在今年 4 月开启的新项目，代号“Spell”，是在 2025 年豆包手机助手个人智能体（personal agent）方向上的延续，当时，豆包内部已经就个人智能体方向的产品启动内测。 Muse 等个人智能体在海外火爆后，字节跳动加速了项目推进。该产品由豆包手机助手团队主导，由 Spell 项目与豆包对话团队共同负责，计划将“Spell”项目与豆包产品结合，目标是尽快对外推出。 腾讯则在 9 月底上线了一款个人…",
+            "is_foreign": false
+          },
+          {
+            "title": "数智周报：特朗普要求AI安全事件上报等",
+            "summary": "特朗普政府要求AI公司发生安全事件后立即上报；[[华为]]与[[高通]]达成专利许可协议；[[月之暗面]]据悉将完成IPO前融资，估值达500亿美元。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8163752.html",
+            "title_original": "【数智周报】特朗普政府要求AI公司在发生安全事件后立即上报；华为与高通宣布达成广泛专利许可协议；月之暗面据悉即将完成IPO前融资，估值将达500亿美元",
+            "excerpt": "（10月5日-10日）Manus完成超5亿美元新一轮融资；博通据悉计划为OpenAI定制芯片项目融资逾500亿美元；Anthropic发布最新AI模型Claude Haiku 5.5，运行成本较4.5低约75%；OpenAI宣布面向全球所有ChatGPT用户上线GPT-6",
+            "is_foreign": false
+          },
+          {
+            "title": "Jev开发商估值75亿美元，笔记本价格恐上涨",
+            "summary": "[[Jev]]开发商估值达75亿美元；[[苹果]]投资AI音频初创；[[Trendforce]]预计2027年全球笔记本出货低个位数下滑，价格或续涨。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372184",
+            "title_original": "Jev 开发商估值已达 75 亿美元；苹果投资 AI 音频初创；传 OpenAI、Anthropic 高管私下推演 AI 灾难场景",
+            "excerpt": "内存等成本压力上升，2027 全球笔记本价格恐继续上涨 \n 市场调查机构集邦咨询（Trendforce）于 10 月 8 日发布博文，表示如果零部件价格继续维持高位，品牌扩大成本转嫁， 终端涨价可能延长用户换机周期，预估 2027 年全球笔记本市场面临出货、价格双重影响。 \n 在 2026 年第 3 季度以建议零售价 900 美元的主流笔记本为例，其 CPU、内存及 SSD 占物料成本约 68%，品牌面临提价、压缩毛利或降低配置的选择。 \n 该机构预计，2027 年全球出货量将低个位数（预估低于 5%）下滑。若 CPU 与 DRAM 价格维持高位，品牌扩大成本转嫁，终端涨价可能延长换机周期，这种情况下，全年降幅或扩大至高个位数（可…",
+            "is_foreign": false
+          },
+          {
+            "title": "小米披露MiMo-V2.6规模化强化学习路线",
+            "summary": "[[小米]]披露[[MiMo-V2.6]]规模化强化学习路线，单次RL后训练烧掉260万美元，每步消耗37亿Token。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/gNdWoDM8ygkAjXfsLaBK?utm_source=rss&utm_medium=article",
+            "title_original": "单次RL后训练烧掉260万美元、每步37亿Token，小米披露MiMo-V2.6“规模化强化学习”路线",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "品牌如何利用秋季Prime Day后势头",
+            "summary": "秋季[[Prime Big Deals Days]]将假日购物推至10月，消费者提前比价，卖家备战黑色星期五。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/how-brands-can-capitalize-on-post-fall-prime-day-momentum/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "How brands can capitalize on post-Fall Prime Day momentum",
+            "excerpt": "This fall's Prime Big Deals Days is pushing holiday shopping into October as shoppers compare prices earlier and sellers prep for Black Friday.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "红果日活1.68亿，AI短剧梗走红",
+            "summary": "[[红果]]日活达1.68亿，其AI短剧产出的“吃了不烧心”等梗广泛传播，反映AI对语言的改变。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1596048.html",
+            "title_original": "吃了不烧心：红果日活1.68亿的背后",
+            "excerpt": "「吃了不烧心」是AI对人类语言改变的第一步。 来源： IC实验室 或许 「吃了不烧心」 这样的梗，总有热度过去的一天。但 AI对人类语言的改变，远远还没有终结。 「贵是贵了点，但吃了不烧心」、「宁可少挣点，也不能坏了规矩」、「先把规矩立住，路才能越走越宽」......这些梗这段时间你应该听过不少。 这些梗基本都来自于红果的AI短剧。 如果你刷过这些短剧，一定会对它们的剧情模板非常熟悉。 最典型的故事是这样的： 工地门口卖盒饭，主角卖十五块一份，坚持用大骨熬汤，新鲜后腿肉，宁可起早贪黑少赚点，也要保证工人吃饱吃好。 这时候呢，必然会冒出一个利欲熏心的徒弟啊或者隔壁同行什么的，反手推出九块九包圆。主角冷脸劝说，咱们干餐饮，食材是底线，…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "Jakeschincariol/replica-skill",
+            "url": "https://github.com/Jakeschincariol/replica-skill",
+            "intro": "一套让 AI 照着别人的 App 重做一个、还能顺手改掉用户吐槽点的工具包。",
+            "features": [
+              "拆解目标 App 的功能和流程",
+              "照着重建一个能用的版本",
+              "自动找 bug 并修掉用户抱怨",
+              "生成品牌名和落地页文案"
+            ],
+            "guide": "在 Claude 里粘贴仓库地址并说 install skill 即可；用 Claude Code 的话可以按插件方式装。不需要注册、不需要 API Key。",
+            "steps": [
+              "在 Claude 中粘贴仓库链接并输入 install skill",
+              "或执行 /plugin marketplace add Jakeschincariol/replica-skill",
+              "再执行 /plugin install replica-skill@replica-skill"
+            ],
+            "install": "https://github.com/Jakeschincariol/replica-skill\n\ninstall skill",
+            "summary": "一套让 AI 照着别人的 App 重做一个、还能顺手改掉用户吐槽点的工具包。",
+            "source": "GitHub",
+            "stars": "1635",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
+            "is_foreign": true
+          },
+          {
+            "title": "storytold/pdfcraft",
+            "url": "https://github.com/storytold/pdfcraft",
+            "intro": "一个免费开源的 PDF 工具箱，能看、能合并拆分、能加密，对标 Adobe Acrobat。",
+            "features": [
+              "阅读和查找 PDF 内容",
+              "合并、拆分、整理页面",
+              "给 PDF 加密码保护",
+              "支持表单和图层"
+            ],
+            "guide": "提供 macOS、Windows、Linux、FreeBSD 和网页版，去官网或仓库下载对应版本安装即可，无需额外配置。",
+            "steps": [
+              "访问 getartcraft.com/apps/pdfcraft 下载对应系统版本",
+              "安装后打开即可使用"
+            ],
+            "install": "",
+            "summary": "一个免费开源的 PDF 工具箱，能看、能合并拆分、能加密，对标 Adobe Acrobat。",
+            "source": "GitHub",
+            "stars": "7938",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "An open-source, clean-room reimplementation of Adobe Acrobat built in pure Rust",
+            "is_foreign": true
+          },
+          {
+            "title": "DayuanJiang/next-ai-draw-io",
+            "url": "https://github.com/DayuanJiang/next-ai-draw-io",
+            "intro": "用一句话描述，AI 就在 draw.io 画布上帮你画出流程图和架构图。",
+            "features": [
+              "一句话生成架构图、流程图",
+              "选中图形让 AI 只改这部分",
+              "每次修改可对比、可撤销",
+              "导出为 drawio、png、svg"
+            ],
+            "guide": "有网页版可直接用，也有 Windows/macOS/Linux 桌面版；还能作为 MCP 服务接入 Claude Code、Cursor 等工具。",
+            "steps": [
+              "访问 next-ai-drawio.jiang.jp 在线使用",
+              "或下载桌面版安装",
+              "或在 AI 编程工具中接入 MCP Server"
+            ],
+            "install": "",
+            "summary": "用一句话描述，AI 就在 draw.io 画布上帮你画出流程图和架构图。",
+            "source": "GitHub",
+            "stars": "36163",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.",
+            "is_foreign": true
+          },
+          {
+            "title": "excalidraw/excalidraw",
+            "url": "https://github.com/excalidraw/excalidraw",
+            "intro": "一个手绘风格的白板工具，画流程图、草图都行，还能多人实时协作。",
+            "features": [
+              "手绘风格画图，支持多种图形",
+              "多人实时协作，端到端加密",
+              "可离线使用，自动保存到浏览器",
+              "导出 PNG、SVG 或分享链接"
+            ],
+            "guide": "直接打开 excalidraw.com 就能用，无需安装；想自己部署可以按仓库文档用 npm 包集成。",
+            "steps": [
+              "访问 excalidraw.com 即可开始画图",
+              "如需自建，参考仓库 Quick start 文档"
+            ],
+            "install": "",
+            "summary": "一个手绘风格的白板工具，画流程图、草图都行，还能多人实时协作。",
+            "source": "GitHub",
+            "stars": "133615",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Virtual whiteboard for sketching hand-drawn like diagrams",
+            "is_foreign": true
+          },
+          {
+            "title": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "intro": "把整个代码项目变成一张可查询的知识地图，让 AI 助手不用翻文件就能回答问题。",
+            "features": [
+              "把代码、文档、PDF 变成知识图谱",
+              "每条连接都标明是直接读到还是推断的",
+              "本地解析代码，不上传机器",
+              "在 AI 助手里输入 /graphify 即可查询"
+            ],
+            "guide": "在 Claude Code、Cursor、Codex 或 Gemini CLI 里输入 /graphify 就能用；代码解析全在本地，文档和 PDF 会用到 AI 模型。",
+            "steps": [
+              "在支持的 AI 编程助手中打开项目",
+              "输入 /graphify 命令",
+              "按提示等待生成知识图谱"
+            ],
+            "install": "",
+            "summary": "把整个代码项目变成一张可查询的知识地图，让 AI 助手不用翻文件就能回答问题。",
+            "source": "GitHub",
+            "stars": "125305",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained…",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 帮你画图、读代码、克隆应用，把重复劳动交给机器。"
+      }
+    ]
+  }
+}
