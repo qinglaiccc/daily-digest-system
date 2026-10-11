@@ -1,5 +1,5 @@
 {
-  "classic_offset": 22,
+  "classic_offset": 24,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-09-30T23:55:38.531402+00:00",
   "recent_trending": [
-    "Wox-launcher/Wox",
-    "dzhng/jevgrep",
-    "lissy93/dashy",
     "YishenTu/claudian",
     "KKKKhazix/AIHOT",
     "plotly/dash",
@@ -174,12 +171,15 @@
     "ShareX/ShareX",
     "Jakeschincariol/replica-skill",
     "storytold/pdfcraft",
-    "DayuanJiang/next-ai-draw-io"
+    "DayuanJiang/next-ai-draw-io",
+    "wheresryan22/anatomy",
+    "storytold/vectorcraft",
+    "Flow-Launcher/Flow.Launcher"
   ],
-  "last_run_date": "2026-10-10",
+  "last_run_date": "2026-10-11",
   "last_classic": [
-    "excalidraw/excalidraw",
-    "Graphify-Labs/graphify"
+    "supabase/supabase",
+    "JuliusBrussee/caveman"
   ],
-  "updated_at": "2026-10-10T23:55:39.941288+00:00"
+  "updated_at": "2026-10-11T23:55:37.738281+00:00"
 }

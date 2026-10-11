@@ -1,0 +1,290 @@
+{
+  "date": "2026-10-12",
+  "generated_at": "2026-10-11T23:55:48.642394+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 232,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-12",
+    "digest": "亚马逊洽谈70亿美元收购Decart，SpaceX估值言论引质疑，NikeSKIMS上海落地。",
+    "keywords": [
+      "Decart",
+      "SpaceX",
+      "NikeSKIMS",
+      "Grok",
+      "EmbeddingGemma"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Grok免费版功能受限",
+            "summary": "[[Grok]]免费版功能有限，2026年免费与付费功能划分明确。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2281213/spacexai-grok-free-features-2026/",
+            "title_original": "SpaceXAI's Grok: What's free in 2026 and what isn't?",
+            "excerpt": "As with most AI tools, Grok's free tier is pretty limited.",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌EmbeddingGemma-2登热门榜",
+            "summary": "[[Google]]的[[EmbeddingGemma-2]]登上HuggingFace热门模型榜，下载量98829，点赞1692。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/google/embeddinggemma-2",
+            "title_original": "google/embeddinggemma-2 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 1561）类型 feature-extraction。likes 1692，下载 98829。标签：transformers、safetensors、embedding_gemma2、feature-extraction、embedding、sentence-transformers。",
+            "is_foreign": true
+          },
+          {
+            "title": "TypeSafe/Jev估值75亿美元",
+            "summary": "[[TypeSafe]]/[[Jev]]上线三周ARR超1亿美元，估值达75亿美元。",
+            "source": "Latent Space",
+            "url": "https://www.latent.space/p/ainews-typesafejev-at-100m-arr-75b",
+            "title_original": "[AINews] TypeSafe/Jev at >$100M ARR, $7.5B valuation 3 weeks after launch",
+            "excerpt": "Wow.",
+            "is_foreign": true
+          },
+          {
+            "title": "硅谷跟进AI更名",
+            "summary": "部分硅谷人士跟随[[特朗普]]将AI改称“超级智能”的提法。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
+            "title_original": "Silicon Valley is falling in line with Trump’s attempt to rename AI",
+            "excerpt": "When President Donald Trump announced his plans to rebrand artificial intelligence as \"super intelligence,\" you'd be forgiven for being skeptical that it would catch on. While most of the broader population is sticking with AI, some of Silicon Valley's most powerful are falling in line and trying to give Trump the gre…",
+            "is_foreign": true
+          },
+          {
+            "title": "JulianFlux检索路由研究",
+            "summary": "[[JulianFlux]]发布电动力学向量检索与因果路由研究，登Hacker News。",
+            "source": "Hacker News",
+            "url": "https://github.com/julianjohnson-web/julianflux-research",
+            "title_original": "JulianFlux: Electrodynamic vector retrieval and causal routing for AI",
+            "excerpt": "Article URL: https://github.com/julianjohnson-web/julianflux-research \n Comments URL: https://news.ycombinator.com/item?id=50048702 \n Points: 4 \n # Comments: 0",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "马斯克SpaceX估值言论遭质疑",
+            "summary": "[[马斯克]]称[[SpaceX]]估值将超1000万亿美元，网友晒数据表质疑；传[[腾讯]]、[[字节]]加速个人智能体研发；四部门拟禁汽车全隐藏式门把手。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372216",
+            "title_original": "马斯克豪言 SpaceX 估值将超1000万亿美元，遭拉表打脸；传腾讯字节加速个人智能体研发；四部门拟禁止汽车采用全隐藏式门把手",
+            "excerpt": "马斯克豪言 SpaceX 估值超 1000 万亿美元，惨遭拉表打脸 近日，马斯克在社交平台大胆预测，SpaceX 未来估值有望突破 1000 万亿美元，体量将远超当前全球经济总量。目前 SpaceX 估值仅约 2.2 万亿美元，而 2025 年全球 GDP 总量约 118 万亿美元，此番极具颠覆性的超高估值言论引发全网热议与质疑。 面对这一惊人预测，有网友晒出富国银行证券整理的一张名为「说到做到记录，以及其所隐含的折价」数据表格，直接打脸马斯克的激进预测。 表格梳理了特斯拉、SpaceX 多项核心项目，Robotaxi、Semi 卡车、星舰等重点产品的实际落地成果与马斯克此前公布的目标差距悬殊，多项项目达成率极低、交付严重延期，部…",
+            "is_foreign": false
+          },
+          {
+            "title": "AI代码智能体优化架构方法",
+            "summary": "InfoQ中文介绍利用AI代码智能体优化软件架构的五种方法。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/soRObi5sjdTTUM95zLJK?utm_source=rss&utm_medium=article",
+            "title_original": "利用 AI 代码智能体优化软件架构的五种方法",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "谷歌借Agent竞争",
+            "summary": "[[谷歌]]请来[[Claude]]核心人物，发力[[Agent]]底座，与[[OpenAI]]竞争。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8164268.html",
+            "title_original": "请来Claude老祖，谷歌能借Agent翻身吗？",
+            "excerpt": "agent底座之争，OpenAI又被针对了。",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek Bot民间版上线",
+            "summary": "民间版[[DeepSeek]] Bot发布，DSH安装插件即可使用。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/10/502544.html",
+            "title_original": "DeepSeek Bot来了！民间版，DSH装个插件就能用",
+            "excerpt": "Grok Bot我养不起，ds bot不得高低尝尝咸淡？",
+            "is_foreign": false
+          },
+          {
+            "title": "亚马逊洽谈收购Decart",
+            "summary": "[[亚马逊]]洽谈收购AI初创[[Decart]]，估值约70亿美元，看中其AI芯片切换软件。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/011/720.htm",
+            "title_original": "Anthropic 放弃后，消息称亚马逊洽谈收购初创公司 Decart、看中 AI 芯片切换软件",
+            "excerpt": "IT之家 10 月 12 日消息，据华尔街日报消息，据知情人士透露，亚马逊正就收购人工智能初创公司 Decart 展开谈判， 该笔交易的潜在估值约为 70 亿美元 （IT之家注：现汇率约合 469.48 亿元人民币） 。 总部位于旧金山的 Decart 专注于研发跨芯片适配软件，能够帮助开发者在不同 AI 芯片之间无缝切换。随着各大科技巨头纷纷竞逐算力资源，这一底层软件能力正变得愈发关键。 知情人士指出，若谈判进展顺利且未出现新的竞购方，该交易或将很快达成。 研究机构 PitchBook 的数据显示，Decart 此前已从红杉资本、Benchmark 以及 Radical Ventures 等知名风投机构累计筹集逾 4 亿美元 （…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "NikeSKIMS上海首店落地",
+            "summary": "[[NikeSKIMS]]中国首家线下体验空间登陆上海兴业太古汇，慢闪运营五个月。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1595838.html",
+            "title_original": "卡戴珊=新乔丹？能否解开耐克的增长死结",
+            "excerpt": "对耐克而言，NikeSKIMS更大的价值是完成一次关键的试探。 作者：扰扰 原标题：卡戴珊=新乔丹？NikeSKIMS能解开耐克的增长死结吗？ 9 月 29 日，NikeSKIMS 中国首家线下体验空间，正式登陆上海兴业太古汇，紧邻 LV “路易号” 巨轮，品牌的野心一目了然。 在顶奢品牌扎堆的商圈落地，做长达五个月的慢闪运营，这一步布局，核心目的不在于冲销量、做曝光，而是向市场抛出一个全新的定义—— 运动塑身衣是可以和顶奢品牌同台陈列、适配多场景穿搭的全天候时尚单品。 图源：耐克小红书 从短期联名到长期存续，NikeSKIMS 是耐克历史上首次与外部公司合作推出的新品牌。 《纽约时报》更将这次合作与 1997 年耐克推出 Jor…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "wheresryan22/anatomy",
+            "url": "https://github.com/wheresryan22/anatomy",
+            "intro": "让 AI 把抽象概念画成能动手操作的立体机械图，方便讲解复杂原理。",
+            "features": [
+              "把技术概念变成可交互的立体机械图",
+              "生成的图能随鼠标和键盘动起来",
+              "图里每个数字都来自同一套模型"
+            ],
+            "guide": "需要先装好 Claude Code、OpenCode 或 Codex 这类 AI 编程助手，再用一条命令把技能装进去，之后在对话里输入 /anatomy 加你的问题即可。",
+            "steps": [
+              "先安装 Claude Code 或 OpenCode、Codex",
+              "运行 npx skills add wheresryan22/anatomy -g -a claude-code",
+              "在 Claude Code 里输入 /anatomy 加要解释的概念"
+            ],
+            "install": "npx skills add wheresryan22/anatomy -g -a claude-code",
+            "summary": "让 AI 把抽象概念画成能动手操作的立体机械图，方便讲解复杂原理。",
+            "source": "GitHub",
+            "stars": "3227",
+            "language": "JavaScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects, ready to use in docs, articles, a…",
+            "is_foreign": true
+          },
+          {
+            "title": "storytold/vectorcraft",
+            "url": "https://github.com/storytold/vectorcraft",
+            "intro": "一个免费开源的矢量画图工具，对标 Adobe Illustrator，能在电脑和浏览器里用。",
+            "features": [
+              "画矢量图，支持钢笔和贝塞尔曲线",
+              "图层、混合、透视网格都能实时编辑",
+              "macOS、Windows、Linux 和浏览器都能跑"
+            ],
+            "guide": "可以直接从官网下载安装包，在 macOS、Windows、Linux 或 FreeBSD 上本地运行，也能在浏览器里通过 WebAssembly 打开使用，无需额外配置。",
+            "steps": [
+              "访问官网 getartcraft.com/apps/vectorcraft",
+              "下载对应系统的安装包或直接在浏览器打开"
+            ],
+            "install": "",
+            "summary": "一个免费开源的矢量画图工具，对标 Adobe Illustrator，能在电脑和浏览器里用。",
+            "source": "GitHub",
+            "stars": "7073",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "VectorCraft: An open-source, vector art tool written by scratch in pure Rust",
+            "is_foreign": true
+          },
+          {
+            "title": "Flow-Launcher/Flow.Launcher",
+            "url": "https://github.com/Flow-Launcher/Flow.Launcher",
+            "intro": "Windows 上的快速搜索启动器，敲几个键就能找到应用、文件和网页书签。",
+            "features": [
+              "搜索应用、文件和文件内容",
+              "支持浏览器书签和网页搜索",
+              "有社区做的各种插件可扩展"
+            ],
+            "guide": "仅支持 Windows 10 及以上系统，可以用安装包或便携版，也能通过 winget、Scoop、Chocolatey 一键安装，装完按快捷键呼出搜索框即可。",
+            "steps": [
+              "确认系统是 Windows 10 或更高版本",
+              "运行 winget install \"Flow Launcher\"",
+              "装好后按快捷键呼出搜索框使用"
+            ],
+            "install": "winget install \"Flow Launcher\"",
+            "summary": "Windows 上的快速搜索启动器，敲几个键就能找到应用、文件和网页书签。",
+            "source": "GitHub",
+            "stars": "15748",
+            "language": "C#",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": ":mag: Quick file search & app launcher for Windows with community-made plugins",
+            "is_foreign": true
+          },
+          {
+            "title": "supabase/supabase",
+            "url": "https://github.com/supabase/supabase",
+            "intro": "一个开源的开发平台，帮你快速搭好网站或 App 需要的数据库、登录和文件存储。",
+            "features": [
+              "自带数据库，不用自己搭服务器",
+              "自动生成接口，前端直接调用",
+              "内置登录、文件存储和 AI 向量工具"
+            ],
+            "guide": "可以直接用官方托管服务，注册后按文档接入；也可以自己部署。具体安装命令 README 里没有给出，建议先看 supabase.com/docs 的入门文档。",
+            "steps": [
+              "访问 supabase.com 注册账号",
+              "按 supabase.com/docs 的文档创建项目并接入"
+            ],
+            "install": "",
+            "summary": "一个开源的开发平台，帮你快速搭好网站或 App 需要的数据库、登录和文件存储。",
+            "source": "GitHub",
+            "stars": "111369",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+            "is_foreign": true
+          },
+          {
+            "title": "JuliusBrussee/caveman",
+            "url": "https://github.com/JuliusBrussee/caveman",
+            "intro": "让 AI 编程助手说话更简短，省下大量费用，但代码答案依然准确。",
+            "features": [
+              "让 AI 回复更短，省下约六成费用",
+              "代码部分保持原样不改动",
+              "提供代理和技能两种使用方式"
+            ],
+            "guide": "README 里没有给出具体的安装命令，只提到有代理和技能两种用法，需要去官网 docs.caveman.so 查看详细步骤。",
+            "steps": [
+              "访问 docs.caveman.so 查看安装说明"
+            ],
+            "install": "",
+            "summary": "让 AI 编程助手说话更简短，省下大量费用，但代码答案依然准确。",
+            "source": "GitHub",
+            "stars": "111053",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 更省钱、画图更省事、找文件更快的实用工具"
+      }
+    ]
+  }
+}
