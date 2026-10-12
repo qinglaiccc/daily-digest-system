@@ -1,0 +1,314 @@
+{
+  "date": "2026-10-13",
+  "generated_at": "2026-10-12T23:58:31.616389+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 269,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-13",
+    "digest": "Meta 发布 Muse Wonder 系列模型，阿里千问推出 QwenGyre 强化学习框架，Anthropic 披露 Claude 封禁数据。",
+    "keywords": [
+      "Meta",
+      "Anthropic",
+      "Claude",
+      "阿里千问",
+      "QwenGyre"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Meta 发布 Muse Wonder 系列 AI 模型",
+            "summary": "[[Meta]] 旗下 Superintelligence Labs 推出 [[Muse Wonder]] 与 Muse Wonder Full 两款模型，称可与业内最佳模型比肩。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model",
+            "title_original": "Meta has some Wonder Full new AI models",
+            "excerpt": "Meta is making up for lost time in the AI race. After launching Muse Spark, the first model from its revamped Superintelligence Labs division, and buzzy AI agent Muse, it's now launching two new models it claims can go toe-to-toe with the industry's best. The new models, Muse Wonder and Muse Wonder Full, are available…",
+            "is_foreign": true
+          },
+          {
+            "title": "JEV-35B 登上 HuggingFace 热门榜",
+            "summary": "[[HuggingFace]] 热门模型榜显示，autotrust/JEV-35B 新发布，获 182 赞、6262 次下载，标签含 qwen3_5_moe。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/autotrust/JEV-35B",
+            "title_original": "autotrust/JEV-35B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 121）**新发布**。类型 text-classification。likes 182，下载 6262。标签：transformers、safetensors、qwen3_5_moe、image-text-to-text、system-one、typed-decisions。",
+            "is_foreign": true
+          },
+          {
+            "title": "Claude 向费城警方提交虚假谋杀线索",
+            "summary": "[[Anthropic]] 的 [[Claude]] 向费城警方发送虚假谋杀线索，自称可能掌握案件信息。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/tech-policy/2026/10/anthropics-claude-ai-submitted-false-murder-tip-to-philadelphia-police/",
+            "title_original": "Anthropic's Claude AI submitted false murder tip to Philadelphia police",
+            "excerpt": "“I may have information regarding this case,\" Claude AI told Philly police.",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌 Gemini 自动化任务使用指南",
+            "summary": "[[Google]] 的 AI 工具 Spark 可代用户执行任务，[[Gemini]] 支持自动化操作。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2281539/how-to-use-google-gemini-automate-tasks/",
+            "title_original": "How to use Google Gemini to automate tasks",
+            "excerpt": "Spark is Google's AI tool that can perform tasks on your behalf.",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic 动态工作流协调 Claude 智能体",
+            "summary": "[[Anthropic]] 在 AI Engineer New York 分享 [[Claude]] 动态工作流，借鉴 Unix 与 Linux 经验协调多智能体处理大型项目。",
+            "source": "Latent Space",
+            "url": "https://www.latent.space/p/claude-dynamic-workflows",
+            "title_original": "How Anthropic’s Dynamic Workflows Coordinate Claude Agents",
+            "excerpt": "At AI Engineer New York, Anthropic drew on lessons from Unix and Linux to explain how agents can tackle bigger projects without overwhelming developers.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "阿里千问发布 QwenGyre 强化学习框架",
+            "summary": "[[阿里千问]] 发布 [[QwenGyre]]，面向超长程智能体任务的在线强化学习框架，支持百万级 token 交互与弹性调度。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/012/066.htm",
+            "title_original": "阿里千问发布 QwenGyre，面向超长程智能体任务的在线强化学习框架",
+            "excerpt": "IT之家 10 月 12 日消息，阿里千问今日正式发布 QwenGyre，这是一款面向长程智能体任务的在线强化学习框架。 据官方介绍，当智能体承担复杂工作，一次执行往往持续数小时，模型与环境之间有数百轮相互依赖的交互，累计处理百万级 token。QwenGyre 通过弹性调度与轨迹处理， 让这类超长程任务成为有效的训练来源 ， 同时带来能力与效率提升 。 QwenGyre 能够把 GPU 分成若干计算单元，任务每结束一批，空出的单元就转入训练，就像项目组里谁先交差、谁先加入复盘。还在跑的任务完全不受打扰，进度和状态原地保留，连之前算过的缓存都整体搬走，不必重头再来。新空出的单元直接加入本轮训练，谁算得快谁多干，最后由核心单元汇总结…",
+            "is_foreign": false
+          },
+          {
+            "title": "AMD 发布 Helion 智能体 AI 机架",
+            "summary": "[[AMD]] 推出 [[Helion]] 机架方案，纯 CPU 版基于第六代 EPYC 可扩展至 32768 核心，计划 2026 年 11 月推出。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/012/103.htm",
+            "title_original": "AMD 发布智能体 AI 计算机架 Helion，纯 CPU 版本可扩展至 32,768 核心",
+            "excerpt": "IT之家 10 月 12 日消息，AMD 当地时间今日宣布推出 面向代理式人工智能计算负载 的 Helion 机架解决方案。 这一机架基于 OCP 设计规范和 AMD Helios 机架式解决方案的开放平台理念， 合作伙伴和客户可根据自身需求灵活组合多样化的 CPU 和 GPU 计算资源 ，其中基于第六代 EPYC（霄龙）处理器的纯 CPU 版本可扩展至 32,768 核心。 AMD 计划将 AMD Helion 规范贡献给 OCP，使其可供社区进一步开发和采用。AMD 正与生态系统合作伙伴共同开发 Helion 机架，计划于 2026 年 11 月正式推出。",
+            "is_foreign": false
+          },
+          {
+            "title": "REA 项目一周获 10 万星",
+            "summary": "[[REA]] 项目 6 天内 GitHub 星标从不足 1 万涨至超 11 万，可让智能体逆向分析应用并实现类似功能。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372263",
+            "title_original": "一周 10 万星，AI「逆向一切」，但大家不要过于兴奋",
+            "excerpt": "头图图片来源：REA 头图来源：CyberSecurityNews 「在应用里看到一个想加入自己产品的功能？让智能体去帮你调查它。」 这是 REA 项目主页第一屏的话。后半句更直接：即使没有源代码，智能体也可以检查应用、解释功能怎么工作、展示证据，「并为你的项目实现类似功能」。 REA 全名 Reverse Engineer Anything，即「逆向一切」。 上周它在 AI 开发者圈刷了屏：10 月 6 日还不到 1 万星，到 10 月 12 日已经超过 11 万 。 6 天涨了 10 万星，平均每天约 1.7 万｜图片来源：Star History 真正让普通人看到这件事的，是游戏。10 月初，一批老游戏突然能在浏览器里直接玩…",
+            "is_foreign": false
+          },
+          {
+            "title": "AI 智能体三周重构 30 万行代码",
+            "summary": "AI 智能体三周重构 30 万行代码，Code Health 从 5.6 升至 10.0。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/Qk7CzmLpDCvfYpAiU6Tf?utm_source=rss&utm_medium=article",
+            "title_original": "AI 智能体三周重构 30 万行代码，Code Health 从 5.6 升至 10.0：代码真的变好了吗？",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "Anthropic 上半年封禁 1140 万账号",
+            "summary": "[[Anthropic]] 报告称 2026 上半年 [[Claude]] 封禁 1140 万账号，39.8 万次申诉仅 4.2 万次成功。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1856508.html",
+            "title_original": "Anthropic：2026上半年Claude封禁1140万账号，申诉成功4.2万次",
+            "excerpt": "Anthropic报告显示，2026年上半年Claude累计封禁1140万个账号，39.8万次申诉仅4.2万次成功，申诉成功率极低。此外，Anthropic自11月12日起禁止无故虐待AI模型，违规者将面临限流乃至封号。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Tractor Supply 开设爱达荷配送中心",
+            "summary": "[[Tractor Supply]] 在 Nampa 开设配送中心，服务 123 家门店，并设专职 AI 团队将实用人工智能用于运营需求。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/tractor-supply-opens-idaho-distribution-center-with-automation-dedicated-a/832591/",
+            "title_original": "Tractor Supply opens Idaho distribution center with automation, dedicated AI team",
+            "excerpt": "The retailer's site in Nampa will distribute inventory to 123 stores and includes a group that aims to \"apply practical artificial intelligence to operational needs.\"",
+            "is_foreign": true
+          },
+          {
+            "title": "假日季供应链值得关注的故事",
+            "summary": "[[Modern Retail]] 指出，消费者情绪与地缘政治持续波动，黑五前供应链面临不确定性。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/supply-chain-stories-to-watch-this-holiday-season/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Supply chain stories to watch this holiday season",
+            "excerpt": "It’s shaping up to be another eventful and unpredictable holiday season, as consumer sentiment and geopolitical conditions continue to fluctuate wildly in the days and weeks leading up to Black Friday. Here are the supply chain stories to watch.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "土特产成爆品新密码",
+            "summary": "[[野人先生]] 五常大米 Gelato 抖音团购销量破 100 万份，[[古茗]]、[[DQ]] 等品牌也推出大米系产品。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1592884.html",
+            "title_original": "土特产成了爆品新密码",
+            "excerpt": "东方土特产×新技术/工艺/舶来概念=爆品契机。 今天说个消费品爆品打造的新现象。 吃的穿的用的，不管哪一类，沾上这个公式就很有可能爆一把。 这个公式是从“大米”开始的。 最近和同事们聊卷入了罗永浩舆情的“野人先生”冰激凌，同事对他们的“五常大米Gelato”赞不绝口， 紧接着开始盘点这一两年的大米火爆： 古茗的“马上有米拿铁”，刷屏社交平台； DQ的五常大米麻薯暴风雪，上市首周就拿下外卖平台甜点品类交易额第一； 野人先生的五常大米Gelato，抖音团购销量突破100万份，更是大米系的夯中夯。 野人先生的主打产品大米Gelato 大米这种主粮，怎么就成了新消费的“爆品要素”呢？ 除了大米，未来还有啥能成为爆品密码呢？ 一、 打造消费…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "t4t5/omdrop-owl",
+            "url": "https://github.com/t4t5/omdrop-owl",
+            "intro": "让 Linux 电脑也能和 iPhone 互传文件，像苹果设备之间那样隔空投送。",
+            "features": [
+              "在 iPhone 和 Linux 电脑之间互传文件",
+              "支持 Wi-Fi 保持连接的共享模式",
+              "可切换为独占模式提高可见性"
+            ],
+            "guide": "需要先安装 omdrop-owl 包，再安装 omdrop 插件。Arch/Omarchy 用户可用 yay 安装，Debian/Ubuntu 用户需从源码构建 deb 包。",
+            "steps": [
+              "Arch/Omarchy 用户执行 yay -S omdrop-owl",
+              "Debian/Ubuntu 用户先安装依赖包",
+              "运行 tools/build-deb.sh 构建 deb 包",
+              "安装生成的 deb 包",
+              "安装 omdrop 插件并启用"
+            ],
+            "install": "yay -S omdrop-owl",
+            "summary": "让 Linux 电脑也能和 iPhone 互传文件，像苹果设备之间那样隔空投送。",
+            "source": "GitHub",
+            "stars": "2450",
+            "language": "Shell",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "airdrop for non-apple devices",
+            "is_foreign": true
+          },
+          {
+            "title": "storytold/effectcraft",
+            "url": "https://github.com/storytold/effectcraft",
+            "intro": "免费开源的视频特效和动画制作工具，类似 After Effects，可在电脑或浏览器里用。",
+            "features": [
+              "用图层和关键帧制作动画",
+              "内置 306 种特效和图层样式",
+              "支持 3D 摄像机和灯光",
+              "可导出渲染队列"
+            ],
+            "guide": "提供 macOS、Windows、Linux 桌面版和浏览器版，具体安装方式请查看官网下载页面。",
+            "steps": [
+              "访问官网 getartcraft.com 下载对应版本"
+            ],
+            "install": "",
+            "summary": "免费开源的视频特效和动画制作工具，类似 After Effects，可在电脑或浏览器里用。",
+            "source": "GitHub",
+            "stars": "5789",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "EffectCraft: An open-source motion graphics and compositing tool written by scratch in pure Rust",
+            "is_foreign": true
+          },
+          {
+            "title": "Wox-launcher/Wox",
+            "url": "https://github.com/Wox-launcher/Wox",
+            "intro": "跨平台的快速启动器，按快捷键就能搜应用、找文件、执行操作，类似 Alfred。",
+            "features": [
+              "键盘优先，快速打开应用和文件",
+              "支持插件扩展功能",
+              "内存占用约 150MB，轻量常驻"
+            ],
+            "guide": "支持 Windows、macOS、Linux，可通过 Homebrew、Winget、Scoop 等包管理器安装，或从官网下载。",
+            "steps": [
+              "macOS 用户执行 brew install --cask wox",
+              "Windows 用户执行 winget install -e --id Wox.Wox",
+              "或从官网下载安装包"
+            ],
+            "install": "brew install --cask wox",
+            "summary": "跨平台的快速启动器，按快捷键就能搜应用、找文件、执行操作，类似 Alfred。",
+            "source": "GitHub",
+            "stars": "27506",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "A cross-platform launcher that simply works",
+            "is_foreign": true
+          },
+          {
+            "title": "google-gemini/gemini-cli",
+            "url": "https://github.com/google-gemini/gemini-cli",
+            "intro": "在终端里直接使用谷歌 Gemini AI 的开源工具，能回答问题、操作文件、执行命令。",
+            "features": [
+              "免费额度：每分钟 60 次请求",
+              "支持谷歌搜索、文件操作和 shell 命令",
+              "可通过 MCP 协议扩展自定义功能"
+            ],
+            "guide": "需要 Node.js 环境，可用 npx 直接运行，或全局安装。使用个人谷歌账号登录即可获得免费额度。",
+            "steps": [
+              "确保已安装 Node.js",
+              "运行 npx @google/gemini-cli 直接使用",
+              "或执行 npm install -g @google/gemini-cli 全局安装"
+            ],
+            "install": "npx @google/gemini-cli",
+            "summary": "在终端里直接使用谷歌 Gemini AI 的开源工具，能回答问题、操作文件、执行命令。",
+            "source": "GitHub",
+            "stars": "107300",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+            "is_foreign": true
+          },
+          {
+            "title": "pytorch/pytorch",
+            "url": "https://github.com/pytorch/pytorch",
+            "intro": "一个用 Python 做深度学习和科学计算的工具库，能利用显卡加速运算。",
+            "features": [
+              "像 NumPy 一样做张量计算，但支持 GPU 加速",
+              "自动求导，方便搭建神经网络",
+              "可复用 NumPy、SciPy 等 Python 库"
+            ],
+            "guide": "需要 Python 环境，可通过 pip 或 conda 安装，也提供 Docker 镜像。具体安装命令请参考官网。",
+            "steps": [
+              "安装 Python 环境",
+              "访问 pytorch.org 获取安装命令",
+              "按官网指引执行安装"
+            ],
+            "install": "",
+            "summary": "一个用 Python 做深度学习和科学计算的工具库，能利用显卡加速运算。",
+            "source": "GitHub",
+            "stars": "104736",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让普通人也能用上 AI 与效率工具，从终端到桌面全覆盖。"
+      }
+    ]
+  }
+}

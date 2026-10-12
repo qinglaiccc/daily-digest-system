@@ -1,5 +1,5 @@
 {
-  "classic_offset": 24,
+  "classic_offset": 26,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-09-30T23:55:38.531402+00:00",
   "recent_trending": [
-    "YishenTu/claudian",
-    "KKKKhazix/AIHOT",
-    "plotly/dash",
     "streetwriters/notesnook",
     "feder-cr/dots",
     "wavetermdev/waveterm",
@@ -174,12 +171,15 @@
     "DayuanJiang/next-ai-draw-io",
     "wheresryan22/anatomy",
     "storytold/vectorcraft",
-    "Flow-Launcher/Flow.Launcher"
+    "Flow-Launcher/Flow.Launcher",
+    "t4t5/omdrop-owl",
+    "storytold/effectcraft",
+    "Wox-launcher/Wox"
   ],
-  "last_run_date": "2026-10-11",
+  "last_run_date": "2026-10-12",
   "last_classic": [
-    "supabase/supabase",
-    "JuliusBrussee/caveman"
+    "google-gemini/gemini-cli",
+    "pytorch/pytorch"
   ],
-  "updated_at": "2026-10-11T23:55:37.738281+00:00"
+  "updated_at": "2026-10-12T23:58:17.250326+00:00"
 }
