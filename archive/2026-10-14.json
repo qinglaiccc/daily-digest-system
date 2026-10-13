@@ -1,0 +1,320 @@
+{
+  "date": "2026-10-14",
+  "generated_at": "2026-10-13T23:55:53.005141+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 320,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-14",
+    "digest": "Gemini 4 Argon 付费上线，阶跃星辰发布智能体手机，DeepSeek 拟入局具身智能。",
+    "keywords": [
+      "Gemini",
+      "阶跃星辰",
+      "DeepSeek",
+      "具身智能",
+      "山姆"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "llm-gemini 0.35 发布",
+            "summary": "[[llm-gemini]] 0.35 新增对 [[Gemini 4 Argon]] 模型的支持，该模型通过 API 及每月 100 美元订阅计划提供。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Oct/13/llm-gemini/",
+            "title_original": "llm-gemini 0.35",
+            "excerpt": "Release: llm-gemini 0.35 \n I added support to llm-gemini for the new Gemini 4 Argon model, made available today via the Gemini API and for customers of their $100/month subscription plan. \n Here are the low, medium and high pelicans . As expected, they are all excellent: Gemini has a track record of producing great SV…",
+            "is_foreign": true
+          },
+          {
+            "title": "LiquidAI 新模型登 HuggingFace 热门榜",
+            "summary": "[[LiquidAI]] 发布 [[LFM2.5-24B-A2B]] 模型，登上 HuggingFace 热门榜，获 152 个赞、2565 次下载。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+            "title_original": "LiquidAI/LFM2.5-24B-A2B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 151）**新发布**。类型 text-generation。likes 152，下载 2565。标签：transformers、safetensors、lfm2_moe、text-generation、liquid、lfm2.5。",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini 自动化日常任务技巧",
+            "summary": "[[Engadget]] 介绍 [[Gemini]] 自动化日常任务的五种方法，用于简化日程与信息跟进。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2282226/clever-ways-gemini-automate-everyday-tasks/",
+            "title_original": "5 clever ways Gemini can automate everyday tasks",
+            "excerpt": "If you're not using some of these skills, you're missing out on a chance to streamline your days, keep up to date and more.",
+            "is_foreign": true
+          },
+          {
+            "title": "Science Corp 植入视力恢复芯片",
+            "summary": "[[Science Corporation]] 为首名 [[Stargardt 病]] 患者植入 PRIMA 视力恢复芯片，推进脑机接口研发。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/10/13/science-corporation-implants-its-vision-restoring-chip-in-its-first-stargardt-disease-patient/",
+            "title_original": "Science Corporation implants its vision-restoring chip in its first Stargardt disease patient",
+            "excerpt": "Max Hodak, the former president and co-founder of Neuralink, detailed on stage at TechCrunch Disrupt how his company's work with PRIMA is part of its path toward a novel brain-computer interface (BCI).",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini 4 Argon 付费上线",
+            "summary": "[[Gemini 4 Argon]] 在 [[Gemini]] 应用和 Antigravity 中面向付费用户推出，开发者 11 月底前享 API 五折。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/ai/2026/10/gemini-4-argon-begins-rolling-out-in-gemini-app-and-antigravity-but-only-if-you-pay/",
+            "title_original": "Gemini 4 Argon begins rolling out in Gemini app and Antigravity, but only if you pay",
+            "excerpt": "Developers will get 50 percent discounted API rates through November.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "阶跃终端发布智能体手机",
+            "summary": "[[阶跃终端]] 发布首款大模型原生智能体手机 [[STEPX Neo]] 先行版，搭骁龙 8 系芯片，全栈价 3999 元起。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/012/556.htm",
+            "title_original": "阶跃终端首款大模型原生智能体手机 STEPX Neo 先行版发布：骁龙 8 系芯片，全栈价 3999 元起",
+            "excerpt": "IT之家 10 月 13 日消息，阶跃终端首款大模型原生智能体手机 STEPX Neo 先行版今晚正式发布，搭载骁龙 8 系芯片，采用 16GB+256GB 规格方案，并提供碳黑、硅银两种配色，软硬模三位一体 全栈价（包含 STEPX Neo 手机本体、StepAOS+Step Studio、Step 系列模型） 3999 元 。 新机今日开启预售，将在 10 月 16 日 10:13 正式首销。购买 STEPX Neo 先行版的用户可享受连续 12 个月、每月百亿 Token 使用额度的 STEPX Token Plan，为 AI 创客探索原生智能体应用提供有力支持。 另外，STEPX 推出“阶跃 Amoo 成长计划”，前 1…",
+            "is_foreign": false
+          },
+          {
+            "title": "梁文锋密集接触具身智能创业者",
+            "summary": "[[梁文锋]] 密集接触具身智能创业者，[[DeepSeek]] 拟入局，或自建团队或投资，此前已投资宇树科技。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372264",
+            "title_original": "曝梁文锋密集见机器人创业者；影石出货量累计突破1000万台；Meta发布Muse Wonder模型｜极客早知道",
+            "excerpt": "曝梁文锋密集接触具身智能创业者，DeepSeek 拟入局具身智能 \n 据报道，DeepSeek 创始人梁文锋近期密集关注具身智能领域，并与多位该领域创业者交流，探讨机器人、大模型与现实世界交互等方向。 \n 据知情人士透露，梁文锋正在考虑 DeepSeek 进入具身智能领域的可能性，可能会亲自组建团队下场研发，也可能通过投资相关企业切入。 \n 此前，梁文锋已投资宇树科技，另据彭博社报道，DeepSeek 计划领投腾讯前 AI 科学家胡瀚创立的机器人公司 Winverse AI。（来源：新浪科技） \n \n Meta 发布 Muse Wonder 模型，拥有主动记忆和主动专注功能，瞄准个人超级智能 \n Meta 今天推出 Muse Wo…",
+            "is_foreign": false
+          },
+          {
+            "title": "求索4.0上线，DeepSeek 拟融资千亿",
+            "summary": "国内首个 AI 全产业链评测基准“求索”4.0 上线；[[DeepSeek]] 据称将完成 1000 亿元融资。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8167674.html",
+            "title_original": "【钛晨报】“求索”4.0上线！国内首个人工智能全产业链评测基准发布；重庆市委原副书记、市政府原市长黄奇帆被查；DeepSeek据称将完成1000亿元融资",
+            "excerpt": "字节跳动Seed单设安全与对齐部门，严林负责向吴永辉汇报；尊界V800公布制动踏板第三方检测结果；智元启动新融资，估值500亿元，IPO暂缓；马斯克披露Terafab芯片工厂规划：每年制造和测试10款芯片；苹果推出智能家居中枢HomeView，售价299美元；中证协明确券商跨境风险数据管理要求，个人信息出境须评估影响；外资持续撤出韩股，分析师警告：这比半导体基本面更令人担忧",
+            "is_foreign": false
+          },
+          {
+            "title": "阶跃星辰智能体手机定价3999",
+            "summary": "[[阶跃星辰]] 发布首款智能体手机，解锁先见 AI 而非先找 App，定价 3999 元。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/p2TobACROBC8UBPlRKXx?utm_source=rss&utm_medium=article",
+            "title_original": "手机解锁先见 AI，不再先找 App：阶跃星辰首款智能体手机来了，定价 3999",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "亿邦产业智能体大会定档",
+            "summary": "[[亿邦动力]] 主办的第八届亿邦产业互联网年会暨首届产业智能体大会正式定档。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/10/502907.html",
+            "title_original": "“模态进化”：第八届亿邦产业互联网年会暨首届产业智能体大会双会合体定档",
+            "excerpt": "由亿邦动力主办的“2026第八届亿邦产业互联网年会暨首届产业智能体大会”正式定档",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "AI 重塑零售，品牌加码实体店",
+            "summary": "[[Modern Retail]] 报道，AI 重塑零售之际，[[Rhone]]、[[Anthropologie]] 等品牌高管称实体店仍强劲。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/brands-briefing-as-ai-reshapes-retail-brands-are-investing-even-more-in-stores/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Brands Briefing: As AI reshapes retail, brands are investing even more in stores",
+            "excerpt": "Executives at Rhone, Anthropologie, Kohl's, Brunt and Crocs weigh in on why brick-and-mortar is still standing strong heading into 2027.",
+            "is_foreign": true
+          },
+          {
+            "title": "Z世代与AI化假日零售",
+            "summary": "[[Retail Dive]] 报道，AI 正“重连”Z 世代与 Alpha 世代大脑，零售商需平衡数字与实体体验。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/gen-z-gen-alpha-holiday-shopping-retail-trends/831838/",
+            "title_original": "Gen Z, Gen Alpha and the AI-ificiation of retail this holiday season",
+            "excerpt": "AI is “rewiring” the brains of today’s youth, at the same time that they’re craving physical experiences. Can retailers strike the right balance?",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "山姆更改亲友卡规则",
+            "summary": "[[山姆]] 追加亲友卡换绑限制，堵住非会员低成本使用漏洞，强化付费会员制。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1598316.html",
+            "title_original": "山姆更改亲友卡规则，咋想的？",
+            "excerpt": "手段非常果断且直接，但策略是对的。 1 昨晚刷到一个新闻，给我看笑了。 （新闻来自每日经济新闻） 说白了就是 山姆 通过追加换绑亲友卡的限制，堵住倒卖亲友卡身份的漏洞。 说白了就是， 堵住很多非会员利用亲友卡换绑机制低成本去山姆。 手段非常果断且直接，但策略是对的。 可以说山姆终于开始明明白白地意识到自己到底是什么，赚谁的钱了。 2 山姆本质是一个中产消费俱乐部，是会员制的，且这个会员是收费的。 收费的情况下，会员制最重要的是让会员满意。 山姆存在的意义，是服务那些愿意为自己付费的会员， 其他的，都是杂音，是在干扰会员的体验。 所谓让更多人先感受一下再决定买不买，是伪命题。 因为会买的人不会被会员费拦住，毕竟这东西你买了觉得不满意…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "nullmoth/nvidia-macos-driver",
+            "url": "https://github.com/nullmoth/nvidia-macos-driver",
+            "intro": "让装了英伟达显卡的 Mac 或黑苹果电脑，也能正常用上图形加速。",
+            "features": [
+              "支持 RTX 20 到 50 系列等较新显卡",
+              "支持光线追踪、网格着色等图形效果",
+              "附带一个 Mac 应用，可发送日志排查问题"
+            ],
+            "guide": "需要先让电脑能用 OpenCore 启动 macOS 15，再安装驱动；仓库提供 Mac 应用和安装包，普通用户按文档操作即可。",
+            "steps": [
+              "先用 OpenCore 让电脑能启动 macOS 15",
+              "从 releases 页面下载驱动安装包",
+              "安装驱动并重启电脑",
+              "用 1401 应用发送日志排查问题"
+            ],
+            "install": "",
+            "summary": "让装了英伟达显卡的 Mac 或黑苹果电脑，也能正常用上图形加速。",
+            "source": "GitHub",
+            "stars": "2904",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Metal driver for NVIDIA GeForce cards on macOS Sequoia",
+            "is_foreign": true
+          },
+          {
+            "title": "KKKKhazix/AIHOT",
+            "url": "https://github.com/KKKKhazix/AIHOT",
+            "intro": "一个能自己找热点、自己写日报的网站框架，换成你的行业信源就能用。",
+            "features": [
+              "自动从多种信源收集资料并筛选",
+              "用大模型写中文标题和摘要",
+              "把同一件事聚成一个事件并排热度",
+              "每天早上自动生成一份日报"
+            ],
+            "guide": "需要自己准备大模型接口和信源，用 Docker Compose 跑起来；仓库带 18 个公开 AI 资讯源做示范，换成你行业的信源即可。",
+            "steps": [
+              "准备大模型接口和行业信源",
+              "用 Docker Compose 启动服务",
+              "在配置里换成自己的信源和标准",
+              "访问网站查看自动生成的日报"
+            ],
+            "install": "",
+            "summary": "一个能自己找热点、自己写日报的网站框架，换成你的行业信源就能用。",
+            "source": "GitHub",
+            "stars": "7505",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。",
+            "is_foreign": true
+          },
+          {
+            "title": "lissy93/dashy",
+            "url": "https://github.com/lissy93/dashy",
+            "intro": "一个可以自己搭建的个人主页，把常用网站和服务集中到一个页面。",
+            "features": [
+              "实时显示各个应用和链接的状态",
+              "用小组件展示自建服务的信息",
+              "支持搜索、快捷键和多种主题",
+              "带界面编辑器，改配置不用写代码"
+            ],
+            "guide": "可以自己用 Node 或 Docker 跑在本地或服务器上，也可以直接用官方在线演示；需要先装 Node 或 Docker。",
+            "steps": [
+              "先安装 Node.js 或 Docker",
+              "按文档用 Docker 或 Node 启动 Dashy",
+              "打开浏览器访问本地地址",
+              "在界面编辑器里添加自己的链接"
+            ],
+            "install": "",
+            "summary": "一个可以自己搭建的个人主页，把常用网站和服务集中到一个页面。",
+            "source": "GitHub",
+            "stars": "26707",
+            "language": "Vue",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🚀 A self-hostable personal dashboard built for you. Includes status-checking, widgets, themes, icon packs, a UI editor and tons more!",
+            "is_foreign": true
+          },
+          {
+            "title": "hacksider/Deep-Live-Cam",
+            "url": "https://github.com/hacksider/Deep-Live-Cam",
+            "intro": "用一张照片就能实时换脸或给视频换脸的工具。",
+            "features": [
+              "用一张图片就能实时换脸",
+              "一键给视频换脸",
+              "内置检查，阻止处理不当内容"
+            ],
+            "guide": "需要自己装 Python 环境并下载模型文件，在本地电脑上运行；使用真人脸需获得对方同意并标注为换脸内容。",
+            "steps": [
+              "先安装 Python 环境",
+              "按文档下载所需模型文件",
+              "运行程序并选择一张人脸图片",
+              "开启摄像头或导入视频进行换脸"
+            ],
+            "install": "",
+            "summary": "用一张照片就能实时换脸或给视频换脸的工具。",
+            "source": "GitHub",
+            "stars": "97023",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "real time face swap and one-click video deepfake with only a single image",
+            "is_foreign": true
+          },
+          {
+            "title": "puppeteer/puppeteer",
+            "url": "https://github.com/puppeteer/puppeteer",
+            "intro": "让程序自动操控 Chrome 或 Firefox 浏览器，代替人做重复操作。",
+            "features": [
+              "用代码自动打开网页、点击和填表",
+              "默认在后台运行，不弹出浏览器窗口",
+              "可用来做网页测试和自动抓取"
+            ],
+            "guide": "需要先装 Node.js，然后用 npm 安装；安装时会自动下载配套浏览器，如果被拦截可手动下载。",
+            "steps": [
+              "先安装 Node.js",
+              "运行 npm i puppeteer 安装",
+              "若浏览器未下载，运行 npx puppeteer browsers install",
+              "在代码里调用 puppeteer 启动浏览器"
+            ],
+            "install": "npm i puppeteer",
+            "summary": "让程序自动操控 Chrome 或 Firefox 浏览器，代替人做重复操作。",
+            "source": "GitHub",
+            "stars": "95687",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "JavaScript API for Chrome and Firefox",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让普通人也能用上 AI 与自动化：从热点日报到浏览器操控。"
+      }
+    ]
+  }
+}
