@@ -1,0 +1,318 @@
+{
+  "date": "2026-10-16",
+  "generated_at": "2026-10-15T23:55:51.002183+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 305,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-16",
+    "digest": "Meta 发布最强开源模型 Muse Spark Open，英伟达推出 Nemotron 3.5 Super VL；腾讯微信上线免费短剧小程序绿泡泡。",
+    "keywords": [
+      "Meta",
+      "MuseSparkOpen",
+      "英伟达",
+      "Nemotron",
+      "绿泡泡短剧"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "FLUX-3 图像模型登 HuggingFace 热门榜",
+            "summary": "[[Black Forest Labs]] 的 flux-3-image-klein-comfy 登上 [[HuggingFace]] 热门模型榜，trendingScore 183，likes 198，下载 39。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
+            "title_original": "black-forest-labs/flux-3-image-klein-comfy 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 183）**新发布**。类型 image-to-image。likes 198，下载 39。标签：diffusion-single-file、comfyui、image-generation、image-editing、flux、flux-3。",
+            "is_foreign": true
+          },
+          {
+            "title": "Meta 发布可在 Mac 本地运行的开源模型",
+            "summary": "[[Meta]] 与 [[Apple]] 合作推出开放权重模型 Muse Spark Open，可在 Apple silicon 上本地运行。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+            "title_original": "Meta launches an open-weight AI model that runs on Macs",
+            "excerpt": "Meta and Apple have teamed up for the launch of the social media giant's newest model, Muse Spark Open, which will run locally on Apple silicon.",
+            "is_foreign": true
+          },
+          {
+            "title": "Meta 与苹果合作优化 Muse 模型 Mac 表现",
+            "summary": "[[Meta]] 称 Muse Spark Open 是美国迄今最强开放权重模型，可借助 [[MLX]] 框架在两台 M5 Ultra Mac Studio 上运行。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx",
+            "title_original": "Meta and Apple team up to make Muse AI models run better on Macs",
+            "excerpt": "Meta announced the Muse Spark Open AI model today, claiming that it's the \"most capable US open-weight model to date.\" But the company also says that it's the \"the first model in its class\" that can \"run on your desktop using two Apple M5 Ultra Mac Studios with the latest MLX framework.\" Meta and Apple, […]",
+            "is_foreign": true
+          },
+          {
+            "title": "Meta 开源大模型需 1TB 内存运行",
+            "summary": "[[Meta]] 称 Muse Spark Open 是美国迄今最强开放权重模型，但运行需 1TB 内存。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2287833/meta-built-a-huge-open-weight-ai-model-for-macs-but-youll-need-1tb-of-ram-to-run-it/",
+            "title_original": "Meta built a huge open-weight AI model for Macs, but you'll need 1TB of RAM to run it",
+            "excerpt": "Muse Spark Open is \"the most capable US open-weight model to date,\" the company says.",
+            "is_foreign": true
+          },
+          {
+            "title": "Jev 与电车难题",
+            "summary": "文章探讨 Jev 与电车难题，[[Hacker News]] 上获 259 分、120 条评论。",
+            "source": "Hacker News",
+            "url": "https://zachlandes.com/trolley-problem/",
+            "title_original": "Jev meets the Trolley Problem",
+            "excerpt": "Article URL: https://zachlandes.com/trolley-problem/ \n Comments URL: https://news.ycombinator.com/item?id=50106023 \n Points: 259 \n # Comments: 120",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "Meta 发布 Muse Spark Open 模型",
+            "summary": "[[Meta]] 发布开放权重模型 Muse Spark Open，总参数 816B、激活 42B，支持 1M token 上下文，可在两台 M5 Ultra Mac Studio 上运行。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/013/706.htm",
+            "title_original": "宣称“美国最强开源 AI 模型”：Meta 发布 Muse Spark Open",
+            "excerpt": "IT之家 10 月 16 日消息，当地时间 10 月 15 日，Meta 发布了开放权重 AI 模型 Muse Spark Open。Meta 官方宣称， Muse Spark Open 是迄今为止能力最强的美国开放权重模型 。 Muse Spark Open 采用原生多模态架构，总参数量达 816B（其中激活参数 42B），支持 1M token 的上下文窗口。该模型专为代码构建与智能体协作设计，在处理长程任务、复杂软件工程以及多步推理等方面展现出卓越性能。 得益于最新的 MLX 框架，Muse Spark Open 成为同级别中首个仅凭两台苹果 M5 Ultra 芯片（512 GB 内存版本）的 Mac Studio 即可在桌…",
+            "is_foreign": false
+          },
+          {
+            "title": "英伟达发布 Nemotron 3.5 Super VL",
+            "summary": "[[英伟达]] 推出开放多模态模型 Nemotron 3.5 Super VL，总参数 1200 亿、激活 120 亿，单 GPU 智能体任务吞吐量最高提升 5 倍。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/013/679.htm",
+            "title_original": "英伟达发布 1200 亿参数大模型 Nemotron 3.5 Super VL：单 GPU 智能体任务吞吐量最高提升 5 倍，74B 版本压缩至 24GB",
+            "excerpt": "IT之家 10 月 15 日消息，英伟达宣布推出开放多模态模型 Nemotron 3.5 Super VL，面向需要持续运行、执行多步骤任务的 AI 智能体。 该模型采用混合专家（MoE）架构，总参数量为 1200 亿，激活参数 120 亿。英伟达称，在单张 GPU 上执行智能体任务时，该模型的吞吐量最高可达到同规模其他开放模型的 5 倍。 据介绍，Nemotron 3.5 Super VL 将推理、指令遵循和工具调用能力，与文本、图像、文档及视频理解能力整合到同一个模型中，可用于代码测试与调试、跨网站信息检索、文档分析、网络安全威胁识别以及视频内容检索等场景。开发者可以利用英伟达 NeMo 工具链，结合自有数据、工具、政策和工作…",
+            "is_foreign": false
+          },
+          {
+            "title": "钛晨报：潘功胜谈全球失衡等",
+            "summary": "[[潘功胜]] 称全球失衡不能依靠汇率调节；[[DeepSeek]] 将按账号 7 日内消耗金额以赠金全额返还；三部门联合调查车辆刹车踏板支架断裂问题。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8170437.html",
+            "title_original": "【钛晨报】潘功胜：全球失衡不能依靠汇率调节；DeepSeek发布补偿通知：将按账号7日内的消耗金额以赠金形式全额返还；工信部等三部门联合调查有关车辆刹车踏板支架断裂问题",
+            "excerpt": "Tim之父、圆通总裁潘水苗出任影视飓风董事长，持股25.65%为第二大股东；腾讯上线“绿泡泡短剧”对标红果，采用IAA模式；台积电第三季度净利润7631亿元台币；OpenAI据报洽购Trail of Bits，拓展网络安全版图；苹果AI国内采用双合作伙伴：阿里提供模型能力，百度负责Siri和视觉智能；马斯克旗下Terafab项目或在明年年中迎来首台EUV光刻设备；四部门公布婴幼儿纸尿裤甲酰胺问题调查结果；交通运输部：重点推动内河电池、甲醇动力等新能源船舶发展；央行500亿元人民币3个月国库现金定期存款定于10月20日招投标；《大公报》严正声明",
+            "is_foreign": false
+          },
+          {
+            "title": "腾讯上线绿泡泡短剧，155 款应用拒绝豆包助手",
+            "summary": "[[腾讯]] 上线免费短剧小程序绿泡泡；[[豆包]] 手机助手 SAEP 公示结束，155 款第三方应用拒绝 AI 自动化操作。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372366",
+            "title_original": "腾讯上线「绿泡泡」短剧，主打免费好看；特斯拉 Roadster 跑车明日发布；豆包工作支持一键导入 GPT、Claude 对话 | 极客早知道",
+            "excerpt": "155 款应用拒绝豆包助手 AI 自动化操作 \n 10 月 14 日，豆包手机助手《屏幕自动化操作声明协议》（SAEP）30 天公示期结束，官方公布名单显示，已有 155 款第三方应用拒绝 AI 自动化操作，腾讯、阿里、美团、快手旗下多款产品，连同 Kimi、DeepSeek 等 AI 产品均在名单内，堪称互联网头部厂商的集体表态。 \n SAEP 协议核心是将 AI 屏幕自动操作的选择权交还应用开发者，开发者可自主决定是否允许豆包助手执行屏幕识别、模拟点击等操作。公示期内应用默认不开放权限；公示结束后，未明确拒绝的应用将按风险分级逐步开放，拒绝方后续也可随时调整声明。该自动化权限仅影响 AI 代操作，不影响用户手动使用 App。…",
+            "is_foreign": false
+          },
+          {
+            "title": "Istio 1.31 拥抱 AI 智能体并告别 Google Cloud",
+            "summary": "[[Istio]] 1.31 版本拥抱 AI 智能体，同时宣布告别 [[Google Cloud]]。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/JxVNJwhmsB1YYKmgD9KU?utm_source=rss&utm_medium=article",
+            "title_original": "Istio 1.31 拥抱 AI 智能体，却先宣布“告别”Google Cloud",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Bealls 将推出移动应用",
+            "summary": "[[Bealls]] 将推出移动应用，旨在打造跨渠道购物体验并支持其忠诚度策略。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/bealls-debuts-mobile-app-marketing-campaign/832855/",
+            "title_original": "Bealls to debut mobile app",
+            "excerpt": "The app is intended to create a more connected shopping experience across channels, while also supporting the retailer’s strategy around loyalty.",
+            "is_foreign": true
+          },
+          {
+            "title": "Albertsons 加速转型面临身份危机",
+            "summary": "[[Albertsons]] 在 2026 年高通胀下加速转型，第二季度财报电话会议氛围异常低迷。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/big-box-briefing-whats-fueling-albertsons-identity-crisis-as-it-accelerates-turnaround-efforts/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Big-Box Briefing: What’s fueling Albertsons’ identity crisis as it accelerates turnaround efforts",
+            "excerpt": "The grocery business has been uniquely challenging in 2026, thanks to sky-high inflation. But Albertsons' second-quarter earnings call on Tuesday was still unusually dour.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "腾讯微信上线绿泡泡短剧",
+            "summary": "[[腾讯]] 微信上线免费短剧小程序「绿泡泡短剧」，无独立 App，对标日活 1.68 亿的 [[红果短剧]]。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1596440.html",
+            "title_original": "腾讯奇袭字节红果，微信上线「绿泡泡短剧」",
+            "excerpt": "绿泡泡是个完全免费的微信小程序，没有独立App，点开就能看。 编辑：陈维贤，设计：蝶哥 原标题：腾讯奇袭字节红果，绿泡泡会成短剧版“视频号”？ 9 月下旬，微信里悄悄上线了一个叫 「绿泡泡短剧」 的小程序。出品方写着微信短剧内容中心，产品标识就是微信那抹品牌绿，slogan 写得很直白： 免费好剧，一点就看。 没有独立 App，不用下载，点开就看。 运营社看完的第一反应是， 腾讯可能不打算再做独立短剧 App 了。 为什么这么说？腾讯当年拿微视贴着抖音打，专门做了个独立 App，没做出来； 后来的视频号干脆长在微信里，反而跑起来了。 这次面对日活 1.68 亿的红果短剧，腾讯选了同一条路。 微信为什么现在做绿泡泡，免费内容从哪儿来…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "jhaizhou-ops/d2r-mobile",
+            "url": "https://github.com/jhaizhou-ops/d2r-mobile",
+            "intro": "把你自己买的 Switch 版暗黑破坏神2重制版搬到 iPhone、iPad 和 Mac 上玩。",
+            "features": [
+              "在手机上原生运行游戏本体",
+              "全部操作重做成触屏控制",
+              "画面稳定在 60 帧",
+              "Mac 版支持键鼠和手柄"
+            ],
+            "guide": "需要自备 Switch 版游戏文件，项目本身不提供游戏。iPhone/iPad 需 iOS 26 及以上，Mac 需 Apple 芯片，旧系统要用旧接口版本。",
+            "steps": [
+              "自备 Switch 版游戏文件（含资料片）",
+              "确认设备系统版本符合要求",
+              "按 README 说明构建并安装到设备"
+            ],
+            "install": "",
+            "summary": "把你自己买的 Switch 版暗黑破坏神2重制版搬到 iPhone、iPad 和 Mac 上玩。",
+            "source": "GitHub",
+            "stars": "3094",
+            "language": "C",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Open-source iOS / macOS compatibility layer for Diablo II: Resurrected with the Reign of the Warlock expansion. Runs your own Switch copy natively on iPhone, iPad and Mac — full touch controls, 60 fps, new endgame modes…",
+            "is_foreign": true
+          },
+          {
+            "title": "Louis-CFM/coucou",
+            "url": "https://github.com/Louis-CFM/coucou",
+            "intro": "住在 Mac 刘海里的桌面小宠物，帮你盯着 AI 编程助手什么时候需要你确认。",
+            "features": [
+              "在刘海或锁屏上批准 AI 请求",
+              "随时查看 AI 助手的工作进度",
+              "按住按键说话，文字自动粘贴",
+              "手机端同步显示状态"
+            ],
+            "guide": "Mac 用户下载安装即可，Windows 和 Linux 显示在屏幕顶部；手机端有 iPhone 和 Android 版。语音转文字功能离线可用。",
+            "steps": [
+              "从官网或 GitHub 下载对应平台安装包",
+              "安装后打开，小宠物出现在刘海处",
+              "在设置里连接你的 AI 编程助手"
+            ],
+            "install": "",
+            "summary": "住在 Mac 刘海里的桌面小宠物，帮你盯着 AI 编程助手什么时候需要你确认。",
+            "source": "GitHub",
+            "stars": "5311",
+            "language": "Swift",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "A tiny friend in your Mac's notch and on your iPhone that keeps an eye on your AI coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. Approve from the notch or your Lock Screen.",
+            "is_foreign": true
+          },
+          {
+            "title": "super-productivity/super-productivity",
+            "url": "https://github.com/super-productivity/super-productivity",
+            "intro": "一款把待办清单、时间规划和计时记录合在一起的效率应用，还能同步 Jira 等任务。",
+            "features": [
+              "用子任务、项目和标签整理待办",
+              "在时间轴上安排一天的计划",
+              "看板与四象限视图排序任务",
+              "记录工时并导出工作汇总"
+            ],
+            "guide": "可以直接用网页版，也可以下载 Windows、macOS、Linux、安卓和 iOS 客户端。数据存在本地，无需注册账号。",
+            "steps": [
+              "打开网页版或下载对应平台客户端",
+              "新建项目并添加你的待办任务",
+              "用时间轴安排当天计划并开始计时"
+            ],
+            "install": "",
+            "summary": "一款把待办清单、时间规划和计时记录合在一起的效率应用，还能同步 Jira 等任务。",
+            "source": "GitHub",
+            "stars": "22857",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Super Productivity is an advanced todo list app with integrated Timeboxing and time tracking capabilities. It also comes with integrations for Jira, GitLab, GitHub and Open Project.",
+            "is_foreign": true
+          },
+          {
+            "title": "openclaw/openclaw",
+            "url": "https://github.com/openclaw/openclaw",
+            "intro": "一个跑在你自己电脑上的开源 AI 助手，能在你常用的聊天软件里直接对话。",
+            "features": [
+              "在 Discord、微信类等 20 多个聊天软件里使用",
+              "数据、记忆和密钥都存在自己设备上",
+              "可自由更换背后的 AI 模型",
+              "提供 Mac、iOS、安卓、Windows、Linux 客户端"
+            ],
+            "guide": "安装脚本支持 macOS、Linux 和 Windows，会自动准备好所需的运行环境。装好后在聊天软件里配置即可使用。",
+            "steps": [
+              "macOS/Linux 执行 curl -fsSL https://openclaw.ai/install.sh | bash",
+              "Windows 使用 PowerShell 安装脚本",
+              "按引导连接你常用的聊天软件"
+            ],
+            "install": "curl -fsSL https://openclaw.ai/install.sh | bash",
+            "summary": "一个跑在你自己电脑上的开源 AI 助手，能在你常用的聊天软件里直接对话。",
+            "source": "GitHub",
+            "stars": "392123",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
+            "is_foreign": true
+          },
+          {
+            "title": "obra/superpowers",
+            "url": "https://github.com/obra/superpowers",
+            "intro": "给 AI 编程助手装上一套开发流程，让它先问清需求再动手写代码。",
+            "features": [
+              "动手前先和你确认真正想做什么",
+              "把设计方案拆成小段给你确认",
+              "生成步骤清晰的实施计划",
+              "支持 Claude Code、Cursor 等多种助手"
+            ],
+            "guide": "这是一套给 AI 编程助手用的技能包，需要先有 Claude Code、Cursor、Codex 等受支持的助手，再按 README 对应章节安装。",
+            "steps": [
+              "先安装一个受支持的 AI 编程助手",
+              "在 README 里找到对应助手的安装章节",
+              "按该章节说明把技能包装进助手"
+            ],
+            "install": "",
+            "summary": "给 AI 编程助手装上一套开发流程，让它先问清需求再动手写代码。",
+            "source": "GitHub",
+            "stars": "299868",
+            "language": "Shell",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An agentic skills framework & software development methodology that works.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 助手和效率工具真正落到日常设备与工作流里"
+      }
+    ]
+  }
+}
