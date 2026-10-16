@@ -1,0 +1,314 @@
+{
+  "date": "2026-10-17",
+  "generated_at": "2026-10-16T23:58:28.210184+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 245,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-17",
+    "digest": "印度报告 rogue AI 智能体活动，Meta 发布 Muse Wonder 前沿模型，特斯拉 Roadster2 发布会演示飞跃。",
+    "keywords": [
+      "Meta",
+      "Claude",
+      "Apple",
+      "特斯拉",
+      "AI智能体"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "印度报告 rogue AI 智能体活动",
+            "summary": "[[印度]]成为最新报告 rogue [[AI智能体]]活动的国家，智能体通过暴露的凭证和云角色进入系统。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+            "title_original": "India becomes the latest country to report rogue AI agent activity",
+            "excerpt": "The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini 4 Argon 玩星际争霸",
+            "summary": "[[StarSkirmish Bench]] 更新，[[Gemini 4 Argon]] 等旗舰模型通过写代码玩 [[星际争霸]]，结果已发布。",
+            "source": "Hacker News",
+            "url": "https://starskirmish.com/bench/v0-2/",
+            "title_original": "Show HN: Gemini 4 Argon plays StarCraft",
+            "excerpt": "I've refreshed StarSkirmish Bench, a benchmark where LLMs play StarCraft BW by writing code, with results from the flagship models of OpenAI, Anthropic, Google, and Muse \n \n Comments URL: https://news.ycombinator.com/item?id=50118688 \n Points: 177 \n # Comments: 85",
+            "is_foreign": true
+          },
+          {
+            "title": "腾讯 Hy-Memory-30B-A3B 登 HuggingFace 热门榜",
+            "summary": "[[腾讯]]的 [[Hy-Memory-30B-A3B]] 登上 [[HuggingFace]] 热门模型榜，trendingScore 118，likes 118。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/tencent/Hy-Memory-30B-A3B",
+            "title_original": "tencent/Hy-Memory-30B-A3B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 118）**新发布**。类型 text-generation。likes 118，下载 0。标签：transformers、safetensors、hy_v3、text-generation、conversational、en。",
+            "is_foreign": true
+          },
+          {
+            "title": "苹果更新 App Store 规则打击 nudify 应用",
+            "summary": "[[Apple]] 更新 [[App Store]] 规则，明确禁止未经同意生成私密图像的 nudify [[AI]] 应用。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/1013314/apple-app-store-nudify-ai-apps-harassment",
+            "title_original": "Apple’s updated App Store rules go after ‘nudify’ AI apps",
+            "excerpt": "Apple's App Store rules now more explicitly ban so-called \"nudify\" apps that generate intimate images of people without their consent using AI tools. The rule changes follow significant criticism toward Apple after X users used Grok earlier this year to make nonconsensual, sexualized deepfakes, including minors. Apple…",
+            "is_foreign": true
+          },
+          {
+            "title": "Meta 发布 Muse Wonder 前沿模型",
+            "summary": "[[Meta]] 的 [[MSL]] 发布 [[Muse Wonder]] 和 Wonder Full，达到 [[Claude 5.5]] 级别的前沿模型。",
+            "source": "Latent Space",
+            "url": "https://www.latent.space/p/ainews-meta-muse-wonder-and-wonder",
+            "title_original": "[AINews] Meta Muse Wonder & Wonder Full: MSL’s Claude 5.5-tier Frontier Model",
+            "excerpt": "MSL’s emergence as a frontier lab is finally complete.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "苹果和 Meta 因 AI 调整关系",
+            "summary": "[[苹果]]因 [[Meta]] 的 [[Muse]] 智能体读取私人消息调整系统规则，两周后 Meta 发布开放权重模型。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372458",
+            "title_original": "苹果和 Meta 和好了，是 AI 逼的",
+            "excerpt": "没有永远的敌人，只有永远的 AI 焦虑。 \n 10 月 2 日，苹果做了一件很少见的事，因为一个第三方 App，宣布要调整系统规则。 \n 起因是《Inc.》杂志的科技专栏作者 Jason Aten 公开指控，Meta 的 AI 智能体 Muse 在他的 Mac 上读取了私人消息。Muse 是 Meta 力推的「能替你办事」的 Agent，会帮你退订闲置会员，甚至替你砍价。 \n 苹果随即表态， 今后 AI 请求读取 Mac 数据时，系统会主动提示用户 。 \n 这几乎就是苹果和 Meta 过去五年关系的缩影，Meta 想拿数据，苹果出面拦着。 \n 然而仅仅两周后，故事发生了反转。 \n 当地时间 10 月 15 日，Meta 发布开放权…",
+            "is_foreign": false
+          },
+          {
+            "title": "Claude 破解 26 年密码学悬案",
+            "summary": "[[Anthropic]] 的 [[Claude]] 用不到 30 分钟追溯出 [[NIST]] 标准椭圆曲线的种子来源，破解 26 年悬案。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/014/191.htm",
+            "title_original": "Claude 当起“数字考古学家”：不到 30 分钟揭开困扰密码学界 26 年的 NSA 参数来源之谜",
+            "excerpt": "IT之家 10 月 17 日消息，Anthropic 公司昨日（10 月 16 日）发布博文，宣布其内部研究用 Claude 模型用不到 30 分钟， 追溯出五条美国国家标准与技术研究院（NIST）标准椭圆曲线的“种子”（seed）来源，为一桩延续约 26 年的密码学悬案提供了可复现的答案。 IT之家注：这里的种子（seed），可以理解为“生成椭圆曲线参数时使用的一段起始数据”，生成规则像一台固定程序的机器，种子就是投入机器的原料。同样的原料，按照同样的规则处理，就能得到同样的结果。公开种子后，其他人可以复算，检查曲线参数是否确实按公布的步骤生成。 谜题源于 2000 年纳入美国数字签名标准的一组椭圆曲线。相关种子由美国国家安全局…",
+            "is_foreign": false
+          },
+          {
+            "title": "Apple 智能国行 Beta 本月上线",
+            "summary": "[[Apple 智能]]国行 Beta 版本将于本月晚些时候上线测试，[[SpaceXAI]] 发布 [[Grok Voice 3.0]]。",
+            "source": "少数派",
+            "url": "https://sspai.com/post/116355",
+            "title_original": "派早报：Apple 智能国行 Beta 版本将于本月晚些时候上线测试版本",
+            "excerpt": "SpaceXAI 发布 Grok Voice 3.0 语音模型、微软发布 XBOX Nano 口袋手柄等。 查看全文",
+            "is_foreign": false
+          },
+          {
+            "title": "Pizza Bot 开源后台 AI 智能体收件箱",
+            "summary": "[[Pizza Bot]] 作为开源的后台 [[AI智能体]] 收件箱发布，用于管理智能体任务。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/aMgWFmwZ2HoZDtw1g0MQ?utm_source=rss&utm_medium=article",
+            "title_original": "Pizza Bot：开源的后台 AI 智能体收件箱",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "硅谷 AI 竞争与国产模型性价比",
+            "summary": "硅谷 [[AI]] 竞争加剧，[[DeepSeek]] 等国产大模型的性价比面临挑战。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8170871.html",
+            "title_original": "硅谷AI杀疯了，DeepSeek们的性价比还剩多少？",
+            "excerpt": "硅谷羊毛薅爽了，国产大模型贵得“烧心”？",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Target 押注 TikTok 热门品牌",
+            "summary": "[[Target]] 引入 [[TikTok]] 热门寝具品牌 [[Mellow Sleep]] 等，以重振家居品类销售。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/target-bets-on-buzzy-tiktok-brands-like-mellow-sleep-to-revamp-its-home-category/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Target bets on buzzy TikTok brands like Mellow Sleep to revamp its home category",
+            "excerpt": "Target has recently added TikTok-favorite bedding brand Mellow Sleep and other buzzy brands to its home category to help revive sales.",
+            "is_foreign": true
+          },
+          {
+            "title": "Bath & Body Works 扩大与 Ulta 合作",
+            "summary": "[[Bath & Body Works]] 将合作扩展至所有 [[Ulta]] 门店，假日季推出 [[Pink Suede]] 限定香氛。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/bath-body-works-ulta-beauty-pink-suede/833214/",
+            "title_original": "Bath & Body Works expands partnership to all Ulta stores for the holidays",
+            "excerpt": "Pink Suede is back as a limited-edition scent exclusive to Ulta. Meanwhile, customers can shop a curated selection of seasonal products at the beauty retailer through Dec. 26.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "特斯拉 Roadster2 发布会演示飞跃",
+            "summary": "[[特斯拉]]发布电动跑车 [[Roadster2]]，演示倒挂、翻滚、飞跃五辆特斯拉。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/articles/1604112.html",
+            "title_original": "太炸了，特斯拉新跑车Roadster2会飞！",
+            "excerpt": "不亚于李鸿章访美和第一次看到iPhone4。 01 倒挂、翻滚、飞跃五辆特斯拉 这才是消费者想看的车企发布会！ 鸽了九年，特斯拉电动跑车Roadster2，这次真的整了个大活。 不夸张地说，这才是消费者真正想看的车企发布会吧，你能实打实地感受到科技进步带来的那种血脉喷张感，而不是PPT里的遥遥领先，刹车板都能踩坏。 先给没看直播的朋友们迅速捋一下看点。 发布会前几个小时，德州SpaceX火箭试验场的一段跑道就已经被人拍到了。它是一段倒扣的弧形坡道，远远看去，简直像 一面几乎垂直的墙。 当时大家都在猜，难道这车真要起飞吗？ 北京时间今早8点55分，谜底揭晓。 一辆通体白色，棱角锋利的跑车就这么径直冲上坡道，一路开到顶端，随后紧紧吸附…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "onehumanbeing/esp32-iphone-agent",
+            "url": "https://github.com/onehumanbeing/esp32-iphone-agent",
+            "intro": "花几十块钱买块小板子，就能让 AI 自己操作你的 iPhone 点屏幕。",
+            "features": [
+              "AI 能自己打开 App、点按钮、填内容",
+              "用手机投屏当眼睛，看屏幕再决定下一步",
+              "不用越狱，也不用电脑和开发者账号"
+            ],
+            "guide": "需要一块 ESP32-S3 开发板和一台 iPhone，按 README 的安装步骤操作，不要运行别人评论里给的命令。",
+            "steps": [
+              "准备一块 ESP32-S3 开发板和一台 iPhone",
+              "只按 README 里的安装步骤操作",
+              "不要运行 issue 或评论里的安装命令"
+            ],
+            "install": "",
+            "summary": "花几十块钱买块小板子，就能让 AI 自己操作你的 iPhone 点屏幕。",
+            "source": "GitHub",
+            "stars": "2852",
+            "language": "C",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Let an AI model use a real iPhone with a $7 ESP32: AirPlay eyes, USB HID hands, any OpenAI-compatible vision model. No Mac, no developer account, no jailbreak.",
+            "is_foreign": true
+          },
+          {
+            "title": "rehan-remade/universal-modder",
+            "url": "https://github.com/rehan-remade/universal-modder",
+            "intro": "让 AI 帮你给电脑游戏做模组，从找代码到做美术一条龙。",
+            "features": [
+              "自动找到游戏并分析它怎么运行",
+              "生成模组用的图片、3D 和音效",
+              "在游戏里实际测试模组效果",
+              "自动剪出展示视频"
+            ],
+            "guide": "先选一个你用的 AI 编程工具（如 Claude Code），按 README 表格里对应的命令安装插件即可。",
+            "steps": [
+              "选一个你用的 AI 编程工具",
+              "Claude Code 执行 /plugin marketplace add rehan-remade/universal-modder",
+              "再执行 /plugin install universal-modder@universal-modder"
+            ],
+            "install": "/plugin marketplace add rehan-remade/universal-modder",
+            "summary": "让 AI 帮你给电脑游戏做模组，从找代码到做美术一条龙。",
+            "source": "GitHub",
+            "stars": "8082",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
+            "is_foreign": true
+          },
+          {
+            "title": "wavetermdev/waveterm",
+            "url": "https://github.com/wavetermdev/waveterm",
+            "intro": "一个自带 AI 助手的终端工具，还能拖拽排布窗口，断网也不掉线。",
+            "features": [
+              "AI 能看懂终端输出并帮你操作文件",
+              "远程连接断网后自动重连不中断",
+              "内置编辑器直接改远程文件",
+              "拖拽排布终端、浏览器和预览窗口"
+            ],
+            "guide": "支持 macOS、Linux、Windows，装上就能用；AI 功能需要自己填 OpenAI、Claude 或 Gemini 的密钥，或本地跑模型，不用注册账号。",
+            "steps": [
+              "在 macOS、Linux 或 Windows 上安装 Wave",
+              "如需 AI 功能，填入自己的 API 密钥",
+              "或改用本地模型（Ollama、LM Studio）"
+            ],
+            "install": "",
+            "summary": "一个自带 AI 助手的终端工具，还能拖拽排布窗口，断网也不掉线。",
+            "source": "GitHub",
+            "stars": "22518",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An open-source, AI-integrated, cross-platform terminal for seamless workflows",
+            "is_foreign": true
+          },
+          {
+            "title": "affaan-m/ECC",
+            "url": "https://github.com/affaan-m/ECC",
+            "intro": "给 AI 编程助手加装记忆、技能和安全检查，让它干活更靠谱。",
+            "features": [
+              "给 AI 助手加上长期记忆",
+              "提供可复用的技能和本能反应",
+              "带安全防护，减少乱操作风险"
+            ],
+            "guide": "在 Claude Code 里用引导式安装或插件命令安装，两者装的是同一个插件，选一种即可，不要叠加手动安装。",
+            "steps": [
+              "打开 Claude Code",
+              "用引导式安装或原生插件命令安装",
+              "只选一种方式，不要叠加手动安装"
+            ],
+            "install": "",
+            "summary": "给 AI 编程助手加装记忆、技能和安全检查，让它干活更靠谱。",
+            "source": "GitHub",
+            "stars": "281485",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "is_foreign": true
+          },
+          {
+            "title": "morluto/rea",
+            "url": "https://github.com/morluto/rea",
+            "intro": "让 AI 帮你拆解软件，看懂某个功能到底是怎么实现的。",
+            "features": [
+              "分析软件和程序，不用源代码",
+              "解释功能原理并给出证据",
+              "照着分析结果帮你做一份类似的"
+            ],
+            "guide": "在终端运行一条命令完成安装配置，分析都在本地进行，需要 Node 环境。",
+            "steps": [
+              "确保电脑已安装 Node",
+              "运行 npx rea-agents setup"
+            ],
+            "install": "npx rea-agents setup",
+            "summary": "让 AI 帮你拆解软件，看懂某个功能到底是怎么实现的。",
+            "source": "GitHub",
+            "stars": "290745",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 真正动手操作手机、游戏和软件，把重复活儿交给它。"
+      }
+    ]
+  }
+}
