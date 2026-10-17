@@ -1,0 +1,309 @@
+{
+  "date": "2026-10-18",
+  "generated_at": "2026-10-17T23:55:47.783211+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 191,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-18",
+    "digest": "Replit 改用 OpenAI 为默认模型，鹏城云脑Ⅲ万 P 算力上线试运行。",
+    "keywords": [
+      "Replit",
+      "OpenAI",
+      "鹏城云脑",
+      "DeepSeek",
+      "Meta"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Comfy-Org MOSS-Image 登 HuggingFace 热门榜",
+            "summary": "[[Comfy-Org]] 的 [[MOSS-Image]] 登上 HuggingFace 热门模型榜，获 133 个点赞、下载 90456 次。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/Comfy-Org/MOSS-Image",
+            "title_original": "Comfy-Org/MOSS-Image 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 133）**新发布**。likes 133，下载 90456。标签：diffusion-single-file、comfyui、base_model:OpenMOSS-Team/MOSS-Image-Base、base_model:finetune:OpenMOSS-Team/MOSS-Image-Base、license:apache-2.0、region:us。",
+            "is_foreign": true
+          },
+          {
+            "title": "Replit 将 OpenAI 设为默认模型供应商",
+            "summary": "[[Replit]] CEO 表示 [[OpenAI]] 将取代 [[Anthropic]] 成为默认模型供应商，Claude 仍对平台客户开放。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+            "title_original": "Replit makes OpenAI its default over Anthropic, CEO says",
+            "excerpt": "Over the weekend, Masad clarified that OpenAI would replace Anthropic as its default model provider. Claude will still be available to customers on the platform.",
+            "is_foreign": true
+          },
+          {
+            "title": "DeepSeek 发布 V4.1-Flash-1017 模型",
+            "summary": "[[DeepSeek]] 在 HuggingFace 发布 [[DeepSeek-V4.1-Flash-1017]]，Hacker News 讨论获 664 分、559 条评论。",
+            "source": "Hacker News",
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+            "title_original": "DeepSeek-v4.1-Flash-1017",
+            "excerpt": "https://api-docs.deepseek.com/news/news261017/ https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017 \n \n Comments URL: https://news.ycombinator.com/item?id=50129045 \n Points: 664 \n # Comments: 559",
+            "is_foreign": true
+          },
+          {
+            "title": "Abolish AI 宣言发布",
+            "summary": "网站 abolish-ai.net 发布《Abolish AI! Manifesto》宣言，相关讨论在 Lobsters 平台出现。",
+            "source": "Lobsters",
+            "url": "https://abolish-ai.net/abolish-ai-a-manifesto/",
+            "title_original": "Abolish AI! Manifesto",
+            "excerpt": "Comments",
+            "is_foreign": true
+          },
+          {
+            "title": "Meta 删除可能允许抓取新闻网站的条款",
+            "summary": "[[Meta]] 在遭遇反对后更新商业条款，删除可能允许其抓取网站内容用于训练 AI 的表述。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites",
+            "title_original": "Meta removes language that may have allowed it to scrape news sites",
+            "excerpt": "After backlash, Meta is updating its terms again to remove language that suggested it could scrape content from sites, including news sites, to train its AI. Specifically, the following language no longer appears on the commercial terms page: … Meta may use any content from such domains, web pages, or URLs to provide,…",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "鹏城云脑Ⅲ 10000P 国产算力上线试运行",
+            "summary": "[[鹏城云脑Ⅲ]] 的 10000P 国产算力上线试运行，采用 [[华为昇腾]] 384 超节点架构，完全建成后达 16000P。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/014/387.htm",
+            "title_original": "边建设边运营：“鹏城云脑 Ⅲ”10000P 国产算力上线试运行",
+            "excerpt": "IT之家 10 月 17 日消息，10 月 15 日至 16 日，2026 世界算力网大会（WCNC 2026）在深圳举行。开幕式上，大科学装置“鹏城云脑 Ⅲ”的 10000P 国产算力正式上线试运行。 公开报道显示，鹏城云脑 Ⅲ 采用的是华为昇腾最前沿的 384 超节点架构，首期设备已于今年 3 月通电点亮，完全建成后算力规模将达到 16000P（IT之家注：合 16 EFLOPS）。 此次 10000P 算力先行投入运营，意味着这座规划中的国内单体规模最大智算设施进入“边建设、边运营”新阶段，在全部建成之前已开始向国产大模型训练与科学智能研究输出算力。",
+            "is_foreign": false
+          },
+          {
+            "title": "破解版 PS5 本地运行 27B 参数模型",
+            "summary": "开发者基于 [[PS5LM]] 项目开发原生 GPU 应用，让破解版 PS5 运行 [[Qwen3.8-27B]] 模型，速度达 20.9 token/s。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/014/372.htm",
+            "title_original": "开发者将破解后的索尼 PS5 当作本地 AI 服务器：利用 GPU 加速运行 27B 参数 Qwen3.8-27B 模型，速度达 20.9 token/s",
+            "excerpt": "IT之家 10 月 17 日消息，据外媒 Wccftech 报道，开发者 abhi245y 基于资深 AI 工程师 Mert Cobanov 的 PS5LM（ llama.cpp 移植项目），开发了原生 GPU 应用 PS5LM Plus，让经过破解的 PS5 主机能够在本地运行 Qwen3.8-27B 等大型语言模型。 IT之家获悉，PS5LM 的早期版本主要依靠 CPU 运行模型，执行 27B 参数模型时，平均每分钟只能生成约 1 个 token。为提升性能，开发者 abhi245y 移植了 Mesa 开源项目中的 AMD RADV 驱动，并通过 Vulkan 计算接口让 llama.cpp 能够作为原生应用在 PS5 上运行…",
+            "is_foreign": false
+          },
+          {
+            "title": "游戏逆向工程网站 decomp.dev 宣布关闭",
+            "summary": "[[decomp.dev]] 宣布关闭，管理员称 [[GPT-6-Astra]] 等 AI 模型让游戏反编译变得容易，人工社区协作模式已瓦解。",
+            "source": "Solidot",
+            "url": "https://www.solidot.org/story?sid=85638",
+            "title_original": "游戏逆向工程网站宣布关闭因为 AI 让反编译游戏变得非常容易",
+            "excerpt": "协作游戏逆向工程网站 decomp.dev 宣布将关闭，管理员称 AI 让游戏反编译变得快且易于操作，基于人工的社区协作模式实际上已经瓦解，无法再区分哪些项目是以人工为主导的，哪些是由 AI 完成的。decomp.dev 管理员 Encounter 在官网声明中表示，从历史上看，匹配反编译一直是极其困难且耗时的任务，即便是对那些有适量活跃贡献者的中等规模游戏来说，反编译要以“年”为单位计时，但 GPT-6-Astra 之类的前沿 AI 模型最近已让反编译游戏变得极其轻松：它们在遵循复杂指令、为符号或调试信息交叉检索资源，以及在获得充分指引的情况下编写自然代码方面，要强得多。显而易见，只要有合适的指导、人类输入和代码审查，AI 能以…",
+            "is_foreign": false
+          },
+          {
+            "title": "华为云下月调整 AI 专业服务价格",
+            "summary": "[[华为云]] 下月调整 AI 专业服务价格，原型开发基础版升至 85.12 万元；17 岁研究员陈广宇离开 [[Kimi]]。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1684782?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "早报｜iPhone Duo开启预购，发货排到明年/特斯拉超跑发布会现场飞了/华为阔直板出货量超71万台",
+            "excerpt": "· 华为云下月调整 AI 专业服务价格，原型开发基础版升至 85.12 万元\n· 17 岁研究员陈广宇离开 Kimi，否认将加入 Anthropic\n· 四部门要求车企规范产品宣传，不得诱导驾驶人忽视安全责任 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          },
+          {
+            "title": "Akka 在 65 个开源项目测试 AI 交付",
+            "summary": "[[Akka]] 在 65 个开源项目中测试基于规格的 AI 交付方式。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/uGNQwpOt5GGAKm2XlEZC?utm_source=rss&utm_medium=article",
+            "title_original": "Akka 在 65 个开源项目中测试基于规格的 AI 交付",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Depop 以音乐为核心开展营销合作",
+            "summary": "二手转售平台 [[Depop]] 将音乐作为营销核心，已与 [[Zara Larsson]]、[[Olivia Rodrigo]] 等艺人合作推出联名活动。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/why-depop-is-putting-music-at-the-center-of-its-marketing-collaborating-with-zara-larsson-and-olivia-rodrigo/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Why Depop is putting music at the center of its marketing, collaborating with Zara Larsson and Olivia Rodrigo",
+            "excerpt": "Peer-to-peer resale platform Depop is trying to differentiate itself from the competition through the power of music. To date, it has collaborated on drops with the likes of Kacey Musgraves, Zara Larsson and Olivia Rodrigo.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": [
+          {
+            "title": "Oura Ring 推出手部主题广告片",
+            "summary": "智能戒指品牌 [[Oura Ring]] 推出以手为核心的广告片，招募 14 名手舞人员并制作 35 个模型场景。",
+            "source": "刀法研究所",
+            "url": "https://www.digitaling.com/projects/379714.html",
+            "title_original": "智能戒指广告片有点惊悚，满屏都是手",
+            "excerpt": "Wear Your Best Life 满屏全是手，有点惊悚怎么回事！ 近日，智能戒指品牌Oura Ring推出一支 以「手」作为创意核心的广告片「Wear Your Best Life」 ，展现出产品不同的使用场景。 在这里，手掌如同人一般，过着自己的小生活。 等地铁 健身房里跑步 泳池边晒太阳 ... 为配合「手」这一视觉形式，品牌找了35名模型制作师花费3周时间10:1真实还原了不同的生活场景，还在全球招募了14名顶级手舞人员，只为达到更好的效果。 这是一种对传统健康科技营销方式的突破， 抛弃冷冰冰的数据，不讲花里胡哨的功能，而是回到人本身，让Oura Ring智能戒指成为帮助消费者拥有更好人生的伙伴。 Oura CMO（首…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "Arekejoker/qwen21-nsfw-pose-skill",
+            "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
+            "intro": "一套本地 AI 出图配方，帮你用固定姿势和提示词稳定生成人物图。",
+            "features": [
+              "内置 136 个 3D 人偶姿势，可精确控制人物动作",
+              "提供作者级提示词模板和分级大胆度参考",
+              "可接入 Claude Code、Cursor 等 AI 助手当技能用",
+              "附带自检脚本，检查环境缺什么"
+            ],
+            "guide": "需要先装好 ComfyUI 和对应底模、LoRA 与姿势节点，按仓库 install/setup.md 配置后，用 Python 脚本自检并跑示例。适合有一定本地出图环境的人。",
+            "steps": [
+              "按 install/setup.md 安装 ComfyUI 与依赖",
+              "python3 scripts/doctor.py 检查环境",
+              "python3 scripts/qwen_pose_test.py 跑作者案例"
+            ],
+            "install": "python3 scripts/doctor.py",
+            "summary": "一套本地 AI 出图配方，帮你用固定姿势和提示词稳定生成人物图。",
+            "source": "GitHub",
+            "stars": "2634",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Qwen-Image 2.1 NSFW/姿势出图 skill：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Code / Codex / Cursor / OpenClaw",
+            "is_foreign": true
+          },
+          {
+            "title": "jaredpalmer/kev",
+            "url": "https://github.com/jaredpalmer/kev",
+            "intro": "一组能自己训练和运行的小型决策模型，专门回答是/否、选择和打分问题。",
+            "features": [
+              "一次请求可问是/否、多选和评分三类问题",
+              "默认输出经过校准的概率，结果更可信",
+              "提供从笔记本到单卡服务器的四种大小",
+              "支持用自己标注的数据微调"
+            ],
+            "guide": "可先在 Hugging Face 网页上试用；本地运行需要 Python 环境，按模型卡选择合适尺寸，有 GPU 或苹果芯片更顺畅。",
+            "steps": [
+              "访问 huggingface.co/spaces/jaredpalmer/kev 在线试用",
+              "按模型卡选择 Kev-4B 等合适尺寸",
+              "准备 Python 环境加载预训练权重"
+            ],
+            "install": "",
+            "summary": "一组能自己训练和运行的小型决策模型，专门回答是/否、选择和打分问题。",
+            "source": "GitHub",
+            "stars": "9269",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Jev-like family of decision models built on top of Qwen3.5/3.8 you can train and run on your own",
+            "is_foreign": true
+          },
+          {
+            "title": "YishenTu/claudian",
+            "url": "https://github.com/YishenTu/claudian",
+            "intro": "把 AI 编程助手塞进 Obsidian 笔记软件，让它在你的笔记库里读写文件、跑命令。",
+            "features": [
+              "在笔记里直接让 AI 读写、搜索和修改文件",
+              "选中文字即可用快捷键就地编辑并预览差异",
+              "支持斜杠命令、@提及文件和多个会话互通",
+              "可切换 Claude Code、Codex 等多种助手"
+            ],
+            "guide": "先在 Obsidian 里安装并启用该插件，再从侧边栏图标或命令面板打开界面；需要自备对应 AI 服务的账号或密钥。",
+            "steps": [
+              "在 Obsidian 中安装并启用 Claudian 插件",
+              "从侧边栏图标或命令面板打开界面",
+              "配置所用 AI 助手的账号或密钥"
+            ],
+            "install": "",
+            "summary": "把 AI 编程助手塞进 Obsidian 笔记软件，让它在你的笔记库里读写文件、跑命令。",
+            "source": "GitHub",
+            "stars": "15710",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An Obsidian plugin that embeds Claude Code/Codex as an AI collaborator in your vault",
+            "is_foreign": true
+          },
+          {
+            "title": "NousResearch/hermes-agent",
+            "url": "https://github.com/NousResearch/hermes-agent",
+            "intro": "一个会自己积累经验、越用越懂你的 AI 助手，可跑在云端并随时从聊天软件找它。",
+            "features": [
+              "完成任务后自动总结成可复用的技能",
+              "记住过往对话，跨会话延续对你的了解",
+              "可在 Telegram、Slack 等聊天软件里指挥",
+              "支持切换多种模型，不绑定单一厂商"
+            ],
+            "guide": "可部署在便宜的云服务器或本地，通过终端界面或聊天软件使用；需要自备模型服务（如 OpenRouter、OpenAI）的账号。",
+            "steps": [
+              "准备一台服务器或本地环境",
+              "配置所用模型服务的账号或密钥",
+              "用 hermes model 切换模型后开始对话"
+            ],
+            "install": "",
+            "summary": "一个会自己积累经验、越用越懂你的 AI 助手，可跑在云端并随时从聊天软件找它。",
+            "source": "GitHub",
+            "stars": "254689",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The agent that grows with you",
+            "is_foreign": true
+          },
+          {
+            "title": "n8n-io/n8n",
+            "url": "https://github.com/n8n-io/n8n",
+            "intro": "一个可视化搭自动化流程的工具，把各种软件和 AI 串起来替你干活。",
+            "features": [
+              "拖拽画布搭建多步骤 AI 工作流",
+              "连接 1500 多个外部服务，如表格和邮件",
+              "需要时可插入 JavaScript 或 Python 代码",
+              "可自建部署，数据留在自己手里"
+            ],
+            "guide": "需要先装 Docker，用官方脚本或 Docker 命令启动，然后在浏览器打开 localhost:5678 使用；也可直接用云端版。",
+            "steps": [
+              "先安装 Docker",
+              "curl -fsSL https://get.n8n.io | sh 一键安装",
+              "浏览器访问 http://localhost:5678 开始搭建"
+            ],
+            "install": "curl -fsSL https://get.n8n.io | sh",
+            "summary": "一个可视化搭自动化流程的工具，把各种软件和 AI 串起来替你干活。",
+            "source": "GitHub",
+            "stars": "207829",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从本地出图、决策模型到笔记与工作流自动化，让 AI 真正落到日常干活里。"
+      }
+    ]
+  }
+}
