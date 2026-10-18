@@ -1,0 +1,284 @@
+{
+  "date": "2026-10-19",
+  "generated_at": "2026-10-18T23:58:24.628879+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 25,
+    "rss_failed": 1,
+    "raw_news": 215,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-19",
+    "digest": "DeepSeek上线新搜索服务与V4.1 Flash模型，英伟达优化Kimi K3推理提速1.68倍。",
+    "keywords": [
+      "DeepSeek",
+      "Kimi",
+      "MiniCPM",
+      "英伟达",
+      "Benchmark"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "WhatsApp MCP 在 Cloudflare 免费运行",
+            "summary": "开发者发布 [[WhatsApp]] MCP 项目，可在 [[Cloudflare]] 免费运行，让移动端 [[Claude]] 访问个人 WhatsApp 消息。",
+            "source": "Hacker News",
+            "url": "https://github.com/finereli/whatsapp-mcp",
+            "title_original": "Show HN: WhatsApp MCP running free on Cloudflare",
+            "excerpt": "I wanted my humble Claude on mobile to access my WhatsApp messages but the only options I could find either required WhatsApp Business or an actual server to run Baileys on. I wanted to run it for free on ClaudeFlare and with my personal WhatsApp account, so I built this. Important feature - it connects to your Google…",
+            "is_foreign": true
+          },
+          {
+            "title": "DeepSeek 搜索抓取服务定价公布",
+            "summary": "[[DeepSeek]] 公布搜索与抓取 API 定价，每 1000 次成功请求收费 0.75 美元。",
+            "source": "Hacker News",
+            "url": "https://api-docs.deepseek.com/guides/search/",
+            "title_original": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
+            "excerpt": "Article URL: https://api-docs.deepseek.com/guides/search/ \n Comments URL: https://news.ycombinator.com/item?id=50138531 \n Points: 527 \n # Comments: 253",
+            "is_foreign": true
+          },
+          {
+            "title": "MiniCPM-V-4.7 登 HuggingFace 热门榜",
+            "summary": "[[openbmb]] 的 [[MiniCPM-V-4.7-35B-A3B]] 登上 [[HuggingFace]] 热门模型榜，获赞 1007，下载 57935 次。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
+            "title_original": "openbmb/MiniCPM-V-4.7-35B-A3B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 825）类型 image-text-to-text。likes 1007，下载 57935。标签：transformers、safetensors、minicpmv4_7、image-text-to-text、minicpm-v、multimodal。",
+            "is_foreign": true
+          },
+          {
+            "title": "Benchmark 合伙人谈狂热市场投资",
+            "summary": "[[Benchmark]] 五位合伙人分享在狂热市场中的投资策略，称不设议程、不急于出手、不离开旧金山。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/10/18/no-agenda-no-rush-no-leaving-san-francisco-benchmarks-partners-on-investing-in-a-frenzied-market/",
+            "title_original": "No agenda, no rush, no leaving San Francisco: Benchmark’s partners on investing in a frenzied market",
+            "excerpt": "Benchmark may have grown its funds and swapped out some partners, but onstage the five who are left sounded like friends who just happen to be running one of the Valley’s most storied firms",
+            "is_foreign": true
+          },
+          {
+            "title": "萨凡纳警员因共享 Flock 登录被解雇",
+            "summary": "萨凡纳前警员 Amber Harpe 将 [[Flock]] 登录信息分享给其 ICE 探员丈夫，8 月被解雇。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/policy/1013573/spd-officer-fired-flock-ice-husband",
+            "title_original": "A Savannah police officer gave her Flock login to her ICE agent husband",
+            "excerpt": "Now, former Savannah police officer Amber Harpe was fired in August following a department investigation that found she had shared her Flock login information with her husband, Tyler Harpe, an ICE agent. SPD does not share its Flock data with ICE and said sharing access to the system violated the department's security…",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "Meta 与苹果推出全美最强开源模型",
+            "summary": "[[Meta]] 联手苹果推出全美最强开源模型，编码基准测试输给 [[智谱]]、[[Kimi]]。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/EuYOPRUBAeBgBGBu5ktk?utm_source=rss&utm_medium=article",
+            "title_original": "Meta 联手苹果推出全美最强开源模型，编码基测输给智谱、Kimi",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "StartLux 稳居决策模型 SOTA",
+            "summary": "[[HuggingFace]] 发榜，中国模型 [[StartLux]] 稳居决策模型 SOTA。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8172283.html",
+            "title_original": "Huggingface发榜，中国模型StartLux稳居决策模型SOTA",
+            "excerpt": "当 AI 从“生成内容”迈向“执行任务”，一个能够控制计算成本、理解关键细节并准确表达不确定性的决策中枢，将成为智能体和全本地智能系统不可或缺的基础设施。",
+            "is_foreign": false
+          },
+          {
+            "title": "英伟达优化 Kimi K3 推理速度",
+            "summary": "[[英伟达]] 通过 vLLM 优化，使 [[Kimi K3]] 在 GB300 NVL72 上推理速度达 423 tok/s/user，提升 1.68 倍。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/014/595.htm",
+            "title_original": "英伟达优化 Kimi K3 模型推理速度，提升 1.68 倍",
+            "excerpt": "IT之家 10 月 18 日消息，调研机构 SemiAnalysis 今日发文称，英伟达通过一项上游 vLLM 优化，让 2.8 万亿参数量的 Kimi K3 模型实现 423 tok/s/user（每用户每秒每 Token）的推理速度， 对比相同硬件（GB300 NVL72）性能提升 1.68 倍 。 据介绍，该项优化由英伟达 CentML 工程师 Benjamin 完成。它通过大规模 Megakernel 融合，使用 Cute DSL 编写英伟达新推出的解码专用内核。 该 Megakernel 包含 1.2 万行代码 ，代表着 AI 辅助生成高级计算内核的未来方向。英伟达优化 Kimi K3 模型推理速度，提升 1.68 倍。…",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek V4.1 Flash 新版本上线",
+            "summary": "[[DeepSeek]] V4.1 Flash 更新至 V4.1-Flash-1017，基准测试提升，运行时间与输出长度缩短，成本更低。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372512",
+            "title_original": "DeepSeek 新模型上线，价格更低能力更强；传华为将推新品牌「星芒」主打性价比；天文学家发现第一颗绿色恒星｜极客早知道",
+            "excerpt": "DeepSeek V4.1 Flash 新版本上线：许愿式编程一键成真 \n 10 月 17 日，DeepSeek V4.1 Flash 更新至 V4.1-Flash-1017 版本，官方网页端、APP 与 API 模型已同步变更为新模型。相比上一版本的 DeepSeek V4.1 Flash，新模型在各方面的基准测试中取得了长足的提升。 \n 在提升性能的同时，模型的任务运行时间与输出长度还缩短了，让用户能够以更低成本、更快速度完成任务，在多个 Harness 下达到了新的性能-费用帕累托最优。 \n 特别地，此次优化着重针对 DeepSeek Harness、腾讯 CodeBuddy、WorkBuddy 等平台框架进行了优化。（消息…",
+            "is_foreign": false
+          },
+          {
+            "title": "IDC 预测亚太 ICT 支出增长 5.4%",
+            "summary": "[[IDC]] 报告预计 2026 年亚太（不含中国和日本）ICT 支出达 6470 亿美元，同比增长 5.4%。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1819746.html",
+            "title_original": "IDC：2026年亚太地区ICT支出将增长5.4%",
+            "excerpt": "根据IDC发布的最新报告，2026 年亚洲/太平洋地区（不包括中国和日本）的信息通信技术支出预计将达到 6470 亿美元。预计到 2029 年将超过 7580 亿美元。2026 年，亚太地区（不包括中国和日本）的市场预计将增长 5.4%，其增长速度将超过全球平均水平，因为该地区正积极从“试验阶段”转向“大规模执行阶段”。这一增长趋势意味着一场必要的技术变革——企业不再仅仅为了增长而进行投资，而是为了避免“代理式人工智能”时代所带来的技术过时问题。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "feder-cr/git-ai",
+            "url": "https://github.com/feder-cr/git-ai",
+            "intro": "专为 AI 编程助手设计的代码版本管理工具，解决多个 AI 同时改代码时的冲突和等待问题。",
+            "features": [
+              "让多个 AI 助手同时改代码不打架",
+              "只取需要的文件，不用整份下载",
+              "改动即时提交，不用排队等待",
+              "不绑定任何 AI 服务商，可自由选择"
+            ],
+            "guide": "这是给开发者用的服务端工具，需要自己搭建运行环境。README 未给出具体安装命令，建议先看项目文档了解如何启动服务。",
+            "steps": [],
+            "install": "",
+            "summary": "专为 AI 编程助手设计的代码版本管理工具，解决多个 AI 同时改代码时的冲突和等待问题。",
+            "source": "GitHub",
+            "stars": "2294",
+            "language": "Go",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Git designed for AI agents.",
+            "is_foreign": true
+          },
+          {
+            "title": "jev-chat/jev-chat-jarvis",
+            "url": "https://github.com/jev-chat/jev-chat-jarvis",
+            "intro": "聊天辅助决策工具：先帮你读懂对方真实意图和风险，再草拟回复，发不发由你决定。",
+            "features": [
+              "先分析对方语气和潜在风险",
+              "一键生成多条回复草稿供你选",
+              "支持安卓、Windows、macOS、iOS",
+              "最终是否发送始终由你决定"
+            ],
+            "guide": "从官网或 Releases 页面下载对应系统的安装包，装好后按引导配置即可使用。无需自己搭建服务器。",
+            "steps": [
+              "访问官网 chatjevs.com 或 Releases 页面",
+              "下载对应系统的安装包",
+              "安装后按应用内引导完成配置"
+            ],
+            "install": "",
+            "summary": "聊天辅助决策工具：先帮你读懂对方真实意图和风险，再草拟回复，发不发由你决定。",
+            "source": "GitHub",
+            "stars": "7884",
+            "language": "Kotlin",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "The chat decision assistant: before you reply, Jev reads the chat, judges intent and risk, and drafts replies you fill in with one tap. You press send. Android · Windows · macOS · iOS | 聊天辅助决策工具：先看懂对方再回复，发不发由你。",
+            "is_foreign": true
+          },
+          {
+            "title": "ActivityWatch/activitywatch",
+            "url": "https://github.com/ActivityWatch/activitywatch",
+            "intro": "免费开源的自动时间记录工具，帮你搞清楚每天的时间到底花在了哪里。",
+            "features": [
+              "自动记录当前使用的应用和窗口标题",
+              "记录浏览器标签页和网址",
+              "检测你是否离开键盘",
+              "数据存在本地，隐私自己掌控"
+            ],
+            "guide": "从官网或 Releases 下载对应系统的安装包，装好后在本地运行，数据只保存在自己电脑上。",
+            "steps": [
+              "访问 activitywatch.net 或 Releases 页面",
+              "下载对应系统的安装包",
+              "安装后启动应用即可自动记录"
+            ],
+            "install": "",
+            "summary": "免费开源的自动时间记录工具，帮你搞清楚每天的时间到底花在了哪里。",
+            "source": "GitHub",
+            "stars": "19272",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The best free and open-source automated time tracker. Cross-platform, extensible, privacy-focused.",
+            "is_foreign": true
+          },
+          {
+            "title": "tensorflow/tensorflow",
+            "url": "https://github.com/tensorflow/tensorflow",
+            "intro": "谷歌开源的机器学习平台，让开发者和研究者能搭建和训练 AI 模型。",
+            "features": [
+              "提供搭建和训练 AI 模型的完整工具",
+              "支持 Python 和 C++ 等编程语言",
+              "可在普通电脑或带显卡的机器上运行",
+              "有大量现成工具和社区资源可用"
+            ],
+            "guide": "需要先装 Python，然后用 pip 安装。想用显卡加速或 Docker 运行，可参考官方安装指南。",
+            "steps": [
+              "先安装 Python 环境",
+              "运行 pip install tensorflow",
+              "如需显卡加速，参考官方安装指南"
+            ],
+            "install": "pip install tensorflow",
+            "summary": "谷歌开源的机器学习平台，让开发者和研究者能搭建和训练 AI 模型。",
+            "source": "GitHub",
+            "stars": "201098",
+            "language": "C++",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An Open Source Machine Learning Framework for Everyone",
+            "is_foreign": true
+          },
+          {
+            "title": "firecrawl/firecrawl",
+            "url": "https://github.com/firecrawl/firecrawl",
+            "intro": "把网页内容抓取并整理成 AI 能直接读的干净格式，让 AI 助手能上网查资料。",
+            "features": [
+              "把任意网页转成干净的 Markdown 文本",
+              "能处理大量 JavaScript 的动态网页",
+              "支持搜索网页并返回完整内容",
+              "可解析网页里的 PDF 和 DOCX 文件"
+            ],
+            "guide": "既提供在线托管服务，也可自行部署。README 未给出具体安装命令，可访问官网了解在线使用方式。",
+            "steps": [
+              "访问 firecrawl.dev 了解在线服务",
+              "按官网指引获取 API Key 后调用"
+            ],
+            "install": "",
+            "summary": "把网页内容抓取并整理成 AI 能直接读的干净格式，让 AI 助手能上网查资料。",
+            "source": "GitHub",
+            "stars": "192771",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 更懂聊天、更会写代码、更会查资料，也帮人看清时间花在哪。"
+      }
+    ]
+  }
+}
