@@ -1,5 +1,5 @@
 {
-  "classic_offset": 8,
+  "classic_offset": 10,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-10-15T23:55:35.773317+00:00",
   "recent_trending": [
-    "mrkai77/Loop",
-    "omlahore/RemoveMacAI",
-    "NandhaKishorM/laya",
     "feder-cr/invisible_playwright_mcp",
     "storytold/filmcraft",
     "Ebony-Vinyl/dsh-our-free-model",
@@ -174,12 +171,15 @@
     "YishenTu/claudian",
     "feder-cr/git-ai",
     "jev-chat/jev-chat-jarvis",
-    "ActivityWatch/activitywatch"
+    "ActivityWatch/activitywatch",
+    "Gathin23/cleanyourtv",
+    "storytold/photocraft",
+    "Bash-it/bash-it"
   ],
-  "last_run_date": "2026-10-18",
+  "last_run_date": "2026-10-19",
   "last_classic": [
-    "tensorflow/tensorflow",
-    "firecrawl/firecrawl"
+    "ohmyzsh/ohmyzsh",
+    "Significant-Gravitas/AutoGPT"
   ],
-  "updated_at": "2026-10-18T23:58:13.787684+00:00"
+  "updated_at": "2026-10-19T23:55:35.105669+00:00"
 }
