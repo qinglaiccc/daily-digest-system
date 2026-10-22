@@ -1,0 +1,309 @@
+{
+  "date": "2026-10-23",
+  "generated_at": "2026-10-22T23:55:48.711380+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 23,
+    "rss_failed": 3,
+    "raw_news": 291,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-23",
+    "digest": "英伟达GTC柏林确认Vera Rubin量产，DeepSeek开源推理系统，沃尔玛开放外部AI购物智能体",
+    "keywords": [
+      "英伟达",
+      "DeepSeek",
+      "Claude",
+      "1Password",
+      "沃尔玛"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "KRAFTON开源模型登HuggingFace热门榜",
+            "summary": "[[KRAFTON]]的Raon-1-mini-preview登上[[HuggingFace]]热门模型榜，获132个likes、249次下载。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/KRAFTON/Raon-1-mini-preview",
+            "title_original": "KRAFTON/Raon-1-mini-preview 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 125）**新发布**。类型 text-generation。likes 132，下载 249。标签：transformers、safetensors、raon1_mini、text-generation、raon、conversational。",
+            "is_foreign": true
+          },
+          {
+            "title": "Rivian收购世界模型初创加速自动驾驶",
+            "summary": "[[Rivian]]收购世界模型初创公司Third Dimension，其AI技术可匹配物理世界，结合Rivian数据构建模拟器。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/10/22/rivian-buys-world-model-startup-to-accelerate-self-driving-ambitions/",
+            "title_original": "Rivian buys world model startup to accelerate self-driving ambitions",
+            "excerpt": "Third Dimension's technology uses AI to match the physical world, which when combined with Rivian's reams of data could turn into a valuable simulator.",
+            "is_foreign": true
+          },
+          {
+            "title": "DeepSeek开源DeepInfer推理系统",
+            "summary": "[[DeepSeek]]开源推理系统DeepInfer，单集群日处理155万亿tokens，日收入2200万美元，回本周期81天。",
+            "source": "Latent Space",
+            "url": "https://www.latent.space/p/ainews-deepseek-deepinfer-open-source",
+            "title_original": "[AINews] DeepSeek DeepInfer: Open Source SOTA Inference running 155T toks/day/cluster making $22m/day at ~80% margin for a 81 day payback",
+            "excerpt": "An open source “bomb” drops from China",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic推出Claude Duet智能体应用",
+            "summary": "[[Anthropic]]推出[[Claude]] Duet应用，面向Pro和Max用户候补开放，押注智能体方向。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/",
+            "title_original": "Claude Duet app is Anthropic’s bet on agents",
+            "excerpt": "Claude Duet is available through waitlist for Pro and Max plan users.",
+            "is_foreign": true
+          },
+          {
+            "title": "1Password允许AI智能体免密登录网站",
+            "summary": "[[1Password]]推出1Password for Agents平台，允许Muse、Dots和Grok Bot在不接触用户凭证情况下代登录网站。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2293844/1password-opens-up-ai-agents-muse-dots-grok/",
+            "title_original": "1Password will let Muse, Dots and Grok Bot sign in to sites for you without getting your credentials",
+            "excerpt": "If you're willing to let AI book or buy things on your behalf, 1Password just made that easier.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "黄仁勋GTC柏林确认Vera Rubin全面量产",
+            "summary": "[[黄仁勋]]在GTC柏林大会确认[[英伟达]]Vera Rubin平台已全面量产，并讨论算力中心建设、智能体管理与物理AI落地。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372763",
+            "title_original": "欧洲 AI，等来了黄仁勋",
+            "excerpt": "GTC 柏林开幕前的两周，半导体板块走得并不顺，费城半导体指数出现了 2008 年以来最长的一轮连跌。市场在反复算同一笔账，巨额的 GPU 投入，什么时候能变成实打实的回报。 \n 10 月 21 日，在柏林 Tempodrom 的舞台上，黄仁勋没有发布新芯片。早已发布的 Vera Rubin 平台，这次只是确认「已全面量产」。他把更多时间留给了三个更落地的问题： 算力中心怎么建得更快，越来越能干的智能体怎么管住，物理 AI，怎么走进欧洲的工厂和马路 。 \n 用他自己的话说，「我们正处于人类历史上最大规模的基础设施建设之中」，需求不缺，缺的是产能和落地速度。 \n 在英伟达 GTC 柏林大会之前，黄仁勋和德国总理默茨的对谈走红社交平台…",
+            "is_foreign": false
+          },
+          {
+            "title": "国产决策模型发布，23项基测超微软",
+            "summary": "国内发布面向企业高频判断任务的决策模型，23项开源基测准确率超过微软和JEV。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/wyGrRsTrfHM7i9MhuV5P?utm_source=rss&utm_medium=article",
+            "title_original": "又一国产决策模型发布：面向企业高频判断任务，23 项开源基测准确率超过微软和 JEV",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "1Password推出智能体密码授权功能",
+            "summary": "[[1Password]]发布1Password for Agents平台，首批支持[[Claude]] Duet、ChatGPT Work等智能体免密代登录。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/016/772.htm",
+            "title_original": "让你安心用 AI 网购 / 订票 / 点外卖：1Password 推出智能体密码授权功能",
+            "excerpt": "IT之家 10 月 23 日消息，密码管理服务商 1Password 昨日（10 月 22 日）发布博文，宣布推出 1Password for Agents 平台， 让个人 AI 智能体全程不接触、不存储用户的密码或验证码情况下，代用户完成网站登录。 IT之家附上官方介绍视频如下： 该功能面向个人及家庭版用户推出，首批支持 Meta Muse、OpenAI ChatGPT Work 与 Dots、Anthropic Claude Duet、Grok Bot 及 Town 等主流 AI 智能体。 官方表示随着 AI 智能体逐步承担订餐、购物、订票、整理资料等任务，账号登录成为其执行任务的关键环节。但若直接把密码交给智能体，用户将面临…",
+            "is_foreign": false
+          },
+          {
+            "title": "宇树缩短具身智能时间表并办全球赛事",
+            "summary": "[[宇树科技]]创始人称物理AI已现突破迹象，公司预研自进化模型、推进规模制造，并启动年度奖金数百万美元的多赛道竞赛。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8178216.html",
+            "title_original": "Unitree Shortens Its Embodied-AI Clock—and Opens a Global Contest",
+            "excerpt": "Two months after warning that home robots were still years away, Unitree’s founder said physical AI already shows cracks of a breakthrough. The company is pre-researching a self-evolving model, talking up scale manufacturing and launching a multi-track competition with millions in annual prizes.",
+            "is_foreign": true
+          },
+          {
+            "title": "中电信发布星辰意图理解模型Xing4.0",
+            "summary": "中电信人工智能公司星辰实验室发布并开源意图理解专用模型Xing4.0-29B-Intent，支持选择题与填空题任务。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/10/504832.html",
+            "title_original": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
+            "excerpt": "中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "沃尔玛有条件开放外部AI购物智能体",
+            "summary": "[[沃尔玛]]推出AI智能体资料功能并更新条款，允许外部AI购物智能体接入，强调透明度和客户控制。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/walmart-welcomes-external-ai-shopping-agents-terms-boundaries/833723/",
+            "title_original": "Walmart welcomes external AI agents — with some guardrails",
+            "excerpt": "The mass retailer is focused on transparency and customer control with a new AI agent profile feature and updated agent terms.",
+            "is_foreign": true
+          },
+          {
+            "title": "研究：AI提升商品发现，评价仍决定成交",
+            "summary": "消费者调查显示AI帮助购物者发现礼品，但多数人购买前仍查看评价、比价并核对零售商政策。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/ai-strategies/ai-boosts-discovery-but-reviews-still-seal-the-deal-new-research-shows/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "AI boosts discovery but reviews still seal the deal, new research shows",
+            "excerpt": "Consumer surveys show that AI helps shoppers find gifts, but most still check reviews, compare prices and review retailers' policies before buying.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "xiaoyang111222/cn-math-taxonomy",
+            "url": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+            "intro": "把中小学数学英语物理知识点串成一张网，答错题能一路追溯到最基础的小学概念。",
+            "features": [
+              "收录 1644 个知识点和 6723 道题",
+              "答错题自动回溯到薄弱前置知识",
+              "数学、英语、物理各自成图",
+              "提供在线诊断工具可直接试用"
+            ],
+            "guide": "普通用户直接打开官网在线试用诊断即可；想自己部署需有 Python 环境，按仓库说明运行。",
+            "steps": [
+              "访问 math.pansgo.com 在线试用诊断",
+              "想本地跑需先安装 Python 环境",
+              "按仓库说明启动本地服务"
+            ],
+            "install": "",
+            "summary": "把中小学数学英语物理知识点串成一张网，答错题能一路追溯到最基础的小学概念。",
+            "source": "GitHub",
+            "stars": "2192",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "数学（小学到高中）、英语（三年级到高中）、初中物理的知识图谱：1644 个知识点、2403 条先修边、6723 道题，对齐课标，附自适应前置诊断。",
+            "is_foreign": true
+          },
+          {
+            "title": "storytold/filmcraft",
+            "url": "https://github.com/storytold/filmcraft",
+            "intro": "一款免费开源的视频剪辑软件，界面和快捷键跟专业软件一样，电脑和浏览器都能用。",
+            "features": [
+              "多轨道剪辑、调色、音效和字幕",
+              "支持 macOS、Windows、Linux 和网页",
+              "每个操作都能交给 AI 助手执行",
+              "自带视频编解码，不依赖外部组件"
+            ],
+            "guide": "普通用户去官网下载对应系统的安装包即可；想在浏览器用直接打开网页版，无需装环境。",
+            "steps": [
+              "访问 getartcraft.com/apps/filmcraft",
+              "下载对应系统的安装包",
+              "安装后打开即可开始剪辑"
+            ],
+            "install": "",
+            "summary": "一款免费开源的视频剪辑软件，界面和快捷键跟专业软件一样，电脑和浏览器都能用。",
+            "source": "GitHub",
+            "stars": "15740",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "FilmCraft: An open-source, nonlinear video editor written by scratch in pure Rust",
+            "is_foreign": true
+          },
+          {
+            "title": "jarun/nnn",
+            "url": "https://github.com/jarun/nnn",
+            "intro": "在命令行里管理文件的小工具，体积只有 150KB，却比图形文件管理器还快。",
+            "features": [
+              "分析磁盘占用，找出大文件",
+              "批量重命名文件",
+              "插件扩展实时预览、挂载磁盘",
+              "在手机 Termux 和树莓派上也能跑"
+            ],
+            "guide": "面向习惯命令行的用户，需先装好系统包管理器，按 README 的安装章节用包管理器或源码编译安装。",
+            "steps": [
+              "用系统包管理器安装 nnn",
+              "或按 README 说明从源码编译",
+              "终端输入 nnn 启动"
+            ],
+            "install": "",
+            "summary": "在命令行里管理文件的小工具，体积只有 150KB，却比图形文件管理器还快。",
+            "source": "GitHub",
+            "stars": "22088",
+            "language": "C",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "n³ The unorthodox terminal file manager",
+            "is_foreign": true
+          },
+          {
+            "title": "Snailclimb/JavaGuide",
+            "url": "https://github.com/Snailclimb/JavaGuide",
+            "intro": "一份写给 Java 后端求职者的面试复习资料，从基础到系统设计都有，还能在线看。",
+            "features": [
+              "覆盖 Java 基础、集合、数据库等考点",
+              "附后端高频系统设计面试题",
+              "新增 AI 应用开发与面试指南",
+              "提供面试突击版 PDF 下载"
+            ],
+            "guide": "纯文档项目，无需安装任何东西，直接打开 javaguide.cn 在线阅读即可。",
+            "steps": [
+              "浏览器访问 javaguide.cn 在线阅读",
+              "需要突击版可下载配套 PDF"
+            ],
+            "install": "",
+            "summary": "一份写给 Java 后端求职者的面试复习资料，从基础到系统设计都有，还能在线看。",
+            "source": "GitHub",
+            "stars": "159209",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
+            "is_foreign": true
+          },
+          {
+            "title": "langgenius/dify",
+            "url": "https://github.com/langgenius/dify",
+            "intro": "一个可视化搭 AI 应用的工作台，拖拖拽拽就能把大模型接进自己的业务流程。",
+            "features": [
+              "在画布上拖拽搭建 AI 工作流",
+              "接入多种大模型统一管理",
+              "内置知识库问答（RAG）能力",
+              "支持云端或自己服务器部署"
+            ],
+            "guide": "需先装 Docker 和 Docker Compose（2.24.0 以上），机器至少 2 核 CPU、4GB 内存，用几条命令启动后浏览器打开本地地址初始化。",
+            "steps": [
+              "先安装 Docker 和 Docker Compose v2.24.0+",
+              "确认机器至少 2 核 CPU、4GB 内存",
+              "cd dify 后进入 docker 目录",
+              "cp .env.example .env",
+              "docker compose up -d 后访问 localhost/install"
+            ],
+            "install": "docker compose up -d",
+            "summary": "一个可视化搭 AI 应用的工作台，拖拖拽拽就能把大模型接进自己的业务流程。",
+            "source": "GitHub",
+            "stars": "159280",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从教学知识图谱到视频剪辑与 AI 应用搭建，帮人把复杂活儿变简单。"
+      }
+    ]
+  }
+}

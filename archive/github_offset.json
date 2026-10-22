@@ -1,5 +1,5 @@
 {
-  "classic_offset": 14,
+  "classic_offset": 16,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-10-15T23:55:35.773317+00:00",
   "recent_trending": [
-    "omnivore-app/omnivore",
-    "LosaLosSantos/aurelio-finance",
-    "yetone/magpie",
     "ShareX/ShareX",
     "Jakeschincariol/replica-skill",
     "storytold/pdfcraft",
@@ -174,12 +171,15 @@
     "alyssaxuu/screenity",
     "Leonxlnx/earshot",
     "Ebony-Vinyl/dsh-our-free-model",
-    "streetwriters/notesnook"
+    "streetwriters/notesnook",
+    "xiaoyang111222/cn-math-taxonomy",
+    "storytold/filmcraft",
+    "jarun/nnn"
   ],
-  "last_run_date": "2026-10-21",
+  "last_run_date": "2026-10-22",
   "last_classic": [
-    "AUTOMATIC1111/stable-diffusion-webui",
-    "DietrichGebert/ponytail"
+    "Snailclimb/JavaGuide",
+    "langgenius/dify"
   ],
-  "updated_at": "2026-10-21T23:55:35.989836+00:00"
+  "updated_at": "2026-10-22T23:55:34.799671+00:00"
 }
