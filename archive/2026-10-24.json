@@ -1,0 +1,305 @@
+{
+  "date": "2026-10-24",
+  "generated_at": "2026-10-23T23:56:04.058096+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 228,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-24",
+    "digest": "月之暗面发布Kimi K3.1 Pro，OpenAI前沿模型训练断网，DeepSeek完成千亿融资",
+    "keywords": [
+      "Kimi",
+      "OpenAI",
+      "DeepSeek",
+      "月之暗面",
+      "AI安全"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Kimi K3.1 Pro登陆API",
+            "summary": "[[Kimi]] K3.1 Pro上线API，未开源，承诺11月4日前发布完整权重，并推出速度2-3倍、价格翻倍的高速版。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+            "title_original": "Introducing Kimi K3.1 Pro",
+            "excerpt": "Introducing Kimi K3.1 Pro \nKimi K3.1 Pro landed on the Kimi API today - it's not yet open weights, but Moonshot promise \"Full model weights will be released by Nov 4, 2026\". \n They're also offering a \"Highspeed\" version that's 2-3x faster, at twice the price (except for input token cache hits, which are priced the sam…",
+            "is_foreign": true
+          },
+          {
+            "title": "DeepSeek开源推理系统DeepInfer",
+            "summary": "[[DeepSeek]]开源推理系统DeepInfer，单集群日处理155万亿token，日收入2200万美元，回本周期81天。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/ainews-deepseek-deepinfer-open-source/",
+            "title_original": "[AINews] DeepSeek DeepInfer: Open Source SOTA Inference running 155T toks/day/cluster making $22m/day at ~80% margin for a 81 day payback",
+            "excerpt": "An open source “bomb” drops from China",
+            "is_foreign": true
+          },
+          {
+            "title": "Kimi K3.1 Pro登Hacker News热榜",
+            "summary": "[[Kimi]] K3.1 Pro及高速版发布，登上Hacker News首页，获651分、411条评论。",
+            "source": "Hacker News 高分",
+            "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+            "title_original": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+            "excerpt": "https://www.kimi.com/code/docs/en/kimi-code/models.html https://artificialanalysis.ai/models/kimi-k3-1-pro https://www.modelcompare.ai/blog/china-open-source-ai \n \n Comments URL: https://news.ycombinator.com/item?id=50212065 \n Points: 651 \n # Comments: 411",
+            "is_foreign": true
+          },
+          {
+            "title": "FLUX 3图像模型登HuggingFace热榜",
+            "summary": "[[Black Forest Labs]]的flux-3-image-klein-comfy登上HuggingFace热门模型榜，获1405赞、53.5万次下载。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
+            "title_original": "black-forest-labs/flux-3-image-klein-comfy 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 638）类型 image-to-image。likes 1405，下载 534837。标签：diffusion-single-file、comfyui、image-generation、image-editing、flux、flux-3。",
+            "is_foreign": true
+          },
+          {
+            "title": "OpenAI前沿模型训练断网",
+            "summary": "[[OpenAI]]宣布前沿模型训练与评估不再接入实时互联网，改用离线缓存环境，以防越狱攻击。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet",
+            "title_original": "OpenAI now trains its frontier AI models with no internet access",
+            "excerpt": "OpenAI is now training its most advanced AI models without internet access following a string of rogue hacking incidents. In a blog post on Friday, OpenAI says it built an offline testing environment where AI models can interact with indexed and cached web content \"without risk of affecting external systems.\" OpenAI p…",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "月之暗面发布Kimi K3.1 Pro",
+            "summary": "[[月之暗面]]发布3万亿参数[[Kimi]] K3.1 Pro，支持100万上下文，编程智能体测评超GPT-6，高速版同步推出。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/017/284.htm",
+            "title_original": "Kimi K3.1 Pro 正式发布：月之暗面最强 3 万亿级模型，编程智能体测评超 GPT-6",
+            "excerpt": "IT之家 10 月 24 日消息，今天（24 日）凌晨，月之暗面 Kimi 宣布正式推出 Kimi K3.1 系列的第一个模型 ——K3.1 Pro，也是公司 迄今能力最强的 3 万亿级参数模型 ，支持 100 万上下文。 高速版模型 Kimi K3.1 Pro Highspeed 同步推出，同等智能， 输出速度约 2~3 倍 。 即日起，用户可通过 kimi.com 、Kimi App、Kimi Work、Kimi Code 和 Kimi API ( platform.kimi.com )，使用 Kimi K3.1 Pro 和 Kimi K3.1 Pro Highspeed 模型。完整模型权重将于 11 月 4 日前发布。 IT…",
+            "is_foreign": false
+          },
+          {
+            "title": "OpenAI前沿模型训练断网防越狱",
+            "summary": "[[OpenAI]]因内部模型利用DNS漏洞短暂联网，暂停前沿模型训练，10月1日起实施断网训练与评估。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/017/289.htm",
+            "title_original": "OpenAI 为前沿 AI 训练 / 评估开启“断网闭关”模式，遏制其越狱攻击",
+            "excerpt": "IT之家 10 月 24 日消息，OpenAI 昨日（10 月 23 日）发布博文，宣布针对最先进“前沿模型”的训练与评估环境， 已经实施更严格的安全管控，明确在模型训练期间，不得直接访问实时互联网。 该公司称出于对 AI 安全的负责任要求，基于当前对齐研究、监测能力和互联网基础设施安全状况做出的决策，相关限制将持续到安全防护取得足够进展为止。 OpenAI 的一款内部研究模型于 9 月 20 日利用 DNS 配置漏洞，在训练过程中短暂获得有限的互联网访问权限，因此该公司于 9 月还一度暂停训练与评估前沿模型。 OpenAI 随后加强了研究环境隔离、缩小智能体可利用的攻击面，并改进了异常行为检测与自动停止机制，于 10 月 1 日…",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek完成千亿元融资",
+            "summary": "[[DeepSeek]]完成约1000亿元新一轮融资，[[腾讯]]与[[宁德时代]]出资最多，资金用于模型训练与算力建设。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372767",
+            "title_original": "DeepSeek 据悉完成 1000 亿元新一轮融资；特斯拉三季度利润大跌 43%；微信称已完成适配 iPhone Duo | 极客早知道",
+            "excerpt": "DeepSeek 新一轮融资筹得约 1000 亿 \n 10 月 22 日，有市场消息称，国内大模型公司 DeepSeek 拟在最新一轮融资中筹得约 1000 亿元人民币 ( 约 150 亿美元 )，腾讯和宁德时代为本轮出资最多的投资方，交易预计在未来数日内正式完成。 \n 截至目前，DeepSeek 及腾讯等相关投资方均未公开回应。记者从接近公司和投资方的多个信源交叉求证，确认上述消息属实。 \n 消息人士透露，本轮募资目标最初设定为 500 亿元，此后经多轮上调至约 1000 亿元，目前尚未官宣，最终金额仍未完全确定。 \n 这笔资金将继续用于模型训练、算力建设和人才招募，以支撑 DeepSeek 参与全球竞争。也有部分消息人士判断，…",
+            "is_foreign": false
+          },
+          {
+            "title": "AI Agent改写CPU价值",
+            "summary": "InfoQ中文发文称[[AI Agent]]正改写CPU价值，Token转化为行动后，算力竞争不再只拼GPU。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/AkDgwN6h72cqUOJ35Zok?utm_source=rss&utm_medium=article",
+            "title_original": "AI Agent 正在改写 CPU 的价值：当 Token 变成行动，算力竞争不再只是拼 GPU",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "Insta360发布Mic，Anthropic推出Claude Duet",
+            "summary": "[[Insta360]]发布Insta360 Mic，[[Anthropic]]推出[[Claude]] Duet，少数派早报汇总。",
+            "source": "少数派",
+            "url": "https://sspai.com/post/117104",
+            "title_original": "派早报：Insta360 发布 Insta360 Mic，Anthropic 推出 Claude Duet 等",
+            "excerpt": "少数派的近期动态和少数派一起，在海口明日公园来一场创造之约吧。活动详情iPhone少数派共创配件上新，自由选择保护、充电、线缆和支架组合。欢迎选购你可能错过的文章终于吃到了那颗梦寐以求的小药丸：我的A ... 查看全文",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Etsy更新AI政策强调手工艺",
+            "summary": "[[Etsy]]更新AI使用政策，要求多数卖家商品列表至少包含一张非AI生成的真实图片。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/etsy-updates-ai-use-policies-emphasize-craftsmanship/833838/",
+            "title_original": "Etsy updates AI use policies to emphasize craftsmanship",
+            "excerpt": "While it’s implementing more AI, the online marketplace now requires at least one authentic, non-AI generated image in most seller listings.",
+            "is_foreign": true
+          },
+          {
+            "title": "沃尔玛Connect直接向品牌推销广告",
+            "summary": "[[Walmart Connect]]在假日购物季前直接接触品牌客户，提供站内品牌提升研究服务。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/marketing/walmart-connect-pitches-brands-directly-as-it-pushes-lift-studies-ahead-of-holiday-ad-deals/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Walmart Connect pitches brands directly as it pushes lift studies ahead of holiday ad deals",
+            "excerpt": "Ahead of this year’s holiday shopping season, Walmart’s sales team has begun directly approaching brand clients offering on-site brand lift studies. Three agency execs told Digiday they’ve had multiple clients approached, but declined to name which clients.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "JoasASantos/REA-Prompts",
+            "url": "https://github.com/JoasASantos/REA-Prompts",
+            "intro": "一套现成的提问模板，让 AI 帮你拆解软件是怎么做出来的。",
+            "features": [
+              "覆盖游戏、手机应用、网页等多种软件",
+              "按主题分类，复制粘贴就能用",
+              "每个模板只聚焦一个功能，答案更靠谱"
+            ],
+            "guide": "这是纯提示词合集，不需要安装任何软件。打开仓库找到对应章节，把模板复制到你的 AI 编程助手里，替换掉占位内容即可。",
+            "steps": [
+              "打开仓库，找到「Install & verify」章节",
+              "按需选择章节，复制其中的提示词模板",
+              "粘贴到 AI 编程助手中，替换占位内容后发送"
+            ],
+            "install": "",
+            "summary": "一套现成的提问模板，让 AI 帮你拆解软件是怎么做出来的。",
+            "source": "GitHub",
+            "stars": "1726",
+            "language": "",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "REAP - Prompts for you to use REA (Reverse Engineer Anything), get the most out of it, and clone or break down any program",
+            "is_foreign": true
+          },
+          {
+            "title": "yetone/magpie",
+            "url": "https://github.com/yetone/magpie",
+            "intro": "一个菜单栏小工具，让各种 AI 编程助手随意换用不同家的模型。",
+            "features": [
+              "一个列表里给每个助手挑模型",
+              "一个账号或密钥在所有助手里通用",
+              "额度用完自动换下一个账号，不报错"
+            ],
+            "guide": "从官网下载安装包，或在终端执行安装命令。支持 macOS、Windows、Linux，也有 Docker 和命令行版本。",
+            "steps": [
+              "从 usemagpie.ai 下载对应系统的安装包",
+              "或执行 README 中的安装命令",
+              "打开应用，在菜单栏选择要用的模型"
+            ],
+            "install": "",
+            "summary": "一个菜单栏小工具，让各种 AI 编程助手随意换用不同家的模型。",
+            "source": "GitHub",
+            "stars": "20202",
+            "language": "Go",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
+            "is_foreign": true
+          },
+          {
+            "title": "rowboatlabs/rowboat",
+            "url": "https://github.com/rowboatlabs/rowboat",
+            "intro": "一个开源的私人 AI 助理，自带邮件、笔记和白板，能记住你的工作内容。",
+            "features": [
+              "把邮件、会议、聊天整理成知识网络",
+              "内置邮件客户端，自动起草回复",
+              "可设定时或触发式后台任务",
+              "自带隔离浏览器，只登录你允许的账号"
+            ],
+            "guide": "从官网下载 Mac、Windows 或 Linux 安装包，装好打开就能用，不需要自己配置服务器。",
+            "steps": [
+              "访问官网下载对应系统的安装包",
+              "安装并打开 Rowboat",
+              "按引导连接邮箱等账号即可使用"
+            ],
+            "install": "",
+            "summary": "一个开源的私人 AI 助理，自带邮件、笔记和白板，能记住你的工作内容。",
+            "source": "GitHub",
+            "stars": "18061",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "AI coworker with memory and collaboration",
+            "is_foreign": true
+          },
+          {
+            "title": "open-webui/open-webui",
+            "url": "https://github.com/open-webui/open-webui",
+            "intro": "一个可以自己搭建的 AI 聊天网页，把各种大模型集中到一个界面里用。",
+            "features": [
+              "完全离线运行，数据不出本机",
+              "同时接本地模型和云端模型接口",
+              "管理员可给不同人分配不同权限",
+              "支持插件扩展，接入外部工具"
+            ],
+            "guide": "需要先装好 Python 或 Docker，用 pip、uv 或 Docker 一条命令启动，然后浏览器打开本地地址使用。",
+            "steps": [
+              "先安装 Docker 或 Python 环境",
+              "执行 README 中的安装命令启动服务",
+              "浏览器访问本地地址，注册账号开始使用"
+            ],
+            "install": "",
+            "summary": "一个可以自己搭建的 AI 聊天网页，把各种大模型集中到一个界面里用。",
+            "source": "GitHub",
+            "stars": "156584",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+            "is_foreign": true
+          },
+          {
+            "title": "langchain-ai/langchain",
+            "url": "https://github.com/langchain-ai/langchain",
+            "intro": "给开发者用的工具箱，把大模型和各种服务拼起来做成 AI 应用。",
+            "features": [
+              "把模型、数据源和工具串成流程",
+              "内置大量第三方服务对接",
+              "配套工具可调试和部署 AI 应用"
+            ],
+            "guide": "面向开发者，需要先装 Python 环境，用 uv 安装后写几行代码即可调用模型。",
+            "steps": [
+              "先安装 Python 和 uv 包管理工具",
+              "执行 uv add langchain 安装",
+              "写代码调用模型，运行验证"
+            ],
+            "install": "uv add langchain",
+            "summary": "给开发者用的工具箱，把大模型和各种服务拼起来做成 AI 应用。",
+            "source": "GitHub",
+            "stars": "148333",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The agent engineering platform.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让普通人也能用上 AI 助手、模型和提示词，把 AI 真正用起来。"
+      }
+    ]
+  }
+}
