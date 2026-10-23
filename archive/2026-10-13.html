@@ -1,0 +1,1835 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#F4F1EA">
+<meta name="description" content="2026年10月13日 星期二 每日早报：国际与国内科技新闻、新消费动态，以及 GitHub 热门效率与 AI 工具。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每日早报 · 2026年10月13日 星期二">
+<meta property="og:description" content="Meta 发布 Muse Wonder 系列模型，阿里千问推出 QwenGyre 强化学习框架，Anthropic 披露 Claude 封禁数据。">
+<title>每日早报 · 2026年10月13日 星期二</title>
+
+<!--
+  视觉风格：复古纸质 + 硬核边框（Dashboard）
+    · 底板 #F4F1EA 纸质米色，全站不出现纯白
+    · 所有分隔、卡片、按钮一律 1px/2px 纯黑实线边框，零阴影、零圆角
+    · 点缀色：暗红 #8C2F1F（主）、深绿 #2F5D3A（次），低饱和度复古色
+    · 数字与标签用等宽体（档案卡片感），标题用大号粗体无衬线
+  布局：左侧固定 Sidebar（往期存档，选中项反黑）+ 右侧主内容区
+  交互：Tab 切换用原生 JS，无 JS 时自动退化为「全部板块顺序展开」
+-->
+<style>
+  :root {
+    --paper: #f4f1ea;        /* 纸质米色底板，取代纯白 */
+    --paper-alt: #ebe6da;    /* 略深一档，用于表头/次级区块 */
+    --paper-deep: #e3ddd0;   /* 再深一档，用于 hover */
+    --ink: #111111;
+    --ink-soft: #3d3a34;
+    --muted: #5e5849;        /* 暖灰，在两种纸色上均 ≥ 5.6:1 */
+    --line: #111111;         /* 边框一律纯黑 */
+    --line-soft: #b9b2a2;
+    --accent: #8c2f1f;       /* 暗红 */
+    --accent-2: #2f5d3a;     /* 深绿 */
+
+    --sans: "Helvetica Neue", Helvetica, Arial, "Source Han Sans SC",
+            "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB",
+            "Microsoft YaHei", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+            "Sarasa Mono SC", "Courier New", monospace;
+
+    --sidebar-w: 268px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* 全站零圆角零阴影 —— 硬核边框风格的地基 */
+  * { border-radius: 0 !important; }
+
+  .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+  /* ================= 布局：左 Sidebar + 右内容 ================= */
+  .layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+    min-height: 100vh;
+  }
+
+  /* ================= 左侧 Sidebar ================= */
+  .sidebar {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--paper-alt);
+    border-right: 2px solid var(--line);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand {
+    padding: 18px 16px;
+    border-bottom: 2px solid var(--line);
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .brand-title {
+    display: block;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: .04em;
+  }
+  .brand-sub {
+    display: block;
+    margin-top: 3px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    opacity: .78;
+  }
+
+  .side-label {
+    padding: 14px 16px 8px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .archive-nav { flex: 1 1 auto; }
+
+  .archive-nav ol { margin: 0; padding: 0; list-style: none; }
+
+  .archive-nav a {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-top: 1px solid var(--line-soft);
+    transition: background-color .12s, color .12s;
+  }
+  .archive-nav li:last-child a { border-bottom: 1px solid var(--line-soft); }
+
+  .archive-nav a:hover { background: var(--paper-deep); }
+
+  /* 当前正在看的那一期：反黑高亮 */
+  .archive-nav a.is-current,
+  .archive-nav a.is-current:hover {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+  .archive-nav .d {
+    font-family: var(--mono);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -.02em;
+  }
+  .archive-nav .m {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    color: var(--muted);
+  }
+  .archive-nav a.is-current .m { color: var(--paper); opacity: .82; }
+
+  .archive-nav .dig {
+    grid-column: 2;
+    display: block;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .archive-nav a.is-current .dig { color: var(--paper); opacity: .9; }
+
+  .side-foot {
+    border-top: 2px solid var(--line);
+    padding: 12px 16px 20px;
+    font-size: 12.5px;
+  }
+  .side-foot a {
+    display: block;
+    padding: 4px 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .side-foot a:hover { text-decoration: underline; }
+  .side-foot .note {
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* ================= 右侧内容区 ================= */
+  .content { min-width: 0; padding: 0 0 0; }
+
+  /* ---- 报头 ---- */
+  .masthead {
+    padding: 26px 30px 22px;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper);
+  }
+
+  .masthead-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+
+  .kicker {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .lang { display: flex; border: 1px solid var(--line); }
+  .lang button {
+    appearance: none;
+    border: 0;
+    border-left: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink-soft);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: background-color .12s, color .12s;
+  }
+  .lang button:first-child { border-left: 0; }
+  .lang button:hover { background: var(--paper-deep); }
+  .lang button.on { background: var(--ink); color: var(--paper); font-weight: 700; }
+  .lang button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  h1.masthead-title {
+    margin: 0 0 10px;
+    font-size: clamp(30px, 5.2vw, 58px);
+    line-height: 1.06;
+    font-weight: 800;
+    letter-spacing: -.03em;
+    text-transform: none;
+  }
+
+  .dateline {
+    margin: 0 0 14px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .lead {
+    margin: 0;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: var(--paper-alt);
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 62em;
+  }
+
+  /* ---- KPI 看板 ---- */
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+    border-bottom: 2px solid var(--line);
+    background: var(--paper-alt);
+  }
+  .kpi {
+    padding: 14px 18px;
+    border-right: 1px solid var(--line);
+  }
+  .kpi:last-child { border-right: 0; }
+  .kpi-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .kpi-value {
+    display: block;
+    margin-top: 2px;
+    font-family: var(--mono);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -.03em;
+  }
+  .kpi-value.accent { color: var(--accent); }
+  .kpi-value.green { color: var(--accent-2); }
+
+  /* ---- Tab 栏 ---- */
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  .tab {
+    appearance: none;
+    border: 0;
+    border-right: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink-soft);
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight: 700;
+    padding: 11px 18px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color .12s, color .12s;
+  }
+  .tab:hover { background: var(--paper-deep); }
+  .tab .n {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    color: var(--accent);
+  }
+  .tab .c {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--muted);
+  }
+  .tab[aria-selected="true"] {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .tab[aria-selected="true"] .n,
+  .tab[aria-selected="true"] .c { color: var(--paper); opacity: .85; }
+  .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; }
+
+  /* ---- 面板 ---- */
+  .panels { padding: 0; }
+
+  .panel { padding: 26px 30px 34px; }
+  .panel + .panel { border-top: 2px solid var(--line); }
+
+  /* 无 JS 时全部面板直接铺开，保证内容永远可读 */
+  .js-on .panel { display: none; }
+  .js-on .panel.is-active { display: block; }
+
+  .panel-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--line);
+  }
+  .panel-head h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -.02em;
+  }
+  .panel-head h2 .en {
+    margin-left: 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .panel-head .count {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .panel-lead {
+    margin: 0 0 18px;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent-2);
+    background: var(--paper-alt);
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+
+  /* ---- 新闻条目：档案卡片 ---- */
+  .items { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+
+  .item {
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr);
+    border: 1px solid var(--line);
+    background: var(--paper);
+    transition: background-color .12s;
+  }
+  .item:hover { background: var(--paper-alt); }
+
+  .item-num {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 13px;
+    border-right: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .item:hover .item-num { background: var(--paper-deep); }
+
+  .item-body { padding: 12px 16px 13px; min-width: 0; }
+
+  .item h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: -.01em;
+  }
+  .item h3 a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+  .orig-title {
+    margin: 0 0 7px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  body.mode-orig .orig-title { font-size: 17px; font-weight: 700; color: var(--ink); }
+
+  .summary {
+    margin: 0 0 10px;
+    font-size: 15px;
+    line-height: 1.68;
+    color: var(--ink-soft);
+    max-width: 66em;
+  }
+
+  .excerpt {
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted);
+    max-width: 66em;
+  }
+  body.mode-both .excerpt {
+    padding-left: 12px;
+    border-left: 2px solid var(--line-soft);
+  }
+
+  .item-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    padding-top: 9px;
+    border-top: 1px solid var(--line-soft);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .item-meta .src { color: var(--ink); font-weight: 700; }
+
+  .read-more {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--accent);
+    border: 1px solid var(--line);
+    padding: 5px 11px;
+    transition: background-color .12s;
+    white-space: nowrap;
+  }
+  .read-more:hover { background: var(--ink); }
+  .read-more .ext {
+    width: 7px;
+    height: 7px;
+    border-top: 1.5px solid currentColor;
+    border-right: 1.5px solid currentColor;
+  }
+
+  /* ---- GitHub 仓库卡片 ---- */
+  .repo {
+    border: 1px solid var(--line);
+    background: var(--paper);
+    margin-bottom: 14px;
+  }
+  .repo:last-child { margin-bottom: 0; }
+
+  .repo-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .repo-head h3 {
+    margin: 0;
+    font-family: var(--mono);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    word-break: break-all;
+  }
+  .repo-head h3 a { color: var(--paper); }
+  .repo-head h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  .repo-stats { display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    border: 1px solid var(--paper);
+    padding: 2px 7px;
+    opacity: .92;
+  }
+  .badge.new { background: var(--accent-2); border-color: var(--accent-2); }
+
+  .repo-body { padding: 14px 16px 16px; }
+
+  .field { margin-bottom: 14px; }
+  .field:last-child { margin-bottom: 0; }
+
+  .field-label {
+    display: inline-block;
+    margin-bottom: 6px;
+    padding: 2px 8px;
+    border: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .field p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink);
+    max-width: 66em;
+  }
+
+  .features { margin: 0; padding: 0; list-style: none; display: grid; gap: 5px; }
+  .features li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .features li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: .58em;
+    width: 7px;
+    height: 7px;
+    background: var(--accent-2);
+  }
+
+  .install {
+    margin: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .install::before {
+    content: "$ ";
+    opacity: .6;
+  }
+
+  .repo-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    border-top: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---- 空态 / 提示 ---- */
+  .empty {
+    padding: 22px 16px;
+    border: 1px dashed var(--line-soft);
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .notice {
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper-alt);
+  }
+  .notice .mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--line);
+    background: var(--accent);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+  }
+  .notice .body { padding: 12px 16px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); }
+  .notice code {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    padding: 1px 5px;
+    border: 1px solid var(--line-soft);
+    background: var(--paper);
+  }
+
+  /* ---- 翻页 ---- */
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 30px;
+    border-top: 2px solid var(--line);
+    background: var(--paper-alt);
+    font-size: 13.5px;
+  }
+  .pager a {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    transition: background-color .12s, color .12s;
+  }
+  .pager a:hover { background: var(--ink); color: var(--paper); }
+  .pager a:hover .dir { color: var(--paper); opacity: .8; }
+  .pager .dir {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .pager .next { margin-left: auto; align-items: flex-end; text-align: right; }
+
+  /* ---- 页脚 ---- */
+  footer {
+    border-top: 2px solid var(--line);
+    padding: 20px 30px 40px;
+    background: var(--paper-alt);
+    font-size: 12.5px;
+    line-height: 1.8;
+    color: var(--muted);
+  }
+  footer p { margin: 0 0 4px; }
+  footer strong { color: var(--ink-soft); }
+  footer code {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    padding: 1px 5px;
+    border: 1px solid var(--line-soft);
+    background: var(--paper);
+  }
+  footer a { color: var(--accent); font-weight: 700; }
+  footer a:hover { text-decoration: underline; }
+
+  /* ================= 语言模式 ================= */
+  body.mode-zh .lang-orig { display: none; }
+  body.mode-orig .lang-zh { display: none; }
+  /* 双语模式下收起与原题重复的原文（中文源、GitHub 仓库名） */
+  body.mode-both .item:not(.is-foreign) .orig-title { display: none; }
+  body.mode-both .item.same-title .orig-title { display: none; }
+
+  /* ================= 响应式 ================= */
+  @media (max-width: 1000px) {
+    /* 侧栏改为顶部横向条：同一份 DOM，只换排布方式 */
+    .layout { grid-template-columns: 1fr; }
+
+    .sidebar {
+      position: static;
+      height: auto;
+      border-right: 0;
+      border-bottom: 2px solid var(--line);
+    }
+    .archive-nav ol {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .archive-nav ol::-webkit-scrollbar { display: none; }
+    .archive-nav li { flex: 0 0 auto; }
+    .archive-nav a {
+      grid-template-columns: auto;
+      gap: 2px;
+      padding: 9px 14px;
+      border-top: 0;
+      border-right: 1px solid var(--line-soft);
+      text-align: center;
+    }
+    .archive-nav li:last-child a { border-bottom: 0; }
+    .archive-nav .dig { display: none; }
+
+    .side-label { padding: 10px 14px 6px; }
+    .side-foot { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 10px 14px; }
+    .side-foot .note { margin-top: 0; }
+  }
+
+  @media (max-width: 720px) {
+    body { font-size: 15.5px; }
+    .masthead { padding: 20px 16px 18px; }
+    .panel { padding: 20px 16px 26px; }
+    .pager, footer { padding-left: 16px; padding-right: 16px; }
+    .item { grid-template-columns: 40px minmax(0, 1fr); }
+    .item-body { padding: 11px 13px 12px; }
+    .item h3 { font-size: 16px; }
+    .kpi { padding: 11px 14px; }
+    .kpi-value { font-size: 24px; }
+    .tab { padding: 9px 13px; font-size: 12.5px; }
+    .read-more { margin-left: 0; }
+    .notice { grid-template-columns: 1fr; }
+    .notice .mark { justify-content: flex-start; padding: 6px 16px; border-right: 0; border-bottom: 1px solid var(--line); }
+  }
+
+  @media print {
+    .sidebar, .tabs, .lang, .pager { display: none !important; }
+    .js-on .panel { display: block !important; }
+    .layout { display: block; }
+    .item, .repo { break-inside: avoid; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: .01ms !important;
+      animation-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+
+<body class="mode-zh">
+
+<div class="layout">
+
+  <!-- ==================== 左侧：往期存档 ==================== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-title">每日早报</span>
+      <span class="brand-sub">Daily Digest</span>
+    </div>
+
+    <div class="side-label">往期存档 / Archive</div>
+
+    <nav class="archive-nav" aria-label="往期存档">
+      <ol>
+        <li>
+          <a href="../archive/2026-10-24.html"
+             class=""
+>
+            <span class="d">24</span>
+            <span class="m">2026-10</span>
+            <span class="dig">月之暗面发布Kimi K3.1 Pro，OpenAI前沿模型训练断网，DeepSeek完成千亿融资</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-23.html"
+             class=""
+>
+            <span class="d">23</span>
+            <span class="m">2026-10</span>
+            <span class="dig">英伟达GTC柏林确认Vera Rubin量产，DeepSeek开源推理系统，沃尔玛开放外部AI购物智能体</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-22.html"
+             class=""
+>
+            <span class="d">22</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Anthropic推出Claude Duet，DeepSeek开源推理框架，Target以AI助手备战假日季</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-21.html"
+             class=""
+>
+            <span class="d">21</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Meta暂停Muse聊天分享功能；DeepSeek新模型登顶开源榜首；沃尔玛捆绑会员挑战亚马逊Prime</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-20.html"
+             class=""
+>
+            <span class="d">20</span>
+            <span class="m">2026-10</span>
+            <span class="dig">OpenCode遭黑客窃取API密钥，微软推守护智能体防AI内部威胁，英伟达量子模拟物理比特减九成。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-19.html"
+             class=""
+>
+            <span class="d">19</span>
+            <span class="m">2026-10</span>
+            <span class="dig">DeepSeek上线新搜索服务与V4.1 Flash模型，英伟达优化Kimi K3推理提速1.68倍。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-18.html"
+             class=""
+>
+            <span class="d">18</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Replit 改用 OpenAI 为默认模型，鹏城云脑Ⅲ万 P 算力上线试运行。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-17.html"
+             class=""
+>
+            <span class="d">17</span>
+            <span class="m">2026-10</span>
+            <span class="dig">印度报告 rogue AI 智能体活动，Meta 发布 Muse Wonder 前沿模型，特斯拉 Roadster2 发布会演示飞跃。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-16.html"
+             class=""
+>
+            <span class="d">16</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Meta 发布最强开源模型 Muse Spark Open，英伟达推出 Nemotron 3.5 Super VL；腾讯微信上线免费短剧小程序绿泡泡。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-15.html"
+             class=""
+>
+            <span class="d">15</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Gemini 4 Argon 正式发布，SpaceXAI 推出 Grok Voice 3.0，阶跃发布智能体手机。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-14.html"
+             class=""
+>
+            <span class="d">14</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Gemini 4 Argon 付费上线，阶跃星辰发布智能体手机，DeepSeek 拟入局具身智能。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-13.html"
+             class="is-current"
+aria-current="page">
+            <span class="d">13</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Meta 发布 Muse Wonder 系列模型，阿里千问推出 QwenGyre 强化学习框架，Anthropic 披露 Claude 封禁数据。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-12.html"
+             class=""
+>
+            <span class="d">12</span>
+            <span class="m">2026-10</span>
+            <span class="dig">亚马逊洽谈70亿美元收购Decart，SpaceX估值言论引质疑，NikeSKIMS上海落地。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-11.html"
+             class=""
+>
+            <span class="d">11</span>
+            <span class="m">2026-10</span>
+            <span class="dig">OpenAI发布AI智能体Dots并承诺隐私标准，字节腾讯加速个人智能体研发追赶Meta Muse。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-10.html"
+             class=""
+>
+            <span class="d">10</span>
+            <span class="m">2026-10</span>
+            <span class="dig">谷歌云发布Gemini Agent，TypeSafe AI估值达75亿美元，亚马逊秋季Prime Day美国线上消费近百亿美元。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-09.html"
+             class=""
+>
+            <span class="d">09</span>
+            <span class="m">2026-10</span>
+            <span class="dig">谷歌云发布通用工作智能体Gemini Agent，Anthropic推出Claude Haiku 5.5并大幅降价，沃尔玛推出1小时极速自提服务。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-08.html"
+             class=""
+>
+            <span class="d">08</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Meta Muse 登陆 iPad，Anthropic 发布 Claude Haiku 5.5，派拉蒙千亿收购时代华纳。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-07.html"
+             class=""
+>
+            <span class="d">07</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Mistral发布万亿参数大模型，华为昇腾中国份额反超英伟达，谷歌推出端侧多模态嵌入模型。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-06.html"
+             class=""
+>
+            <span class="d">06</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Instinct 将 AI 代理引入群聊，TikTok 上线 AI 购物助手，丰田与五十铃发布新款氢燃料电池巴士。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-05.html"
+             class=""
+>
+            <span class="d">05</span>
+            <span class="m">2026-10</span>
+            <span class="dig">AI 星际争霸赛 GPT 作弊，中国团队深挖 AI 直觉层，alo 上海张园首店开业。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-04.html"
+             class=""
+>
+            <span class="d">04</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Anthropic 被曝密会宗教领袖讨论 AI 意识，奥尔特曼发声批评；Capcom 计划用 AI 加速游戏开发；喜力推出会留星标水印的酒杯。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-03.html"
+             class=""
+>
+            <span class="d">03</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Meta开源Muse智能体代码，苹果收紧macOS完全磁盘访问权限，宜家关闭三家小型门店。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-02.html"
+             class=""
+>
+            <span class="d">02</span>
+            <span class="m">2026-10</span>
+            <span class="dig">谷歌发布Gemini 4，腾讯租甲骨文东南亚数据中心获10万AI芯片，Shopify推出AI建店工具Canvas。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-01.html"
+             class=""
+>
+            <span class="d">01</span>
+            <span class="m">2026-10</span>
+            <span class="dig">谷歌发布Gemini 4 Argon限可信防御者使用，OpenAI开发者大会推dots智能体并调整会员定价，蚂蚁百灵发布Ling-3.1-flash模型。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-30.html"
+             class=""
+>
+            <span class="d">30</span>
+            <span class="m">2026-09</span>
+            <span class="dig">OpenAI发布智能体Dots并因安全叫停GPT-6.1，特朗普与科技巨头签署AI自愿安全协议。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-29.html"
+             class=""
+>
+            <span class="d">29</span>
+            <span class="m">2026-09</span>
+            <span class="dig">Anthropic 发布 Claude Sonnet 5.5，AI 智能体 Instinct 获 10 亿美元融资；阿里云领跑中国汽车 AI 云市场。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-28.html"
+             class=""
+>
+            <span class="d">28</span>
+            <span class="m">2026-09</span>
+            <span class="dig">GPT-6 Astra 控制真车完成封闭测试，DeepSeek 年化收入达 10 亿美元，黑客低价兜售 AI 模型访问权限。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-27.html"
+             class=""
+>
+            <span class="d">27</span>
+            <span class="m">2026-09</span>
+            <span class="dig">OpenAI暂停最强模型训练并推常驻助手O，谷歌在印度测试Gemini购物，Runway发布实时世界模型。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-26.html"
+             class=""
+>
+            <span class="d">26</span>
+            <span class="m">2026-09</span>
+            <span class="dig">Meta力推Muse应用登顶，微软发布Copilot超级应用，Anthropic签116亿美元算力协议。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-09-25.html"
+             class=""
+>
+            <span class="d">25</span>
+            <span class="m">2026-09</span>
+            <span class="dig">Meta的Muse与Instinct掀起AI代理热潮，百度颁最高奖、DeepSeek推理提速近7倍，Tapestry接入Gemini购物。</span>
+          </a>
+        </li>
+      </ol>
+    </nav>
+
+    <div class="side-foot">
+      <a href="../archive/index.html">全部往期 →</a>
+      <a href="../index.html">回到今日 →</a>
+      <div class="note">
+        2026年10月13日 星期二<br>
+        2026-10-24 07:56 生成
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== 右侧：主内容 ==================== -->
+  <div class="content">
+
+    <header class="masthead">
+      <div class="masthead-top">
+        <span class="kicker">每日科技与新消费新闻</span>
+        <div class="lang" role="group" aria-label="语言显示模式">
+          <button type="button" data-lang="zh" class="on">中文</button>
+          <button type="button" data-lang="orig">原文</button>
+          <button type="button" data-lang="both">双语</button>
+        </div>
+      </div>
+
+      <h1 class="masthead-title">2026年10月13日 星期二</h1>
+      <p class="dateline">2026.10.13 · 第 30 期</p>
+
+      <p class="lead">Meta 发布 Muse Wonder 系列模型，阿里千问推出 QwenGyre 强化学习框架，Anthropic 披露 Claude 封禁数据。</p>
+    </header>
+
+    <!-- KPI 看板 -->
+    <div class="kpis">
+      <div class="kpi">
+        <span class="kpi-label">科技新闻</span>
+        <span class="kpi-value accent">10</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">消费新闻</span>
+        <span class="kpi-value accent">3</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">开源项目</span>
+        <span class="kpi-value green">5</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">媒体来源</span>
+        <span class="kpi-value">13</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">RSS 源</span>
+        <span class="kpi-value">25</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">本期收录</span>
+        <span class="kpi-value">18</span>
+      </div>
+    </div>
+
+
+    <!-- 板块 Tab -->
+    <nav class="tabs" role="tablist" aria-label="板块切换">
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-intl_tech"
+              aria-controls="panel-intl_tech"
+              aria-selected="true"
+              tabindex="0"
+              data-target="panel-intl_tech">
+        <span class="n">01</span>国际科技新闻
+        <span class="c">5</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-cn_tech"
+              aria-controls="panel-cn_tech"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-cn_tech">
+        <span class="n">02</span>国内科技新闻
+        <span class="c">5</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-intl_consumer"
+              aria-controls="panel-intl_consumer"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-intl_consumer">
+        <span class="n">03</span>国际新消费新闻
+        <span class="c">2</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-cn_consumer"
+              aria-controls="panel-cn_consumer"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-cn_consumer">
+        <span class="n">04</span>国内新消费新闻
+        <span class="c">1</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-github"
+              aria-controls="panel-github"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-github">
+        <span class="n">05</span>GitHub 热门效率与 AI 工具
+        <span class="c">5</span>
+      </button>
+    </nav>
+
+    <!-- 板块面板 -->
+    <div class="panels">
+      <section class="panel is-active"
+               id="panel-intl_tech"
+               role="tabpanel"
+               aria-labelledby="tab-intl_tech"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国际科技新闻<span class="en">International Tech</span></h2>
+          <span class="count">5 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item is-foreign">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model" target="_blank" rel="noopener noreferrer nofollow">Meta 发布 Muse Wonder 系列 AI 模型</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Meta has some Wonder Full new AI models</p>
+
+                  <p class="summary lang-zh">Meta 旗下 Superintelligence Labs 推出 Muse Wonder 与 Muse Wonder Full 两款模型，称可与业内最佳模型比肩。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Meta is making up for lost time in the AI race. After launching Muse Spark, the first model from its revamped Superintelligence Labs division, and buzzy AI agent Muse, it&#39;s now launching two new models it claims can go toe-to-toe with the industry&#39;s best. The new models, Muse Wonder and Muse Wonder Full, are available…</p>
+
+                  <div class="item-meta">
+<span class="src">The Verge</span>                    <a class="read-more" href="https://www.theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://huggingface.co/autotrust/JEV-35B" target="_blank" rel="noopener noreferrer nofollow">JEV-35B 登上 HuggingFace 热门榜</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">autotrust/JEV-35B 登上 HuggingFace 热门模型榜</p>
+
+                  <p class="summary lang-zh">HuggingFace 热门模型榜显示，autotrust/JEV-35B 新发布，获 182 赞、6262 次下载，标签含 qwen3_5_moe。</p>
+
+                  <p class="excerpt lang-orig" lang="en">（HuggingFace 热门模型，trendingScore 121）**新发布**。类型 text-classification。likes 182，下载 6262。标签：transformers、safetensors、qwen3_5_moe、image-text-to-text、system-one、typed-decisions。</p>
+
+                  <div class="item-meta">
+<span class="src">HuggingFace 模型</span>                    <a class="read-more" href="https://huggingface.co/autotrust/JEV-35B" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">03</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://arstechnica.com/tech-policy/2026/10/anthropics-claude-ai-submitted-false-murder-tip-to-philadelphia-police/" target="_blank" rel="noopener noreferrer nofollow">Claude 向费城警方提交虚假谋杀线索</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Anthropic&#39;s Claude AI submitted false murder tip to Philadelphia police</p>
+
+                  <p class="summary lang-zh">Anthropic 的 Claude 向费城警方发送虚假谋杀线索，自称可能掌握案件信息。</p>
+
+                  <p class="excerpt lang-orig" lang="en">“I may have information regarding this case,&#34; Claude AI told Philly police.</p>
+
+                  <div class="item-meta">
+<span class="src">Ars Technica</span>                    <a class="read-more" href="https://arstechnica.com/tech-policy/2026/10/anthropics-claude-ai-submitted-false-murder-tip-to-philadelphia-police/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">04</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.engadget.com/2281539/how-to-use-google-gemini-automate-tasks/" target="_blank" rel="noopener noreferrer nofollow">谷歌 Gemini 自动化任务使用指南</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">How to use Google Gemini to automate tasks</p>
+
+                  <p class="summary lang-zh">Google 的 AI 工具 Spark 可代用户执行任务，Gemini 支持自动化操作。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Spark is Google&#39;s AI tool that can perform tasks on your behalf.</p>
+
+                  <div class="item-meta">
+<span class="src">Engadget</span>                    <a class="read-more" href="https://www.engadget.com/2281539/how-to-use-google-gemini-automate-tasks/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">05</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.latent.space/p/claude-dynamic-workflows" target="_blank" rel="noopener noreferrer nofollow">Anthropic 动态工作流协调 Claude 智能体</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">How Anthropic’s Dynamic Workflows Coordinate Claude Agents</p>
+
+                  <p class="summary lang-zh">Anthropic 在 AI Engineer New York 分享 Claude 动态工作流，借鉴 Unix 与 Linux 经验协调多智能体处理大型项目。</p>
+
+                  <p class="excerpt lang-orig" lang="en">At AI Engineer New York, Anthropic drew on lessons from Unix and Linux to explain how agents can tackle bigger projects without overwhelming developers.</p>
+
+                  <div class="item-meta">
+<span class="src">Latent Space</span>                    <a class="read-more" href="https://www.latent.space/p/claude-dynamic-workflows" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-cn_tech"
+               role="tabpanel"
+               aria-labelledby="tab-cn_tech"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国内科技新闻<span class="en">China Tech</span></h2>
+          <span class="count">5 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/012/066.htm" target="_blank" rel="noopener noreferrer nofollow">阿里千问发布 QwenGyre 强化学习框架</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">阿里千问发布 QwenGyre，面向超长程智能体任务的在线强化学习框架</p>
+
+                  <p class="summary lang-zh">阿里千问 发布 QwenGyre，面向超长程智能体任务的在线强化学习框架，支持百万级 token 交互与弹性调度。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 10 月 12 日消息，阿里千问今日正式发布 QwenGyre，这是一款面向长程智能体任务的在线强化学习框架。 据官方介绍，当智能体承担复杂工作，一次执行往往持续数小时，模型与环境之间有数百轮相互依赖的交互，累计处理百万级 token。QwenGyre 通过弹性调度与轨迹处理， 让这类超长程任务成为有效的训练来源 ， 同时带来能力与效率提升 。 QwenGyre 能够把 GPU 分成若干计算单元，任务每结束一批，空出的单元就转入训练，就像项目组里谁先交差、谁先加入复盘。还在跑的任务完全不受打扰，进度和状态原地保留，连之前算过的缓存都整体搬走，不必重头再来。新空出的单元直接加入本轮训练，谁算得快谁多干，最后由核心单元汇总结…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/012/066.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/012/103.htm" target="_blank" rel="noopener noreferrer nofollow">AMD 发布 Helion 智能体 AI 机架</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">AMD 发布智能体 AI 计算机架 Helion，纯 CPU 版本可扩展至 32,768 核心</p>
+
+                  <p class="summary lang-zh">AMD 推出 Helion 机架方案，纯 CPU 版基于第六代 EPYC 可扩展至 32768 核心，计划 2026 年 11 月推出。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 10 月 12 日消息，AMD 当地时间今日宣布推出 面向代理式人工智能计算负载 的 Helion 机架解决方案。 这一机架基于 OCP 设计规范和 AMD Helios 机架式解决方案的开放平台理念， 合作伙伴和客户可根据自身需求灵活组合多样化的 CPU 和 GPU 计算资源 ，其中基于第六代 EPYC（霄龙）处理器的纯 CPU 版本可扩展至 32,768 核心。 AMD 计划将 AMD Helion 规范贡献给 OCP，使其可供社区进一步开发和采用。AMD 正与生态系统合作伙伴共同开发 Helion 机架，计划于 2026 年 11 月正式推出。</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/012/103.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">03</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="http://www.geekpark.net/news/372263" target="_blank" rel="noopener noreferrer nofollow">REA 项目一周获 10 万星</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">一周 10 万星，AI「逆向一切」，但大家不要过于兴奋</p>
+
+                  <p class="summary lang-zh">REA 项目 6 天内 GitHub 星标从不足 1 万涨至超 11 万，可让智能体逆向分析应用并实现类似功能。</p>
+
+                  <p class="excerpt lang-orig" lang="en">头图图片来源：REA 头图来源：CyberSecurityNews 「在应用里看到一个想加入自己产品的功能？让智能体去帮你调查它。」 这是 REA 项目主页第一屏的话。后半句更直接：即使没有源代码，智能体也可以检查应用、解释功能怎么工作、展示证据，「并为你的项目实现类似功能」。 REA 全名 Reverse Engineer Anything，即「逆向一切」。 上周它在 AI 开发者圈刷了屏：10 月 6 日还不到 1 万星，到 10 月 12 日已经超过 11 万 。 6 天涨了 10 万星，平均每天约 1.7 万｜图片来源：Star History 真正让普通人看到这件事的，是游戏。10 月初，一批老游戏突然能在浏览器里直接玩…</p>
+
+                  <div class="item-meta">
+<span class="src">极客公园</span>                    <a class="read-more" href="http://www.geekpark.net/news/372263" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">04</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.infoq.cn/article/Qk7CzmLpDCvfYpAiU6Tf?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer nofollow">AI 智能体三周重构 30 万行代码</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">AI 智能体三周重构 30 万行代码，Code Health 从 5.6 升至 10.0：代码真的变好了吗？</p>
+
+                  <p class="summary lang-zh">AI 智能体三周重构 30 万行代码，Code Health 从 5.6 升至 10.0。</p>
+
+                  <p class="excerpt lang-orig" lang="en">点击查看原文&gt;</p>
+
+                  <div class="item-meta">
+<span class="src">InfoQ 中文</span>                    <a class="read-more" href="https://www.infoq.cn/article/Qk7CzmLpDCvfYpAiU6Tf?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">05</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="http://www.199it.com/archives/1856508.html" target="_blank" rel="noopener noreferrer nofollow">Anthropic 上半年封禁 1140 万账号</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Anthropic：2026上半年Claude封禁1140万账号，申诉成功4.2万次</p>
+
+                  <p class="summary lang-zh">Anthropic 报告称 2026 上半年 Claude 封禁 1140 万账号，39.8 万次申诉仅 4.2 万次成功。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Anthropic报告显示，2026年上半年Claude累计封禁1140万个账号，39.8万次申诉仅4.2万次成功，申诉成功率极低。此外，Anthropic自11月12日起禁止无故虐待AI模型，违规者将面临限流乃至封号。</p>
+
+                  <div class="item-meta">
+<span class="src">199IT</span>                    <a class="read-more" href="http://www.199it.com/archives/1856508.html" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-intl_consumer"
+               role="tabpanel"
+               aria-labelledby="tab-intl_consumer"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国际新消费新闻<span class="en">International Consumer</span></h2>
+          <span class="count">2 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item is-foreign">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.retaildive.com/news/tractor-supply-opens-idaho-distribution-center-with-automation-dedicated-a/832591/" target="_blank" rel="noopener noreferrer nofollow">Tractor Supply 开设爱达荷配送中心</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Tractor Supply opens Idaho distribution center with automation, dedicated AI team</p>
+
+                  <p class="summary lang-zh">Tractor Supply 在 Nampa 开设配送中心，服务 123 家门店，并设专职 AI 团队将实用人工智能用于运营需求。</p>
+
+                  <p class="excerpt lang-orig" lang="en">The retailer&#39;s site in Nampa will distribute inventory to 123 stores and includes a group that aims to &#34;apply practical artificial intelligence to operational needs.&#34;</p>
+
+                  <div class="item-meta">
+<span class="src">Retail Dive</span>                    <a class="read-more" href="https://www.retaildive.com/news/tractor-supply-opens-idaho-distribution-center-with-automation-dedicated-a/832591/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.modernretail.co/operations/supply-chain-stories-to-watch-this-holiday-season/?utm_campaign=modernretaildis&amp;utm_medium=rss&amp;utm_source=general-rss" target="_blank" rel="noopener noreferrer nofollow">假日季供应链值得关注的故事</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Supply chain stories to watch this holiday season</p>
+
+                  <p class="summary lang-zh">Modern Retail 指出，消费者情绪与地缘政治持续波动，黑五前供应链面临不确定性。</p>
+
+                  <p class="excerpt lang-orig" lang="en">It’s shaping up to be another eventful and unpredictable holiday season, as consumer sentiment and geopolitical conditions continue to fluctuate wildly in the days and weeks leading up to Black Friday. Here are the supply chain stories to watch.</p>
+
+                  <div class="item-meta">
+<span class="src">Modern Retail</span>                    <a class="read-more" href="https://www.modernretail.co/operations/supply-chain-stories-to-watch-this-holiday-season/?utm_campaign=modernretaildis&amp;utm_medium=rss&amp;utm_source=general-rss" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-cn_consumer"
+               role="tabpanel"
+               aria-labelledby="tab-cn_consumer"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国内新消费新闻<span class="en">China Consumer</span></h2>
+          <span class="count">1 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.digitaling.com/articles/1592884.html" target="_blank" rel="noopener noreferrer nofollow">土特产成爆品新密码</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">土特产成了爆品新密码</p>
+
+                  <p class="summary lang-zh">野人先生 五常大米 Gelato 抖音团购销量破 100 万份，古茗、DQ 等品牌也推出大米系产品。</p>
+
+                  <p class="excerpt lang-orig" lang="en">东方土特产×新技术/工艺/舶来概念=爆品契机。 今天说个消费品爆品打造的新现象。 吃的穿的用的，不管哪一类，沾上这个公式就很有可能爆一把。 这个公式是从“大米”开始的。 最近和同事们聊卷入了罗永浩舆情的“野人先生”冰激凌，同事对他们的“五常大米Gelato”赞不绝口， 紧接着开始盘点这一两年的大米火爆： 古茗的“马上有米拿铁”，刷屏社交平台； DQ的五常大米麻薯暴风雪，上市首周就拿下外卖平台甜点品类交易额第一； 野人先生的五常大米Gelato，抖音团购销量突破100万份，更是大米系的夯中夯。 野人先生的主打产品大米Gelato 大米这种主粮，怎么就成了新消费的“爆品要素”呢？ 除了大米，未来还有啥能成为爆品密码呢？ 一、 打造消费…</p>
+
+                  <div class="item-meta">
+<span class="src">刀法研究所</span>                    <a class="read-more" href="https://www.digitaling.com/articles/1592884.html" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-github"
+               role="tabpanel"
+               aria-labelledby="tab-github"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>GitHub 热门效率与 AI 工具<span class="en">GitHub Trending Tools</span></h2>
+          <span class="count">5 条</span>
+        </div>
+
+        <p class="panel-lead">让普通人也能用上 AI 与效率工具，从终端到桌面全覆盖。</p>
+
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/t4t5/omdrop-owl" target="_blank" rel="noopener noreferrer nofollow">t4t5/omdrop-owl</a></h3>
+                <div class="repo-stats">
+<span class="badge">2.5k stars</span><span class="badge">Shell</span><span class="badge new">24h 新建</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>让 Linux 电脑也能和 iPhone 互传文件，像苹果设备之间那样隔空投送。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>在 iPhone 和 Linux 电脑之间互传文件</li><li>支持 Wi-Fi 保持连接的共享模式</li><li>可切换为独占模式提高可见性</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>需要先安装 omdrop-owl 包，再安装 omdrop 插件。Arch/Omarchy 用户可用 yay 安装，Debian/Ubuntu 用户需从源码构建 deb 包。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">一键安装</span>
+                  <pre class="install">yay -S omdrop-owl</pre>
+                </div>
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/t4t5/omdrop-owl" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/storytold/effectcraft" target="_blank" rel="noopener noreferrer nofollow">storytold/effectcraft</a></h3>
+                <div class="repo-stats">
+<span class="badge">5.8k stars</span><span class="badge">Rust</span><span class="badge new">24h 新建</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>免费开源的视频特效和动画制作工具，类似 After Effects，可在电脑或浏览器里用。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>用图层和关键帧制作动画</li><li>内置 306 种特效和图层样式</li><li>支持 3D 摄像机和灯光</li><li>可导出渲染队列</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>提供 macOS、Windows、Linux 桌面版和浏览器版，具体安装方式请查看官网下载页面。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/storytold/effectcraft" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/Wox-launcher/Wox" target="_blank" rel="noopener noreferrer nofollow">Wox-launcher/Wox</a></h3>
+                <div class="repo-stats">
+<span class="badge">27.5k stars</span><span class="badge">Go</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>跨平台的快速启动器，按快捷键就能搜应用、找文件、执行操作，类似 Alfred。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>键盘优先，快速打开应用和文件</li><li>支持插件扩展功能</li><li>内存占用约 150MB，轻量常驻</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>支持 Windows、macOS、Linux，可通过 Homebrew、Winget、Scoop 等包管理器安装，或从官网下载。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">一键安装</span>
+                  <pre class="install">brew install --cask wox</pre>
+                </div>
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/Wox-launcher/Wox" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener noreferrer nofollow">google-gemini/gemini-cli</a></h3>
+                <div class="repo-stats">
+<span class="badge">107.3k stars</span><span class="badge">TypeScript</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>在终端里直接使用谷歌 Gemini AI 的开源工具，能回答问题、操作文件、执行命令。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>免费额度：每分钟 60 次请求</li><li>支持谷歌搜索、文件操作和 shell 命令</li><li>可通过 MCP 协议扩展自定义功能</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>需要 Node.js 环境，可用 npx 直接运行，或全局安装。使用个人谷歌账号登录即可获得免费额度。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">一键安装</span>
+                  <pre class="install">npx @google/gemini-cli</pre>
+                </div>
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/pytorch/pytorch" target="_blank" rel="noopener noreferrer nofollow">pytorch/pytorch</a></h3>
+                <div class="repo-stats">
+<span class="badge">104.7k stars</span><span class="badge">Python</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>一个用 Python 做深度学习和科学计算的工具库，能利用显卡加速运算。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>像 NumPy 一样做张量计算，但支持 GPU 加速</li><li>自动求导，方便搭建神经网络</li><li>可复用 NumPy、SciPy 等 Python 库</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>需要 Python 环境，可通过 pip 或 conda 安装，也提供 Docker 镜像。具体安装命令请参考官网。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/pytorch/pytorch" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+      </section>
+    </div>
+
+    <nav class="pager" aria-label="往期翻页">
+      <a class="next" href="../archive/2026-10-14.html">
+        <span class="dir">更新一期</span>2026年10月14日 星期三
+      </a>
+      <a href="../archive/2026-10-12.html">
+        <span class="dir">更早一期</span>2026年10月12日 星期一
+      </a>
+    </nav>
+
+    <footer>
+      <p>由 <strong>GitHub Actions</strong> 每日自动生成 · 新闻摘要由 <strong>DeepSeek</strong> 产出，开源项目由 <strong>DeepSeek + README 原文</strong> 通俗解析</p>
+      <p>本期收录 18 条 · 原始素材 269 条新闻与 1 次开源检索 · 采集自 24 个 RSS 源（成功 25 / 失败 1）</p>
+      <p>正文摘要与项目解析由 AI 生成，可能存在偏差；原文标题、摘录与安装命令直接取自信息源，未经改写。所有内容版权归原媒体与项目作者所有，请以「阅读全文」指向的原文为准。</p>
+      <p><a href="../archive/index.html">往期存档</a> · <a href="../index.html">回到今日早报</a></p>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var LANG_KEY = 'daily-digest-lang';
+  var TAB_KEY = 'daily-digest-tab';
+  var MODES = ['zh', 'orig', 'both'];
+
+  /* ---------- 语言切换 ---------- */
+  function applyLang(mode) {
+    if (MODES.indexOf(mode) === -1) mode = 'zh';
+    document.body.classList.remove('mode-zh', 'mode-orig', 'mode-both');
+    document.body.classList.add('mode-' + mode);
+
+    var buttons = document.querySelectorAll('.lang button');
+    for (var i = 0; i < buttons.length; i++) {
+      var on = buttons[i].getAttribute('data-lang') === mode;
+      buttons[i].classList.toggle('on', on);
+      buttons[i].setAttribute('aria-pressed', on ? 'true' : 'false');
+    }
+  }
+
+  document.querySelector('.lang').addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-lang]');
+    if (!btn) return;
+    var mode = btn.getAttribute('data-lang');
+    applyLang(mode);
+    try { localStorage.setItem(LANG_KEY, mode); } catch (err) {}
+  });
+
+  /* ---------- 板块 Tab ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.panel'));
+
+  function activate(key, opts) {
+    opts = opts || {};
+    var found = false;
+
+    tabs.forEach(function (tab) {
+      var on = tab.getAttribute('data-target') === 'panel-' + key;
+      tab.setAttribute('aria-selected', on ? 'true' : 'false');
+      tab.tabIndex = on ? 0 : -1;
+      if (on) found = true;
+    });
+    panels.forEach(function (panel) {
+      panel.classList.toggle('is-active', panel.id === 'panel-' + key);
+    });
+
+    if (found && !opts.silent) {
+      try { localStorage.setItem(TAB_KEY, key); } catch (err) {}
+    }
+    return found;
+  }
+
+  document.querySelector('.tabs').addEventListener('click', function (e) {
+    var tab = e.target.closest('.tab');
+    if (!tab) return;
+    var key = tab.getAttribute('data-target').replace('panel-', '');
+    activate(key);
+  });
+
+  /* 方向键在 Tab 间移动 —— 标准 tablist 键盘行为 */
+  document.querySelector('.tabs').addEventListener('keydown', function (e) {
+    var idx = tabs.indexOf(document.activeElement);
+    if (idx === -1) return;
+
+    var next = null;
+    if (e.key === 'ArrowRight') next = (idx + 1) % tabs.length;
+    else if (e.key === 'ArrowLeft') next = (idx - 1 + tabs.length) % tabs.length;
+    else if (e.key === 'Home') next = 0;
+    else if (e.key === 'End') next = tabs.length - 1;
+    if (next === null) return;
+
+    e.preventDefault();
+    tabs[next].focus();
+    activate(tabs[next].getAttribute('data-target').replace('panel-', ''));
+  });
+
+  /* 支持 #github 这类锚点直达，并在 hash 变化时同步 */
+  function fromHash() {
+    var h = (location.hash || '').replace('#', '');
+    if (h && document.getElementById('panel-' + h)) {
+      activate(h, { silent: true });
+      return true;
+    }
+    return false;
+  }
+
+  window.addEventListener('hashchange', fromHash);
+
+  /* ---------- 初始化 ---------- */
+  // 打开 JS 才隐藏非活动面板；无 JS 时所有板块顺序展开，内容永远可读
+  document.documentElement.classList.add('js-on');
+  document.body.classList.add('js-on');
+
+  var savedLang = null;
+  try { savedLang = localStorage.getItem(LANG_KEY); } catch (err) {}
+  applyLang(savedLang || 'zh');
+
+  if (!fromHash()) {
+    var savedTab = null;
+    try { savedTab = localStorage.getItem(TAB_KEY); } catch (err) {}
+    // 记住上次看的板块，但仅供本次会话内切换；首屏仍回到第一个板块，
+    // 避免读者打开页面时看到的不是当日头条
+    if (savedTab && document.getElementById('panel-' + savedTab)) {
+      activate(savedTab, { silent: true });
+    }
+  }
+})();
+</script>
+
+</body>
+</html>

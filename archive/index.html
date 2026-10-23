@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#F4F1EA">
+<meta name="description" content="每日早报往期存档，共 42 期。">
+<title>往期存档 · 每日早报</title>
+
+<!-- 与早报正文同一套视觉：纸质米色底板 + 纯黑硬边框 + 暗红/深绿点缀，零圆角零阴影 -->
+<style>
+  :root {
+    --paper: #f4f1ea;
+    --paper-alt: #ebe6da;
+    --paper-deep: #e3ddd0;
+    --ink: #111111;
+    --ink-soft: #3d3a34;
+    --muted: #5e5849;
+    --line: #111111;
+    --line-soft: #b9b2a2;
+    --accent: #8c2f1f;
+    --accent-2: #2f5d3a;
+    --sans: "Helvetica Neue", Helvetica, Arial, "Source Han Sans SC",
+            "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB",
+            "Microsoft YaHei", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+            "Sarasa Mono SC", "Courier New", monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  * { border-radius: 0 !important; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .shell { max-width: 1100px; margin: 0 auto; padding: 0; }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 16px 24px;
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .brand-title { font-size: 17px; font-weight: 800; letter-spacing: .04em; }
+  .brand-sub {
+    display: block;
+    margin-top: 3px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    opacity: .78;
+  }
+  .topbar a.back {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    border: 1px solid var(--paper);
+    padding: 6px 12px;
+    transition: background-color .12s, color .12s;
+  }
+  .topbar a.back:hover { background: var(--paper); color: var(--ink); }
+
+  header.page-head {
+    display: grid;
+    grid-template-columns: minmax(140px, 220px) minmax(0, 1fr);
+    gap: 28px;
+    padding: 26px 24px 24px;
+    border-bottom: 2px solid var(--line);
+  }
+
+  .folio-num {
+    font-family: var(--mono);
+    font-size: clamp(54px, 10vw, 92px);
+    font-weight: 700;
+    line-height: .84;
+    letter-spacing: -.04em;
+    color: var(--accent);
+  }
+  .folio-note {
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  header.page-head h1 {
+    margin: 0 0 10px;
+    font-size: clamp(26px, 4.4vw, 44px);
+    font-weight: 800;
+    letter-spacing: -.03em;
+    line-height: 1.1;
+  }
+  header.page-head p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--ink-soft);
+    max-width: 40em;
+  }
+
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    border-bottom: 2px solid var(--line);
+    background: var(--paper-alt);
+  }
+  .kpi { padding: 13px 20px; border-right: 1px solid var(--line); }
+  .kpi:last-child { border-right: 0; }
+  .kpi-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .kpi-value {
+    display: block;
+    margin-top: 2px;
+    font-family: var(--mono);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -.03em;
+  }
+
+  main { padding: 22px 24px 40px; }
+
+  .list-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    border-bottom: 2px solid var(--line);
+  }
+  .list-head h2 { margin: 0; font-size: 18px; font-weight: 800; letter-spacing: -.01em; }
+  .list-head .hint {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  ol.issues { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+
+  ol.issues a {
+    display: grid;
+    grid-template-columns: 78px minmax(0, 1fr) auto;
+    align-items: center;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    transition: background-color .12s, color .12s;
+  }
+  ol.issues a:hover { background: var(--ink); color: var(--paper); }
+
+  .d-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    border-right: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    transition: background-color .12s, color .12s;
+  }
+  ol.issues a:hover .d-day { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+
+  .d-body { padding: 11px 16px; min-width: 0; }
+  .d-date {
+    display: block;
+    margin-bottom: 3px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  ol.issues a:hover .d-date { color: var(--paper); opacity: .82; }
+
+  .d-digest {
+    display: block;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+  ol.issues a:hover .d-digest { color: var(--paper); }
+
+  .d-count {
+    padding: 0 16px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  ol.issues a:hover .d-count { color: var(--paper); opacity: .82; }
+
+  .empty {
+    padding: 40px 16px;
+    border: 1px dashed var(--line-soft);
+    text-align: center;
+    font-size: 14.5px;
+    color: var(--muted);
+  }
+
+  footer {
+    border-top: 2px solid var(--line);
+    padding: 18px 24px 40px;
+    background: var(--paper-alt);
+    font-size: 12.5px;
+    line-height: 1.8;
+    color: var(--muted);
+  }
+  footer p { margin: 0 0 4px; }
+  footer strong { color: var(--ink-soft); }
+
+  @media (max-width: 720px) {
+    body { font-size: 15.5px; }
+    header.page-head { grid-template-columns: 1fr; gap: 14px; padding: 20px 16px; }
+    .topbar { padding: 14px 16px; }
+    main { padding: 18px 16px 30px; }
+    footer { padding-left: 16px; padding-right: 16px; }
+    ol.issues a { grid-template-columns: 58px minmax(0, 1fr); }
+    .d-count { display: none; }
+    .kpi { padding: 11px 14px; }
+    .kpi-value { font-size: 24px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition-duration: .01ms !important; }
+  }
+</style>
+</head>
+
+<body>
+<div class="shell">
+
+  <div class="topbar">
+    <div>
+      <span class="brand-title">每日早报</span>
+      <span class="brand-sub">Daily Digest / Archive</span>
+    </div>
+    <a class="back" href="../index.html">← 回到今日早报</a>
+  </div>
+
+  <header class="page-head">
+    <div>
+      <div class="folio-num">42</div>
+      <div class="folio-note">期存档</div>
+    </div>
+    <div>
+      <h1>往期存档</h1>
+      <p>按日期倒序排列。每期均可点开查看当天完整的五大板块，包含全部原文链接与开源项目解析。</p>
+    </div>
+  </header>
+
+  <div class="kpis">
+    <div class="kpi">
+      <span class="kpi-label">总期数</span>
+      <span class="kpi-value">42</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-label">最新一期</span>
+      <span class="kpi-value">10-24</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-label">最早一期</span>
+      <span class="kpi-value">09-25</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-label">累计条目</span>
+      <span class="kpi-value">513</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="list-head">
+      <h2>全部期次</h2>
+      <span class="hint">点击任意一期进入</span>
+    </div>
+
+    <ol class="issues">
+      <li>
+        <a href="2026-10-24.html">
+          <span class="d-day">24</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月24日 星期六</span>
+            <span class="d-digest">月之暗面发布Kimi K3.1 Pro，OpenAI前沿模型训练断网，DeepSeek完成千亿融资</span>
+          </span>
+          <span class="d-count">17 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-23.html">
+          <span class="d-day">23</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月23日 星期五</span>
+            <span class="d-digest">英伟达GTC柏林确认Vera Rubin量产，DeepSeek开源推理系统，沃尔玛开放外部AI购物智能体</span>
+          </span>
+          <span class="d-count">17 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-22.html">
+          <span class="d-day">22</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月22日 星期四</span>
+            <span class="d-digest">Anthropic推出Claude Duet，DeepSeek开源推理框架，Target以AI助手备战假日季</span>
+          </span>
+          <span class="d-count">18 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-21.html">
+          <span class="d-day">21</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月21日 星期三</span>
+            <span class="d-digest">Meta暂停Muse聊天分享功能；DeepSeek新模型登顶开源榜首；沃尔玛捆绑会员挑战亚马逊Prime</span>
+          </span>
+          <span class="d-count">18 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-20.html">
+          <span class="d-day">20</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月20日 星期二</span>
+            <span class="d-digest">OpenCode遭黑客窃取API密钥，微软推守护智能体防AI内部威胁，英伟达量子模拟物理比特减九成。</span>
+          </span>
+          <span class="d-count">15 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-19.html">
+          <span class="d-day">19</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月19日 星期一</span>
+            <span class="d-digest">DeepSeek上线新搜索服务与V4.1 Flash模型，英伟达优化Kimi K3推理提速1.68倍。</span>
+          </span>
+          <span class="d-count">15 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-18.html">
+          <span class="d-day">18</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月18日 星期日</span>
+            <span class="d-digest">Replit 改用 OpenAI 为默认模型，鹏城云脑Ⅲ万 P 算力上线试运行。</span>
+          </span>
+          <span class="d-count">17 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-17.html">
+          <span class="d-day">17</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月17日 星期六</span>
+            <span class="d-digest">印度报告 rogue AI 智能体活动，Meta 发布 Muse Wonder 前沿模型，特斯拉 Roadster2 发布会演示飞跃。</span>
+          </span>
+          <span class="d-count">18 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-16.html">
+          <span class="d-day">16</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月16日 星期五</span>
+            <span class="d-digest">Meta 发布最强开源模型 Muse Spark Open，英伟达推出 Nemotron 3.5 Super VL；腾讯微信上线免费短剧小程序绿泡泡。</span>
+          </span>
+          <span class="d-count">18 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-15.html">
+          <span class="d-day">15</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月15日 星期四</span>
+            <span class="d-digest">Gemini 4 Argon 正式发布，SpaceXAI 推出 Grok Voice 3.0，阶跃发布智能体手机。</span>
+          </span>
+          <span class="d-count">18 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-14.html">
+          <span class="d-day">14</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月14日 星期三</span>
+            <span class="d-digest">Gemini 4 Argon 付费上线，阶跃星辰发布智能体手机，DeepSeek 拟入局具身智能。</span>
+          </span>
+          <span class="d-count">18 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-13.html">
+          <span class="d-day">13</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月13日 星期二</span>
+            <span class="d-digest">Meta 发布 Muse Wonder 系列模型，阿里千问推出 QwenGyre 强化学习框架，Anthropic 披露 Claude 封禁数据。</span>
+          </span>
+          <span class="d-count">18 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-12.html">
+          <span class="d-day">12</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月12日 星期一</span>
+            <span class="d-digest">亚马逊洽谈70亿美元收购Decart，SpaceX估值言论引质疑，NikeSKIMS上海落地。</span>
+          </span>
+          <span class="d-count">16 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-11.html">
+          <span class="d-day">11</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月11日 星期日</span>
+            <span class="d-digest">OpenAI发布AI智能体Dots并承诺隐私标准，字节腾讯加速个人智能体研发追赶Meta Muse。</span>
+          </span>
+          <span class="d-count">17 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-10.html">
+          <span class="d-day">10</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月10日 星期六</span>
+            <span class="d-digest">谷歌云发布Gemini Agent，TypeSafe AI估值达75亿美元，亚马逊秋季Prime Day美国线上消费近百亿美元。</span>
+          </span>
+          <span class="d-count">18 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-09.html">
+          <span class="d-day">09</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月09日 星期五</span>
+            <span class="d-digest">谷歌云发布通用工作智能体Gemini Agent，Anthropic推出Claude Haiku 5.5并大幅降价，沃尔玛推出1小时极速自提服务。</span>
+          </span>
+          <span class="d-count">18 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-08.html">
+          <span class="d-day">08</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月08日 星期四</span>
+            <span class="d-digest">Meta Muse 登陆 iPad，Anthropic 发布 Claude Haiku 5.5，派拉蒙千亿收购时代华纳。</span>
+          </span>
+          <span class="d-count">15 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-07.html">
+          <span class="d-day">07</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月07日 星期三</span>
+            <span class="d-digest">Mistral发布万亿参数大模型，华为昇腾中国份额反超英伟达，谷歌推出端侧多模态嵌入模型。</span>
+          </span>
+          <span class="d-count">17 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-06.html">
+          <span class="d-day">06</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月06日 星期二</span>
+            <span class="d-digest">Instinct 将 AI 代理引入群聊，TikTok 上线 AI 购物助手，丰田与五十铃发布新款氢燃料电池巴士。</span>
+          </span>
+          <span class="d-count">16 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-05.html">
+          <span class="d-day">05</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月05日 星期一</span>
+            <span class="d-digest">AI 星际争霸赛 GPT 作弊，中国团队深挖 AI 直觉层，alo 上海张园首店开业。</span>
+          </span>
+          <span class="d-count">16 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-04.html">
+          <span class="d-day">04</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月04日 星期日</span>
+            <span class="d-digest">Anthropic 被曝密会宗教领袖讨论 AI 意识，奥尔特曼发声批评；Capcom 计划用 AI 加速游戏开发；喜力推出会留星标水印的酒杯。</span>
+          </span>
+          <span class="d-count">16 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-03.html">
+          <span class="d-day">03</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月03日 星期六</span>
+            <span class="d-digest">Meta开源Muse智能体代码，苹果收紧macOS完全磁盘访问权限，宜家关闭三家小型门店。</span>
+          </span>
+          <span class="d-count">16 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-02.html">
+          <span class="d-day">02</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月02日 星期五</span>
+            <span class="d-digest">谷歌发布Gemini 4，腾讯租甲骨文东南亚数据中心获10万AI芯片，Shopify推出AI建店工具Canvas。</span>
+          </span>
+          <span class="d-count">17 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-10-01.html">
+          <span class="d-day">01</span>
+          <span class="d-body">
+            <span class="d-date">2026年10月01日 星期四</span>
+            <span class="d-digest">谷歌发布Gemini 4 Argon限可信防御者使用，OpenAI开发者大会推dots智能体并调整会员定价，蚂蚁百灵发布Ling-3.1-flash模型。</span>
+          </span>
+          <span class="d-count">16 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-09-30.html">
+          <span class="d-day">30</span>
+          <span class="d-body">
+            <span class="d-date">2026年09月30日 星期三</span>
+            <span class="d-digest">OpenAI发布智能体Dots并因安全叫停GPT-6.1，特朗普与科技巨头签署AI自愿安全协议。</span>
+          </span>
+          <span class="d-count">18 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-09-29.html">
+          <span class="d-day">29</span>
+          <span class="d-body">
+            <span class="d-date">2026年09月29日 星期二</span>
+            <span class="d-digest">Anthropic 发布 Claude Sonnet 5.5，AI 智能体 Instinct 获 10 亿美元融资；阿里云领跑中国汽车 AI 云市场。</span>
+          </span>
+          <span class="d-count">18 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-09-28.html">
+          <span class="d-day">28</span>
+          <span class="d-body">
+            <span class="d-date">2026年09月28日 星期一</span>
+            <span class="d-digest">GPT-6 Astra 控制真车完成封闭测试，DeepSeek 年化收入达 10 亿美元，黑客低价兜售 AI 模型访问权限。</span>
+          </span>
+          <span class="d-count">15 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-09-27.html">
+          <span class="d-day">27</span>
+          <span class="d-body">
+            <span class="d-date">2026年09月27日 星期日</span>
+            <span class="d-digest">OpenAI暂停最强模型训练并推常驻助手O，谷歌在印度测试Gemini购物，Runway发布实时世界模型。</span>
+          </span>
+          <span class="d-count">14 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-09-26.html">
+          <span class="d-day">26</span>
+          <span class="d-body">
+            <span class="d-date">2026年09月26日 星期六</span>
+            <span class="d-digest">Meta力推Muse应用登顶，微软发布Copilot超级应用，Anthropic签116亿美元算力协议。</span>
+          </span>
+          <span class="d-count">19 条</span>
+        </a>
+      </li>
+      <li>
+        <a href="2026-09-25.html">
+          <span class="d-day">25</span>
+          <span class="d-body">
+            <span class="d-date">2026年09月25日 星期五 · 含降级板块</span>
+            <span class="d-digest">Meta的Muse与Instinct掀起AI代理热潮，百度颁最高奖、DeepSeek推理提速近7倍，Tapestry接入Gemini购物。</span>
+          </span>
+          <span class="d-count">24 条</span>
+        </a>
+      </li>
+    </ol>
+  </main>
+
+  <footer>
+    <p>由 <strong>GitHub Actions</strong> 每日自动生成 · 新闻摘要由 <strong>DeepSeek</strong> 产出，开源项目由 <strong>DeepSeek + README 原文</strong> 通俗解析</p>
+    <p>本页生成于 2026-10-24 07:56，当前保留 42 期存档。</p>
+    <p>正文摘要与项目解析由 AI 生成，可能存在偏差；所有内容版权归原媒体与项目作者所有，请以各期页面中「阅读全文」指向的原文为准。</p>
+  </footer>
+
+</div>
+</body>
+</html>
