@@ -1,0 +1,267 @@
+{
+  "date": "2026-10-25",
+  "generated_at": "2026-10-25T00:00:45.607913+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 21,
+    "rss_failed": 5,
+    "raw_news": 177,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-25",
+    "digest": "Claude支付页新增中国区选项，研究称Grok与GPT选举倾向分歧超九成。",
+    "keywords": [
+      "Claude",
+      "Anthropic",
+      "DeepSeek",
+      "Grok",
+      "Adultoween"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "DeepSeek-V4.1-Flash量化版登HuggingFace热门榜",
+            "summary": "[[ISTA-DASLab]]发布的[[DeepSeek-V4.1-Flash]] GGUF量化版登上[[HuggingFace]]热门模型榜，获196赞、下载32479次。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
+            "title_original": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 188）**新发布**。类型 text-generation。likes 196，下载 32479。标签：gguf、gsq、rco、quantization、mixed-precision、ist-daslab。",
+            "is_foreign": true
+          },
+          {
+            "title": "Claude Mods推出注意力界面雏形",
+            "summary": "[[Latent Space]]介绍[[Claude Mods]]，称其为注意力界面早期形态，将智能体框架从面向机器转为面向人类。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/claude-mods/",
+            "title_original": "Claude Mods: Flipping the Harness Inside Out",
+            "excerpt": "Claude Mods is an early form of the Attention Interface. It flips the agent harness paradigm from the harness facing the machine, to the harness facing the human.",
+            "is_foreign": true
+          },
+          {
+            "title": "研究：Grok与GPT选举推荐分歧超九成",
+            "summary": "新研究发现[[Grok]]倾向推荐共和党候选人，[[OpenAI]]的[[GPT]]倾向民主党，在近500场选举中分歧超90%。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+            "title_original": "Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.",
+            "excerpt": "A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races.",
+            "is_foreign": true
+          },
+          {
+            "title": "Scrawl：向智能体展示问题",
+            "summary": "[[Scrawl]]项目发布，主张直接向智能体展示问题，相关讨论见于[[Lobsters]]。",
+            "source": "Lobsters",
+            "url": "https://scrawl.kitlangton.com/",
+            "title_original": "Scrawl: show an agent the problem",
+            "excerpt": "Comments",
+            "is_foreign": true
+          },
+          {
+            "title": "《蓝色星球III》以保留瑕疵应对AI时代",
+            "summary": "[[BBC]]《[[蓝色星球III]]》保留不完美镜头以证真实，称AI画面过于精致无缝反成破绽。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai",
+            "title_original": "Blue Planet III is keeping the rough edges in the age of AI",
+            "excerpt": "BBC's Blue Planet III is looking to prove its authenticity by leaving in the less-than-perfect shots. Previous incarnations of the nature series were defined by their gorgeous, crystal-clear footage that seemed almost too good to be real. But one dead giveaway of AI is when things look too polished and seamless. To co…",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "开发者让电视运行Claude并观察系统变化",
+            "summary": "一位开发者让电视接入[[Claude]]，[[爱范儿]]记录其系统随之发生的变化，称进入“大逆向时代”。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1685473?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "一位开发者让电视服用了 Claude，这是它系统发生的变化",
+            "excerpt": "欢迎来到「大逆向时代」 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          },
+          {
+            "title": "Claude付款页新增中国及港澳台选项",
+            "summary": "[[Anthropic]]旗下[[Claude]]付款页新增中国大陆及港澳台选项，支持绑定银联卡；官方仍要求用户位于支持地区。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/017/490.htm",
+            "title_original": "Anthropic Claude 付款页面新增中国及港澳台地区选项，支持银联卡支付",
+            "excerpt": "IT之家 10 月 24 日消息，近日有用户反馈称 Anthropic 旗下 Claude 的升级支付页面出现了新的地区选项变化。 IT之家实测发现，中国大陆及港澳台地区已出现在付款页面中，支付入口也已支持绑定中国银联卡。 与此同时，社交平台和开发者社区有用户称，此前被永久封禁的 Claude 账号可以提交申诉，且已有个别用户反馈申诉成功。关于这一点，IT之家暂无法核实。 值得一提的是，Claude 支付页面出现中国地区选项，并不等于 Anthropic 已全面开放相关地区的服务。截至目前，Anthropic 官方帮助中心仍要求用户位于其支持的地区才能使用 Claude。 本月初，Anthropic 还为 Claude 网页端新增…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "“Adultoween”兴起推动成人万圣节消费",
+            "summary": "[[Modern Retail]]报道“Adultoween”兴起，成人带动[[万圣节]]消费达135亿美元，家居装饰与餐饮增长。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/marketing/the-rise-of-adultoween-and-how-adults-are-driving-halloween-spending/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "The rise of ‘Adultoween’ and how adults are driving Halloween spending",
+            "excerpt": "Adults are fueling $13.5 billion in Halloween spending thanks to the rise of \"Adultoween,\" growing seasonal categories like home decor, and food and beverage.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "ikow/php2shell-poc",
+            "url": "https://github.com/ikow/php2shell-poc",
+            "intro": "一份公开的 PHP 网站漏洞演示与检测工具包，帮管理员发现自家网站是否中招。",
+            "features": [
+              "演示五种可远程控制网站的漏洞路径",
+              "附带检测规则，可接入常见防护软件",
+              "覆盖十余年版本的 PHP 环境"
+            ],
+            "guide": "这是给安全人员和网站管理员做研究与自查用的，不是普通用户日常软件。需要本地有 Python 环境，按 README 指引运行；请只在自有或获授权的环境测试。",
+            "steps": [
+              "准备 Python 运行环境",
+              "阅读 README 了解各漏洞链说明",
+              "仅在自有或授权环境测试"
+            ],
+            "install": "",
+            "summary": "一份公开的 PHP 网站漏洞演示与检测工具包，帮管理员发现自家网站是否中招。",
+            "source": "GitHub",
+            "stars": "1754",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "CVE-2026-109618/109619 — 5 RCE chains + detection rules (Suricata, Sigma, ModSecurity). PHP session.upload_progress pre-auth exploit research.",
+            "is_foreign": true
+          },
+          {
+            "title": "storytold/pdfcraft",
+            "url": "https://github.com/storytold/pdfcraft",
+            "intro": "一个免费开源的 PDF 阅读与编辑软件，能看、能改、能合并拆分，还跨平台。",
+            "features": [
+              "阅读 PDF 并全文查找内容",
+              "合并、拆分和整理页面顺序",
+              "给 PDF 加密码保护",
+              "支持表单与图层查看"
+            ],
+            "guide": "提供 macOS、Windows、Linux 和网页版，普通用户可直接下载安装包或打开网页使用；想自己编译则需先装 Rust 开发环境。",
+            "steps": [
+              "从官网或仓库下载对应系统安装包",
+              "安装后打开即可阅读和编辑 PDF",
+              "想自行编译需先安装 Rust 环境"
+            ],
+            "install": "",
+            "summary": "一个免费开源的 PDF 阅读与编辑软件，能看、能改、能合并拆分，还跨平台。",
+            "source": "GitHub",
+            "stars": "17632",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "PdfCraft: An open-source PDF reader and editor written by scratch in pure Rust",
+            "is_foreign": true
+          },
+          {
+            "title": "omnivore-app/omnivore",
+            "url": "https://github.com/omnivore-app/omnivore",
+            "intro": "开源的「稍后读」工具，把网页、邮件、PDF 存起来慢慢看，还能划重点做笔记。",
+            "features": [
+              "保存文章并自动记住阅读位置",
+              "划重点、写笔记并搜索分享",
+              "支持邮件订阅内容与 PDF",
+              "有浏览器插件和手机 App"
+            ],
+            "guide": "官方云端服务已于 2024 年 11 月停止，现在需要自己搭服务器。README 指向自建指南，需具备 Node.js 等部署知识，适合有技术背景的人。",
+            "steps": [
+              "阅读 README 中的自建服务器指南",
+              "准备服务器与 Node.js 环境",
+              "按指南部署后安装浏览器插件使用"
+            ],
+            "install": "",
+            "summary": "开源的「稍后读」工具，把网页、邮件、PDF 存起来慢慢看，还能划重点做笔记。",
+            "source": "GitHub",
+            "stars": "16366",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Omnivore is a complete, open source read-it-later solution for people who like reading.",
+            "is_foreign": true
+          },
+          {
+            "title": "x1xhlol/system-prompts-and-models-of-ai-tools",
+            "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+            "intro": "收集了 Cursor、Devin 等众多 AI 工具内部提示词的资料库，供人研究参考。",
+            "features": [
+              "汇总多家 AI 编程工具的提示词",
+              "覆盖 Cursor、Devin、Replit 等",
+              "提醒创业公司注意提示词泄露风险"
+            ],
+            "guide": "纯资料仓库，打开网页浏览即可，无需安装任何软件；README 未提供安装或运行命令。",
+            "steps": [
+              "打开仓库网页直接浏览内容"
+            ],
+            "install": "",
+            "summary": "收集了 Cursor、Devin 等众多 AI 工具内部提示词的资料库，供人研究参考。",
+            "source": "GitHub",
+            "stars": "144229",
+            "language": "",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.d…",
+            "is_foreign": true
+          },
+          {
+            "title": "github/spec-kit",
+            "url": "https://github.com/github/spec-kit",
+            "intro": "GitHub 出的工具包，帮你在用 AI 写代码前先写清需求，少走弯路。",
+            "features": [
+              "提供现成的开发流程模板",
+              "支持修 bug 和评估想法两条路径",
+              "可接入不同 AI 编程助手"
+            ],
+            "guide": "面向用 AI 编程助手写代码的人，需要本地有 Python 环境，按 README 指引安装后即可在项目里使用。",
+            "steps": [
+              "准备 Python 运行环境",
+              "按 README 指引安装工具包",
+              "在项目中选用所需流程模板"
+            ],
+            "install": "",
+            "summary": "GitHub 出的工具包，帮你在用 AI 写代码前先写清需求，少走弯路。",
+            "source": "GitHub",
+            "stars": "142736",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "💫 Toolkit to help you get started with SDD or any other process!",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从安全预警、文档处理到阅读与 AI 协作，帮普通人把日常工具用得更顺。"
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "classic_offset": 18,
+  "classic_offset": 20,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-10-15T23:55:35.773317+00:00",
   "recent_trending": [
-    "DayuanJiang/next-ai-draw-io",
-    "wheresryan22/anatomy",
-    "storytold/vectorcraft",
     "Flow-Launcher/Flow.Launcher",
     "t4t5/omdrop-owl",
     "storytold/effectcraft",
@@ -174,12 +171,15 @@
     "jarun/nnn",
     "JoasASantos/REA-Prompts",
     "yetone/magpie",
-    "rowboatlabs/rowboat"
+    "rowboatlabs/rowboat",
+    "ikow/php2shell-poc",
+    "storytold/pdfcraft",
+    "omnivore-app/omnivore"
   ],
-  "last_run_date": "2026-10-23",
+  "last_run_date": "2026-10-25",
   "last_classic": [
-    "open-webui/open-webui",
-    "langchain-ai/langchain"
+    "x1xhlol/system-prompts-and-models-of-ai-tools",
+    "github/spec-kit"
   ],
-  "updated_at": "2026-10-23T23:55:50.633250+00:00"
+  "updated_at": "2026-10-25T00:00:32.161891+00:00"
 }
