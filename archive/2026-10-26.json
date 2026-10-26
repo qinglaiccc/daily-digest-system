@@ -1,0 +1,280 @@
+{
+  "date": "2026-10-26",
+  "generated_at": "2026-10-26T00:00:46.628558+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 22,
+    "rss_failed": 4,
+    "raw_news": 214,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-26",
+    "digest": "Kimi 3.1 Pro开源缩小中美模型差距，DeepSeek开源推理框架并披露融资，Linux基金会报告AI代码贡献激增。",
+    "keywords": [
+      "Kimi",
+      "DeepSeek",
+      "开源模型",
+      "AI代码",
+      "Grok"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Nanbeige4.3-33B登HuggingFace热门榜",
+            "summary": "[[Nanbeige4.3-33B]]登上[[HuggingFace]]热门模型榜，trendingScore 362，likes 362，下载0。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B",
+            "title_original": "Nanbeige/Nanbeige4.3-33B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 362）**新发布**。类型 text-generation。likes 362，下载 0。标签：transformers、safetensors、llama、text-generation、llm、nanbeige。",
+            "is_foreign": true
+          },
+          {
+            "title": "Grok发布AI生成《Odyssey》前七分钟",
+            "summary": "[[Grok]]发布AI生成影片《Odyssey》前七分钟片段，画面尚可但缺乏艺术性与人文感。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
+            "title_original": "Grok releases the first seven minutes of its AI-generated ‘Odyssey’",
+            "excerpt": "The footage looks okay, as long as you're not seeking artistry, inspiration, or human interest.",
+            "is_foreign": true
+          },
+          {
+            "title": "Kimi 3.1 Pro开源权重发布",
+            "summary": "[[Kimi 3.1 Pro]]以104BA-2.8T开源权重发布，将闭源AI领先优势缩至1个月，并提供2-3倍速API。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/ainews-kimi-31/",
+            "title_original": "[AINews] Kimi 3.1 Pro 104BA-2.8T: Fable-5.1-Class Open Weights narrows Closed-AI lead to 1 month... and Pro Highspeed API with 2-3× speed",
+            "excerpt": "We have Fable at home... or so we are being told by paid shills",
+            "is_foreign": true
+          },
+          {
+            "title": "Zen Browser被视为Arc替代品",
+            "summary": "[[Zen Browser]]被The Verge称为Arc浏览器的替代选择，后者团队已转向开发AI浏览器Dia。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/1018275/zen-browser-arc-replacement",
+            "title_original": "Zen Browser is the Arc replacement I was looking for",
+            "excerpt": "I know many of you are mourning the loss of the Arc browser, and I get it. It felt like the first app in a long time to really offer a new approach to browser design. Atlassian bought the company last year and shifted its focus to developing Dia, its even more AI-focused browser. And […]",
+            "is_foreign": true
+          },
+          {
+            "title": "AI眼镜能否替代耳机",
+            "summary": "Engadget讨论AI眼镜能否替代耳机，指出音频表现取决于具体使用场景。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2292076/when-ai-glasses-worth-headphones-replacement/",
+            "title_original": "When AI glasses could be a worthy headphones replacement",
+            "excerpt": "Smart AI glasses are everywhere, but is the audio any good? It really depends on what you're using them for.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "KRAFTON AI预览Raon-1 mini模型",
+            "summary": "韩国[[KRAFTON AI]]预览30B-A4B的[[Raon-1 mini]]，Apache 2.0开源，称编程任务与Meta Muse Glimmer相当。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/017/695.htm",
+            "title_original": "韩 KRAFTON AI 预览 Raon-1 mini 模型：30B-A4B，可与 Meta Muse Glimmer 竞争",
+            "excerpt": "IT之家 10 月 25 日消息，韩国知名游戏企业 KRAFTON（魁匠团）旗下人工智能分支 KRAFTON AI 本周公布了其从头训练的 Raon-1 mini 模型的预览版本，该模型的正式版和后续的更大模型即将推出。 Raon-1 mini 采用混合专家架构，导入线性注意力，支持推测解码，整体体量为 30B-A4B。该模型聚焦韩语的同时兼顾英语性能， 以 Apache 2.0 许可开源 。KRAFTON AI 还在官网提供限时免费 API 试用。 KRAFTON AI 表示，预览版的 Raon-1 mini 在编程与智能体任务上与 Meta 的 Muse Glimmer 30B 相当 ，同时速度更快、内存效率更高；此外其能进行…",
+            "is_foreign": true
+          },
+          {
+            "title": "中美AI大模型性能差距缩至1个月",
+            "summary": "whatmodel.sh统计显示，2026年10月中美AI大模型性能与发布时间差距已从三四个月缩至约1个月。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1859677.html",
+            "title_original": "whatmodel.sh：2026年10月中美AI大模型性能差距缩短至1个月",
+            "excerpt": "据whatmodel.sh统计，2026年中美AI大模型性能与发布时间差距已从三四个月缩至10月约1个月。美国AI多转闭源，中国公司主导开源，DeepSeek、Kimi等新模型推动差距收窄，后续GLM-5.5、Qwen4等有望继续提升。",
+            "is_foreign": false
+          },
+          {
+            "title": "数智周报：MiniMax破发与DeepSeek动态",
+            "summary": "[[MiniMax]]港股破发；[[DeepSeek]]开源推理框架DeepInfer并披露收入，拟融资约1000亿元。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8181051.html",
+            "title_original": "【数智周报】MiniMax港股破发；DeepSeek开源推理框架DeepInfer并披露收入账本；美国国土安全部正式下令禁采DeepSeek……",
+            "excerpt": "（10月19日-10月24日）DeepSeek拟在最新一轮融资中筹得约1000亿元；Today AI累计完成超2亿美元融资；工信部：600亿元国家AI基金投出一批项目，AI企业超6600家；中国半数token消耗靠AI短剧？豆包高管回应；AI板块近期遭遇明显抛售……",
+            "is_foreign": false
+          },
+          {
+            "title": "Linux基金会报告AI代码贡献",
+            "summary": "[[Linux基金会]]报告称AI写代码快52%，但四分之一PR为“AI垃圾”，开源维护者负担加重。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/9TSuUDxrUSGS26XTA2yB?utm_source=rss&utm_medium=article",
+            "title_original": "四分之一PR是“AI垃圾”！Linux基金会发布新报告：AI写代码快了52%，开源维护者却更累了",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "xevrion/hatchzip",
+            "url": "https://github.com/xevrion/hatchzip",
+            "intro": "磁盘快满时也能解压大压缩包的工具，边解边删原包省空间。",
+            "features": [
+              "解压时同步缩小原压缩包，只需留出解压后文件的空间",
+              "支持 ZIP、7z、RAR、tar 和分卷压缩包",
+              "中途停止或崩溃后能接着上次进度继续",
+              "提供桌面应用和命令行两种用法"
+            ],
+            "guide": "从官网 hatchzip.dev 或仓库发布页下载对应系统的桌面应用即可使用，也有命令行版本；无需额外安装运行环境。",
+            "steps": [
+              "访问 hatchzip.dev 或仓库 Releases 页面",
+              "下载对应 Windows、macOS 或 Linux 的安装包",
+              "安装后打开桌面应用或使用命令行解压"
+            ],
+            "install": "",
+            "summary": "磁盘快满时也能解压大压缩包的工具，边解边删原包省空间。",
+            "source": "GitHub",
+            "stars": "1935",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "HatchZip is a free, open-source archive extractor for Windows, macOS and Linux that extracts ZIP, 7z, RAR, tar and split archives in place, so it needs free space for the extracted files only. Desktop app and CLI.",
+            "is_foreign": true
+          },
+          {
+            "title": "wheresryan22/anatomy",
+            "url": "https://github.com/wheresryan22/anatomy",
+            "intro": "让 AI 把抽象概念画成可交互的立体机械图，帮人看懂原理。",
+            "features": [
+              "把技术概念变成可动的立体机械插图",
+              "生成带标题、提示和实时读数的图卡",
+              "支持鼠标和键盘操作让图动起来",
+              "输出 SVG 并可叠加 3D 光影效果"
+            ],
+            "guide": "这是给 Claude 等 AI 编程助手用的技能包，需先有对应 AI 工具，再用一条命令安装，安装时会询问要接入哪个助手。",
+            "steps": [
+              "准备好 Claude Code、Codex 等任一支持的 AI 工具",
+              "运行 npx skills add wheresryan22/anatomy -g",
+              "按提示选择要接入的 AI 助手"
+            ],
+            "install": "npx skills add wheresryan22/anatomy -g",
+            "summary": "让 AI 把抽象概念画成可交互的立体机械图，帮人看懂原理。",
+            "source": "GitHub",
+            "stars": "20582",
+            "language": "JavaScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects.",
+            "is_foreign": true
+          },
+          {
+            "title": "espanso/espanso",
+            "url": "https://github.com/espanso/espanso",
+            "intro": "打字时自动把缩写替换成整段文字的工具，跨平台且数据只存本地。",
+            "features": [
+              "输入关键词自动展开成常用句子",
+              "在几乎所有软件里都能用",
+              "支持表情、图片、日期和自定义脚本",
+              "内置搜索栏和插件包管理"
+            ],
+            "guide": "需先从官网 espanso.org 下载安装对应系统版本，装好后编辑本地配置文件添加自己的缩写规则，全程离线不上传数据。",
+            "steps": [
+              "访问 espanso.org 下载对应系统安装包",
+              "安装并启动 espanso",
+              "编辑配置文件添加触发词和替换内容"
+            ],
+            "install": "",
+            "summary": "打字时自动把缩写替换成整段文字的工具，跨平台且数据只存本地。",
+            "source": "GitHub",
+            "stars": "14689",
+            "language": "Rust",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "A Privacy-first, Cross-platform Text Expander written in Rust",
+            "is_foreign": true
+          },
+          {
+            "title": "Comfy-Org/ComfyUI",
+            "url": "https://github.com/Comfy-Org/ComfyUI",
+            "intro": "在自己电脑上跑 AI 画图和内容生成的工具，用连线搭积木的方式组合流程。",
+            "features": [
+              "用节点连线的方式搭建 AI 生成流程",
+              "在本机运行，不依赖云端服务",
+              "提供图形界面和接口两种用法",
+              "可自由组合和复用生成模块"
+            ],
+            "guide": "需要本地有 Python 环境并自行安装依赖，适合愿意折腾的进阶用户；普通用户也可先看官网是否有更简单的桌面版本。",
+            "steps": [
+              "先安装 Python 运行环境",
+              "按 README 说明安装项目依赖",
+              "启动程序后在浏览器打开图形界面"
+            ],
+            "install": "",
+            "summary": "在自己电脑上跑 AI 画图和内容生成的工具，用连线搭积木的方式组合流程。",
+            "source": "GitHub",
+            "stars": "142927",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+            "is_foreign": true
+          },
+          {
+            "title": "excalidraw/excalidraw",
+            "url": "https://github.com/excalidraw/excalidraw",
+            "intro": "画手绘风草图的在线白板，适合画流程图和线框图，可多人协作。",
+            "features": [
+              "无限画布，手绘风格图形",
+              "多人实时协作且端到端加密",
+              "可导出 PNG、SVG 或工程文件",
+              "支持离线使用和分享只读链接"
+            ],
+            "guide": "打开 excalidraw.com 网页即可直接画，无需安装；想集成到自己产品里可安装它的 npm 包。",
+            "steps": [
+              "浏览器访问 excalidraw.com",
+              "直接开始绘制或新建画布",
+              "需要协作时分享链接给他人"
+            ],
+            "install": "",
+            "summary": "画手绘风草图的在线白板，适合画流程图和线框图，可多人协作。",
+            "source": "GitHub",
+            "stars": "134545",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Virtual whiteboard for sketching hand-drawn like diagrams",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从解压、绘图到本地跑 AI，帮普通人省磁盘、省打字、省时间。"
+      }
+    ]
+  }
+}

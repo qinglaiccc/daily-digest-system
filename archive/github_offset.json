@@ -1,5 +1,5 @@
 {
-  "classic_offset": 20,
+  "classic_offset": 22,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-10-15T23:55:35.773317+00:00",
   "recent_trending": [
-    "Flow-Launcher/Flow.Launcher",
-    "t4t5/omdrop-owl",
-    "storytold/effectcraft",
     "Wox-launcher/Wox",
     "nullmoth/nvidia-macos-driver",
     "KKKKhazix/AIHOT",
@@ -174,12 +171,15 @@
     "rowboatlabs/rowboat",
     "ikow/php2shell-poc",
     "storytold/pdfcraft",
-    "omnivore-app/omnivore"
+    "omnivore-app/omnivore",
+    "xevrion/hatchzip",
+    "wheresryan22/anatomy",
+    "espanso/espanso"
   ],
-  "last_run_date": "2026-10-25",
+  "last_run_date": "2026-10-26",
   "last_classic": [
-    "x1xhlol/system-prompts-and-models-of-ai-tools",
-    "github/spec-kit"
+    "Comfy-Org/ComfyUI",
+    "excalidraw/excalidraw"
   ],
-  "updated_at": "2026-10-25T00:00:32.161891+00:00"
+  "updated_at": "2026-10-26T00:00:33.287018+00:00"
 }
