@@ -1,5 +1,5 @@
 {
-  "classic_offset": 22,
+  "classic_offset": 24,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-10-15T23:55:35.773317+00:00",
   "recent_trending": [
-    "Wox-launcher/Wox",
-    "nullmoth/nvidia-macos-driver",
-    "KKKKhazix/AIHOT",
     "lissy93/dashy",
     "ARahim3/DigUp",
     "shader-effects-inc/shaders",
@@ -174,12 +171,15 @@
     "omnivore-app/omnivore",
     "xevrion/hatchzip",
     "wheresryan22/anatomy",
-    "espanso/espanso"
+    "espanso/espanso",
+    "Jakeschincariol/day-trader-skill",
+    "storytold/lightcraft",
+    "Flow-Launcher/Flow.Launcher"
   ],
   "last_run_date": "2026-10-26",
   "last_classic": [
-    "Comfy-Org/ComfyUI",
-    "excalidraw/excalidraw"
+    "Graphify-Labs/graphify",
+    "shadcn-ui/ui"
   ],
-  "updated_at": "2026-10-26T00:00:33.287018+00:00"
+  "updated_at": "2026-10-26T23:55:37.736542+00:00"
 }

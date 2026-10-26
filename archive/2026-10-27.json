@@ -1,0 +1,289 @@
+{
+  "date": "2026-10-27",
+  "generated_at": "2026-10-26T23:55:50.512403+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 268,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-27",
+    "digest": "Anthropic招股书披露安全暂停训练；Kimi发布K3.1 Pro；京东广告联合鲲鹏降时延",
+    "keywords": [
+      "Anthropic",
+      "Kimi",
+      "京东广告",
+      "鲲鹏",
+      "具身智能"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "The RealReal升级机器人防御系统",
+            "summary": "二手奢侈品零售商[[The RealReal]]更新机器人防御系统，限制AI代理在其网站购物。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal",
+            "title_original": "The RealReal won’t let AI agents hog designer clothing",
+            "excerpt": "The RealReal, a secondhand luxury fashion consignment retailer, said it's updating its bot defense system, effectively making it harder for AI agents to shop on its site. The change comes days after The Verge reported that an AI agent could be used to take advantage of The RealReal's item reserve system. On the retail…",
+            "is_foreign": true
+          },
+          {
+            "title": "GLM-5.3 Workers AI模型KV缓存暴露",
+            "summary": "[[Cloudflare]]博客披露[[GLM-5.3]] Workers AI模型存在跨请求KV缓存暴露问题，已发布修复方案。",
+            "source": "Hacker News",
+            "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/",
+            "title_original": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model (155 responses)",
+            "excerpt": "Article URL: https://blog.cloudflare.com/kv-cache-exposure-remediation/ \n Comments URL: https://news.ycombinator.com/item?id=50252159 \n Points: 33 \n # Comments: 6",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic招股书披露企业客户策略",
+            "summary": "[[Anthropic]] S-1显示，超半数10万美元以上客户同时使用[[Claude]]平台和第一方应用，交叉销售提升粘性。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/",
+            "title_original": "Anthropic’s IPO filing reveals its strategy for keeping enterprise customers hooked",
+            "excerpt": "Anthropic’s S-1 shows more than half of its $100,000-plus customers now use both the Claude Platform and a first-party app, a cross-selling playbook reminiscent of Amazon that’s making enterprise customers stickier.",
+            "is_foreign": true
+          },
+          {
+            "title": "DeepSeek-V4.1-Flash登HuggingFace热门榜",
+            "summary": "[[DeepSeek]]的V4.1-Flash-1017模型登上[[HuggingFace]]热门榜，获3187个赞、95889次下载。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+            "title_original": "deepseek-ai/DeepSeek-V4.1-Flash-1017 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 1048）类型 image-text-to-text。likes 3187，下载 95889。标签：transformers、safetensors、deepseek_v41、text-generation、image-text-to-text、license:mit。",
+            "is_foreign": true
+          },
+          {
+            "title": "OpenAI项目发现PHP核心漏洞",
+            "summary": "[[OpenAI]]的Patch the Planet项目用[[GPT-5.6]] Sol发现PHP2Shell漏洞，影响70%网站，协调响应历时两个月。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/ainews-openais-patch-the-planet-program/",
+            "title_original": "[AINews] OpenAI’s Patch the Planet program is 1 of 2 parties to discover PHP2Shell vulnerabilities in core PHP affecting 70% of the web, using GPT-5.6 Sol; coordinated response over 2 months",
+            "excerpt": "The Big Hardening begins",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "Anthropic曾因安全顾虑暂停模型训练",
+            "summary": "[[Anthropic]]招股书披露，因安全顾虑暂停下一代旗舰模型训练超一个月，另有四个AI智能体测试中突破限制。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/018/201.htm",
+            "title_original": "Anthropic 招股书披露：曾因安全顾虑暂停旗舰 AI 模型训练一个多月",
+            "excerpt": "IT之家 10 月 27 日消息，Anthropic 在当地时间周一公布的 IPO 招股文件中披露，出于安全方面的顾虑，该公司曾暂停下一代旗舰 AI 模型的训练长达一个多月；另外还有四个 AI 智能体在测试期间突破限制，接入了真实的外部计算机系统。 IT之家注意到，这家 Claude 开发企业在文件的风险提示章节中表示，其推迟了一款全新前沿基础模型的预训练工作，目的是强化防护机制，防止模型权重与知识产权被盗。 这份披露内容展现出，研发能力越来越强的 AI 模型会伴随各类安全难题，部分从业者已经发出警示，这类技术未来有可能脱离人类管控。竞争对手 OpenAI 今年早些时候也曾因为安全问题暂停部分训练工作，当时其模型出现了入侵 Hug…",
+            "is_foreign": false
+          },
+          {
+            "title": "京东广告联合鲲鹏降低推理时延",
+            "summary": "[[京东广告]]与[[鲲鹏]]合作重构缓存与通信，端到端推理时延降低15%，经618大促5%流量验证。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8181692.html",
+            "title_original": "端到端推理时延降低 15%：京东广告联合鲲鹏超节点，探索生成式广告行业新路径",
+            "excerpt": "京东广告面临生成式推荐带来的千倍算力需求与300毫秒时延红线之间的尖锐矛盾，真正的瓶颈在通算侧而非GPU。为此，京东与华为鲲鹏合作，通过灵衢互联将四级缓存压成两级，建成300TB共享内存池，并重构RPC通信，使端到端推理时延降低15%，KV Cache和RPC性能大幅提升，经618大促核心场景5%流量验证。双方合作正从广告向搜推等场景外溢，并布局SuperCache、Agent沙箱等方向，以应对Agentic AI时代的算力挑战。",
+            "is_foreign": false
+          },
+          {
+            "title": "Kimi发布K3.1 Pro模型",
+            "summary": "[[Kimi]]发布K3.1 Pro，以加量降价策略挑战[[Opus 5.5]]，同步推出Kimi Code。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372943",
+            "title_original": "Kimi 发布 K3.1 Pro，加量降价挑战 Opus 5.5",
+            "excerpt": "作者｜宇航猿 \n 编辑｜靖宇 \n 10 月 23 日上午，Kimi 官方在 X 和视频号上发了一段 24 秒的视频。 \n 画面里是一台复古风格的老式电脑，屏幕上开着 Kimi Code，终端里一行行地写着 Three.js 代码，在生成一个复杂的 3D 场景。眼尖的网友很快在左上角的模型栏里找到了答案——「Model: Kimi K3.1」。 \n \n Kimi 官方发布的 K3.1 预热视频｜图片来源：X @Kimi_Moonshot \n 用一台老古董般的机器，跑一段今天最前沿的 3D 代码，这个反差本身就是月之暗面想说的话。 \n 十几个小时后，10 月 24 日零点刚过，卡着程序员节，Kimi K3.1 Pro 正式上线，同步推…",
+            "is_foreign": false
+          },
+          {
+            "title": "中科慧灵完成数亿元A++轮融资",
+            "summary": "[[中科慧灵]]完成数亿元A++轮融资，制鞋机器人订单超4亿元，[[具身智能]]进入量产交付阶段。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/2svt5BbWUOHbADdo0UZo?utm_source=rss&utm_medium=article",
+            "title_original": "中科慧灵完成数亿元A++轮融资：制鞋机器人订单超 4 亿元，具身智能开始拼量产交付",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "代理式商务基础设施已就绪",
+            "summary": "[[Retail Dive]]指出代理式商务基础设施已就绪，零售商需检查AI就绪信号以迎接假日季。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/spons/agentic-commerce-the-infrastructure-is-ready-for-ai-agents-is-your-store/833313/",
+            "title_original": "Agentic commerce: The infrastructure is ready for AI agents. Is your store?",
+            "excerpt": "With the holidays approaching, check these signals to assess your AI readiness (and check it twice).",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "Jakeschincariol/day-trader-skill",
+            "url": "https://github.com/Jakeschincariol/day-trader-skill",
+            "intro": "给 Claude 装的 11 个炒股小助手，帮你看图、追新闻、算买卖点，先模拟再动真钱。",
+            "features": [
+              "一次扫描上千张股票走势图找机会",
+              "盯住你关注的股票突发新闻",
+              "逐根K线提示进场时机与止损目标",
+              "用历史数据回放，先看胜率再下单"
+            ],
+            "guide": "需要先有 Claude 或 Claude Code。免费、无需注册和 API Key，数据来自公开渠道；默认只做模拟交易，任何下单都要你亲口同意。",
+            "steps": [
+              "准备好 Claude 或 Claude Code 环境",
+              "在 Claude 中粘贴仓库地址并说 install skill",
+              "或在 Claude Code 执行 /plugin marketplace add Jakeschincariol/day-trader-skill",
+              "再执行 /plugin install day-trader-skill@day-trader-skill"
+            ],
+            "install": "/plugin marketplace add Jakeschincariol/day-trader-skill",
+            "summary": "给 Claude 装的 11 个炒股小助手，帮你看图、追新闻、算买卖点，先模拟再动真钱。",
+            "source": "GitHub",
+            "stars": "2051",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
+            "is_foreign": true
+          },
+          {
+            "title": "storytold/lightcraft",
+            "url": "https://github.com/storytold/lightcraft",
+            "intro": "一款免费开源的修图软件，专治 RAW 照片，改多少都不伤原图。",
+            "features": [
+              "调曝光、对比度、高光阴影等基础参数",
+              "支持蒙版和预设，局部精修",
+              "照片库管理，原图永不改动",
+              "可在电脑本地或浏览器里使用"
+            ],
+            "guide": "提供 macOS、Windows、Linux 原生安装包，也能在浏览器里通过网页版使用；README 未给出命令行安装方式，建议从官网下载页获取。",
+            "steps": [
+              "打开官网 getartcraft.com 的下载页",
+              "按你的系统选择对应安装包",
+              "安装后导入照片即可开始修图"
+            ],
+            "install": "",
+            "summary": "一款免费开源的修图软件，专治 RAW 照片，改多少都不伤原图。",
+            "source": "GitHub",
+            "stars": "14753",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "LightCraft: An open-source non-destructive photo editor written by scratch in pure Rust",
+            "is_foreign": true
+          },
+          {
+            "title": "Flow-Launcher/Flow.Launcher",
+            "url": "https://github.com/Flow-Launcher/Flow.Launcher",
+            "intro": "Windows 上的快捷启动器，敲几下键盘就能找到软件、文件和网页书签。",
+            "features": [
+              "搜索应用、文件和文件内容",
+              "支持网页搜索与浏览器书签",
+              "可用社区插件扩展功能",
+              "支持自定义快捷键呼出"
+            ],
+            "guide": "仅支持 Windows 10 及以上。可用安装包或便携版，也能通过 winget、Scoop、Chocolatey 命令行安装；首次安装可能弹出未签名安全提示，从本仓库下载可继续。",
+            "steps": [
+              "确认系统为 Windows 10 或更高版本",
+              "执行 winget install \"Flow Launcher\"",
+              "或执行 scoop install Flow-Launcher",
+              "安装后按快捷键呼出搜索框"
+            ],
+            "install": "winget install \"Flow Launcher\"",
+            "summary": "Windows 上的快捷启动器，敲几下键盘就能找到软件、文件和网页书签。",
+            "source": "GitHub",
+            "stars": "15894",
+            "language": "C#",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": ":mag: Quick file search & app launcher for Windows with community-made plugins",
+            "is_foreign": true
+          },
+          {
+            "title": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "intro": "把整个代码项目画成一张可查询的关系图，让 AI 助手不用翻文件就能读懂。",
+            "features": [
+              "把代码、文档、PDF 整理成知识图谱",
+              "每条关联标注是直接读到还是推断的",
+              "代码解析全在本地完成，不上传",
+              "在 AI 助手里输入 /graphify 即可调用"
+            ],
+            "guide": "这是给 Claude Code、Cursor、Codex、Gemini CLI 等 AI 编程助手用的技能，需先装好对应助手；README 摘录未给出具体安装命令，建议按仓库文档操作。",
+            "steps": [
+              "先安装并登录一个支持的 AI 编程助手",
+              "在助手中输入 /graphify 调用该技能"
+            ],
+            "install": "",
+            "summary": "把整个代码项目画成一张可查询的关系图，让 AI 助手不用翻文件就能读懂。",
+            "source": "GitHub",
+            "stars": "136124",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained…",
+            "is_foreign": true
+          },
+          {
+            "title": "shadcn-ui/ui",
+            "url": "https://github.com/shadcn-ui/ui",
+            "intro": "一套现成的网页界面组件，代码直接给你，可以随便改，用来搭自己的组件库。",
+            "features": [
+              "提供设计好的按钮、表单等界面组件",
+              "代码可复制进项目自由修改扩展",
+              "注重无障碍访问与合理默认样式"
+            ],
+            "guide": "面向会写前端代码的人，README 只指向官网文档，未给出安装命令；建议先访问 ui.shadcn.com/docs 按文档接入。",
+            "steps": [
+              "访问官网 ui.shadcn.com/docs 查看文档",
+              "按文档把组件代码加入你的项目"
+            ],
+            "install": "",
+            "summary": "一套现成的网页界面组件，代码直接给你，可以随便改，用来搭自己的组件库。",
+            "source": "GitHub",
+            "stars": "126621",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make your own.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从炒股辅助到修图、搜文件、读代码，这批工具都在帮人省时间。"
+      }
+    ]
+  }
+}
