@@ -1,5 +1,5 @@
 {
-  "classic_offset": 26,
+  "classic_offset": 28,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-10-15T23:55:35.773317+00:00",
   "recent_trending": [
-    "plotly/dash",
-    "jhaizhou-ops/d2r-mobile",
-    "Louis-CFM/coucou",
     "super-productivity/super-productivity",
     "onehumanbeing/esp32-iphone-agent",
     "rehan-remade/universal-modder",
@@ -174,12 +171,15 @@
     "Flow-Launcher/Flow.Launcher",
     "rddmwmddr/android-ad-cleaner",
     "KnifeLemon/Filee",
-    "Wox-launcher/Wox"
+    "Wox-launcher/Wox",
+    "designfuchen/word-atlas",
+    "storytold/vectorcraft",
+    "lissy93/dashy"
   ],
   "last_run_date": "2026-10-28",
   "last_classic": [
-    "JuliusBrussee/caveman",
-    "supabase/supabase"
+    "google-gemini/gemini-cli",
+    "pytorch/pytorch"
   ],
-  "updated_at": "2026-10-28T00:01:00.437360+00:00"
+  "updated_at": "2026-10-28T23:55:35.569963+00:00"
 }

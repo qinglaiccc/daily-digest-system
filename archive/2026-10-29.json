@@ -1,0 +1,306 @@
+{
+  "date": "2026-10-29",
+  "generated_at": "2026-10-28T23:55:49.384650+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 290,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-29",
+    "digest": "谷歌发布Gemini 4 Carbon登顶智能指数，苹果推首款触控MacBook Pro，Etsy活跃买家两年来首增",
+    "keywords": [
+      "Gemini-4-Carbon",
+      "Google",
+      "苹果",
+      "MacBook-Pro",
+      "Etsy"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "谷歌发布Gemini 4 Carbon模型",
+            "summary": "[[Google]]发布前沿模型[[Gemini 4 Carbon]]，在编程、智能体任务和网络安全方面显著提升，登顶Artificial Analysis智能指数v5.0。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier",
+            "title_original": "Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity",
+            "excerpt": "Google has released its latest frontier model, Gemini 4 Carbon, offering \"significant gains\" in coding, agentic tasks, and cybersecurity. In an announcement on Wednesday, Google highlights Carbon's top spot on the Artificial Analysis Intelligence Index (v5.0) benchmark, with Claude Opus 5.5 and GPT-6 Astra trailing be…",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini 4 Carbon暂不对外开放",
+            "summary": "[[Google]]宣布[[Gemini 4 Carbon]]，称其是Argon的略优版本，但该模型目前无法供公众使用。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use/",
+            "title_original": "Google announces Gemini 4 Carbon, its latest frontier AI model that you can't use",
+            "excerpt": "Gemini 4 Carbon is essentially a slightly better version of Argon.",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌向更多应用开放Gemini与搜索",
+            "summary": "[[Google]]推出新开发者平台，允许企业将服务接入[[Gemini]]和搜索的AI体验，可能改变消费者发现和使用应用的方式。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/",
+            "title_original": "As AI agents reshape the web, Google opens Gemini and Search to more apps",
+            "excerpt": "A new developer platform will let businesses bring their services to Google's AI experiences, potentially changing how consumers discover and use apps.",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini 4 Carbon发布引发热议",
+            "summary": "[[Google]]官方博客发布[[Gemini 4 Carbon]]介绍，Hacker News上该条目获759点、624条评论。",
+            "source": "Hacker News",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+            "title_original": "Gemini 4 Carbon",
+            "excerpt": "Article URL: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/ \n Comments URL: https://news.ycombinator.com/item?id=50276792 \n Points: 759 \n # Comments: 624",
+            "is_foreign": true
+          },
+          {
+            "title": "氛围游戏开发迎十月拐点",
+            "summary": "Simon Willison称2026年10月是氛围游戏开发的新拐点，类比2025年11月[[Opus 4.5]]和[[GPT-5.1]]让编程智能体成为可靠日常工具。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+            "title_original": "The October inflection point for vibe game development",
+            "excerpt": "I've written before about how November 2025 was an inflection point for coding agents - the point where Opus 4.5 and GPT-5.1 crossed a tipping point that meant their respective coding agents became reliable daily drivers for software engineers. I think we've reached a new inflection point in October 2026, and this tim…",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "苹果首款触控MacBook Pro发布",
+            "summary": "[[苹果]]发布首款触控[[MacBook Pro]]，最高128GB统一内存，M5 Max版可本地运行数千亿参数大语言模型。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/019/251.htm",
+            "title_original": "最高 128GB 统一内存：苹果首款触控 MacBook Pro 可本地运行数千亿参数 AI 模型",
+            "excerpt": "IT之家 10 月 29 日消息，苹果公司今天（10 月 29 日）发布配备 PROLED XDR 显示屏的首款触控 MacBook Pro，其核心卖点之一是配备最高 128GB 统一内存， M5 Max 芯片版可本地运行数千亿参数的大语言模型。 IT之家附上官方公告内容如下： 依托 M5 Max，专业人士可在设备端直接运行具有数千亿参数的大语言模型，并为精细视觉特效、3D 动画项目、电影配乐和 8K 视频后期制作等高强度工作流加速。 苹果表示，M5 Pro 与 M5 Max 的每个 GPU 核心均内置神经网络加速器，可加速本地 AI 推理，并支持运行编程智能体、处理图形密集型 AI 任务等场景。 苹果称依托 MacBook Pr…",
+            "is_foreign": false
+          },
+          {
+            "title": "Gemini 4 Carbon登顶智能指数",
+            "summary": "[[谷歌]]发布[[Gemini 4 Carbon]]，主打网络安全与长程任务，以59分登顶Artificial Analysis智能指数v5.0，输入每百万Tokens 2美元。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/019/240.htm",
+            "title_original": "谷歌最强 AI 模型：Gemini 4 Carbon 登顶全球智能指数榜首，“专职”做网络安全",
+            "excerpt": "IT之家 10 月 29 日消息，谷歌正式发布新一代前沿大模型 Gemini 4 Carbon ，主打业界顶尖的网络安全能力与长程任务处理能力。 谷歌称其为目前最强的模型，重点强化了网络安全能力和处理复杂、长周期任务的能力。 该模型在最新版 Artificial Analysis Intelligence Index v5.0 中排名第一，综合得分 59。 Gemini 4 Carbon 首发入门定价与两周前发布的 Gemini 4 Argon 保持一致，缓存输入 Tokens 可享输入价 95% 折扣。 输入：每百万 Tokens 2 美元 （IT之家注：现汇率约合 13.3 元人民币） 输出：每百万 Tokens 10 美元…",
+            "is_foreign": false
+          },
+          {
+            "title": "扩散模型迈向35B挑战Agent编程",
+            "summary": "扩散模型不再逐个生成Token，规模迈向35B，开始挑战Agent编程。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/0tgCLAMXFiFo0Dco5P9m?utm_source=rss&utm_medium=article",
+            "title_original": "不再逐个生成 Token：扩散模型迈向 35B，开始挑战 Agent 编程",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "Gemini 4 Carbon正式发布",
+            "summary": "[[Gemini 4 Carbon]]正式发布，报道称其助谷歌重回世界第一。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1686587?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "刚刚，Gemini 4 Carbon 正式发布，哈基米重回世界第一",
+            "excerpt": "哈基米终于扬眉吐气了\n #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek V5测试文件泄露",
+            "summary": "[[DeepSeek]]测试文件出现三个deepseek-v5模型，或为占位符，引发V5即将发布猜测。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8184852.html",
+            "title_original": "DSH测试文件“泄密”，DeepSeek V5就要来了？",
+            "excerpt": "DSH测试文件出现三个deepseek-v5模型，或为占位符",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Etsy CEO谈AI与人类创造力摩擦",
+            "summary": "[[Etsy]] CEO回应AI与人类创造力的摩擦，平台第三季度活跃买家两年来首次增长，并利用AI改进产品推荐。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/etsy-ceo-ai-human-creativity-earnings/873009/",
+            "title_original": "Etsy CEO addresses friction of AI vs. human creativity",
+            "excerpt": "The e-commerce marketplace saw active buyers in Q3 grow for the first time in two years and is utilizing AI to improve product recommendations.",
+            "is_foreign": true
+          },
+          {
+            "title": "Intake Breathing获6200万美元投资",
+            "summary": "[[Intake Breathing]]获6200万美元投资，将把鼻贴扩展至零售渠道，并推动呼吸健康融入日常健康习惯。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/intake-breathing-62-million-funding-round/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Intake Breathing nabs $62M investment, joining the emerging nasal wellness trend",
+            "excerpt": "Intake Breathing raises $62 million to expand its nasal strips into retail and continue to position better breathing as an important part of everyday wellness routines.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "designfuchen/word-atlas",
+            "url": "https://github.com/designfuchen/word-atlas",
+            "intro": "把雅思单词配成插画和发音的背词应用，解决死记硬背记不住的问题。",
+            "features": [
+              "个雅思词条，每个配插画和例句",
+              "英音美音切换，例句可朗读",
+              "按记忆规律自动安排复习时间",
+              "学习进度存本地，无需注册账号"
+            ],
+            "guide": "可直接打开官网在线使用，也可本地运行开源版；进度存在自己设备上，换设备前记得先导出备份。",
+            "steps": [
+              "访问官网 0xlei.tech/words 直接体验",
+              "或按 README 本地运行开源版",
+              "换设备前先导出学习进度备份"
+            ],
+            "install": "",
+            "summary": "把雅思单词配成插画和发音的背词应用，解决死记硬背记不住的问题。",
+            "source": "GitHub",
+            "stars": "3042",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "词光 · Word Atlas — Illustrated IELTS vocabulary with 7,298 words, UK/US audio and FSRS review. Open-source app + CC BY 4.0 dataset.",
+            "is_foreign": true
+          },
+          {
+            "title": "storytold/vectorcraft",
+            "url": "https://github.com/storytold/vectorcraft",
+            "intro": "一款开源的矢量画图工具，用来画图标、插画这类可无限放大的图形。",
+            "features": [
+              "钢笔工具画曲线，可随时调整锚点",
+              "图层和混合效果实时可编辑",
+              "支持透视网格和尺寸标注",
+              "电脑本地运行，也能在浏览器里用"
+            ],
+            "guide": "可从官网下载 macOS、Windows、Linux 版本安装，也能直接在浏览器打开网页版使用，无需额外配置环境。",
+            "steps": [
+              "打开官网 getartcraft.com/apps/vectorcraft",
+              "按系统下载对应安装包",
+              "或直接用浏览器网页版"
+            ],
+            "install": "",
+            "summary": "一款开源的矢量画图工具，用来画图标、插画这类可无限放大的图形。",
+            "source": "GitHub",
+            "stars": "10935",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "VectorCraft: An open-source, vector art tool written by scratch in pure Rust",
+            "is_foreign": true
+          },
+          {
+            "title": "lissy93/dashy",
+            "url": "https://github.com/lissy93/dashy",
+            "intro": "给自己搭一个专属导航主页，把常用网站和服务集中在一页管理。",
+            "features": [
+              "每个链接可显示实时在线状态",
+              "内置多种主题和图标可选",
+              "支持搜索和自定义快捷键",
+              "可加登录验证，多用户使用"
+            ],
+            "guide": "适合有自己服务器或 NAS 的人，用 Docker 部署最省事；装好后在浏览器打开配置页面编辑即可。",
+            "steps": [
+              "先安装 Docker",
+              "按 README 用 Docker 启动 Dashy",
+              "浏览器打开配置页面添加链接"
+            ],
+            "install": "",
+            "summary": "给自己搭一个专属导航主页，把常用网站和服务集中在一页管理。",
+            "source": "GitHub",
+            "stars": "26843",
+            "language": "Vue",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🚀 A self-hostable personal dashboard built for you. Includes status-checking, widgets, themes, icon packs, a UI editor and tons more!",
+            "is_foreign": true
+          },
+          {
+            "title": "google-gemini/gemini-cli",
+            "url": "https://github.com/google-gemini/gemini-cli",
+            "intro": "在命令行里跟 Gemini 对话、让它帮你写代码的 AI 工具。",
+            "features": [
+              "在终端里直接向 AI 提问",
+              "可让 AI 读取和修改项目文件",
+              "支持接入外部工具扩展能力"
+            ],
+            "guide": "需要先装 Node.js，再全局安装命令行工具；注意现在只面向企业版 Gemini Code Assist 授权用户，个人免费版已迁到另一个工具。",
+            "steps": [
+              "先安装 Node.js",
+              "按 README 安装 Gemini CLI",
+              "确认自己有企业版 Code Assist 授权"
+            ],
+            "install": "",
+            "summary": "在命令行里跟 Gemini 对话、让它帮你写代码的 AI 工具。",
+            "source": "GitHub",
+            "stars": "108600",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+            "is_foreign": true
+          },
+          {
+            "title": "pytorch/pytorch",
+            "url": "https://github.com/pytorch/pytorch",
+            "intro": "做人工智能和深度学习最常用的 Python 工具库，让电脑算得又快又方便。",
+            "features": [
+              "用显卡加速大规模数值计算",
+              "自动计算模型训练需要的梯度",
+              "可和 NumPy 等常用库配合使用"
+            ],
+            "guide": "需要先装 Python，再按官网给出的命令安装；有 NVIDIA 显卡的还要装对应 CUDA 版本，新手建议照官网选择器一步步来。",
+            "steps": [
+              "先安装 Python",
+              "按官网安装命令安装 PyTorch",
+              "有显卡则选对应 CUDA 版本"
+            ],
+            "install": "",
+            "summary": "做人工智能和深度学习最常用的 Python 工具库，让电脑算得又快又方便。",
+            "source": "GitHub",
+            "stars": "105153",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从背单词、画矢量图到搭个人主页、用 AI 写代码、训练模型，都是能上手用的工具。"
+      }
+    ]
+  }
+}
