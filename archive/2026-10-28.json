@@ -1,0 +1,286 @@
+{
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T00:01:13.504811+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 283,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-28",
+    "digest": "谷歌发布Genie 4世界模型，OpenAI推出GPT-6.1 Terra，Anthropic详解Claude平台工程。",
+    "keywords": [
+      "Genie-4",
+      "GPT-6-1-Terra",
+      "Anthropic",
+      "Claude",
+      "OpenAI"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Anthropic详解Claude平台安全架构",
+            "summary": "[[Anthropic]]工程师在Latent Space详解[[Claude]]平台，介绍Opus 5.5发布及模型“大脑”与智能体“手”分离的架构。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/how_anthropic_ships_the_1_llm_in_the_world_safely_separating_the_brain_from_the_hands/",
+            "title_original": "How Anthropic ships the #1 LLM in the World safely: Separating the Brain from the Hands",
+            "excerpt": "Katelyn Lesse and Angela Jiang join Latent Space to explain the engineering behind the Claude Platform: launching Opus 5.5, separating the model’s “brain” from the agent’s “hands,” scaling APIs, and building reliable managed agents. A new introduction ...",
+            "is_foreign": true
+          },
+          {
+            "title": "喜马拉雅山离线运行AI编程智能体",
+            "summary": "Latent Space介绍使用[[OpenCode]]、[[Ollama]]和[[Qwen]]在离线环境搭建并运行编程智能体的方法。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/offline-coding/",
+            "title_original": "Coding From the Himalayas With an Offline AI Agent",
+            "excerpt": "How to set up and run an offline coding agent using OpenCode, Ollama and Qwen.",
+            "is_foreign": true
+          },
+          {
+            "title": "百度Unlimited-OCR-2登HuggingFace热门榜",
+            "summary": "[[百度]]的[[Unlimited-OCR-2]]登上HuggingFace热门模型榜，trendingScore 217，likes 228，下载513。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/baidu/Unlimited-OCR-2",
+            "title_original": "baidu/Unlimited-OCR-2 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 217）**新发布**。类型 image-text-to-text。likes 228，下载 513。标签：transformers、safetensors、unlimited-ocr、feature-extraction、baidu、vision-language。",
+            "is_foreign": true
+          },
+          {
+            "title": "OpenAI将编程工具改造为常驻助手dots",
+            "summary": "[[OpenAI]]将编程工具改造为常驻个人助手[[dots]]，负责人Alexander Embiricos称不愿与别人的AI智能体开会。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/10/26/how-openai-turned-its-coding-tools-into-dots-an-always-on-personal-assistant/",
+            "title_original": "How OpenAI turned its coding tools into dots, an always-on personal assistant",
+            "excerpt": "Alexander Embiricos, the OpenAI executive responsible for dots, never wants to have a meeting with someone else's AI agent.",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic用Claude加速药物开发获早期进展",
+            "summary": "[[Anthropic]]发布研究称，利用[[Claude]]加速药物开发已取得早期进展，Hacker News获83点、74条评论。",
+            "source": "Hacker News",
+            "url": "https://www.anthropic.com/research/early-progress-drug-development",
+            "title_original": "Early progress on accelerating drug development with Claude",
+            "excerpt": "Article URL: https://www.anthropic.com/research/early-progress-drug-development \n Comments URL: https://news.ycombinator.com/item?id=50265609 \n Points: 83 \n # Comments: 74",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "谷歌发布Genie 4世界模型",
+            "summary": "[[谷歌]]DeepMind发布[[Genie 4]]世界模型，支持原生音频与实时自然语言改写，用户可用指令实时“导演”模拟世界。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/018/718.htm",
+            "title_original": "实时“导演”世界：皮查伊称 Genie 4 是谷歌迄今最逼真、最具互动性的 AI 世界模型",
+            "excerpt": "IT之家 10 月 28 日消息，谷歌 DeepMind 团队昨日（10 月 27 日）发布博文，宣布推出 Genie 4 世界模型，定位为“重大研究里程碑”， 在原生音频、实时自然语言改写、更真实的物理与人物等方面实现核心突破，把世界模型从一次性生成画面升级为可实时操控、可听、可推理的动态模拟世界。 对于用户而言，谷歌 Genie 4 世界模型最大的亮点在于实时“导演”世界。在模拟运行中，用户可以用自然语言文本指令改变世界，例如改天气、移动镜头、加入新角色或物体。 有别于主流 AI 重新生成一段视频，Genie 4 会结合当前场景上下文执行动态变化，更像一个“可交互的虚拟沙盒”或“AI 导演系统”。用户可以设定一个事件，然后观察…",
+            "is_foreign": false
+          },
+          {
+            "title": "OpenAI低价发布GPT-6.1 Terra",
+            "summary": "[[OpenAI]]以低价发布[[GPT-6.1 Terra]]，定位为Agent时代的“打工模型”，主打大模型性价比。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1686080?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "刚刚，GPT-6.1 Terra 骨折价发布，Agent 时代的打工模型来了",
+            "excerpt": "OpenAI 又卷起了大模型的性价比。 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          },
+          {
+            "title": "Hi3D开源模型与创作Agent布局AI 3D",
+            "summary": "[[Hi3D]]以开源模型加创作Agent布局AI 3D下半场，针对生成结果结构断裂、网格不可编辑等生产流程问题。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/372939",
+            "title_original": "左手开源模型，右手创作 Agent，Hi3D 的 AI 3D 下半场",
+            "excerpt": "作者｜Cynthia \n 编辑｜郑玄 \n 2026 年的 AI 3D 赛道，正站在一个微妙的分水岭上。 \n 一级市场的热度仍在攀升，新模型、新创业公司层出不穷，单图生 3D 的正面渲染效果几乎已经做到了以假乱真。 \n 但剥开炫目的 Demo 外壳：绝大多数生成结果依然停留在「转台展示」阶段：一个精致的角色或机械模型，在灯光下缓缓旋转，鳞片、衣褶和金属刻纹栩栩如生；可这些细节一旦进入游戏引擎装配、工业仿真以及 3D 打印的真实生产流程就立刻原形毕现：结构断裂、背面崩坏、细节粘连、网格不可编辑等问题开始集中爆发，大量人工修补成本吞噬了 AI 带来的效率红利。 \n 正面视图保真度不等于 3D 质量成为新的行业共识。AI 3D 的竞赛，也…",
+            "is_foreign": false
+          },
+          {
+            "title": "TypeSafe AI发布决策模型Jev",
+            "summary": "[[TypeSafe AI]]发布[[Jev]]，该模型只返回类型化概率而非文本，用于决策场景。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/3o7gwgKJt2SbH8AhdpkU?utm_source=rss&utm_medium=article",
+            "title_original": "TypeSafe AI发布Jev：一种只返回类型化概率而非文本的决策模型",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "Anthropic解决Kimi额度消耗问题",
+            "summary": "[[Anthropic]]找到[[Kimi]]额度消耗过快的解决办法，指出大半额度用于子Agent的无效会议。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8183235.html",
+            "title_original": "Kimi额度的问题，Anthropic找到了解决办法",
+            "excerpt": "你的额度为什么不经用？大半都在给子Agent“开无效会议”",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "rddmwmddr/android-ad-cleaner",
+            "url": "https://github.com/rddmwmddr/android-ad-cleaner",
+            "intro": "给国产安卓手机一键关掉系统广告和营销推送，不用 root，还能还原。",
+            "features": [
+              "按渠道勾选要关的营销通知",
+              "自动检测手机型号和广告组件",
+              "每一步可还原，系统更新不受影响",
+              "支持 AI 智能体一键执行"
+            ],
+            "guide": "在电脑上下载对应系统的桌面客户端，用数据线连上手机并开启 USB 调试，按界面提示点几下即可，不需要装 Python。",
+            "steps": [
+              "从 Releases 下载对应系统的桌面客户端",
+              "用数据线连接手机并开启 USB 调试",
+              "打开客户端检测手机和广告组件",
+              "勾选要关闭的项目后执行"
+            ],
+            "install": "",
+            "summary": "给国产安卓手机一键关掉系统广告和营销推送，不用 root，还能还原。",
+            "source": "GitHub",
+            "stars": "3240",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。",
+            "is_foreign": true
+          },
+          {
+            "title": "KnifeLemon/Filee",
+            "url": "https://github.com/KnifeLemon/Filee",
+            "intro": "拖拽文件就能离线转换格式的工具，不用上传、不用装 Office。",
+            "features": [
+              "支持 263 种格式互转",
+              "拖到光标处松手即转换",
+              "全程离线，文件不上传",
+              "结果保存在原文件旁边"
+            ],
+            "guide": "从 Releases 下载安装包，Windows 双击 exe 安装，macOS 解压后运行 install.sh；装好后按住 Ctrl 拖文件到弹出的格式圈即可。",
+            "steps": [
+              "从 Releases 下载对应系统安装包",
+              "Windows 运行 Setup.exe 安装",
+              "macOS 解压后运行 ./install.sh",
+              "按住 Ctrl 拖文件到格式圈转换"
+            ],
+            "install": "",
+            "summary": "拖拽文件就能离线转换格式的工具，不用上传、不用装 Office。",
+            "source": "GitHub",
+            "stars": "14711",
+            "language": "C#",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Free, open-source file converter. Convert 263 formats offline by drag & drop — images, PDF, Word, Excel, PowerPoint, HWP/HWPX, video, audio, e-books and archives. No upload, no Office needed.",
+            "is_foreign": true
+          },
+          {
+            "title": "Wox-launcher/Wox",
+            "url": "https://github.com/Wox-launcher/Wox",
+            "intro": "一个键盘呼出的桌面启动器，快速打开应用、找文件、执行操作。",
+            "features": [
+              "键盘输入即可打开应用和文件",
+              "支持插件扩展功能",
+              "常驻后台占用约 150MB 内存",
+              "Windows、macOS、Linux 都能用"
+            ],
+            "guide": "用系统包管理器安装，比如 macOS 用 Homebrew、Windows 用 Winget，装好后用快捷键呼出输入框即可使用。",
+            "steps": [
+              "macOS 执行 brew install --cask wox",
+              "Windows 执行 winget install -e --id Wox.Wox",
+              "用快捷键呼出输入框开始使用"
+            ],
+            "install": "brew install --cask wox",
+            "summary": "一个键盘呼出的桌面启动器，快速打开应用、找文件、执行操作。",
+            "source": "GitHub",
+            "stars": "27576",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "A cross-platform launcher that simply works",
+            "is_foreign": true
+          },
+          {
+            "title": "JuliusBrussee/caveman",
+            "url": "https://github.com/JuliusBrussee/caveman",
+            "intro": "让 AI 编程助手说话更简短，从而少花 token、少花钱。",
+            "features": [
+              "让 AI 回答更短但结论不变",
+              "减少输入 token 消耗",
+              "提供多种精简模式可选",
+              "可接入常见编程助手"
+            ],
+            "guide": "README 未给出具体安装命令，需参考官网文档接入你的 AI 编程助手；使用前要已有可用的 AI 助手账号。",
+            "steps": [],
+            "install": "",
+            "summary": "让 AI 编程助手说话更简短，从而少花 token、少花钱。",
+            "source": "GitHub",
+            "stars": "115538",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+            "is_foreign": true
+          },
+          {
+            "title": "supabase/supabase",
+            "url": "https://github.com/supabase/supabase",
+            "intro": "开源的建站后端平台，提供数据库、登录、文件存储等现成能力。",
+            "features": [
+              "托管式数据库，开箱即用",
+              "自带用户登录和权限管理",
+              "自动生成接口供前端调用",
+              "支持文件存储和 AI 向量检索"
+            ],
+            "guide": "可直接用官方托管服务注册使用，也可自行部署；README 未给出具体安装命令，建议先看官网文档。",
+            "steps": [
+              "访问 supabase.com 注册账号",
+              "按文档创建项目并获取密钥"
+            ],
+            "install": "",
+            "summary": "开源的建站后端平台，提供数据库、登录、文件存储等现成能力。",
+            "source": "GitHub",
+            "stars": "114180",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从手机去广告到文件转换、启动器、省 AI 费用和建站后端，都是省时省钱的实用工具。"
+      }
+    ]
+  }
+}

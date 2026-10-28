@@ -1,5 +1,5 @@
 {
-  "classic_offset": 24,
+  "classic_offset": 26,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-10-15T23:55:35.773317+00:00",
   "recent_trending": [
-    "lissy93/dashy",
-    "ARahim3/DigUp",
-    "shader-effects-inc/shaders",
     "plotly/dash",
     "jhaizhou-ops/d2r-mobile",
     "Louis-CFM/coucou",
@@ -174,12 +171,15 @@
     "espanso/espanso",
     "Jakeschincariol/day-trader-skill",
     "storytold/lightcraft",
-    "Flow-Launcher/Flow.Launcher"
+    "Flow-Launcher/Flow.Launcher",
+    "rddmwmddr/android-ad-cleaner",
+    "KnifeLemon/Filee",
+    "Wox-launcher/Wox"
   ],
-  "last_run_date": "2026-10-26",
+  "last_run_date": "2026-10-28",
   "last_classic": [
-    "Graphify-Labs/graphify",
-    "shadcn-ui/ui"
+    "JuliusBrussee/caveman",
+    "supabase/supabase"
   ],
-  "updated_at": "2026-10-26T23:55:37.736542+00:00"
+  "updated_at": "2026-10-28T00:01:00.437360+00:00"
 }
