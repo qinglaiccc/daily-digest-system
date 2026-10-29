@@ -1,0 +1,308 @@
+{
+  "date": "2026-10-30",
+  "generated_at": "2026-10-29T23:55:47.317240+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 304,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-30",
+    "digest": "谷歌发布Gemini 4 Carbon与文件编辑功能，苹果推出首款触屏MacBook Pro，DoorDash 170亿美元收购Instacart。",
+    "keywords": [
+      "Gemini",
+      "苹果",
+      "DoorDash",
+      "Instacart",
+      "深兰科技"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "YC实验室在游戏中测试AI智能体集群",
+            "summary": "[[Y Combinator]]实验室在《我的世界》和《Mindustry》中运行AI智能体集群实验，相关项目获86点关注。",
+            "source": "Hacker News",
+            "url": "https://labs.ycombinator.com/projects/games/index.html",
+            "title_original": "We ran AI agent swarms in Minecraft and Mindustry",
+            "excerpt": "Article URL: https://labs.ycombinator.com/projects/games/index.html \n Comments URL: https://news.ycombinator.com/item?id=50296486 \n Points: 86 \n # Comments: 34",
+            "is_foreign": true
+          },
+          {
+            "title": "Wabi融资5500万美元，估值12.5亿美元",
+            "summary": "AI应用[[Wabi]]自称个人智能体，完成5500万美元融资，估值达12.5亿美元。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round/",
+            "title_original": "Wabi, the AI agent that builds mini apps, now valued at $1.25B after latest round",
+            "excerpt": "On Thursday, AI app Wabi, now describing itself as a \"personal agent,\" said it has raised $55 million at a $1.25 billion valuation.",
+            "is_foreign": true
+          },
+          {
+            "title": "MIT科技评论：需实时监控AI智能体行为",
+            "summary": "[[MIT Technology Review]]刊文，来自[[Partnership on AI]]的专家呼吁实时监控AI智能体的行动。",
+            "source": "MIT Technology Review",
+            "url": "https://www.technologyreview.com/2026/10/29/1147830/the-download-monitoring-ai-agents-climate-feedback-loops/",
+            "title_original": "The Download: AI agent tracking and climate feedback loops",
+            "excerpt": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Opinion: We urgently need to monitor AI agents’ actions in real time —Madhulika Srikumar and Claire Leibowicz from the Partnership on AI, a nonprofit advancing best practices in AI…",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini聊天内可直接生成编辑文档",
+            "summary": "[[Google]]为所有[[Gemini]]用户开放文件编辑功能，可在聊天中生成、预览和编辑Docs、Sheets、PDF及代码文件。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs",
+            "title_original": "You can generate and edit Google Docs files directly in Gemini chats now",
+            "excerpt": "Now you can generate, preview, and edit PDFs, Google Docs, Google Sheets, slide decks, Markdown files, TXT files, and code directly within Google Gemini. The new file editing capabilities are available starting today for all Gemini users, and while PDF previews/editing works on both the web and mobile, all other file…",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌发布Gemini 4 Carbon模型",
+            "summary": "[[Google]]发布[[Gemini 4 Carbon]]模型，称在AI编程和网络安全基准测试中取得领先分数。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2300677/google-gemini-carbon-promises-significant-leap-in-ai-coding-and-cybersecurity/",
+            "title_original": "Google's Gemini 4 Carbon promises 'significant leap' in AI coding and cybersecurity",
+            "excerpt": "Google's latest Gemini 4 Carbon AI model boasts top benchmark scores in areas like cybersecurity and coding.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "深兰科技联合华为发布AI工作手机",
+            "summary": "[[深兰科技]]联合[[华为]]发布全球首款大模型智能体工作手机[[Wowoker]]，面向工作场景。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8186683.html",
+            "title_original": "深兰科技联合华为，发布全球首款大模型智能体工作手机 Wowoker",
+            "excerpt": "10月29日，深兰科技举办新品发布会，正式推出全球首款大模型 AI 智能体工作手机 Wowoker。这是继豆包发布AI手机后，首家面向工作场景推出AI手机的科技企业。",
+            "is_foreign": false
+          },
+          {
+            "title": "DiffuSpace开源Clover扩散语言模型",
+            "summary": "[[DiffuSpace]]发布并开源[[Clover-35B-A3B-Preview]]扩散语言模型，采用MoE架构，称性能超同规模自回归模型。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/019/783.htm",
+            "title_original": "DiffuSpace 推出 Clover-35B-A3B-Preview 扩散语言模型，兼顾性能与速度",
+            "excerpt": "IT之家 10 月 29 日消息，人工智能实验室扩散智能 (DiffuSpace) 昨日发布了其 Clover（三叶草）系列模型家族的首个成员：Clover-35B-A3B-Preview，并以 Apache 许可开源。 Clover-35B-A3B-Preview 是一款采用 MoE 架构的扩散语言模型。与传统自回归模型不同的是，其具备“全局思维”，通过多轮迭代实现结果的从模糊到具体。 DiffuSpace 表示，Clover-35B-A3B-Preview 的诞生证明 扩散语言模型能在更大的参数尺度下与自回归模型竞争甚至略胜一筹 ， 同时保持更快生成速度 。 该模型在多项基准测试中性能超过同规模的自回归模型 Qwen3.6-3…",
+            "is_foreign": false
+          },
+          {
+            "title": "派早报：苹果触控MacBook Pro、华为新品",
+            "summary": "[[少数派]]早报汇总[[Apple]]推出触控款MacBook Pro、[[华为]]发布多款新品及谷歌推出世界模型Genie 4等消息。",
+            "source": "少数派",
+            "url": "https://sspai.com/post/117750",
+            "title_original": "派早报：Apple 推出触控款 MacBook Pro、华为发布多款新品等",
+            "excerpt": "Google 推出世界模型 Genie 4、索尼推出手机主摄图像传感器 LYTIA 720 等。 查看全文",
+            "is_foreign": false
+          },
+          {
+            "title": "亚马逊云科技开源智能体决策器与安全箱",
+            "summary": "[[亚马逊云科技]]开源智能体“决策器”和“安全箱”，但并发与冷启动问题仍待解决。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/YmgmEh686wTClmj3PY8o?utm_source=rss&utm_medium=article",
+            "title_original": "亚马逊云科技开源智能体“决策器”和“安全箱”，但并发与冷启动仍待解决",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "苹果发触屏笔记本，宇树净利增270%",
+            "summary": "[[苹果]]发布首款触屏[[MacBook Pro]]，起售价22999元；[[宇树]]首发财报净利增270%；DeepSeek V5代码现身。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/373085",
+            "title_original": "苹果发触屏笔记本，最高 11 万元；DeepSeek V5 模型代码现身；宇树首发财报，净利增 270%",
+            "excerpt": "苹果发布首款触屏 MacBook Pro，顶配超 11 万 元 \n \n 北京时间 10 月 29 日，苹果发布全新 MacBook Pro，首次为 Mac 引入屏幕触控和灵动岛，并采用双层串联 OLED 技术的 PROLED XDR 显示屏。 \n 新机提供 14 英寸和 16 英寸两种版本，搭载 M5 Pro 或 M5 Max 芯片。根据苹果中国区发布信息，新机将于 10 月 30 日开启预购，11 月 6 日正式发售，起售价 22999 元。 \n 在交互方面，用户可直接触摸屏幕滚动网页、缩放照片、拖放幻灯片，以及操作 3D 模型或演奏虚拟乐器。苹果表示，触控传感器直接内嵌于显示面板，macOS 可将触控输入转换为点按，让许多现有…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "亚马逊：4亿客户用Alexa购物",
+            "summary": "[[亚马逊]]称过去12个月超4亿客户使用[[Alexa]]购物，CEO[[Andy Jassy]]表示这类客户支出高出50%。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/technology/amazon-says-more-than-400m-customers-have-used-alexa-for-shopping-in-the-last-12-months/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Amazon says more than 400M customers have used Alexa for Shopping in the last 12 months",
+            "excerpt": "Customers who use Alexa for Shopping are spending 50% more than those who don’t, Amazon CEO Andy Jassy said during the earnings call on Thursday.",
+            "is_foreign": true
+          },
+          {
+            "title": "DoorDash以170亿美元收购Instacart",
+            "summary": "[[DoorDash]]宣布以170亿美元收购[[Instacart]]，标志零售配送行业两大玩家合并。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/doordash-buys-instacart-delivery-seventeen-billion/873151/",
+            "title_original": "DoorDash to buy Instacart for $17B",
+            "excerpt": "The deal marks the consolidation of two major players in the retail delivery industry.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "anhao/ai-pose-gallery-zh",
+            "url": "https://github.com/anhao/ai-pose-gallery-zh",
+            "intro": "一个中文版 AI 绘画姿势参考图库，把日文原站的姿势素材全部翻译并打包，方便找参考图。",
+            "features": [
+              "收录 1439 组、2878 张姿势参考图",
+              "日文分类和姿势名全部翻译成中文",
+              "可按体系、分类、视角筛选图片",
+              "支持灯箱浏览和下载原图"
+            ],
+            "guide": "这是一个纯静态网页，打开在线演示就能用；想自己部署的话，把仓库文件放到任意静态网站托管服务上即可，不需要安装任何软件。",
+            "steps": [
+              "访问在线演示站 ai-pose-gallery.anhao.app 直接使用",
+              "想自建则下载仓库全部文件",
+              "上传到 Cloudflare Pages 等静态托管服务"
+            ],
+            "install": "",
+            "summary": "一个中文版 AI 绘画姿势参考图库，把日文原站的姿势素材全部翻译并打包，方便找参考图。",
+            "source": "GitHub",
+            "stars": "3120",
+            "language": "HTML",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊",
+            "is_foreign": true
+          },
+          {
+            "title": "storytold/effectcraft",
+            "url": "https://github.com/storytold/effectcraft",
+            "intro": "一个免费开源的动效和视频合成软件，用来做动态标题、动画和视觉特效。",
+            "features": [
+              "用图层和关键帧制作动画",
+              "内置 308 种特效可直接套用",
+              "支持 3D 摄像机和灯光",
+              "可导出成品，支持渲染队列"
+            ],
+            "guide": "提供 macOS、Windows、Linux 安装包，也有网页版；去官网下载对应版本安装即可，不需要自己配置开发环境。",
+            "steps": [
+              "打开官网 getartcraft.com/apps/effectcraft",
+              "下载对应系统的安装包",
+              "安装后打开软件新建合成开始制作"
+            ],
+            "install": "",
+            "summary": "一个免费开源的动效和视频合成软件，用来做动态标题、动画和视觉特效。",
+            "source": "GitHub",
+            "stars": "8161",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "EffectCraft: An open-source motion graphics and compositing tool written by scratch in pure Rust",
+            "is_foreign": true
+          },
+          {
+            "title": "plotly/dash",
+            "url": "https://github.com/plotly/dash",
+            "intro": "用 Python 写数据看板和交互式网页应用的工具，不用学 JavaScript 也能做出图表页面。",
+            "features": [
+              "用 Python 代码生成交互式图表",
+              "下拉框、滑块等控件直接连数据",
+              "支持约 50 种图表类型含地图",
+              "可自由调整页面外观样式"
+            ],
+            "guide": "需要先装 Python，再用 pip 安装 Dash 后写脚本运行；官方教程称 5 分钟内能做出第一个应用。",
+            "steps": [
+              "先安装 Python 环境",
+              "用 pip 安装 Dash 库",
+              "按官方教程写第一个应用并运行"
+            ],
+            "install": "",
+            "summary": "用 Python 写数据看板和交互式网页应用的工具，不用学 JavaScript 也能做出图表页面。",
+            "source": "GitHub",
+            "stars": "24474",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Data Apps & Dashboards for Python. No JavaScript Required.",
+            "is_foreign": true
+          },
+          {
+            "title": "thedotmack/claude-mem",
+            "url": "https://github.com/thedotmack/claude-mem",
+            "intro": "给 AI 编程助手加一个长期记忆，让它下次接着上次的进度干活，不用每次从头解释。",
+            "features": [
+              "自动记录 AI 助手每次会话做了什么",
+              "用 AI 把记录压缩成摘要保存",
+              "下次会话自动带上相关背景",
+              "支持 Claude Code 等多种助手"
+            ],
+            "guide": "需要先有 Node 环境，然后用 npx 命令安装；安装时需指定你用的 AI 助手类型，例如 Grok Bot。",
+            "steps": [
+              "先安装 Node.js 环境",
+              "运行 npx claude-mem install --ide grok-bot",
+              "按提示完成配置后重启助手"
+            ],
+            "install": "npx claude-mem install --ide grok-bot",
+            "summary": "给 AI 编程助手加一个长期记忆，让它下次接着上次的进度干活，不用每次从头解释。",
+            "source": "GitHub",
+            "stars": "104752",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw,…",
+            "is_foreign": true
+          },
+          {
+            "title": "hacksider/Deep-Live-Cam",
+            "url": "https://github.com/hacksider/Deep-Live-Cam",
+            "intro": "只要一张照片，就能实时把视频或摄像头里的人脸换成另一张脸。",
+            "features": [
+              "单张照片即可完成换脸",
+              "支持实时摄像头换脸",
+              "可对已有视频一键换脸",
+              "内置检查拦截不当内容"
+            ],
+            "guide": "需要本地安装 Python 环境并下载项目依赖后运行；README 强调使用真人面孔须获得本人同意，并标注为换脸内容。",
+            "steps": [
+              "先安装 Python 环境",
+              "下载项目代码并安装依赖",
+              "准备一张人脸照片后启动程序"
+            ],
+            "install": "",
+            "summary": "只要一张照片，就能实时把视频或摄像头里的人脸换成另一张脸。",
+            "source": "GitHub",
+            "stars": "97389",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "real time face swap and one-click video deepfake with only a single image",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从 AI 绘画参考到视频换脸，再到给 AI 助手装上长期记忆，这批工具都在帮人省下重复劳动。"
+      }
+    ]
+  }
+}

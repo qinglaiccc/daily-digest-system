@@ -1,5 +1,5 @@
 {
-  "classic_offset": 28,
+  "classic_offset": 30,
   "classic_cycle": 0,
   "classic_pool": [
     "openclaw/openclaw",
@@ -135,9 +135,6 @@
   ],
   "classic_pool_built": "2026-10-15T23:55:35.773317+00:00",
   "recent_trending": [
-    "super-productivity/super-productivity",
-    "onehumanbeing/esp32-iphone-agent",
-    "rehan-remade/universal-modder",
     "wavetermdev/waveterm",
     "Arekejoker/qwen21-nsfw-pose-skill",
     "jaredpalmer/kev",
@@ -174,12 +171,15 @@
     "Wox-launcher/Wox",
     "designfuchen/word-atlas",
     "storytold/vectorcraft",
-    "lissy93/dashy"
+    "lissy93/dashy",
+    "anhao/ai-pose-gallery-zh",
+    "storytold/effectcraft",
+    "plotly/dash"
   ],
-  "last_run_date": "2026-10-28",
+  "last_run_date": "2026-10-29",
   "last_classic": [
-    "google-gemini/gemini-cli",
-    "pytorch/pytorch"
+    "thedotmack/claude-mem",
+    "hacksider/Deep-Live-Cam"
   ],
-  "updated_at": "2026-10-28T23:55:35.569963+00:00"
+  "updated_at": "2026-10-29T23:55:32.947107+00:00"
 }
