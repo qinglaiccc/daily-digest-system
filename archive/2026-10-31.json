@@ -1,0 +1,312 @@
+{
+  "date": "2026-10-31",
+  "generated_at": "2026-10-30T23:56:02.540606+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 259,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-10-31",
+    "digest": "苹果智能入华接入阿里千问，硅基流动港股IPO获备案，英伟达AI代码优化Kimi K3",
+    "keywords": [
+      "Apple",
+      "千问",
+      "硅基流动",
+      "英伟达",
+      "Kimi"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "科技极客万圣节装扮推荐",
+            "summary": "[[TechCrunch]]发布科技极客万圣节装扮指南，建议扮成AI智能体图标、PHP漏洞等形象。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/10/30/last-minute-halloween-costumes-for-tech-nerds/",
+            "title_original": "Last-minute Halloween costumes for tech nerds",
+            "excerpt": "No Halloween costume? Just be a deceptively cute AI agent icon, a PHP vulnerability, or sleepy time Bryan Johnson.",
+            "is_foreign": true
+          },
+          {
+            "title": "Zest推出AI餐厅预订代理",
+            "summary": "[[Zest]]推出AI代理，可综合多人偏好、投票选餐厅并通过短信完成预订。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/10/30/zests-new-ai-agent-finds-restaurants-and-books-reservations-over-text/",
+            "title_original": "Zest’s new AI agent finds restaurants and books reservations over text",
+            "excerpt": "Can't agree on where to eat? Zest's AI concierge can combine everyone's tastes, put restaurant options to a vote, and make the reservation.",
+            "is_foreign": true
+          },
+          {
+            "title": "AIE CODE编程代理大会回顾",
+            "summary": "[[Latent Space]]回顾AIE CODE编程代理大会，提及[[Mistral]]开放权重模型发布与前沿监控。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/ainews-building-aie-code-the-top-coding-agent-conference/",
+            "title_original": "[AINews] Building AIE CODE: The top Coding Agent Conference",
+            "excerpt": "Mistral’s open-weight release, frontier monitoring, and the day’s AI Twitter and Reddit recaps.",
+            "is_foreign": true
+          },
+          {
+            "title": "NES模拟器嵌入Qwen权重",
+            "summary": "开发者[[Drew Breunig]]将NES 6502 CPU模拟器嵌入[[Qwen3.5-4B]]权重，可缓慢运行超级马里奥。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Oct/30/nesformer/",
+            "title_original": "dbreunig/nesformer",
+            "excerpt": "dbreunig/nesformer \nInspired by qwenputer by Divyansh Agrawal, Drew Breunig baked a working emulator for a Nintendo Entertainment System 6502 CPU into the weights of Qwen3.5-4B. You can now play NES ROMs such as Super Mario Bros (very slowly) running inside Qwen! \n In a comment on Hacker News Drew reveals the Opus 5.5…",
+            "is_foreign": true
+          },
+          {
+            "title": "约1GB Qwen权重运行任天堂",
+            "summary": "[[dbreunig]]在GitHub发布nesformer项目，用约1GB [[Qwen]]权重实现可运行的NES模拟器。",
+            "source": "Hacker News",
+            "url": "https://github.com/dbreunig/nesformer",
+            "title_original": "Show HN: A working Nintendo in ~1GB of Qwen weights",
+            "excerpt": "Article URL: https://github.com/dbreunig/nesformer \n Comments URL: https://news.ycombinator.com/item?id=50306442 \n Points: 169 \n # Comments: 105",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "苹果智能入华接入阿里千问",
+            "summary": "[[苹果]]宣布Apple智能入华，Siri、写作工具及视觉智能接入[[阿里巴巴]]千问，11月4日测试。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/020/392.htm",
+            "title_original": "Apple 智能官宣入华：阿里千问接入苹果生态，可帮用户写文案、读文档、识图像",
+            "excerpt": "IT之家 10 月 31 日消息，苹果公司今天（10 月 31 日）发布公告，宣布将面向中国 iPhone 18 Pro 等机型用户，于 11 月 4 日开放测试，并于 12 月推出的 iOS 27.3 更新，在国内上线首批 Apple 智能（Apple Intelligence）核心功能。 IT之家援引官方新闻稿介绍， 苹果公司明确在 Siri、写作工具及视觉智能这 3 类 Apple 智能体验中 ，使用阿里巴巴的千问，包括文本与图像理解相关功能。 在 Siri 方面，苹果公司表示在“处理特定请求”时接入千问，利用其知识协助用户。用户还可以针对照片以及包含 PDF 与演示文稿的文档进行提问。 在账号体验方面，苹果官网显示：“用户…",
+            "is_foreign": false
+          },
+          {
+            "title": "硅基流动港股上市申请获备案",
+            "summary": "[[硅基流动]]港股上市申请获证监会备案，注册用户超1000万，年内融资近29亿元。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/020/369.htm",
+            "title_original": "词元工厂硅基流动港股上市申请获证监会备案接收：注册用户超千万，年内融资近 29 亿元",
+            "excerpt": "IT之家 10 月 30 日消息，硅基流动在港股发行上市申请获中国证监会备案受理。据弗若斯特沙利文资料，该公司是中国最大的独立生态词元（Token）供应商，注册用户超过 1000 万名，服务企业客户超过 1.3 万家。 IT之家注：硅基流动成立于 2023 年，定位为独立生态词元供应平台，不自建大模型，也不直接出售算力。 其业务逻辑是将英伟达、华为昇腾、沐曦、摩尔线程等厂商的异构芯片通过自研推理引擎统一调度，让 DeepSeek、Qwen、Kimi 等主流模型在池化算力上运行，再以 Token 为单位对外提供服务。截至 2026 年 6 月，平台累计支持 170 余款 AI 模型，适配 10 余款芯片。 硅基流动与国产芯片的绑定是…",
+            "is_foreign": false
+          },
+          {
+            "title": "英伟达开源视频增强方案",
+            "summary": "[[英伟达]]与[[MIT]]团队在Hugging Face发布基于[[MiniMax H3]]的视频增强模型权重，支持4K重生成。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/10/506743.html",
+            "title_original": "英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成",
+            "excerpt": "英伟达与麻省理工学院团队，在 Hugging Face 发布了视频增强项目 Open-H3-Regenerate-2K 的模型权重",
+            "is_foreign": false
+          },
+          {
+            "title": "英伟达AI代码优化Kimi K3",
+            "summary": "[[英伟达]]工程师用AI写出1.2万行Megakernel，使[[Kimi K3]]提速1.68倍，引发代码审查担忧。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8184634.html",
+            "title_original": "AI写的代码，人类来不及审：英伟达1.2万行代码优化Kimi K3，另开新战场？",
+            "excerpt": "多数报道只关注 Kimi K3 提速 1.68 倍，却忽略 vLLM 博客关键警示：AI 生成推理代码已快到人类来不及逐行审查。英伟达工程师借助 AI 写出 1.2 万行 Megakernel，不换硬件就压榨模型性能。算力竞争重心转向软件栈，人机 “人在回路” 范式正被重新定义。",
+            "is_foreign": false
+          },
+          {
+            "title": "谷歌推出EnvHarness框架",
+            "summary": "[[谷歌]]推出[[EnvHarness]]，支持自进化智能体在动态环境中学习。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/FJqN3mFVyN1lMqHOiegs?utm_source=rss&utm_medium=article",
+            "title_original": "谷歌推出 EnvHarness，支持自进化智能体动态环境学习",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "亚马逊CEO强调零售业务重要性",
+            "summary": "[[亚马逊]]CEO[[Andy Jassy]]在Q3财报电话会上强调零售业务进展，称其被低估。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/amazon-ceo-retail-business-important-q3-earnings/873316/",
+            "title_original": "Amazon CEO says retail business is being slept on",
+            "excerpt": "Andy Jassy spoke in depth about AWS and AI during a Q3 earnings call, but reiterated the importance of the company’s store progress.",
+            "is_foreign": true
+          },
+          {
+            "title": "Cotopaxi推限时上新活动",
+            "summary": "[[Cotopaxi]]于11月1日至11日隔日上新，推出“Cotodays”活动为黑五网一预热。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/marketing/cotopaxi-adopts-a-drop-strategy-to-build-buzz-ahead-of-bfcm/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Cotopaxi adopts a drop strategy to build buzz ahead of BFCM",
+            "excerpt": "Cotopaxi is releasing new products every other day, from Nov. 1-11, through a campaign it's calling \"Cotodays.\" It's part of the brand's plan to build awareness ahead of the crowded Black Friday/Cyber Monday period.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "ccch1mneyyy/dsh-Go",
+            "url": "https://github.com/ccch1mneyyy/dsh-Go",
+            "intro": "把 AI 编程助手装进安卓手机，本机跑也能遥控电脑。",
+            "features": [
+              "手机内置 Linux 环境，免 Root 直接跑",
+              "一键切换电脑上的助手接着用",
+              "回复中途可插话，过程自动折叠",
+              "对话生成加密链接，浏览器回放"
+            ],
+            "guide": "从 GitHub Releases 或官网下载 APK 安装，常见手机选 arm64 包；装过旧测试包需先卸载。",
+            "steps": [
+              "从 GitHub Releases 或官网下载最新 APK",
+              "常见手机选择 arm64 安装包",
+              "装过旧测试包需先卸载再安装",
+              "打开 App 按使用指南配置模型"
+            ],
+            "install": "",
+            "summary": "把 AI 编程助手装进安卓手机，本机跑也能遥控电脑。",
+            "source": "GitHub",
+            "stars": "2445",
+            "language": "Dart",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
+            "is_foreign": true
+          },
+          {
+            "title": "rehan-remade/universal-modder",
+            "url": "https://github.com/rehan-remade/universal-modder",
+            "intro": "让 AI 助手帮你给电脑游戏做模组，从找代码到生成素材。",
+            "features": [
+              "自动识别游戏引擎和改造路线",
+              "用 AI 生成美术、3D 和音效素材",
+              "在运行中的游戏里测试模组",
+              "把经验写下来供下次复用"
+            ],
+            "guide": "需先有 Claude Code、Codex 等 AI 编程助手，再按对应命令安装插件；部分素材生成依赖 fal 服务。",
+            "steps": [
+              "先安装 Claude Code 等 AI 编程助手",
+              "在 Claude Code 执行 /plugin marketplace add rehan-remade/universal-modder",
+              "再执行 /plugin install universal-modder@universal-modder",
+              "按提示配置 fal 素材生成服务"
+            ],
+            "install": "/plugin marketplace add rehan-remade/universal-modder",
+            "summary": "让 AI 助手帮你给电脑游戏做模组，从找代码到生成素材。",
+            "source": "GitHub",
+            "stars": "9246",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
+            "is_foreign": true
+          },
+          {
+            "title": "super-productivity/super-productivity",
+            "url": "https://github.com/super-productivity/super-productivity",
+            "intro": "把待办清单、计时和日程规划合在一起的专注工作应用。",
+            "features": [
+              "任务分项目标签，可配色管理",
+              "日程时间线对照日历安排一天",
+              "看板与四象限视图自由排序",
+              "计时统计并导出工时表"
+            ],
+            "guide": "可直接用网页版，也可从官网下载各平台安装包；数据存在本地，离线也能用。",
+            "steps": [
+              "打开官网网页版或下载对应平台安装包",
+              "安装后新建项目并添加任务",
+              "用日程时间线安排当天任务",
+              "开启计时统计生成工时表"
+            ],
+            "install": "",
+            "summary": "把待办清单、计时和日程规划合在一起的专注工作应用。",
+            "source": "GitHub",
+            "stars": "23289",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Super Productivity is an advanced todo list app with integrated Timeboxing and time tracking capabilities. It also comes with integrations for Jira, GitLab, GitHub and Open Project.",
+            "is_foreign": true
+          },
+          {
+            "title": "morluto/rea",
+            "url": "https://github.com/morluto/rea",
+            "intro": "让 AI 助手帮你拆解软件，看清功能在底层是怎么实现的。",
+            "features": [
+              "分析程序而不需要源代码",
+              "覆盖桌面程序、网页和安装包",
+              "结论附带证据和局限说明",
+              "分析全程在本机完成"
+            ],
+            "guide": "需要 Node 环境，运行一条命令完成初始化，之后在终端或 AI 助手里调用。",
+            "steps": [
+              "先安装 Node.js 运行环境",
+              "执行 npx rea-agents setup 完成初始化",
+              "在终端或 AI 助手中调用分析功能"
+            ],
+            "install": "npx rea-agents setup",
+            "summary": "让 AI 助手帮你拆解软件，看清功能在底层是怎么实现的。",
+            "source": "GitHub",
+            "stars": "412252",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+            "is_foreign": true
+          },
+          {
+            "title": "openclaw/openclaw",
+            "url": "https://github.com/openclaw/openclaw",
+            "intro": "装在自己电脑上的 AI 助手，能在你常用的聊天软件里干活。",
+            "features": [
+              "接入 Discord、Telegram 等 20 多个聊天工具",
+              "数据、记忆和密钥都存在自己设备",
+              "模型可随时更换，不锁死一家",
+              "有 macOS、iOS、安卓等原生应用"
+            ],
+            "guide": "在 macOS、Linux 或 Windows 上运行安装脚本，会自动准备 Node 环境；装好后在聊天软件里配置使用。",
+            "steps": [
+              "macOS/Linux/WSL2 执行 curl -fsSL https://openclaw.ai/install.sh | bash",
+              "Windows 用 PowerShell 运行对应安装命令",
+              "按引导完成初始配置",
+              "在常用聊天软件里接入使用"
+            ],
+            "install": "curl -fsSL https://openclaw.ai/install.sh | bash",
+            "summary": "装在自己电脑上的 AI 助手，能在你常用的聊天软件里干活。",
+            "source": "GitHub",
+            "stars": "393474",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 真正动手干活：改游戏、查软件、管任务、随身助手。"
+      }
+    ]
+  }
+}
