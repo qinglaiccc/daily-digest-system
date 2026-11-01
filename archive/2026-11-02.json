@@ -1,0 +1,289 @@
+{
+  "date": "2026-11-02",
+  "generated_at": "2026-11-01T23:55:50.057865+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 214,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-02",
+    "digest": "Anthropic更新Claude限制复刻游戏，DeepSeek公布Super Agent架构，SpaceX三成营收来自Anthropic",
+    "keywords": [
+      "Anthropic",
+      "Claude",
+      "DeepSeek",
+      "SpaceX",
+      "Mistral"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Anthropic更新Claude限制复刻现有游戏",
+            "summary": "[[Anthropic]]更新[[Claude]]，阻止其复刻现有电子游戏，用户仍可用其设计原创或类型游戏。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2303469/anthropic-updates-claude-to-stop-it-from-recreating-existing-video-games/",
+            "title_original": "Anthropic updates Claude to stop it from recreating existing video games",
+            "excerpt": "Users can still lean on Claude to help with designing original or genre games.",
+            "is_foreign": true
+          },
+          {
+            "title": "HackerBooks收录HN提及书籍",
+            "summary": "开发者用[[Claude]] Opus 5.5搭建HackerBooks，收录2007年至今HN评论提及的约1.65万本书。",
+            "source": "Hacker News",
+            "url": "https://hackerbooks.org",
+            "title_original": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
+            "excerpt": "Saw Karpathy's HackerTube and wanted the same thing for books. So I had Claude build one (Opus 5.5). It's ~16.5k books that at least two different HN commenters brought up, from 2007 till now. Each book links back to the comments that mentioned it. Data is downloadable from the about page. To be clear: Claude wrote al…",
+            "is_foreign": true
+          },
+          {
+            "title": "Mistral大模型登HuggingFace热门榜",
+            "summary": "[[Mistral]]的Mistral-Large-4-1T-A52B登上HuggingFace热门模型榜，获1450赞、4576次下载。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+            "title_original": "mistralai/Mistral-Large-4-1T-A52B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 476）类型 image-text-to-text。likes 1450，下载 4576。标签：transformers、mistral_large4、image-text-to-text、vLLM、SGLang、llama.cpp。",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic谈用Claude构建Claude",
+            "summary": "[[Anthropic]]工程师在[[Latent Space]]介绍Opus 5.5、Claude平台及AI智能体工程实践。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/opus55/",
+            "title_original": "How Anthropic ships Claude with Claude: Separating the Brain from the Hands",
+            "excerpt": "Katelyn Lesse and Angela Jiang on Opus 5.5, the Claude Platform, and the engineering behind AI agents.",
+            "is_foreign": true
+          },
+          {
+            "title": "OpenAI或改称数据中心为AI算力园区",
+            "summary": "[[OpenAI]]考虑将数据中心更名为“AI算力园区”，以应对数据中心面临的公众反对。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
+            "title_original": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
+            "excerpt": "Data centers are deeply unpopular. But what if we called them something else?",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "DeepSeek公布Super Agent架构",
+            "summary": "[[DeepSeek]] Harness团队发布技术文章，提出可跨会话保持上下文、并行推进多任务的Super Agent架构。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/373243",
+            "title_original": "DeepSeek 公布 Super Agent 架构；苹果超越英伟达，重回市值第一；传 Meta 与傅利叶打造 Muse 机器人",
+            "excerpt": "​DeepSeek 发布全新 Agent 架构 \n 10 月 31 日晚间，DeepSeek Harness 团队在官方公众号发表技术文章《Super-agent 设计探索：迈向更自主的 Agent 系统》。 \n DeepSeek 表示，模型能力提升催生了新的应用形态，个人助手（Personal Agent）开始集中涌现。然而，现有主流 Agent 设计还难以在多任务和团队协作的规模上支撑这一模式，多任务上限取决于人的注意力。 \n 要突破这些限制，需要打破 Agent 与单次手动会话的绑定，使其成为一个能跨会话保持上下文、同时推进多项复杂任务且互不干扰的连续实体。DeepSeek 把这种 Agent 形态及其系统架构称为 Supe…",
+            "is_foreign": false
+          },
+          {
+            "title": "小鹏小米10月交付量首超5万",
+            "summary": "[[小鹏]]、[[小米]]10月交付量首超5万辆，[[鸿蒙智行]]同比腰斩；阿里与苹果合作将千问集成至Apple智能。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8189217.html",
+            "title_original": "【钛晨报】事关股市，央行、金融监管总局、证监会今日将召开会议；中国国新、中国诚通，各获大行新增千亿级股票回购增持贷款额度；小鹏、小米10月交付量首超5万，鸿蒙智行同比腰斩",
+            "excerpt": "沪深上市公司前三季度净利润超5万亿元，创四年新高；DeepSeek发布全新Agent架构；英伟达展示下一代CPO方案；阿里巴巴与苹果达成合作，将千问集成至Apple智能；载人月球探测工程采用“两次发射、环月对接”方案；央行：11月2日起，每个工作日开展隔夜逆回购操作招标。",
+            "is_foreign": false
+          },
+          {
+            "title": "钢铁智能制造三项国标发布",
+            "summary": "市场监管总局发布钢铁智能制造三项国家标准，覆盖废钢工厂、数字孪生与多基地协同管控。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/020/820.htm",
+            "title_original": "市场监管总局发布钢铁智能制造相关国家标准：破设计口径不一、数据互通难题",
+            "excerpt": "IT之家 11 月 1 日消息，据市场监管总局，为持续提升钢铁行业先进制造水平，市场监管总局日前发布《智能制 造 废 钢智能工厂设计要求》《智能制 造 钢 铁智能工厂数字孪生系统技术要求》《智能制 造 钢 铁工业多基地制造资源协同管控系统技术要求》系列国家标准。该 3 项标准分别锚定 废钢工厂、数字孪生、多基地协同 等关键环节，支撑构建钢铁先进制造技术要求体系。 IT之家从公告获悉，该 3 项标准针对钢铁行业流程长、工序多、界面复杂，以及工厂之间、工序与工序之间长期存在 设计口径不一、系统重复开发、数据难以互通、跨基地资源难以统筹 等问题，提供清晰的解决方案，统一采用分层解耦的架构设计要求，逐层明确相应功能定位与技术边界，让智能体…",
+            "is_foreign": false
+          },
+          {
+            "title": "Jev新成果再引爆开源",
+            "summary": "量子位报道Jev新成果再次引爆开源，称其为“性价比屠夫”。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/506922.html",
+            "title_original": "Jev新成果，再次引爆开源",
+            "excerpt": "再次“性价比屠夫”",
+            "is_foreign": false
+          },
+          {
+            "title": "SpaceX三季度34.5%营收来自Anthropic",
+            "summary": "[[SpaceX]]监管文件显示2026年Q3约34.5%营收来自[[Anthropic]]，协议至2029年最高支付1205亿美元。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1860488.html",
+            "title_original": "SpaceX：2026年Q3约34.5%营收来自Anthropic",
+            "excerpt": "据知情人士消息，SpaceX监管文件显示，2026年第三季度约34.5%的营收来自“客户B”，该客户为Anthropic，其付费贡献已超过美国联邦政府。双方协议规定，Anthropic截至2029年最多向SpaceX支付1205亿美元，2026年12月起每月约31亿美元；Anthropic使用SpaceX孟菲斯数据中心算力，该AI部门现名Super Intelligence，主要提供算力服务，并可在2027年提前90天通知取消相关合同。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "patch-gg/pixelfx",
+            "url": "https://github.com/patch-gg/pixelfx",
+            "intro": "244 个像素风特效小动画，做游戏或网页时直接拿来用，不用自己画。",
+            "features": [
+              "火焰、爆炸、魔法、天气等特效现成可用",
+              "可实时播放、改颜色、左右镜像",
+              "能导出精灵图给任意游戏引擎使用",
+              "附带 AI 技能，帮你按需生成新特效"
+            ],
+            "guide": "打开在线画廊就能预览和调色；想自己生成新特效，需在 Claude Code 等 AI 编程工具里加载它附带的技能。",
+            "steps": [
+              "打开在线画廊 https://patch-gg.github.io/pixelfx/ 预览特效",
+              "挑选特效并调整颜色、镜像方向",
+              "导出精灵图，放进自己的游戏或网页"
+            ],
+            "install": "",
+            "summary": "244 个像素风特效小动画，做游戏或网页时直接拿来用，不用自己画。",
+            "source": "GitHub",
+            "stars": "2540",
+            "language": "JavaScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
+            "is_foreign": true
+          },
+          {
+            "title": "ly05010419/MacNativeGames",
+            "url": "https://github.com/ly05010419/MacNativeGames",
+            "intro": "让正版《塞尔达传说》在苹果电脑和 iPhone 上原生运行的技术实验项目。",
+            "features": [
+              "在苹果芯片设备上直接运行游戏代码",
+              "支持 Mac、iPhone 和 iPad",
+              "不是模拟器，不附带任何游戏内容"
+            ],
+            "guide": "必须自己拥有游戏，并从自己的 Switch 导出游戏文件和密钥，再在电脑上编译出 App；项目本身不含游戏内容，不能直接下载来玩。",
+            "steps": [
+              "确认自己拥有正版游戏和 Switch 主机",
+              "从自己的 Switch 导出游戏文件与密钥",
+              "按仓库说明在电脑上编译出 App",
+              "编译产物仅限自用，不要分享"
+            ],
+            "install": "",
+            "summary": "让正版《塞尔达传说》在苹果电脑和 iPhone 上原生运行的技术实验项目。",
+            "source": "GitHub",
+            "stars": "6774",
+            "language": "C",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Play your own Tears of the Kingdom and Breath of the Wild natively on Apple silicon Mac, iPhone and iPad. Not an emulator: the game's ARM64 code runs directly, NVN rebuilt on Metal. Bring your own game.",
+            "is_foreign": true
+          },
+          {
+            "title": "danielmiessler/LifeOS",
+            "url": "https://github.com/danielmiessler/LifeOS",
+            "intro": "一套让 AI 记住你是谁、想做什么，再帮你把生活和工作推向理想状态的方法。",
+            "features": [
+              "记录你的身份、关注点和目标",
+              "让 AI 带着你的完整背景来帮忙",
+              "覆盖写代码、创业、创作等各类事情"
+            ],
+            "guide": "不需要自己敲命令：把安装提示词粘进 Claude Code、Cursor 等 AI 编程工具，它会读安装页并一步步帮你装好，动手前会先征求同意。",
+            "steps": [
+              "准备一个可用的 AI 编程工具，如 Claude Code",
+              "粘贴提示词：Read https://ourlifeos.ai/install and install LifeOS for me.",
+              "按 AI 的引导逐步确认完成设置"
+            ],
+            "install": "curl -fsSL https://ourlifeos.ai/install.sh | bash",
+            "summary": "一套让 AI 记住你是谁、想做什么，再帮你把生活和工作推向理想状态的方法。",
+            "source": "GitHub",
+            "stars": "19669",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "⛰️ LifeOS — The universal AI Harness designed to move you from Current to Ideal state in both life and work.",
+            "is_foreign": true
+          },
+          {
+            "title": "NousResearch/hermes-agent",
+            "url": "https://github.com/NousResearch/hermes-agent",
+            "intro": "一个会从经验里自己学本事的 AI 助手，能长期记住你并越用越顺手。",
+            "features": [
+              "做完复杂任务后自己总结出新技能",
+              "能翻查过去的对话，跨会话记住你",
+              "可在 Telegram、Discord、Slack 等平台对话",
+              "支持随时切换不同 AI 模型"
+            ],
+            "guide": "需要一台服务器或云主机来跑，装好后可从聊天软件远程指挥；模型可换成 OpenAI、OpenRouter 等，用命令切换即可。",
+            "steps": [
+              "准备一台服务器或云主机",
+              "按仓库说明安装 Hermes Agent",
+              "用 hermes model 选择要用的 AI 模型",
+              "接入 Telegram 等聊天平台开始使用"
+            ],
+            "install": "",
+            "summary": "一个会从经验里自己学本事的 AI 助手，能长期记住你并越用越顺手。",
+            "source": "GitHub",
+            "stars": "259499",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The agent that grows with you",
+            "is_foreign": true
+          },
+          {
+            "title": "n8n-io/n8n",
+            "url": "https://github.com/n8n-io/n8n",
+            "intro": "拖拖拽拽就能把各种软件连起来自动干活，还能接入 AI 的工作流工具。",
+            "features": [
+              "可视化画布搭建自动化流程",
+              "连接 1500 多个外部服务",
+              "可接入 OpenAI、Anthropic 等模型",
+              "需要时能插入 JavaScript、Python 代码"
+            ],
+            "guide": "需要先装 Docker，用一条安装脚本或 Docker 命令在本地跑起来，然后在浏览器打开 localhost:5678 使用；也可以直接用官方云版。",
+            "steps": [
+              "先安装 Docker",
+              "执行 curl -fsSL https://get.n8n.io | sh",
+              "浏览器访问 http://localhost:5678 打开编辑器"
+            ],
+            "install": "curl -fsSL https://get.n8n.io | sh",
+            "summary": "拖拖拽拽就能把各种软件连起来自动干活，还能接入 AI 的工作流工具。",
+            "source": "GitHub",
+            "stars": "209301",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从像素特效到自动化流程，让 AI 和工具真正替人干活"
+      }
+    ]
+  }
+}
