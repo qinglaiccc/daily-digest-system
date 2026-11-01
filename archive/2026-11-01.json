@@ -1,0 +1,298 @@
+{
+  "date": "2026-11-01",
+  "generated_at": "2026-11-01T00:01:12.279047+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 202,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-01",
+    "digest": "苹果国行AI接入千问，DeepSeek完成千亿融资并发布新Agent架构",
+    "keywords": [
+      "DeepSeek",
+      "Apple",
+      "Gemini",
+      "千问",
+      "Claude"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Claude Duet 上线需先加入等待名单",
+            "summary": "[[Claude]] Duet 开始推送，用户需先加入等待名单方可使用。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2300253/how-to-use-claude-duet/",
+            "title_original": "How to use Claude Duet when it rolls out to you",
+            "excerpt": "For now, you'll need to first join a waitlist.",
+            "is_foreign": true
+          },
+          {
+            "title": "LiquidAI 小模型登 HuggingFace 热门榜",
+            "summary": "[[LiquidAI]] 的 LFM3-1.7B 登上 HuggingFace 热门模型榜，获赞 631，下载 32933 次。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+            "title_original": "LiquidAI/LFM3-1.7B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 591）类型 text-generation。likes 631，下载 32933。标签：transformers、safetensors、lfm3、text-generation、liquid、edge。",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini 4 Carbon 登顶榜单并面向防御者开放",
+            "summary": "[[Gemini 4 Carbon]] 在独立评测中领先，初期仅向受信任的网络安全防御者开放。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/ainews-gemini-4-carbon/",
+            "title_original": "[AINews] Gemini 4 Carbon tops leaderboards, launches for cyber defenders",
+            "excerpt": "Google’s new frontier model leads independent evals, with access initially limited to trusted defenders.",
+            "is_foreign": true
+          },
+          {
+            "title": "恶意软件用 LLM 按受害者价值排序",
+            "summary": "[[Volta Infostealer]] 恶意软件利用 LLM 评估受害者价值并排序，相关分析获 Hacker News 226 分。",
+            "source": "Hacker News 高分",
+            "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
+            "title_original": "Malware uses LLMs to rank victims by how much they're worth",
+            "excerpt": "Article URL: https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/ \n Comments URL: https://news.ycombinator.com/item?id=50316531 \n Points: 226 \n # Comments: 125",
+            "is_foreign": true
+          },
+          {
+            "title": "苹果 CEO 称不会为 AI 而 AI",
+            "summary": "[[Apple]] 新任 CEO 为公司在 AI 领域的现状辩护，称不会为 AI 而 AI。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
+            "title_original": "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’",
+            "excerpt": "Apple's new CEO defended the company's current position in the AI landscape.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "DeepSeek 提出 Super-agent 双层架构",
+            "summary": "[[DeepSeek]] 发布 Super-agent 设计，采用 Router 与 Worker 双层架构，探索更自主的 Agent 系统。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/020/615.htm",
+            "title_original": "DeepSeek 提出 Super-agent 架构设计：Router 与 Worker 双层架构，探索更自主的 Agent 系统",
+            "excerpt": "IT之家 10 月 31 日消息，DeepSeek Harness 官方团队今日发布《Super-agent 设计探索：迈向更自主的 Agent 系统》一文，介绍了其面向工程实践的 Super-agent 架构设计思路。 随着大模型执行单个任务时越来越不需要人的干预，限制生产力进一步提升的因素正逐渐转向人的注意力，Agent 系统需要从被动响应指令的单任务工具，向持续在线、能够并行处理多项任务的自主协作者演进。 DeepSeek 表示，现有主流 Agent 设计仍以单一 Session（会话）为基本单位，不同 Session 之间相互独立。用户并行推进多项工作时，需要手动切换并维护各个 Session 的上下文。 根据 DeepS…",
+            "is_foreign": false
+          },
+          {
+            "title": "世界模型首次指导芯片设计",
+            "summary": "世界模型首次用于指导芯片设计，[[NPU]] 算力达 700TOPS，99% 算力可用。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/10/506866.html",
+            "title_original": "世界模型首次指导设计芯片！超大核NPU700TOPS，99%算力可用",
+            "excerpt": "AI算力利用“九九成”",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek 发布全新 Agent 架构",
+            "summary": "[[DeepSeek]] 发布全新 Agent 架构，实现 AI 指挥 AI 干活，指出人类注意力或成新瓶颈。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1687026?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "DeepSeek 重磅发布全新 Agent 架构：AI 开始指挥 AI 干活",
+            "excerpt": "AI Agent 的下一个瓶颈，可能是人类自己 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          },
+          {
+            "title": "苹果国行 AI 接入阿里千问",
+            "summary": "[[Apple]] 国行智能 11 月测试、12 月上线，接入[[千问]]；[[DeepSeek]] 完成 1055 亿元融资，估值 6155 亿元。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/373220",
+            "title_original": "苹果官宣 Apple 智能接入阿里千问；DeepSeek 完成第二轮 1055 亿元融资，估值达 6155 亿元；英特尔股价开盘跌超 30%｜极客早知道",
+            "excerpt": "国行 Apple 智能确定上线时间：11 月开放测试，千问接入 Siri \n 10 月 31 日，苹果宣布，国行 Apple 智能首批功能将于 11 月 4 日随 iOS 开发者 Beta 版开放测试，12 月随 iOS 27.3 正式面向用户推出。首批功能包括实时翻译、写作工具、照片消除、智绘表情和通知摘要等，支持 iPhone 15 Pro 系列、iPhone 16 及后续机型，以及 iPhone Air、iPhone Duo。 \n \n 阿里巴巴强调，在任何问题、文档和图片发送给千问之前，都会先征得用户同意。 \n 苹果表示，这些功能由其自有模型驱动；用户也可以选择接入阿里巴巴千问，在 Siri、写作工具和视觉智能中处理部分请求…",
+            "is_foreign": false
+          },
+          {
+            "title": "存储行业撞见物理 AI 边界",
+            "summary": "[[钛媒体]] 分析指出，存储行业预测失效，需从[[具身智能]]终局反推基础设施能力上限。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8188551.html",
+            "title_original": "预测失效的那刻，存储行业撞见物理AI的边界",
+            "excerpt": "先锚定具身智能想要抵达的终局，再反向推导底层基础设施需要具备怎样的能力上限。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "什么构成健康品牌？",
+            "summary": "[[Modern Retail]] 播客探讨食品、美妆和家居设备如何重塑健康品牌定义。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/what-is-a-wellness-brand/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "What constitutes a wellness brand?",
+            "excerpt": "This week's Modern Retail Podcast explores how categories like food, beauty and home gadgets are reshaping the definition of wellness.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "wangzan101/Mika",
+            "url": "https://github.com/wangzan101/Mika",
+            "intro": "装在安卓手机上的 AI 助理，说一句话它就替你在后台操作 App、上网办事。",
+            "features": [
+              "在后台屏操作 App，不占用你的手机屏幕",
+              "像人一样看屏幕找按钮，无需 App 开放接口",
+              "内置浏览器，可对着当前网页下指令",
+              "记住你的偏好，办成的事自动总结成技能"
+            ],
+            "guide": "从 Releases 下载 APK 装到安卓手机上，在设置里填入自己的模型 API Key 或登录账号；要操作其他 App 时需按向导配对一次无线调试。",
+            "steps": [
+              "从 Releases 页面下载 APK 并安装",
+              "在设置›模型里填 API Key 或登录账号",
+              "要操作 App 时按向导配对无线调试"
+            ],
+            "install": "",
+            "summary": "装在安卓手机上的 AI 助理，说一句话它就替你在后台操作 App、上网办事。",
+            "source": "GitHub",
+            "stars": "2706",
+            "language": "Kotlin",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Mika — 你手机上的私人 AI 助理，替你操作 App、上网、把事办成。An on-device AI agent for Android that operates apps and the web to get things done for you.",
+            "is_foreign": true
+          },
+          {
+            "title": "Jakeschincariol/replica-skill",
+            "url": "https://github.com/Jakeschincariol/replica-skill",
+            "intro": "一套给 Claude 用的技能包，帮你拆解并重做一个 App，还能修掉原版用户吐槽的毛病。",
+            "features": [
+              "逆向分析目标 App 的功能与流程",
+              "按分析结果重新搭建一个同类应用",
+              "自动测试新应用并找出 bug",
+              "参考原版用户差评改进你的版本"
+            ],
+            "guide": "需要先有 Claude 或 Claude Code 环境，把仓库地址粘给 Claude 说 install skill，或在 Claude Code 里用插件命令安装，无需注册和 API Key。",
+            "steps": [
+              "在 Claude 中粘贴仓库地址并说 install skill",
+              "或在 Claude Code 执行 /plugin marketplace add Jakeschincariol/replica-skill",
+              "再执行 /plugin install replica-skill@replica-skill"
+            ],
+            "install": "/plugin marketplace add Jakeschincariol/replica-skill",
+            "summary": "一套给 Claude 用的技能包，帮你拆解并重做一个 App，还能修掉原版用户吐槽的毛病。",
+            "source": "GitHub",
+            "stars": "6816",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
+            "is_foreign": true
+          },
+          {
+            "title": "wavetermdev/waveterm",
+            "url": "https://github.com/wavetermdev/waveterm",
+            "intro": "一个带 AI 助手的开源终端工具，把命令行、文件编辑和网页浏览放在同一个窗口里。",
+            "features": [
+              "AI 助手能读终端输出并帮你操作文件",
+              "远程连接断网后自动重连，不丢会话",
+              "内置编辑器可直接改远程文件",
+              "拖拽排布终端、编辑器、浏览器等区块"
+            ],
+            "guide": "支持 macOS、Linux、Windows，从官网下载安装包即可使用；AI 功能需自备 OpenAI、Claude 等 API Key，或用本地模型，无需注册账号。",
+            "steps": [
+              "从官网下载对应系统的安装包",
+              "安装后打开 Wave 终端",
+              "在设置中填入自己的 AI 模型 API Key"
+            ],
+            "install": "",
+            "summary": "一个带 AI 助手的开源终端工具，把命令行、文件编辑和网页浏览放在同一个窗口里。",
+            "source": "GitHub",
+            "stars": "22630",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An open-source, AI-integrated, cross-platform terminal for seamless workflows",
+            "is_foreign": true
+          },
+          {
+            "title": "obra/superpowers",
+            "url": "https://github.com/obra/superpowers",
+            "intro": "给写代码的 AI 助手定的一套工作方法，让它先问清需求再动手，而不是上来就写代码。",
+            "features": [
+              "先和你确认需求，再分段展示方案",
+              "生成清晰到新手能照做的实施计划",
+              "强调先写测试再写代码的开发流程",
+              "支持 Claude Code、Cursor 等多种工具"
+            ],
+            "guide": "需要先装好你常用的 AI 编程工具（如 Claude Code、Cursor、Codex），再按 README 对应章节的说明把技能装进去。",
+            "steps": [
+              "先安装 Claude Code、Cursor 等编程工具",
+              "按 README 中对应工具的章节安装技能"
+            ],
+            "install": "",
+            "summary": "给写代码的 AI 助手定的一套工作方法，让它先问清需求再动手，而不是上来就写代码。",
+            "source": "GitHub",
+            "stars": "310046",
+            "language": "Shell",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An agentic skills framework & software development methodology that works.",
+            "is_foreign": true
+          },
+          {
+            "title": "affaan-m/ECC",
+            "url": "https://github.com/affaan-m/ECC",
+            "intro": "给 AI 编程助手加装的一套增强系统，补上记忆、安全检查和技能，让它干活更稳。",
+            "features": [
+              "为 AI 助手提供技能与记忆能力",
+              "内置安全防护相关机制",
+              "支持 Claude Code、Codex、Cursor 等多种工具",
+              "提供引导式安装流程"
+            ],
+            "guide": "在 Claude Code 里用引导式安装或插件命令安装 ecc@ecc 插件；请只从官方 GitHub 仓库或 npm 官方包安装，避免第三方镜像。",
+            "steps": [
+              "先安装 Claude Code",
+              "在 Claude Code 中执行引导式安装或插件安装",
+              "确认插件来源为官方 ecc@ecc"
+            ],
+            "install": "",
+            "summary": "给 AI 编程助手加装的一套增强系统，补上记忆、安全检查和技能，让它干活更稳。",
+            "source": "GitHub",
+            "stars": "294055",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 真正替你动手：操作手机、克隆应用、写代码、管终端。"
+      }
+    ]
+  }
+}

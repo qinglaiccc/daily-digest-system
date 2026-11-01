@@ -1,5 +1,5 @@
 {
-  "classic_offset": 2,
+  "classic_offset": 4,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-10-30T23:55:48.601994+00:00",
   "recent_trending": [
-    "YishenTu/claudian",
-    "feder-cr/git-ai",
-    "jev-chat/jev-chat-jarvis",
     "ActivityWatch/activitywatch",
     "Gathin23/cleanyourtv",
     "storytold/photocraft",
@@ -175,12 +172,15 @@
     "plotly/dash",
     "ccch1mneyyy/dsh-Go",
     "rehan-remade/universal-modder",
-    "super-productivity/super-productivity"
+    "super-productivity/super-productivity",
+    "wangzan101/Mika",
+    "Jakeschincariol/replica-skill",
+    "wavetermdev/waveterm"
   ],
-  "last_run_date": "2026-10-30",
+  "last_run_date": "2026-11-01",
   "last_classic": [
-    "morluto/rea",
-    "openclaw/openclaw"
+    "obra/superpowers",
+    "affaan-m/ECC"
   ],
-  "updated_at": "2026-10-30T23:55:49.061829+00:00"
+  "updated_at": "2026-11-01T00:00:58.387231+00:00"
 }
