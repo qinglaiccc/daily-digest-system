@@ -1,0 +1,308 @@
+{
+  "date": "2026-11-03",
+  "generated_at": "2026-11-02T23:58:38.353088+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 296,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-03",
+    "digest": "Anthropic限制Claude游戏克隆；腾讯混元发布Hyra 2.0；DoorDash拟收购Instacart",
+    "keywords": [
+      "Anthropic",
+      "Claude",
+      "腾讯混元",
+      "DoorDash",
+      "Instacart"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "AI代理任务token消耗远超聊天",
+            "summary": "[[MIT Technology Review]]指出，AI代理执行编码任务需规划、测试与纠错，单任务token消耗为普通聊天提示的10至50倍。",
+            "source": "MIT Technology Review",
+            "url": "https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/",
+            "title_original": "Stop counting tokens, start counting what ships",
+            "excerpt": "When a developer gives an AI agent a coding task, the agent does more than answer once. It plans, generates code, runs tests, and repeats the process to correct errors. A single task can use 10 to 50 times more tokens than a basic chat prompt. The more useful the agent becomes, the more calls…",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic限制Claude克隆游戏",
+            "summary": "[[Anthropic]]更新[[Claude Code]]系统提示，禁止该工具用于复刻现有电子游戏，但仍允许用户制作游戏。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+            "title_original": "Anthropic clamps down on Claude’s AI video game clones",
+            "excerpt": "Anthropic has updated Claude Code's system prompt to prevent the AI tool from being used to re-create existing video games, as reported by Tom's Hardware. Retro gaming is currently being overrun with AI-made decompilations, recompilations, and ports, but while Anthropic will still let people use Claude Code to make ga…",
+            "is_foreign": true
+          },
+          {
+            "title": "新规难阻AI游戏克隆潮",
+            "summary": "[[Ars Technica]]认为，[[Anthropic]]针对游戏克隆的新规无法遏制AI模仿潮，模仿者规模远超单一模型厂商的控制能力。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/ai/2026/11/claudes-new-rules-against-game-cloning-wont-stop-the-ai-copying-boom/",
+            "title_original": "Claude’s new rules against game cloning won’t stop the AI copying boom",
+            "excerpt": "The tsunami of imitators is way bigger than any one model maker can stem.",
+            "is_foreign": true
+          },
+          {
+            "title": "Astra可读写权重改进Qwen",
+            "summary": "[[Hacker News]]讨论文章介绍，[[Astra]]通过读写模型权重的方式改进[[Qwen]]，该帖获1691点、547条评论。",
+            "source": "Hacker News",
+            "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+            "title_original": "Astra can read and write weights to improve Qwen",
+            "excerpt": "Article URL: https://rikiyat.github.io/blog/weight-space-programming/ \n Comments URL: https://news.ycombinator.com/item?id=50341174 \n Points: 1691 \n # Comments: 547",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini可读取邮件及关闭方法",
+            "summary": "[[Engadget]]报道，[[Gemini]]可读取、总结邮件并起草回复，文章说明[[Google]]如何处理数据及用户退出方式。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2300353/google-gemini-poking-through-email-how-to-stop/",
+            "title_original": "Gemini could be poking through your emails - here's how to stop it",
+            "excerpt": "Gemini can read your emails, summarize them and draft replies. If you'd rather it didn't, here's what Google actually does with your data and how to opt out.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "腾讯混元发布Hyra 2.0",
+            "summary": "[[腾讯混元]]发布AI科研系统[[Hyra 2.0]]，让通用Agent参与科学模型与工具研发，推动成果可复用。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/021/266.htm",
+            "title_original": "腾讯混元发布 Hyra 2.0：为模型研发打造可复用工具",
+            "excerpt": "IT之家 11 月 2 日消息，今日腾讯混元发布了 AI 科研系统 Hyra 2.0，将研发重点从直接用 AI 攻克科学难题，转向让通用 Agent 参与科学模型、研究工作流及软件工具的研发与升级，让一次研发的成果在后续研究中被反复使用，推动科研范式从“刷题解题”走向“造工具”。 此前，Hyra 1.0 曾驱动开源模型解决加法组合学中悬置五十余年的开放问题，验证了“给 AI 明确评判标准的难题并循环尝试”这一路径的可行性。Hyra 2.0 在此基础上进一步提出，工具升级带来的收益可被下游任务反复复用，从而形成智能复利。 IT之家注意到，架构上，Hyra 2.0 将研究工作拆分为 Overall、Mission 和 Worker 三…",
+            "is_foreign": false
+          },
+          {
+            "title": "TenPay Global与万事达卡合作",
+            "summary": "[[TenPay Global]]与[[万事达卡]]签署合作备忘录，推进入境扫码支付、跨境汇款与智能体支付。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/021/294.htm",
+            "title_original": "腾讯 TenPay Global 与万事达卡签署合作备忘录，入境扫码支付、汇款与智能体支付同步推进",
+            "excerpt": "IT之家 11 月 3 日消息，在 11 月 2 日 2026 年香港金融科技周期间，腾讯旗下跨境支付平台 TenPay Global 与万事达卡签署合作备忘录。 腾讯表示，双方将结合万事达卡的全球网络与微信支付生态，推动入境游客使用其已有的数字钱包或银行 App，在中国境内支持扫码支付的商户处完成付款，并将合作范围延伸至跨境汇款和智能体支付领域。 万事达卡数据显示，截至 2026 年 6 月的一年内，中国内地入境消费同比增长 51.3%。2026 年 1 至 8 月，境外电子钱包通过微信支付在中国境内的交易笔数和交易金额分别同比增长 81.8% 和 80.6%。TenPay Global 目前与全球 60 多家银行和汇款机构合作…",
+            "is_foreign": false
+          },
+          {
+            "title": "代码助手响应速度的工业逻辑",
+            "summary": "[[钛媒体]]文章指出，成熟工业级智能体应沉在代码仓库底部按规矩交付，而非充当抢注意力的即时助手。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8189530.html",
+            "title_original": "为什么最聪明的代码助手，反而不能秒回你的消息？",
+            "excerpt": "一个真正成熟的工业级智能体，在研发流线里没必要当个让人提心吊胆的话痨助手，老老实实当一套沉在代码仓库底部、不抢注意力、按规矩交付的自动化工装就够了。",
+            "is_foreign": false
+          },
+          {
+            "title": "Buildkite提出CI智能体新思路",
+            "summary": "[[InfoQ 中文]]报道，[[Buildkite]]提出CI出错后由智能体把关的新思路，探索自动化交付中的责任归属。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/WmlATgJudjwPKqHf4QgX?utm_source=rss&utm_medium=article",
+            "title_original": "CI 出错后，谁来把关？Buildkite 的智能体新思路",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "爱范儿早报：苹果iPad Pro等动态",
+            "summary": "[[爱范儿]]早报称苹果或为[[iPad Pro]]加入均热板，[[ChatGPT]]与[[Codex]]将共享额度，奇瑞回应智界独立。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1687043?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "早报｜苹果或为iPad Pro加入均热板/ChatGPT与Codex将共享额度/奇瑞回应智界独立：希望团队更像新势力",
+            "excerpt": "· 多家车企公布 10 月成绩单\n· 奥特曼与三星约 50 名高管座谈，讨论 AI 未来十年的商业应用\n· 西湖大学成立世界模型研究中心，计划三年内构建千亿参数模型 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "DoorDash拟收购Instacart影响分析",
+            "summary": "[[Modern Retail]]分析[[DoorDash]]拟收购[[Instacart]]对[[Uber]]、[[Amazon]]及即时零售竞争格局的影响。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/what-doordashs-proposed-acquisition-of-instacart-means-for-uber-amazon-and-the-rest-of-the-quick-commerce-space/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "What DoorDash’s proposed acquisition of Instacart means for Uber, Amazon and the rest of the quick commerce space",
+            "excerpt": "The race to be the go-to platform for shoppers when they want products delivered quickly is about to get a lot more cutthroat after DoorDash announced its intent to acquire Instacart last week. Here's what it means for the quick commerce space, and other formidable players like Uber and Amazon.",
+            "is_foreign": true
+          },
+          {
+            "title": "AI代理已可见商品目录",
+            "summary": "[[Retail Dive]]指出，商品目录可能已对AI代理可见，建立可信度是下一步，并列出代理优化的三大障碍。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/spons/your-catalog-may-already-be-visible-to-ai-agents-making-it-trustworthy-is/872994/",
+            "title_original": "Your catalog may already be visible to AI agents. Making it trustworthy is the next step.",
+            "excerpt": "Three barriers hinder agentic optimization. Discover how AI agents evaluate products and sway shoppers.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "valentderah/totk-pc-recomp",
+            "url": "https://github.com/valentderah/totk-pc-recomp",
+            "intro": "把《塞尔达传说：王国之泪》搬到电脑上原生运行，不用模拟器。",
+            "features": [
+              "在 Windows 和 Linux 电脑上直接玩",
+              "默认 60 帧，最高可到 144 帧",
+              "支持超宽屏和 HDR 画面",
+              "游戏内按 F1 调设置、F10 看性能"
+            ],
+            "guide": "需要你自己从游戏机里导出正版游戏文件和更新包，项目不提供游戏文件；然后在电脑上编译运行，目前是早期版本，可能有画面问题和崩溃。",
+            "steps": [
+              "准备自己合法获取的游戏本体和更新文件",
+              "按 README 说明在电脑上构建项目",
+              "运行生成的原生程序开始游戏"
+            ],
+            "install": "",
+            "summary": "把《塞尔达传说：王国之泪》搬到电脑上原生运行，不用模拟器。",
+            "source": "GitHub",
+            "stars": "3970",
+            "language": "C",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.",
+            "is_foreign": true
+          },
+          {
+            "title": "Gathin23/cleanyourtv",
+            "url": "https://github.com/Gathin23/cleanyourtv",
+            "intro": "给安卓电视瘦身，去掉预装广告软件，换成苹果电视风格首页。",
+            "features": [
+              "通过 Wi-Fi 远程清理电视预装软件",
+              "把电视首页换成苹果电视风格",
+              "支持备份和恢复电视设置",
+              "提供社区做的手机和电脑端应用"
+            ],
+            "guide": "需要一台安卓或谷歌电视，并在电视开发者选项里打开 USB 调试；可以用编程助手约十五分钟完成，或使用社区应用。",
+            "steps": [
+              "在电视开发者选项里打开 USB 调试",
+              "允许电脑连接电视一次",
+              "按 README 快速开始操作，或使用社区应用"
+            ],
+            "install": "",
+            "summary": "给安卓电视瘦身，去掉预装广告软件，换成苹果电视风格首页。",
+            "source": "GitHub",
+            "stars": "50410",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
+            "is_foreign": true
+          },
+          {
+            "title": "ActivityWatch/activitywatch",
+            "url": "https://github.com/ActivityWatch/activitywatch",
+            "intro": "自动记录你电脑上用了什么、花了多久，数据只存在自己电脑里。",
+            "features": [
+              "记录当前用的软件和窗口标题",
+              "记录浏览器标签页和网址",
+              "根据键鼠活动判断你是否离开",
+              "数据本地保存，自己掌控"
+            ],
+            "guide": "需要先安装 Python 环境，然后从官网下载安装包或按文档安装；数据保存在本地，可自行决定记录多少。",
+            "steps": [
+              "安装 Python 环境",
+              "从官网下载对应系统的安装包",
+              "安装后启动即可自动记录"
+            ],
+            "install": "",
+            "summary": "自动记录你电脑上用了什么、花了多久，数据只存在自己电脑里。",
+            "source": "GitHub",
+            "stars": "19481",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The best free and open-source automated time tracker. Cross-platform, extensible, privacy-focused.",
+            "is_foreign": true
+          },
+          {
+            "title": "tensorflow/tensorflow",
+            "url": "https://github.com/tensorflow/tensorflow",
+            "intro": "谷歌开源的机器学习工具包，帮开发者搭建和训练 AI 模型。",
+            "features": [
+              "用 Python 和 C++ 写机器学习程序",
+              "支持 GPU 加速训练",
+              "有大量现成工具和社区资源",
+              "可部署到多种设备和平台"
+            ],
+            "guide": "需要先装 Python，然后用 pip 安装；想用显卡加速要按文档配置 CUDA，也可以改用 Docker 容器。",
+            "steps": [
+              "安装 Python 环境",
+              "运行 pip install tensorflow",
+              "按文档验证安装是否成功"
+            ],
+            "install": "pip install tensorflow",
+            "summary": "谷歌开源的机器学习工具包，帮开发者搭建和训练 AI 模型。",
+            "source": "GitHub",
+            "stars": "201272",
+            "language": "C++",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An Open Source Machine Learning Framework for Everyone",
+            "is_foreign": true
+          },
+          {
+            "title": "firecrawl/firecrawl",
+            "url": "https://github.com/firecrawl/firecrawl",
+            "intro": "把网页和文档变成 AI 能直接读的干净数据，省去抓取麻烦。",
+            "features": [
+              "把任意网页转成 Markdown 或结构化数据",
+              "支持搜索网页并返回完整内容",
+              "能解析 PDF、DOCX 等文档",
+              "可让 AI 在页面上点击滚动后再提取"
+            ],
+            "guide": "可以直接用官方在线服务，也可以自己部署；自部署需要 Node 环境，并可能需要配置 API Key。",
+            "steps": [
+              "访问官网注册获取 API Key",
+              "按 README 用一条命令接入 AI 助手",
+              "调用接口抓取或搜索网页"
+            ],
+            "install": "",
+            "summary": "把网页和文档变成 AI 能直接读的干净数据，省去抓取麻烦。",
+            "source": "GitHub",
+            "stars": "198004",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让游戏、电视、时间记录和 AI 数据获取更省心"
+      }
+    ]
+  }
+}

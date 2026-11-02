@@ -1,5 +1,5 @@
 {
-  "classic_offset": 6,
+  "classic_offset": 8,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-10-30T23:55:48.601994+00:00",
   "recent_trending": [
-    "Bash-it/bash-it",
-    "ahwootech/BRUTAL",
-    "tangency-labs/solidcraft",
     "alyssaxuu/screenity",
     "Leonxlnx/earshot",
     "Ebony-Vinyl/dsh-our-free-model",
@@ -175,12 +172,15 @@
     "wavetermdev/waveterm",
     "patch-gg/pixelfx",
     "ly05010419/MacNativeGames",
-    "danielmiessler/LifeOS"
+    "danielmiessler/LifeOS",
+    "valentderah/totk-pc-recomp",
+    "Gathin23/cleanyourtv",
+    "ActivityWatch/activitywatch"
   ],
-  "last_run_date": "2026-11-01",
+  "last_run_date": "2026-11-02",
   "last_classic": [
-    "NousResearch/hermes-agent",
-    "n8n-io/n8n"
+    "tensorflow/tensorflow",
+    "firecrawl/firecrawl"
   ],
-  "updated_at": "2026-11-01T23:55:37.156127+00:00"
+  "updated_at": "2026-11-02T23:58:24.655417+00:00"
 }
