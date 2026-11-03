@@ -1,5 +1,5 @@
 {
-  "classic_offset": 8,
+  "classic_offset": 10,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-10-30T23:55:48.601994+00:00",
   "recent_trending": [
-    "alyssaxuu/screenity",
-    "Leonxlnx/earshot",
-    "Ebony-Vinyl/dsh-our-free-model",
     "streetwriters/notesnook",
     "xiaoyang111222/cn-math-taxonomy",
     "storytold/filmcraft",
@@ -175,12 +172,15 @@
     "danielmiessler/LifeOS",
     "valentderah/totk-pc-recomp",
     "Gathin23/cleanyourtv",
-    "ActivityWatch/activitywatch"
+    "ActivityWatch/activitywatch",
+    "haydenschmitty/floorplan",
+    "tangency-labs/solidcraft",
+    "YishenTu/claudian"
   ],
-  "last_run_date": "2026-11-02",
+  "last_run_date": "2026-11-03",
   "last_classic": [
-    "tensorflow/tensorflow",
-    "firecrawl/firecrawl"
+    "ohmyzsh/ohmyzsh",
+    "Significant-Gravitas/AutoGPT"
   ],
-  "updated_at": "2026-11-02T23:58:24.655417+00:00"
+  "updated_at": "2026-11-03T23:55:34.474623+00:00"
 }

@@ -1,0 +1,309 @@
+{
+  "date": "2026-11-04",
+  "generated_at": "2026-11-03T23:55:48.145159+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 300,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-04",
+    "digest": "CrowdStrike近5亿美元收购两家AI安全公司；谷歌Antigravity上线化学信息学技能；DoorDash宣布收购Instacart。",
+    "keywords": [
+      "CrowdStrike",
+      "DeepSeek",
+      "谷歌",
+      "DoorDash",
+      "AI智能体"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "CrowdStrike近5亿美元收购两家AI安全初创",
+            "summary": "[[CrowdStrike]]宣布收购AI智能体可观测性软件商[[Fiddler AI]]与AI安全测试自动化公司[[Dreadnode]]，交易总额近5亿美元。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/11/03/crowdstrike-to-shell-out-nearly-500m-for-2-ai-security-startups-as-the-market-for-securing-agents-takes-off/",
+            "title_original": "CrowdStrike to shell out nearly $500M for 2 AI security startups as the market for securing agents takes off",
+            "excerpt": "CrowdStrike said it will buy Fiddler AI, which makes AI agent observability software, and Dreadnode, which helps companies automate AI security testing.",
+            "is_foreign": true
+          },
+          {
+            "title": "LLM可直接读写神经网络权重",
+            "summary": "[[Latent Space]]报道“权重空间编程”新方法，可编辑[[Qwen]]权重减少推理循环，并提及[[DeepSeek]]超级智能体原型与GDPx基准。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of/",
+            "title_original": "[AINews] LLMs can read & write neural network weights: \"Weight Space Programming\" cuts Autoresearch out of the RSI loop",
+            "excerpt": "Editing Qwen’s weights to reduce reasoning loops, DeepSeek’s super-agent prototype, and the GDPx benchmark.",
+            "is_foreign": true
+          },
+          {
+            "title": "DeepSeek-V4.1-Flash量化模型登HuggingFace热门榜",
+            "summary": "[[DeepSeek-V4.1-Flash-1017-GSQ-RCO-Coder-GGUF]]登上[[HuggingFace]]热门模型榜，获122个likes、下载28666次，支持图文输入。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-Coder-GGUF",
+            "title_original": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-Coder-GGUF 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 117）**新发布**。类型 image-text-to-text。likes 122，下载 28666。标签：gguf、text-generation、image-text-to-text、vision、gsq、rco。",
+            "is_foreign": true
+          },
+          {
+            "title": "Qwen 3.8 27B笔记本端可解读模型权重",
+            "summary": "[[Simon Willison]]发文称[[Qwen]] 3.8 27B可在笔记本上解读模型权重，该文在[[Hacker News]]获452点、142条评论。",
+            "source": "Hacker News",
+            "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+            "title_original": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+            "excerpt": "Article URL: https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/ \n Comments URL: https://news.ycombinator.com/item?id=50355251 \n Points: 452 \n # Comments: 142",
+            "is_foreign": true
+          },
+          {
+            "title": "Netflix测试AI主题推荐标签页",
+            "summary": "[[Netflix]]称正测试基于多种AI生成主题的推荐标签页，初期向用户提供观看建议，以减少无目的浏览。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2305778/netflix-thinks-ai-might-save-you-from-scrolling-aimlessly-for-something-to-watch/",
+            "title_original": "Netflix thinks AI might save you from scrolling aimlessly for something to watch",
+            "excerpt": "The tab will initially offer suggestions based on a range of AI-generated themes.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "谷歌Antigravity上线化学信息学技能",
+            "summary": "[[谷歌]]DeepMind为[[Google Antigravity]]推出化学信息学技能，演示中AI约1小时筛完数千种化合物，提出新型刚性大环分子。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/021/858.htm",
+            "title_original": "提速抗癌药物研发：谷歌 Antigravity 上线“AI 炼丹师”，1 小时筛完数千种化合物",
+            "excerpt": "IT之家 11 月 4 日消息，谷歌 DeepMind 团队昨日（11 月 3 日）发布博文，宣布为 Google Antigravity 推出一套“化学信息学技能”（Cheminformatics Skills）， 帮助科研人员更快完成药物发现中的文献检索、分子分析、模型构建和新分子设计等工作。 IT之家援引博文介绍，在以肺癌药物为例的演示中，AI 智能体可在约一小时内检索数千种化合物、开展匹配分子对分析，并提出具备合成路线的新型刚性大环分子，而类似流程过去往往需要数天。 该工具将大语言模型的规划、检索与科学推理能力，与 RDKit 等确定性化学计算工具结合，并接入 ChEMBL 和 PubChem 等公共化学数据库。 系统可从…",
+            "is_foreign": false
+          },
+          {
+            "title": "英伟达称AI仿真提速芯片工厂最高35倍",
+            "summary": "[[英伟达]]称AI推动晶圆厂进入“AI定义工厂”阶段，加速仿真最高提速35倍，工程师决策从数天缩至数分钟。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/021/857.htm",
+            "title_original": "英伟达称 AI 重塑芯片工厂：仿真提速最高 35 倍，工程师决策从数天缩至数分钟",
+            "excerpt": "IT之家 11 月 4 日消息，英伟达于 11 月 3 日发布文章称，人工智能正在推动半导体晶圆厂进入“AI 定义工厂”阶段：通过加速仿真、学习型物理模型、AI 智能体和数字孪生， 正在显著提速芯片制造中的设计、测试与生产决策。 加速仿真（accelerated simulation） 指利用 GPU、并行计算、AI 智能体模型等技术， 把传统依赖 CPU 的工程仿真从数小时、数天压缩到数分钟甚至毫秒级的过程。 在半导体制造中，它让工程师能更快测试工艺方案、预测缺陷风险，而不必先做昂贵且耗时的真实产线实验。 IT之家援引博文介绍，随着先进芯片需求上升，制造工艺愈发复杂，良率和工艺质量的容错空间不断缩小。传统产线实验既慢又贵，工程师…",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek开源Super-agent原型",
+            "summary": "[[DeepSeek]]开源Super-agent原型，探索自主智能体架构，不满足于仅提供模型。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8190971.html",
+            "title_original": "DeepSeek不满足于模型，还要让AI自己干活",
+            "excerpt": "DeepSeek开源Super-agent原型，探索自主智能体架构。",
+            "is_foreign": false
+          },
+          {
+            "title": "心言发布家庭具身智能体巴布1",
+            "summary": "[[心言机器人]]发布具身家庭智能体[[巴布（Bubbo 1）]]，基于自研Bubbo OS主打伙伴式交互，售价9499元，前1000名7999元。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/373399",
+            "title_original": "心言巴布「Bubbo 1」：一台机器人，如何成为家人",
+            "excerpt": "头图来源：心言机器人 \n 2026 年 10 月 29 日，心言机器人正式发布具身家庭智能体「巴布（Bubbo 1）」。 \n 这台毛绒外形的机器人，基于心言自研的 Bubbo OS，主打「伙伴式交互」：它不是一台等人发号施令的家电，而是一个会主动走近、主动回应的家庭成员。产品即日起在京东等官方渠道发售，售价 9499 元，前 1000 名订购者可享 7999 元。 \n 在心言机器人创始人、Bubbo 1 首席设计师任永亮看来， 「 技术决定体验的下限，交互决定体验的上限。 」 过去的 AI，是你不开口它就不在的工具；而巴布要做的，是从「外部」视角搭起一个 Family Agent—— 识别家里的每一个人，也关注他们之间的关系。…",
+            "is_foreign": false
+          },
+          {
+            "title": "百度披露Apollo World世界模型",
+            "summary": "[[百度]]首次披露[[Apollo World]]世界模型，以AI教AI开车方式，让无人驾驶突破“不可能三角”。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/tIt75FRqU2hwy4eWrOIu?utm_source=rss&utm_medium=article",
+            "title_original": "AI教AI开车！百度首次披露Apollo World世界模型，让无人驾驶突破“不可能三角”",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "假日购物者仅愿有限度使用AI",
+            "summary": "调查显示假日购物者主要用AI比价和缩小礼物范围，但仍重视在购买过程中保持自主决策。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/holiday-shoppers-only-want-a-dash-of-ai-for-the-gift-hunt/873317/",
+            "title_original": "Holiday shoppers only want a dash of AI for the gift hunt",
+            "excerpt": "Price comparisons and narrowing down gift ideas are some of the ways consumers are using AI this season. But maintaining autonomy in the buying process remains important to shoppers.",
+            "is_foreign": true
+          },
+          {
+            "title": "DoorDash收购Instacart",
+            "summary": "[[DoorDash]]宣布收购[[Instacart]]，显示配送平台进一步向零售科技、广告和数据驱动购物延伸。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/doordash-instacart-acquisition-delivery-platform/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "What DoorDash’s Instacart acquisition says about the modern delivery platform pitch",
+            "excerpt": "DoorDash’s announced Instacart deal shows that delivery platforms are shifting further into retail tech, ads and data-driven shopping.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "haydenschmitty/floorplan",
+            "url": "https://github.com/haydenschmitty/floorplan",
+            "intro": "让 AI 读完你的代码，画出一张能点开看的中文地图，搞懂程序各部分怎么连起来。",
+            "features": [
+              "把每个文件和请求翻译成大白话名字",
+              "点开地图就能看到各部分之间的连接",
+              "改完代码后能看出 AI 动了哪些地方",
+              "地图可随时更新，跟着代码一起变"
+            ],
+            "guide": "需要先装好 Claude Code 或 Codex 这类 AI 编程工具，然后在里面让它生成地图；也可以先打开在线演示网页看看效果，不用安装。",
+            "steps": [
+              "先安装 Claude Code 或 Codex 编程助手",
+              "在项目里让 AI 生成 floorplan 地图",
+              "打开生成的地图逐块查看和提问"
+            ],
+            "install": "",
+            "summary": "让 AI 读完你的代码，画出一张能点开看的中文地图，搞懂程序各部分怎么连起来。",
+            "source": "GitHub",
+            "stars": "2623",
+            "language": "JavaScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "See how your app actually fits together. An interactive, plain-English map of your codebase, drawn by Claude or Codex.",
+            "is_foreign": true
+          },
+          {
+            "title": "tangency-labs/solidcraft",
+            "url": "https://github.com/tangency-labs/solidcraft",
+            "intro": "一个免费开源的 3D 建模软件，画个草图改个尺寸，模型就自动跟着变。",
+            "features": [
+              "画草图加尺寸约束，改数字模型自动重建",
+              "桌面、浏览器都能用，网页版免安装",
+              "内置接口让 AI 助手也能帮你建模",
+              "可导出 STEP 等常见工程格式"
+            ],
+            "guide": "Windows 下 MSI 安装包、macOS 下 DMG 镜像、Linux 下 AppImage 或 Snap 都能装；不想装就直接用浏览器打开网页版。",
+            "steps": [
+              "Windows 下载并运行 installer 安装包",
+              "macOS 下载 disk image 拖入应用",
+              "Linux 执行 sudo snap install solidcraft",
+              "或直接用浏览器打开网页版免安装"
+            ],
+            "install": "sudo snap install solidcraft",
+            "summary": "一个免费开源的 3D 建模软件，画个草图改个尺寸，模型就自动跟着变。",
+            "source": "GitHub",
+            "stars": "13398",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "SolidCraft: an open-source parametric 3D CAD application built in pure Rust. Desktop, web, and automation through MCP.",
+            "is_foreign": true
+          },
+          {
+            "title": "YishenTu/claudian",
+            "url": "https://github.com/YishenTu/claudian",
+            "intro": "给笔记软件 Obsidian 装个 AI 助手，让它直接读写、搜索你笔记库里的文件。",
+            "features": [
+              "在笔记里选中文字让 AI 直接改写",
+              "AI 能读写、搜索笔记并执行命令",
+              "多个会话可组成项目共享记忆",
+              "输入斜杠或 @ 快速调用模板和文件"
+            ],
+            "guide": "需要先装 Obsidian 笔记软件，再安装这个插件；装好后从侧边栏图标或命令面板打开，接入 Claude Code、Codex 等 AI 工具即可使用。",
+            "steps": [
+              "先安装 Obsidian 笔记软件",
+              "在 Obsidian 中安装 Claudian 插件",
+              "从侧边栏图标或命令面板打开",
+              "接入 Claude Code 或 Codex 等助手"
+            ],
+            "install": "",
+            "summary": "给笔记软件 Obsidian 装个 AI 助手，让它直接读写、搜索你笔记库里的文件。",
+            "source": "GitHub",
+            "stars": "15898",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An Obsidian plugin that embeds Claude Code, Codex and other agents as an AI collaborator in your vault.",
+            "is_foreign": true
+          },
+          {
+            "title": "ohmyzsh/ohmyzsh",
+            "url": "https://github.com/ohmyzsh/ohmyzsh",
+            "intro": "给命令行终端换皮肤、加插件的老牌工具，让敲命令更顺手也更好看。",
+            "features": [
+              "内置 300 多个可选插件扩展命令",
+              "多套主题随意切换终端外观",
+              "社区维护，安装后自动更新"
+            ],
+            "guide": "需要先有 zsh 命令行环境（macOS 自带，Linux 需先装 zsh），然后用一条安装脚本命令装好，重启终端即可生效。",
+            "steps": [
+              "确认系统已安装 zsh 命令行",
+              "运行 README 中的安装脚本命令",
+              "重启终端让配置生效"
+            ],
+            "install": "",
+            "summary": "给命令行终端换皮肤、加插件的老牌工具，让敲命令更顺手也更好看。",
+            "source": "GitHub",
+            "stars": "190303",
+            "language": "Shell",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🙃 A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to…",
+            "is_foreign": true
+          },
+          {
+            "title": "Significant-Gravitas/AutoGPT",
+            "url": "https://github.com/Significant-Gravitas/AutoGPT",
+            "intro": "一个 AI 助手团队平台，用大白话派活，由 AI 分工完成写作、销售、调研等任务。",
+            "features": [
+              "多个 AI 专家各管一摊，由总协调派活",
+              "用日常语言给 AI 布置任务",
+              "可自定义每个专家的角色和技能",
+              "支持自己部署到自己的服务器"
+            ],
+            "guide": "可以直接注册官网试用，不用安装；想自己部署则需要 Python 环境，按 README 的自托管说明操作。",
+            "steps": [
+              "访问官网注册试用账号",
+              "或准备 Python 环境走自托管",
+              "按自托管文档完成部署"
+            ],
+            "install": "",
+            "summary": "一个 AI 助手团队平台，用大白话派活，由 AI 分工完成写作、销售、调研等任务。",
+            "source": "GitHub",
+            "stars": "187889",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 帮你看懂代码、画图建模、写笔记和跑自动化任务"
+      }
+    ]
+  }
+}
