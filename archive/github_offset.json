@@ -1,5 +1,5 @@
 {
-  "classic_offset": 10,
+  "classic_offset": 12,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-10-30T23:55:48.601994+00:00",
   "recent_trending": [
-    "streetwriters/notesnook",
-    "xiaoyang111222/cn-math-taxonomy",
-    "storytold/filmcraft",
     "jarun/nnn",
     "JoasASantos/REA-Prompts",
     "yetone/magpie",
@@ -175,12 +172,15 @@
     "ActivityWatch/activitywatch",
     "haydenschmitty/floorplan",
     "tangency-labs/solidcraft",
-    "YishenTu/claudian"
+    "YishenTu/claudian",
+    "KKKKhazix/agent-autoloop",
+    "HeyPuter/everything",
+    "Zettlr/Zettlr"
   ],
-  "last_run_date": "2026-11-03",
+  "last_run_date": "2026-11-04",
   "last_classic": [
-    "ohmyzsh/ohmyzsh",
-    "Significant-Gravitas/AutoGPT"
+    "DietrichGebert/ponytail",
+    "f/prompts.chat"
   ],
-  "updated_at": "2026-11-03T23:55:34.474623+00:00"
+  "updated_at": "2026-11-04T23:55:33.695783+00:00"
 }

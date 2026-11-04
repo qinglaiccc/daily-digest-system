@@ -1,0 +1,297 @@
+{
+  "date": "2026-11-05",
+  "generated_at": "2026-11-04T23:55:46.496401+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 306,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-05",
+    "digest": "Ripple-65B开源模型发布，Wayfair创疫情后最强增长，国内具身智能与AI模型密集更新",
+    "keywords": [
+      "Ripple-65B",
+      "Wayfair",
+      "具身智能",
+      "MoWorld",
+      "腾讯Hy4"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Ripple-65B预览版发布：美国开源权重智能体编码SOTA",
+            "summary": "[[Ripple-65B]]预览版发布，称在美国开源权重模型中于智能体编码任务达到SOTA水平。",
+            "source": "Hacker News",
+            "url": "https://www.ricursive.com/ripple",
+            "title_original": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+            "excerpt": "Article URL: https://www.ricursive.com/ripple \n Comments URL: https://news.ycombinator.com/item?id=50369925 \n Points: 193 \n # Comments: 67",
+            "is_foreign": true
+          },
+          {
+            "title": "Uber称几乎无人用AI智能体叫车",
+            "summary": "[[Uber]]表示上季度最繁忙一周仅4人通过AI智能体完成叫车。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says/",
+            "title_original": "Almost no one uses AI agents to book their Uber, company says",
+            "excerpt": "During its busiest week last quarter, Uber said only four people booked a ride using an AI agent.",
+            "is_foreign": true
+          },
+          {
+            "title": "MIT科技评论：用数据血缘保障智能体企业安全",
+            "summary": "[[MIT Technology Review]]发文探讨以数据血缘保障智能体企业安全，指出多智能体调用数据时缺乏人工核验的风险。",
+            "source": "MIT Technology Review",
+            "url": "https://www.technologyreview.com/2026/11/04/1147596/securing-the-agentic-enterprise-with-data-lineage/",
+            "title_original": "Securing the agentic enterprise with data lineage",
+            "excerpt": "A sales representative asks an AI agent for customer pricing, and the agent pulls data from multiple sources: restricted pricing systems, internal communications, and archived quotes. The output looks accurate to the agent, so a second agent uses the data to draft the proposal for the sales rep. No human checks either…",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini for Home接入AT&T智能安防系统",
+            "summary": "[[AT&T]]的Connected Life安防系统接入[[Gemini for Home]]，可摘要家庭事件并检索视频历史。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system",
+            "title_original": "Gemini for Home now plugs into AT&T’s smart security system",
+            "excerpt": "AT&T's smart home security system now integrates with Gemini for Home. The company says its Connected Life system is the \"first\" home security product to integrate with Google Home Premium, enabling a bunch of Gemini-powered features that can summarize home events, search your video history, and more. With the update,…",
+            "is_foreign": true
+          },
+          {
+            "title": "Latent Space分享幕后内容与AI趋势讨论",
+            "summary": "[[Latent Space]]发布幕后内容，涉及SaaS、Jev及2026年AI趋势等话题。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai/",
+            "title_original": "[AINews] Behind Latent Space: Kill My SaaS, Jev & AI in 2026 | AIEi Shanghai",
+            "excerpt": "November 3, 2026 — A quiet day lets us share some behind the senes.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "李斌：智能电动汽车是出货量最多的具身智能体",
+            "summary": "[[蔚来]]李斌在乌镇峰会称智能电动汽车是出货量最多的具身智能体，已成最大AI应用产业。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/022/423.htm",
+            "title_original": "蔚来李斌：现在出货量最多的具身智能体就是智能电动汽车",
+            "excerpt": "IT之家 11 月 4 日消息，在今天的 2026 年世界互联网大会乌镇峰会互联网企业家论坛，蔚来创始人、董事长、CEO 李斌分享了自己对行业的看法。 李斌表示， 现在出货量最多的具身智能体就是智能电动汽车 。每一辆车的算力传感器的大模型，从感知到决策和最终执行的过程都已经跑通。 他认为， 智能电动汽车已经成为最大的 AI 应用产业 。 参考IT之家此前报道，在今年 10 月的 2026 世界智能网联汽车大会上，工业和信息化部装备工业一司司长郭守刚透露，截止到今年 8 月底， 国内约 6,100 万辆乘用车搭载组合驾驶辅助功能 ， 其中大约有 1,500 万辆乘用车具备了领航驾驶辅助功能 。 工业和信息化部副部长辛国斌也在 10…",
+            "is_foreign": false
+          },
+          {
+            "title": "魔芯科技发布基于昇腾原生的4D世界模型MoWorld 2.0",
+            "summary": "[[魔芯科技]]发布基于[[华为昇腾]]原生的4D世界模型[[MoWorld 2.0]]，可输出可仿真、可渲染、可调用的4D高斯资产。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/022/424.htm",
+            "title_original": "魔芯科技发布基于华为昇腾原生的 4D 世界模型 MoWorld 2.0，场景可互动、编辑、调用",
+            "excerpt": "IT之家 11 月 4 日消息，在今日举行的世界互联网大会“发展新质生产力强劲增量看 AI”主题论坛上，魔芯科技正式发布 基于华为昇腾原生的 4D 世界模型 MoWorld 2.0 。 官方表示，继今年 7 月 MoWorld 1.0 发布后，MoWorld 2.0 实现模型能力跃升：将重力、弹力、浮力、光照、热力，以及刚体、柔体、流体、形塑体等物理要素与对象特性融入空间建模和交互能力， 输出可用于仿真、可实时渲染、可反复调用的 4D 高斯资产 。 据介绍，基于对多重物理要素的建模，MoWorld 2.0 不仅生成空间和物体外观，也对物体之间的交互关系、外力作用和环境变化进行实时推理。 例如，模拟微风吹动书页、书签掉落地面的过程，…",
+            "is_foreign": false
+          },
+          {
+            "title": "招商局狮子山实验室发布具身推理模型驭物",
+            "summary": "[[招商局狮子山实验室]]发布具身推理模型驭物Lion-ER-35B-A3B，仅激活3B参数，十项基准全线提升。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/507586.html",
+            "title_original": "不靠堆砌数据，让机器人看懂真实物理世界 | 招商局狮子山实验室发布「驭物™ Lion-ER-35B-A3B」具身推理模型",
+            "excerpt": "仅激活3B参数，十项基准全线提升！",
+            "is_foreign": false
+          },
+          {
+            "title": "实测腾讯Hy4复刻《王者荣耀》",
+            "summary": "[[爱范儿]]实测[[腾讯Hy4]]复刻《王者荣耀》，称WorkBuddy可承接大型任务，国产开源模型竞争白热化。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1687613?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "实测腾讯Hy4：我用它复刻《王者荣耀》，WorkBuddy 真能接大活了",
+            "excerpt": "国产开源模型的竞争白热化时刻 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          },
+          {
+            "title": "钛晨报：五部门部署节能改造，字节回应AI工具访问限制",
+            "summary": "五部门部署“一行一策”节能改造；[[字节跳动]]回应限制外部AI工具访问内部资料；[[倍轻松]]实控人被罚没1184万元。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8194022.html",
+            "title_original": "【钛晨报】五部门最新部署：“一行一策”开展节能改造，加强原材料回收利用；字节限制外部AI工具访问内部资料？知情人士回应；倍轻松实控人被罚没1184万元、禁入证券市场5年",
+            "excerpt": "央行今日开展3000亿元买断式逆回购操作；华为、阿里等20家单位共建智能体互联基础设施，加速智能体赋能千行百业；比亚迪辟谣“天神之眼智驾方案更换及停产”；董宇辉官宣新品牌；德明利拟每10股派现6元，控股股东承诺延长一年不减持；三环集团拟5亿元至10亿元回购公司股份。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Wayfair创疫情以来最强季度增长",
+            "summary": "[[Wayfair]]第三季度营收增长近10%，活跃客户增长4.7%，为疫情以来最强增长季度。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/wayfair-strongest-quarter-since-pandemic/873740/",
+            "title_original": "Wayfair notches ‘strongest quarter of growth’ since the pandemic",
+            "excerpt": "The retailer posted nearly 10% revenue gains and 4.7% growth in active customers in Q3, even as consumer spending habits change in the home category.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "KKKKhazix/agent-autoloop",
+            "url": "https://github.com/KKKKhazix/agent-autoloop",
+            "intro": "让命令行 AI 助手在后台自己接活干到底，拿不准时才发消息问你",
+            "features": [
+              "关掉终端，任务照样在后台跑完",
+              "需要你拍板时推送到飞书、钉钉、Slack",
+              "一行配置就能接入新的 AI 助手",
+              "敲一行命令查看整体进展和花费"
+            ],
+            "guide": "支持 macOS 和 Linux，需先装好 Node 24、Git、curl，以及一个已登录的命令行 AI 助手；用一条安装脚本装好后即可试跑。Windows 版暂未推出。",
+            "steps": [
+              "先安装 Node 24、Git 和 curl",
+              "准备一个已登录的命令行 AI 助手",
+              "运行安装脚本 curl -fsSL https://raw.githubusercontent.com/KKKKhazix/agent-autoloop/main/install.sh | sh",
+              "运行 agent-autoloop try 走一遍试跑流程"
+            ],
+            "install": "curl -fsSL https://raw.githubusercontent.com/KKKKhazix/agent-autoloop/main/install.sh | sh",
+            "summary": "让命令行 AI 助手在后台自己接活干到底，拿不准时才发消息问你",
+            "source": "GitHub",
+            "stars": "2454",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。",
+            "is_foreign": true
+          },
+          {
+            "title": "HeyPuter/everything",
+            "url": "https://github.com/HeyPuter/everything",
+            "intro": "把 Excel、Word、Photoshop 这类收费软件重做成免费开源版的合集",
+            "features": [
+              "表格、文档、演示等办公软件替代品",
+              "会议、白板等协作工具替代品",
+              "创意、工程、财务等多类软件替代",
+              "所有应用源码集中在一个仓库里"
+            ],
+            "guide": "需要先装 Node.js 22.12 或更新版本；把仓库下载到本地，进入想用的那个应用目录，装依赖后启动开发模式即可在浏览器里用。",
+            "steps": [
+              "先安装 Node.js 22.12 或更新版本",
+              "运行 git clone https://github.com/HeyPuter/everything.git",
+              "运行 cd everything/src/[app-name] 进入某个应用目录",
+              "运行 npm install 安装依赖",
+              "运行 npm run dev 启动"
+            ],
+            "install": "git clone https://github.com/HeyPuter/everything.git",
+            "summary": "把 Excel、Word、Photoshop 这类收费软件重做成免费开源版的合集",
+            "source": "GitHub",
+            "stars": "7112",
+            "language": "JavaScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "We're rebuilding and open-sourcing the world’s software from scratch.",
+            "is_foreign": true
+          },
+          {
+            "title": "Zettlr/Zettlr",
+            "url": "https://github.com/Zettlr/Zettlr",
+            "intro": "给写作者用的桌面写作软件，边写边管资料，写完直接导出成稿",
+            "features": [
+              "笔记只存在本地，注重隐私",
+              "对接 Zotero 等文献工具自动加引用",
+              "支持 LaTeX 和 Word 模板排版",
+              "可导出多种格式，界面支持十几种语言"
+            ],
+            "guide": "这是桌面软件，去官网下载对应系统的安装包装上就能用，不需要自己配开发环境；想从源码构建才需要额外步骤。",
+            "steps": [
+              "访问官网下载对应系统的安装包",
+              "安装后打开软件即可开始写作"
+            ],
+            "install": "",
+            "summary": "给写作者用的桌面写作软件，边写边管资料，写完直接导出成稿",
+            "source": "GitHub",
+            "stars": "13870",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Your One-Stop Publication Workbench",
+            "is_foreign": true
+          },
+          {
+            "title": "DietrichGebert/ponytail",
+            "url": "https://github.com/DietrichGebert/ponytail",
+            "intro": "给 AI 编程助手立规矩：只写任务真正需要的代码，别堆砌",
+            "features": [
+              "让 AI 少写代码、少花时间和费用",
+              "该有的校验、报错、安全逻辑不省",
+              "可装进 Claude Code、Cursor 等工具"
+            ],
+            "guide": "README 摘录里没有给出安装命令，具体怎么装需要看官网 ponytail.dev 的说明；它属于给 AI 编程工具加的技能插件。",
+            "steps": [
+              "访问官网 ponytail.dev 查看安装说明"
+            ],
+            "install": "",
+            "summary": "给 AI 编程助手立规矩：只写任务真正需要的代码，别堆砌",
+            "source": "GitHub",
+            "stars": "184529",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+            "is_foreign": true
+          },
+          {
+            "title": "f/prompts.chat",
+            "url": "https://github.com/f/prompts.chat",
+            "intro": "一个超大的免费提示词库，帮你把 AI 用得更顺手",
+            "features": [
+              "按类别浏览和搜索现成提示词",
+              "支持 ChatGPT、Claude、Gemini 等",
+              "可下载成表格或数据集使用",
+              "支持组织自建私有版本"
+            ],
+            "guide": "打开官网就能直接浏览使用，无需安装；想在自己公司内部私有部署，README 提供了 Self-Host 入口，具体命令未在摘录中给出。",
+            "steps": [
+              "访问 prompts.chat 直接浏览提示词",
+              "需要私有部署时查看 README 的 Self-Host 部分"
+            ],
+            "install": "",
+            "summary": "一个超大的免费提示词库，帮你把 AI 用得更顺手",
+            "source": "GitHub",
+            "stars": "175812",
+            "language": "MDX",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 更省心地干活、让常用软件免费可用、让提示词随手可得"
+      }
+    ]
+  }
+}
