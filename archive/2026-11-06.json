@@ -1,0 +1,304 @@
+{
+  "date": "2026-11-06",
+  "generated_at": "2026-11-05T23:55:47.433397+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 273,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-06",
+    "digest": "Meta Muse 上线语音模式，英伟达发布内存与 CPU 新方案，百度开源文心5.5 Flash Base",
+    "keywords": [
+      "Meta",
+      "英伟达",
+      "文心5-5",
+      "Claude",
+      "Amazon"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Meta Muse 上线实时语音模式",
+            "summary": "[[Meta]] CEO 扎克伯格宣布，[[Muse]] AI 智能体上线实时语音对话功能，已在 iOS 应用向部分用户开放。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/1028015/meta-muse-ai-voice-mode-expressive-avatar",
+            "title_original": "Muse has a voice mode now",
+            "excerpt": "Meta now lets you have voice conversations with your Muse AI agent in real time, CEO Mark Zuckerberg announced today. The feature has been rolled out to me, and I gave it a spin on the iOS app while writing this article. As you chat with your Muse agent, the avatar at the top of […]",
+            "is_foreign": true
+          },
+          {
+            "title": "Airbnb 将于 2027 上半年推出 AI 旅行代理",
+            "summary": "[[Airbnb]] 宣布 2027 年上半年推出 AI 旅行代理，可规划行程、比价、管理预订并提供住宿期间协助。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/",
+            "title_original": "Airbnb says it’s launching an AI travel agent in the first half of 2027",
+            "excerpt": "Airbnb says its upcoming AI agent will help travelers plan trips, compare options, manage bookings, and get assistance throughout their stay.",
+            "is_foreign": true
+          },
+          {
+            "title": "Google 称学校可跳过 Gemini 但 AI 搜索不可免",
+            "summary": "[[Google]] 表示学校可保留传统搜索并跳过 [[Gemini]]，但 AI 搜索功能不提供退出选项。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/ai/2026/11/google-schools-can-keep-search-while-skipping-gemini-but-ai-search-is-non-negotiable/",
+            "title_original": "Google: Schools can keep search while skipping Gemini, but AI search is non-negotiable",
+            "excerpt": "Google is technically offering schools more choice but not the choices anyone wants.",
+            "is_foreign": true
+          },
+          {
+            "title": "Claude 新增个人财务辅助功能",
+            "summary": "[[Claude]] 新增个人财务辅助功能，可协助用户处理财务事务，报道同时提出是否应使用的疑问。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2307936/now-claude-can-help-with-your-finances-too/",
+            "title_original": "Now Claude can help with your finances too",
+            "excerpt": "But just like with ChatGPT, should you?",
+            "is_foreign": true
+          },
+          {
+            "title": "Claude Code 被指将用户邮箱发送给网站",
+            "summary": "GitHub 议题显示，[[Claude Code]] 会将用户邮箱地址发送给所访问的网站，该议题获 240 点关注。",
+            "source": "Hacker News",
+            "url": "https://github.com/anthropics/claude-code/issues/107757",
+            "title_original": "Claude Code sends your email address to websites",
+            "excerpt": "Article URL: https://github.com/anthropics/claude-code/issues/107757 \n Comments URL: https://news.ycombinator.com/item?id=50385272 \n Points: 240 \n # Comments: 67",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "英伟达提出全栈协同设计破解 AI 内存瓶颈",
+            "summary": "[[英伟达]] 发布技术解读，称通过全栈协同设计，HBM 仅增约 3%，每美元智能体吞吐量最高提升 30 倍。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/023/025.htm",
+            "title_original": "英伟达破局 AI 内存瓶颈：HBM 仅增约 3%，每美元智能体吞吐量最高提升 30 倍",
+            "excerpt": "IT之家 11 月 6 日消息，英伟达昨日（11 月 5 日）发布技术解读，指出随着大模型参数规模、上下文长度和智能体应用快速增长，GPU 显存正面临前所未有的压力，HBM 供应趋紧、价格上升，在可以预见的未来仍将持续。 为了破解当前 AI 内存瓶颈， 英伟达探索引入了“全栈协同设计”理念 ，将 GPU、CPU、网络、存储和软件作为一个整体协同设计，让每一字节内存在 AI 工厂的各层级都产生更高价值。IT之家附上相关图片如下： 在推理过程中，昂贵的 HBM 既要承载模型权重，也要保存 KV 缓存（用于记录模型理解当前请求所需的上下文）。智能体工作流会在多次模型调用和工具调用间持续携带历史上下文，部分场景需处理多达 300 万个 t…",
+            "is_foreign": false
+          },
+          {
+            "title": "英伟达实测 Vera CPU 智能体性能",
+            "summary": "[[英伟达]] 公布 [[Vera CPU]] 实测数据，称较最快 x86 CPU 每瓦多跑 60% 智能体，助力数据中心提升并发。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/023/029.htm",
+            "title_original": "AI 时代最强“芯脏”：英伟达实测 Vera CPU，较最快 x86 CPU 每瓦多跑 60% 智能体",
+            "excerpt": "IT之家 11 月 6 日消息，英伟达昨日（11 月 5 日）发布博文，公布了 Vera CPU（2026 年 3 月 16 日发布）在智能体工作负载上的实测数据，称其可在同一颗处理器中同时实现业界领先的智能体执行速度和每瓦吞吐量，帮助数据中心在有限电力条件下运行更多智能体。 英伟达表示与传统生成式 AI 不同，智能体不仅要生成答案，还需搜索资料、查询数据库、编写和测试代码，并实际执行任务。这些步骤大量依赖 CPU，并需要反复切换 CPU（负责执行）和 GPU（负责推理）。英伟达认为，随着企业规模化部署智能体，数据中心的核心瓶颈正从单纯算力转向“速度、并发能力和能耗”的平衡。 根据英伟达在 100 兆瓦（megawatt）数据中心…",
+            "is_foreign": false
+          },
+          {
+            "title": "百度开源文心5.5 Flash Base",
+            "summary": "[[百度]] 正式开源基座模型 [[文心5.5 Flash Base]]，称在多基准测试中刷新同尺寸模型 SOTA。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/507787.html",
+            "title_original": "百度开源文心5.5 Flash Base，多基准测试刷新同尺寸模型 SOTA",
+            "excerpt": "11月5日，百度正式开源最新基座模型文心5.5 Flash Base",
+            "is_foreign": false
+          },
+          {
+            "title": "阿里 Qoder 获世界互联网大会领先科技奖",
+            "summary": "[[阿里]] 旗下智能体平台 [[Qoder]] 获世界互联网大会领先科技奖，为中国唯一获此奖的通用 Agent 平台。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/373542",
+            "title_original": "世界互联网大会领先科技奖背后，Qoder 凭什么拿下中国 AI 编程市场第一",
+            "excerpt": "作者｜Cynthia \n 编辑｜郑玄 \n 2026 年 11 月，每年乌镇世界互联网大会期间举办的领先科技奖，已经走到第十年。 \n 作为面向全球征集互联网领域领先成果的国际性科技奖项，领先科技奖每年会选出涵盖基础研究、关键技术与工程研发约 15 至 20 项获奖项目。一定程度上，它的评选也预示了未来几年潮水的走向。 \n 这一年，传统互联网的光环逐渐退去，AI 成了最大的关键词。其中，仅工程研发组的 8 项获奖成果，从 AMD 的 AI 处理器，到蚂蚁的大模型健康服务平台，再到地平线的整车智能体……就有至少 5 项与 AI 有关。 \n 而在通用 Agent 这一领域， 阿里旗下智能体平台 Qoder，成为了国内唯一获此殊荣的通用 A…",
+            "is_foreign": false
+          },
+          {
+            "title": "Astra 展示通用大模型操控机械臂",
+            "summary": "[[Astra]] 突破具身智能边界，展示通用大模型操控机械臂画金门大桥，引发行业对机器人大脑热议。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8194579.html",
+            "title_original": "具身大脑行业迎来“终极反派”",
+            "excerpt": "Astra突破具身智能边界，展现通用大模型操控机械臂画金门大桥的能力，引发行业对机器人大脑的热议。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "亚马逊为 Alexa 购物新增逾百项功能",
+            "summary": "[[Amazon]] 为 Alexa 购物新增 100 多项功能，包括管理订阅、处理账单问题及创建编辑清单和礼品登记。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/amazon-adds-alexa-ai-shopping-functions/873602/",
+            "title_original": "Amazon adds over 100 Alexa for Shopping functions",
+            "excerpt": "New capabilities include managing subscriptions, resolving billing questions, and creating and editing lists and registries.",
+            "is_foreign": true
+          },
+          {
+            "title": "报告称品牌自有渠道投入在 2026 假日季摇摆",
+            "summary": "Modern Retail+ Research 报告显示，品牌对自有渠道的投入在 2026 年假日季营销策略中出现动摇。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/marketing/modern-retail-reseach-brands-focus-on-owned-channels-wavers-for-the-2026-holiday-season/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Modern Retail+ Research: Brands’ focus on owned channels wavers for the 2026 holiday season",
+            "excerpt": "A new Modern Retail+ Research report examines which commerce channels are dominating marketers’ holiday strategies.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "Verlintas/NOIR",
+            "url": "https://github.com/Verlintas/NOIR",
+            "intro": "在电脑上检查安卓手机里哪些应用在偷看数据、往哪发，并给出可撤销的处理建议。",
+            "features": [
+              "列出有网络和敏感权限的应用",
+              "从安装包里提取上报网址",
+              "按厂商和用途给风险打分",
+              "给出可回滚的处置命令"
+            ],
+            "guide": "在电脑上运行，需要先装好 adb 并打开手机的 USB 调试；首次运行会进入向导，自动检查环境、等你插线，再问几个 y/n 就出报告。",
+            "steps": [
+              "安装 adb 并打开手机开发者模式与 USB 调试",
+              "运行 noir 进入向导",
+              "按提示插线并确认开始扫描",
+              "查看报告后决定是否执行处置"
+            ],
+            "install": "noir",
+            "summary": "在电脑上检查安卓手机里哪些应用在偷看数据、往哪发，并给出可撤销的处理建议。",
+            "source": "GitHub",
+            "stars": "2464",
+            "language": "Kotlin",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "手机隐私审计：用 adb 扫出 Android 应用的权限、上报端点与数据流向，并给出可回滚的处置。Desktop Android leak audit: permissions, endpoints, data flows, reversible fixes.",
+            "is_foreign": true
+          },
+          {
+            "title": "xiaoyang111222/cn-math-taxonomy",
+            "url": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+            "intro": "把中小学数学、英语、物理知识点串成一张图，答错题能一路回溯到最该补的那一环。",
+            "features": [
+              "个知识点按先修关系连成图",
+              "答错自动回溯到薄弱前置知识",
+              "附 6723 道题可做诊断练习",
+              "对齐现行课标和教材版本"
+            ],
+            "guide": "可直接访问官网在线试用诊断，无需安装；想本地跑需有 Python 环境，仓库提供数据与工具，具体命令 README 摘录中未给出。",
+            "steps": [
+              "访问官网在线试用诊断工具"
+            ],
+            "install": "",
+            "summary": "把中小学数学、英语、物理知识点串成一张图，答错题能一路回溯到最该补的那一环。",
+            "source": "GitHub",
+            "stars": "6755",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "数学（小学到高中）、英语（三年级到高中）、初中物理的知识图谱：1644 个知识点、2403 条先修边、6723 道题，对齐课标，附自适应前置诊断。",
+            "is_foreign": true
+          },
+          {
+            "title": "streetwriters/notesnook",
+            "url": "https://github.com/streetwriters/notesnook",
+            "intro": "一款开源的加密笔记应用，笔记在你自己设备上加密后再同步，别人看不到内容。",
+            "features": [
+              "笔记在设备本地加密后再上传",
+              "网页、电脑、手机多端同步",
+              "开源可查，不锁定在单一平台"
+            ],
+            "guide": "普通用户直接去官网下载网页版、桌面端或手机 App 注册即用；想自己编译代码需装 Node 环境，README 摘录未给出具体命令。",
+            "steps": [
+              "访问官网下载对应平台的客户端",
+              "注册账号后开始记笔记"
+            ],
+            "install": "",
+            "summary": "一款开源的加密笔记应用，笔记在你自己设备上加密后再同步，别人看不到内容。",
+            "source": "GitHub",
+            "stars": "14889",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "A fully open source & end-to-end encrypted note taking alternative to Evernote.",
+            "is_foreign": true
+          },
+          {
+            "title": "huggingface/transformers",
+            "url": "https://github.com/huggingface/transformers",
+            "intro": "AI 模型的通用工具箱，让开发者用同一套写法调用上百万个文本、图像、语音模型。",
+            "features": [
+              "一套代码调用上百万个预训练模型",
+              "覆盖文字、图像、音频和多模态",
+              "既能直接使用也能自己训练"
+            ],
+            "guide": "需要 Python 3.11 以上和 PyTorch 2.6 以上，先建虚拟环境再安装；适合有编程基础的人，普通用户可先逛模型网站体验。",
+            "steps": [
+              "安装 Python 3.11+ 与 PyTorch 2.6+",
+              "用 venv 或 uv 创建并激活虚拟环境",
+              "在环境中安装 transformers 库"
+            ],
+            "install": "",
+            "summary": "AI 模型的通用工具箱，让开发者用同一套写法调用上百万个文本、图像、语音模型。",
+            "source": "GitHub",
+            "stars": "168587",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+            "is_foreign": true
+          },
+          {
+            "title": "AUTOMATIC1111/stable-diffusion-webui",
+            "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+            "intro": "在自己电脑上跑 AI 画图的网页界面，输入文字就能生成或修改图片。",
+            "features": [
+              "文字生成图片和图片改图片",
+              "可局部重绘、扩图和放大",
+              "用括号调整提示词权重",
+              "一键脚本安装运行"
+            ],
+            "guide": "需要先装好 Python 和 Git，然后运行一键脚本，它会自动装依赖并在浏览器打开操作界面；对显卡有一定要求。",
+            "steps": [
+              "先安装 Python 和 Git",
+              "运行仓库提供的一键安装运行脚本",
+              "在浏览器打开本地界面开始画图"
+            ],
+            "install": "",
+            "summary": "在自己电脑上跑 AI 画图的网页界面，输入文字就能生成或修改图片。",
+            "source": "GitHub",
+            "stars": "165256",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Stable Diffusion web UI",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从手机隐私、学习路径到 AI 模型与绘画，帮普通人管好数据与工具。"
+      }
+    ]
+  }
+}

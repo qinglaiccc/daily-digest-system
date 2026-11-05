@@ -1,5 +1,5 @@
 {
-  "classic_offset": 12,
+  "classic_offset": 14,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-10-30T23:55:48.601994+00:00",
   "recent_trending": [
-    "jarun/nnn",
-    "JoasASantos/REA-Prompts",
-    "yetone/magpie",
     "rowboatlabs/rowboat",
     "ikow/php2shell-poc",
     "storytold/pdfcraft",
@@ -175,12 +172,15 @@
     "YishenTu/claudian",
     "KKKKhazix/agent-autoloop",
     "HeyPuter/everything",
-    "Zettlr/Zettlr"
+    "Zettlr/Zettlr",
+    "Verlintas/NOIR",
+    "xiaoyang111222/cn-math-taxonomy",
+    "streetwriters/notesnook"
   ],
-  "last_run_date": "2026-11-04",
+  "last_run_date": "2026-11-05",
   "last_classic": [
-    "DietrichGebert/ponytail",
-    "f/prompts.chat"
+    "huggingface/transformers",
+    "AUTOMATIC1111/stable-diffusion-webui"
   ],
-  "updated_at": "2026-11-04T23:55:33.695783+00:00"
+  "updated_at": "2026-11-05T23:55:33.623020+00:00"
 }
