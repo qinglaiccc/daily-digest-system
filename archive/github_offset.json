@@ -1,5 +1,5 @@
 {
-  "classic_offset": 14,
+  "classic_offset": 16,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-10-30T23:55:48.601994+00:00",
   "recent_trending": [
-    "rowboatlabs/rowboat",
-    "ikow/php2shell-poc",
-    "storytold/pdfcraft",
     "omnivore-app/omnivore",
     "xevrion/hatchzip",
     "wheresryan22/anatomy",
@@ -175,12 +172,15 @@
     "Zettlr/Zettlr",
     "Verlintas/NOIR",
     "xiaoyang111222/cn-math-taxonomy",
-    "streetwriters/notesnook"
+    "streetwriters/notesnook",
+    "govijr/terminal-mac",
+    "l0ng-ai/openidea",
+    "jarun/nnn"
   ],
-  "last_run_date": "2026-11-05",
+  "last_run_date": "2026-11-06",
   "last_classic": [
-    "huggingface/transformers",
-    "AUTOMATIC1111/stable-diffusion-webui"
+    "langgenius/dify",
+    "Snailclimb/JavaGuide"
   ],
-  "updated_at": "2026-11-05T23:55:33.623020+00:00"
+  "updated_at": "2026-11-06T23:55:34.578106+00:00"
 }

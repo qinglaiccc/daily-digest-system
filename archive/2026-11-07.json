@@ -1,0 +1,312 @@
+{
+  "date": "2026-11-07",
+  "generated_at": "2026-11-06T23:55:50.767758+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 242,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-07",
+    "digest": "Anthropic研究Claude智能体记忆机制，Chainalysis遭黑客窃取全部客户凭证，Reformation三季度营收增19%。",
+    "keywords": [
+      "Anthropic",
+      "Claude",
+      "Chainalysis",
+      "Kimi",
+      "Reformation"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Palo Alto Networks 拟 5 亿美元收购 Clutch",
+            "summary": "[[Palo Alto Networks]] 正洽谈以 5 亿美元收购 AI 智能体安全初创公司 [[Clutch]]，后者此前估值 8500 万美元。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/",
+            "title_original": "Palo Alto Networks in talks to buy AI agent security startup Clutch for $500M",
+            "excerpt": "Clutch, backed by Lightspeed and SignalFire, was last valued at $85 million, according to a source.",
+            "is_foreign": true
+          },
+          {
+            "title": "Jev 调用 Opus 实现低成本高准确率",
+            "summary": "[[Hightouch]] 博客称，Jev 可向 [[Opus]] 求助，以低 4 倍成本达到 Opus 的准确率。",
+            "source": "Hacker News",
+            "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+            "title_original": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+            "excerpt": "Article URL: https://hightouch.com/blog/llm-judges-identity-resolution \n Comments URL: https://news.ycombinator.com/item?id=50397429 \n Points: 271 \n # Comments: 60",
+            "is_foreign": true
+          },
+          {
+            "title": "Kimi-K3.1-Pro 登 HuggingFace 热门榜",
+            "summary": "[[moonshotai]] 的 [[Kimi-K3.1-Pro]] 登上 HuggingFace 热门模型榜，trendingScore 1002，下载 18432 次。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+            "title_original": "moonshotai/Kimi-K3.1-Pro 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 1002）类型 image-text-to-text。likes 1487，下载 18432。标签：transformers、safetensors、kimi_k31、text-generation、compressed-tensors、conversational。",
+            "is_foreign": true
+          },
+          {
+            "title": "AINews 关注模型权重开放动态",
+            "summary": "[[Latent Space]] 的 AINews 提及 [[OpenAI]] 的 Linux 内核安全工作、Kimi K3.1 Pro 开放权重及 Ricursive 的 Ripple-65B。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/ainews-it-s-swapping-season/",
+            "title_original": "[AINews] It's Swapping Season",
+            "excerpt": "November 4, 2026 — OpenAI’s Linux kernel security work, Kimi K3.1 Pro’s open weights, and Ricursive’s Ripple-65B.",
+            "is_foreign": true
+          },
+          {
+            "title": "Chainalysis 称全部客户凭证被窃",
+            "summary": "[[Chainalysis]] 称遭“多线网络攻击”，黑客利用 AI 智能体与路径数据截取，窃取全部客户凭证和令牌。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/security/2026/11/chainalysis-says-hackers-stole-credentials-and-tokens-for-all-of-its-customers/",
+            "title_original": "Chainalysis says hackers stole credentials and tokens for all of its customers",
+            "excerpt": "Company said a \"multifront cyberattack\" included AI agents and an on-path data snatch.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "Anthropic 研究 Claude 智能体“做梦”机制",
+            "summary": "[[Anthropic]] 发布研究，将 [[Claude]] 智能体记忆分四层，并引入“做梦”机制在空闲时反思纠错以提升长周期任务表现。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/023/613.htm",
+            "title_original": "Anthropic 研究称 Claude AI 智能体可以靠“做梦”变得更聪明",
+            "excerpt": "IT之家 11 月 7 日消息，Anthropic 昨日（11 月 6 日）发布研究文章《The components of agent memory》，系统拆解 Claude 智能体如何跨会话记忆、筛选、纠错和整理知识。 该研究指出 AI 智能体可借鉴人脑“睡眠整理记忆”的机制 ，在空闲时间反思历史记录、纠错并构建知识结构，从而显著提升长周期任务表现。 该研究将智能体记忆分为会话日志、记忆笔记、知识表征（如 Wiki）和注入上下文四层，并引入“做梦”（dreaming）机制，让模型在两次交互之间的空闲时间回顾日志、修正错误、提炼规则和更新知识库。 研究团队认为，AI 可像人脑在睡眠中巩固记忆一样，将即时经验逐步转化为可复用的长期…",
+            "is_foreign": false
+          },
+          {
+            "title": "Amp 推出 Spaces 协调多 Agent 协作",
+            "summary": "AI 编程工具 [[Amp]] 推出 [[Spaces]]，用户只需对话主 Agent，由其拆解任务并自动生成、协调多个并行 Agent 线程。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/023/609.htm",
+            "title_original": "AI 编程工具 Amp 推出 Spaces：你的 AI 项目经理上线，自主编排 / 协调 Agent 干活",
+            "excerpt": "IT之家 11 月 7 日消息，AI 编程协作工具 Amp 昨日（11 月 6 日）宣布推出 Spaces， 希望构建面向 AI 智能体（Agent）和团队协作的全新工作方式。 对于用户而言，不再需要手动创建、命名和管理多个 Agent 线程，只需对话一个主 Agent，由它理解需求、拆解任务，并让其自动生成和协调其他 Agent 线程。IT之家附上相关截图如下： Amp 指出在传统多 Agent 工作流中，用户往往要自己决定拆分、分派以及追踪任务，Spaces 将这一层组织工作交给 Agent：每个 Space 是用户与单个 Agent 的对话，该 Agent 会为用户启动并协调多个并行线程。 例如，团队可以在一个 Space…",
+            "is_foreign": false
+          },
+          {
+            "title": "腾讯 Hy4 调用激增已十倍扩容",
+            "summary": "[[腾讯]] 宣布因 [[Hy4]] 调用激增，[[WorkBuddy]] 已进行十倍扩容，其 Agent 能力在开源模型中排名第一。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/507967.html",
+            "title_original": "腾讯 Hy4 调用激增已十倍扩容，Agent 能力开源模型第一",
+            "excerpt": "11月 5 日，腾讯宣布因 Hy4 调用激增，WorkBuddy 已进行十倍扩容",
+            "is_foreign": false
+          },
+          {
+            "title": "Thinking Machines 发布 Inkling 2 Small",
+            "summary": "[[Thinking Machines Lab]] 发布第二代模型 [[Inkling 2 Small]]，评测称其将成中国以外得分最高的开放权重模型，公司正以 400 亿美元估值融资 50 亿美元。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/373637",
+            "title_original": "估值 400 亿美元，美国公司，终于做出了中国开源模型的竞对",
+            "excerpt": "作者｜Wildcard \n 编辑｜靖宇 11 月 5 日，OpenAI 前 CTO Mira Murati 创立的 Thinking Machines Lab（简称 TML）同一天出了两条新闻。 \n 当天，公司发布了第二代模型 Inkling 2 Small，第三方评测机构 Artificial Analysis（AA）给的评价相当高：权重放出后，它将成为「 中国以外得分最高的开放权重模型 」。同一天，据报道，这家公司正以 400 亿美元的投前估值筹集 50 亿美元新融资。 \n TML 在 2025 年 2 月对外亮相，至今一年半多。这期间，他们拿过 a16z 领投的 20 亿美元种子轮，也经历了联合创始人 Andrew Tull…",
+            "is_foreign": false
+          },
+          {
+            "title": "DigitalOcean 推出智能体学习与数据服务",
+            "summary": "[[DigitalOcean]] 推出学习与数据服务，帮助 AI 智能体进行自我迭代。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/upfROwtEl8R75H24D13J?utm_source=rss&utm_medium=article",
+            "title_original": "DigitalOcean 推出学习与数据服务，帮助 AI 智能体进行自我迭代",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Reformation 启用 AI 规划工具提升库存率",
+            "summary": "服饰品牌 [[Reformation]] 启用新 AI 规划工具提升在库率，第三季度净营收同比增长 19%。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/reformation-q3-earnings-sales-growth-ai-planning-tool-in-stock-rates/873991/",
+            "title_original": "Reformation implements new AI planning tool, helping in-stock rates",
+            "excerpt": "The apparel brand's Q3 net revenue jumped 19% and analysts remarked on its strong performance as a newly public company.",
+            "is_foreign": true
+          },
+          {
+            "title": "Laneige 推混搭唇膜站加码体验零售",
+            "summary": "韩妆品牌 [[Laneige]] 推出可混搭的唇膜体验站，加码体验式零售以推动全球增长。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/marketing/k-beauty-brand-laneige-bets-on-experiential-retail-with-a-mix-and-match-lip-mask-station/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "K-beauty brand Laneige bets on experiential retail with a mix-and-match lip mask station",
+            "excerpt": "Laneige, a Korean beauty brand known for its lip masks and moisturizers, is stepping up its experiential retail efforts as it targets global growth.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "govijr/terminal-mac",
+            "url": "https://github.com/govijr/terminal-mac",
+            "intro": "在终端里开一台独立 Mac 虚拟机，让 AI 助手操作它而不碰你的真电脑。",
+            "features": [
+              "终端里直接看到并控制一台独立 Mac 桌面",
+              "虚拟机有自己的应用、文件和账号，不继承你的登录状态",
+              "AI 助手操作时不动你真实鼠标和剪贴板",
+              "支持 Kitty、iTerm2 等终端内嵌显示画面"
+            ],
+            "guide": "需要 Apple 芯片 Mac、macOS 14 以上，首次运行要联网从苹果下载系统镜像，并预留约 64GiB 磁盘空间；用一条安装脚本即可装好。",
+            "steps": [
+              "确认是 Apple 芯片 Mac 且系统为 macOS 14 或更高",
+              "首次运行需联网下载 macOS 镜像并预留磁盘空间",
+              "curl -fsSL https://github.com/govijr/terminal-mac/releases/latest/download/get.sh | bash",
+              "用 Ghostty、Kitty 或 iTerm2 打开终端查看虚拟机画面"
+            ],
+            "install": "curl -fsSL https://github.com/govijr/terminal-mac/releases/latest/download/get.sh | bash",
+            "summary": "在终端里开一台独立 Mac 虚拟机，让 AI 助手操作它而不碰你的真电脑。",
+            "source": "GitHub",
+            "stars": "2145",
+            "language": "Swift",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Entire MacOS running in your terminal.",
+            "is_foreign": true
+          },
+          {
+            "title": "l0ng-ai/openidea",
+            "url": "https://github.com/l0ng-ai/openidea",
+            "intro": "把 IntelliJ IDEA 那套操作习惯搬进一个更轻更快的本地代码编辑器。",
+            "features": [
+              "沿用 IDEA 快捷键、工具窗口和全局搜索习惯",
+              "内置编辑器、调试器、Git、终端、数据库和 HTTP 客户端",
+              "支持 60 多种编程语言",
+              "提供 macOS、Windows、Linux 安装包"
+            ],
+            "guide": "去项目发布页下载对应系统的安装包即可使用；Windows 用户也可选免安装压缩包，解压后运行 openidea.exe，无需额外装开发环境。",
+            "steps": [
+              "打开项目发布页下载对应系统安装包",
+              "Windows 可解压便携包后运行 openidea.exe",
+              "按 IDEA 习惯的快捷键和工具窗口开始写代码"
+            ],
+            "install": "",
+            "summary": "把 IntelliJ IDEA 那套操作习惯搬进一个更轻更快的本地代码编辑器。",
+            "source": "GitHub",
+            "stars": "7432",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "The IDE you know, rebuilt in Rust. IntelliJ IDEA–style keymap, tool windows and search-everywhere in a fast native app: editor, code insight, debugger, Git, terminal, database and HTTP clients for 60+ languages.",
+            "is_foreign": true
+          },
+          {
+            "title": "jarun/nnn",
+            "url": "https://github.com/jarun/nnn",
+            "intro": "一个体积只有约 150KB、几乎不用配置的超快终端文件管理器。",
+            "features": [
+              "在终端里浏览和管理文件，速度极快",
+              "能分析磁盘占用、批量重命名、挑选文件",
+              "插件可扩展实时预览、挂载磁盘、文件对比等",
+              "可在树莓派、安卓 Termux、Linux、macOS 等上运行"
+            ],
+            "guide": "这是命令行工具，需要先按系统方式编译安装；装好后在终端输入 nnn 即可启动，几乎不用写配置文件。",
+            "steps": [
+              "按 README 的编译说明在系统上构建安装",
+              "在终端输入 nnn 启动文件管理器",
+              "按需安装插件扩展预览、挂载等功能"
+            ],
+            "install": "",
+            "summary": "一个体积只有约 150KB、几乎不用配置的超快终端文件管理器。",
+            "source": "GitHub",
+            "stars": "22110",
+            "language": "C",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "n³ The unorthodox terminal file manager",
+            "is_foreign": true
+          },
+          {
+            "title": "langgenius/dify",
+            "url": "https://github.com/langgenius/dify",
+            "intro": "一个开源的 AI 应用搭建平台，用可视化界面把大模型接进业务流程。",
+            "features": [
+              "拖拽式搭建 AI 工作流和智能体",
+              "接入知识库让 AI 基于自己的资料回答",
+              "统一管理多种 AI 模型和工具",
+              "支持云端或自己服务器部署"
+            ],
+            "guide": "推荐用 Docker 自建：机器至少 2 核 CPU、4GiB 内存，装好 Docker Compose 和 OpenSSL 后，在 docker 目录复制配置、生成密钥并启动服务。",
+            "steps": [
+              "确认机器至少 2 核 CPU、4GiB 内存",
+              "安装 Docker 与 Docker Compose v2.35.0 以上及 OpenSSL",
+              "cd docker",
+              "cp .env.example .env",
+              "openssl rand -hex 32 并把结果填入 .env 的令牌项",
+              "docker compose up -d"
+            ],
+            "install": "docker compose up -d",
+            "summary": "一个开源的 AI 应用搭建平台，用可视化界面把大模型接进业务流程。",
+            "source": "GitHub",
+            "stars": "160571",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+            "is_foreign": true
+          },
+          {
+            "title": "Snailclimb/JavaGuide",
+            "url": "https://github.com/Snailclimb/JavaGuide",
+            "intro": "一份开源的 Java 后端面试与学习指南，覆盖基础、数据库、分布式和 AI 应用开发。",
+            "features": [
+              "系统整理 Java 基础与集合等高频面试题",
+              "覆盖数据库、分布式、高并发和系统设计",
+              "附 AI 应用开发与面试指南",
+              "提供在线阅读和面试突击 PDF 版本"
+            ],
+            "guide": "这是在线阅读的文档项目，不需要安装任何东西；直接访问 javaguide.cn 按目录学习，想突击面试可看 interview.javaguide.cn。",
+            "steps": [
+              "访问 javaguide.cn 在线阅读完整内容",
+              "按目录从 Java 基础开始系统学习",
+              "面试前访问 interview.javaguide.cn 看重点版"
+            ],
+            "install": "",
+            "summary": "一份开源的 Java 后端面试与学习指南，覆盖基础、数据库、分布式和 AI 应用开发。",
+            "source": "GitHub",
+            "stars": "159453",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
+            "is_foreign": true
+          }
+        ],
+        "lead": "今天这批项目覆盖终端效率、AI 应用搭建与面试准备，帮不同角色省时间。"
+      }
+    ]
+  }
+}
