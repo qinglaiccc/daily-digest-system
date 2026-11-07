@@ -1,5 +1,5 @@
 {
-  "classic_offset": 16,
+  "classic_offset": 18,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-10-30T23:55:48.601994+00:00",
   "recent_trending": [
-    "omnivore-app/omnivore",
-    "xevrion/hatchzip",
-    "wheresryan22/anatomy",
     "espanso/espanso",
     "Jakeschincariol/day-trader-skill",
     "storytold/lightcraft",
@@ -175,12 +172,15 @@
     "streetwriters/notesnook",
     "govijr/terminal-mac",
     "l0ng-ai/openidea",
-    "jarun/nnn"
+    "jarun/nnn",
+    "Minireel/HGhub",
+    "ARahim3/DigUp",
+    "alyssaxuu/screenity"
   ],
-  "last_run_date": "2026-11-06",
+  "last_run_date": "2026-11-07",
   "last_classic": [
-    "langgenius/dify",
-    "Snailclimb/JavaGuide"
+    "open-webui/open-webui",
+    "langchain-ai/langchain"
   ],
-  "updated_at": "2026-11-06T23:55:34.578106+00:00"
+  "updated_at": "2026-11-07T23:55:33.215219+00:00"
 }
