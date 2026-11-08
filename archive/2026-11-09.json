@@ -1,0 +1,284 @@
+{
+  "date": "2026-11-09",
+  "generated_at": "2026-11-08T23:58:25.944693+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 244,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-09",
+    "digest": "苹果加速Siri智能体化，腾讯元器停服，移动云与智谱合作",
+    "keywords": [
+      "Siri",
+      "腾讯元器",
+      "智谱",
+      "Claude-Code",
+      "MiniMax"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "苹果加速推进Siri智能体化",
+            "summary": "[[苹果]]CEO John Ternus施压AI负责人Craig Federighi，要求加速[[Siri]]路线图，推出可与OpenAI Dots、Meta Muse竞争的AI智能体。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
+            "title_original": "Apple is racing to make Siri more agentic",
+            "excerpt": "Bloomberg's Mark Gurman says CEO John Ternus is pressuring AI czar Craig Federighi to accelerate the Siri roadmap and deliver a powerful AI agent that can compete with OpenAI's Dots or Meta's Muse. While Federighi has delivered a functional version of Siri AI on an incredibly short timeline, the company has no illusio…",
+            "is_foreign": true
+          },
+          {
+            "title": "SpaceXAI Grok Bot扩展订阅方案",
+            "summary": "[[SpaceXAI]]的[[Grok Bot]]可在云电脑处理多步骤任务，但用户需先厘清其复杂的订阅方案组合。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2309308/spacexai-grok-bot-availability-plans/",
+            "title_original": "SpaceXAI Grok Bot availability just keeps growing - here's which plans offer it",
+            "excerpt": "SpaceXAI 's Grok Bot can handle multi-step work on a cloud computer, but you'll need to figure out the jumble of subscription plans first.",
+            "is_foreign": true
+          },
+          {
+            "title": "高盛撤下Claude Code",
+            "summary": "[[高盛]]正从银行家和交易员处撤下[[Claude Code]]，相关讨论在Hacker News获532点、322条评论。",
+            "source": "Hacker News",
+            "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+            "title_original": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+            "excerpt": "Article URL: https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers \n Comments URL: https://news.ycombinator.com/item?id=50415628 \n Points: 532 \n # Comments: 322",
+            "is_foreign": true
+          },
+          {
+            "title": "LTX-2.5登HuggingFace热门榜",
+            "summary": "[[Lightricks]]的[[LTX-2.5]]登上HuggingFace热门模型榜，trendingScore 386，点赞11127，下载2661026次。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/Lightricks/LTX-2.5",
+            "title_original": "Lightricks/LTX-2.5 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 386）类型 image-to-video。likes 11127，下载 2661026。标签：diffusion-single-file、image-to-video、text-to-video、video-to-video、image-text-to-video、audio-to-video。",
+            "is_foreign": true
+          },
+          {
+            "title": "斯坦福AI原生工程课程实践",
+            "summary": "[[斯坦福]]CS146S课程中，Mihail Eric引入开源维护者，要求学生熟悉陌生仓库并提出修改。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/one_million_ai_engineer_special_how_stanford_teaches_ai-native_engineering_mihail_eric_monaco/",
+            "title_original": "[One Million AI Engineer Special] How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
+            "excerpt": "What do you assign when a coding agent can finish last year’s homework in one prompt? In the second run of Stanford’s CS146S, Mihail Eric brought open-source maintainers into the course. Students have to learn an unfamiliar repo, propose a change, and ...",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "腾讯元器停止服务",
+            "summary": "[[腾讯元器]]平台今日停止全部公众服务，2027年1月9日后不再受理数据导出申请，并将删除用户数据。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/024/022.htm",
+            "title_original": "腾讯元器停止服务，明年 1 月起不再受理数据导出申请",
+            "excerpt": "IT之家 11 月 9 日消息，腾讯元器平台今日正式停止服务，应用访问、数据读写、API 调用、控制台使用等所有面向公众的服务，不支持用户访问。通过元器平台发布到其他渠道（包括公众号、服务号、微信客服等）的智能体不支持响应用户对话。 从上个月 29 日起，腾讯元器已停止创建新的智能体、API Key 分发功能。用户目前可以通过数据导出控制台，提出导出任务申请。 2027 年 01 月 09 日后不再受理数据导出申请 ，除法律法规规定须留存的日志等记录外，官方将删除全部用户数据，请您在此前完成备份。 如您曾通过旧版元器入口在腾讯云官网购买资源包，且截至正式停止服务日仍有未使用完的资源或账户余额，可在腾讯云官网申请退款。 此外， 腾讯…",
+            "is_foreign": false
+          },
+          {
+            "title": "移动云与智谱签署合作协议",
+            "summary": "[[中国移动云]]与[[智谱]]签署合作协议，聚焦国产算力适配与模型调优，共建Token联合发展中心，GLM系列接入MoMA平台。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/023/937.htm",
+            "title_original": "中国移动云公司与智谱签署合作协议，围绕国产算力、大模型服务和 AI 商业化合作",
+            "excerpt": "IT之家 11 月 8 日消息，11 月 6 日，中国移动云公司与北京智谱华章科技股份有限公司正式签署合作协议，在 Token 技术创新、模型服务、产品打造、行业方案等领域深化战略合作。 移动云总经理孙少陵，智谱华章 CEO 张鹏现场见证签约。 据介绍，双方将聚焦 国产化算力适配与模型调优 ，共建 Token 联合发展中心，攻坚关键核心技术，持续提升 Token 生产效率。 此外， 智谱 GLM 系列模型将接入 MoMA 模型服务平台 （IT之家注：移动云 MaaS 平台），双方还将联合构建智能产品矩阵，共创 AI Coding 融合产品；深耕金融、政务等重点行业，构建“算力 + 模型 + 应用”一体化解决方案。",
+            "is_foreign": false
+          },
+          {
+            "title": "资本正在撤离世界模型",
+            "summary": "量子位报道称资本正在撤离“世界模型”领域，未披露具体数据。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/508466.html",
+            "title_original": "资本正在撤离“世界模型”",
+            "excerpt": "没有永远的夏天",
+            "is_foreign": false
+          },
+          {
+            "title": "Claude Code团队工程师离职受访",
+            "summary": "[[Claude Code]]团队一名工程师离职后首次受访，谈及顶尖AI实验室正成为“人才黑洞”。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/Qs0pJ5M43c56hdozHiR0?utm_source=rss&utm_medium=article",
+            "title_original": "顶尖 AI 实验室正在成为“人才黑洞”！Claude Code 团队工程师离职后首次受访",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "MiniMax闫俊杰谈AGI路径",
+            "summary": "[[MiniMax]]闫俊杰认为中美AI只差5%，但比前面95%更难追，其办法是抄“后”路。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8197537.html",
+            "title_original": "MiniMax怎样实现AGI ？闫俊杰的办法是抄“后”路",
+            "excerpt": "闫俊杰认为，中美AI只差5%，却比前面95%更难追。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "caru-ini/stack-diagram",
+            "url": "https://github.com/caru-ini/stack-diagram",
+            "intro": "用一句话描述你的技术架构，自动生成带官方图标的架构图，省去手动画图的麻烦。",
+            "features": [
+              "一句话生成架构图",
+              "自动配上官方品牌图标",
+              "支持深浅色两种主题",
+              "覆盖云服务与开发工具"
+            ],
+            "guide": "这是给 AI 助手用的技能包，需在 Claude Code、Codex、Cursor 等支持技能的工具里安装；Claude 应用里则上传 Releases 中的 zip 包。",
+            "steps": [
+              "准备支持技能功能的 AI 助手（如 Claude Code）",
+              "运行 npx skills add caru-ini/stack-diagram",
+              "在对话里描述你的技术栈即可出图"
+            ],
+            "install": "npx skills add caru-ini/stack-diagram",
+            "summary": "用一句话描述你的技术架构，自动生成带官方图标的架构图，省去手动画图的麻烦。",
+            "source": "GitHub",
+            "stars": "2133",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Agent skill: describe your stack in a sentence, get an architecture diagram with official logos",
+            "is_foreign": true
+          },
+          {
+            "title": "kingcharleslzy-ai/dsh-purge",
+            "url": "https://github.com/kingcharleslzy-ai/dsh-purge",
+            "intro": "给 DeepSeek Harness 用的本机插件，减少 AI 反复确认打断，让任务能连续跑完。",
+            "features": [
+              "一屏看清安装与补丁状态",
+              "操作前自动快照可回滚",
+              "集中管理提示词与预设",
+              "改坏了能一键撤回"
+            ],
+            "guide": "装在自己电脑上，需先有 DSH Desktop 0.2.2-rc.1 等对应版本；从 Releases 下载安装器运行，安装前建议先做 dry-run 自查。",
+            "steps": [
+              "先安装 DSH Desktop 对应版本",
+              "从 Releases 下载安装脚本",
+              "先跑 dry-run 自查环境",
+              "确认无误后正式安装"
+            ],
+            "install": "",
+            "summary": "给 DeepSeek Harness 用的本机插件，减少 AI 反复确认打断，让任务能连续跑完。",
+            "source": "GitHub",
+            "stars": "5445",
+            "language": "JavaScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "dsh-purge Community · DeepSeek Harness 社区维护版：宿主兼容、状态诊断、提示词管理、更新与本机备份回滚。基于小杨 / YuJunZhiXue 的 dsh-purge。",
+            "is_foreign": true
+          },
+          {
+            "title": "rowboatlabs/rowboat",
+            "url": "https://github.com/rowboatlabs/rowboat",
+            "intro": "开源的私人 AI 助理，自带邮件、笔记和白板，能记住你的工作内容并帮你干活。",
+            "features": [
+              "把邮件会议整理成知识图谱",
+              "自动为重要邮件起草回复",
+              "定时或按事件触发后台任务",
+              "内置隔离浏览器供协作"
+            ],
+            "guide": "直接下载 Mac/Windows/Linux 安装包即可使用，无需自己配环境；想接哪些账号由你决定。",
+            "steps": [
+              "访问项目下载页",
+              "下载对应系统的安装包",
+              "安装后登录并接入工作账号"
+            ],
+            "install": "",
+            "summary": "开源的私人 AI 助理，自带邮件、笔记和白板，能记住你的工作内容并帮你干活。",
+            "source": "GitHub",
+            "stars": "18147",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "AI coworker with memory and collaboration",
+            "is_foreign": true
+          },
+          {
+            "title": "x1xhlol/system-prompts-and-models-of-ai-tools",
+            "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+            "intro": "收集了 Cursor、Devin、Manus 等众多 AI 工具内部提示词的资料库，供人研究参考。",
+            "features": [
+              "汇总多家 AI 工具的提示词",
+              "覆盖编程与办公类产品",
+              "持续更新新收录内容"
+            ],
+            "guide": "纯资料仓库，打开网页浏览即可，不需要安装任何东西；README 里没有提供安装或运行命令。",
+            "steps": [
+              "打开仓库页面直接浏览内容"
+            ],
+            "install": "",
+            "summary": "收集了 Cursor、Devin、Manus 等众多 AI 工具内部提示词的资料库，供人研究参考。",
+            "source": "GitHub",
+            "stars": "144571",
+            "language": "",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.d…",
+            "is_foreign": true
+          },
+          {
+            "title": "Comfy-Org/ComfyUI",
+            "url": "https://github.com/Comfy-Org/ComfyUI",
+            "intro": "在自己电脑上跑 AI 画图和内容生成的工具，用拖拽节点的方式搭流程。",
+            "features": [
+              "节点式拖拽搭建生成流程",
+              "本地运行不依赖云服务",
+              "提供接口供程序调用"
+            ],
+            "guide": "需要本机有 Python 环境并自行安装依赖，属于偏技术的本地部署；README 摘录中未给出具体安装命令，建议按官方文档操作。",
+            "steps": [
+              "先在本机安装 Python 环境"
+            ],
+            "install": "",
+            "summary": "在自己电脑上跑 AI 画图和内容生成的工具，用拖拽节点的方式搭流程。",
+            "source": "GitHub",
+            "stars": "145796",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从画架构图到本地跑 AI，这批工具帮普通人把 AI 用顺手。"
+      }
+    ]
+  }
+}
