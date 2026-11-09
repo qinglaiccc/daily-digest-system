@@ -1,5 +1,5 @@
 {
-  "classic_offset": 20,
+  "classic_offset": 22,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-10-30T23:55:48.601994+00:00",
   "recent_trending": [
-    "Flow-Launcher/Flow.Launcher",
-    "rddmwmddr/android-ad-cleaner",
-    "KnifeLemon/Filee",
     "Wox-launcher/Wox",
     "designfuchen/word-atlas",
     "storytold/vectorcraft",
@@ -175,12 +172,15 @@
     "alyssaxuu/screenity",
     "caru-ini/stack-diagram",
     "kingcharleslzy-ai/dsh-purge",
-    "rowboatlabs/rowboat"
+    "rowboatlabs/rowboat",
+    "jhaizhou-ops/S2Arm",
+    "Jakeschincariol/day-trader-skill",
+    "omnivore-app/omnivore"
   ],
-  "last_run_date": "2026-11-08",
+  "last_run_date": "2026-11-09",
   "last_classic": [
-    "x1xhlol/system-prompts-and-models-of-ai-tools",
-    "Comfy-Org/ComfyUI"
+    "github/spec-kit",
+    "Graphify-Labs/graphify"
   ],
-  "updated_at": "2026-11-08T23:58:13.270311+00:00"
+  "updated_at": "2026-11-09T23:58:16.008981+00:00"
 }

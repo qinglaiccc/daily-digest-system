@@ -1,0 +1,309 @@
+{
+  "date": "2026-11-10",
+  "generated_at": "2026-11-09T23:58:30.780571+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 305,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-10",
+    "digest": "Anthropic发布Claude新模型登顶榜单，美团开源万亿参数LongCat-2.5，亚马逊推出文本购物AI代理。",
+    "keywords": [
+      "Anthropic",
+      "Claude",
+      "美团",
+      "LongCat",
+      "TikTok-Shop"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Anthropic发布Claude Fable与Mythos 5.2",
+            "summary": "[[Anthropic]]发布[[Claude Fable]] 5.2与[[Claude Mythos]] 5.2，称在编码、推理和视觉上较5.1版有提升且生成更快。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2",
+            "title_original": "Anthropic launches new Claude Fable and Mythos 5.2 models",
+            "excerpt": "Anthropic is announcing two new models today: Claude Fable 5.2 and Claude Mythos 5.2, which it says are designed to take on \"daunting\" technical challenges. The company claims the new models show improvements in coding, reasoning, and vision, and can generate outputs faster than the 5.1 versions of the Fable and Mytho…",
+            "is_foreign": true
+          },
+          {
+            "title": "Claude Fable 5.2获Artificial Analysis 65分",
+            "summary": "[[Claude Fable]] 5.2在[[Artificial Analysis]]评测中得分65，为目前最高分。",
+            "source": "Hacker News",
+            "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
+            "title_original": "Claude Fable 5.2 Scores 65 on Artificial Analysis, Highest So Far",
+            "excerpt": "Article URL: https://artificialanalysis.ai/models/claude-fable-5-2 \n Comments URL: https://news.ycombinator.com/item?id=50431144 \n Points: 243 \n # Comments: 156",
+            "is_foreign": true
+          },
+          {
+            "title": "Claude Code配置文件在GitHub泄露密钥",
+            "summary": "[[Claude Code]]的设置文件因“不再询问”提示，导致密码、API密钥等数千条敏感信息在[[GitHub]]公开。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github/",
+            "title_original": "Claude Code is accidentally exposing secrets all over GitHub",
+            "excerpt": "\"Do not ask again\" prompt leads to passwords, API keys, and more being shared.",
+            "is_foreign": true
+          },
+          {
+            "title": "Qwen3.8-27B登HuggingFace热门榜",
+            "summary": "[[Qwen3.8-27B]]登上[[HuggingFace]]热门模型榜，trendingScore 318，likes 19486，下载量7508158。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+            "title_original": "Qwen/Qwen3.8-27B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 318）类型 image-text-to-text。likes 19486，下载 7508158。标签：transformers、safetensors、qwen3_5、image-text-to-text、conversational、license:apache-2.0。",
+            "is_foreign": true
+          },
+          {
+            "title": "Paul Ford文章《The Web Is More Than Enough》引讨论",
+            "summary": "[[Paul Ford]]文章《The Web Is More Than Enough》在[[Hacker News]]引发讨论，[[Simon Willison]]评论称受其启发用Three.js制作作品。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
+            "title_original": "The Web Is More Than Enough, by Paul Ford",
+            "excerpt": "My comment on The Web Is More Than Enough, by Paul Ford — Hacker News. OK, this comment convinced me to give that a shot. \n Here's a thing I made in Three.js this morning - a Nudibranch themed Faberge Egg: https://static.simonwillison.net/static/2026/Hidden-Reef-Egg... (77KB) \n I just asked Claude (Opus 5.5 Medium run…",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "美团龙猫开源LongCat-2.5模型",
+            "summary": "[[美团]]龙猫开源[[LongCat-2.5]]，总参数1.6万亿，激活约480亿，支持百万上下文，MIT协议可商用。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/024/556.htm",
+            "title_original": "美团龙猫开源 LongCat-2.5 模型：总参数 1.6 万亿，支持百万上下文",
+            "excerpt": "IT之家 11 月 9 日消息，11 月 2 日，美团龙猫发布面向长程智能体任务的 原生多模态模型 LongCat-2.5 。随后来到今天（9 日），美团宣布该模型 正式开源 。 该模型采用 MIT 协议， 支持商用推理部署与二次训练，无需额外授权 ，是面向长程智能体任务的原生多模态模型。在复杂代码库开发、完整项目构建、Visual Coding 与专业办公场景中，端到端交付能力均有明显提升。 模型总参数 1.6 万亿，每个 token 激活约 480 亿参数，支持一百万上下文 。针对显存与带宽受限的国产算力芯片，团队在模型架构、芯片适配与部署策略上也进行了深度协同优化。 根据介绍，LongCat-2.5 在 Visual Cod…",
+            "is_foreign": false
+          },
+          {
+            "title": "实测腾讯混元Hy4大模型",
+            "summary": "[[腾讯混元]]发布[[Hy4]]，主打性价比的Hy4 flash同亮相，权重将开源，称首次跻身最强开源模型之列。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/373644",
+            "title_original": "实测 HY4：腾讯最「夯」大模型，离一线还有多远？",
+            "excerpt": "头图来源：腾讯混元 \n 11 月 4 日，混元 Hy4 正式发布，模型权重将在近期开源，主打性价比的轻量版 Hy4 flash 也一起亮相。腾讯给它的定位是——首次跻身最强开源模型之列。 \n 过去一年，腾讯在 AI 上最多被人看见的，是 WorkBuddy 这类 Agent 和应用产品；到了更底层的模型上，它的声量明显弱于应用。Hy4 真正要回答的，是腾讯在模型这条线上的身位。 \n 从榜单表现来看，在开源模型里，Hy4 已经站进第一梯队；放到全球，和顶尖闭源模型的差距仍然清晰。 \n 而根据国家数据局最近公布的一组数据，我国日均 Token 调用量已经从 2024 年初的 1000 亿，增长到今年 7 月的超 500 万亿，两年增长…",
+            "is_foreign": false
+          },
+          {
+            "title": "腾讯混元Hy4搭配WorkBuddy实测",
+            "summary": "[[腾讯混元]]Hy4搭配[[WorkBuddy]]实测，多模态Agent交付能力表现突出，模型权重将在近期开源。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/507843.html",
+            "title_original": "腾讯混元跻身最强开源模型！一手实测Hy4：搭配WorkBuddy，多模态Agent交付力拉满",
+            "excerpt": "",
+            "is_foreign": false
+          },
+          {
+            "title": "Claude Fable 5.2登顶世界第一",
+            "summary": "[[Claude Fable]] 5.2登顶全球模型第一，超越[[Opus 5.5]]。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1688605?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "刚刚，Claude Fable 5.2 登顶世界第一，一夜斩杀 Opus 5.5",
+            "excerpt": "全球最强模型再次易主 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          },
+          {
+            "title": "Gartner发布2027年十大趋势",
+            "summary": "[[Gartner]]发布2027年十大趋势，指出AI智能体治理成为企业新战场，企业管控难度加大。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/CUgMFMX7uRJNMec1pfYo?utm_source=rss&utm_medium=article",
+            "title_original": "AI越来越聪明，企业却快管不住了：Gartner 2027年十大趋势，智能体治理成新战场",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "亚马逊推出文本购物AI代理功能",
+            "summary": "[[亚马逊]]推出文本购物AI代理，部分美国用户可通过[[Alexa]] for Shopping发短信购物，未来数周扩大范围。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/amazon-text-to-shop-ai-agent/874085/",
+            "title_original": "Amazon debuts text-to-shop AI agent feature",
+            "excerpt": "Select U.S. customers can now text Alexa for Shopping, with the company planning to debut the functionality more broadly in the coming weeks.",
+            "is_foreign": true
+          },
+          {
+            "title": "TikTok Shop推出付费高级会员",
+            "summary": "[[TikTok Shop]]面向100万美国头部消费者推出付费会员[[TikTok Shop Plus]]，赶在假日购物季上线。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/exclusive-tiktok-shop-launches-a-paid-premium-tier-for-1m-of-its-top-us-shoppers/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Exclusive: TikTok Shop launches a paid premium tier for 1M of its top US shoppers",
+            "excerpt": "TikTok Shop is opening up a new paid membership program called TikTok Shop Plus in time for the competitive holiday season.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "jhaizhou-ops/S2Arm",
+            "url": "https://github.com/jhaizhou-ops/S2Arm",
+            "intro": "把你自己买的 Switch 游戏搬到 iPhone、iPad 和 Mac 上原生运行，不用模拟器。",
+            "features": [
+              "游戏直接跑在设备芯片上，不经过模拟器",
+              "所有游戏装进同一个 App，不用反复安装",
+              "在 Mac 或 Windows 上点几下就能导入游戏"
+            ],
+            "guide": "需要自备游戏文件和密钥，先在 Mac 或 Windows 上装启动器，把游戏导入后装到 iPhone、iPad 或 Mac 上玩。系统要求 iOS/iPadOS 18 以上或 Apple 芯片 Mac 的 macOS 15 以上。",
+            "steps": [
+              "准备你自己的 Switch 游戏文件和密钥",
+              "在 Mac 或 Windows 上安装启动器",
+              "用启动器导入游戏并生成 App",
+              "装到 iPhone、iPad 或 Mac 上运行"
+            ],
+            "install": "",
+            "summary": "把你自己买的 Switch 游戏搬到 iPhone、iPad 和 Mac 上原生运行，不用模拟器。",
+            "source": "GitHub",
+            "stars": "1742",
+            "language": "C#",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Run your own Switch games natively on iPhone, iPad and Mac: game code rewritten to ARM64, graphics direct to Metal, one app for the whole library. Bring your own games and keys. 把你自己的 Switch 游戏原生带到 iPhone / iPad / Mac。",
+            "is_foreign": true
+          },
+          {
+            "title": "Jakeschincariol/day-trader-skill",
+            "url": "https://github.com/Jakeschincariol/day-trader-skill",
+            "intro": "给 Claude 加 11 个炒股技能，帮你扫图、盯新闻、找买卖点，还能先模拟复盘。",
+            "features": [
+              "一次扫描上千张走势图找机会",
+              "盯住你关注的股票突发新闻",
+              "下单前用历史数据模拟一万次看胜率",
+              "默认只做模拟盘，不会自动下单"
+            ],
+            "guide": "免费、不用注册也不用 API Key，数据来自公开渠道。在 Claude 里粘贴仓库地址说 install skill，或在 Claude Code 里用插件命令安装。",
+            "steps": [
+              "打开 Claude 或 Claude Code",
+              "在 Claude 里粘贴仓库地址并说 install skill",
+              "或在 Claude Code 执行 /plugin marketplace add Jakeschincariol/day-trader-skill",
+              "再执行 /plugin install day-trader-skill@day-trader-skill"
+            ],
+            "install": "/plugin marketplace add Jakeschincariol/day-trader-skill",
+            "summary": "给 Claude 加 11 个炒股技能，帮你扫图、盯新闻、找买卖点，还能先模拟复盘。",
+            "source": "GitHub",
+            "stars": "6410",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
+            "is_foreign": true
+          },
+          {
+            "title": "omnivore-app/omnivore",
+            "url": "https://github.com/omnivore-app/omnivore",
+            "intro": "开源的「稍后读」工具，把网页、邮件简报和 PDF 存起来慢慢读、做标注。",
+            "features": [
+              "高亮、笔记、搜索和分享",
+              "自动记住长文读到哪里",
+              "支持 PDF 和邮件简报订阅",
+              "有 iOS、安卓和浏览器插件"
+            ],
+            "guide": "官方云端服务已于 2024 年 11 月停止，现在需要自己搭服务器。README 只给出自托管指南链接，没有直接可复制的安装命令，需要按指南部署。",
+            "steps": [
+              "准备一台服务器和 Docker 环境",
+              "参照 README 里的自托管指南部署服务",
+              "在手机或浏览器插件里登录使用"
+            ],
+            "install": "",
+            "summary": "开源的「稍后读」工具，把网页、邮件简报和 PDF 存起来慢慢读、做标注。",
+            "source": "GitHub",
+            "stars": "16412",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Omnivore is a complete, open source read-it-later solution for people who like reading.",
+            "is_foreign": true
+          },
+          {
+            "title": "github/spec-kit",
+            "url": "https://github.com/github/spec-kit",
+            "intro": "给 AI 编程助手一套规范流程，让它按需求文档写功能、修 Bug、评估点子。",
+            "features": [
+              "按需求规格一步步推进开发",
+              "帮你定位并修复出问题的功能",
+              "评估一个想法值不值得投入",
+              "流程和模板可自定义替换"
+            ],
+            "guide": "面向用 AI 编程助手写代码的人，需要先有对应的编程助手环境。README 摘录未给出具体安装命令，需到项目主页查看入门说明。",
+            "steps": [
+              "准备一个 AI 编程助手环境",
+              "访问项目主页查看入门文档",
+              "按文档选择并启用所需流程"
+            ],
+            "install": "",
+            "summary": "给 AI 编程助手一套规范流程，让它按需求文档写功能、修 Bug、评估点子。",
+            "source": "GitHub",
+            "stars": "149013",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "💫 Toolkit to help you get started with SDD or any other process!",
+            "is_foreign": true
+          },
+          {
+            "title": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "intro": "把整个代码库连同文档、PDF 变成一张可查询的关系图，让 AI 助手少翻文件。",
+            "features": [
+              "代码在本地解析，不上传不外传",
+              "每条关联都标明是直接读到还是推断的",
+              "用提问和追踪路径代替逐个搜文件",
+              "文档、PDF、图片也能一起纳入"
+            ],
+            "guide": "在 Claude Code、Cursor、Codex 或 Gemini CLI 里输入 /graphify 即可使用。代码解析完全本地，文档和图片部分会用到助手模型或你配置的 API Key。",
+            "steps": [
+              "打开 Claude Code、Cursor、Codex 或 Gemini CLI",
+              "在对话里输入 /graphify",
+              "按提示让它扫描你的项目"
+            ],
+            "install": "",
+            "summary": "把整个代码库连同文档、PDF 变成一张可查询的关系图，让 AI 助手少翻文件。",
+            "source": "GitHub",
+            "stars": "145022",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained…",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让游戏、炒股、阅读和写代码更省事的开源工具"
+      }
+    ]
+  }
+}
