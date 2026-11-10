@@ -1,0 +1,290 @@
+{
+  "date": "2026-11-11",
+  "generated_at": "2026-11-10T23:55:49.669656+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 313,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-11",
+    "digest": "谷歌开放最强模型Gemini 4 Carbon，Anthropic发布Claude Fable 5.2降价20%，Grok Build被曝泄露3.5万应用机密。",
+    "keywords": [
+      "Gemini-4-Carbon",
+      "Claude-Fable-5-2",
+      "Grok-Build",
+      "DeepSeek-Harness",
+      "MKA基准测试"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Resend 谈为智能体设计文档与工具",
+            "summary": "[[Resend]] 团队介绍如何设计文档与工具，让 [[Claude Code]] 等智能体自动选用其邮件 API 并完成发送。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/resend/",
+            "title_original": "Designing for Agents — Zeno Rocha, Resend",
+            "excerpt": "Where does answer engine optimization (AEO) end and agent experience begin? Inside Resend, from the docs that help Claude Code pick an email API to the tools it uses to send.",
+            "is_foreign": true
+          },
+          {
+            "title": "Grok Build 编码智能体泄露大量机密信息",
+            "summary": "研究员发现 3.5 万个 [[Grok Build]] 应用对任何人开放，泄露机密信息，部分属于 [[SpaceX]]。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/",
+            "title_original": "Grok Build coding agent leaks oodles of confidential info, some belonging to SpaceXSI",
+            "excerpt": "Researcher finds 35,000 Grok Build apps wide open to anyone who looked for them.",
+            "is_foreign": true
+          },
+          {
+            "title": "Meta AI 智能体 Muse 登陆智能手表",
+            "summary": "[[Meta]] 的 AI 助手 [[Muse]] 上线 [[Apple Watch]] 与 Android Wear OS，用户可通过语音通话、短信或听写交互。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/11/10/metas-ai-agent-muse-lands-on-apple-watch-and-wear-os/",
+            "title_original": "Meta’s AI agent Muse lands on Apple Watch and Android Wear OS",
+            "excerpt": "Users can now interact with Meta’s AI assistant through voice calls, text messages, or dictation on their Apple Watch.",
+            "is_foreign": true
+          },
+          {
+            "title": "llm-gemini 0.36 发布",
+            "summary": "[[llm-gemini]] 0.36 发布，[[Gemini 4 Carbon]] 向所有用户开放，定价每百万输入 2 美元、输出 10 美元，计划翻倍。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+            "title_original": "llm-gemini 0.36",
+            "excerpt": "Release: llm-gemini 0.36 \n Gemini 4 Carbon was announced two weeks ago for \"a subset of cyber defenders\", but today it's available to everyone else . \n This is Google's best ever Gemini, priced at $2/million input and $10/million output at launch (that's GPT-6.1 Sol / Claude Sonnet 5.5 prices) but scheduled to double…",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌将 Gemini 用于医疗文书",
+            "summary": "[[Google]] 的 Gemini 医疗版进入预览，已有知名合作伙伴加入，用于处理医疗文书工作。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2312279/google-turns-gemini-towards-medical-paperwork/",
+            "title_original": "Google turns Gemini towards medical paperwork",
+            "excerpt": "Gemini for healthcare is in preview now, with some big-name partners already on board.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "谷歌联合推出 MKA 基准测试",
+            "summary": "[[Google]] 联合 [[Artificial Analysis]] 推出 MKA 基准，[[Gemini 4 Carbon]] 获第二，任务成本约为第一名六分之一。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/025/205.htm",
+            "title_original": "谷歌联合 Artificial Analysis 推出 MKA 基准测试：Gemini 4 Carbon 多模态知识工作测试获第二，任务成本仅为第一名六分之一",
+            "excerpt": "IT之家 11 月 11 日消息，当地时间 11 月 10 日，谷歌宣布联合 AI 模型评测机构 Artificial Analysis 推出多模态知识智能体基准测试 MKA（Multimodal Knowledge Agent），用于评估 AI 智能体处理视觉复杂文件、完成现实世界知识工作任务的能力。 谷歌表示，其最新发布的 Gemini 4 Carbon 在该测试中取得了参测模型第二名的成绩，完成任务的平均成本仅为排名第一模型的约六分之一。 谷歌 DeepMind 高级产品经理 Rohan Doshi 和首席工程师 Ben Caine 介绍称，现有不少知识工作基准测试仅依赖文本即可完成，而现实工作往往涉及大量视觉信息。例如，建…",
+            "is_foreign": false
+          },
+          {
+            "title": "谷歌开放最强模型 Gemini 4 Carbon",
+            "summary": "[[Google]] 正式开放 [[Gemini 4 Carbon]]，面向开发者、企业、科研人员和消费者，主打复杂编程、科研与网络安全。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/025/203.htm",
+            "title_original": "谷歌迄今最强模型 Gemini 4 Carbon 登场：主打复杂编程、科学研究与网络安全",
+            "excerpt": "IT之家 11 月 11 日消息，当地时间 11 月 10 日，谷歌宣布正式开放 Gemini 4 Carbon 模型，面向开发者、企业、科研人员和消费者提供服务。 谷歌高级副总裁、DeepMind 首席 AI 架构师 Koray Kavukcuoglu 介绍称，该模型是谷歌目前能力最强的推理模型，重点面向复杂软件工程、多步骤智能体任务、科学研究和网络安全等场景。 Gemini 4 Carbon 于 10 月 28 日首次公布，此前通过 Fairwind Program（网络安全合作计划）向部分网络安全防御人员开放。此次则进一步扩大使用范围。 谷歌称，相较于同期推出的 Gemini 4 Argon，Carbon 能够在复杂任务中投…",
+            "is_foreign": false
+          },
+          {
+            "title": "苹果国行 AI 备案新增设备，Claude 新模型降价",
+            "summary": "苹果国行 AI 备案新增 iPad 和笔记本；[[Anthropic]] 发布 [[Claude Fable 5.2]]，API 调用费降 20%。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1688654?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "早报｜苹果国行AI备案新增iPad和笔记本/Claude Fable 5.2发布，价格降20%/曝玛莎拉蒂拟与尊界合作，新车将由江淮生产",
+            "excerpt": "· 曝苹果调整 iOS 28 开发节奏，首阶段留出六周探索功能\n· 谷歌发布两套第八代 TPU 系统，分别面向长上下文和保密推理\n· 迪士尼与 Adobe 达成多年合作，将为旗下 IP 定制生成模型 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          },
+          {
+            "title": "ChatGPT 占全球 AI 聊天流量超 81%",
+            "summary": "[[ChatGPT]] 占全球 AI 聊天流量超 81%；[[Anthropic]] 推出 [[Claude Fable 5.2]] 与 Mythos 5.2，API 费用降 20%。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/373736",
+            "title_original": "ChatGPT 占全球 AI 聊天流量超 81%；iOS 27.3 曝光 Siri「个人记忆系统」；传玛莎拉蒂+尊界合作新车曝光｜极客早知道",
+            "excerpt": "8 天从零搓出操作系统：Anthropic 最强 Claude Fable / Mythos 5.2 AI 模型登场，API 调用费下降 20% 11 月 10 日消息， Anthropic 昨日（11 月 9 日）官宣推出 Claude Fable 5.2 和 Claude Mythos 5.2， 两款模型基于同一底层模型，前者面向普通用户并内置网络安全与生物安全防护，后者则面向通过审核的网络安全和生命科学机构开放，用于高风险的专业应用。 定价方面，Claude Fable 5.2 每 100 万词元（Token）输入费用为 8 美元（IT 之家注：现汇率约合 53.4 元人民币），每 100 万词元（Token）输出费用为 4…",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek Harness 日活 154 万",
+            "summary": "[[DeepSeek Harness]] 日活达 154 万，官方开始向插件作者发放 Token，推动 Agent 生态由开发者共建。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/Y7lTO7Q1M8oN5JhxhirK?utm_source=rss&utm_medium=article",
+            "title_original": "DeepSeek Harness 日活154万，官方开始给插件作者发Token：Agent 生态要靠开发者了",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "IainKay/ram-altman",
+            "url": "https://github.com/IainKay/ram-altman",
+            "intro": "一个恶搞脚本：每天给 OpenAI 老板发邮件，汇报你电脑里闲置的内存。",
+            "features": [
+              "统计内存总量、已用和可用容量",
+              "可用内存超 10% 就每天发一封邮件",
+              "轮换标题和落款，让玩笑不重复",
+              "把每次采样记录成 CSV 文件"
+            ],
+            "guide": "这是个 Shell 脚本，需要在 Linux 上运行，并配置好能发邮件的环境；不想装的话，官网直接看示例邮件即可。",
+            "steps": [
+              "准备一台 Linux 电脑并配置好邮件发送",
+              "从仓库下载脚本并赋予执行权限",
+              "用 cron 设置每天自动运行一次"
+            ],
+            "install": "",
+            "summary": "一个恶搞脚本：每天给 OpenAI 老板发邮件，汇报你电脑里闲置的内存。",
+            "source": "GitHub",
+            "stars": "1820",
+            "language": "Shell",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Monitors your RAM and reports any \"quite terrible\" unused capacity directly to the CEO of OpenAI.",
+            "is_foreign": true
+          },
+          {
+            "title": "rddmwmddr/android-ad-cleaner",
+            "url": "https://github.com/rddmwmddr/android-ad-cleaner",
+            "intro": "帮国产安卓手机关掉系统里的广告、热搜和资讯推送，不用 root，还能还原。",
+            "features": [
+              "一键关闭系统广告和营销推送",
+              "不用 root，改动可以还原",
+              "提供 Mac、Windows 和手机客户端",
+              "支持 AI 智能体一键执行"
+            ],
+            "guide": "下载对应系统的客户端，插上手机点几下按钮即可，不需要装 Python；手机版可直接在安卓 11 以上安装使用。",
+            "steps": [
+              "从 Releases 下载对应系统的客户端",
+              "Mac 用户按芯片选 Apple 或 Intel 版本",
+              "Windows 弹安全提示时点仍要运行",
+              "连接手机后按界面提示点按钮执行"
+            ],
+            "install": "",
+            "summary": "帮国产安卓手机关掉系统里的广告、热搜和资讯推送，不用 root，还能还原。",
+            "source": "GitHub",
+            "stars": "7382",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。",
+            "is_foreign": true
+          },
+          {
+            "title": "Flow-Launcher/Flow.Launcher",
+            "url": "https://github.com/Flow-Launcher/Flow.Launcher",
+            "intro": "Windows 上的快速搜索启动器，按快捷键就能找应用、文件和网页内容。",
+            "features": [
+              "快速搜索应用和文件",
+              "支持社区插件扩展功能",
+              "可搜索书签、YouTube 等网络内容",
+              "提供安装版和免安装版"
+            ],
+            "guide": "在 Windows 10 及以上系统安装即可使用，支持 Winget、Scoop、Chocolatey 等包管理器安装，装完用快捷键呼出。",
+            "steps": [
+              "确认系统是 Windows 10 或更高版本",
+              "运行 winget install \"Flow Launcher\"",
+              "安装完成后用快捷键呼出搜索框"
+            ],
+            "install": "winget install \"Flow Launcher\"",
+            "summary": "Windows 上的快速搜索启动器，按快捷键就能找应用、文件和网页内容。",
+            "source": "GitHub",
+            "stars": "16007",
+            "language": "C#",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": ":mag: Quick file search & app launcher for Windows with community-made plugins",
+            "is_foreign": true
+          },
+          {
+            "title": "excalidraw/excalidraw",
+            "url": "https://github.com/excalidraw/excalidraw",
+            "intro": "一个手绘风格的在线白板，用来画流程图、草图和示意图，还能多人一起编辑。",
+            "features": [
+              "手绘风格画图，支持多种图形工具",
+              "多人实时协作，端到端加密",
+              "可导出 PNG、SVG 和源文件",
+              "支持离线使用和深色模式"
+            ],
+            "guide": "直接打开 excalidraw.com 网页就能画，无需安装；想自己部署或集成到项目里，则需要 Node 环境按文档操作。",
+            "steps": [
+              "打开 excalidraw.com 即可开始画图",
+              "想本地部署需先安装 Node 环境",
+              "按文档执行安装依赖并启动"
+            ],
+            "install": "",
+            "summary": "一个手绘风格的在线白板，用来画流程图、草图和示意图，还能多人一起编辑。",
+            "source": "GitHub",
+            "stars": "135459",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Virtual whiteboard for sketching hand-drawn like diagrams",
+            "is_foreign": true
+          },
+          {
+            "title": "shadcn-ui/ui",
+            "url": "https://github.com/shadcn-ui/ui",
+            "intro": "一套设计好的网页界面组件，代码可以直接复制修改，用来搭自己的组件库。",
+            "features": [
+              "提供设计精美的现成界面组件",
+              "代码可自由复制、修改和扩展",
+              "组件注重可访问性",
+              "可在此基础上建自己的组件库"
+            ],
+            "guide": "面向开发者，需要 Node 环境，按官网文档把组件代码加进自己的项目里使用，不是装个软件就能用的工具。",
+            "steps": [
+              "先安装 Node 环境",
+              "访问 ui.shadcn.com/docs 查看文档",
+              "按文档把组件代码加入项目"
+            ],
+            "install": "",
+            "summary": "一套设计好的网页界面组件，代码可以直接复制修改，用来搭自己的组件库。",
+            "source": "GitHub",
+            "stars": "127848",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make your own.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从手机去广告到桌面启动器，再到画图与界面组件，都在帮人少点几下、少看几条广告。"
+      }
+    ]
+  }
+}
