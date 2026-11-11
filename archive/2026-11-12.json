@@ -1,0 +1,295 @@
+{
+  "date": "2026-11-12",
+  "generated_at": "2026-11-11T23:56:04.540112+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 275,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-12",
+    "digest": "谷歌发布Gemini Decisions API，Kimi推出托管智能体，沐曦优必选合资公司融资5亿",
+    "keywords": [
+      "Gemini",
+      "Kimi",
+      "沐曦",
+      "优必选",
+      "AI智能体"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "美联航禁止AI代理代订机票",
+            "summary": "[[美联航]]以隐私和监管为由，禁止个人AI助手代订机票，称目前尝试者尚少。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
+            "title_original": "United won’t let your AI agent book your flight",
+            "excerpt": "United says it won't let personal AI assistants book tickets on the airline, citing both privacy and regulatory concerns. The company says it hasn't yet seen many people try to use AI agents to book their flights, The Wall Street Journal reports, in line with observations from other businesses like Doordash. But Unite…",
+            "is_foreign": true
+          },
+          {
+            "title": "字节跳动据报研发自有AI代理",
+            "summary": "[[字节跳动]]据报正研发自有AI代理，意在竞争[[Meta]]的Muse。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2314064/bytedance-is-reportedly-working-on-its-own-ai-agent/",
+            "title_original": "ByteDance is reportedly working on its own AI agent",
+            "excerpt": "The Chinese company wants to compete with Meta's Muse.",
+            "is_foreign": true
+          },
+          {
+            "title": "Databricks新AI代理向CEO直言真相",
+            "summary": "[[Databricks]]有1.2万名员工，CEO [[Ali Ghodsi]]用新版[[Genie]]代理获取未经过滤的反馈。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/11/11/databricks-new-ai-agent-tells-ceo-ali-ghodsi-the-unvarnished-truth/",
+            "title_original": "Databricks’ new AI agent tells CEO Ali Ghodsi the unvarnished truth",
+            "excerpt": "With Databricks at 12,000 employees, AI Ghodsi is the first to admit that he can't know everyone and that they are unlikely to confess the things that go wrong to him. But he doesn't need them to. He uses Databricks' newly revised Genie agent for that.",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌发布Gemini Decisions API",
+            "summary": "[[谷歌]]发布[[Gemini Decisions API]]，支持是/否、选择与评分三类问题，HN获207点。",
+            "source": "Hacker News",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+            "title_original": "Gemini Decisions API",
+            "excerpt": "Article URL: https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/ \n Comments URL: https://news.ycombinator.com/item?id=50456791 \n Points: 207 \n # Comments: 69",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini Decisions API与Jev对比",
+            "summary": "[[Simon Willison]]称[[Gemini Decisions API]]与Jev几乎相同，复用Noul术语，定价一致。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/",
+            "title_original": "Gemini Decisions API",
+            "excerpt": "Gemini Decisions API \nGoogle join Jev and OpenAI in the decision model category with \"Gemini Decision 1\". This new model API is almost identical to Jev: it supports the same three types of questions (yes/no, choice, and rubric-scoring) and even reuses Jev's term \"Noul\" for a yes/no question. \n It's priced the same as…",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "Kimi推出托管智能体数字员工",
+            "summary": "[[月之暗面]]发布[[Kimi]]托管智能体，Agent计价锚点从软件预算转向人力预算。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8201187.html",
+            "title_original": "Kimi开始\"出租\"数字员工：Agent计价锚点，正从软件预算滑向人力预算",
+            "excerpt": "月之暗面发布托管智能体，市场多解读为\"功能升级\"。本文判断：这不是产品迭代，是用工形态重构——AI厂商正从\"卖token\"转向\"租数字员工\"。基于\"动态性\"原理，本文提出三层形态租买决策框架，揭示计价锚点正从IT预算滑向人力预算。通用场景租是主航道，但买不会消失；垂直场景进入混合态。",
+            "is_foreign": false
+          },
+          {
+            "title": "曦选创智完成5亿元天使轮融资",
+            "summary": "[[沐曦]]与[[优必选]]合资的曦选创智完成5亿元天使轮融资，纪源资本、经纬创投领投。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/025/807.htm",
+            "title_original": "沐曦和优必选联姻造具身芯片，消息称合资公司曦选创智融资 5 亿元",
+            "excerpt": "IT之家 11 月 11 日消息，据 21 世纪经济报道消息，曦选创智科技（无锡）有限公司（以下简称“曦选创智”）近期完成 5 亿元人民币天使轮融资。本轮融资由纪源资本、经纬创投联合领投。 据悉，本轮资金计划主要用于核心芯片与计算平台研发、软件工具链建设、研发团队扩充，以及与机器人厂商和行业客户开展联合验证，完成量产交付。 IT之家查询官网获悉，曦选创智成立于 2026 年 5 月，是由国产 GPU“四小龙”之一 沐曦股份 与“人形机器人第一股” 优必选 共同发起成立。 据介绍，曦选创智致力于成为国内领先的具身智能端侧计算平台企业， 围绕芯片、模组、软件工具链与工程适配，连接模型与真实任务 。公司注册于无锡，在上海、深圳、北京布局…",
+            "is_foreign": false
+          },
+          {
+            "title": "大模型厂商天猫双11打5折",
+            "summary": "[[智谱]]、[[MiniMax]]、千问办公、阿里云、Qoder等大模型厂商11月11日在天猫打5折。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/509085.html",
+            "title_original": "卷起来了！11月11日，大模型厂商在天猫打5折",
+            "excerpt": "大模型厂商智谱、MiniMax、千问办公、阿里云、Qoder都在天猫打5折。",
+            "is_foreign": false
+          },
+          {
+            "title": "Gemini 4 Carbon全面开放",
+            "summary": "[[谷歌]]最强模型[[Gemini 4 Carbon]]全面开放，一夜重写OpenCode桌面应用，价格仅为Fable 5.2的1/4。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/YiANe38yfSYitvZOtab0?utm_source=rss&utm_medium=article",
+            "title_original": "谷歌最强模型 Gemini 4 Carbon 全面开放：一夜重写 OpenCode 桌面应用、价格仅为 Fable 5.2 的 1/4",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "派早报：700号段保护服务试点获批",
+            "summary": "700号段保护服务试点获批，卫星导航基准站网安全国标发布，[[影目]]召回4701副AIR3眼镜。",
+            "source": "少数派",
+            "url": "https://sspai.com/post/118905",
+            "title_original": "派早报：700 号段保护服务试点获批、Claude Code 设置文件泄露凭据等",
+            "excerpt": "卫星导航基准站网安全国标发布，影目召回 4701 副 AIR3 眼镜等。 查看全文",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "亚马逊黑五网一推创纪录独家优惠",
+            "summary": "[[亚马逊]]黑五和网一推出创纪录独家优惠，并鼓励消费者通过AI个性化购物。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/amazon-black-friday-cyber-monday-holiday-deals/874359/",
+            "title_original": "Amazon’s Black Friday, Cyber Monday deals boast record exclusives",
+            "excerpt": "The company is also encouraging consumers to personalize their shopping journeys via artificial intelligence.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "livliv-dev/player",
+            "url": "https://github.com/livliv-dev/player",
+            "intro": "在网页里放一个会动、会说话、能跟着你表情变化的虚拟角色。",
+            "features": [
+              "几行代码把角色放进网页或直播画面",
+              "麦克风或视频声音自动对口型",
+              "摄像头捕捉你的表情同步到角色",
+              "自带21个不同风格角色可直接用"
+            ],
+            "guide": "需要先装 Node.js，然后在项目里安装这个播放器包，用几行代码就能把角色显示在网页画布上；也可以直接打开官方在线示例先试玩。",
+            "steps": [
+              "先安装 Node.js 环境",
+              "运行 npm install @livliv-dev/player",
+              "在代码里引入 Player 并绑定画布",
+              "打开示例页面查看效果"
+            ],
+            "install": "npm install @livliv-dev/player",
+            "summary": "在网页里放一个会动、会说话、能跟着你表情变化的虚拟角色。",
+            "source": "GitHub",
+            "stars": "1491",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "A lightweight 2.5D character player for the web, with lip sync and webcam face tracking.",
+            "is_foreign": true
+          },
+          {
+            "title": "JuneYaooo/rea-video",
+            "url": "https://github.com/JuneYaooo/rea-video",
+            "intro": "把一段视频拆成一个个镜头，告诉你哪些是实拍、哪些是AI生成、哪些是代码做的，并给出复刻方案。",
+            "features": [
+              "逐镜头判断视频是实拍还是AI生成",
+              "生成一份完整的复刻计划",
+              "输出带截图和证据的网页报告",
+              "分析背景音乐和节奏"
+            ],
+            "guide": "需要先装好 ffmpeg 和 Python 3.10 以上，然后在 Claude Code 等能执行命令的 AI 助手里说一句话，它会自动安装并分析你给的视频文件。",
+            "steps": [
+              "安装 ffmpeg（如 brew install ffmpeg）",
+              "克隆仓库并进入目录",
+              "运行 bash scripts/install_skill.sh",
+              "在 AI 助手里让它分析视频路径"
+            ],
+            "install": "bash scripts/install_skill.sh",
+            "summary": "把一段视频拆成一个个镜头，告诉你哪些是实拍、哪些是AI生成、哪些是代码做的，并给出复刻方案。",
+            "source": "GitHub",
+            "stars": "7053",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. 逆向一切视频，逐个镜头看是拍的、AI 生成的还是代码做的，再告诉你怎么复刻。",
+            "is_foreign": true
+          },
+          {
+            "title": "Wox-launcher/Wox",
+            "url": "https://github.com/Wox-launcher/Wox",
+            "intro": "一个按键盘就能快速打开软件、找文件、执行操作的启动器，Windows、Mac、Linux 都能用。",
+            "features": [
+              "敲几个字就能打开应用或文件",
+              "全程键盘操作不用鼠标",
+              "支持安装插件扩展功能",
+              "后台常驻只占约150MB内存"
+            ],
+            "guide": "直接下载安装包或用系统包管理器安装即可，装好后用快捷键呼出输入框，输入想找的东西就能用，不需要额外配置。",
+            "steps": [
+              "macOS 用户运行 brew install --cask wox",
+              "Windows 用户运行 winget install -e --id Wox.Wox",
+              "装好后用快捷键呼出搜索框"
+            ],
+            "install": "brew install --cask wox",
+            "summary": "一个按键盘就能快速打开软件、找文件、执行操作的启动器，Windows、Mac、Linux 都能用。",
+            "source": "GitHub",
+            "stars": "27629",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "A cross-platform launcher that simply works",
+            "is_foreign": true
+          },
+          {
+            "title": "JuliusBrussee/caveman",
+            "url": "https://github.com/JuliusBrussee/caveman",
+            "intro": "让 AI 编程助手说话更简短，从而少花 token、少花钱，但答案照样正确。",
+            "features": [
+              "让 AI 回答更精简省下费用",
+              "代码部分保持原样不改动",
+              "提供多种精简档位可选"
+            ],
+            "guide": "README 摘录里没有给出明确的安装命令，只提到它是一个技能加代理，具体怎么装需要看项目文档；使用前需要已有 Claude Code 等 AI 编程助手。",
+            "steps": [],
+            "install": "",
+            "summary": "让 AI 编程助手说话更简短，从而少花 token、少花钱，但答案照样正确。",
+            "source": "GitHub",
+            "stars": "119135",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+            "is_foreign": true
+          },
+          {
+            "title": "supabase/supabase",
+            "url": "https://github.com/supabase/supabase",
+            "intro": "一套开源的在线后端服务，帮开发者省去自己搭数据库、登录和文件存储的麻烦。",
+            "features": [
+              "自带一个托管数据库存数据",
+              "提供用户注册登录功能",
+              "自动生成数据接口",
+              "支持文件上传存储和实时更新"
+            ],
+            "guide": "可以直接用官网的在线服务注册开用，也可以自己部署；README 摘录里没有给出本地安装命令，具体步骤需查阅官方文档。",
+            "steps": [
+              "访问 supabase.com 注册账号",
+              "按文档创建项目并获取密钥"
+            ],
+            "install": "",
+            "summary": "一套开源的在线后端服务，帮开发者省去自己搭数据库、登录和文件存储的麻烦。",
+            "source": "GitHub",
+            "stars": "114895",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让网页角色动起来、拆解视频、快速启动应用、省AI费用、搭后端"
+      }
+    ]
+  }
+}
