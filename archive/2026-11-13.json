@@ -1,0 +1,308 @@
+{
+  "date": "2026-11-13",
+  "generated_at": "2026-11-12T23:58:28.779810+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 281,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-13",
+    "digest": "谷歌发布Gemini 4 Hydrogen，TikTok Shop试水付费会员，字节拟推AI助手。",
+    "keywords": [
+      "Gemini",
+      "Google",
+      "TikTok-Shop",
+      "字节跳动",
+      "MiniMax"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Nectar推出AI代理自动化红人营销",
+            "summary": "[[Nectar]]推出AI代理，帮助品牌发现红人、管理外联与合作并追踪活动结果。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/11/12/nectar-launches-an-ai-agent-to-automate-creator-discovery-and-outreach-for-brands/",
+            "title_original": "Nectar launches an AI agent to automate creator discovery and outreach for brands",
+            "excerpt": "Nectar's new AI agent automates influencer marketing, helping brands discover creators, manage outreach and partnerships, and track campaign results.",
+            "is_foreign": true
+          },
+          {
+            "title": "Meta Muse可代用户打电话",
+            "summary": "[[Meta]]的AI代理[[Muse]]现可代付费订阅用户预约、订位及等待通话。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2315525/metas-muse-can-now-make-calls-on-your-behalf-if-you-have-a-paid-subscription/",
+            "title_original": "Meta's Muse can now make calls on your behalf (if you have a paid subscription)",
+            "excerpt": "The AI agent can schedule appointments, make reservations and wait on hold for you.",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌新Gemini模型更懂复杂问题",
+            "summary": "[[Google]]称新模型[[Gemini 4 Hydrogen]]可拆解多部分问题、错别字及高具体要求，即日起在搜索中提供。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
+            "title_original": "Google’s new Gemini model is better at understanding complicated questions",
+            "excerpt": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses. It's available starting today in search,…",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌正式推出Gemini 4 Hydrogen",
+            "summary": "[[Google]]正式推出[[Gemini 4 Hydrogen]]，取代3.8 Flash，未采用Carbon和Argon的缓慢安全发布方式。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/",
+            "title_original": "Google rolls out Gemini 4 Hydrogen, finally replacing 3.8 Flash",
+            "excerpt": "Gemini 4 Hydrogen isn't getting a slow, security-conscious release like Carbon and Argon.",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini 4 Hydrogen与Orchestrator",
+            "summary": "[[Google]]在Antigravity博客介绍[[Gemini 4 Hydrogen]]与Orchestrator，HN讨论获243点。",
+            "source": "Hacker News",
+            "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+            "title_original": "Gemini 4 Hydrogen and Orchestrator",
+            "excerpt": "Article URL: https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/ \n Comments URL: https://news.ycombinator.com/item?id=50472260 \n Points: 243 \n # Comments: 58",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "谷歌Gemini 4 Hydrogen定价公布",
+            "summary": "[[Gemini 4 Hydrogen]]主打日常编程与智能体工作流，百万Token输入1.5美元、输出7.5美元，智能指数最高54。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/026/446.htm",
+            "title_original": "谷歌发布 Gemini 4 Hydrogen 模型：主打日常编程与智能体工作流，百万 Token 输入 1.5 美元",
+            "excerpt": "IT之家 11 月 13 日消息，谷歌正式推出 Gemini 4 Hydrogen 模型，主打快速执行与高效运行，面向日常编码和智能体工作流场景，将 Gemini 4 系列能力全面下放至所有层级用户。 输入：每百万 Tokens 1.50 美元 （IT之家注：现汇率约合 10.0 元人民币） 输出：每百万 Tokens 7.50 美元 （现汇率约合 50.1 元人民币） 该定价覆盖 全 100 万 Token 上下文窗口 ，无分段阶梯计价。在 Artificial Analysis 智能指数中，Hydrogen 默认高思考档位得分 51，高于 Gemini 4 Argon 的 50，最高 xhigh 档位可达 54，同时任务完成速…",
+            "is_foreign": false
+          },
+          {
+            "title": "MiniMax开源SOTA生图模型",
+            "summary": "[[MiniMax]]开源SOTA生图模型，支持原生4K，单张成本约两毛。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/509440.html",
+            "title_original": "多模态“源神”！MiniMax开源SOTA生图模型，原生4K，一张两毛",
+            "excerpt": "「CAD拆解」",
+            "is_foreign": false
+          },
+          {
+            "title": "苹果关闭支持社区，字节拟推AI助手",
+            "summary": "[[苹果]]宣布支持社区11月20日永久关闭；[[字节跳动]]计划数周内推出类似Meta Muse的AI助手。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/373839",
+            "title_original": "苹果突然永久关闭官方「支持社区」；字节即将推出个人 AI 助手；华为新品牌星芒 OSTA 曝光 | 极客早知道",
+            "excerpt": "苹果官方社区即将永久关闭 \n 11 月 11 日，苹果官网突然宣布，Apple 支持社区将于 2026 年 11 月 20 日永久关闭。即日起，社区将不再接受新帖子，并转为只读模式。用户仍可前往官方 Apple 支持网站，获取值得信赖的指导和帮助。 \n 苹果公告称，我们衷心感谢各位社区成员一直以来贡献宝贵的时间和专业知识，帮助其他用户解决 Apple 产品使用中遇到的问题。（来源：新浪科技） \n \n \n 消息称字节跳动发力智能体赛道，计划推出类似 Meta Muse 的 AI 助手 \n 11 月 11 日消息，据彭博社报道，字节跳动计划在未来几周内推出一款类似 Meta Muse 的 AI 助手，巩固其在 AI 视频生成领域的领先…",
+            "is_foreign": false
+          },
+          {
+            "title": "豆包工作接入多款第三方模型",
+            "summary": "[[豆包工作]]接入[[Kimi K3.1 Pro]]、[[GLM 5.3]]、DeepSeek V4.1 Flash等第三方模型，并推限时特惠。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8202629.html",
+            "title_original": "今天起，豆包工作接入更多模型了",
+            "excerpt": "11月12日，豆包工作宣布正式接入 Kimi K3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash 等多款第三方模型，并推出限时特惠计划。",
+            "is_foreign": false
+          },
+          {
+            "title": "智能体AI记忆与上下文方案",
+            "summary": "[[InfoQ]]中文发布智能体AI架构中记忆、知识与上下文的系统化方案文章。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/COuPKpA6rTf05C6JM10y?utm_source=rss&utm_medium=article",
+            "title_original": "智能体 AI 架构中记忆、知识与上下文的系统化方案",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "TikTok Shop试水付费会员",
+            "summary": "[[TikTok Shop]]向100万购物者推出付费会员层级，提供免费配送与专属折扣。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/tiktok-shop-plus-paid-membership/874451/",
+            "title_original": "TikTok Shop pilots paid membership",
+            "excerpt": "The company recently rolled out a paid tier to 1 million shoppers. With membership, consumers get free shipping and exclusive discounts.",
+            "is_foreign": true
+          },
+          {
+            "title": "2026红人营销指数报告发布",
+            "summary": "[[Modern Retail+ Research]]分析2026年1至9月头部红人社交媒体活动互动数据，发布品牌指南。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/marketing/modern-retail-research-2026-creator-marketing-index-a-brand-guide-to-effective-social-media-campaigns/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Modern Retail+ Research 2026 Creator Marketing Index: A brand guide to effective social media campaigns",
+            "excerpt": "To measure the impact creator content has on brand campaigns, Modern Retail+ Research analyzed the engagement levels on leading creators’ social media campaigns from January 2026 to September 2026.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "voyager-so/vork",
+            "url": "https://github.com/voyager-so/vork",
+            "intro": "给 AI 助手用的 3D 动画引擎，让 AI 自己写代码生成画面并渲染出来",
+            "features": [
+              "AI 用代码描述整个场景并渲染成图",
+              "AI 可自己编写材质、镜头和物理效果",
+              "没有显卡也能用云端 GPU 渲染",
+              "渲染速度比常见工具快数倍"
+            ],
+            "guide": "目前是研究预览版，需要先安装 vork，再让 AI 助手执行初始化命令生成场景并渲染预览；没有显卡可改用官方云端渲染。",
+            "steps": [
+              "安装 vork 命令行工具",
+              "让 AI 执行 vork init my-shot 创建场景",
+              "让 AI 读取 vork help 了解用法",
+              "渲染预览图并检查效果"
+            ],
+            "install": "vork init my-shot",
+            "summary": "给 AI 助手用的 3D 动画引擎，让 AI 自己写代码生成画面并渲染出来",
+            "source": "GitHub",
+            "stars": "1494",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Headless 3D and VFX engine for agents. Research preview.",
+            "is_foreign": true
+          },
+          {
+            "title": "anefzaoui/misterdownloadmanager",
+            "url": "https://github.com/anefzaoui/misterdownloadmanager",
+            "intro": "免费无广告的下载管理器，替代收费下载工具，让文件下得更快",
+            "features": [
+              "多线程加速，大文件下载更快",
+              "支持磁力链接和种子文件下载",
+              "无广告、无需注册、完全免费",
+              "提供浏览器插件接管网页下载"
+            ],
+            "guide": "去官网下载对应系统的安装包，装好后可选装浏览器扩展；支持 Windows、Linux 和 macOS，无需注册账号。",
+            "steps": [
+              "访问官网下载对应系统安装包",
+              "安装并打开 Mister Download Manager",
+              "按需安装浏览器扩展接管下载"
+            ],
+            "install": "",
+            "summary": "免费无广告的下载管理器，替代收费下载工具，让文件下得更快",
+            "source": "GitHub",
+            "stars": "7849",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
+            "is_foreign": true
+          },
+          {
+            "title": "lissy93/dashy",
+            "url": "https://github.com/lissy93/dashy",
+            "intro": "可自己搭建的个人导航主页，把常用网站和服务集中在一页管理",
+            "features": [
+              "集中展示常用链接和应用入口",
+              "实时显示各服务是否在线",
+              "内置多种主题和图标可自由换",
+              "支持搜索、多页面和登录权限"
+            ],
+            "guide": "适合有自己服务器或 NAS 的人，用 Docker 或 Node 部署后通过浏览器访问，再在界面里编辑配置。",
+            "steps": [
+              "准备一台可运行 Docker 的机器",
+              "按官方文档用 Docker 启动 Dashy",
+              "浏览器打开页面进入配置编辑器"
+            ],
+            "install": "",
+            "summary": "可自己搭建的个人导航主页，把常用网站和服务集中在一页管理",
+            "source": "GitHub",
+            "stars": "26983",
+            "language": "Vue",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🚀 A self-hostable personal dashboard built for you. Includes status-checking, widgets, themes, icon packs, a UI editor and tons more!",
+            "is_foreign": true
+          },
+          {
+            "title": "google-gemini/gemini-cli",
+            "url": "https://github.com/google-gemini/gemini-cli",
+            "intro": "在命令行里和 Gemini 对话的 AI 助手，帮你在终端里写代码查资料",
+            "features": [
+              "在终端里直接向 Gemini 提问",
+              "可读写本地文件辅助写代码",
+              "支持接入外部工具扩展能力"
+            ],
+            "guide": "注意：目前仅面向企业版 Gemini Code Assist 授权用户，个人免费版和 Google AI 订阅已迁到另一个命令行工具，安装前先确认自己的账号类型。",
+            "steps": [
+              "确认拥有企业版 Code Assist 授权",
+              "按官方文档安装 Gemini CLI",
+              "在终端运行并登录授权"
+            ],
+            "install": "",
+            "summary": "在命令行里和 Gemini 对话的 AI 助手，帮你在终端里写代码查资料",
+            "source": "GitHub",
+            "stars": "108802",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+            "is_foreign": true
+          },
+          {
+            "title": "thedotmack/claude-mem",
+            "url": "https://github.com/thedotmack/claude-mem",
+            "intro": "给 AI 编程助手加记忆，让它下次接着上次的进度干，不用从头讲一遍",
+            "features": [
+              "自动记录 AI 每次干活的要点",
+              "新会话自动带上相关背景",
+              "需要细节时再按需调取",
+              "支持多种主流 AI 编程助手"
+            ],
+            "guide": "按 README 的快速开始章节安装配置，装好后在你常用的 AI 编程助手里启用即可，无需自己整理笔记。",
+            "steps": [
+              "按 README 快速开始章节安装",
+              "在所用 AI 助手中启用记忆功能",
+              "开始新会话验证上下文是否带上"
+            ],
+            "install": "",
+            "summary": "给 AI 编程助手加记忆，让它下次接着上次的进度干，不用从头讲一遍",
+            "source": "GitHub",
+            "stars": "116560",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw,…",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 助手能画 3D、记住上下文，也让人下载更快、主页更整齐"
+      }
+    ]
+  }
+}

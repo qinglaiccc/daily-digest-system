@@ -1,5 +1,5 @@
 {
-  "classic_offset": 26,
+  "classic_offset": 28,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-10-30T23:55:48.601994+00:00",
   "recent_trending": [
-    "plotly/dash",
-    "ccch1mneyyy/dsh-Go",
-    "rehan-remade/universal-modder",
     "super-productivity/super-productivity",
     "wangzan101/Mika",
     "Jakeschincariol/replica-skill",
@@ -175,12 +172,15 @@
     "Flow-Launcher/Flow.Launcher",
     "livliv-dev/player",
     "JuneYaooo/rea-video",
-    "Wox-launcher/Wox"
+    "Wox-launcher/Wox",
+    "voyager-so/vork",
+    "anefzaoui/misterdownloadmanager",
+    "lissy93/dashy"
   ],
-  "last_run_date": "2026-11-11",
+  "last_run_date": "2026-11-12",
   "last_classic": [
-    "JuliusBrussee/caveman",
-    "supabase/supabase"
+    "google-gemini/gemini-cli",
+    "thedotmack/claude-mem"
   ],
-  "updated_at": "2026-11-11T23:55:51.946713+00:00"
+  "updated_at": "2026-11-12T23:58:15.936526+00:00"
 }
