@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#F4F1EA">
+<meta name="description" content="2026年11月03日 星期二 每日早报：国际与国内科技新闻、新消费动态，以及 GitHub 热门效率与 AI 工具。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每日早报 · 2026年11月03日 星期二">
+<meta property="og:description" content="Anthropic限制Claude游戏克隆；腾讯混元发布Hyra 2.0；DoorDash拟收购Instacart">
+<title>每日早报 · 2026年11月03日 星期二</title>
+
+<!--
+  视觉风格：复古纸质 + 硬核边框（Dashboard）
+    · 底板 #F4F1EA 纸质米色，全站不出现纯白
+    · 所有分隔、卡片、按钮一律 1px/2px 纯黑实线边框，零阴影、零圆角
+    · 点缀色：暗红 #8C2F1F（主）、深绿 #2F5D3A（次），低饱和度复古色
+    · 数字与标签用等宽体（档案卡片感），标题用大号粗体无衬线
+  布局：左侧固定 Sidebar（往期存档，选中项反黑）+ 右侧主内容区
+  交互：Tab 切换用原生 JS，无 JS 时自动退化为「全部板块顺序展开」
+-->
+<style>
+  :root {
+    --paper: #f4f1ea;        /* 纸质米色底板，取代纯白 */
+    --paper-alt: #ebe6da;    /* 略深一档，用于表头/次级区块 */
+    --paper-deep: #e3ddd0;   /* 再深一档，用于 hover */
+    --ink: #111111;
+    --ink-soft: #3d3a34;
+    --muted: #5e5849;        /* 暖灰，在两种纸色上均 ≥ 5.6:1 */
+    --line: #111111;         /* 边框一律纯黑 */
+    --line-soft: #b9b2a2;
+    --accent: #8c2f1f;       /* 暗红 */
+    --accent-2: #2f5d3a;     /* 深绿 */
+
+    --sans: "Helvetica Neue", Helvetica, Arial, "Source Han Sans SC",
+            "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB",
+            "Microsoft YaHei", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+            "Sarasa Mono SC", "Courier New", monospace;
+
+    --sidebar-w: 268px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* 全站零圆角零阴影 —— 硬核边框风格的地基 */
+  * { border-radius: 0 !important; }
+
+  .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+  /* ================= 布局：左 Sidebar + 右内容 ================= */
+  .layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+    min-height: 100vh;
+  }
+
+  /* ================= 左侧 Sidebar ================= */
+  .sidebar {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--paper-alt);
+    border-right: 2px solid var(--line);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand {
+    padding: 18px 16px;
+    border-bottom: 2px solid var(--line);
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .brand-title {
+    display: block;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: .04em;
+  }
+  .brand-sub {
+    display: block;
+    margin-top: 3px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    opacity: .78;
+  }
+
+  .side-label {
+    padding: 14px 16px 8px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .archive-nav { flex: 1 1 auto; }
+
+  .archive-nav ol { margin: 0; padding: 0; list-style: none; }
+
+  .archive-nav a {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-top: 1px solid var(--line-soft);
+    transition: background-color .12s, color .12s;
+  }
+  .archive-nav li:last-child a { border-bottom: 1px solid var(--line-soft); }
+
+  .archive-nav a:hover { background: var(--paper-deep); }
+
+  /* 当前正在看的那一期：反黑高亮 */
+  .archive-nav a.is-current,
+  .archive-nav a.is-current:hover {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+  .archive-nav .d {
+    font-family: var(--mono);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -.02em;
+  }
+  .archive-nav .m {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    color: var(--muted);
+  }
+  .archive-nav a.is-current .m { color: var(--paper); opacity: .82; }
+
+  .archive-nav .dig {
+    grid-column: 2;
+    display: block;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .archive-nav a.is-current .dig { color: var(--paper); opacity: .9; }
+
+  .side-foot {
+    border-top: 2px solid var(--line);
+    padding: 12px 16px 20px;
+    font-size: 12.5px;
+  }
+  .side-foot a {
+    display: block;
+    padding: 4px 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .side-foot a:hover { text-decoration: underline; }
+  .side-foot .note {
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* ================= 右侧内容区 ================= */
+  .content { min-width: 0; padding: 0 0 0; }
+
+  /* ---- 报头 ---- */
+  .masthead {
+    padding: 26px 30px 22px;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper);
+  }
+
+  .masthead-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+
+  .kicker {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .lang { display: flex; border: 1px solid var(--line); }
+  .lang button {
+    appearance: none;
+    border: 0;
+    border-left: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink-soft);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: background-color .12s, color .12s;
+  }
+  .lang button:first-child { border-left: 0; }
+  .lang button:hover { background: var(--paper-deep); }
+  .lang button.on { background: var(--ink); color: var(--paper); font-weight: 700; }
+  .lang button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  h1.masthead-title {
+    margin: 0 0 10px;
+    font-size: clamp(30px, 5.2vw, 58px);
+    line-height: 1.06;
+    font-weight: 800;
+    letter-spacing: -.03em;
+    text-transform: none;
+  }
+
+  .dateline {
+    margin: 0 0 14px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .lead {
+    margin: 0;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: var(--paper-alt);
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 62em;
+  }
+
+  /* ---- KPI 看板 ---- */
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+    border-bottom: 2px solid var(--line);
+    background: var(--paper-alt);
+  }
+  .kpi {
+    padding: 14px 18px;
+    border-right: 1px solid var(--line);
+  }
+  .kpi:last-child { border-right: 0; }
+  .kpi-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .kpi-value {
+    display: block;
+    margin-top: 2px;
+    font-family: var(--mono);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -.03em;
+  }
+  .kpi-value.accent { color: var(--accent); }
+  .kpi-value.green { color: var(--accent-2); }
+
+  /* ---- Tab 栏 ---- */
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  .tab {
+    appearance: none;
+    border: 0;
+    border-right: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink-soft);
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight: 700;
+    padding: 11px 18px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color .12s, color .12s;
+  }
+  .tab:hover { background: var(--paper-deep); }
+  .tab .n {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    color: var(--accent);
+  }
+  .tab .c {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--muted);
+  }
+  .tab[aria-selected="true"] {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .tab[aria-selected="true"] .n,
+  .tab[aria-selected="true"] .c { color: var(--paper); opacity: .85; }
+  .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; }
+
+  /* ---- 面板 ---- */
+  .panels { padding: 0; }
+
+  .panel { padding: 26px 30px 34px; }
+  .panel + .panel { border-top: 2px solid var(--line); }
+
+  /* 无 JS 时全部面板直接铺开，保证内容永远可读 */
+  .js-on .panel { display: none; }
+  .js-on .panel.is-active { display: block; }
+
+  .panel-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--line);
+  }
+  .panel-head h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -.02em;
+  }
+  .panel-head h2 .en {
+    margin-left: 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .panel-head .count {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .panel-lead {
+    margin: 0 0 18px;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent-2);
+    background: var(--paper-alt);
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+
+  /* ---- 新闻条目：档案卡片 ---- */
+  .items { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+
+  .item {
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr);
+    border: 1px solid var(--line);
+    background: var(--paper);
+    transition: background-color .12s;
+  }
+  .item:hover { background: var(--paper-alt); }
+
+  .item-num {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 13px;
+    border-right: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .item:hover .item-num { background: var(--paper-deep); }
+
+  .item-body { padding: 12px 16px 13px; min-width: 0; }
+
+  .item h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: -.01em;
+  }
+  .item h3 a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+  .orig-title {
+    margin: 0 0 7px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  body.mode-orig .orig-title { font-size: 17px; font-weight: 700; color: var(--ink); }
+
+  .summary {
+    margin: 0 0 10px;
+    font-size: 15px;
+    line-height: 1.68;
+    color: var(--ink-soft);
+    max-width: 66em;
+  }
+
+  .excerpt {
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted);
+    max-width: 66em;
+  }
+  body.mode-both .excerpt {
+    padding-left: 12px;
+    border-left: 2px solid var(--line-soft);
+  }
+
+  .item-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    padding-top: 9px;
+    border-top: 1px solid var(--line-soft);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .item-meta .src { color: var(--ink); font-weight: 700; }
+
+  .read-more {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--accent);
+    border: 1px solid var(--line);
+    padding: 5px 11px;
+    transition: background-color .12s;
+    white-space: nowrap;
+  }
+  .read-more:hover { background: var(--ink); }
+  .read-more .ext {
+    width: 7px;
+    height: 7px;
+    border-top: 1.5px solid currentColor;
+    border-right: 1.5px solid currentColor;
+  }
+
+  /* ---- GitHub 仓库卡片 ---- */
+  .repo {
+    border: 1px solid var(--line);
+    background: var(--paper);
+    margin-bottom: 14px;
+  }
+  .repo:last-child { margin-bottom: 0; }
+
+  .repo-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .repo-head h3 {
+    margin: 0;
+    font-family: var(--mono);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    word-break: break-all;
+  }
+  .repo-head h3 a { color: var(--paper); }
+  .repo-head h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  .repo-stats { display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    border: 1px solid var(--paper);
+    padding: 2px 7px;
+    opacity: .92;
+  }
+  .badge.new { background: var(--accent-2); border-color: var(--accent-2); }
+
+  .repo-body { padding: 14px 16px 16px; }
+
+  .field { margin-bottom: 14px; }
+  .field:last-child { margin-bottom: 0; }
+
+  .field-label {
+    display: inline-block;
+    margin-bottom: 6px;
+    padding: 2px 8px;
+    border: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .field p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink);
+    max-width: 66em;
+  }
+
+  .features { margin: 0; padding: 0; list-style: none; display: grid; gap: 5px; }
+  .features li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .features li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: .58em;
+    width: 7px;
+    height: 7px;
+    background: var(--accent-2);
+  }
+
+  .install {
+    margin: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .install::before {
+    content: "$ ";
+    opacity: .6;
+  }
+
+  .repo-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    border-top: 1px solid var(--line);
+    background: var(--paper-alt);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---- 空态 / 提示 ---- */
+  .empty {
+    padding: 22px 16px;
+    border: 1px dashed var(--line-soft);
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .notice {
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    border-bottom: 2px solid var(--line);
+    background: var(--paper-alt);
+  }
+  .notice .mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--line);
+    background: var(--accent);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+  }
+  .notice .body { padding: 12px 16px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); }
+  .notice code {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    padding: 1px 5px;
+    border: 1px solid var(--line-soft);
+    background: var(--paper);
+  }
+
+  /* ---- 翻页 ---- */
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 30px;
+    border-top: 2px solid var(--line);
+    background: var(--paper-alt);
+    font-size: 13.5px;
+  }
+  .pager a {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    transition: background-color .12s, color .12s;
+  }
+  .pager a:hover { background: var(--ink); color: var(--paper); }
+  .pager a:hover .dir { color: var(--paper); opacity: .8; }
+  .pager .dir {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .pager .next { margin-left: auto; align-items: flex-end; text-align: right; }
+
+  /* ---- 页脚 ---- */
+  footer {
+    border-top: 2px solid var(--line);
+    padding: 20px 30px 40px;
+    background: var(--paper-alt);
+    font-size: 12.5px;
+    line-height: 1.8;
+    color: var(--muted);
+  }
+  footer p { margin: 0 0 4px; }
+  footer strong { color: var(--ink-soft); }
+  footer code {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    padding: 1px 5px;
+    border: 1px solid var(--line-soft);
+    background: var(--paper);
+  }
+  footer a { color: var(--accent); font-weight: 700; }
+  footer a:hover { text-decoration: underline; }
+
+  /* ================= 语言模式 ================= */
+  body.mode-zh .lang-orig { display: none; }
+  body.mode-orig .lang-zh { display: none; }
+  /* 双语模式下收起与原题重复的原文（中文源、GitHub 仓库名） */
+  body.mode-both .item:not(.is-foreign) .orig-title { display: none; }
+  body.mode-both .item.same-title .orig-title { display: none; }
+
+  /* ================= 响应式 ================= */
+  @media (max-width: 1000px) {
+    /* 侧栏改为顶部横向条：同一份 DOM，只换排布方式 */
+    .layout { grid-template-columns: 1fr; }
+
+    .sidebar {
+      position: static;
+      height: auto;
+      border-right: 0;
+      border-bottom: 2px solid var(--line);
+    }
+    .archive-nav ol {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .archive-nav ol::-webkit-scrollbar { display: none; }
+    .archive-nav li { flex: 0 0 auto; }
+    .archive-nav a {
+      grid-template-columns: auto;
+      gap: 2px;
+      padding: 9px 14px;
+      border-top: 0;
+      border-right: 1px solid var(--line-soft);
+      text-align: center;
+    }
+    .archive-nav li:last-child a { border-bottom: 0; }
+    .archive-nav .dig { display: none; }
+
+    .side-label { padding: 10px 14px 6px; }
+    .side-foot { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 10px 14px; }
+    .side-foot .note { margin-top: 0; }
+  }
+
+  @media (max-width: 720px) {
+    body { font-size: 15.5px; }
+    .masthead { padding: 20px 16px 18px; }
+    .panel { padding: 20px 16px 26px; }
+    .pager, footer { padding-left: 16px; padding-right: 16px; }
+    .item { grid-template-columns: 40px minmax(0, 1fr); }
+    .item-body { padding: 11px 13px 12px; }
+    .item h3 { font-size: 16px; }
+    .kpi { padding: 11px 14px; }
+    .kpi-value { font-size: 24px; }
+    .tab { padding: 9px 13px; font-size: 12.5px; }
+    .read-more { margin-left: 0; }
+    .notice { grid-template-columns: 1fr; }
+    .notice .mark { justify-content: flex-start; padding: 6px 16px; border-right: 0; border-bottom: 1px solid var(--line); }
+  }
+
+  @media print {
+    .sidebar, .tabs, .lang, .pager { display: none !important; }
+    .js-on .panel { display: block !important; }
+    .layout { display: block; }
+    .item, .repo { break-inside: avoid; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: .01ms !important;
+      animation-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+
+<body class="mode-zh">
+
+<div class="layout">
+
+  <!-- ==================== 左侧：往期存档 ==================== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-title">每日早报</span>
+      <span class="brand-sub">Daily Digest</span>
+    </div>
+
+    <div class="side-label">往期存档 / Archive</div>
+
+    <nav class="archive-nav" aria-label="往期存档">
+      <ol>
+        <li>
+          <a href="../archive/2026-11-14.html"
+             class=""
+>
+            <span class="d">14</span>
+            <span class="m">2026-11</span>
+            <span class="dig">LangChain估值30亿美元；openEuler发布智能体操作系统；微软就全球服务中断致歉</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-11-13.html"
+             class=""
+>
+            <span class="d">13</span>
+            <span class="m">2026-11</span>
+            <span class="dig">谷歌发布Gemini 4 Hydrogen，TikTok Shop试水付费会员，字节拟推AI助手。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-11-12.html"
+             class=""
+>
+            <span class="d">12</span>
+            <span class="m">2026-11</span>
+            <span class="dig">谷歌发布Gemini Decisions API，Kimi推出托管智能体，沐曦优必选合资公司融资5亿</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-11-11.html"
+             class=""
+>
+            <span class="d">11</span>
+            <span class="m">2026-11</span>
+            <span class="dig">谷歌开放最强模型Gemini 4 Carbon，Anthropic发布Claude Fable 5.2降价20%，Grok Build被曝泄露3.5万应用机密。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-11-10.html"
+             class=""
+>
+            <span class="d">10</span>
+            <span class="m">2026-11</span>
+            <span class="dig">Anthropic发布Claude新模型登顶榜单，美团开源万亿参数LongCat-2.5，亚马逊推出文本购物AI代理。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-11-09.html"
+             class=""
+>
+            <span class="d">09</span>
+            <span class="m">2026-11</span>
+            <span class="dig">苹果加速Siri智能体化，腾讯元器停服，移动云与智谱合作</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-11-08.html"
+             class=""
+>
+            <span class="d">08</span>
+            <span class="m">2026-11</span>
+            <span class="dig">Anthropic自动化AI研发引警觉，GitHub新架构支持5000智能体协作，外卖应用转向发现平台</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-11-07.html"
+             class=""
+>
+            <span class="d">07</span>
+            <span class="m">2026-11</span>
+            <span class="dig">Anthropic研究Claude智能体记忆机制，Chainalysis遭黑客窃取全部客户凭证，Reformation三季度营收增19%。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-11-06.html"
+             class=""
+>
+            <span class="d">06</span>
+            <span class="m">2026-11</span>
+            <span class="dig">Meta Muse 上线语音模式，英伟达发布内存与 CPU 新方案，百度开源文心5.5 Flash Base</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-11-05.html"
+             class=""
+>
+            <span class="d">05</span>
+            <span class="m">2026-11</span>
+            <span class="dig">Ripple-65B开源模型发布，Wayfair创疫情后最强增长，国内具身智能与AI模型密集更新</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-11-04.html"
+             class=""
+>
+            <span class="d">04</span>
+            <span class="m">2026-11</span>
+            <span class="dig">CrowdStrike近5亿美元收购两家AI安全公司；谷歌Antigravity上线化学信息学技能；DoorDash宣布收购Instacart。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-11-03.html"
+             class="is-current"
+aria-current="page">
+            <span class="d">03</span>
+            <span class="m">2026-11</span>
+            <span class="dig">Anthropic限制Claude游戏克隆；腾讯混元发布Hyra 2.0；DoorDash拟收购Instacart</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-11-02.html"
+             class=""
+>
+            <span class="d">02</span>
+            <span class="m">2026-11</span>
+            <span class="dig">Anthropic更新Claude限制复刻游戏，DeepSeek公布Super Agent架构，SpaceX三成营收来自Anthropic</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-11-01.html"
+             class=""
+>
+            <span class="d">01</span>
+            <span class="m">2026-11</span>
+            <span class="dig">苹果国行AI接入千问，DeepSeek完成千亿融资并发布新Agent架构</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-31.html"
+             class=""
+>
+            <span class="d">31</span>
+            <span class="m">2026-10</span>
+            <span class="dig">苹果智能入华接入阿里千问，硅基流动港股IPO获备案，英伟达AI代码优化Kimi K3</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-30.html"
+             class=""
+>
+            <span class="d">30</span>
+            <span class="m">2026-10</span>
+            <span class="dig">谷歌发布Gemini 4 Carbon与文件编辑功能，苹果推出首款触屏MacBook Pro，DoorDash 170亿美元收购Instacart。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-29.html"
+             class=""
+>
+            <span class="d">29</span>
+            <span class="m">2026-10</span>
+            <span class="dig">谷歌发布Gemini 4 Carbon登顶智能指数，苹果推首款触控MacBook Pro，Etsy活跃买家两年来首增</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-28.html"
+             class=""
+>
+            <span class="d">28</span>
+            <span class="m">2026-10</span>
+            <span class="dig">谷歌发布Genie 4世界模型，OpenAI推出GPT-6.1 Terra，Anthropic详解Claude平台工程。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-27.html"
+             class=""
+>
+            <span class="d">27</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Anthropic招股书披露安全暂停训练；Kimi发布K3.1 Pro；京东广告联合鲲鹏降时延</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-26.html"
+             class=""
+>
+            <span class="d">26</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Kimi 3.1 Pro开源缩小中美模型差距，DeepSeek开源推理框架并披露融资，Linux基金会报告AI代码贡献激增。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-25.html"
+             class=""
+>
+            <span class="d">25</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Claude支付页新增中国区选项，研究称Grok与GPT选举倾向分歧超九成。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-24.html"
+             class=""
+>
+            <span class="d">24</span>
+            <span class="m">2026-10</span>
+            <span class="dig">月之暗面发布Kimi K3.1 Pro，OpenAI前沿模型训练断网，DeepSeek完成千亿融资</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-23.html"
+             class=""
+>
+            <span class="d">23</span>
+            <span class="m">2026-10</span>
+            <span class="dig">英伟达GTC柏林确认Vera Rubin量产，DeepSeek开源推理系统，沃尔玛开放外部AI购物智能体</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-22.html"
+             class=""
+>
+            <span class="d">22</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Anthropic推出Claude Duet，DeepSeek开源推理框架，Target以AI助手备战假日季</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-21.html"
+             class=""
+>
+            <span class="d">21</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Meta暂停Muse聊天分享功能；DeepSeek新模型登顶开源榜首；沃尔玛捆绑会员挑战亚马逊Prime</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-20.html"
+             class=""
+>
+            <span class="d">20</span>
+            <span class="m">2026-10</span>
+            <span class="dig">OpenCode遭黑客窃取API密钥，微软推守护智能体防AI内部威胁，英伟达量子模拟物理比特减九成。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-19.html"
+             class=""
+>
+            <span class="d">19</span>
+            <span class="m">2026-10</span>
+            <span class="dig">DeepSeek上线新搜索服务与V4.1 Flash模型，英伟达优化Kimi K3推理提速1.68倍。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-18.html"
+             class=""
+>
+            <span class="d">18</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Replit 改用 OpenAI 为默认模型，鹏城云脑Ⅲ万 P 算力上线试运行。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-17.html"
+             class=""
+>
+            <span class="d">17</span>
+            <span class="m">2026-10</span>
+            <span class="dig">印度报告 rogue AI 智能体活动，Meta 发布 Muse Wonder 前沿模型，特斯拉 Roadster2 发布会演示飞跃。</span>
+          </a>
+        </li>
+        <li>
+          <a href="../archive/2026-10-16.html"
+             class=""
+>
+            <span class="d">16</span>
+            <span class="m">2026-10</span>
+            <span class="dig">Meta 发布最强开源模型 Muse Spark Open，英伟达推出 Nemotron 3.5 Super VL；腾讯微信上线免费短剧小程序绿泡泡。</span>
+          </a>
+        </li>
+      </ol>
+    </nav>
+
+    <div class="side-foot">
+      <a href="../archive/index.html">全部往期 →</a>
+      <a href="../index.html">回到今日 →</a>
+      <div class="note">
+        2026年11月03日 星期二<br>
+        2026-11-14 07:58 生成
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== 右侧：主内容 ==================== -->
+  <div class="content">
+
+    <header class="masthead">
+      <div class="masthead-top">
+        <span class="kicker">每日科技与新消费新闻</span>
+        <div class="lang" role="group" aria-label="语言显示模式">
+          <button type="button" data-lang="zh" class="on">中文</button>
+          <button type="button" data-lang="orig">原文</button>
+          <button type="button" data-lang="both">双语</button>
+        </div>
+      </div>
+
+      <h1 class="masthead-title">2026年11月03日 星期二</h1>
+      <p class="dateline">2026.11.03 · 第 30 期</p>
+
+      <p class="lead">Anthropic限制Claude游戏克隆；腾讯混元发布Hyra 2.0；DoorDash拟收购Instacart</p>
+    </header>
+
+    <!-- KPI 看板 -->
+    <div class="kpis">
+      <div class="kpi">
+        <span class="kpi-label">科技新闻</span>
+        <span class="kpi-value accent">10</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">消费新闻</span>
+        <span class="kpi-value accent">2</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">开源项目</span>
+        <span class="kpi-value green">5</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">媒体来源</span>
+        <span class="kpi-value">12</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">RSS 源</span>
+        <span class="kpi-value">24</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-label">本期收录</span>
+        <span class="kpi-value">17</span>
+      </div>
+    </div>
+
+
+    <!-- 板块 Tab -->
+    <nav class="tabs" role="tablist" aria-label="板块切换">
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-intl_tech"
+              aria-controls="panel-intl_tech"
+              aria-selected="true"
+              tabindex="0"
+              data-target="panel-intl_tech">
+        <span class="n">01</span>国际科技新闻
+        <span class="c">5</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-cn_tech"
+              aria-controls="panel-cn_tech"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-cn_tech">
+        <span class="n">02</span>国内科技新闻
+        <span class="c">5</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-intl_consumer"
+              aria-controls="panel-intl_consumer"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-intl_consumer">
+        <span class="n">03</span>国际新消费新闻
+        <span class="c">2</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-cn_consumer"
+              aria-controls="panel-cn_consumer"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-cn_consumer">
+        <span class="n">04</span>国内新消费新闻
+        <span class="c">0</span>
+      </button>
+      <button type="button"
+              class="tab"
+              role="tab"
+              id="tab-github"
+              aria-controls="panel-github"
+              aria-selected="false"
+              tabindex="-1"
+              data-target="panel-github">
+        <span class="n">05</span>GitHub 热门效率与 AI 工具
+        <span class="c">5</span>
+      </button>
+    </nav>
+
+    <!-- 板块面板 -->
+    <div class="panels">
+      <section class="panel is-active"
+               id="panel-intl_tech"
+               role="tabpanel"
+               aria-labelledby="tab-intl_tech"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国际科技新闻<span class="en">International Tech</span></h2>
+          <span class="count">5 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item is-foreign">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/" target="_blank" rel="noopener noreferrer nofollow">AI代理任务token消耗远超聊天</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Stop counting tokens, start counting what ships</p>
+
+                  <p class="summary lang-zh">MIT Technology Review指出，AI代理执行编码任务需规划、测试与纠错，单任务token消耗为普通聊天提示的10至50倍。</p>
+
+                  <p class="excerpt lang-orig" lang="en">When a developer gives an AI agent a coding task, the agent does more than answer once. It plans, generates code, runs tests, and repeats the process to correct errors. A single task can use 10 to 50 times more tokens than a basic chat prompt. The more useful the agent becomes, the more calls…</p>
+
+                  <div class="item-meta">
+<span class="src">MIT Technology Review</span>                    <a class="read-more" href="https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones" target="_blank" rel="noopener noreferrer nofollow">Anthropic限制Claude克隆游戏</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Anthropic clamps down on Claude’s AI video game clones</p>
+
+                  <p class="summary lang-zh">Anthropic更新Claude Code系统提示，禁止该工具用于复刻现有电子游戏，但仍允许用户制作游戏。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Anthropic has updated Claude Code&#39;s system prompt to prevent the AI tool from being used to re-create existing video games, as reported by Tom&#39;s Hardware. Retro gaming is currently being overrun with AI-made decompilations, recompilations, and ports, but while Anthropic will still let people use Claude Code to make ga…</p>
+
+                  <div class="item-meta">
+<span class="src">The Verge</span>                    <a class="read-more" href="https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">03</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://arstechnica.com/ai/2026/11/claudes-new-rules-against-game-cloning-wont-stop-the-ai-copying-boom/" target="_blank" rel="noopener noreferrer nofollow">新规难阻AI游戏克隆潮</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Claude’s new rules against game cloning won’t stop the AI copying boom</p>
+
+                  <p class="summary lang-zh">Ars Technica认为，Anthropic针对游戏克隆的新规无法遏制AI模仿潮，模仿者规模远超单一模型厂商的控制能力。</p>
+
+                  <p class="excerpt lang-orig" lang="en">The tsunami of imitators is way bigger than any one model maker can stem.</p>
+
+                  <div class="item-meta">
+<span class="src">Ars Technica</span>                    <a class="read-more" href="https://arstechnica.com/ai/2026/11/claudes-new-rules-against-game-cloning-wont-stop-the-ai-copying-boom/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">04</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://rikiyat.github.io/blog/weight-space-programming/" target="_blank" rel="noopener noreferrer nofollow">Astra可读写权重改进Qwen</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Astra can read and write weights to improve Qwen</p>
+
+                  <p class="summary lang-zh">Hacker News讨论文章介绍，Astra通过读写模型权重的方式改进Qwen，该帖获1691点、547条评论。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Article URL: https://rikiyat.github.io/blog/weight-space-programming/ 
+ Comments URL: https://news.ycombinator.com/item?id=50341174 
+ Points: 1691 
+ # Comments: 547</p>
+
+                  <div class="item-meta">
+<span class="src">Hacker News</span>                    <a class="read-more" href="https://rikiyat.github.io/blog/weight-space-programming/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">05</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.engadget.com/2300353/google-gemini-poking-through-email-how-to-stop/" target="_blank" rel="noopener noreferrer nofollow">Gemini可读取邮件及关闭方法</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Gemini could be poking through your emails - here&#39;s how to stop it</p>
+
+                  <p class="summary lang-zh">Engadget报道，Gemini可读取、总结邮件并起草回复，文章说明Google如何处理数据及用户退出方式。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Gemini can read your emails, summarize them and draft replies. If you&#39;d rather it didn&#39;t, here&#39;s what Google actually does with your data and how to opt out.</p>
+
+                  <div class="item-meta">
+<span class="src">Engadget</span>                    <a class="read-more" href="https://www.engadget.com/2300353/google-gemini-poking-through-email-how-to-stop/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-cn_tech"
+               role="tabpanel"
+               aria-labelledby="tab-cn_tech"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国内科技新闻<span class="en">China Tech</span></h2>
+          <span class="count">5 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/021/266.htm" target="_blank" rel="noopener noreferrer nofollow">腾讯混元发布Hyra 2.0</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">腾讯混元发布 Hyra 2.0：为模型研发打造可复用工具</p>
+
+                  <p class="summary lang-zh">腾讯混元发布AI科研系统Hyra 2.0，让通用Agent参与科学模型与工具研发，推动成果可复用。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 11 月 2 日消息，今日腾讯混元发布了 AI 科研系统 Hyra 2.0，将研发重点从直接用 AI 攻克科学难题，转向让通用 Agent 参与科学模型、研究工作流及软件工具的研发与升级，让一次研发的成果在后续研究中被反复使用，推动科研范式从“刷题解题”走向“造工具”。 此前，Hyra 1.0 曾驱动开源模型解决加法组合学中悬置五十余年的开放问题，验证了“给 AI 明确评判标准的难题并循环尝试”这一路径的可行性。Hyra 2.0 在此基础上进一步提出，工具升级带来的收益可被下游任务反复复用，从而形成智能复利。 IT之家注意到，架构上，Hyra 2.0 将研究工作拆分为 Overall、Mission 和 Worker 三…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/021/266.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ithome.com/1/021/294.htm" target="_blank" rel="noopener noreferrer nofollow">TenPay Global与万事达卡合作</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">腾讯 TenPay Global 与万事达卡签署合作备忘录，入境扫码支付、汇款与智能体支付同步推进</p>
+
+                  <p class="summary lang-zh">TenPay Global与万事达卡签署合作备忘录，推进入境扫码支付、跨境汇款与智能体支付。</p>
+
+                  <p class="excerpt lang-orig" lang="en">IT之家 11 月 3 日消息，在 11 月 2 日 2026 年香港金融科技周期间，腾讯旗下跨境支付平台 TenPay Global 与万事达卡签署合作备忘录。 腾讯表示，双方将结合万事达卡的全球网络与微信支付生态，推动入境游客使用其已有的数字钱包或银行 App，在中国境内支持扫码支付的商户处完成付款，并将合作范围延伸至跨境汇款和智能体支付领域。 万事达卡数据显示，截至 2026 年 6 月的一年内，中国内地入境消费同比增长 51.3%。2026 年 1 至 8 月，境外电子钱包通过微信支付在中国境内的交易笔数和交易金额分别同比增长 81.8% 和 80.6%。TenPay Global 目前与全球 60 多家银行和汇款机构合作…</p>
+
+                  <div class="item-meta">
+<span class="src">IT之家</span>                    <a class="read-more" href="https://www.ithome.com/1/021/294.htm" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">03</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.tmtpost.com/8189530.html" target="_blank" rel="noopener noreferrer nofollow">代码助手响应速度的工业逻辑</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">为什么最聪明的代码助手，反而不能秒回你的消息？</p>
+
+                  <p class="summary lang-zh">钛媒体文章指出，成熟工业级智能体应沉在代码仓库底部按规矩交付，而非充当抢注意力的即时助手。</p>
+
+                  <p class="excerpt lang-orig" lang="en">一个真正成熟的工业级智能体，在研发流线里没必要当个让人提心吊胆的话痨助手，老老实实当一套沉在代码仓库底部、不抢注意力、按规矩交付的自动化工装就够了。</p>
+
+                  <div class="item-meta">
+<span class="src">钛媒体</span>                    <a class="read-more" href="https://www.tmtpost.com/8189530.html" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">04</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.infoq.cn/article/WmlATgJudjwPKqHf4QgX?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer nofollow">Buildkite提出CI智能体新思路</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">CI 出错后，谁来把关？Buildkite 的智能体新思路</p>
+
+                  <p class="summary lang-zh">InfoQ 中文报道，Buildkite提出CI出错后由智能体把关的新思路，探索自动化交付中的责任归属。</p>
+
+                  <p class="excerpt lang-orig" lang="en">点击查看原文&gt;</p>
+
+                  <div class="item-meta">
+<span class="src">InfoQ 中文</span>                    <a class="read-more" href="https://www.infoq.cn/article/WmlATgJudjwPKqHf4QgX?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <span class="item-num">05</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.ifanr.com/1687043?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=" target="_blank" rel="noopener noreferrer nofollow">爱范儿早报：苹果iPad Pro等动态</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">早报｜苹果或为iPad Pro加入均热板/ChatGPT与Codex将共享额度/奇瑞回应智界独立：希望团队更像新势力</p>
+
+                  <p class="summary lang-zh">爱范儿早报称苹果或为iPad Pro加入均热板，ChatGPT与Codex将共享额度，奇瑞回应智界独立。</p>
+
+                  <p class="excerpt lang-orig" lang="en">· 多家车企公布 10 月成绩单
+· 奥特曼与三星约 50 名高管座谈，讨论 AI 未来十年的商业应用
+· 西湖大学成立世界模型研究中心，计划三年内构建千亿参数模型 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。</p>
+
+                  <div class="item-meta">
+<span class="src">爱范儿</span>                    <a class="read-more" href="https://www.ifanr.com/1687043?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-intl_consumer"
+               role="tabpanel"
+               aria-labelledby="tab-intl_consumer"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国际新消费新闻<span class="en">International Consumer</span></h2>
+          <span class="count">2 条</span>
+        </div>
+
+
+            <ol class="items">
+              <li class="item is-foreign">
+                <span class="item-num">01</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.modernretail.co/operations/what-doordashs-proposed-acquisition-of-instacart-means-for-uber-amazon-and-the-rest-of-the-quick-commerce-space/?utm_campaign=modernretaildis&amp;utm_medium=rss&amp;utm_source=general-rss" target="_blank" rel="noopener noreferrer nofollow">DoorDash拟收购Instacart影响分析</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">What DoorDash’s proposed acquisition of Instacart means for Uber, Amazon and the rest of the quick commerce space</p>
+
+                  <p class="summary lang-zh">Modern Retail分析DoorDash拟收购Instacart对Uber、Amazon及即时零售竞争格局的影响。</p>
+
+                  <p class="excerpt lang-orig" lang="en">The race to be the go-to platform for shoppers when they want products delivered quickly is about to get a lot more cutthroat after DoorDash announced its intent to acquire Instacart last week. Here&#39;s what it means for the quick commerce space, and other formidable players like Uber and Amazon.</p>
+
+                  <div class="item-meta">
+<span class="src">Modern Retail</span>                    <a class="read-more" href="https://www.modernretail.co/operations/what-doordashs-proposed-acquisition-of-instacart-means-for-uber-amazon-and-the-rest-of-the-quick-commerce-space/?utm_campaign=modernretaildis&amp;utm_medium=rss&amp;utm_source=general-rss" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item is-foreign">
+                <span class="item-num">02</span>
+                <div class="item-body">
+                  <h3 class="lang-zh">
+                    <a href="https://www.retaildive.com/spons/your-catalog-may-already-be-visible-to-ai-agents-making-it-trustworthy-is/872994/" target="_blank" rel="noopener noreferrer nofollow">AI代理已可见商品目录</a>
+                  </h3>
+
+                  <p class="orig-title lang-orig" lang="en">Your catalog may already be visible to AI agents. Making it trustworthy is the next step.</p>
+
+                  <p class="summary lang-zh">Retail Dive指出，商品目录可能已对AI代理可见，建立可信度是下一步，并列出代理优化的三大障碍。</p>
+
+                  <p class="excerpt lang-orig" lang="en">Three barriers hinder agentic optimization. Discover how AI agents evaluate products and sway shoppers.</p>
+
+                  <div class="item-meta">
+<span class="src">Retail Dive</span>                    <a class="read-more" href="https://www.retaildive.com/spons/your-catalog-may-already-be-visible-to-ai-agents-making-it-trustworthy-is/872994/" target="_blank" rel="noopener noreferrer nofollow">
+                      阅读全文<span class="ext" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+      </section>
+      <section class="panel"
+               id="panel-cn_consumer"
+               role="tabpanel"
+               aria-labelledby="tab-cn_consumer"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>国内新消费新闻<span class="en">China Consumer</span></h2>
+          <span class="count">0 条</span>
+        </div>
+
+
+        <p class="empty">今日无新增重大动态 —— 版面宁缺毋滥，已过滤重复与低信噪比内容。</p>
+      </section>
+      <section class="panel"
+               id="panel-github"
+               role="tabpanel"
+               aria-labelledby="tab-github"
+               tabindex="0">
+
+        <div class="panel-head">
+          <h2>GitHub 热门效率与 AI 工具<span class="en">GitHub Trending Tools</span></h2>
+          <span class="count">5 条</span>
+        </div>
+
+        <p class="panel-lead">让游戏、电视、时间记录和 AI 数据获取更省心</p>
+
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/valentderah/totk-pc-recomp" target="_blank" rel="noopener noreferrer nofollow">valentderah/totk-pc-recomp</a></h3>
+                <div class="repo-stats">
+<span class="badge">4k stars</span><span class="badge">C</span><span class="badge new">24h 新建</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>把《塞尔达传说：王国之泪》搬到电脑上原生运行，不用模拟器。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>在 Windows 和 Linux 电脑上直接玩</li><li>默认 60 帧，最高可到 144 帧</li><li>支持超宽屏和 HDR 画面</li><li>游戏内按 F1 调设置、F10 看性能</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>需要你自己从游戏机里导出正版游戏文件和更新包，项目不提供游戏文件；然后在电脑上编译运行，目前是早期版本，可能有画面问题和崩溃。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/valentderah/totk-pc-recomp" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/Gathin23/cleanyourtv" target="_blank" rel="noopener noreferrer nofollow">Gathin23/cleanyourtv</a></h3>
+                <div class="repo-stats">
+<span class="badge">50.4k stars</span><span class="badge">Python</span><span class="badge new">24h 新建</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>给安卓电视瘦身，去掉预装广告软件，换成苹果电视风格首页。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>通过 Wi-Fi 远程清理电视预装软件</li><li>把电视首页换成苹果电视风格</li><li>支持备份和恢复电视设置</li><li>提供社区做的手机和电脑端应用</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>需要一台安卓或谷歌电视，并在电视开发者选项里打开 USB 调试；可以用编程助手约十五分钟完成，或使用社区应用。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/Gathin23/cleanyourtv" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/ActivityWatch/activitywatch" target="_blank" rel="noopener noreferrer nofollow">ActivityWatch/activitywatch</a></h3>
+                <div class="repo-stats">
+<span class="badge">19.5k stars</span><span class="badge">Python</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>自动记录你电脑上用了什么、花了多久，数据只存在自己电脑里。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>记录当前用的软件和窗口标题</li><li>记录浏览器标签页和网址</li><li>根据键鼠活动判断你是否离开</li><li>数据本地保存，自己掌控</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>需要先安装 Python 环境，然后从官网下载安装包或按文档安装；数据保存在本地，可自行决定记录多少。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/ActivityWatch/activitywatch" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/tensorflow/tensorflow" target="_blank" rel="noopener noreferrer nofollow">tensorflow/tensorflow</a></h3>
+                <div class="repo-stats">
+<span class="badge">201.3k stars</span><span class="badge">C++</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>谷歌开源的机器学习工具包，帮开发者搭建和训练 AI 模型。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>用 Python 和 C++ 写机器学习程序</li><li>支持 GPU 加速训练</li><li>有大量现成工具和社区资源</li><li>可部署到多种设备和平台</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>需要先装 Python，然后用 pip 安装；想用显卡加速要按文档配置 CUDA，也可以改用 Docker 容器。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">一键安装</span>
+                  <pre class="install">pip install tensorflow</pre>
+                </div>
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/tensorflow/tensorflow" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+            <article class="repo">
+              <div class="repo-head">
+                <h3><a href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener noreferrer nofollow">firecrawl/firecrawl</a></h3>
+                <div class="repo-stats">
+<span class="badge">198k stars</span><span class="badge">TypeScript</span>                </div>
+              </div>
+
+              <div class="repo-body">
+                <div class="field">
+                  <span class="field-label">项目通俗简介</span>
+                  <p>把网页和文档变成 AI 能直接读的干净数据，省去抓取麻烦。</p>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">核心功能亮点</span>
+                  <ul class="features">
+<li>把任意网页转成 Markdown 或结构化数据</li><li>支持搜索网页并返回完整内容</li><li>能解析 PDF、DOCX 等文档</li><li>可让 AI 在页面上点击滚动后再提取</li>                  </ul>
+                </div>
+
+                <div class="field">
+                  <span class="field-label">应用与部署指南</span>
+                  <p>可以直接用官方在线服务，也可以自己部署；自部署需要 Node 环境，并可能需要配置 API Key。</p>
+                </div>
+
+              </div>
+
+              <div class="repo-foot">
+                <span>DeepSeek 通俗解析</span>
+                <a class="read-more" href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener noreferrer nofollow">
+                  阅读全文<span class="ext" aria-hidden="true"></span>
+                </a>
+              </div>
+            </article>
+      </section>
+    </div>
+
+    <nav class="pager" aria-label="往期翻页">
+      <a class="next" href="../archive/2026-11-04.html">
+        <span class="dir">更新一期</span>2026年11月04日 星期三
+      </a>
+      <a href="../archive/2026-11-02.html">
+        <span class="dir">更早一期</span>2026年11月02日 星期一
+      </a>
+    </nav>
+
+    <footer>
+      <p>由 <strong>GitHub Actions</strong> 每日自动生成 · 新闻摘要由 <strong>DeepSeek</strong> 产出，开源项目由 <strong>DeepSeek + README 原文</strong> 通俗解析</p>
+      <p>本期收录 17 条 · 原始素材 296 条新闻与 1 次开源检索 · 采集自 24 个 RSS 源（成功 24 / 失败 2）</p>
+      <p>正文摘要与项目解析由 AI 生成，可能存在偏差；原文标题、摘录与安装命令直接取自信息源，未经改写。所有内容版权归原媒体与项目作者所有，请以「阅读全文」指向的原文为准。</p>
+      <p><a href="../archive/index.html">往期存档</a> · <a href="../index.html">回到今日早报</a></p>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var LANG_KEY = 'daily-digest-lang';
+  var TAB_KEY = 'daily-digest-tab';
+  var MODES = ['zh', 'orig', 'both'];
+
+  /* ---------- 语言切换 ---------- */
+  function applyLang(mode) {
+    if (MODES.indexOf(mode) === -1) mode = 'zh';
+    document.body.classList.remove('mode-zh', 'mode-orig', 'mode-both');
+    document.body.classList.add('mode-' + mode);
+
+    var buttons = document.querySelectorAll('.lang button');
+    for (var i = 0; i < buttons.length; i++) {
+      var on = buttons[i].getAttribute('data-lang') === mode;
+      buttons[i].classList.toggle('on', on);
+      buttons[i].setAttribute('aria-pressed', on ? 'true' : 'false');
+    }
+  }
+
+  document.querySelector('.lang').addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-lang]');
+    if (!btn) return;
+    var mode = btn.getAttribute('data-lang');
+    applyLang(mode);
+    try { localStorage.setItem(LANG_KEY, mode); } catch (err) {}
+  });
+
+  /* ---------- 板块 Tab ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.panel'));
+
+  function activate(key, opts) {
+    opts = opts || {};
+    var found = false;
+
+    tabs.forEach(function (tab) {
+      var on = tab.getAttribute('data-target') === 'panel-' + key;
+      tab.setAttribute('aria-selected', on ? 'true' : 'false');
+      tab.tabIndex = on ? 0 : -1;
+      if (on) found = true;
+    });
+    panels.forEach(function (panel) {
+      panel.classList.toggle('is-active', panel.id === 'panel-' + key);
+    });
+
+    if (found && !opts.silent) {
+      try { localStorage.setItem(TAB_KEY, key); } catch (err) {}
+    }
+    return found;
+  }
+
+  document.querySelector('.tabs').addEventListener('click', function (e) {
+    var tab = e.target.closest('.tab');
+    if (!tab) return;
+    var key = tab.getAttribute('data-target').replace('panel-', '');
+    activate(key);
+  });
+
+  /* 方向键在 Tab 间移动 —— 标准 tablist 键盘行为 */
+  document.querySelector('.tabs').addEventListener('keydown', function (e) {
+    var idx = tabs.indexOf(document.activeElement);
+    if (idx === -1) return;
+
+    var next = null;
+    if (e.key === 'ArrowRight') next = (idx + 1) % tabs.length;
+    else if (e.key === 'ArrowLeft') next = (idx - 1 + tabs.length) % tabs.length;
+    else if (e.key === 'Home') next = 0;
+    else if (e.key === 'End') next = tabs.length - 1;
+    if (next === null) return;
+
+    e.preventDefault();
+    tabs[next].focus();
+    activate(tabs[next].getAttribute('data-target').replace('panel-', ''));
+  });
+
+  /* 支持 #github 这类锚点直达，并在 hash 变化时同步 */
+  function fromHash() {
+    var h = (location.hash || '').replace('#', '');
+    if (h && document.getElementById('panel-' + h)) {
+      activate(h, { silent: true });
+      return true;
+    }
+    return false;
+  }
+
+  window.addEventListener('hashchange', fromHash);
+
+  /* ---------- 初始化 ---------- */
+  // 打开 JS 才隐藏非活动面板；无 JS 时所有板块顺序展开，内容永远可读
+  document.documentElement.classList.add('js-on');
+  document.body.classList.add('js-on');
+
+  var savedLang = null;
+  try { savedLang = localStorage.getItem(LANG_KEY); } catch (err) {}
+  applyLang(savedLang || 'zh');
+
+  if (!fromHash()) {
+    var savedTab = null;
+    try { savedTab = localStorage.getItem(TAB_KEY); } catch (err) {}
+    // 记住上次看的板块，但仅供本次会话内切换；首屏仍回到第一个板块，
+    // 避免读者打开页面时看到的不是当日头条
+    if (savedTab && document.getElementById('panel-' + savedTab)) {
+      activate(savedTab, { silent: true });
+    }
+  }
+})();
+</script>
+
+</body>
+</html>
