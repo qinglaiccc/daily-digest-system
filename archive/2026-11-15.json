@@ -1,0 +1,291 @@
+{
+  "date": "2026-11-15",
+  "generated_at": "2026-11-14T23:55:57.993047+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 191,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-15",
+    "digest": "Mercor 750m美元D轮估值200亿美元，DeepSeek开放全家桶API，Cloudflare开源Kitesurf浏览器",
+    "keywords": [
+      "Mercor",
+      "DeepSeek",
+      "Cloudflare",
+      "Kitesurf",
+      "Gemini"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Google Gemini 提示技巧指南",
+            "summary": "Engadget 发布 [[Gemini]] 提示技巧指南，帮助用户获得更好结果。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2312834/how-to-get-better-results-google-gemini/",
+            "title_original": "How to get better results from Google Gemini",
+            "excerpt": "These tips and tricks will help you prompt Gemini better.",
+            "is_foreign": true
+          },
+          {
+            "title": "DeepSeek V3 纯 Jax 实现约200行",
+            "summary": "开发者用约200行纯 [[Jax]] 代码实现 [[DeepSeek V3]]，项目在 Hacker News 获142点。",
+            "source": "Hacker News",
+            "url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax",
+            "title_original": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
+            "excerpt": "Article URL: https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax \n Comments URL: https://news.ycombinator.com/item?id=50497589 \n Points: 142 \n # Comments: 7",
+            "is_foreign": true
+          },
+          {
+            "title": "MiniMax-H3-Image 登 HuggingFace 热门榜",
+            "summary": "[[MiniMax-H3-Image]] 登上 [[HuggingFace]] 热门模型榜，trendingScore 348，下载量1615613。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3-Image",
+            "title_original": "Comfy-Org/MiniMax-H3-Image 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 348）类型 text-to-image。likes 383，下载 1615613。标签：diffusion-single-file、comfyui、text-to-image、base_model:MiniMaxAI/MiniMax-H3-Image、base_model:finetune:MiniMaxAI/MiniMax-H3-Image、license:other。",
+            "is_foreign": true
+          },
+          {
+            "title": "从记忆角度理解 Transformer",
+            "summary": "文章从联想记忆角度解释 [[Transformer]] 原理，在 Lobsters 引发讨论。",
+            "source": "Lobsters",
+            "url": "https://alexwang.ai/posts/associative-memory/",
+            "title_original": "You could have invented transformers from memory",
+            "excerpt": "Comments",
+            "is_foreign": true
+          },
+          {
+            "title": "Mercor 完成7.5亿美元D轮融资",
+            "summary": "[[Mercor]] 完成7.5亿美元D轮融资，估值200亿美元，年化收入30亿美元。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
+            "title_original": "[AINews] Mercor $750m Series D at $20B valuation, $3B run rate",
+            "excerpt": "November 10, 2026 — Google GA's Gemini 4 Carbon.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "Cloudflare 开源 AI 浏览器 Kitesurf",
+            "summary": "[[Cloudflare]] 开源 AI 智能体浏览器 [[Kitesurf]]，运行于 Workers，资源消耗低于 Chromium。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/027/197.htm",
+            "title_original": "Cloudflare 开源为 AI 智能体打造的浏览器 Kitesurf，消耗资源低于 Chromium",
+            "excerpt": "IT之家 11 月 14 日消息，今年 8 月，Cloudflare 推出专为 AI 智能体打造的浏览器 Kitesurf。当地时间 11 月 13 日，Cloudflare 宣布开源 Kitesurf。 据介绍，Kitesurf 运行在 Cloudflare Workers 之上，无需依赖传统的浏览器容器，即可完成 HTML 解析、CSS 应用、执行页面中的 JavaScript 以及网页截图渲染。 同时，它支持 Chrome 开发者工具协议（Chrome DevTools Protocol），用户可以直接使用现有工具对其进行驱动，底层完全无需依赖任何 Chromium 进程或容器。 官方表示，Kitesurf 并没有照搬 Ch…",
+            "is_foreign": false
+          },
+          {
+            "title": "Meta Muse 上线代打电话功能",
+            "summary": "[[Meta]] 旗下 AI 智能体 [[Muse]] 推出代打电话功能，付费用户可让其联系美国商家。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/027/238.htm",
+            "title_original": "智能体帮你联络商家或保险公司，Meta 旗下 Muse 上线代打电话功能",
+            "excerpt": "IT之家 11 月 14 日消息，Meta 旗下 AI 智能体 Muse 推出代打电话功能，开通高级付费订阅后，用户就能让 Muse 代自己联系美国商家。Meta 称，Muse 可以帮助用户处理各种烦琐事务，完成待办事项。 13 日凌晨，Meta 首席 AI 官汪滔在 X 上发文宣布：“Muse 能帮你打完所有不想亲自打的电话。” 据悉，用户可以借助 Muse 联 系保险公司或有线电视服务商、预约美国车管部门的业务办理时间，或是打电话向餐厅订位 。 Muse 会使用 AI 合成语音 与商家工作人员交谈，但这类功能并非总能顺利完成任务。部分商家的工作人员听出对方是 AI 后便直接挂断电话，有人是为了防范诈骗，也有人认为这类来电可能是…",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek 开放全家桶 API",
+            "summary": "[[DeepSeek]] 开放全家桶 API，官方 App 功能均可自由组合调用。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/510003.html",
+            "title_original": "突发！DeepSeek开放全家桶API",
+            "excerpt": "官方App功能均可自由组合调用",
+            "is_foreign": false
+          },
+          {
+            "title": "英伟达员工请愿黄仁勋回归等早报",
+            "summary": "[[英伟达]] 员工请愿黄仁勋回归；两部门提出2030年平均储能约3小时；[[LangChain]] 完成3亿美元C轮融资，估值30亿美元。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1689450?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "早报｜英伟达员工请愿黄仁勋回归/余承东重申华为与赛力斯分工/Microsoft 365故障延续至48小时",
+            "excerpt": "· 两部门公布新型储能方案，提出到 2030 年平均储能约 3 小时\n· LangChain 完成 3 亿美元 C 轮融资，估值 30 亿美元\n· 荣耀 700 系列定档 11 月 23 日，背屏可贴 GIF、看通知 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "实体店购物体验问题与修复探讨",
+            "summary": "Modern Retail 播客探讨实体店自助结账、锁柜商品与库存缺口等问题及零售商修复尝试。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/podcasts/in-store-shopping-experience-broken/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "The in-store shopping experience is broken. Can we fix it?",
+            "excerpt": "Stores still drive retail sales, but self-checkout, locked items and inventory gaps frustrate shoppers. The Modern Retail Podcast breaks down how retailers are attempting to fix these issues.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "FrigadeHQ/yogurt",
+            "url": "https://github.com/FrigadeHQ/yogurt",
+            "intro": "在你电脑本地记录会议并自动生成文字稿和摘要的免费开源工具。",
+            "features": [
+              "边开会边把说话转成文字",
+              "自动整理会议纪要和摘要",
+              "录音和 AI 处理都留在本机",
+              "支持 99 种语言转写"
+            ],
+            "guide": "下载 Mac、Windows 或 Linux 安装包即可使用，无需账号；录音和 AI 处理都在本机完成，建议电脑内存 8GB 以上。",
+            "steps": [
+              "确认系统满足要求：macOS 14.4+ 或 Windows 10 2004+ 等",
+              "从官网或发布页下载对应系统安装包",
+              "安装后打开应用，开始录制会议"
+            ],
+            "install": "",
+            "summary": "在你电脑本地记录会议并自动生成文字稿和摘要的免费开源工具。",
+            "source": "GitHub",
+            "stars": "1482",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Private AI meeting notes that stay on your computer. A free, open-source alternative to Granola for Mac, Windows and Linux.",
+            "is_foreign": true
+          },
+          {
+            "title": "wangzan101/Mika",
+            "url": "https://github.com/wangzan101/Mika",
+            "intro": "装在安卓手机上的 AI 助手，说一句话它就替你在各个 App 里操作。",
+            "features": [
+              "用一句话让它在后台操作 App",
+              "在隐藏后台屏幕操作不打扰你",
+              "能读聊天记录并帮你总结",
+              "帮你比价、加购物车再等你确认"
+            ],
+            "guide": "这是安卓应用，需在手机上安装；它靠系统无障碍权限在后台操作其他 App，安装后按提示授权即可使用。",
+            "steps": [
+              "准备一台安卓手机",
+              "安装 Mika 应用",
+              "按提示开启无障碍等必要权限",
+              "用一句话下达任务并观察后台执行"
+            ],
+            "install": "",
+            "summary": "装在安卓手机上的 AI 助手，说一句话它就替你在各个 App 里操作。",
+            "source": "GitHub",
+            "stars": "8615",
+            "language": "Kotlin",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
+            "is_foreign": true
+          },
+          {
+            "title": "super-productivity/super-productivity",
+            "url": "https://github.com/super-productivity/super-productivity",
+            "intro": "把待办清单、时间记录和每日计划合在一起的离线效率应用。",
+            "features": [
+              "用子任务、项目和标签整理待办",
+              "在时间轴上规划一天的安排",
+              "记录每项任务花了多少时间",
+              "提醒你休息、帮你对抗拖延"
+            ],
+            "guide": "可直接打开网页版使用，也可下载桌面或手机客户端；数据保存在本地，无需注册账号。",
+            "steps": [
+              "打开官网网页版，或下载对应平台客户端",
+              "创建项目和任务",
+              "用时间轴安排当天计划并开始计时"
+            ],
+            "install": "",
+            "summary": "把待办清单、时间记录和每日计划合在一起的离线效率应用。",
+            "source": "GitHub",
+            "stars": "23673",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Super Productivity is an advanced todo list app with integrated Timeboxing and time tracking capabilities. It also comes with integrations for Jira, GitLab, GitHub and Open Project.",
+            "is_foreign": true
+          },
+          {
+            "title": "obra/superpowers",
+            "url": "https://github.com/obra/superpowers",
+            "intro": "给写代码的 AI 助手立规矩，让它先问清需求再动手写代码。",
+            "features": [
+              "先追问你真正想做什么",
+              "把设计方案拆成小段给你确认",
+              "生成连新手都能照做的实施计划",
+              "支持多种主流 AI 编程工具"
+            ],
+            "guide": "这是给 AI 编程助手用的技能包，需先有 Claude Code、Cursor 等工具，再按 README 对应章节安装。",
+            "steps": [
+              "先安装一个支持的 AI 编程工具，如 Claude Code",
+              "按 README 中对应工具的章节完成安装",
+              "启动助手，它会先追问需求再写代码"
+            ],
+            "install": "",
+            "summary": "给写代码的 AI 助手立规矩，让它先问清需求再动手写代码。",
+            "source": "GitHub",
+            "stars": "317645",
+            "language": "Shell",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An agentic skills framework & software development methodology that works.",
+            "is_foreign": true
+          },
+          {
+            "title": "affaan-m/ECC",
+            "url": "https://github.com/affaan-m/ECC",
+            "intro": "给 AI 编程助手加装技能、记忆和安全防护的增强系统。",
+            "features": [
+              "为 AI 助手补充可复用的技能",
+              "让助手记住跨对话的上下文",
+              "给 AI 操作加上安全防护",
+              "支持 Claude Code、Cursor 等多种工具"
+            ],
+            "guide": "需先有 Claude Code 等 AI 编程工具，再通过官方插件方式安装；README 提醒只从官方渠道安装，避免第三方镜像。",
+            "steps": [
+              "先安装 Claude Code 等受支持的 AI 编程工具",
+              "用官方插件命令安装 ecc@ecc 插件",
+              "不要叠加手动完整安装，避免冲突"
+            ],
+            "install": "",
+            "summary": "给 AI 编程助手加装技能、记忆和安全防护的增强系统。",
+            "source": "GitHub",
+            "stars": "303041",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 更懂你的工作：本地记会议、手机代操作、管任务、规范写代码。"
+      }
+    ]
+  }
+}

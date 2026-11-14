@@ -1,5 +1,5 @@
 {
-  "classic_offset": 2,
+  "classic_offset": 4,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-11-13T23:58:23.108682+00:00",
   "recent_trending": [
-    "wavetermdev/waveterm",
-    "patch-gg/pixelfx",
-    "ly05010419/MacNativeGames",
     "danielmiessler/LifeOS",
     "valentderah/totk-pc-recomp",
     "Gathin23/cleanyourtv",
@@ -175,12 +172,15 @@
     "lissy93/dashy",
     "DIYgod/pinky",
     "ccch1mneyyy/dsh-Go",
-    "plotly/dash"
+    "plotly/dash",
+    "FrigadeHQ/yogurt",
+    "wangzan101/Mika",
+    "super-productivity/super-productivity"
   ],
-  "last_run_date": "2026-11-13",
+  "last_run_date": "2026-11-14",
   "last_classic": [
-    "morluto/rea",
-    "openclaw/openclaw"
+    "obra/superpowers",
+    "affaan-m/ECC"
   ],
-  "updated_at": "2026-11-13T23:58:23.628367+00:00"
+  "updated_at": "2026-11-14T23:55:46.509354+00:00"
 }
