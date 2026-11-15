@@ -1,0 +1,294 @@
+{
+  "date": "2026-11-16",
+  "generated_at": "2026-11-15T23:58:31.007246+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 210,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-16",
+    "digest": "黄仁勋辞任英伟达CEO，阿里拟分拆平头哥上市，华为Pura X View销量破百万",
+    "keywords": [
+      "英伟达",
+      "阿里巴巴",
+      "平头哥",
+      "华为",
+      "DeepSeek"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "DeepSeek-V4-Pro衍生模型登HuggingFace热门榜",
+            "summary": "[[DeepSeek-V4-Pro]]衍生模型登上[[HuggingFace]]热门榜，trendingScore 4136，likes 7525，下载 27037。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+            "title_original": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 4136）类型 text-generation。likes 7525，下载 27037。标签：transformers、safetensors、qwen3_5、image-text-to-text、text-generation-inference、unsloth。",
+            "is_foreign": true
+          },
+          {
+            "title": "Inkling-2-Small登HuggingFace热门模型榜",
+            "summary": "[[thinkingmachines]]的[[Inkling-2-Small]]登上[[HuggingFace]]热门榜，likes 343，下载 7329，采用MoE架构。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small",
+            "title_original": "thinkingmachines/Inkling-2-Small 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 327）类型 image-text-to-text。likes 343，下载 7329。标签：transformers、safetensors、inkling2、image-text-to-text、conversational、moe。",
+            "is_foreign": true
+          },
+          {
+            "title": "NaiveAI宣称每秒2100词元，实测编码能力",
+            "summary": "[[NaiveAI]]宣称每秒2100词元，或登顶[[Artificial Analysis]]速度榜，实测编码质量与[[DeepSeek]]相当。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/naiveai/",
+            "title_original": "NaiveAI Promises 2,100 Tokens per Second. How Well Does It Code?",
+            "excerpt": "NaiveAI could potentially top Artificial Analysis’s speed rankings. Our hands-on test suggests its coding quality holds up against DeepSeek.",
+            "is_foreign": true
+          },
+          {
+            "title": "智能体将选择可被攻击的目标",
+            "summary": "[[Hacker News]]讨论文章指出，智能体在决策中会倾向选择可被攻击的对象，获65分、38条评论。",
+            "source": "Hacker News",
+            "url": "https://geoffstearns.com/blog/your-agent-will-pick-the-hackable-one/",
+            "title_original": "Your Agent Will Pick the Hackable One",
+            "excerpt": "Article URL: https://geoffstearns.com/blog/your-agent-will-pick-the-hackable-one/ \n Comments URL: https://news.ycombinator.com/item?id=50510799 \n Points: 65 \n # Comments: 38",
+            "is_foreign": true
+          },
+          {
+            "title": "印度芯片初创Bharat Semi获2400万美元种子轮",
+            "summary": "印度芯片初创[[Bharat Semi]]获2400万美元种子轮，其AI传感器已获[[General Atomics]]等设计订单。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/",
+            "title_original": "Indian chip startup Bharat Semi lands $24M seed round as it eyes global AI sensor market",
+            "excerpt": "Bharat Semi says it has secured design wins for its AI-enabled sensor technology with companies including General Atomics.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "AI版拓麻歌子：日常物品变虚拟宠物",
+            "summary": "[[卡内基梅隆大学]]博士生金大华开发[[OATs]]系统，用电子墨水屏为日常物品赋予可表达情绪的虚拟形象。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/027/443.htm",
+            "title_original": "AI 版拓麻歌子来了：日常物品秒变需要被照顾的虚拟宠物",
+            "excerpt": "IT之家 11 月 15 日消息，忘记给家里的植物浇水了？这一次，你看到的可能不是逐渐变黄的叶子，而是一只显示在小屏幕上的植物形状宠物。它看起来垂头丧气、一脸委屈，仿佛在提醒你赶紧拿起浇水壶。而当你把水浇进土壤后，屏幕上的小宠物又会立刻变得兴奋起来。 这正是 OATs（Object Agent Twins，物体智能体双生体）的设计理念。这是一套面向日常家居物品的微型 AI 智能体系统，通过小巧的电子墨水屏，为各种实体物品赋予能够表达情绪的虚拟形象。 这项技术由卡内基梅隆大学未来交互研究小组（Future Interfaces Group）的一名博士五年级学生金大华（Daehwa Kim）开发。11 月初，她在底特律举行的 ACM…",
+            "is_foreign": false
+          },
+          {
+            "title": "GitLab 19.5发布，智能体开发纳入DevOps",
+            "summary": "[[GitLab]]发布19.5版本，将智能体开发纳入可治理的[[DevOps]]平台能力。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/0IpE2EOypcqMFtL7z4z1?utm_source=rss&utm_medium=article",
+            "title_original": "GitLab 19.5 发布，将智能体开发纳入可治理的 DevOps 平台能力",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "黄仁勋辞任英伟达CEO，阿里拟分拆平头哥上市",
+            "summary": "[[黄仁勋]]辞任[[英伟达]]CEO，CFO克雷斯任临时CEO；[[阿里巴巴]]拟分拆[[平头哥]]港股独立上市。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8205592.html",
+            "title_original": "【数智周报】黄仁勋辞任英伟达CEO ，CFO克雷斯任临时CEO；阿里拟分拆平头哥港股独立上市；Anthropic启动IPO路演，估值较峰值近腰斩……",
+            "excerpt": "（11月9日-14日） DeepSeek发布全家桶应用API；谷歌发布Gemini 4 Hydrogen；微软全球服务中断十小时致歉；美国人工智能建设遭遇电力瓶颈……",
+            "is_foreign": false
+          },
+          {
+            "title": "黄仁勋考虑重返英伟达，微软宕机超30小时",
+            "summary": "[[黄仁勋]]考虑重返[[英伟达]]任CEO；[[微软]]全球服务故障持续超30小时，官方宣布恢复。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1689521?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "早报｜黄仁勋考虑重返英伟达担任CEO/曝苹果智能眼镜明年6月发布/微软全球大宕机结束，持续超30小时",
+            "excerpt": "· 余承东：华为大折叠已成千万人主力机\n· 苹果 HomeView 发售，首批实测遇到语音和账户切换问题\n· 微软服务故障持续超 30 小时，官方宣布恢复 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          },
+          {
+            "title": "华为Pura X View上市66天销量破百万",
+            "summary": "[[华为]]Pura X View上市66天全渠道激活销量破100万台，均价约7000元，近三成用户来自[[iPhone]]长期用户。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1863853.html",
+            "title_original": "华为Pura X View上市66天全渠道激活销量突破100万台",
+            "excerpt": "数码博主披露，华为Pura X View上市66天全渠道累计激活销量突破100万台，第45周已达96.4万台；2026年下半年仅三款机型达此成绩，其为唯一国产旗舰。该机均价约7000元，近三成购机用户来自iPhone长期用户。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "agentes-chat/agentes-chat",
+            "url": "https://github.com/agentes-chat/agentes-chat",
+            "intro": "一个可以自己搭建的团队聊天工具，AI 助手像同事一样加入频道一起干活。",
+            "features": [
+              "AI 助手加入频道和私聊，能读消息并接活",
+              "敏感操作先等人批准再执行",
+              "每个 AI 有独立电脑和浏览器可接管",
+              "支持定时或事件触发的例行任务"
+            ],
+            "guide": "需要一台 Linux 服务器和 Postgres 数据库，用一条命令即可自建；也可直接用官方云端版。",
+            "steps": [
+              "准备一台 Linux 服务器",
+              "安装并运行 Postgres 数据库",
+              "按 README 用一条命令启动服务",
+              "用浏览器或桌面、手机 App 连接你的服务器"
+            ],
+            "install": "",
+            "summary": "一个可以自己搭建的团队聊天工具，AI 助手像同事一样加入频道一起干活。",
+            "source": "GitHub",
+            "stars": "1507",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines,…",
+            "is_foreign": true
+          },
+          {
+            "title": "ly05010419/MacNativeGames",
+            "url": "https://github.com/ly05010419/MacNativeGames",
+            "intro": "让苹果芯片的 Mac、iPhone、iPad 直接原生运行你自购的塞尔达游戏，不是模拟器。",
+            "features": [
+              "游戏代码直接在苹果芯片上运行",
+              "支持《王国之泪》《旷野之息》等",
+              "在 Mac、iPhone、iPad 上玩",
+              "需自备游戏文件和密钥"
+            ],
+            "guide": "必须自己拥有正版游戏，并从自己的 Switch 导出密钥和系统文件；在电脑上构建出 App 后本地使用，不能分享。",
+            "steps": [
+              "购买正版游戏并准备 Switch 导出文件",
+              "从自己的 Switch 导出密钥和系统文件",
+              "按 README 在电脑上构建 App",
+              "在 Mac 或 iPhone、iPad 上运行自建 App"
+            ],
+            "install": "",
+            "summary": "让苹果芯片的 Mac、iPhone、iPad 直接原生运行你自购的塞尔达游戏，不是模拟器。",
+            "source": "GitHub",
+            "stars": "7873",
+            "language": "C",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Play your own Tears of the Kingdom and Breath of the Wild natively on Apple silicon Mac, iPhone and iPad. Not an emulator: the game's ARM64 code runs directly, NVN rebuilt on Metal. Bring your own game.",
+            "is_foreign": true
+          },
+          {
+            "title": "wavetermdev/waveterm",
+            "url": "https://github.com/wavetermdev/waveterm",
+            "intro": "一个自带 AI 助手的跨平台终端，让命令行操作更顺手、远程连接更稳。",
+            "features": [
+              "AI 助手能读终端输出并帮忙操作文件",
+              "远程连接断网后自动重连不丢会话",
+              "内置编辑器可直接改远程文件",
+              "拖拽排列终端、浏览器和预览窗口"
+            ],
+            "guide": "支持 macOS、Linux、Windows，装好即可用；AI 功能需自备 OpenAI、Claude 等 API Key，或本地跑模型，无需注册账号。",
+            "steps": [
+              "从官网下载对应系统安装包",
+              "安装并打开 Wave Terminal",
+              "如需 AI 功能，填入自己的 API Key",
+              "或配置 Ollama、LM Studio 使用本地模型"
+            ],
+            "install": "",
+            "summary": "一个自带 AI 助手的跨平台终端，让命令行操作更顺手、远程连接更稳。",
+            "source": "GitHub",
+            "stars": "22705",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An open-source, AI-integrated, cross-platform terminal for seamless workflows",
+            "is_foreign": true
+          },
+          {
+            "title": "NousResearch/hermes-agent",
+            "url": "https://github.com/NousResearch/hermes-agent",
+            "intro": "一个会从经验中学习、越用越懂你的 AI 助手，可跑在云端并随时聊天指挥。",
+            "features": [
+              "从完成任务中自动总结并改进技能",
+              "记住过往对话，跨会话了解你",
+              "可在 Telegram、Discord 等平台对话",
+              "支持切换多种 AI 模型不锁死"
+            ],
+            "guide": "需要 Python 环境，可跑在便宜服务器或云上；用命令切换模型，通过 Telegram 等聊天工具远程指挥。",
+            "steps": [
+              "准备 Python 运行环境",
+              "按 README 安装 Hermes Agent",
+              "用 hermes model 选择要用的模型",
+              "接入 Telegram 等聊天工具开始对话"
+            ],
+            "install": "",
+            "summary": "一个会从经验中学习、越用越懂你的 AI 助手，可跑在云端并随时聊天指挥。",
+            "source": "GitHub",
+            "stars": "263637",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The agent that grows with you",
+            "is_foreign": true
+          },
+          {
+            "title": "n8n-io/n8n",
+            "url": "https://github.com/n8n-io/n8n",
+            "intro": "一个可视化搭自动化流程的工具，能把各种软件连起来，还能加入 AI 步骤。",
+            "features": [
+              "拖拽画布搭建自动化流程",
+              "连接 1500 多个现有软件服务",
+              "可插入 JavaScript、Python 自定义逻辑",
+              "支持自建部署或使用云端版"
+            ],
+            "guide": "需要先装 Docker，用一条安装脚本或 Docker 命令启动，然后在浏览器打开本地地址使用。",
+            "steps": [
+              "先安装 Docker",
+              "运行 curl -fsSL https://get.n8n.io | sh",
+              "或手动执行 docker volume create n8n_data",
+              "浏览器访问 http://localhost:5678"
+            ],
+            "install": "curl -fsSL https://get.n8n.io | sh",
+            "summary": "一个可视化搭自动化流程的工具，能把各种软件连起来，还能加入 AI 步骤。",
+            "source": "GitHub",
+            "stars": "210607",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 助手真正参与团队协作、自动化与日常开发，并顺带解决游戏与终端效率问题。"
+      }
+    ]
+  }
+}

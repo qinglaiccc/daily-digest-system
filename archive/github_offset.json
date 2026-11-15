@@ -1,5 +1,5 @@
 {
-  "classic_offset": 4,
+  "classic_offset": 6,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-11-13T23:58:23.108682+00:00",
   "recent_trending": [
-    "danielmiessler/LifeOS",
-    "valentderah/totk-pc-recomp",
-    "Gathin23/cleanyourtv",
     "ActivityWatch/activitywatch",
     "haydenschmitty/floorplan",
     "tangency-labs/solidcraft",
@@ -175,12 +172,15 @@
     "plotly/dash",
     "FrigadeHQ/yogurt",
     "wangzan101/Mika",
-    "super-productivity/super-productivity"
+    "super-productivity/super-productivity",
+    "agentes-chat/agentes-chat",
+    "ly05010419/MacNativeGames",
+    "wavetermdev/waveterm"
   ],
-  "last_run_date": "2026-11-14",
+  "last_run_date": "2026-11-15",
   "last_classic": [
-    "obra/superpowers",
-    "affaan-m/ECC"
+    "NousResearch/hermes-agent",
+    "n8n-io/n8n"
   ],
-  "updated_at": "2026-11-14T23:55:46.509354+00:00"
+  "updated_at": "2026-11-15T23:58:18.433253+00:00"
 }
