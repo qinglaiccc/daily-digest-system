@@ -1,0 +1,307 @@
+{
+  "date": "2026-11-17",
+  "generated_at": "2026-11-16T23:55:49.132296+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 310,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-17",
+    "digest": "阿里发布Qwen4-Max，谷歌Gemini新增66种方言，Asics用无人机管理库存",
+    "keywords": [
+      "Qwen4-Max",
+      "Gemini",
+      "Black-Forest-Labs",
+      "Asics",
+      "Saucony"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Black Forest Labs谈从像素学习AGI",
+            "summary": "[[Black Forest Labs]]的Andreas Blattmann与Dustin Podell阐述从像素、运动与声音中学习AGI的路径。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/bfl/",
+            "title_original": "Building Visual Intelligence — Andreas Blattmann & Dustin Podell, Black Forest Labs",
+            "excerpt": "Black Forest Labs’ case for learning AGI from pixels, motion and sound.",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌为Gemini新增66种地区方言",
+            "summary": "[[Google]]宣布为[[Gemini]]新增66种地区方言支持，提升语言输出的准确度。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2317417/google-adds-66-regional-dialects-to-gemini/",
+            "title_original": "Google adds 66 regional dialects to Gemini",
+            "excerpt": "From today, Gemini's making more of an effort to speak your language in a way that sounds more accurate.",
+            "is_foreign": true
+          },
+          {
+            "title": "LTX-2.5登上HuggingFace热门模型榜",
+            "summary": "[[Lightricks]]的[[LTX-2.5]]登上HuggingFace热门模型榜，获赞12224，下载量2789021。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/Lightricks/LTX-2.5",
+            "title_original": "Lightricks/LTX-2.5 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 427）类型 image-to-video。likes 12224，下载 2789021。标签：diffusion-single-file、image-to-video、text-to-video、video-to-video、image-text-to-video、audio-to-video。",
+            "is_foreign": true
+          },
+          {
+            "title": "datasette-maplibre 0.1a0发布",
+            "summary": "[[Simon Willison]]发布datasette-maplibre 0.1a0，结合[[MapLibre GL]]与OpenFreeMap，大部分由单条提示构建。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+            "title_original": "datasette-maplibre 0.1a0",
+            "excerpt": "Release: datasette-maplibre 0.1a0 \n The first new Datasette geospatial plugin in quite a while! This one combines the excellent MapLibre GL library with OpenFreeMap , the free vector map server operated by Zsolt Ero (you should sponsor Zsolt on GitHub .) \n I built most of this with a single prompt to Claude Fable 5.2:…",
+            "is_foreign": true
+          },
+          {
+            "title": "Qwen4-Max登上Hacker News高分榜",
+            "summary": "[[Qwen4-Max]]相关文章登上Hacker News，获848分、469条评论。",
+            "source": "Hacker News 高分",
+            "url": "https://qwen.ai/blog?id=qwen4-max",
+            "title_original": "Qwen4-Max",
+            "excerpt": "Article URL: https://qwen.ai/blog?id=qwen4-max \n Comments URL: https://news.ycombinator.com/item?id=50513215 \n Points: 848 \n # Comments: 469",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "17家重点车企供应商账期将接受评估",
+            "summary": "涉[[比亚迪]]、[[蔚小理]]、[[小米]]等17家重点车企供应商账期将接受评估；百度三季度AI云基础设施收入同比增长94%。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8207624.html",
+            "title_original": "【钛晨报】涉比亚迪、“蔚小理”、小米等，17家重点车企供应商账期将接受评估；消息人士称360市场负责人被带走调查；金饰克价较年内高点跌去530元",
+            "excerpt": "百度三季度AI云基础设施收入同比增长94%；胖东来今年销售额已超258亿元；华为云发布并开源昇腾原生具身世界模型；胜宏科技拟向多家银行申请合计707亿元授信额度；黄仁勋考虑回归英伟达；文投控股：AI漫剧相关业务收入占公司营收比例约为2.57%，占比仍然较小；中国中小学校、幼儿园将聘任健康副校（园）长，由医疗卫生机构等派出。",
+            "is_foreign": false
+          },
+          {
+            "title": "谷歌AdMob引入AI工具助开发者变现",
+            "summary": "[[Google]]为[[AdMob]]引入基于[[Gemini]]的Ask AdMob对话助手及智能体技能，帮助开发者简化广告接入与收入优化。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/028/029.htm",
+            "title_original": "做 App 副业的最佳 AI 助手：谷歌推出系列工具，瞄准最头疼的变现环节",
+            "excerpt": "IT之家 11 月 17 日消息，谷歌昨日（11 月 16 日）发布博文，宣布为旗下移动应用广告平台 AdMob 引入新一批 AI 工具，包括对话助手 Ask AdMob 以及面向 AI 编程助手的 AdMob 智能体技能， 帮助开发者简化广告接入、排查配置问题，并寻找增加广告收入的机会。 Ask AdMob 基于 Gemini 构建，将直接嵌入开发者的 AdMob 账户。按照谷歌的介绍，开发者可以像咨询产品专家一样与它对话，检查广告设置、查找集成错误，或获取收入优化建议。它还支持通过自然语言设置品牌安全规则，减少手动调整广告限制的操作。 另一部分工具则着眼于编程环节。AdMob 智能体技能提供预先编写并经过测试的操作指南，让开发…",
+            "is_foreign": false
+          },
+          {
+            "title": "阿里发布Qwen4-Max基座大模型",
+            "summary": "[[阿里巴巴]]发布新一代基座大模型[[Qwen4-Max]]，智能体及编程能力进阶，面向真实全场景。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/510486.html",
+            "title_original": "阿里正式发布Qwen4，智能体及编程能力进阶，迈向真实全场景",
+            "excerpt": "11月16日，阿里巴巴发布全新一代基座大模型Qwen4-Max",
+            "is_foreign": false
+          },
+          {
+            "title": "DigitalOcean推出托管智能体服务",
+            "summary": "[[DigitalOcean]]推出Managed Agents，为AI智能体提供托管云基础设施。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/LjVeWVAsBWwaiifdMRiu?utm_source=rss&utm_medium=article",
+            "title_original": "DigitalOcean Managed Agents为AI智能体提供托管云基础设施",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "腾讯Hy4 flash实测做3D交互网页",
+            "summary": "实测[[腾讯]]Hy4 flash，花两毛钱即可让AI从零生成3D交互网页，性价比高于[[DeepSeek V4.1 Flash]]。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1689653?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "实测腾讯 Hy4 flash：花两毛钱，就能让 AI 从零做个 3D 交互网页",
+            "excerpt": "比 DeepSeek V4.1 Flash 性价比更高 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Asics用仓库无人机优化库存管理",
+            "summary": "[[Asics]]利用仓库无人机提升错放库存回收效率，减少人工工时并提高盘点频率。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/asics-boosts-inventory-management-using-warehouse-drones/874481/",
+            "title_original": "Asics boosts inventory management using warehouse drones",
+            "excerpt": "By using the technology, the footwear brand improved misplaced inventory recovery while slashing manual labor hours and increasing counting frequency.",
+            "is_foreign": true
+          },
+          {
+            "title": "Saucony视欧洲为关键增长引擎",
+            "summary": "[[Saucony]]将欧洲视为关键增长引擎，通过旗舰店、跑团和赛事拓展国际门店。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/saucony-sees-europe-as-a-key-growth-engine-as-it-opens-more-international-stores/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "Saucony sees Europe as a ‘key growth engine’ as it opens more international stores",
+            "excerpt": "American athletic brand Saucony is working to own the European running market through flagships, run clubs and races.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "hitkeeen/blender-ai-mcp-addon",
+            "url": "https://github.com/hitkeeen/blender-ai-mcp-addon",
+            "intro": "给 Blender 3D 软件装个 AI 助手，用聊天就能改场景、建模型。",
+            "features": [
+              "用聊天让 AI 检查场景并创建物体",
+              "在侧边窗口里看对话和任务进度",
+              "可接 ChatGPT、Claude 或本地模型",
+              "保存多套 AI 连接配置"
+            ],
+            "guide": "这是 Blender 的插件，需要先装好 Blender，再按 README 的 Getting started 安装插件并配置 AI 服务连接；具体命令 README 摘录里没给出。",
+            "steps": [
+              "先安装 Blender 软件",
+              "按 README 的 Getting started 安装插件",
+              "配置要用的 AI 服务连接"
+            ],
+            "install": "",
+            "summary": "给 Blender 3D 软件装个 AI 助手，用聊天就能改场景、建模型。",
+            "source": "GitHub",
+            "stars": "2178",
+            "language": "",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with ChatGPT/GPT, Claude, Gemini, Ollama, OpenCode. Blender AI addon, copilot for 3D, bpy Python scripting, MCP integration.",
+            "is_foreign": true
+          },
+          {
+            "title": "Gathin23/cleanyourtv",
+            "url": "https://github.com/Gathin23/cleanyourtv",
+            "intro": "通过 Wi-Fi 清理安卓电视预装软件，换成类似苹果电视的清爽首页。",
+            "features": [
+              "远程卸载电视上的预装应用",
+              "换成更简洁的电视首页",
+              "清理前先备份应用和设置",
+              "支持手动恢复原状"
+            ],
+            "guide": "需要一台安卓或 Google TV，并在电视开发者选项里打开 USB 调试、允许电脑连接一次；README 说可以让编程助手在约十五分钟内完成，具体命令摘录里没给出。",
+            "steps": [
+              "在电视开发者选项里打开 USB 调试",
+              "允许你的电脑连接电视一次",
+              "按 README 快速开始执行清理"
+            ],
+            "install": "",
+            "summary": "通过 Wi-Fi 清理安卓电视预装软件，换成类似苹果电视的清爽首页。",
+            "source": "GitHub",
+            "stars": "58676",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
+            "is_foreign": true
+          },
+          {
+            "title": "espanso/espanso",
+            "url": "https://github.com/espanso/espanso",
+            "intro": "打字时自动把简写替换成常用句子，省下大量重复输入。",
+            "features": [
+              "输入关键词自动展开成整段文字",
+              "在几乎所有程序里都能用",
+              "支持表情、图片和日期",
+              "可执行自定义脚本和命令"
+            ],
+            "guide": "Windows、macOS、Linux 都能装，数据全在本地不上传；装好后编辑配置文件写触发词和替换内容即可，README 摘录里没给出安装命令。",
+            "steps": [
+              "从官网下载对应系统的安装包",
+              "安装后打开配置文件",
+              "按 YAML 格式添加触发词和替换内容"
+            ],
+            "install": "",
+            "summary": "打字时自动把简写替换成常用句子，省下大量重复输入。",
+            "source": "GitHub",
+            "stars": "14793",
+            "language": "Rust",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "A Privacy-first, Cross-platform Text Expander written in Rust",
+            "is_foreign": true
+          },
+          {
+            "title": "tensorflow/tensorflow",
+            "url": "https://github.com/tensorflow/tensorflow",
+            "intro": "谷歌开源的机器学习工具包，用来训练和运行 AI 模型。",
+            "features": [
+              "提供 Python 和 C++ 接口写模型",
+              "支持用显卡加速训练",
+              "有大量现成工具和社区资源"
+            ],
+            "guide": "需要先装 Python，然后用 pip 安装；想用显卡加速或 Docker 运行，可参考官方安装指南。",
+            "steps": [
+              "先安装 Python 环境",
+              "运行 pip install tensorflow",
+              "按官方指南验证安装"
+            ],
+            "install": "pip install tensorflow",
+            "summary": "谷歌开源的机器学习工具包，用来训练和运行 AI 模型。",
+            "source": "GitHub",
+            "stars": "201606",
+            "language": "C++",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An Open Source Machine Learning Framework for Everyone",
+            "is_foreign": true
+          },
+          {
+            "title": "firecrawl/firecrawl",
+            "url": "https://github.com/firecrawl/firecrawl",
+            "intro": "把网页和文档抓成干净文字，方便喂给 AI 使用。",
+            "features": [
+              "把任意网址转成 Markdown 或结构化数据",
+              "能抓需要滚动点击的动态页面",
+              "把 PDF、Word 文档转成干净文本",
+              "可一键接入 AI 助手"
+            ],
+            "guide": "开源版可自行部署，也有官方托管服务；README 摘录里没给出具体安装命令，接入 AI 助手时提到用一条命令连接。",
+            "steps": [
+              "选择自建部署或使用官方托管服务",
+              "按 README 配置抓取接口",
+              "用一条命令接入 AI 助手"
+            ],
+            "install": "",
+            "summary": "把网页和文档抓成干净文字，方便喂给 AI 使用。",
+            "source": "GitHub",
+            "stars": "202353",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 和自动化替你操作软件、整理电视、少打字、抓网页数据。"
+      }
+    ]
+  }
+}
