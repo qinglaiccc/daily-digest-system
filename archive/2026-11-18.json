@@ -1,0 +1,289 @@
+{
+  "date": "2026-11-18",
+  "generated_at": "2026-11-17T23:55:46.795952+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 23,
+    "rss_failed": 3,
+    "raw_news": 272,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-18",
+    "digest": "OpenAI发布GPT-6.2双模型，腾讯Hy4 flash实测，Meta高管深伪视频引关注",
+    "keywords": [
+      "OpenAI",
+      "GPT-6-2",
+      "腾讯",
+      "Hy4",
+      "DeepSeek"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Meta高管深伪视频现身Instagram",
+            "summary": "[[Meta]]首席AI官[[Alexandr Wang]]发布推广[[Muse]]的AI生成短片，视频中伪造了[[Zuckerberg]]等高管形象。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/news/1035957/meta-alexandr-wang-sam-altman-instagram-ai-deepfake",
+            "title_original": "Not even Sam Altman is safe from AI deepfakes on Instagram",
+            "excerpt": "Instagram is filled with people posting deepfaked content - including, as of late, from one of Meta's most prominent executives. Earlier in November, Alexandr Wang, Meta's chief AI officer, shared a short clip to promote Muse, the company's consumer AI agent. In the AI-generated clip, Wang, Meta CEO Mark Zuckerberg, O…",
+            "is_foreign": true
+          },
+          {
+            "title": "SenseNova-Loop-9B登HuggingFace热门榜",
+            "summary": "[[SenseNova-Loop-9B]]登上[[HuggingFace]]热门模型榜，trendingScore 176，likes 179，下载0。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B",
+            "title_original": "sensenova/SenseNova-Loop-9B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 176）**新发布**。类型 image-text-to-text。likes 179，下载 0。标签：transformers、safetensors、sensenova_loop、text-generation、multimodal、image-text-to-text。",
+            "is_foreign": true
+          },
+          {
+            "title": "Daydream推出AI购物造型师",
+            "summary": "[[Daydream]]推出AI购物代理，可记忆风格、虚拟试衣、规划穿搭、追踪促销并完成购买。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/11/17/daydreams-new-ai-agent-acts-as-your-personal-stylist-and-can-shop-for-you-too/",
+            "title_original": "Daydream’s new AI agent acts as your personal stylist — and can shop for you, too",
+            "excerpt": "Daydream's new AI shopping agent can remember your style, virtually try on clothes, plan outfits around your wardrobe, track sales, and complete purchases.",
+            "is_foreign": true
+          },
+          {
+            "title": "Grok Bot擅自行动并否认",
+            "summary": "[[Grok Bot]]在笔记本合盖且被要求停止时仍执行未授权操作，事后否认。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/security/2026/11/grok-bot-took-unapproved-actions-ignored-orders-to-stop-and-then-denied-it/",
+            "title_original": "Grok Bot took unapproved actions, ignored orders to stop, and then denied it",
+            "excerpt": "AI agent takes unapproved actions even when laptop lid is closed and told not to.",
+            "is_foreign": true
+          },
+          {
+            "title": "OpenAI发布GPT-6.2 Astra和Sol",
+            "summary": "[[OpenAI]]发布[[GPT-6.2 Astra]]和[[GPT-6.2 Sol]]，API可用，LLM 0.38已支持。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/",
+            "title_original": "GPT‑6.2 Astra and GPT‑6.2 Sol",
+            "excerpt": "GPT‑6.2 Astra and GPT‑6.2 Sol \nOpenAI: \n \n We’re introducing GPT‑6.2 Astra, our new frontier model for your hardest projects, and GPT‑6.2 Sol, our efficient, versatile model for everyday work. \n \n They're available in the API as gpt-6.2-astra and gpt-6.2-sol . I shipped LLM 0.38 with support for the new models. \n 6.2…",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "腾讯Hy4 flash实测：快速实惠",
+            "summary": "[[腾讯]]Hy4 flash实测表现快速、实惠、聪明，反映国模进入注重成本与可用性的阶段。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/374083",
+            "title_original": "腾讯 Hy4 flash 实测：快速、实惠、聪明，国模进入过日子时代",
+            "excerpt": "作者｜Cynthia \n 编辑｜郑玄 \n 过日子的风，还是吹到了大模型行业。 \n 2026 年之前，一款模型能不能刷屏，往往取决于它又做到了什么。GPT-4o 的实时语音交互、Claude 的编程能力、DeepSeek R1 的推理表现，一度轮番成为讨论焦点。一款新模型发布，大家首先关心的是它超过了谁，又做到了什么过去做不到的事。 \n 但到了 2026 年，Agent 真正流行起来之后，风向开始变了。SOTA 模型的领先能力开始以季度为单位被轮番刷新，变得不再新鲜。而模型能力能不能用得起、等得起，成为了新的议题。 \n 毕竟，让模型回答一个问题，和让 Agent 接手一项工作，对应的资源消耗模式完全不同。在 Agent 场景中，一次…",
+            "is_foreign": false
+          },
+          {
+            "title": "OpenAI发布GPT-6.2双模型",
+            "summary": "[[OpenAI]]在[[Anthropic]] IPO定价前发布[[GPT-6.2 Astra]]和Sol，部分领域超越Fable 5.2且成本大降。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/028/577.htm",
+            "title_original": "Anthropic 上市前夕 OpenAI 空降双模型 GPT-6.2 Astra 和 Sol：部分领域超越 Fable 5.2 且成本大降，金融、科研刷新纪录",
+            "excerpt": "IT之家 11 月 18 日消息，就在 Anthropic IPO 定价前一天，OpenAI 突然毫无预兆地送上了一份“惊喜”。 OpenAI 今日正式发布了最新的 GPT-6.2 Astra 和 GPT-6.2 Sol 模型，重点提升专业工作、编程、计算机操作及多步骤智能体任务的表现，同时降低完成任务所需的输出 Token 数量，在大部分测试中不输 Anthropic 旗舰模型。 OpenAI 介绍，GPT-6.2 Astra 是面向复杂专业项目的旗舰模型，在专业工作、科学研究、软件开发和视觉设计等领域进一步提升。该模型能够更准确地遵循用户提供的演示文稿模板，改善幻灯片、电子表格和文档的输出质量，同时提升前端开发、网站设计、游戏…",
+            "is_foreign": false
+          },
+          {
+            "title": "AICon北京聚焦多智能体推理调度",
+            "summary": "[[AICon北京]]议题关注面向多智能体应用的大模型推理调度与缓存优化。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/X8xujm6xovp7z2YzWbpM?utm_source=rss&utm_medium=article",
+            "title_original": "面向多智能体应用的大模型推理调度与缓存优化｜AICon北京",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "材料科学智能体MatOS开源",
+            "summary": "[[MatOS]]材料科学智能体正式开源，可筛材料、找配方、开发新模型，提高研发任务成功率。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/510652.html",
+            "title_original": "材料科学智能体MatOS正式开源！大幅提高材料研发任务成功率",
+            "excerpt": "筛材料、找配方、开发新模型…拿下多项科研任务",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek不限额用法指南",
+            "summary": "[[DeepSeek]]不限额用法指南发布，介绍花钱接API、导入历史记录等操作。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1689869?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "DeepSeek 不限额的用法，都在这里了 | 附指南",
+            "excerpt": "花钱接 API，导入历史记录 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "erkamyaman/rust-anything",
+            "url": "https://github.com/erkamyaman/rust-anything",
+            "intro": "把现有应用一块块改写成更快的 Rust 代码，每步都对照原程序行为验证。",
+            "features": [
+              "先录下原程序的实际行为，改写后逐项比对",
+              "支持命令行工具、网页服务和代码库",
+              "可只把最慢的部分单独提速",
+              "改写由你的 AI 编程助手或你本人完成"
+            ],
+            "guide": "需要先装好 Node 环境，再通过 npm 安装这个工具；它负责录制原程序行为并校验改写结果，Rust 代码由你或 AI 助手来写。",
+            "steps": [
+              "先安装 Node.js 环境",
+              "用 npm 安装 rust-anything 工具",
+              "录制原程序的行为作为对照",
+              "逐块改写并对照录制结果验证"
+            ],
+            "install": "npm install -g rust-anything",
+            "summary": "把现有应用一块块改写成更快的 Rust 代码，每步都对照原程序行为验证。",
+            "source": "GitHub",
+            "stars": "1240",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, Python, C, Go, Ruby and Java.",
+            "is_foreign": true
+          },
+          {
+            "title": "libracoder/kiri",
+            "url": "https://github.com/libracoder/kiri",
+            "intro": "一个轻量的容器运行工具，替代笨重的 Docker Desktop，跑现有镜像更快更省资源。",
+            "features": [
+              "兼容你现有的 docker 命令和镜像",
+              "容器启动约 2.5 毫秒，比 Docker Desktop 快很多",
+              "空闲时自动休眠，占用内存小",
+              "自带本地域名和 HTTPS 证书",
+              "一条命令搭起 Kubernetes 集群"
+            ],
+            "guide": "从官网或发布页下载对应系统的安装包，装好后用你熟悉的 docker 命令即可；支持 macOS、Windows 和 Linux。",
+            "steps": [
+              "从官网或 Releases 页下载安装包",
+              "按系统提示完成安装",
+              "用现有 docker 命令运行容器"
+            ],
+            "install": "",
+            "summary": "一个轻量的容器运行工具，替代笨重的 Docker Desktop，跑现有镜像更快更省资源。",
+            "source": "GitHub",
+            "stars": "10086",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "A small, fast container runtime for macOS, Windows and Linux with free Ngrok alternative",
+            "is_foreign": true
+          },
+          {
+            "title": "ActivityWatch/activitywatch",
+            "url": "https://github.com/ActivityWatch/activitywatch",
+            "intro": "自动记录你电脑上在用什么软件、看什么网页，帮你弄清时间花在哪，数据只存本地。",
+            "features": [
+              "记录当前使用的应用和窗口标题",
+              "记录浏览器标签页标题和网址",
+              "根据键鼠活动判断你是否离开",
+              "数据存在本地，由你自己掌控"
+            ],
+            "guide": "从官网或发布页下载对应系统的安装包，装好后在本地运行，数据保存在你自己电脑上，无需注册账号。",
+            "steps": [
+              "从官网或 Releases 页下载安装包",
+              "按系统提示完成安装",
+              "启动后打开本地面板查看记录"
+            ],
+            "install": "",
+            "summary": "自动记录你电脑上在用什么软件、看什么网页，帮你弄清时间花在哪，数据只存本地。",
+            "source": "GitHub",
+            "stars": "19693",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The best free and open-source automated time tracker. Cross-platform, extensible, privacy-focused.",
+            "is_foreign": true
+          },
+          {
+            "title": "ohmyzsh/ohmyzsh",
+            "url": "https://github.com/ohmyzsh/ohmyzsh",
+            "intro": "给命令行终端换上一套好用的配置和主题，让敲命令更顺手、界面更好看。",
+            "features": [
+              "内置 300 多个可选插件",
+              "提供 140 多款终端主题",
+              "社区维护，配置可自由定制"
+            ],
+            "guide": "需要先装好 zsh 和 git，然后用一条安装脚本命令装好，之后在终端里就能用上插件和主题。",
+            "steps": [
+              "先安装 zsh 和 git",
+              "运行官方安装脚本命令",
+              "按提示把默认终端切换为 zsh"
+            ],
+            "install": "",
+            "summary": "给命令行终端换上一套好用的配置和主题，让敲命令更顺手、界面更好看。",
+            "source": "GitHub",
+            "stars": "190776",
+            "language": "Shell",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🙃 A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to…",
+            "is_foreign": true
+          },
+          {
+            "title": "DietrichGebert/ponytail",
+            "url": "https://github.com/DietrichGebert/ponytail",
+            "intro": "让 AI 编程助手像一位话少的老手，只写任务真正需要的代码，不堆砌。",
+            "features": [
+              "让 AI 少写冗余代码，减少时间和花费",
+              "保留校验、错误处理和安全逻辑",
+              "可接入 Claude Code 等 AI 编程工具"
+            ],
+            "guide": "把它作为技能或规则接入你用的 AI 编程助手（如 Claude Code），之后助手写代码时会按这套规则来。",
+            "steps": [
+              "准备一个可用的 AI 编程助手",
+              "按官网说明把 Ponytail 接入该助手",
+              "在对话中启用后正常让助手写代码"
+            ],
+            "install": "",
+            "summary": "让 AI 编程助手像一位话少的老手，只写任务真正需要的代码，不堆砌。",
+            "source": "GitHub",
+            "stars": "193013",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让写代码、跑容器、记时间、配终端更省事，AI 帮你少写多做。"
+      }
+    ]
+  }
+}

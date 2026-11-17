@@ -1,5 +1,5 @@
 {
-  "classic_offset": 8,
+  "classic_offset": 10,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-11-13T23:58:23.108682+00:00",
   "recent_trending": [
-    "YishenTu/claudian",
-    "KKKKhazix/agent-autoloop",
-    "HeyPuter/everything",
     "Zettlr/Zettlr",
     "Verlintas/NOIR",
     "xiaoyang111222/cn-math-taxonomy",
@@ -175,12 +172,15 @@
     "wavetermdev/waveterm",
     "hitkeeen/blender-ai-mcp-addon",
     "Gathin23/cleanyourtv",
-    "espanso/espanso"
+    "espanso/espanso",
+    "erkamyaman/rust-anything",
+    "libracoder/kiri",
+    "ActivityWatch/activitywatch"
   ],
-  "last_run_date": "2026-11-16",
+  "last_run_date": "2026-11-17",
   "last_classic": [
-    "tensorflow/tensorflow",
-    "firecrawl/firecrawl"
+    "ohmyzsh/ohmyzsh",
+    "DietrichGebert/ponytail"
   ],
-  "updated_at": "2026-11-16T23:55:38.122125+00:00"
+  "updated_at": "2026-11-17T23:55:33.686887+00:00"
 }
