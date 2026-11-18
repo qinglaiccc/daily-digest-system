@@ -1,0 +1,292 @@
+{
+  "date": "2026-11-19",
+  "generated_at": "2026-11-18T23:56:00.138434+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 294,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-19",
+    "digest": "OpenAI 发布 GPT-6.2 系列评价分化，谷歌推出 Gemini 4 Neon 与 Stitch Loop，地平线发布视频几何模型 LoFT。",
+    "keywords": [
+      "GPT-6-2",
+      "Gemini",
+      "OpenAI",
+      "地平线",
+      "Snapchat"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "腾讯混元 Hy4-flash 登 HuggingFace 热门榜",
+            "summary": "[[腾讯]]混元 [[Hy4-flash]] 登上 [[HuggingFace]] 热门模型榜，trendingScore 212，likes 233、下载 159。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/tencent/Hy4-flash",
+            "title_original": "tencent/Hy4-flash 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 212）**新发布**。类型 image-text-to-text。likes 233，下载 159。标签：transformers、safetensors、hy_v4_flash、text-generation、hunyuan、hy4-flash。",
+            "is_foreign": true
+          },
+          {
+            "title": "Snapchat 支持用 AI 编程助手开发 AR 滤镜",
+            "summary": "[[Snapchat]] 允许开发者用自然语言描述需求，由 [[Claude Code]]、[[Cursor]] 等 AI 助手完成 AR 滤镜开发全流程。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/11/18/snapchat-now-lets-developers-build-ar-lenses-with-ai-coding-assistants-like-claude-code-and-cursor/",
+            "title_original": "Snapchat now lets developers build AR Lenses with AI assistants like Claude Code and Cursor",
+            "excerpt": "Lens creators can describe the Lens they want in plain language, and their AI assistant handles the process from start to finish, Snapchat says.",
+            "is_foreign": true
+          },
+          {
+            "title": "美国大型学区考虑弃用谷歌搜索",
+            "summary": "纽约、洛杉矶、芝加哥学区考虑弃用 [[Google]] 搜索，因谷歌称退出 AI 功能的学校将同时被禁用搜索。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+            "title_original": "The nation’s largest school districts consider ditching Google Search",
+            "excerpt": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌发布 Gemini 4 Neon",
+            "summary": "[[Google]] 发布 [[Gemini 4 Neon]] 模型，相关文章在 Hacker News 获 329 分、314 条评论。",
+            "source": "Hacker News",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+            "title_original": "Gemini 4 Neon",
+            "excerpt": "Article URL: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/ \n Comments URL: https://news.ycombinator.com/item?id=50552424 \n Points: 329 \n # Comments: 314",
+            "is_foreign": true
+          },
+          {
+            "title": "GPT-6.2 Astra 发布 成本降 20%-600%",
+            "summary": "[[OpenAI]] 发布 [[GPT-6.2 Astra]] 与 Sol，基准成本降低 20%-600%，早期测试者对 Astra 评价不一。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/",
+            "title_original": "[AINews] GPT-6.2 Astra, the #2 Frontier Model is better and 20%-600% cheaper, but has mixed reviews; 6.2 Sol likely main workhorse",
+            "excerpt": "November 17, 2026 — GPT-6.2 Astra and Sol lower benchmark costs. Early testers disagree on what Astra is like to work with.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "谷歌推出 Stitch Loop 产品智能体",
+            "summary": "[[Google Labs]] 推出实验性产品智能体 [[Stitch Loop]]，可连接代码库与线上数据，持续发现问题并编写代码。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/029/137.htm",
+            "title_original": "谷歌推出 Stitch Loop：定位永远不下班的“产品进化器”，替你盯着产品改 Bug",
+            "excerpt": "IT之家 11 月 19 日消息，谷歌旗下 Google Labs 昨日（11 月 18 日）推出实验性产品智能体 Stitch Loop，可连接代码库与线上实时数据，在软件发布后持续发现问题、提出改进方案并编写代码。 与完成单次任务便结束的工具不同，该智能体围绕团队设定的目标全天候运行，目标达成后仍会监测，防止相关指标再次下滑。IT之家附上相关演示视频如下： Stitch Loop 支持 180 多种集成，也可通过自定义 MCP 服务器或本地命令行上传资料。其工作流程包括发现改进机会、提供备选方案、编写代码和跟踪效果，形成持续优化循环。 在默认情况下，Stitch Loop 会执行网络安全、响应延迟和无障碍访问 3 次循环（用户…",
+            "is_foreign": false
+          },
+          {
+            "title": "地平线发布视频几何基础模型 LoFT",
+            "summary": "[[地平线]]机器人实验室发布原生视频几何基础模型 [[LoFT]]，可从 RGB 视频联合预测相机位姿、内参与逐帧深度，多项指标达 SoTA。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/029/140.htm",
+            "title_original": "地平线发布 LoFT 原生视频几何基础模型，多项指标达到 SoTA",
+            "excerpt": "IT之家 11 月 19 日消息，11 月 18 日，地平线机器人实验室发布原生视频几何基础模型 LoFT（Looped Foundation Transformer for Video Geometry）。据介绍，该模型能够从 RGB 视频中联合预测相机位姿、内参及逐帧深度，恢复场景三维结构，为机器人空间感知、环境理解与具身学习提供几何基础。 官方称，LoFT 原生面向连续视频建模，采用 双循环 Transformer 架构 ，将跨帧视觉信息聚合与相机状态迭代优化相结合，用于挖掘视频中的时序关联与多视角几何信息。 IT之家从官方公布信息获悉，第一循环通过局部与全局时序注意力聚合跨帧信息，逐步扩大时间感受范围，利用相邻帧的连续性与…",
+            "is_foreign": false
+          },
+          {
+            "title": "GPT-6.2 跑分高但实测遭差评",
+            "summary": "[[OpenAI]] 新模型 [[GPT-6.2 Astra]] 上线 8 分钟即遭创业者 Matt Shumer 差评，Ethan Mollick 称其非常不稳定且古怪。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/374175",
+            "title_original": "跑分狂飙，实测翻车，刚发的 GPT-6.2 暴露了 OpenAI 的软肋",
+            "excerpt": "「 基本不可用，不推荐 」。 \n OpenAI 新模型上线仅仅 8 分钟，硅谷知名创业者 Matt Shumer，就在社交平台上扔下一句毫不留情的评价。 \n 紧接着，拥有大批开发者拥趸的 Theo Browne，发了一篇长文《我为什么讨厌 GPT-6.2 Astra》。向来对前沿模型保持温和耐心的沃顿商学院教授 Ethan Mollick，测完后也给出了罕见的严厉定调，「非常不稳定且古怪」，直言这是「自 GPT-4.5 以来 OpenAI 前沿发布首次未见明显进步」。 \n 这原本该是 OpenAI 是一场漂亮的反击战。 \n 北京时间 11 月 18 日凌晨，OpenAI 正式推出新一代旗舰 GPT-6.2 Astra 与日常主力…",
+            "is_foreign": false
+          },
+          {
+            "title": "800 个 MCP Server 引发智能体微服务危机",
+            "summary": "文章讨论 800 个 [[MCP Server]]、5000 个工具带来的 AI 智能体“微服务危机”。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/FrDlAvNIwkr8ttdvWMCC?utm_source=rss&utm_medium=article",
+            "title_original": "800 个 MCP Server、5000 个工具，AI 智能体的“微服务危机”来了",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "实测认为 GPT-6.2 Astra 评价有失公允",
+            "summary": "[[爱范儿]] 实测 [[GPT-6.2 Astra]] 后认为其遭大量差评有点冤，最聪明的模型未必最好用。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1690103?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "GPT-6.2 Astra 刚发布即遭大量差评，实测后我觉得它有点冤",
+            "excerpt": "最聪明的模型，未必是最好用的模型；最好用的模型，也未必需要证明自己最聪明。 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "假日购物者期望 AI 今年省超 190 美元",
+            "summary": "调查显示假日购物者期望 [[AI]] 帮其省时找优惠、今年节省超 190 美元，但 AI 只应承诺企业能兑现的服务。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/holiday-shoppers-ai-discounts-save-hundreds/874309/",
+            "title_original": "Holiday shoppers expect AI to save them over $190 this year",
+            "excerpt": "Consumers want the tech to save them time and find bargains. But, AI should only commit to what businesses can deliver, according to a survey.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "CzzzzzzJ/mdldm-maitian",
+            "url": "https://github.com/CzzzzzzJ/mdldm-maitian",
+            "intro": "一个人做内容要发六七个平台，这个工具帮你统一排期发布并汇总各平台数据",
+            "features": [
+              "一次填好文案封面，排进分发计划到点发布",
+              "自动采集各平台播放、互动和粉丝数据",
+              "手机看数据大屏，飞书群推卡片通知",
+              "接上自己站点看哪期带来注册和收入"
+            ],
+            "guide": "需要一台常开的 Mac、Node.js 22.5 以上和 Chrome，跑一行安装脚本后按向导配置，用自己已登录的浏览器操作各平台，不存平台密码。",
+            "steps": [
+              "准备 macOS、Node.js ≥ 22.5 和 Google Chrome",
+              "运行 README 中的一行安装脚本",
+              "按安装向导回答问题生成配置",
+              "打开各平台登录页完成登录"
+            ],
+            "install": "bash -c \"$(curl -fsSL https://raw.githubusercontent.com/CzzzzzzJ/mdldm-maitian/main/scripts/install.sh)\"",
+            "summary": "一个人做内容要发六七个平台，这个工具帮你统一排期发布并汇总各平台数据",
+            "source": "GitHub",
+            "stars": "1302",
+            "language": "JavaScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "麦田：自媒体多平台发布中控与数据监控（B站/抖音/小红书/视频号/YouTube/X），飞书卡片通知 + 数据大屏",
+            "is_foreign": true
+          },
+          {
+            "title": "patch-gg/pixelfx",
+            "url": "https://github.com/patch-gg/pixelfx",
+            "intro": "244 个像素风特效动画，每个都是一小段代码，可直接用在游戏里",
+            "features": [
+              "火焰、爆炸、魔法、天气等像素特效在线预览",
+              "可改配色、镜像翻转，导出精灵图给游戏引擎",
+              "附带 Claude Code 技能，帮你做新特效"
+            ],
+            "guide": "打开官网画廊就能在线看效果；想自己做特效需配合 Claude Code 使用仓库里的技能，README 未给出具体安装命令。",
+            "steps": [
+              "打开官网画廊在线预览特效",
+              "挑选特效和配色，导出精灵图使用"
+            ],
+            "install": "",
+            "summary": "244 个像素风特效动画，每个都是一小段代码，可直接用在游戏里",
+            "source": "GitHub",
+            "stars": "8137",
+            "language": "JavaScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
+            "is_foreign": true
+          },
+          {
+            "title": "danielmiessler/LifeOS",
+            "url": "https://github.com/danielmiessler/LifeOS",
+            "intro": "一个记录你是谁、想去哪，再用AI帮你把生活和工作往前推的个人系统",
+            "features": [
+              "记录你的身份、关注点和目标",
+              "用了解你背景的AI辅助做事",
+              "覆盖做应用、创业、创意项目等场景"
+            ],
+            "guide": "README 只给出官网和安装入口，未摘录具体命令；作者明确说明安全需自行负责，系统仍在频繁变动。",
+            "steps": [
+              "访问官网了解并进入安装入口"
+            ],
+            "install": "",
+            "summary": "一个记录你是谁、想去哪，再用AI帮你把生活和工作往前推的个人系统",
+            "source": "GitHub",
+            "stars": "19934",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "⛰️ LifeOS — The AI-powered Life Operating System that helps you hill climb to wherever you're going.",
+            "is_foreign": true
+          },
+          {
+            "title": "Significant-Gravitas/AutoGPT",
+            "url": "https://github.com/Significant-Gravitas/AutoGPT",
+            "intro": "让一组AI“专家”分工干活，你只需用大白话交代任务",
+            "features": [
+              "Otto 统筹，把任务分给不同专家",
+              "内置内容、销售、研究、助理等角色",
+              "可自定义每个专家的指令和技能",
+              "支持自托管部署"
+            ],
+            "guide": "可直接注册试用，也可自托管；README 摘录未给出具体安装命令，需到官网查看自托管说明。",
+            "steps": [
+              "访问官网注册试用或查看自托管入口"
+            ],
+            "install": "",
+            "summary": "让一组AI“专家”分工干活，你只需用大白话交代任务",
+            "source": "GitHub",
+            "stars": "188093",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+            "is_foreign": true
+          },
+          {
+            "title": "f/prompts.chat",
+            "url": "https://github.com/f/prompts.chat",
+            "intro": "全球最大的开源AI提示词库，帮你找到好用的提问模板",
+            "features": [
+              "浏览和搜索社区分享的提示词",
+              "兼容 ChatGPT、Claude、Gemini 等",
+              "支持组织自托管，数据完全私有",
+              "提供 CSV 等数据格式下载"
+            ],
+            "guide": "打开官网即可浏览使用；想私有部署可走自托管，README 摘录未给出具体命令。",
+            "steps": [
+              "访问 prompts.chat 浏览提示词",
+              "需要私有化时查看自托管说明"
+            ],
+            "install": "",
+            "summary": "全球最大的开源AI提示词库，帮你找到好用的提问模板",
+            "source": "GitHub",
+            "stars": "177806",
+            "language": "MDX",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "帮内容创作者、游戏开发者和AI用户省时间、提效率的实用工具"
+      }
+    ]
+  }
+}
