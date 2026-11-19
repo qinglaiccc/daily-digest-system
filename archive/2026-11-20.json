@@ -1,0 +1,307 @@
+{
+  "date": "2026-11-20",
+  "generated_at": "2026-11-19T23:55:55.996507+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 269,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-20",
+    "digest": "谷歌Gemini登陆Mac、苹果招募AI智能体工程师，微软PyPI包遭劫持31分钟。",
+    "keywords": [
+      "Gemini",
+      "AI智能体",
+      "苹果",
+      "微软",
+      "面壁智能"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "近期多起系统故障被指与AI智能体有关",
+            "summary": "航空订票、银行及生产力平台近期接连故障，网络安全专家认为背后或与[[AI智能体]]运行有关，并非巧合。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
+            "title_original": "These tech outages are giving Y2K, AI agent style",
+            "excerpt": "Are the recent outages in the airline booking systems, banking platforms, and productivity platforms really a coincidence? There's actually likely something deeper going on, cybersecurity experts say.",
+            "is_foreign": true
+          },
+          {
+            "title": "谷歌为Gemini加入操控Mac能力",
+            "summary": "[[Google]]更新[[Gemini]]，在Mac上引入AI智能体，可整理文件、填写表单并执行多步骤工作流。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
+            "title_original": "Google gives Gemini the ability to use your Mac for you",
+            "excerpt": "Google's latest update to Gemini brings an AI agent to the Mac that can organize files, fill out forms, and tackle multistep workflows.",
+            "is_foreign": true
+          },
+          {
+            "title": "苹果招聘工程师自研AI智能体",
+            "summary": "[[Apple]]招聘工程师主导开发智能体AI助手，可浏览网页、跨应用操作、编写代码及调用服务。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+            "title_original": "Apple is hiring engineers to build its own AI agent",
+            "excerpt": "Apple is working on its own AI agent that can perform a range of tasks for you, including browsing the web, working across apps, writing code, and calling services. That's according to a job listing spotted by Bloomberg, which says Apple is looking for an engineer to lead the creation of an agentic AI assistant. […]",
+            "is_foreign": true
+          },
+          {
+            "title": "RadixArk模型登HuggingFace热门榜",
+            "summary": "[[RadixArk]]的DaisyRose-27B登上[[HuggingFace]]热门模型榜，获赞181、下载166，标签含qwen3_5。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/RadixArk/DaisyRose-27B",
+            "title_original": "RadixArk/DaisyRose-27B 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 62）**新发布**。类型 image-text-to-text。likes 181，下载 166。标签：transformers、safetensors、qwen3_5、image-text-to-text、daisyrose、qwen3.8。",
+            "is_foreign": true
+          },
+          {
+            "title": "Claude解决黑洞物理两个开放问题",
+            "summary": "[[Anthropic]]研究显示[[Claude]]解决了黑洞物理学中的两个开放问题，该文在Hacker News获340分。",
+            "source": "Hacker News 高分",
+            "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+            "title_original": "Claude solves two open problems in the physics of black holes",
+            "excerpt": "Article URL: https://www.anthropic.com/research/claude-black-hole-physics \n Comments URL: https://news.ycombinator.com/item?id=50563148 \n Points: 340 \n # Comments: 154",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "微软PyPI包Agent Framework遭劫持",
+            "summary": "[[微软]]官方PyPI包Agent Framework被劫持植入窃取凭据恶意软件，恶意版本仅存31分钟即被删除。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/029/700.htm",
+            "title_original": "微软官方 PyPI 包 Agent Framework 遭劫持，攻击者植入窃取登录凭据的恶意软件",
+            "excerpt": "IT之家 11 月 19 日消息，据科技媒体 TechRadar 今天报道，微软官方在 PyPI 发布的 Agent Framework 软件包遭黑客劫持，攻击者将其植入窃取登录凭据和云平台令牌的恶意软件。但幸运的是， 被植入恶意软件的版本仅存在 31 分钟就被删除 。 IT之家了解到，微软 Agent Framework Python 是一款开源工具包，每月下载量已接近 20 万次，可帮助开发者构建 AI 智能体，使其能够调用工具、遵循指令、与其他智能体交互，并执行更加复杂的任务。 11 月 17 日，黑客将 Agent Framework 劫持并发布 1.26.1 版本，其中的恶意软件会在 Python 启动时自动执行，即使运…",
+            "is_foreign": false
+          },
+          {
+            "title": "面壁智能MiniCPM下载量超7000万次",
+            "summary": "[[面壁智能]]宣布截至2026年11月，[[MiniCPM]]家族模型全球下载量已超7000万次。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/029/674.htm",
+            "title_original": "面壁智能：截至 2026 年 11 月，MiniCPM 家族模型全球下载量超 7000 万次",
+            "excerpt": "IT之家 11 月 19 日消息，面壁智能官方今日宣布，截至 2026 年 11 月， MiniCPM 家族模型全球下载量已超 7000 万次 。 IT之家注： 面壁智能于 2022 年 8 月在北京成立，孵化自清华大学自然语言处理实验室 。联合创始人、CEO 李大海曾任知乎合伙人、CTO；联合创始人、首席科学家刘知远现任清华大学计算机系教授；联合创始人、CTO 曾国洋在 22 岁时作为核心工程负责人，训练了中国第一个大语言模型 CPM-1。 今年 10 月， 面壁智能宣布推出新一代端侧多模态大模型 MiniCPM-V 4.7 ，提供 35B-A3B 和 1B 两种规格，其中 35B-A3B 是 MiniCPM-V 系列首个 Mo…",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek第二轮融资落地",
+            "summary": "[[DeepSeek]]第二轮融资落地，31家出资主体现身；同日比亚迪发布折叠方向盘，长鑫科技拟回购股份。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8211593.html",
+            "title_original": "【钛晨报】《中俄美元首和平宣言》发布；31家出资主体现身，DeepSeek第二轮融资落地；比亚迪发布折叠方向盘，长鑫科技拟25亿至50亿元回购股份",
+            "excerpt": "燧原科技：在手订单充沛，并正在与多家国内半导体产业伙伴进行合作；吴泳铭：建设超过20GW规模全球数据中心的目标可能下调；拼多多Q3利润295亿元，同比基本持平；因150元成被执行人？格力电器最新回应；OpenAI进军手机领域；马斯克披露多项业务时间表，Optimus拟18个月内胜任家务。",
+            "is_foreign": false
+          },
+          {
+            "title": "金融智能体应用实践技术前线报名",
+            "summary": "[[InfoQ]]中文上线TF技术前线188期报名，主题为价值为先的金融智能体应用实践。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/NR0Wal4xOQ3b5flxE0Hi?utm_source=rss&utm_medium=article",
+            "title_original": "价值为先，金融智能体应用实践 | TF技术前线188期报名",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "豆包工作三个月日活破800万",
+            "summary": "[[豆包]]工作上线三个月日活突破800万；同日谷歌发布Gemini 4 Neon，主打复杂任务与更低单次成本。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1690255?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "早报｜GTA6开售，评分破纪录/大疆多款相机涨价/豆包工作三个月日活破800万",
+            "excerpt": "· Google 发布 Gemini 4 Neon，主打复杂任务与更低单次成本\n· 英伟达员工大会：董事会不让黄仁勋回归，临时 CEO 承诺涨薪\n· 英特尔再裁全球 IT 员工，继续推进组织精简 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Target AI购物助手带动销售",
+            "summary": "[[Target]]CEO称其AI购物助手Ask Target的beta测试初见成效，正在带动销售增长。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/target-ai-shopping-assistant-drives-sales-q3/875106/",
+            "title_original": "Target’s AI shopping assistant is driving sales",
+            "excerpt": "The retailer's beta test of an AI assistant, called Ask Target, is showing early success, according to CEO Michael Fiddelke.",
+            "is_foreign": true
+          },
+          {
+            "title": "智能体商务进入假日购物季",
+            "summary": "[[OpenAI]]、[[Google]]、[[Amazon]]与Walmart押注智能体主导的假日购物，Digiday图表显示其成熟度仍有差距。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/technology/in-graphic-detail-welcome-to-the-agentic-commerce-quarter/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "In Graphic Detail: Welcome to the agentic commerce quarter",
+            "excerpt": "OpenAI, Google, Amazon and Walmart are betting on agent-led holiday shopping. Modern Retail sister site Digiday charts how far it still has to go.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "sybil-solutions/inference-optimisation-skill",
+            "url": "https://github.com/sybil-solutions/inference-optimisation-skill",
+            "intro": "教 AI 助手一步步调快本地大模型出字速度的实操手册。",
+            "features": [
+              "提升单人及多人同时使用的出字速度",
+              "缩短启动时间和首字等待时间",
+              "在内存上限内优化并做长文本稳定性检查"
+            ],
+            "guide": "这是给 AI 编程助手用的技能文件，需配合 Claude Code 等能加载 SKILL.md 的助手使用；没有助手也可按 PROMPT.md 手动照做。",
+            "steps": [
+              "准备一个能加载 SKILL.md 的 AI 助手（如 Claude Code）",
+              "让助手加载本项目的 SKILL.md 技能文件",
+              "按手册流程逐项调整并记录每次结果"
+            ],
+            "install": "",
+            "summary": "教 AI 助手一步步调快本地大模型出字速度的实操手册。",
+            "source": "GitHub",
+            "stars": "1257",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Agent skill for hill-climbing local LLM serving speed (decode, speculative decoding, prefill, KV, startup, TTFT) on any hardware and quantization",
+            "is_foreign": true
+          },
+          {
+            "title": "RoutineMiku/apkstart",
+            "url": "https://github.com/RoutineMiku/apkstart",
+            "intro": "让 Windows 电脑双击安卓安装包就能像装普通软件一样用安卓应用。",
+            "features": [
+              "双击 APK 自动安装并生成桌面图标",
+              "每个安卓应用独立窗口运行",
+              "开始菜单可搜索、任务栏按应用分组",
+              "电脑与安卓应用共享文件夹双向同步"
+            ],
+            "guide": "去 GitHub 或 Gitee 的 Releases 页下载安装包，解压或安装后即可双击 APK 使用；不想编译就选完整便携版。",
+            "steps": [
+              "打开 GitHub 或 Gitee 的 Releases 页面",
+              "下载对应安装包（商店版/便携版/完整版）",
+              "解压或安装后双击 APK 即可运行"
+            ],
+            "install": "",
+            "summary": "让 Windows 电脑双击安卓安装包就能像装普通软件一样用安卓应用。",
+            "source": "GitHub",
+            "stars": "8299",
+            "language": "JavaScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Windows 上的安卓应用运行器：双击 APK 即装，应用以独立窗口与桌面图标运行，自持 QEMU 运行时",
+            "is_foreign": true
+          },
+          {
+            "title": "YishenTu/claudian",
+            "url": "https://github.com/YishenTu/claudian",
+            "intro": "把 AI 编程助手塞进笔记软件 Obsidian，让它在你的笔记库里读写和干活。",
+            "features": [
+              "AI 可直接读写、搜索笔记库文件",
+              "选中文字即可让 AI 就地改写并预览差异",
+              "可把多个会话编成项目共享记忆",
+              "支持斜杠命令和 @ 引用文件"
+            ],
+            "guide": "这是 Obsidian 插件，需先安装 Obsidian，再从插件市场或手动安装本插件，并配置好要用的 AI 助手。",
+            "steps": [
+              "先安装 Obsidian 笔记软件",
+              "安装 Claudian 插件并启用",
+              "配置 Claude Code 等 AI 助手后使用"
+            ],
+            "install": "",
+            "summary": "把 AI 编程助手塞进笔记软件 Obsidian，让它在你的笔记库里读写和干活。",
+            "source": "GitHub",
+            "stars": "16033",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An Obsidian plugin that embeds Claude Code, Codex and other agents as an AI collaborator in your vault.",
+            "is_foreign": true
+          },
+          {
+            "title": "huggingface/transformers",
+            "url": "https://github.com/huggingface/transformers",
+            "intro": "一个统一调用各种开源 AI 模型（文字、图片、语音）的 Python 工具库。",
+            "features": [
+              "一个库调用上百万个预训练模型",
+              "覆盖文字、图像、音频、视频和多模态",
+              "同时支持模型推理和训练"
+            ],
+            "guide": "需要 Python 3.11+ 和 PyTorch 2.6+，先建虚拟环境再安装；适合会写 Python 的人本地跑。",
+            "steps": [
+              "安装 Python 3.11 及以上版本",
+              "创建并激活虚拟环境",
+              "安装 PyTorch 2.6 及以上版本",
+              "安装 transformers 库"
+            ],
+            "install": "",
+            "summary": "一个统一调用各种开源 AI 模型（文字、图片、语音）的 Python 工具库。",
+            "source": "GitHub",
+            "stars": "169284",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+            "is_foreign": true
+          },
+          {
+            "title": "AUTOMATIC1111/stable-diffusion-webui",
+            "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+            "intro": "在浏览器里用文字生成图片的 Stable Diffusion 网页操作界面。",
+            "features": [
+              "输入文字生成图片、用图片改图片",
+              "支持局部重绘和画面扩展",
+              "可修复人脸、放大图片",
+              "用括号给提示词加权重"
+            ],
+            "guide": "需要先装 Python 和 Git，然后运行一键安装启动脚本，之后在浏览器里打开使用。",
+            "steps": [
+              "先安装 Python 和 Git",
+              "运行一键安装并启动脚本",
+              "在浏览器中打开界面开始生成图片"
+            ],
+            "install": "",
+            "summary": "在浏览器里用文字生成图片的 Stable Diffusion 网页操作界面。",
+            "source": "GitHub",
+            "stars": "165353",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Stable Diffusion web UI",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 模型跑得更快、用得更容易，从本地加速到桌面应用。"
+      }
+    ]
+  }
+}
