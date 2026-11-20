@@ -1,0 +1,216 @@
+{
+  "generated_at": "2026-11-20T23:55:54.608491+00:00",
+  "latest": "2026-11-21",
+  "issues": [
+    {
+      "date": "2026-11-21",
+      "date_cn": "2026年11月21日 星期六",
+      "digest": "Anthropic上市首日市值1.27万亿美元；数学家称用Claude证明黎曼猜想；华为云开源具身世界模型。",
+      "count": 15,
+      "url": "archive/2026-11-21.html"
+    },
+    {
+      "date": "2026-11-20",
+      "date_cn": "2026年11月20日 星期五",
+      "digest": "谷歌Gemini登陆Mac、苹果招募AI智能体工程师，微软PyPI包遭劫持31分钟。",
+      "count": 17,
+      "url": "archive/2026-11-20.html"
+    },
+    {
+      "date": "2026-11-19",
+      "date_cn": "2026年11月19日 星期四",
+      "digest": "OpenAI 发布 GPT-6.2 系列评价分化，谷歌推出 Gemini 4 Neon 与 Stitch Loop，地平线发布视频几何模型 LoFT。",
+      "count": 16,
+      "url": "archive/2026-11-19.html"
+    },
+    {
+      "date": "2026-11-18",
+      "date_cn": "2026年11月18日 星期三",
+      "digest": "OpenAI发布GPT-6.2双模型，腾讯Hy4 flash实测，Meta高管深伪视频引关注",
+      "count": 15,
+      "url": "archive/2026-11-18.html"
+    },
+    {
+      "date": "2026-11-17",
+      "date_cn": "2026年11月17日 星期二",
+      "digest": "阿里发布Qwen4-Max，谷歌Gemini新增66种方言，Asics用无人机管理库存",
+      "count": 17,
+      "url": "archive/2026-11-17.html"
+    },
+    {
+      "date": "2026-11-16",
+      "date_cn": "2026年11月16日 星期一",
+      "digest": "黄仁勋辞任英伟达CEO，阿里拟分拆平头哥上市，华为Pura X View销量破百万",
+      "count": 15,
+      "url": "archive/2026-11-16.html"
+    },
+    {
+      "date": "2026-11-15",
+      "date_cn": "2026年11月15日 星期日",
+      "digest": "Mercor 750m美元D轮估值200亿美元，DeepSeek开放全家桶API，Cloudflare开源Kitesurf浏览器",
+      "count": 15,
+      "url": "archive/2026-11-15.html"
+    },
+    {
+      "date": "2026-11-14",
+      "date_cn": "2026年11月14日 星期六",
+      "digest": "LangChain估值30亿美元；openEuler发布智能体操作系统；微软就全球服务中断致歉",
+      "count": 17,
+      "url": "archive/2026-11-14.html"
+    },
+    {
+      "date": "2026-11-13",
+      "date_cn": "2026年11月13日 星期五",
+      "digest": "谷歌发布Gemini 4 Hydrogen，TikTok Shop试水付费会员，字节拟推AI助手。",
+      "count": 17,
+      "url": "archive/2026-11-13.html"
+    },
+    {
+      "date": "2026-11-12",
+      "date_cn": "2026年11月12日 星期四",
+      "digest": "谷歌发布Gemini Decisions API，Kimi推出托管智能体，沐曦优必选合资公司融资5亿",
+      "count": 16,
+      "url": "archive/2026-11-12.html"
+    },
+    {
+      "date": "2026-11-11",
+      "date_cn": "2026年11月11日 星期三",
+      "digest": "谷歌开放最强模型Gemini 4 Carbon，Anthropic发布Claude Fable 5.2降价20%，Grok Build被曝泄露3.5万应用机密。",
+      "count": 15,
+      "url": "archive/2026-11-11.html"
+    },
+    {
+      "date": "2026-11-10",
+      "date_cn": "2026年11月10日 星期二",
+      "digest": "Anthropic发布Claude新模型登顶榜单，美团开源万亿参数LongCat-2.5，亚马逊推出文本购物AI代理。",
+      "count": 17,
+      "url": "archive/2026-11-10.html"
+    },
+    {
+      "date": "2026-11-09",
+      "date_cn": "2026年11月09日 星期一",
+      "digest": "苹果加速Siri智能体化，腾讯元器停服，移动云与智谱合作",
+      "count": 15,
+      "url": "archive/2026-11-09.html"
+    },
+    {
+      "date": "2026-11-08",
+      "date_cn": "2026年11月08日 星期日",
+      "digest": "Anthropic自动化AI研发引警觉，GitHub新架构支持5000智能体协作，外卖应用转向发现平台",
+      "count": 16,
+      "url": "archive/2026-11-08.html"
+    },
+    {
+      "date": "2026-11-07",
+      "date_cn": "2026年11月07日 星期六",
+      "digest": "Anthropic研究Claude智能体记忆机制，Chainalysis遭黑客窃取全部客户凭证，Reformation三季度营收增19%。",
+      "count": 17,
+      "url": "archive/2026-11-07.html"
+    },
+    {
+      "date": "2026-11-06",
+      "date_cn": "2026年11月06日 星期五",
+      "digest": "Meta Muse 上线语音模式，英伟达发布内存与 CPU 新方案，百度开源文心5.5 Flash Base",
+      "count": 17,
+      "url": "archive/2026-11-06.html"
+    },
+    {
+      "date": "2026-11-05",
+      "date_cn": "2026年11月05日 星期四",
+      "digest": "Ripple-65B开源模型发布，Wayfair创疫情后最强增长，国内具身智能与AI模型密集更新",
+      "count": 16,
+      "url": "archive/2026-11-05.html"
+    },
+    {
+      "date": "2026-11-04",
+      "date_cn": "2026年11月04日 星期三",
+      "digest": "CrowdStrike近5亿美元收购两家AI安全公司；谷歌Antigravity上线化学信息学技能；DoorDash宣布收购Instacart。",
+      "count": 17,
+      "url": "archive/2026-11-04.html"
+    },
+    {
+      "date": "2026-11-03",
+      "date_cn": "2026年11月03日 星期二",
+      "digest": "Anthropic限制Claude游戏克隆；腾讯混元发布Hyra 2.0；DoorDash拟收购Instacart",
+      "count": 17,
+      "url": "archive/2026-11-03.html"
+    },
+    {
+      "date": "2026-11-02",
+      "date_cn": "2026年11月02日 星期一",
+      "digest": "Anthropic更新Claude限制复刻游戏，DeepSeek公布Super Agent架构，SpaceX三成营收来自Anthropic",
+      "count": 15,
+      "url": "archive/2026-11-02.html"
+    },
+    {
+      "date": "2026-11-01",
+      "date_cn": "2026年11月01日 星期日",
+      "digest": "苹果国行AI接入千问，DeepSeek完成千亿融资并发布新Agent架构",
+      "count": 16,
+      "url": "archive/2026-11-01.html"
+    },
+    {
+      "date": "2026-10-31",
+      "date_cn": "2026年10月31日 星期六",
+      "digest": "苹果智能入华接入阿里千问，硅基流动港股IPO获备案，英伟达AI代码优化Kimi K3",
+      "count": 17,
+      "url": "archive/2026-10-31.html"
+    },
+    {
+      "date": "2026-10-30",
+      "date_cn": "2026年10月30日 星期五",
+      "digest": "谷歌发布Gemini 4 Carbon与文件编辑功能，苹果推出首款触屏MacBook Pro，DoorDash 170亿美元收购Instacart。",
+      "count": 17,
+      "url": "archive/2026-10-30.html"
+    },
+    {
+      "date": "2026-10-29",
+      "date_cn": "2026年10月29日 星期四",
+      "digest": "谷歌发布Gemini 4 Carbon登顶智能指数，苹果推首款触控MacBook Pro，Etsy活跃买家两年来首增",
+      "count": 17,
+      "url": "archive/2026-10-29.html"
+    },
+    {
+      "date": "2026-10-28",
+      "date_cn": "2026年10月28日 星期三",
+      "digest": "谷歌发布Genie 4世界模型，OpenAI推出GPT-6.1 Terra，Anthropic详解Claude平台工程。",
+      "count": 15,
+      "url": "archive/2026-10-28.html"
+    },
+    {
+      "date": "2026-10-27",
+      "date_cn": "2026年10月27日 星期二",
+      "digest": "Anthropic招股书披露安全暂停训练；Kimi发布K3.1 Pro；京东广告联合鲲鹏降时延",
+      "count": 15,
+      "url": "archive/2026-10-27.html"
+    },
+    {
+      "date": "2026-10-26",
+      "date_cn": "2026年10月26日 星期一",
+      "digest": "Kimi 3.1 Pro开源缩小中美模型差距，DeepSeek开源推理框架并披露融资，Linux基金会报告AI代码贡献激增。",
+      "count": 14,
+      "url": "archive/2026-10-26.html"
+    },
+    {
+      "date": "2026-10-25",
+      "date_cn": "2026年10月25日 星期日",
+      "digest": "Claude支付页新增中国区选项，研究称Grok与GPT选举倾向分歧超九成。",
+      "count": 13,
+      "url": "archive/2026-10-25.html"
+    },
+    {
+      "date": "2026-10-24",
+      "date_cn": "2026年10月24日 星期六",
+      "digest": "月之暗面发布Kimi K3.1 Pro，OpenAI前沿模型训练断网，DeepSeek完成千亿融资",
+      "count": 17,
+      "url": "archive/2026-10-24.html"
+    },
+    {
+      "date": "2026-10-23",
+      "date_cn": "2026年10月23日 星期五",
+      "digest": "英伟达GTC柏林确认Vera Rubin量产，DeepSeek开源推理系统，沃尔玛开放外部AI购物智能体",
+      "count": 17,
+      "url": "archive/2026-10-23.html"
+    }
+  ]
+}
