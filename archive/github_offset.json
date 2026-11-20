@@ -1,5 +1,5 @@
 {
-  "classic_offset": 14,
+  "classic_offset": 16,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-11-13T23:58:23.108682+00:00",
   "recent_trending": [
-    "jarun/nnn",
-    "Minireel/HGhub",
-    "ARahim3/DigUp",
     "alyssaxuu/screenity",
     "caru-ini/stack-diagram",
     "kingcharleslzy-ai/dsh-purge",
@@ -175,12 +172,15 @@
     "danielmiessler/LifeOS",
     "sybil-solutions/inference-optimisation-skill",
     "RoutineMiku/apkstart",
-    "YishenTu/claudian"
+    "YishenTu/claudian",
+    "bookwjitchieni1986/blender-ai-mcp-addon",
+    "l0ng-ai/openidea",
+    "streetwriters/notesnook"
   ],
-  "last_run_date": "2026-11-19",
+  "last_run_date": "2026-11-20",
   "last_classic": [
-    "huggingface/transformers",
-    "AUTOMATIC1111/stable-diffusion-webui"
+    "langgenius/dify",
+    "Snailclimb/JavaGuide"
   ],
-  "updated_at": "2026-11-19T23:55:42.848647+00:00"
+  "updated_at": "2026-11-20T23:55:42.737620+00:00"
 }
