@@ -1,0 +1,294 @@
+{
+  "date": "2026-11-22",
+  "generated_at": "2026-11-21T23:58:28.866488+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 183,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-22",
+    "digest": "Anthropic员工称用Claude证明黎曼猜想，Signal默认屏蔽截图防AI读取，林俊旸新公司估值升至50亿美元。",
+    "keywords": [
+      "Anthropic",
+      "Claude",
+      "Signal",
+      "DeepSeek",
+      "语用科技"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Inkling-2-Mini-Uncensored-GGUF登HuggingFace热门榜",
+            "summary": "[[AtomicChat]]的[[Inkling-2-Mini-Uncensored-GGUF]]登上[[HuggingFace]]热门模型榜，获赞230、下载9540。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+            "title_original": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 138.6）**新发布**。类型 image-text-to-text。likes 230，下载 9540。标签：gguf、llama.cpp、inkling2、uncensored、lora、image-text-to-text。",
+            "is_foreign": true
+          },
+          {
+            "title": "Inkling-2-Mini-Uncensored登HuggingFace热门榜",
+            "summary": "[[OpenUncensored]]的[[Inkling-2-Mini-Uncensored]]登上[[HuggingFace]]热门模型榜，获赞136、下载499。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/OpenUncensored/Inkling-2-Mini-Uncensored",
+            "title_original": "OpenUncensored/Inkling-2-Mini-Uncensored 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 66.5）**新发布**。类型 image-text-to-text。likes 136，下载 499。标签：transformers、safetensors、inkling2_loop、image-text-to-text、uncensored、abliterated。",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic员工称用Claude证明黎曼猜想",
+            "summary": "[[Anthropic]]员工Levent Alpöge称与[[Claude]]合作发现[[黎曼猜想]]的证明。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2324141/anthropic-employee-claims-to-have-proven-the-most-famous-math-problem-using-claude/",
+            "title_original": "Anthropic employee claims to have proven the most famous math problem using Claude",
+            "excerpt": "Levent Alpöge says he worked with Claude to discover a proof of the Riemann Hypothesis.",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic能否坚持安全优先",
+            "summary": "The Verge播客讨论[[Anthropic]]上周四在纳斯达克上市后，能否在IPO后继续将AI安全置于优先位置。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+            "title_original": "Can Anthropic afford to put safety first?",
+            "excerpt": "Today, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the Anthropic IPO for the third and final episode in our series about AI in real life. The AI lab behind Claude went public on the Nasdaq last Thursday. The numbers are gigantic, but not really that important for this conversation, except to […",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini 4 Neon智能指数得分61",
+            "summary": "[[Google]]中端模型[[Gemini 4 Neon]]在智能指数得61分；[[Anthropic]]将IPO发行价定为83美元。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/",
+            "title_original": "[AINews] Gemini 4 Neon: GDM's Opus/Sol Contender",
+            "excerpt": "November 18, 2026 — Google’s middle tier scores 61 on the Intelligence Index. Plus, Anthropic prices its IPO at $83.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "Signal默认屏蔽截图防AI读取消息",
+            "summary": "[[Signal]]更新iOS/Android版，默认关闭应用内截图，阻止[[Siri AI]]和[[Gemini]]等智能体读取私人消息。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/030/517.htm",
+            "title_original": "加密聊天应用 Signal 默认屏蔽截图，防止 AI 智能体读取用户消息",
+            "excerpt": "IT之家 11 月 22 日消息，开源端到端加密聊天应用 Signal 近日推出 iOS / Android 版更新，默认关闭应用程序内截图功能，以阻止 Siri AI 和 Gemini 等 AI 智能体读取用户私人消息。 Signal 总裁 Meredith Whittaker 表示，系统级 AI 智能体的影响力正不断扩大，这对 Signal 长期建立的隐私机制构成威胁，因为这些智能体可能在用户毫不知情的情况下访问私人对话。 在 Signal 8.37（IT之家注：iOS 27 系统）中， 应用默认启用了“阻止 Siri AI”设置 ，用户无法在 Signal 内截图或录屏。用户可选择关闭该功能 10 分钟，或是直接永久禁用。…",
+            "is_foreign": false
+          },
+          {
+            "title": "华科与阿里成立AI前沿安全研究中心",
+            "summary": "[[华中科技大学]]与[[阿里巴巴]]签署协议共建智能攻防与前沿安全联合研究中心，首批启动9个课题。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/030/423.htm",
+            "title_original": "华中科技大学与阿里巴巴联合成立 AI 前沿安全研究中心，课题覆盖大模型安全攻防等",
+            "excerpt": "IT之家 11 月 21 日消息，华中科技大学与阿里巴巴集团于 11 月 18 日签署合作协议，聚焦 AI 安全共建“智能攻防与前沿安全联合研究中心”，首批启动 9 个课题。 IT之家获悉，联合研究中心首批启动的 9 个课题，覆盖 大模型安全攻防、智能体与终端安全、智能化系统与软件安全、数据协同与隐私保护 四大方向，以下为官方公开的案例： 当 AI 智能体开始替用户操作手机、完成复杂任务时，屏幕画面可能被伪造，操作过程也可能受到恶意诱导。对此，联合研究中心设立“图像对抗样本与终端威胁研判”课题，探索相关安全风险的识别与防护技术。 当用户在购物、地图、外卖等应用之间切换时，既希望享受数据互通带来的便捷，又担心个人信息在协同过程中泄露…",
+            "is_foreign": false
+          },
+          {
+            "title": "数智周报：Anthropic创最大IPO纪录",
+            "summary": "[[Anthropic]]敲响纳斯达克开市钟创最大IPO纪录；[[英伟达]]单季营收首破1000亿美元；[[DeepSeek]]第二轮融资落地。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8213535.html",
+            "title_original": "【数智周报】 Anthropic敲响纳斯达克开市钟，创史上最大规模IPO纪录；美国限制远程获取AI算力，海外数据中心出租算力须许可；DeepSeek第二轮融资落地",
+            "excerpt": "（11 月 16 日-21 日）英伟达史上首次单季营收突破1000亿美元，净利润同比翻倍；阿里巴巴：2027财年第二季度营收2715.2亿元，同比增长10%，AI相关产品收入超179亿元，连续13个季度实现三位数增长；腾讯：WorkBuddy近七天年化收入超5亿美元，三季度收入是第二季度的5倍以上；豆包工作日活突破800万，企业客户ARR突破20亿元...",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek V1作者创业项目曝光",
+            "summary": "[[DeepSeek]] V1作者创业项目曝光，为专为本地部署设计的开源[[Agent]]。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/511570.html",
+            "title_original": "刚刚，DeepSeek V1作者创业项目曝光：开源Agent",
+            "excerpt": "专为本地部署而生",
+            "is_foreign": false
+          },
+          {
+            "title": "林俊旸新公司估值升至50亿美元",
+            "summary": "[[林俊旸]]创办的[[语用科技]]完成新一轮融资，估值达50亿美元，数月内翻倍；[[华为]]发布星芒品牌首款阔直板手机。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/374299",
+            "title_original": "林俊旸新公司估值升至 50 亿美元；丁磊：短剧爆发冲击游戏产业；华为新品牌星芒发布首款阔直板手机",
+            "excerpt": "传林俊旸 AI 初创公司完成新融资，估值翻倍至 50 亿美元 \n 据彭博社报道，阿里巴巴集团前 AI 负责人林俊旸创办的语用科技 ( Pragmatik Labs)，已完成新一轮融资，估值达 50 亿美元，短短几个月内估值翻了一倍多。 \n 林俊旸曾是阿里的明星研究员，在离职后于今年夏季创立语用科技。据知情人士称，语用科技在最近结束的一轮融资中筹集了数千万美元资金。今年 8 月，该公司在首次融资中筹集了数亿美元，当时估值为 20 亿美元。 \n 知情人士称，语用科技的新投资者包括华业天成资本、鼎晖投资以及汽车制造商吉利汽车。 \n 语用科技总部位于上海，致力于开发面向数字世界和物理世界的 AI 智能体。该公司首轮融资的投资方包括高榕创投…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "iamajmeena/neonclipping",
+            "url": "https://github.com/iamajmeena/neonclipping",
+            "intro": "粘贴视频链接，两分钟自动剪出带字幕的竖屏短片，全程在自己电脑上跑。",
+            "features": [
+              "粘贴 YouTube、Twitch 等链接自动剪出竖屏片段",
+              "自动生成字幕、标题和开场钩子",
+              "支持游戏画面的人脸摄像头自动布局",
+              "全程本地运行，不上传、不注册、不花钱"
+            ],
+            "guide": "需要先装好 Python 环境，Windows 用户可下载一键 .bat 脚本，Mac/Linux 用 install.sh 安装，之后在本地运行，无需账号和 API Key。",
+            "steps": [
+              "Windows 下载并运行一键 .bat 安装脚本",
+              "Mac/Linux 运行 install.sh 完成安装",
+              "启动程序后粘贴视频链接",
+              "等待约两分钟获取带字幕的竖屏片段"
+            ],
+            "install": "install.sh",
+            "summary": "粘贴视频链接，两分钟自动剪出带字幕的竖屏短片，全程在自己电脑上跑。",
+            "source": "GitHub",
+            "stars": "1733",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Paste a link, get captioned 9:16 clips in ~2 min. Free, local, open-source clipping engine (audio-first, YouTube captions, local LLM).",
+            "is_foreign": true
+          },
+          {
+            "title": "Minireel/HGhub",
+            "url": "https://github.com/Minireel/HGhub",
+            "intro": "一个靠插件接入内容的视频播放器，把浏览、搜索、播放和收藏放在同一个应用里。",
+            "features": [
+              "导入插件后接入不同内容来源",
+              "统一界面浏览、搜索和播放",
+              "管理本地收藏、历史与续播进度",
+              "支持直播、信息流和图文内容"
+            ],
+            "guide": "目前处于早期开发阶段，需从源码运行或自行构建，重点支持 Windows 和 Android；首次使用要自己导入插件，应用不内置内容源。",
+            "steps": [
+              "从源码运行或按文档自行构建客户端",
+              "打开插件中心进入导入与订阅",
+              "选择插件文件或粘贴插件网址并启用",
+              "从首页或搜索找到内容开始播放"
+            ],
+            "install": "",
+            "summary": "一个靠插件接入内容的视频播放器，把浏览、搜索、播放和收藏放在同一个应用里。",
+            "source": "GitHub",
+            "stars": "11037",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Plug-in media player",
+            "is_foreign": true
+          },
+          {
+            "title": "Zettlr/Zettlr",
+            "url": "https://github.com/Zettlr/Zettlr",
+            "intro": "面向写作者的桌面写作工具，从记笔记到导出成稿一站式完成。",
+            "features": [
+              "笔记默认保存在本地，注重隐私",
+              "对接 Zotero 等文献管理工具做引用",
+              "支持 LaTeX 和 Word 模板排版",
+              "一键导出多种发布格式"
+            ],
+            "guide": "提供各平台安装包，从官网下载安装即可使用；想从源码构建则需按文档准备开发环境。",
+            "steps": [
+              "访问官网下载对应系统安装包",
+              "安装后打开应用开始写作",
+              "在设置中连接文献管理工具",
+              "用导出功能生成发布文件"
+            ],
+            "install": "",
+            "summary": "面向写作者的桌面写作工具，从记笔记到导出成稿一站式完成。",
+            "source": "GitHub",
+            "stars": "13953",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Your One-Stop Publication Workbench",
+            "is_foreign": true
+          },
+          {
+            "title": "open-webui/open-webui",
+            "url": "https://github.com/open-webui/open-webui",
+            "intro": "给 AI 大模型套上一个好用的网页界面，可以完全离线自己部署。",
+            "features": [
+              "连接本地或云端的大模型",
+              "在浏览器里像聊天软件一样对话",
+              "可完全离线运行，数据不出本机",
+              "支持多种模型来源切换"
+            ],
+            "guide": "需要先装 Docker 或 Python 3.12，用一条命令启动后在浏览器打开本地地址即可使用；连本地模型需先装好 Ollama。",
+            "steps": [
+              "先安装 Docker 或 Python 3.12",
+              "运行 docker run 启动服务",
+              "浏览器打开 http://localhost:3000",
+              "按需连接 Ollama 或兼容 API"
+            ],
+            "install": "docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main",
+            "summary": "给 AI 大模型套上一个好用的网页界面，可以完全离线自己部署。",
+            "source": "GitHub",
+            "stars": "159225",
+            "language": "Svelte",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+            "is_foreign": true
+          },
+          {
+            "title": "github/spec-kit",
+            "url": "https://github.com/github/spec-kit",
+            "intro": "给 AI 编程助手一套固定流程和模板，让它按规格写功能、修 Bug、评估想法。",
+            "features": [
+              "按规格驱动的方式开发新功能",
+              "提供修 Bug 和评估想法的流程",
+              "可接入或切换不同的编程助手",
+              "流程和模板可自定义扩展"
+            ],
+            "guide": "面向使用 AI 编程助手的人，需按官方文档安装工具包并接入自己的编程助手，具体命令以文档为准。",
+            "steps": [
+              "按官方文档安装 Spec Kit 工具包",
+              "接入你常用的 AI 编程助手",
+              "选择规格开发、修 Bug 或评估流程",
+              "按模板逐步推进并记录结果"
+            ],
+            "install": "",
+            "summary": "给 AI 编程助手一套固定流程和模板，让它按规格写功能、修 Bug、评估想法。",
+            "source": "GitHub",
+            "stars": "150938",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "💫 Toolkit to help you get started with SDD or any other process!",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让视频剪辑、看片、写作、用 AI 和写代码都更省事的开源工具"
+      }
+    ]
+  }
+}

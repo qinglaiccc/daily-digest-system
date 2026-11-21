@@ -1,5 +1,5 @@
 {
-  "classic_offset": 16,
+  "classic_offset": 18,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-11-13T23:58:23.108682+00:00",
   "recent_trending": [
-    "alyssaxuu/screenity",
-    "caru-ini/stack-diagram",
-    "kingcharleslzy-ai/dsh-purge",
     "rowboatlabs/rowboat",
     "jhaizhou-ops/S2Arm",
     "Jakeschincariol/day-trader-skill",
@@ -175,12 +172,15 @@
     "YishenTu/claudian",
     "bookwjitchieni1986/blender-ai-mcp-addon",
     "l0ng-ai/openidea",
-    "streetwriters/notesnook"
+    "streetwriters/notesnook",
+    "iamajmeena/neonclipping",
+    "Minireel/HGhub",
+    "Zettlr/Zettlr"
   ],
-  "last_run_date": "2026-11-20",
+  "last_run_date": "2026-11-21",
   "last_classic": [
-    "langgenius/dify",
-    "Snailclimb/JavaGuide"
+    "open-webui/open-webui",
+    "github/spec-kit"
   ],
-  "updated_at": "2026-11-20T23:55:42.737620+00:00"
+  "updated_at": "2026-11-21T23:58:17.011269+00:00"
 }
