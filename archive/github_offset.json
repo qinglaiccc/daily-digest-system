@@ -1,5 +1,5 @@
 {
-  "classic_offset": 18,
+  "classic_offset": 20,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-11-13T23:58:23.108682+00:00",
   "recent_trending": [
-    "rowboatlabs/rowboat",
-    "jhaizhou-ops/S2Arm",
-    "Jakeschincariol/day-trader-skill",
     "omnivore-app/omnivore",
     "IainKay/ram-altman",
     "rddmwmddr/android-ad-cleaner",
@@ -175,12 +172,15 @@
     "streetwriters/notesnook",
     "iamajmeena/neonclipping",
     "Minireel/HGhub",
-    "Zettlr/Zettlr"
+    "Zettlr/Zettlr",
+    "EL4CTEO/fast-anything",
+    "valentderah/totk-pc-recomp",
+    "jarun/nnn"
   ],
-  "last_run_date": "2026-11-21",
+  "last_run_date": "2026-11-22",
   "last_classic": [
-    "open-webui/open-webui",
-    "github/spec-kit"
+    "langchain-ai/langchain",
+    "Graphify-Labs/graphify"
   ],
-  "updated_at": "2026-11-21T23:58:17.011269+00:00"
+  "updated_at": "2026-11-22T23:55:36.622536+00:00"
 }

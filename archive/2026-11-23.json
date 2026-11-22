@@ -1,0 +1,288 @@
+{
+  "date": "2026-11-23",
+  "generated_at": "2026-11-22T23:55:47.820692+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 241,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-23",
+    "digest": "OpenAI首席科学家谈AI发展限速，腾讯混元团队回应开源模型争议，马斯克预警AI行业明年资金短缺。",
+    "keywords": [
+      "OpenAI",
+      "腾讯混元",
+      "Inkling",
+      "AI算力",
+      "Claude"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Lean形式化Masullo手稿进展图发布",
+            "summary": "[[Lean]]形式化[[Alessandro Masullo]]手稿的进展图在[[Hacker News]]发布，获58点、14条评论。",
+            "source": "Hacker News",
+            "url": "https://claude.ai/artifact/CtQyX8qfYAF822bgHJHHE3",
+            "title_original": "Progress map for the Lean formalization of Alessandro Masullo's manuscript",
+            "excerpt": "Article URL: https://claude.ai/artifact/CtQyX8qfYAF822bgHJHHE3 \n Comments URL: https://news.ycombinator.com/item?id=50605045 \n Points: 58 \n # Comments: 14",
+            "is_foreign": true
+          },
+          {
+            "title": "本地AI入门指南：Inkling、Qwen与Unsloth",
+            "summary": "[[gpupartner]]发布本地AI入门指南，介绍[[Inkling]]、[[Qwen]]与[[Unsloth]]，获128点、44条评论。",
+            "source": "Hacker News",
+            "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+            "title_original": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+            "excerpt": "Article URL: https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth \n Comments URL: https://news.ycombinator.com/item?id=50603845 \n Points: 128 \n # Comments: 44",
+            "is_foreign": true
+          },
+          {
+            "title": "Inkling-2-Mini登上HuggingFace热门榜",
+            "summary": "[[thinkingmachines]]的[[Inkling-2-Mini]]登上[[HuggingFace]]热门模型榜，trendingScore 908，likes 4952，下载23543。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+            "title_original": "thinkingmachines/Inkling-2-Mini 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 908）类型 image-text-to-text。likes 4952，下载 23543。标签：transformers、safetensors、inkling2_loop、image-text-to-text、conversational、moe。",
+            "is_foreign": true
+          },
+          {
+            "title": "研究者植入200万金丝雀暴露AI供应链隐私问题",
+            "summary": "研究者向[[AI供应链]]植入200万个金丝雀标记，发现用户秘密数据以惊人速度泄露。",
+            "source": "Lobsters",
+            "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+            "title_original": "Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced",
+            "excerpt": "Comments",
+            "is_foreign": true
+          },
+          {
+            "title": "OpenAI首席科学家谈如何限制AI发展",
+            "summary": "[[OpenAI]]首席科学家表示，要为AI发展设速度上限，需先就速度的衡量方式达成一致。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/",
+            "title_original": "OpenAI’s chief scientist has thoughts on how to limit AI development",
+            "excerpt": "To establish a speed limit on AI development, you need to agree on how to measure speed.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "姚顺雨回应混元4模型、算力与刷榜问题",
+            "summary": "[[腾讯]]首席AI科学家[[姚顺雨]]与[[混元]]团队在Reddit AMA两小时回答300余条提问，回应模型、算力与刷榜争议。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/374301",
+            "title_original": "关于混元 4 模型、算力、刷榜与 RSI，姚顺雨回应一切",
+            "excerpt": "头图来源：ChatGPT 生成 \n \n 11 月 21 日凌晨，腾讯首席 AI 科学家、混元大模型负责人姚顺雨和混元团队的研究员现身 Reddit LocalLLaMA 社区，开启了混元团队史上第一场面向全球开发者的公开 AMA。 \n \n 图片来源：x \n 两小时内，姚顺雨和混元团队解答了 300 余条开发者提问，从底层架构取舍到长期路线规划，从量化落地经验到开源生态适配，几乎覆盖了当前开源大模型领域所有核心争议与关切。 \n 过去不到一个月，混元刚刚完成一轮高密度产品发布——11 月 4 日推出的 Hy4 首次跻身全球最强开源模型之列，拿下 Agent Arena 开源模型榜首、Artificial Analysis 中国模型第二…",
+            "is_foreign": false
+          },
+          {
+            "title": "马斯克预警AI行业明年或面临资金短缺",
+            "summary": "[[马斯克]]预警AI行业明年可能面临严重资金短缺，或需数千亿美元额外投入；[[Keras]]创始人称算力需求未见顶。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/030/628.htm",
+            "title_original": "马斯克预警：AI 行业明年可能面临严重资金短缺，或需要数千亿美元额外投入",
+            "excerpt": "IT之家 11 月 22 日消息，深度学习领域开源项目 Keras 创始人弗朗索瓦・肖莱（François Chollet）在 X 上发文称，要么你认为 AI 基础设施建设已经结束，AI 只是一场昙花一现的泡沫，且算力需求已经见顶；要么，这就是一次难得的买入机会。 弗朗索瓦称，GPU 现货价格仍在上涨，产能难以保障，HBM 和 DRAM 到 2029 年的产能基本已被订满，芯片和存储供应预计将持续紧张，一直延续到 2030 年代。前沿模型的训练算力约每 5 个月翻一番，模型能力提升速度是推理模型出现前的两倍以上。AI 推理业务的利润率可达 70% 至 85%，需求仍在快速增长，每一代新模型都会带来新的应用场景。 IT之家注意到，马…",
+            "is_foreign": false
+          },
+          {
+            "title": "钛晨报：交易所稳市组合拳与量子计算进展",
+            "summary": "交易所打出稳市组合拳涉及两融降费创业板；量子计算机高速内存全球首次真机实现；[[特斯拉]]在美推出FSD v15。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8214014.html",
+            "title_original": "【钛晨报】A股利好！交易所打出稳市“组合拳”，事关两融、降费、创业板；积存金价格跌至“7字头”，银行纷纷提示贵金属市场风险；量子计算机“高速内存”全球首次真机实现",
+            "excerpt": "搜狐张朝阳辟谣“被出具警示函”；天孚通信拟在南昌投建新一代高速光器件研发和生产制造项目；多品牌宣布下调金饰克价；美方拟禁止中国电信运营商直接获取美国互联网电话号码资源，商务部回应；特斯拉在美推出FSDv 15；美国证券交易委员会据悉正对英伟达潜在会计问题展开调查。",
+            "is_foreign": false
+          },
+          {
+            "title": "智能体企业新前沿：驱动高效智能",
+            "summary": "[[InfoQ]]中文发布视频，探讨智能体企业如何驱动高效智能。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/video/Ly5HbhY4pNMCF04abkFo?utm_source=rss&utm_medium=article",
+            "title_original": "智能体企业新前沿：驱动高效智能",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "A社数学家用Claude证明另一千禧难题",
+            "summary": "[[Anthropic]]数学家用[[Claude]]证明另一千禧难题，逼出一份写了12年的940页纯人类手稿。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/511870.html",
+            "title_original": "A社数学家用Claude又证明另一千禧难题，逼出一份写了12年的940页纯人类手稿",
+            "excerpt": "",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "EL4CTEO/fast-anything",
+            "url": "https://github.com/EL4CTEO/fast-anything",
+            "intro": "不用重写整个程序，只把最慢的几段函数换成更快的版本，并验证结果一致。",
+            "features": [
+              "自动找出程序里最耗时的函数",
+              "让 AI 编程助手只改写这几个函数",
+              "用真实调用记录验证改写前后结果相同",
+              "一条命令切换新旧版本，可随时还原"
+            ],
+            "guide": "需要先装好 Node 和 Rust 工具链，然后用 npm 全局安装，在项目目录里运行命令即可。",
+            "steps": [
+              "先安装 Node 和 Rust 工具链（rustup）",
+              "npm i -g @el4cteo/fast-anything",
+              "fast-anything go --agent claude -- python app.py"
+            ],
+            "install": "npm i -g @el4cteo/fast-anything",
+            "summary": "不用重写整个程序，只把最慢的几段函数换成更快的版本，并验证结果一致。",
+            "source": "GitHub",
+            "stars": "1865",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.",
+            "is_foreign": true
+          },
+          {
+            "title": "valentderah/totk-pc-recomp",
+            "url": "https://github.com/valentderah/totk-pc-recomp",
+            "intro": "把《塞尔达传说：王国之泪》转成能在 Windows 和 Linux 电脑上直接运行的程序。",
+            "features": [
+              "在电脑上原生运行，不是模拟器",
+              "默认 60 帧，可调更高帧率",
+              "支持自定义分辨率和高清放大",
+              "支持 NSP、XCI 等游戏文件格式"
+            ],
+            "guide": "需要你自己从主机导出合法拥有的游戏文件和更新包，项目不提供游戏文件；在电脑上构建后运行，目前仍是早期版本，可能有画面问题和崩溃。",
+            "steps": [
+              "准备自己导出的游戏本体和更新文件",
+              "按文档在 Windows 或 Linux 上构建",
+              "运行构建出的程序开始游戏"
+            ],
+            "install": "",
+            "summary": "把《塞尔达传说：王国之泪》转成能在 Windows 和 Linux 电脑上直接运行的程序。",
+            "source": "GitHub",
+            "stars": "8023",
+            "language": "C",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.",
+            "is_foreign": true
+          },
+          {
+            "title": "jarun/nnn",
+            "url": "https://github.com/jarun/nnn",
+            "intro": "一个在终端里用的文件管理器，体积小、启动快，用键盘就能管文件。",
+            "features": [
+              "在终端里浏览和管理文件",
+              "分析磁盘占用、批量重命名",
+              "可装插件实现预览、挂载磁盘等",
+              "体积约 150KB，几乎不用配置"
+            ],
+            "guide": "需要在 Linux、macOS 或 WSL 等终端环境里使用，按 README 的安装说明装好后在终端输入 nnn 启动。",
+            "steps": [
+              "准备 Linux、macOS 或 WSL 终端环境",
+              "按 README 安装说明安装 nnn",
+              "在终端输入 nnn 启动"
+            ],
+            "install": "",
+            "summary": "一个在终端里用的文件管理器，体积小、启动快，用键盘就能管文件。",
+            "source": "GitHub",
+            "stars": "22140",
+            "language": "C",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "n³ The unorthodox terminal file manager",
+            "is_foreign": true
+          },
+          {
+            "title": "langchain-ai/langchain",
+            "url": "https://github.com/langchain-ai/langchain",
+            "intro": "帮开发者把大模型和各种工具拼起来，做出能对话、能办事的 AI 应用。",
+            "features": [
+              "把大模型和外部工具连接起来",
+              "提供现成的第三方服务集成",
+              "配套工具可调试和部署 AI 应用"
+            ],
+            "guide": "需要会 Python，用 uv 安装后写几行代码调用模型；使用前要准备好对应模型服务的账号或密钥。",
+            "steps": [
+              "先安装 Python 和 uv 包管理工具",
+              "uv add langchain",
+              "准备好模型服务的 API Key 后写代码调用"
+            ],
+            "install": "uv add langchain",
+            "summary": "帮开发者把大模型和各种工具拼起来，做出能对话、能办事的 AI 应用。",
+            "source": "GitHub",
+            "stars": "149989",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The agent engineering platform.",
+            "is_foreign": true
+          },
+          {
+            "title": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "intro": "把整个代码库连同文档、表格变成一张可查询的关系图，帮 AI 助手读懂项目。",
+            "features": [
+              "在 AI 编程助手里输入 /graphify 生成项目地图",
+              "代码在本地解析，不上传",
+              "每条关联都标明是直接读到还是推断的",
+              "支持代码、文档、PDF、图片和视频"
+            ],
+            "guide": "在 Claude Code、Cursor、Codex 或 Gemini CLI 等 AI 编程助手里输入 /graphify 即可；也可访问官网免费开始使用。",
+            "steps": [
+              "打开支持技能的 AI 编程助手",
+              "在对话里输入 /graphify",
+              "或访问官网免费注册使用"
+            ],
+            "install": "",
+            "summary": "把整个代码库连同文档、表格变成一张可查询的关系图，帮 AI 助手读懂项目。",
+            "source": "GitHub",
+            "stars": "152044",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained…",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 帮你提速代码、查代码、跑游戏、管文件、搭智能应用"
+      }
+    ]
+  }
+}
