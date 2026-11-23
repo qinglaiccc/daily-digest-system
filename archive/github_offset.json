@@ -1,5 +1,5 @@
 {
-  "classic_offset": 20,
+  "classic_offset": 22,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-11-13T23:58:23.108682+00:00",
   "recent_trending": [
-    "omnivore-app/omnivore",
-    "IainKay/ram-altman",
-    "rddmwmddr/android-ad-cleaner",
     "Flow-Launcher/Flow.Launcher",
     "livliv-dev/player",
     "JuneYaooo/rea-video",
@@ -175,12 +172,15 @@
     "Zettlr/Zettlr",
     "EL4CTEO/fast-anything",
     "valentderah/totk-pc-recomp",
-    "jarun/nnn"
+    "jarun/nnn",
+    "ivall/xcl",
+    "anhao/ai-pose-gallery-zh",
+    "alyssaxuu/screenity"
   ],
-  "last_run_date": "2026-11-22",
+  "last_run_date": "2026-11-23",
   "last_classic": [
-    "langchain-ai/langchain",
-    "Graphify-Labs/graphify"
+    "Comfy-Org/ComfyUI",
+    "x1xhlol/system-prompts-and-models-of-ai-tools"
   ],
-  "updated_at": "2026-11-22T23:55:36.622536+00:00"
+  "updated_at": "2026-11-23T23:58:17.550559+00:00"
 }

@@ -1,0 +1,297 @@
+{
+  "date": "2026-11-24",
+  "generated_at": "2026-11-23T23:58:29.170229+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 288,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-24",
+    "digest": "Anthropic推出Claude Ship让AI代理自主审改代码；多州起诉SpaceX的Grok生成非法图像；谷歌用Gemini 4智能体优化量子算法。",
+    "keywords": [
+      "Anthropic",
+      "Claude",
+      "Grok",
+      "Gemini",
+      "具身智能"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Ling-3.2-air登上HuggingFace热门模型榜",
+            "summary": "[[inclusionAI]]的[[Ling-3.2-air]]登上[[HuggingFace]]热门模型榜，trendingScore 87，likes 98，下载0。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/inclusionAI/Ling-3.2-air",
+            "title_original": "inclusionAI/Ling-3.2-air 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 87）**新发布**。likes 98，下载 0。标签：safetensors、bailing_moe_v3_vl、custom_code、license:mit、fp8、region:us。",
+            "is_foreign": true
+          },
+          {
+            "title": "Anthropic推出Claude Ship",
+            "summary": "[[Anthropic]]发布[[Claude Ship]]，让AI代理审查、修复并批准代码变更，以处理常规审批。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+            "title_original": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+            "excerpt": "As AI-generated code piles up, Anthropic's new developer tools aim to eliminate another bottleneck by letting agents handle routine approvals.",
+            "is_foreign": true
+          },
+          {
+            "title": "多州起诉SpaceX要求阻止Grok生成非法图像",
+            "summary": "多州起诉[[SpaceX]]，要求阻止[[Grok]]生成儿童性虐待图像和报复性色情内容，X称已筛查所有输出。",
+            "source": "Ars Technica",
+            "url": "https://arstechnica.com/tech-policy/2026/11/states-sue-spacex-to-stop-grok-from-generating-child-sex-images-revenge-porn/",
+            "title_original": "States sue SpaceX to stop Grok from generating child sex images, revenge porn",
+            "excerpt": "X says every Grok output is screened, but state AGs say Grok is still making CSAM.",
+            "is_foreign": true
+          },
+          {
+            "title": "Claude可自主审查并提交代码修复",
+            "summary": "[[Anthropic]]的[[Claude]]新功能可审查、修复并批准拉取请求，帮助软件工程师交付代码。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests",
+            "title_original": "Claude AI can review pull requests and ship fixes on its own now",
+            "excerpt": "Anthropic is launching some new Claude AI features to help software engineers ship code. As part of a new Claude Ship product being announced today, Claude now can review, fix, and approve pull requests. Engineers have already been able to take advantage of Claude's code review capabilities thanks to the Code Review f…",
+            "is_foreign": true
+          },
+          {
+            "title": "两州起诉SpaceX涉Grok深度伪造",
+            "summary": "俄勒冈州和弗吉尼亚州总检察长起诉[[SpaceX]]，称[[Grok]]生成露骨深度伪造内容违反消费者保护法。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2325111/two-states-sue-spacex-over-sexually-explicit-grok-deepfakes/",
+            "title_original": "Two states sue SpaceX over sexually explicit Grok deepfakes",
+            "excerpt": "Oregon and Virginia's attorneys general said the company broke state consumer protection laws.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "谷歌用AI智能体优化量子算法",
+            "summary": "[[谷歌DeepMind]]与[[Google Quantum AI]]用多组[[Gemini 4]]智能体结合Lean优化量子算法，最高提速290倍。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/031/232.htm",
+            "title_original": "最高提速 290 倍：谷歌让 AI 智能体“开会”优化量子算法，缓解计算资源瓶颈",
+            "excerpt": "IT之家 11 月 24 日消息，谷歌 DeepMind 团队携手谷歌 Quantum AI 团队于昨日（11 月 23 日）发布联合研究成果， 利用多组 Gemini 4 智能体协同工作，并结合形式化数学验证工具 Lean，成功优化了多项量子算法，降低部分量子计算任务的资源需求。 量子计算机有望在未来解决经典超级计算机无法企及的问题，但即便使用当前最优量子算法，部分重要应用所需的资源仍超出早期量子硬件的承载能力。 谷歌 DeepMind 与 Google Quantum AI 团队在最新研究论文中，借助 Gemini 4 智能体团队对经典量子算法进行优化，生成了效率极高的量子电路。 这些优化后的电路是量子计算机执行算法的指令集，…",
+            "is_foreign": false
+          },
+          {
+            "title": "钛晨报：英伟达恢复黄仁勋CEO职务",
+            "summary": "[[英伟达]]董事会一致同意恢复[[黄仁勋]]CEO职务；[[荣耀]]CEO李健称阔折叠手机明年3月发布。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8215026.html",
+            "title_original": "【钛晨报】英伟达董事会一致同意恢复黄仁勋CEO职务；荣耀CEO李健：荣耀阔折叠明年3月发布｜独家；中汽协：1-10月，销量排名前十位的MPV生产企业共销售64.8万辆",
+            "excerpt": "蚂蚁阿福App新版发布，蚂蚁阿福医生版上线“循证金标准”UpToDate；亚马逊将支付75亿美元获取人工智能初创公司Decart的技术；微软AI首席执行官苏莱曼：支持OpenAI提高透明度的倡议；四部门：鼓励发展适合养老场景的人工智能体、服务机器人、智能穿戴设备、外骨骼等新产品；人社部：非法骗取社保基金支出或者社保待遇，拟处骗取金额2倍以上5倍以下的罚款；市场监管总局发布《婴幼儿辅助食品生产许可审查细则（2026版）》；“固态锂电池标准项目组”将成立，正式编制《固态锂离子电池和电池组安全技术规范》；中国牵头的摩托车及轻便摩托车信息与服务国际标准正式立项；监管明确两融调整要求，违约处置要稳妥审慎；中金所增加10年期国债期货合约可交割…",
+            "is_foreign": false
+          },
+          {
+            "title": "企业AI推动Agent规模化应用",
+            "summary": "InfoQ中文发布视频，讨论企业AI发展新趋势，推动[[AI Agent]]迈向规模化应用新阶段。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/video/its3v5OfmRuikL5SeWUu?utm_source=rss&utm_medium=article",
+            "title_original": "企业 AI 发展新趋势：推动 AI Agent 迈向规模化应用的新阶段",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "936个智能体12周发近千篇论文",
+            "summary": "936个[[智能体]]在12个星期内发布近千篇论文，并开展同行评议，形成AI科学家社会。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/512004.html",
+            "title_original": "“Agent版arXiv”来了！936个智能体12个星期狂发近千篇论文，连同行评议都整上了",
+            "excerpt": "一个完全由AI组成的科学家社会，是什么样？",
+            "is_foreign": false
+          },
+          {
+            "title": "自变量发布WALL-API-1.0",
+            "summary": "[[自变量]]发布[[WALL-API-1.0]]，在主流榜单超越[[Astra]]，聚焦具身智能预训练。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1691043?utm_source=rss&utm_medium=rss&utm_campaign=",
+            "title_original": "自变量发布 WALL-API-1.0，主流榜单超越 Astra，扛起具身智能「预训练」的大旗",
+            "excerpt": "具身智能的「大结果」终于有了实感 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "零售AI最快回报在店面后台",
+            "summary": "Retail Dive指出，面向消费者的AI受关注，但修复后台基础环节能带来更快的投资回报。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/spons/retails-fastest-ai-return-right-now-sits-behind-the-storefront/875359/",
+            "title_original": "Retail’s fastest AI return right now sits behind the storefront",
+            "excerpt": "Shopper-facing AI gets the headlines. The faster return comes from fixing what sits underneath.",
+            "is_foreign": true
+          },
+          {
+            "title": "Dibs Beauty用热力图优化Ulta陈列",
+            "summary": "[[Dibs Beauty]]通过热力图追踪[[Ulta Beauty]]店内端架单品销售，实现成本效率至少两位数提升。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/operations/how-dibs-beauty-uses-heat-maps-to-optimize-its-ulta-beauty-presence/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "How Dibs Beauty uses heat maps to optimize its Ulta Beauty presence",
+            "excerpt": "Selling exclusively through Ulta Beauty and direct-to-consumer, Dibs Beauty has set up heat maps that track individual product sales based on where they sit on its in-store endcaps, as well as overall retail sales by U.S. region, down to the county. Doing so has resulted in “at least” a double-digit lift in cost-effic…",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "ivall/xcl",
+            "url": "https://github.com/ivall/xcl",
+            "intro": "让 Xbox 主机游戏能在 Windows 电脑上直接跑起来的兼容工具。",
+            "features": [
+              "在电脑上运行 Xbox 游戏文件，不用模拟器",
+              "已实测《我的世界》预览版等可完整游玩",
+              "把主机画面代码转成电脑显卡能用的格式"
+            ],
+            "guide": "面向有一定动手能力的玩家，需在 Windows 电脑上准备游戏文件并自行编译运行，README 未给出普通用户的一键安装方式。",
+            "steps": [
+              "准备一台 Windows 电脑和 Xbox 游戏文件",
+              "参考仓库内 HANDOFF.md 与设计文档了解用法"
+            ],
+            "install": "",
+            "summary": "让 Xbox 主机游戏能在 Windows 电脑上直接跑起来的兼容工具。",
+            "source": "GitHub",
+            "stars": "1583",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Xbox Series compatibility layer for Windows - runs console game code natively, reimplements the console system libraries and recompiles RDNA2 shaders to DXIL",
+            "is_foreign": true
+          },
+          {
+            "title": "anhao/ai-pose-gallery-zh",
+            "url": "https://github.com/anhao/ai-pose-gallery-zh",
+            "intro": "把日文 AI 绘画参考图库翻成中文，还能在线拼人像、服装和姿势。",
+            "features": [
+              "上千组姿势、服装、人像参考图全中文",
+              "在线工作台自由组合人像服装姿势",
+              "可离线浏览，也能接入 ComfyUI 插件"
+            ],
+            "guide": "打开在线演示网址即可浏览和拼图；想本地部署需先装 Node 环境，按 README 构建静态站点。",
+            "steps": [
+              "访问在线演示网址直接浏览图库",
+              "本地部署前先安装 Node 环境",
+              "按 README 说明构建并启动静态站点"
+            ],
+            "install": "",
+            "summary": "把日文 AI 绘画参考图库翻成中文，还能在线拼人像、服装和姿势。",
+            "source": "GitHub",
+            "stars": "7943",
+            "language": "TypeScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊",
+            "is_foreign": true
+          },
+          {
+            "title": "alyssaxuu/screenity",
+            "url": "https://github.com/alyssaxuu/screenity",
+            "intro": "免费无时长限制的录屏工具，录完还能在画面上涂画标注。",
+            "features": [
+              "录屏幕、某个区域、摄像头都不限时长",
+              "边录边在画面上画箭头写字做标注",
+              "可录麦克风和电脑内部声音"
+            ],
+            "guide": "它是浏览器扩展，在 Chrome 应用商店安装后点开即可录制，无需装 Node 或 Docker。",
+            "steps": [
+              "在 Chrome 网上应用店安装 Screenity 扩展",
+              "点击扩展图标选择录制区域开始录屏"
+            ],
+            "install": "",
+            "summary": "免费无时长限制的录屏工具，录完还能在画面上涂画标注。",
+            "source": "GitHub",
+            "stars": "19007",
+            "language": "JavaScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The free and privacy-friendly screen recorder with no limits 🎥",
+            "is_foreign": true
+          },
+          {
+            "title": "Comfy-Org/ComfyUI",
+            "url": "https://github.com/Comfy-Org/ComfyUI",
+            "intro": "用拖拽连线的方式搭 AI 出图流程，在自己电脑上生成图片视频。",
+            "features": [
+              "拖节点连线搭流程，不用写代码",
+              "支持图片、视频、3D、音频等多种生成",
+              "低配显卡也能跑较大的开源模型"
+            ],
+            "guide": "提供 Windows、Linux、macOS 桌面版和便携包，下载安装即可本地使用；也可用官方云端版，无需自己配环境。",
+            "steps": [
+              "从官网下载对应系统的桌面版或便携包",
+              "安装后打开软件，加载现成工作流模板"
+            ],
+            "install": "",
+            "summary": "用拖拽连线的方式搭 AI 出图流程，在自己电脑上生成图片视频。",
+            "source": "GitHub",
+            "stars": "148293",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+            "is_foreign": true
+          },
+          {
+            "title": "x1xhlol/system-prompts-and-models-of-ai-tools",
+            "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+            "intro": "收集 Cursor、Devin 等热门 AI 工具内部提示词的资料仓库。",
+            "features": [
+              "汇总多款 AI 编程与助手工具的提示词",
+              "方便了解这些工具被如何设定"
+            ],
+            "guide": "纯资料仓库，打开网页浏览即可，无需安装任何软件；README 未提供安装或运行命令。",
+            "steps": [
+              "打开仓库网页直接浏览收集的提示词"
+            ],
+            "install": "",
+            "summary": "收集 Cursor、Devin 等热门 AI 工具内部提示词的资料仓库。",
+            "source": "GitHub",
+            "stars": "144830",
+            "language": "",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.d…",
+            "is_foreign": true
+          }
+        ],
+        "lead": "从游戏兼容、AI 绘画参考到录屏与提示词，帮普通人省力上手 AI 与创作。"
+      }
+    ]
+  }
+}
