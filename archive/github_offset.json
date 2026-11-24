@@ -1,5 +1,5 @@
 {
-  "classic_offset": 22,
+  "classic_offset": 24,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-11-13T23:58:23.108682+00:00",
   "recent_trending": [
-    "Flow-Launcher/Flow.Launcher",
-    "livliv-dev/player",
-    "JuneYaooo/rea-video",
     "Wox-launcher/Wox",
     "voyager-so/vork",
     "anefzaoui/misterdownloadmanager",
@@ -175,12 +172,15 @@
     "jarun/nnn",
     "ivall/xcl",
     "anhao/ai-pose-gallery-zh",
-    "alyssaxuu/screenity"
+    "alyssaxuu/screenity",
+    "xcl-dev/xcl",
+    "mdiri-ai/SoduWork",
+    "rowboatlabs/rowboat"
   ],
-  "last_run_date": "2026-11-23",
+  "last_run_date": "2026-11-24",
   "last_classic": [
-    "Comfy-Org/ComfyUI",
-    "x1xhlol/system-prompts-and-models-of-ai-tools"
+    "excalidraw/excalidraw",
+    "shadcn-ui/ui"
   ],
-  "updated_at": "2026-11-23T23:58:17.550559+00:00"
+  "updated_at": "2026-11-24T23:55:53.952951+00:00"
 }
