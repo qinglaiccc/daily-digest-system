@@ -1,0 +1,300 @@
+{
+  "date": "2026-11-26",
+  "generated_at": "2026-11-25T23:55:57.123354+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 277,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-26",
+    "digest": "FCC批准SpaceX部署百万AI卫星，Gemini 4 Neon重返前沿，智元灵心孵化超3万机器人智能体。",
+    "keywords": [
+      "SpaceX",
+      "Gemini-4-Neon",
+      "智元灵心",
+      "Stripe",
+      "AI智能体"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "亚马逊与Meta洽谈解除AI智能体Muse封锁",
+            "summary": "[[Amazon]]与[[Meta]]正讨论达成协议，结束对AI智能体[[Muse]]长达两个月的封锁。",
+            "source": "TechCrunch",
+            "url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/",
+            "title_original": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
+            "excerpt": "Amazon and Meta are discussing a potential deal that would end a two-month-long blockade of Muse.",
+            "is_foreign": true
+          },
+          {
+            "title": "KRAFTON Raon-1-mini登HuggingFace热门榜",
+            "summary": "[[KRAFTON]]的[[Raon-1-mini]]登上[[HuggingFace]]热门模型榜，trendingScore 92，likes 113，下载264。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/KRAFTON/Raon-1-mini",
+            "title_original": "KRAFTON/Raon-1-mini 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 92）**新发布**。类型 text-generation。likes 113，下载 264。标签：transformers、safetensors、raon1_mini、text-generation、raon、conversational。",
+            "is_foreign": true
+          },
+          {
+            "title": "Gemini 4 Neon标志GDM重返前沿实验室",
+            "summary": "[[Gemini 4 Neon]]在LiveBench击败Astra和Fable，并将TS Rust基准运行时间缩短48.6%。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/",
+            "title_original": "[AINews] Gemini 4 Neon marks GDM's full return as a Frontier Lab",
+            "excerpt": "November 24, 2026 — Neon beats Astra and Fable on LiveBench and cuts Theo’s TS Rust benchmark runtime by 48.6%.",
+            "is_foreign": true
+          },
+          {
+            "title": "Jev疑似为Qwen3.5-35B-A3B",
+            "summary": "[[Hacker News]]讨论文章称，模型Jev很可能就是[[Qwen3.5-35B-A3B]]，获48点。",
+            "source": "Hacker News",
+            "url": "https://modaic.dev/blog/latency-doesnt-lie",
+            "title_original": "Jev is (probably) Qwen3.5-35B-A3B",
+            "excerpt": "Article URL: https://modaic.dev/blog/latency-doesnt-lie \n Comments URL: https://news.ycombinator.com/item?id=50648823 \n Points: 48 \n # Comments: 0",
+            "is_foreign": true
+          },
+          {
+            "title": "FCC批准SpaceX部署百万数据中心卫星",
+            "summary": "[[FCC]]授权[[SpaceX]]在Starmind计划下部署最多100万颗搭载AI芯片的卫星。",
+            "source": "The Verge",
+            "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers",
+            "title_original": "FCC signs off on SpaceX’s plan to put up to 1 million data center satellites into space",
+            "excerpt": "In an announcement on Wednesday, the FCC says it authorized SpaceX to deploy up to 1 million AI chip-equipped satellites as part of the Elon Musk-owned company's \"Starmind\" initiative. With several others also pursuing the idea of putting AI data centers in space, including Google and Blue Origin, this is the first ap…",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "谷歌开源环境质量智能体AQuA",
+            "summary": "[[谷歌]]开源环境质量智能体[[AQuA]]，用于诊断生产环境中AI智能体故障。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/YAc2TqCHc09kAFF1A7BS?utm_source=rss&utm_medium=article",
+            "title_original": "谷歌开源环境质量智能体 AQuA，用于诊断生产环境 AI 智能体故障",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "Stripe估值有望突破2000亿美元",
+            "summary": "[[Stripe]]讨论新一轮股票回购，估值有望突破2000亿美元，今年8月以超70亿美元收购[[OpenRouter]]。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/032/488.htm",
+            "title_original": "消息称支付技术企业 Stripe 估值有望在新一轮股票回购中突破 2000 亿美元",
+            "excerpt": "IT之家 11 月 25 日消息，《华尔街日报》当地时间昨日报道称，支付技术企业 Stripe 正在讨论新一轮的年度例行股票回购计划。 该企业的估值有望在本轮回购中突破 2,000 亿美元 （IT之家注：现汇率约合 1.34 万亿元人民币） 。 按照惯例， Stripe 将在新年初正式宣布回购计划 ，便于员工套现持股。知情人士透露，此次回购的出资方除 Stripe 自身外很可能还包括现有投资者。 Stripe 正积极涉足人工智能领域 ：该企业今年 8 月以超 70 亿美元收购 OpenRouter，并将自身技术栈与智能体消费市场整合。Stripe 还并购了软件按用量计费初创企业 Metronome、小企业贷款平台 Parafin。…",
+            "is_foreign": false
+          },
+          {
+            "title": "智元灵心平台一年孵化超3万机器人智能体",
+            "summary": "[[智元]]推出具身智能生态技术体系[[AIMA]]，灵心平台一年孵化超3万个机器人智能体。",
+            "source": "量子位",
+            "url": "https://www.qbitai.com/2026/11/512715.html",
+            "title_original": "零基础也能做开发，智元灵心平台一年孵化超3万个机器人智能体",
+            "excerpt": "智元推出行业首个开放且完整的具身智能生态技术体系AIMA",
+            "is_foreign": false
+          },
+          {
+            "title": "华为鸿蒙终端突破1亿台",
+            "summary": "[[华为]]鸿蒙终端突破1亿台，发布[[Mate X8]]、Mate 90 Air和小折叠电脑MateBook Fold S。",
+            "source": "爱范儿",
+            "url": "https://www.ifanr.com/1691400?utm_source=rss&utm_medium=rss&utm_campaign",
+            "title_original": "早报｜黄仁勋复职后首开全员大会致歉/豆包推出AI个人助理「小豆」/华为鸿蒙终端突破1亿台",
+            "excerpt": "· 华为发布 Mate X8、Mate 90 Air 和小折叠电脑 MateBook Fold S\n· 神舟二十四号任务将开展一年期在轨驻留试验\n· PlayStation 公布《GTA 6》首发数据，四天吸引逾 3900 万玩家 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。",
+            "is_foreign": false
+          },
+          {
+            "title": "运动可穿戴探索新场景",
+            "summary": "[[Heygo]]探讨运动可穿戴从手腕到雪鞋的新场景，寻找新数据与新切口。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/374470",
+            "title_original": "从手腕到雪鞋，运动可穿戴探索下一个可能 | 对话 Heygo",
+            "excerpt": "随身可穿戴，是智能硬件领域里一个非常清晰且明确的产品方向。 \n 背后的逻辑，是把硬件「传感化」，用传感器在物理世界里拿到过去模型很难获得的上下文数据，再经过 AI 处理，最终兑现成高价值的个人服务。 \n 落在具体产品上，目前已经可以看到两个「超级共识」的形态： \n 一类是以语音采集为抓手的个人效率工具，代表公司 Plaud 目前估值已经突破百亿；另一类是个人健康监测设备，这个赛道里既有超级巨头苹果旗下的 Apple Watch，也已经出现了 WHOOP、Oura 这样的新锐独角兽企业。 \n 所以，对新晋入场的创业者们而言，要想在激烈竞争的共识里找到机会， 大概率需要找到一个新的「非共识」切口：要么是新的数据，要么是新的场景。…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "2026年假日营销迎拐点",
+            "summary": "[[Retail Dive]]称2026年假日营销迎拐点，消费者对AI与创作者合作策略态度分化，品牌需平衡。",
+            "source": "Retail Dive",
+            "url": "https://www.retaildive.com/news/holiday-marketing-hits-inflection-point-in-2026-what-brands-need-to-know/875056/",
+            "title_original": "Holiday marketing hits inflection point in 2026: What brands need to know",
+            "excerpt": "Consumers’ push-pull relationship with buzzy tactics like AI and tried-and-true strategies like creator tie-ups is challenging brands to find the right balance.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "R0Y00/Xbox2Windows",
+            "url": "https://github.com/R0Y00/Xbox2Windows",
+            "intro": "研究把 Xbox Series X|S 游戏代码翻译成 Windows 电脑能跑的程序，目前还在实验阶段。",
+            "features": [
+              "把部分 Xbox 机器码翻译成 C++ 代码",
+              "把部分游戏着色器转成电脑显卡格式",
+              "不用装游戏也能跑公开的测试程序",
+              "在 RTX 4060 笔记本上验证过画面一致"
+            ],
+            "guide": "这是研究型项目，不是给普通玩家的成品。README 只说明可以在 Windows 上构建并运行 GPU 检查，完整游戏启动尚未验证，需要自己按仓库说明编译。",
+            "steps": [
+              "准备 Windows 电脑和 Python 环境",
+              "按 README 的 Build on Windows 章节自行构建",
+              "运行仓库提供的 GPU 检查测试"
+            ],
+            "install": "",
+            "summary": "研究把 Xbox Series X|S 游戏代码翻译成 Windows 电脑能跑的程序，目前还在实验阶段。",
+            "source": "GitHub",
+            "stars": "1953",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Static recompilation research for Xbox Series X|S software on x64 Windows, with source-built CPU and GPU tests. Full-game startup is unverified.",
+            "is_foreign": true
+          },
+          {
+            "title": "JuneYaooo/rea-video",
+            "url": "https://github.com/JuneYaooo/rea-video",
+            "intro": "把任意视频逐个镜头拆开，判断是实拍、AI 生成还是代码做的，并告诉你怎么复刻。",
+            "features": [
+              "逐镜头分析视频来源与拍摄手法",
+              "输出统一的 VIDEO.md 拆解文件",
+              "给出复刻该视频的做法建议",
+              "可作为插件接入 Claude Code、Codex"
+            ],
+            "guide": "需要先装好 ffmpeg 和 Python 3.10 以上，然后在能执行命令的 AI 助手里让它安装本仓库并分析你的视频文件；也可以作为插件装进 Claude Code 或 Codex。",
+            "steps": [
+              "先安装 ffmpeg 和 Python 3.10+",
+              "在 AI 助手里让它安装本仓库",
+              "把视频路径交给助手开始拆解",
+              "或执行 `codex plugin marketplace add JuneYaooo/rea-video`"
+            ],
+            "install": "codex plugin marketplace add JuneYaooo/rea-video",
+            "summary": "把任意视频逐个镜头拆开，判断是实拍、AI 生成还是代码做的，并告诉你怎么复刻。",
+            "source": "GitHub",
+            "stars": "13373",
+            "language": "Python",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. Breakdowns in the open VIDEO.md format. 逆向一切视频，逐个镜头看是拍的、AI 生成的还是代码做的，再告诉你怎么复刻；拆解结果按 VIDEO.md 格式输出。",
+            "is_foreign": true
+          },
+          {
+            "title": "omnivore-app/omnivore",
+            "url": "https://github.com/omnivore-app/omnivore",
+            "intro": "开源的「稍后读」工具，把网页、邮件通讯和 PDF 存起来慢慢读，还能划重点做笔记。",
+            "features": [
+              "保存文章并自动记住阅读位置",
+              "划重点、写笔记、搜索和分享",
+              "支持 PDF 和邮件订阅文章",
+              "有浏览器插件和手机 App"
+            ],
+            "guide": "官方云端服务已于 2024 年 11 月停止，现在需要自己搭服务器。README 指向自建服务器指南，适合有技术基础的人部署后配合浏览器插件和 App 使用。",
+            "steps": [
+              "阅读 README 中的自建服务器指南",
+              "按指南部署自己的 Omnivore 服务",
+              "安装浏览器插件或手机 App 连接使用"
+            ],
+            "install": "",
+            "summary": "开源的「稍后读」工具，把网页、邮件通讯和 PDF 存起来慢慢读，还能划重点做笔记。",
+            "source": "GitHub",
+            "stars": "16431",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Omnivore is a complete, open source read-it-later solution for people who like reading.",
+            "is_foreign": true
+          },
+          {
+            "title": "JuliusBrussee/caveman",
+            "url": "https://github.com/JuliusBrussee/caveman",
+            "intro": "让 AI 编程助手少说废话、少读冗余内容，从而降低使用成本的工具。",
+            "features": [
+              "压缩 AI 回答和工具输出，减少消耗",
+              "原始内容仍可完整找回",
+              "把多个编程助手集中在一个窗口",
+              "可直接用你已有的订阅和密钥"
+            ],
+            "guide": "提供 Mac 版应用可直接下载使用，也提供本地代理方式接入现有编程助手；README 未给出命令行安装方式，具体配置需看官方文档。",
+            "steps": [
+              "从官网下载 Caveman Code（Mac 版）",
+              "用已有的订阅或密钥登录",
+              "在设置中开启压缩选项"
+            ],
+            "install": "",
+            "summary": "让 AI 编程助手少说废话、少读冗余内容，从而降低使用成本的工具。",
+            "source": "GitHub",
+            "stars": "122857",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "why use many token when few token do trick. Skill + local proxy for coding agents: shorter answers, smaller tool output, every original recoverable.",
+            "is_foreign": true
+          },
+          {
+            "title": "thedotmack/claude-mem",
+            "url": "https://github.com/thedotmack/claude-mem",
+            "intro": "给 AI 编程助手装上「记忆」，让它下次开工时记得上次做过什么，不用从头再来。",
+            "features": [
+              "自动记录 AI 助手每次会话做的事",
+              "用 AI 压缩成要点供下次调用",
+              "下次会话自动带上相关背景",
+              "支持 Claude Code、Codex、Cursor 等"
+            ],
+            "guide": "README 有 Quick Start 章节但摘录中未给出具体命令，需按仓库文档安装配置；装好后在你常用的 AI 编程助手里启用即可，部分助手只能搜索记忆、不记录会话。",
+            "steps": [
+              "打开 README 的 Quick Start 章节",
+              "按文档完成安装与配置",
+              "在支持的 AI 助手里启用记忆功能"
+            ],
+            "install": "",
+            "summary": "给 AI 编程助手装上「记忆」，让它下次开工时记得上次做过什么，不用从头再来。",
+            "source": "GitHub",
+            "stars": "119763",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw,…",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让 AI 助手更省钱、记性更好，也让视频和游戏内容能被拆解复刻。"
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "classic_offset": 24,
+  "classic_offset": 26,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-11-13T23:58:23.108682+00:00",
   "recent_trending": [
-    "Wox-launcher/Wox",
-    "voyager-so/vork",
-    "anefzaoui/misterdownloadmanager",
     "lissy93/dashy",
     "DIYgod/pinky",
     "ccch1mneyyy/dsh-Go",
@@ -175,12 +172,15 @@
     "alyssaxuu/screenity",
     "xcl-dev/xcl",
     "mdiri-ai/SoduWork",
-    "rowboatlabs/rowboat"
+    "rowboatlabs/rowboat",
+    "R0Y00/Xbox2Windows",
+    "JuneYaooo/rea-video",
+    "omnivore-app/omnivore"
   ],
-  "last_run_date": "2026-11-24",
+  "last_run_date": "2026-11-25",
   "last_classic": [
-    "excalidraw/excalidraw",
-    "shadcn-ui/ui"
+    "JuliusBrussee/caveman",
+    "thedotmack/claude-mem"
   ],
-  "updated_at": "2026-11-24T23:55:53.952951+00:00"
+  "updated_at": "2026-11-25T23:55:41.785646+00:00"
 }
