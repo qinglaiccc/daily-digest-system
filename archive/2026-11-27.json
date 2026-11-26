@@ -1,0 +1,288 @@
+{
+  "date": "2026-11-27",
+  "generated_at": "2026-11-26T23:55:57.905037+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 253,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-27",
+    "digest": "英伟达暂停东南亚服务器出货，谷歌DeepMind预测AI算力成本将降百万倍",
+    "keywords": [
+      "英伟达",
+      "谷歌DeepMind",
+      "Anthropic",
+      "MAGI-2",
+      "llama-cpp"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "Qwen3.8-27B-NariQ-GGUF登HuggingFace热门榜",
+            "summary": "[[nari-labs]]的[[Qwen3.8-27B-NariQ-GGUF]]登上[[HuggingFace]]热门模型榜，获212赞、14337次下载。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF",
+            "title_original": "nari-labs/Qwen3.8-27B-NariQ-GGUF 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 155）类型 image-text-to-text。likes 212，下载 14337。标签：gguf、nariq、qwen、quantized、coding-agent、llama.cpp。",
+            "is_foreign": true
+          },
+          {
+            "title": "AMD专用llama.cpp分支引热议",
+            "summary": "开发者发布[[AMD]]专用[[llama.cpp]]分支，在[[Hacker News]]获264点、64条评论。",
+            "source": "Hacker News",
+            "url": "https://devnull.land/amd-specific-llama-cpp",
+            "title_original": "AMD-specific fork of llama.cpp",
+            "excerpt": "Article URL: https://devnull.land/amd-specific-llama-cpp \n Comments URL: https://news.ycombinator.com/item?id=50657265 \n Points: 264 \n # Comments: 64",
+            "is_foreign": true
+          },
+          {
+            "title": "Jack Despain Zhou谈AI去个体化",
+            "summary": "[[Jack Despain Zhou]]称[[AI]]导致去个体化，视频、会议和邮件中频繁出现[[Claude]]式表达。",
+            "source": "Simon Willison",
+            "url": "https://simonwillison.net/2026/Nov/26/jack-despain-zhou/",
+            "title_original": "Quoting Jack Despain Zhou",
+            "excerpt": "Among the many already existing effects of AI has been a great de-individualization. I open a YouTube video, and I hear Claude. I sit in a conference presentation, and I hear Claude. I open my email inbox, and I find pitches and articles from ostensibly serious people with ostensibly serious credentials attached to os…",
+            "is_foreign": true
+          },
+          {
+            "title": "英伟达暂停向东南亚发货服务器",
+            "summary": "[[Nvidia]]要求制造伙伴暂停向马来西亚、新加坡、泰国和印尼发运服务器，配合美国限制[[AI]]芯片流入中国。",
+            "source": "TechCrunch AI",
+            "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+            "title_original": "Nvidia hits pause on chip shipments to Southeast Asia",
+            "excerpt": "Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as the U.S. tightens its push to keep AI chips out of China.",
+            "is_foreign": true
+          },
+          {
+            "title": "Clay如何构建GTM智能体",
+            "summary": "[[Clay]] AI负责人[[Jeff Barg]]介绍用1500美元筛选全球公司，并构建面向智能体的[[GTM]]基础设施。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/how-clay-builds-gtm-agents-jeff-barg-head-of-ai/",
+            "title_original": "How Clay Builds GTM Agents — Jeff Barg, Head of AI",
+            "excerpt": "How $1,500 could qualify every company in the world, why customers hate the model selector, and how Clay is building go-to-market infrastructure for every agent",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "MAGI-2开源视频模型成本低九成",
+            "summary": "[[MAGI-2]]以开源权重和低九成成本入局，视频模型赛道仍以[[Seedance 2.5]]为对标基准。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/374532",
+            "title_original": "成本低九成、开源权重：MAGI-2 带动视频模型进入大掀桌时代",
+            "excerpt": "作者｜Cynthia \n 编辑｜郑玄 \n 2026 年的视频大模型圈子，有一个心照不宣的保留节目：无论哪家推出新模型，最终的成绩页上，永远会留一行和 Seedance 2.5 的对标数据。 \n 这款上半年坐稳行业标杆的闭源模型，如今成了整条赛道公认的「基准线」—— 快手可灵 Kling 3.0 上线，要比镜头控制与生成时长；阿里 Wan 3.0 推出，主打同画质下的性价比；MiniMax 发 H3 系列，也要在 AA 榜单上标清和 Seedance 的 Elo 分差。 \n 你方唱罢我登场，榜首的排位刷了一轮又一轮，但行业的底色没变：顶尖能力始终攥在闭源厂商手里，靠云端 API 和创作平台对外输出。即便是开放基础模型权重的 Mini…",
+            "is_foreign": false
+          },
+          {
+            "title": "Agora开源Android LLM聊天工具",
+            "summary": "[[Agora]]开源易用的[[Android]]端[[LLM]]聊天工具，支持通过API调用大模型。",
+            "source": "少数派",
+            "url": "https://sspai.com/post/116773",
+            "title_original": "App+1｜Agora：开源、易用、好用，给 Android 用户的 LLM 聊天工具",
+            "excerpt": "如果你在通过 API 调用你喜欢的大模型，希望它们能像 Kimi 等商业 AI 客户端那样用着顺手，那 Agora 就是为你而来的。相信我，Agora 不会让你失望。 查看全文",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepMind预测AI算力成本降百万倍",
+            "summary": "[[谷歌DeepMind]]论文称AI有效算力每年至少增10倍，十年后认知任务成本或从10亿美元降至1000美元。",
+            "source": "199IT",
+            "url": "http://www.199it.com/archives/1865785.html",
+            "title_original": "谷歌DeepMind：AI认知任务十年后或从10亿美元降至1000美元，降百万倍",
+            "excerpt": "谷歌DeepMind论文称，过去十年AI有效算力每年至少增长10倍，源于硬件、算法与投资提升。按趋势，今天需10亿美元算力的认知任务，十年后或仅需1000美元，降幅百万倍；2030年AI智能体数量或扩大1000倍以上，但受数据、电力等限制。",
+            "is_foreign": false
+          },
+          {
+            "title": "Uber推出AI智能体安全框架",
+            "summary": "[[Uber]]发布安全[[AI]]框架，对智能体进行全生命周期治理。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/xA3g2i0VtTZIOVePMedY?utm_source=rss&utm_medium=article",
+            "title_original": "Uber 推出安全 AI 框架：对 AI 智能体进行全生命周期治理",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "Anthropic称AI改变工程师晋升标准",
+            "summary": "[[Anthropic]]平台工程负责人[[凯特琳·莱斯]]称，AI普及后晋升更看重降低延迟、避免事故等实际影响。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/033/141.htm",
+            "title_original": "Anthropic 平台工程负责人莱斯：AI 改变工程师晋升标准，不再只看项目耗时",
+            "excerpt": "IT之家 11 月 27 日消息，在 Anthropic，AI 正在改变软件工程师的晋升标准。据《商业内幕》今天（27 日）报道，Anthropic 平台工程负责人凯特琳 · 莱斯近期谈到了 AI 对工程师职业发展的影响。她指出，AI 普及后，单纯以 项目完成时间 来判断工程师是否具备晋升条件，已经没有过去那么大的参考价值。 过去需要数年才能完成的工作，现在几个月就能完成。相比项目耗时，她的团队更看重 降低系统延迟、避免事故等 实际成果。“归根结底，还是看实际影响。” 随着 AI 智能体加速软件开发，工程师创造价值的方式也在发生变化。莱斯认为，工作的重点正从编写代码转向“协调”：既要让团队成员与智能体有效配合，也要知道如何把一个想…",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": []
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "os6/nospeaker",
+            "url": "https://github.com/os6/nospeaker",
+            "intro": "让 MacBook 触控板靠震动发出人声，静音也能听见。",
+            "features": [
+              "用触控板震动模拟说话、唱歌和乐器声",
+              "全程不用扬声器，静音状态照样出声",
+              "按空格跳过段落，按 q 直接到结尾"
+            ],
+            "guide": "在 Mac 上打开终端，运行一行命令即可自动下载并播放；建议先把电脑静音、放在桌面上，手先离开触控板。",
+            "steps": [
+              "把 Mac 静音，并放在桌面上",
+              "打开终端，运行安装并播放命令",
+              "手离开触控板，等它提示再触摸"
+            ],
+            "install": "curl -fsSL a90.com/nospeaker | sh",
+            "summary": "让 MacBook 触控板靠震动发出人声，静音也能听见。",
+            "source": "GitHub",
+            "stars": "1954",
+            "language": "Swift",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "make your macbook's trackpad talk using its haptic motor",
+            "is_foreign": true
+          },
+          {
+            "title": "anefzaoui/misterdownloadmanager",
+            "url": "https://github.com/anefzaoui/misterdownloadmanager",
+            "intro": "免费开源的下载管理器，替代收费的 IDM，下载更快。",
+            "features": [
+              "大文件下载速度比 IDM 快数倍",
+              "支持 BT 磁力链接和种子文件下载",
+              "支持 87 种语言，无广告、无需注册",
+              "提供浏览器扩展，接管网页下载"
+            ],
+            "guide": "到官网下载对应系统的安装包（Windows、Linux、macOS）安装即可，无需注册或付费；想接管浏览器下载可再装扩展。",
+            "steps": [
+              "访问官网 misterdownloadmanager.com",
+              "下载对应系统的安装包并安装",
+              "按需安装浏览器扩展接管下载"
+            ],
+            "install": "",
+            "summary": "免费开源的下载管理器，替代收费的 IDM，下载更快。",
+            "source": "GitHub",
+            "stars": "18521",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
+            "is_foreign": true
+          },
+          {
+            "title": "Wox-launcher/Wox",
+            "url": "https://github.com/Wox-launcher/Wox",
+            "intro": "跨平台快捷启动器，一个输入框找应用、文件和执行操作。",
+            "features": [
+              "键盘输入即可打开应用、查找文件",
+              "支持插件扩展，可写脚本加功能",
+              "常驻后台约 150MB 内存，比较轻",
+              "Windows、macOS、Linux 都能用"
+            ],
+            "guide": "用官方脚本一键安装，或用安装包；装好后常驻后台，按快捷键呼出输入框即可使用，无需额外配置。",
+            "steps": [
+              "Windows 用 PowerShell 运行安装脚本",
+              "macOS 用终端运行安装脚本",
+              "装好后按快捷键呼出输入框使用"
+            ],
+            "install": "irm https://raw.githubusercontent.com/Wox-launcher/Wox/master/scripts/install/windows.ps1 | iex",
+            "summary": "跨平台快捷启动器，一个输入框找应用、文件和执行操作。",
+            "source": "GitHub",
+            "stars": "27704",
+            "language": "Go",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "A cross-platform launcher that simply works",
+            "is_foreign": true
+          },
+          {
+            "title": "supabase/supabase",
+            "url": "https://github.com/supabase/supabase",
+            "intro": "开源的数据库开发平台，帮开发者快速搭应用后端。",
+            "features": [
+              "提供托管数据库，存应用数据",
+              "自带用户注册登录和权限管理",
+              "自动生成接口，前端可直接调用",
+              "支持文件存储和 AI 向量检索"
+            ],
+            "guide": "主要面向开发者：可注册官网在线使用，也可自行部署；具体搭建步骤需查阅官方文档 supabase.com/docs。",
+            "steps": [
+              "访问 supabase.com 注册账号",
+              "按文档创建项目并连接数据库",
+              "参考官方文档接入登录和接口"
+            ],
+            "install": "",
+            "summary": "开源的数据库开发平台，帮开发者快速搭应用后端。",
+            "source": "GitHub",
+            "stars": "115557",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+            "is_foreign": true
+          },
+          {
+            "title": "debpalash/VoiceStudio",
+            "url": "https://github.com/debpalash/VoiceStudio",
+            "intro": "本地运行的 AI 配音工具，能克隆声音、配音和转写。",
+            "features": [
+              "用一段录音克隆出相似的声音",
+              "给视频翻译并配上同步语音",
+              "用文字描述生成想要的声音",
+              "支持听写、转写和有声书制作"
+            ],
+            "guide": "到官网下载安装包，在本地电脑运行，模型按需下载；无需上传云端，具体安装步骤以官网文档为准。",
+            "steps": [
+              "访问官网 voicestudio.sh 下载安装包",
+              "安装后打开软件，按需下载语音模型",
+              "选择克隆、配音或转写功能开始使用"
+            ],
+            "install": "",
+            "summary": "本地运行的 AI 配音工具，能克隆声音、配音和转写。",
+            "source": "GitHub",
+            "stars": "118889",
+            "language": "Python",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让电脑更好用：触控板发声、下载加速、快捷启动、建应用、本地配音。"
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "classic_offset": 26,
+  "classic_offset": 28,
   "classic_cycle": 0,
   "classic_pool": [
     "morluto/rea",
@@ -136,9 +136,6 @@
   ],
   "classic_pool_built": "2026-11-13T23:58:23.108682+00:00",
   "recent_trending": [
-    "lissy93/dashy",
-    "DIYgod/pinky",
-    "ccch1mneyyy/dsh-Go",
     "plotly/dash",
     "FrigadeHQ/yogurt",
     "wangzan101/Mika",
@@ -175,12 +172,15 @@
     "rowboatlabs/rowboat",
     "R0Y00/Xbox2Windows",
     "JuneYaooo/rea-video",
-    "omnivore-app/omnivore"
+    "omnivore-app/omnivore",
+    "os6/nospeaker",
+    "anefzaoui/misterdownloadmanager",
+    "Wox-launcher/Wox"
   ],
-  "last_run_date": "2026-11-25",
+  "last_run_date": "2026-11-26",
   "last_classic": [
-    "JuliusBrussee/caveman",
-    "thedotmack/claude-mem"
+    "supabase/supabase",
+    "debpalash/VoiceStudio"
   ],
-  "updated_at": "2026-11-25T23:55:41.785646+00:00"
+  "updated_at": "2026-11-26T23:55:47.112893+00:00"
 }
