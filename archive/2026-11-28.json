@@ -1,0 +1,295 @@
+{
+  "date": "2026-11-28",
+  "generated_at": "2026-11-27T23:55:51.871235+00:00",
+  "dry_run": false,
+  "stats": {
+    "rss_sources": 24,
+    "rss_ok": 24,
+    "rss_failed": 2,
+    "raw_news": 218,
+    "github_queries": 1
+  },
+  "report": {
+    "date": "2026-11-28",
+    "digest": "多州起诉SpaceX与Grok生成非法图像；Kimi向科学家提供API额度；豆包大模型服务八成头部电视厂商。",
+    "keywords": [
+      "SpaceX",
+      "Grok",
+      "Kimi",
+      "豆包大模型",
+      "智谱"
+    ],
+    "sections": [
+      {
+        "key": "intl_tech",
+        "num": "01",
+        "title": "国际科技新闻",
+        "title_en": "International Tech",
+        "desc": "全球科技产业动态",
+        "items": [
+          {
+            "title": "多州起诉SpaceX与Grok生成非法图像",
+            "summary": "弗吉尼亚等多州总检察长起诉[[SpaceX]]及其旗下[[Grok]]，指控其生成儿童性剥削和非自愿图像。",
+            "source": "Hacker News",
+            "url": "https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform",
+            "title_original": "States sue SpaceX to stop Grok from generating child sex images, revenge porn",
+            "excerpt": "Article URL: https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform \n Comments URL: https://news.ycombinator.com/item?id=…",
+            "is_foreign": true
+          },
+          {
+            "title": "单卡GB10运行Inkling 2 Mini达101 tok/s",
+            "summary": "开发者展示在单张[[GB10]]上通过[[vLLM]]运行[[Inkling 2 Mini]]，实现101 tok/s的生成速度。",
+            "source": "Hacker News",
+            "url": "https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/",
+            "title_original": "Show HN: Getting 101 tok/s from Inkling 2 Mini in vLLM on one GB10",
+            "excerpt": "Article URL: https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/ \n Comments URL: https://news.ycombinator.com/item?id=50670443 \n Points: 25 \n # Comments: 7",
+            "is_foreign": true
+          },
+          {
+            "title": "Sulphur-3登HuggingFace热门模型榜",
+            "summary": "[[SulphurAI]]的[[Sulphur-3]]登上[[HuggingFace]]热门模型榜，获1369个赞、下载539421次。",
+            "source": "HuggingFace 模型",
+            "url": "https://huggingface.co/SulphurAI/Sulphur-3",
+            "title_original": "SulphurAI/Sulphur-3 登上 HuggingFace 热门模型榜",
+            "excerpt": "（HuggingFace 热门模型，trendingScore 569）likes 1369，下载 539421。标签：minimax-h3、base_model:MiniMaxAI/MiniMax-H3、base_model:finetune:MiniMaxAI/MiniMax-H3、license:other、region:us。",
+            "is_foreign": true
+          },
+          {
+            "title": "洛杉矶学区屏蔽谷歌AI搜索功能",
+            "summary": "洛杉矶学区屏蔽[[Google]]的AI搜索功能，谷歌坚持AI概览与搜索为捆绑服务。",
+            "source": "Engadget",
+            "url": "https://www.engadget.com/2329851/la-school-district-blocks-google-ai-search-features/",
+            "title_original": "LA school district blocks Google's AI search features",
+            "excerpt": "The company has insisted that AI overviews and search are a package deal.",
+            "is_foreign": true
+          },
+          {
+            "title": "G2i创始人谈AI训练数据市场",
+            "summary": "[[G2i]]创始人Gabe Greenberg在[[Latent Space]]播客介绍前沿实验室采购训练数据的独家与折扣定价决策。",
+            "source": "Latent Space",
+            "url": "https://latent.space/p/inside_the_ai_training_data_market_gabe_greenberg_g2i/",
+            "title_original": "Inside the AI Training Data Market — Gabe Greenberg, G2i",
+            "excerpt": "A frontier lab can pay more for training data it gets to keep exclusive, or take a discount on data another lab can buy too. At AI Engineer CODE, G2i founder Gabe Greenberg tells swyx how labs make that decision, how small pilot orders turn into bigger...",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_tech",
+        "num": "02",
+        "title": "国内科技新闻",
+        "title_en": "China Tech",
+        "desc": "中国科技产业动态",
+        "items": [
+          {
+            "title": "Kimi向科学家提供最高2万美元API额度",
+            "summary": "[[月之暗面]]推出Kimi for Science项目，向入选科研人员提供最高2万美元的[[Kimi]] API免费额度。",
+            "source": "Solidot",
+            "url": "https://www.solidot.org/story?sid=86015",
+            "title_original": "Kimi 向科学家提供最高 2 万美元 API 免费额度",
+            "excerpt": "Kimi 大模型开发商月之暗面宣布了 Kimi for Science 项目，欢迎自然科学、工程学及相关交叉学科领域的研究人员加入。月之暗面表示，“科学始终源于人类的好奇心、严谨的探索精神，以及对未知世界的不懈追求。一个有价值的科学假设，往往需要经过大量的文献调研、数据分析和反复验证。而一次意料之外的发现，也可能成为下一项重大突破的起点。然而受限于时间、算力与人力资源，许多值得深入探索的想法，始终未能获得应有的关注与投入。我们相信 AI 能加速科学研究，拓展探索与发现的边界，帮助研究者突破时间、资源与研究方法的局限，让更多大胆而富有想象力的科学构想从可能走向现实。”月之暗面将向入选的研究人员提供最高 20,000 美元的 Kimi…",
+            "is_foreign": false
+          },
+          {
+            "title": "豆包大模型服务八成国内头部电视厂商",
+            "summary": "[[火山引擎]]宣布[[豆包大模型]]已服务八成国内头部电视厂商，创维、长虹、海信、TCL等推出量产电视。",
+            "source": "IT之家",
+            "url": "https://www.ithome.com/1/033/718.htm",
+            "title_original": "字节火山引擎：豆包大模型已服务八成国内头部电视厂商，创维、长虹、海信、TCL 等推出量产电视",
+            "excerpt": "IT之家 11 月 27 日消息，字节火山引擎今日宣布，目前， 豆包大模型已服务八成国内头部电视厂商， 创维、长虹、海信、TCL 等主流品牌，都推出了搭载豆包大模型的量产电视。 围绕豆包大模型版电视，火山引擎提供模型与接入支持，厂商完成硬件和系统适配，抖音电商提供渠道与内容营销支持。 实时语音智能体负责与用户交流： 通过豆包语音模型、多模态模型理解需求，借助搜索、技能与记忆能力处理请求、衔接上下文。想查信息，可以调用搜索；想做内容，可以调用生成服务。相比传统“语音识别 + 小模型意图路由”的方案，大模型能更准确地理解用户意图，语气和情感表达也更自然。用户不必记住固定指令，用日常说话的方式就能表达需求。 云端智能体处理需要调用长程任…",
+            "is_foreign": false
+          },
+          {
+            "title": "智谱辟谣GLM-5.5延期",
+            "summary": "[[智谱]]高管杨昊翊辟谣[[GLM-5.5]]延期传闻，称相关爆料为假消息，此前路演信息仍指向12月发布。",
+            "source": "极客公园",
+            "url": "http://www.geekpark.net/news/374546",
+            "title_original": "智谱辟谣 GLM-5.5 延期；特斯拉和 SpaceX 冲刺年底合并；18 家平台完成算法协商，覆盖 2500 万新就业形态劳动者｜极客早知道",
+            "excerpt": "智谱辟谣 GLM-5.5 延期：性能 Fable 级、上万张国产 AI 卡进展顺利 \n 11 月 26 日，智谱高管杨昊翊公开辟谣，称此前流传的 GLM-5.5 跳票相关爆料均为假消息。 \n 此前有外媒发布消息称，原计划 12 月发布的智谱 GLM-5.5 将延期至 2027 年第一季度推出，同时月之暗面旗下的 Kimi K4 也将跳票，还声称跳票原因是海外头部 AI 厂商对蒸馏技术设限，阻碍了国产大模型的研发进度。 \n 智谱高管杨昊翊在朋友圈辟谣，表示今天下午的所谓爆料新闻都是假消息，算是否认了跳票的消息。 \n 至于 GLM-5.5 的情况，虽然他没有公布进度，但此前大摩参与的路演会议上提到的还是 12 月发布，国联民生计算机发…",
+            "is_foreign": false
+          },
+          {
+            "title": "AI编码智能体知识库方案测试",
+            "summary": "[[JioHotstar]]测试六种给AI编码智能体加知识库的方案，发现文件搜索仍具优势且更省Token。",
+            "source": "InfoQ 中文",
+            "url": "https://www.infoq.cn/article/Ql4GGMIEqA3bI2W2lh7h?utm_source=rss&utm_medium=article",
+            "title_original": "给 AI 编码智能体装上知识库，反而更费 Token？JioHotstar 测完六种方案，文件搜索依然能打",
+            "excerpt": "点击查看原文>",
+            "is_foreign": false
+          },
+          {
+            "title": "DeepSeek以226万亿Token领跑",
+            "summary": "[[DeepSeek]]以226万亿Token领跑，中国模型包揽[[OpenRouter]]前三，开发者偏爱Flash。",
+            "source": "钛媒体",
+            "url": "https://www.tmtpost.com/8220552.html",
+            "title_original": "226万亿Token，DeepSeek为何领跑？",
+            "excerpt": "中国模型包揽OpenRouter前三，开发者为何偏爱Flash？",
+            "is_foreign": false
+          }
+        ]
+      },
+      {
+        "key": "intl_consumer",
+        "num": "03",
+        "title": "国际新消费新闻",
+        "title_en": "International Consumer",
+        "desc": "全球零售与消费品牌",
+        "items": [
+          {
+            "title": "Ring Concierge借裸钻趋势引流自有渠道",
+            "summary": "[[Ring Concierge]]借社交媒体裸钻趋势，将买家引导至自有渠道，提供更可信的购买体验。",
+            "source": "Modern Retail",
+            "url": "https://www.modernretail.co/marketing/how-ring-concierge-is-using-the-loose-diamond-social-media-trend-to-funnel-buyers-to-its-own-channels/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+            "title_original": "How Ring Concierge is using the loose diamond social media trend to funnel buyers to its own channels",
+            "excerpt": "Online diamond and jewelry brand Ring Concierge saw the appeal of the loose diamond trend for its customers, but wanted to offer something that was more intentional, more trustworthy and not tied to another platform like TikTok or eBay.",
+            "is_foreign": true
+          }
+        ]
+      },
+      {
+        "key": "cn_consumer",
+        "num": "04",
+        "title": "国内新消费新闻",
+        "title_en": "China Consumer",
+        "desc": "中国零售与新消费品牌",
+        "items": []
+      },
+      {
+        "key": "github",
+        "num": "05",
+        "title": "GitHub 热门效率与 AI 工具",
+        "title_en": "GitHub Trending Tools",
+        "desc": "过去 24 小时活跃的开源项目",
+        "items": [
+          {
+            "title": "trustno1-coder/VIctory-NVIDIA",
+            "url": "https://github.com/trustno1-coder/VIctory-NVIDIA",
+            "intro": "让 Xbox 游戏在 NVIDIA 显卡电脑上跑起来并提升画质的兼容工具",
+            "features": [
+              "在电脑上运行 Xbox Series 游戏",
+              "用 DLSS 提升画面并插帧提速",
+              "按 F1 调设置、F3 看帧数"
+            ],
+            "guide": "面向 Windows 电脑，需要 NVIDIA 显卡（RTX 40/50 支持 DLSS 插帧，20/30 系用 FSR 插帧）。README 未给出安装命令，需自行获取程序运行。",
+            "steps": [
+              "准备 Windows 10 或 11 与 NVIDIA 显卡",
+              "运行 victory.exe 或脚本启动器",
+              "按 F1 打开设置菜单调整画质"
+            ],
+            "install": "",
+            "summary": "让 Xbox 游戏在 NVIDIA 显卡电脑上跑起来并提升画质的兼容工具",
+            "source": "GitHub",
+            "stars": "3117",
+            "language": "Rust",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "VIctory (Xbox Series compatibility layer) tuned for NVIDIA RTX cards: Series X at 2560x1440 with DLSS, about 26-30 fps on an RTX 5070, DLSS frame generation 2x-6x, an F1 settings menu and F3 stats panel, open water with…",
+            "is_foreign": true
+          },
+          {
+            "title": "ersinkoc/phonebox",
+            "url": "https://github.com/ersinkoc/phonebox",
+            "intro": "把闲置安卓手机变成电脑副屏和触控面板的工具",
+            "features": [
+              "手机实时显示电脑 CPU、内存等状态",
+              "查看 AI 编程工具的用量和进度",
+              "用手机当快捷键和媒体控制台"
+            ],
+            "guide": "电脑装桌面端小助手，手机装配套安卓 App，用 USB 或 Wi-Fi 连接即可，无需 root 或账号。支持 Windows、Linux、macOS。",
+            "steps": [
+              "在电脑上安装 PhoneBox 桌面端",
+              "在安卓手机上安装 PhoneBox App",
+              "用 USB 或 Wi-Fi 将手机与电脑配对",
+              "在浏览器编辑器里拖拽搭建面板"
+            ],
+            "install": "",
+            "summary": "把闲置安卓手机变成电脑副屏和触控面板的工具",
+            "source": "GitHub",
+            "stars": "7694",
+            "language": "JavaScript",
+            "is_new": true,
+            "title_original": "",
+            "excerpt": "Turn an old Android phone into a customizable desk panel and touch control deck for Windows, Linux and macOS. 124 widgets and 30 templates for system stats, AI coding, media and automation, in 13 languages. USB or paire…",
+            "is_foreign": true
+          },
+          {
+            "title": "lissy93/dashy",
+            "url": "https://github.com/lissy93/dashy",
+            "intro": "自建一个属于自己的网址导航首页，集中管理常用服务和网站",
+            "features": [
+              "实时显示各服务是否在线",
+              "用小组件展示自建服务的信息",
+              "支持多页面、主题和图标自定义"
+            ],
+            "guide": "适合有自己服务器或 NAS 的人。可用 Docker 部署，也可用 Node.js 运行，装好后在浏览器里编辑配置。",
+            "steps": [
+              "准备一台可运行 Docker 或 Node.js 的机器",
+              "按官方文档选择 Docker 或 Node 方式部署",
+              "打开网页进入配置编辑器添加链接"
+            ],
+            "install": "",
+            "summary": "自建一个属于自己的网址导航首页，集中管理常用服务和网站",
+            "source": "GitHub",
+            "stars": "27086",
+            "language": "Vue",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "🚀 A self-hostable personal dashboard built for you. Includes status-checking, widgets, themes, icon packs, a UI editor and tons more!",
+            "is_foreign": true
+          },
+          {
+            "title": "pbakaus/impeccable",
+            "url": "https://github.com/pbakaus/impeccable",
+            "intro": "给 AI 编程助手补上设计词汇，让它做出的页面不再千篇一律",
+            "features": [
+              "用 polish、bolder 等词指挥 AI 改设计",
+              "用 critique、audit 检查页面问题",
+              "在成品上线前拦住模板化设计"
+            ],
+            "guide": "在项目根目录运行安装命令，然后重载你的 AI 编程工具，在助手内执行初始化命令即可。需要先装 Node.js。",
+            "steps": [
+              "先安装 Node.js 环境",
+              "在项目根目录运行 npx impeccable install",
+              "重载你的 AI 编程工具",
+              "在助手里运行 /impeccable init"
+            ],
+            "install": "npx impeccable install",
+            "summary": "给 AI 编程助手补上设计词汇，让它做出的页面不再千篇一律",
+            "source": "GitHub",
+            "stars": "118048",
+            "language": "Rust",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+            "is_foreign": true
+          },
+          {
+            "title": "google-gemini/gemini-cli",
+            "url": "https://github.com/google-gemini/gemini-cli",
+            "intro": "在命令行里直接和 Gemini 对话、让它帮你写代码的 AI 助手",
+            "features": [
+              "在终端里用自然语言让 AI 干活",
+              "可接入 MCP 扩展外部工具",
+              "面向企业版 Code Assist 授权用户"
+            ],
+            "guide": "注意：README 说明它只面向 Gemini Code Assist 企业版授权用户，个人免费版和 Google AI 订阅已迁到别的工具。需先确认自己有对应授权。",
+            "steps": [
+              "确认拥有 Gemini Code Assist 企业版授权",
+              "按官方文档完成安装与登录"
+            ],
+            "install": "",
+            "summary": "在命令行里直接和 Gemini 对话、让它帮你写代码的 AI 助手",
+            "source": "GitHub",
+            "stars": "109253",
+            "language": "TypeScript",
+            "is_new": false,
+            "title_original": "",
+            "excerpt": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+            "is_foreign": true
+          }
+        ],
+        "lead": "让旧设备与 AI 助手更好用的效率工具合集"
+      }
+    ]
+  }
+}
